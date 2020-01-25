@@ -1,6 +1,8 @@
 ---
 categories:
-  - Web
+- Computer Science
+- Web
+- html
 ---
 # HTML: Hyper Text Markup Language
 

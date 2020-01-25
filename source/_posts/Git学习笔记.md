@@ -1,5 +1,7 @@
 ---
-categories: []
+categories: 
+- Computer Science
+- Git
 ---
 ## Git学习
 

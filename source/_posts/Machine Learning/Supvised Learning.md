@@ -1,5 +1,6 @@
 ---
-categories:
+categories: 
+  - Computer Science
   - Machine Learning
 ---
 # Supvised Learning
