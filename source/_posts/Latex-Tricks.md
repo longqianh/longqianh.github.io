@@ -29,7 +29,7 @@ categories:
 -   $\because$ -- \because,  $\therefore$ -- \therefore
 
 
-- $\forall$ :  \forall,  $\exist$ : \exist
+- $\forall$ :  \forall,  $ \exists $ : \exists
 
 
 - $\sqrt[n]{abc}$   : \sqrt[n]{abc}
