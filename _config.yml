@@ -36,7 +36,7 @@ skip_render:
 # depth: the max_depth of directory-tree you want to generate, should > 0
 auto_category:
  enable: true
- depth: 2
+ depth: 4
 
 # Writing
 new_post_name: :title.md # File name of new posts

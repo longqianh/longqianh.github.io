@@ -19,7 +19,7 @@ $X$ is the training input matrix:   $$X= (x^{(1)},x^{(2)},\cdots,x^{(m)})$$
 
 $Y$ is the training output matrix:	$$Y=(y^{(1)},y^{(2)},\cdots,y^{(m)})$$
 
-
+$\\ $ 
 
 - ### LMS algorithm 
 
@@ -29,6 +29,8 @@ cost function:	$$J(\theta)=\frac{1}{2}\parallel{\theta^T X-Y}\parallel^2$$
 (1) use **matrix derivative** to minimize $J$	 
 
 (2) gradient descent :	$$\theta_j := \theta_j-\alpha \frac{\partial}{\partial\theta_j}J(\theta)$$
+
+ <!--more-->
 
 i.e. 
 

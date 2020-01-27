@@ -34,6 +34,8 @@ categories:
 
 - $\sqrt[n]{abc}$   : \sqrt[n]{abc}
 
+   <!--more-->
+
 
 - $a\biggm| \displaystyle{\frac{n+1}{3}}$  :   a**\biggm|** **\displaystyle**{\frac{n+1}{3}}
 

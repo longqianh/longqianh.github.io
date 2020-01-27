@@ -29,7 +29,7 @@ git log --graph // 查看分支合并图
 
 git log --pretty=oneline // 每次修改在一行简明显示
 
-
+ <!--more-->
 
 git reflog // 查看命令历史
 
