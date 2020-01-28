@@ -8,12 +8,11 @@ $block
   border-radius 4px
 
 $base-style
-  h5, h6
-    margin 2.5rem 0
-  h1, h2
-  	margin 2rem 0 
-  h3, h4
-  	margin 3rem 0
+  h4, h5, h6
+    margin 1.5rem 0
+  h1, h2, h3
+  	margin 2.5rem 0 
+  
   hr // 被水平线分割的标题和段落
     height border-width
     background-color border-color
@@ -37,11 +36,11 @@ $base-style
     font-size 85%
   acronym, abbr
     border-bottom border-width border-color dotted
-  ul, ol, dl //列表
-    margin 2rem 0 2rem 2rem
+  ul, ol, dl //列表: 无序列表(ul) , 有序列表(ol) , 定义列表(dl)
+    margin 2rem 0 2rem 2rem //rem后面的0 是左右
 
   p, table, blockquote
-    margin 1.5rem 0
+    margin 2rem 0
 
   img, video
     max-width 100%
