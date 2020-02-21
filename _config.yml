@@ -130,3 +130,12 @@ backup:
     repository:
        github: git@github.com:longqianh/longqianh.github.io.git,backup
        gitcafe: git@github.com:longqianh/longqianh.github.io.git,backup
+
+# plugins: 
+#   hexo-math
+
+# MathJax
+math:
+  engine: 'mathjax'
+  mathjax:
+    src: https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?conf

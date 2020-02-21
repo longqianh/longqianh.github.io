@@ -8,8 +8,26 @@
 *::after
   box-sizing border-box
 
-html, body
-  height: 100%
+html,
+body,
+#write{
+  background: #fcfcfc;
+  font-family: "Helvetica Neue","Hiragino Sans GB","PingFang SC", "Microsoft YaHei", "微软雅黑", Arial, sans-serif ;//细 'TeXGyreAdventor', "Century Gothic", 'Yu Gothic', 'Raleway', "STHeiti", sans-serif;
+  font-weight: 320;
+}// 文章字体
+
+
+
+// html, body
+//   height: 110%
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB","PingFang SC", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;//'TeXGyreAdventor', "Century Gothic", 'Yu Gothic', 'Ubuntu', "STHeiti", sans-serif;
+}
 
 html
   font-size font-size-browser
@@ -49,7 +67,9 @@ img
 button
   outline: none
   cursor pointer
-  
+
+
+
 @import "_extend"
 @import "_partial/layout"
 @import "_partial/lists"

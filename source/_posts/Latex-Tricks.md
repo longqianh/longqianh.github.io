@@ -17,7 +17,7 @@ categories:
 
 
 - $\dot x$ : \dot x,  $\ddot x$ : \ddot x
-- $\vec{x}$ : \vecx
+- $\vec{x}$ : \vec x
 
 
 
@@ -43,7 +43,8 @@ categories:
 
 - $\mp$ :  \mp
 
-
+- 多行对齐：\begin{aligned} & \end{aligned}
+- 大括号：\begin{equation} \begin{aligned} \left \ {  \right. \end{aligned}\end{equation}
 
 #### 物理常用：
 

@@ -4,6 +4,7 @@ tags: 代数
 categories:
   - Mathematics
   - Algebra
+mathjax: true
 date: 2020-01-20 10:20:43
 
 ---
@@ -22,15 +23,13 @@ date: 2020-01-20 10:20:43
 2. 包含单位元
 3. 每个元素都有逆元
 
+=&gt; 消去律
+
 $ \\ $ <!--more-->
 
-$=>$ 消去律
-
-$ \\ $
 
 
-
-#### 1.1.2 子群 subgroup
+#### 1.1.2 子群 
 
 #### 1.1.2.1 定义
 
@@ -40,9 +39,9 @@ $ \\ $
 
 $ \\ $
 
-#### 1.1.2.2 正规子群 normal subgroup
+#### 1.1.2.2 正规子群 
 
-$ N \trianglelefteq G $ $ \\ $ 
+$ N \trianglelefteq G $
 
 $ \iff  $ $ \forall a\in N,g\in G \quad gag^{-1}\in G $ $ \\ $ 
 
@@ -52,13 +51,11 @@ $ \iff $ $ gN=Ng $
 
 $ \\ $
 
-#### 1.1.3 同态 homomorphism
+#### 1.1.3 同态 
 
 两个群中与合成法则相容的映射。
 
 $\varphi : G\to G', s.t \\ \forall a,b \in G, \quad \varphi(ab)=\varphi(a)\varphi(b)  $
-
-$ \\ $
 
 $=>$ $\varphi$ 把单位元映射为单位元，把逆元映射为逆元
 
@@ -68,11 +65,9 @@ $=>$ 群同态基本定理： $G/ker\varphi \cong im\varphi$
 
 $ \\ $
 
-#### 1.1.4 同构 isomorphism 
+#### 1.1.4 同构
 
 双射群同态。
-
-$ \\ $
 
 $=>$ 第一同构定理：
 
@@ -82,7 +77,7 @@ $=>$ 第一同构定理：
 
 $ \\ $
 
-#### 1.1.5 陪集 Coset
+#### 1.1.5 陪集 
 
 关于同余关系的等价类。
 
@@ -90,25 +85,21 @@ $ \\ $
 
 $ H\leqslant G, a\in G, aH=\{ah|a\in H  \}$ 
 
-$ \\ $
-
 $=>$ $a\in bH \Leftrightarrow aH=bH$
 
 $=>$ $ |G|=[G:H]\cdot|H|$
 
 $ \\ $
 
-#### 1.1.5.2 拉格朗日定理 Lagrange Theorem
+#### 1.1.5.2 拉格朗日定理 
 
 子群的阶整除群的阶。 $i.e. |H| \biggm| |G|$
-
-$ \\ $
 
 $=>$ 素数阶群是循环群
 
   $ \\ $
 
-#### 1.1.6 对应定理 The Correspondence Theorem 
+#### 1.1.6 对应定理 
 
 $\varphi : G\to G' $ 是一个满同态.
 
@@ -156,7 +147,7 @@ $ \\ $
 
 ### 1.2 群作用
 
-#### 1.2.1 轨道、稳定子 Orbit and Stablizer
+#### 1.2.1 轨道、稳定子
 
 #### 1.2.1.1 定义
 
@@ -200,7 +191,7 @@ $ \\ $
 
 $ \\ $
 
-#### 1.2.4 共轭作用 Conjugate Action
+#### 1.2.4 共轭作用
 
 #### 1.2.4.1 中心化子、共轭类
 
@@ -222,7 +213,7 @@ $ \\ $
 
 共轭类划分群$G$。
 
-$|G|=\sum_\limits {共轭类C} |C|=|Z|+\sum\limits_{x\in g}|C(x)|$
+$ |G|=\sum\limits_{共轭类C} |C|=|Z|+\sum\limits_ {x\in g}|C(x)| $
 
 $ \\ $
 
@@ -300,7 +291,7 @@ $ \\ $
 
 $ \\ $
 
-### 2.2 环同态 Ring Homomorphism 
+### 2.2 环同态 
 
 从一个环到另一个环的映射，与加法和乘法的合成法则相容。
 
@@ -386,7 +377,7 @@ $ \\ $
 ### 2.7 高斯引理
 
 - 本原多项式：正次数的正系数多项式，且整数系数 $a_1, a_2,\cdots,a_n$的最大公因子是$1$。
-- $f$ 是本原的$\iff$$f$ 不能被任何素数 $p$ 整除$\iff$$\forall p: prime,\psi_p(f)\neq 0\quad(\psi_p为系数模素数p的同态)$
+- $f$ 是本原的$\iff$$f$ 不能被任何素数  $ p $ 整除 $\iff$ $\forall p: prime,\psi_p(f)\neq 0\quad(\psi_p为系数模素数p的同态)$
 - $Gauss's$ $Lemma$ : 本原多项式的积是本原的
 - 每个有理系数的正次数多项式 $f(x)$ 可唯一地写成 $f(x)=cf_0(x)$ ，其中 $c\in \mathbb{Q}$，$f_0(x)$ 是本原多项式
 - 多项式环 $ \mathbf{Z}[x]$ 是唯一分解整环。每个不是 $\pm 1$ 的非零多项式 $f(x)\in\mathbf{Z}[x]$ 可以写成积的形式： $f(x)=\pm p_1\cdots p_m q_1(x)\cdots q_n(x)$ ，$p_i $ 是整素数，$q_i$ 是本原的既约多项式。
@@ -409,7 +400,7 @@ $ \\ $
 
 ### 2.9 模论：环上的线性代数 
 
-#### 2.9.1 模 module
+#### 2.9.1 模 Module
 
 $R$ 是一个环，$R$-模 $V$ 包含一个加法阿贝尔群与一个标量乘法 $R\times V\to V ,\quad r,v\rightsquigarrow rv $ , 满足一下条件：
 
@@ -507,7 +498,7 @@ $ \\ $
 
 $ \\ $
 
-### 3.1.2 代数元和超越元  algebraic  and transcendent 
+### 3.1.2 代数元和超越元  
 
 #### 3.1.2.1 基本概念
 
@@ -561,7 +552,7 @@ $ \\ $
 
 $ \\ $
 
-### 3.1.4 扩域中的带余除法 devision with remainder
+### 3.1.4 扩域中的带余除法 
 
 设 $f$ 和 $g$ 是系数属于 $F$ 的多项式， $f\neq 0$，设 $K$ 是 $F$ 的扩域。
 
@@ -584,7 +575,7 @@ $=>$ 若 $f(x)$ 是既约的，且 $char$$F=0$，则 $f$ 在 $F$ 的任意扩域
 
 $ \\ $
 
-### 3.1.6 有限域 finite field
+### 3.1.6 有限域
 
  $K$ 是有限域 ，则 $char$ $K$ $= p$（素数），$|K|=p^r\triangleq q$
 
@@ -618,7 +609,7 @@ $ \\ $
 
 ### 4.2 相关定理
 
-#### 4.2.1 $Galois$ 扩张的特征性质
+#### 4.2.1 Galois​ 扩张的特征性质
 
 令 $K/F$ 是有限扩张，设 $G$ 为它的 $Galois$ 群
 
@@ -671,4 +662,6 @@ $\therefore [\mathbb{Q}(\xi_N):\mathbb{Q}]=|Gal(\mathbb{Q}(\xi_N)/\mathbb{Q})|=|
 And the unit polynomial is :
 
  $f(x)=\displaystyle\prod\limits_{\sigma\in Gal(\mathbb{Q}(\xi_N)/\mathbb{Q})}(x-\sigma(\xi_N))=\displaystyle\prod\limits_{(a,n)=1}(x-\xi_N^a)$ 
+
+
 

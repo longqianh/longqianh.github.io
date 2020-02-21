@@ -48,7 +48,7 @@ Repeat until convetgence {
 
 ​				 or:	$$\theta:=\theta-H^{-1}\nabla_\theta l(\theta)$$ 
 
-where $H$ is the Hessian: $$H_{ij}=\frac{\partial^2l(\theta)}{\partial\theta_i\partial\theta_j}$$
+where $H$ is the Hessian: $$\displaystyle H_{ij}=\frac{\partial^2l(\theta)}{\partial\theta_i\partial\theta_j}$$
 
 
 
@@ -56,7 +56,7 @@ where $H$ is the Hessian: $$H_{ij}=\frac{\partial^2l(\theta)}{\partial\theta_i\p
 
 - ### Locally weighted linear regression
 
-cost function:   $$J(\theta)=\sum_i w^{(i)}(y^{(i)}-\theta^T x^{(i)})^2$$
+cost function:   $$\displaystyle J(\theta)=\sum\limits_i w^{(i)}(y^{(i)}-\theta^T x^{(i)})^2$$
 
 weight $w$ :  	$$w^{(i)}=exp(-(x^{(i)}-x)^2/2\tau^2)$$
 

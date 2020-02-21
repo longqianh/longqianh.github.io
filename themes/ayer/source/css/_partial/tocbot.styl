@@ -1,29 +1,30 @@
-
+// 文章里面的目录
 .tocbot
   position fixed
-  top 14rem
-  left calc((100vw - 70rem) / 2 + 70rem)
-  font-size 80%
-  opacity .8
+  top 20rem//14rem
+  left calc((100vw - 70rem) / 2 + 78rem)
+  font-size 100%
+  opacity .8 //opacity属性指定一个元素的透明度
   > .toc-list
     position relative
     overflow hidden
+    //如果元素中的内容超出了给定的宽度和高度属性，overflow 属性可以确定是否显示滚动条等行为
 
 
 .toc-list
   list-unstyled()
-  padding-left 1rem
+  padding-left 1.5rem
+  margin-left -0.5rem //右边三级标题可以装下六个字了
 
 
 a.toc-link
   height 100%
   color sea-dark
   text-decoration none
-  font-size 115%
-
+  font-size 100%
 
 .is-collapsible
-  max-height 1000px
+  max-height 700px//1000px
   overflow hidden
   transition all 300ms ease-in-out
 
@@ -37,9 +38,9 @@ a.toc-link
   top 0
   right aside-width
 
-// Left line before pseudo element.
+// Left line before pseudo element. 文章里面的目录的左侧分界线
 .toc-link::before
-  background-color water
+  background-color black//water
   content ' '
   display inline-block
   height inherit
