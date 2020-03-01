@@ -2,7 +2,7 @@
 title: 数学建模 模型学习
 date: 2020-02-01 20:28:07
 tags:
-Categories:
+categories:
 - Mathematics 
 - Mathematics Modeling
 ---
@@ -58,7 +58,7 @@ Categories:
 
    
 
-
+$ \\ $ <!--more-->
 
 
 

@@ -2,9 +2,9 @@
 title: Movies
 date: 2020-02-07 19:00:58
 tags:
-Categories:
--life
--movie
+categories:
+- life
+- movie
 ---
 
 # 电影们

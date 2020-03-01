@@ -2,7 +2,7 @@
 title: Mathematical Modeling
 date: 2020-02-07 16:37:29
 tags:
-Categories:
+categories:
 - Mathematics 
 - Mathematics Modeling
 ---
@@ -42,7 +42,7 @@ Categories:
   - 帕雷托法则指出，约仅有20%的变因操纵着80%的局面。也就是说：所有变量中，最重要的仅有20%，虽然剩余的80%占了多数，控制的范围却远低于“关键的少数”。
   - 应用： If the news value meets the Pareto principle, then 20% of the news contains 80% of the total value of all the news in real world.
 
-
+$ \\ $ <!--more-->
 
 - Indifference Curve 无差异曲线
 

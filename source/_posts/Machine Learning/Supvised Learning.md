@@ -21,108 +21,45 @@ $Y$ is the training output matrix:	$$Y=(y^{(1)},y^{(2)},\cdots,y^{(m)})$$
 
 $\\ $ 
 
-- ### LMS algorithm 
+### LMS algorithm 
 
-cost function:	$$J(\theta)=\frac{1}{2}\parallel{\theta^T X-Y}\parallel^2$$
- or : $$J(\theta)=\frac{1}{2}\sum\limits_{i=1}^{m}(h(x^{(i)})-y^{(i)})^2$$
+- cost function:	
+  $$
+  J(\theta)=\frac{1}{2}\parallel{\theta^T X-Y}\parallel^2\\
+          or : J(\theta)=\frac{1}{2}\sum\limits_{i=1}^{m}(h(x^{(i)})-y^{(i)})^2
+          \notag
+  $$
 
-(1) use **matrix derivative** to minimize $J$	 
+ use **matrix derivative** to minimize $J$	 
 
-(2) gradient descent :	$$\theta_j := \theta_j-\alpha \frac{\partial}{\partial\theta_j}J(\theta)$$
+-  gradient descent :	
+
+$$
+\theta_j := \theta_j-\alpha \frac{\partial}{\partial\theta_j}J(\theta)
+\notag
+$$
+
+
 
  <!--more-->
 
-i.e. 
+- Newton's method:	
+  $$
+  \theta:=\theta-H^{-1}\nabla_\theta l(\theta)\notag
+  $$
+  where $H$ is the Hessian: $$\displaystyle H_{ij}=\frac{\partial^2l(\theta)}{\partial\theta_i\partial\theta_j}$$
 
-```python
-Repeat until convetgence {
- 	for every j:
-  	theta += alpha* sum_i_from_to_m {(y[i]-h(X[i]))*X[i][j]}
-}
-```
-
- 
-
-(3) Newton's method:	
-								 $$\theta:=\theta-{l'(\theta)}/{l''(\theta)}$$
-
-​				 or:	$$\theta:=\theta-H^{-1}\nabla_\theta l(\theta)$$ 
-
-where $H$ is the Hessian: $$\displaystyle H_{ij}=\frac{\partial^2l(\theta)}{\partial\theta_i\partial\theta_j}$$
+​      
 
 
 
-
-
-- ### Locally weighted linear regression
+### Locally Weighted Linear Regression
 
 cost function:   $$\displaystyle J(\theta)=\sum\limits_i w^{(i)}(y^{(i)}-\theta^T x^{(i)})^2$$
 
 weight $w$ :  	$$w^{(i)}=exp(-(x^{(i)}-x)^2/2\tau^2)$$
 
 
-
-realize with Matlab:
-
-```python
-function [X, y] = load_data
-
-X = load('data/x.dat')
-y = load('data/y.dat')
-
-
-
-function y = lwlr(X_train, y_train, x, tau)
-
-m = size(X_train,1);
-n = size(X_train,2);
-theta = zeros(n,1);
-
-% compute weights
-w = exp(-sum((X_train - repmat(x', m, 1)).^2, 2) / (2*tau*tau));
-
-% #repmat# 
-% #sum(,2) is to sum the row#
-
-% perform Newton's method
-g = ones(n,1);
-while (norm(g) > 1e-6)
-  h = 1 ./ (1 + exp(-X_train * theta));
-  g = X_train' * (w.*(y_train - h)) - 1e-4*theta;
-  H = -X_train' * diag(w.*h.*(1-h)) * X_train - 1e-4*eye(n);
-  theta = theta - H \ g; %'\' is left matrix divide lo
-end
-
-% return predicted y
-y = double(x'*theta > 0);
-
-
-
-function plot_lwlr(X, y, tau, res)
-
-x = zeros(2,1);
-for i=1:res,
-  for j=1:res,
-    x(1) = 2*(i-1)/(res-1) - 1;
-    x(2) = 2*(j-1)/(res-1) - 1;
-    pred(j,i) = lwlr(X, y, x, tau);
-  end
-end
-
-figure(1);
-clf; % Clear current figure
-axis off;
-hold on;
-imagesc(pred, [-0.4 1.3]);
-plot((res/2)*(1+X(y==0,1))+0.5, (res/2)*(1+X(y==0,2))+0.5, 'ko');
-plot((res/2)*(1+X(y==1,1))+0.5, (res/2)*(1+X(y==1,2))+0.5, 'kx');
-axis equal; %设置屏幕高宽比，使得每个坐标轴的具有均匀的刻度间隔x
-axis square; %将坐标轴设置为正方形
-text(res/2 - res/7, res + res/20, ['tau = ' num2str(tau)], 'FontSize', 18);
-
-
-
-```
 
 
 
