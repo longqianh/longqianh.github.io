@@ -57,7 +57,7 @@ $$
 
 ​		利用 $W_1\cap W_2$ 可以把两边都表示成 $\alpha$ 项的线性组合，
 
-​		最后依次利用移项后是 $W_2$ 和 $ W_1 $ 的基，最后得到全是 $0$。
+​		依次利用移项后是 $W_2$ 和 $ W_1 $ 的基，最后得到全是 $0$。
 
 
 
@@ -187,6 +187,30 @@ $\xi=(v_1,\cdots,v_n)A=(w_1,\cdots,w_m)B$
 
 
 
+### 线性方程组
+
+设矩阵 $A\in M_{m\times n}(\mathbf{F})$, 若 $r(A)=r$, 则齐次线性方程组 $AX=0$ 的解空间 $N(A)$ 是一个 $n-r$ 维子空间。
+
+证明：
+
+​	$A$ 与一个线性映射 $\sigma\in L(V_1,V_2)$ 对应, $\dim V_1=n, \dim V_2=m$ .
+
+​	$AX=0$  解空间中的基是 $\sigma$ 核空间的基关于 $V_1$ 的坐标, 解空间的基和 $N(\sigma)$ 的基一一对应 .
+
+
+
+简单证明：
+
+​	把 $A$ 看作线性变换， $rank(A)=Range(A)$ , $A$ 的核 $N(A)$ 就是方程组的解空间。
+
+
+
+**注**：矩阵的秩：矩阵列向量中极大线性无关组的元素个数，等于矩阵作为线性变换对应矩阵的像空间维数。
+
+
+
+
+
 
 
 ###幂等变换的性质 
@@ -224,6 +248,10 @@ $\xi=(v_1,\cdots,v_n)A=(w_1,\cdots,w_m)B$
 
 
 
+
+
+### 对偶
+
  
 
 ## 3. 欧氏空间
@@ -238,7 +266,7 @@ $\xi=(v_1,\cdots,v_n)A=(w_1,\cdots,w_m)B$
 
   ​	$\beta_2=\alpha_2+\lambda_{1,2}\beta_1$ ，	$<\beta_1,\beta_2>=0$ => $\displaystyle \lambda_{1,2}=-\frac{<\alpha_2,\beta_1>}{<\beta_1,\beta_1>}$
 
-  若已求得正交向量 $\beta_1,\cdots,\beta_{m-1}$,
+  已求得正交向量 $\beta_1,\cdots,\beta_{m-1}$,
 
   则设 
   $$
@@ -258,4 +286,65 @@ $\xi=(v_1,\cdots,v_n)A=(w_1,\cdots,w_m)B$
   $\displaystyle \varepsilon_m=\frac{\beta_m}{|\beta_m|}$
 
 
+
+## 4. 多项式
+
+### 带余除法
+
+设 $p,s\in \mathcal{P}(\mathbb{F})$ 且 $s\neq 0$, 则存在唯一多项式 $q,r\in\mathcal{P}(\mathbb{F})$ 使得
+$$
+p=sq+r
+\notag
+$$
+且 $\deg\ r<\deg\ s$ .
+
+
+
+证明： 
+
+设 $n=\deg p,m =\deg s$ 
+
+$n>m$ 时：
+$$
+\because T:\mathcal{P_{n-m}}\times\mathcal{P_{m-1}}\to\mathcal{P_{n}},\quad (q,r)\mapsto sq+r \quad 是线性双射
+\\
+\therefore\{(q,r)\mid q\in \mathcal{P_{n-m}},r\in\mathcal{P_{m-1}}\}\cong\{sq+r\mid q\in \mathcal{P_{n-m}},r\in\mathcal{P_{m-1}}\}
+\\
+\because \dim \mathcal{P_{n-m}}\times\mathcal{P_{m-1}}=(n-m+1)+(m-1+1)=n+1\\
+\therefore \dim R(T)=n+1=\mathcal{P_n}\\
+\therefore \{sq+r\mid q\in \mathcal{P_{n-m}},r\in\mathcal{P_{m-1}}\}\cong \mathcal{P_n(\mathbb{F})}
+\notag
+$$
+
+
+
+
+
+## 5. 矩阵
+
+### 秩
+
+- 定义与意义
+
+矩阵的列向量的极大线性无关组的元素个数。
+
+$A:m\times n\iff \sigma:\R^n\to\R^m$
+
+由于：
+$$
+R(A)=\left(
+\begin{matrix}
+a_{11}x_1+a_{12}x_2+\cdots+a_{1n}x_n\\
+a_{21}x_1+a_{22}x_2+\cdots+a_{2n}x_n\\
+\vdots\\
+a_{m1}x_1+a_{m2}x_2+\cdots+a_{mn}x_n
+\end{matrix}
+\right)
+=\mathscr{L}\left\{ \left(\begin{aligned}a_{11}\\a_{21}\\ \vdots \\ a_{m1}\end{aligned}\right),\left(\begin{aligned}a_{12}\\a_{22}\\ \vdots \\ a_{m2}\end{aligned}\right),\cdots,\left(\begin{aligned}a_{1n}\\a_{2n}\\ \vdots \\ a_{mn}\end{aligned}\right)\right\}
+$$
+$A$ 的列秩等于 $A$ 的列空间维数，也是对应线性映射的像空间维数 $\dim R(A)$。
+
+
+
+- 行秩 $=$ 列秩
 

@@ -38,13 +38,11 @@ categories:
 
 
 - $a\biggm| \displaystyle{\frac{n+1}{3}}$  :   a**\biggm|** **\displaystyle**{\frac{n+1}{3}}
-
 - $\pm$ :  \pm
-
 - $\mp$ :  \mp
-
 - 多行对齐：\begin{aligned} & \end{aligned}
 - 大括号：\begin{equation} \begin{aligned} \left \ {  \right. \end{aligned}\end{equation}
+- 同构 $\cong$ ：\cong
 
 #### 物理常用：
 
