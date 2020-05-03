@@ -243,95 +243,6 @@
 
 </article>
     
-    <article id="post-Optomechanical-Structural-Design" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2020/05/03/Optomechanical-Structural-Design/"
-    >Optomechanical Structural Design</a> 
-</h2>
- 
-
-    </header>
-    
-
-    
-    <div class="article-meta">
-      <a href="/2020/05/03/Optomechanical-Structural-Design/" class="article-date">
-  <time datetime="2020-05-02T18:25:25.000Z" itemprop="datePublished">2020-05-03</time>
-</a>
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Projects/">Projects</a> / <a class="article-category-link" href="/categories/Projects/Optics/">Optics</a>
-  </div>
-
-      
-      
-      
-    </div>
-    
-
-    
-
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-
-      
-      <p>This is the major assignment for our optomechanical structural design course. Thanks a lot for Xiaowen Wang, Longxun Cao and Hanmo Mei. That week we all had little time for sleep and we finally made a really big guy! Although that period was very hard , I really cherish it.</p>
-<p>I will make it more detailed when I have time.</p>
-<h3 id="工程图汇总">工程图汇总</h3>
-
-
-	<div class="row">
-    <embed src="/pdf_files/钢铁侠手臂台灯-工程图汇总.pdf" width="100%" height="550" type="application/pdf">
-	</div>
-
-
-
-<h3 id="设计文件">设计文件</h3>
-
-
-	<div class="row">
-    <embed src="/pdf_files/钢铁侠手臂台灯项目设计文件.pdf" width="100%" height="550" type="application/pdf">
-	</div>
-
-
-
-<h3 id="展示ppt">展示PPT</h3>
-<p>waiting~</p>
-
-      
-      <!-- reward -->
-      
-    </div>
-    
-    
-      <!-- copyright -->
-      
-    <footer class="article-footer">
-      
-      
-
-    </footer>
-
-  </div>
-
-  
-
-  
-
-  
-  
-  
-
-</article>
-    
     <article id="post-Notes-byhand/NA-notes" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
@@ -1275,6 +1186,89 @@ E_v=\frac{L_v d S_1\cos i_1\cos i_2}{r^2}</script>$i_1,i_2$ 分别为两面法�
 
 </article>
     
+    <article id="post-Computer-Sciencs/Leecode" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/03/02/Computer-Sciencs/Leecode/"
+    >Leecode</a> 
+</h2>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2020/03/02/Computer-Sciencs/Leecode/" class="article-date">
+  <time datetime="2020-03-01T17:08:57.000Z" itemprop="datePublished">2020-03-02</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Computer-Science/">Computer Science</a> / <a class="article-category-link" href="/categories/Computer-Science/Practice/">Practice</a>
+  </div>
+
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <h1 id="Leecode-题目整理"><a href="#Leecode-题目整理" class="headerlink" title="Leecode 题目整理"></a>Leecode 题目整理</h1><h3 id="三数之和"><a href="#三数之和" class="headerlink" title="三数之和"></a>三数之和</h3><p>排序+<strong>双指针</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs python">nums.sort()<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(n):<br>  <span class="hljs-keyword">if</span> i&gt;<span class="hljs-number">0</span> <span class="hljs-keyword">and</span> nums[i] == nums[i - <span class="hljs-number">1</span>]:	<span class="hljs-keyword">continue</span><br>  l = i + <span class="hljs-number">1</span><br>  r = n - <span class="hljs-number">1</span><br>  <span class="hljs-keyword">while</span>(l &lt; r):<br>    <span class="hljs-keyword">if</span> nums[i] + nums[l] + nums[r] == <span class="hljs-number">0</span>:<br>      ans.append([nums[i], nums[l], nums[r]])<br>      <span class="hljs-keyword">while</span> l&lt;r <span class="hljs-keyword">and</span> nums[r]==nums[r<span class="hljs-number">-1</span>]:	r=r<span class="hljs-number">-1</span><br>      <span class="hljs-keyword">while</span> l&lt;r <span class="hljs-keyword">and</span> nums[l]==nums[l+<span class="hljs-number">1</span>]:	l=l+<span class="hljs-number">1</span><br>      r=r<span class="hljs-number">-1</span><br>      l=l+<span class="hljs-number">1</span><br>    <span class="hljs-keyword">elif</span> nums[i] + nums[l] + nums[r] &gt; <span class="hljs-number">0</span>:	r = r - <span class="hljs-number">1</span><br>    <span class="hljs-keyword">else</span>: l = l + <span class="hljs-number">1</span><br></code></pre></td></tr></table></figure>
+<h3 id="两数之和"><a href="#两数之和" class="headerlink" title="两数之和"></a>两数之和</h3><p><strong>carry</strong> 用得很妙, 模拟进位</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">addTwoNumbers</span><span class="hljs-params">(self, l1: ListNode, l2: ListNode)</span> -&gt; ListNode:</span><br>  ans=ListNode(<span class="hljs-number">0</span>)<br>  head=ans<br>  carry=<span class="hljs-number">0</span><br>  <span class="hljs-keyword">while</span> l1 <span class="hljs-keyword">or</span> l2:<br>  	x=l1.val <span class="hljs-keyword">if</span> l1 <span class="hljs-keyword">else</span> <span class="hljs-number">0</span><br>  	y=l2.val <span class="hljs-keyword">if</span> l2 <span class="hljs-keyword">else</span> <span class="hljs-number">0</span><br>  	s=x+y+carry<br>  	carry=s//<span class="hljs-number">10</span><br>  	ans.next=ListNode(s%<span class="hljs-number">10</span>)<br>  	ans=ans.next<br>  	<span class="hljs-keyword">if</span> l1:<br>  		l1=l1.next<br>  	<span class="hljs-keyword">if</span> l2:<br>  		l2=l2.next<br>  	<span class="hljs-keyword">if</span> carry:<br>  		ans.next=ListNode(carry)<br>  <span class="hljs-keyword">return</span> head.next<br></code></pre></td></tr></table></figure>
+<h2 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment">#简易版本</span><br>queue=[]<br>queue.append(data) <span class="hljs-comment">#入队</span><br>queue.pop(<span class="hljs-number">0</span>)	<span class="hljs-comment">#出队</span><br><br><span class="hljs-comment">#双向队列</span><br><span class="hljs-keyword">import</span> collections<br>que=collectione.deque()<br>que.append() <br>que.appendleft()<br>que.insert(i,x)<span class="hljs-comment">#在第i个位置插入x</span><br>que.popleft()<br>que.pop()<br>que.remove(val)<span class="hljs-comment">#移除查找到的第一个val</span><br>que.count(x)<span class="hljs-comment">#计算que中元素等于x的个数</span><br>que.rotate(n)<span class="hljs-comment">#向右循环移动n步 </span><br>que.clear()<br></code></pre></td></tr></table></figure>
+<h3 id="墙与门"><a href="#墙与门" class="headerlink" title="墙与门"></a>墙与门</h3><p>BFS</p>
+<p>满足条件=&gt;处理=&gt;放入队列</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">used=[]<span class="hljs-comment">#走过的标记不再走</span><br>rooms[tmpk][tmpt] = rooms[i][j] + <span class="hljs-number">1</span> <span class="hljs-comment">#step是上一个的加1</span><br></code></pre></td></tr></table></figure>
+<h3 id="岛屿数量"><a href="#岛屿数量" class="headerlink" title="岛屿数量"></a>岛屿数量</h3><p>BFS ：</p>
+<p>写个bfs函数，注意每到一个点要mark。</p>
+<p>对所有可遍历点bfs（同步更新可遍历点）, 每使用一次就找到了一个模块, cnt++。</p>
+<p><strong>并查集（未）</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">bfs</span><span class="hljs-params">(i, j)</span>:</span><br> queue = deque()<br> queue.appendleft((i, j))<br> grid[i][j] = <span class="hljs-string">"0"</span><br> <span class="hljs-keyword">while</span> queue:<br>   i, j = queue.pop()<br>   <span class="hljs-keyword">for</span> x, y <span class="hljs-keyword">in</span> [[<span class="hljs-number">-1</span>, <span class="hljs-number">0</span>], [<span class="hljs-number">1</span>, <span class="hljs-number">0</span>], [<span class="hljs-number">0</span>, <span class="hljs-number">-1</span>], [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>]]:<br>    tmp_i = i + x<br>    tmp_j = j + y<br>   <span class="hljs-keyword">if</span> <span class="hljs-number">0</span> &lt;= tmp_i &lt; row <span class="hljs-keyword">and</span> <span class="hljs-number">0</span> &lt;= tmp_j &lt; col <span class="hljs-keyword">and</span> grid[tmp_i][tmp_j] == <span class="hljs-string">"1"</span>:<br>   	grid[tmp_i][tmp_j] = <span class="hljs-string">"0"</span><br>    queue.appendleft((tmp_i, tmp_j))<br><br> <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(row):<br>   <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(col):<br>     <span class="hljs-keyword">if</span> grid[i][j] == <span class="hljs-string">"1"</span>:<br>       bfs(i, j)<br>       cnt += <span class="hljs-number">1</span><br></code></pre></td></tr></table></figure>
+<h3 id="打开转盘锁"><a href="#打开转盘锁" class="headerlink" title="打开转盘锁"></a>打开转盘锁</h3><p>yield 的使用</p>
+<h2 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python">stack=[]<br>stack.append()<br>stack.pop()<br>stack[<span class="hljs-number">-1</span>]<span class="hljs-comment">#取出栈顶元素</span><br></code></pre></td></tr></table></figure>
+<h3 id="最小栈"><a href="#最小栈" class="headerlink" title="最小栈"></a>最小栈</h3><p>使用两个栈，一个作为<strong>辅助栈</strong>。</p>
+
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+
+    </footer>
+
+  </div>
+
+  
+
+  
+
+  
+  
+  
+
+</article>
+    
   </article>
   
 
@@ -1650,42 +1644,7 @@ E_v=\frac{L_v d S_1\cos i_1\cos i_2}{r^2}</script>$i_1,i_2$ 分别为两面法�
 
 
     
-  </div>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            displayMath: [ ['$','$'], ["\\[","\\]"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js"></script>
-
-
-<!-- <script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX", "output/HTML-CSS"],
-    tex2jax: {
-      inlineMath: [ ['
-
-</html>,'
-
-</html>], ["\\(","\\)"] ],
-      displayMath: [ ['$','$'], ["\\[","\\]"] ],
-      processEscapes: true
-    },
-    "HTML-CSS": { availableFonts: ["TeX"] }
-  });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js"></script> --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 
 </html>
