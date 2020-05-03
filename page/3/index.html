@@ -1,0 +1,1462 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8" />
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>
+     Peter&#39;s Blog
+  </title>
+  <meta name="generator" content="hexo-theme-ayer">
+  
+  <link rel="shortcut icon" href="/images/favicon.png" />
+  
+  
+<link rel="stylesheet" href="/dist/main.css">
+
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/css/remixicon.min.css">
+
+  
+<link rel="stylesheet" href="/css/custom.css">
+
+  
+  
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+  
+  
+
+  
+
+</head>
+
+</html>
+
+<body>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="app">
+    <main class="content on">
+      
+<section class="cover">
+    
+      
+      <a class="forkMe" href="https://github.com/longqianh"
+        target="_blank"><img width="149" height="149" src="/images/forkme.png"
+          class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
+    
+  <div class="cover-frame">
+    <div class="bg-box">
+      <img src="/images/IDR_THEME_NTP_BACKGROUND.png" alt="image frame" />
+    </div>
+    <div class="cover-inner text-center text-white">
+      <h1><a href="/">Peter&#39;s Blog</a></h1>
+      <div id="subtitle-box">
+        
+        <span id="subtitle"></span>
+        
+      </div>
+      <div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="cover-learn-more">
+    <a href="javascript:void(0)" class="anchor"><i class="ri-arrow-down-line"></i></a>
+  </div>
+</section>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script>
+
+<div id="main">
+  <section class="outer">
+  <article class="articles">
+    
+    
+    
+    
+    <article id="post-Mathematics/Mathematic-Models" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/02/01/Mathematics/Mathematic-Models/"
+    >Mathematics Models</a> 
+</h2>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2020/02/01/Mathematics/Mathematic-Models/" class="article-date">
+  <time datetime="2020-02-01T12:28:07.000Z" itemprop="datePublished">2020-02-01</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Mathematics/">Mathematics</a> / <a class="article-category-link" href="/categories/Mathematics/Mathematics-Modeling/">Mathematics Modeling</a>
+  </div>
+
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <h1 id="数学建模-模型学习">数学建模 模型学习</h1>
+<h2 id="确定性连续模型">1 确定性连续模型</h2>
+<h2 id="静态优化模型微分法建模">1.1 静态优化模型/微分法建模</h2>
+<h3 id="不允许缺货的存贮模型">1.1.1 不允许缺货的存贮模型</h3>
+<ol type="1">
+<li><p>模型假设：</p>
+<ul>
+<li>每天存货费用：<span class="math inline">\(c_1\)</span> 元/吨</li>
+<li>每次订货费用：<span class="math inline">\(c_2\)</span> 元</li>
+<li>每天货物需求量：<span class="math inline">\(r\)</span> 吨/天</li>
+<li>任意时刻 <span class="math inline">\(t\)</span> 的货物贮存量：<span class="math inline">\(q(t)\)</span></li>
+<li>订货周期：<span class="math inline">\(T\)</span> 天</li>
+<li>每次订货数量：<span class="math inline">\(Q\)</span> 吨</li>
+</ul></li>
+<li><p>模型假设：</p>
+<p>每次订货后库存量均匀下降： <span class="math display">\[
+\frac{dq}{dt}=-r,\qquad q(0)=Q \\
+q(t)=-r\cdot t+Q
+\]</span></p></li>
+<li><p>模型建立：</p>
+<ul>
+<li>订货数量、订货周期、每日货物需求的关系：</li>
+</ul>
+<p><span class="math display">\[
+Q=r\cdot T
+\]</span></p>
+<ul>
+<li>每日平均花费：</li>
+</ul>
+<p><span class="math display">\[
+Cost(T)=\frac{1}{T}\cdot(c_2+c_1\int_0^Tq(t)dt)=\frac{c_2}{T}+\frac{1}{2}c_1 rT
+\]</span></p>
+<ul>
+<li>目标：<span class="math inline">\(min[Cost]\)</span></li>
+</ul>
+<p><span class="math display">\[
+\frac{dCost}{dT}=0\\=&gt; T=\sqrt{\frac{2c_2}{c_1r}},\quad Q=\sqrt{\frac{2c_2r}{c_1}}
+\]</span></p></li>
+</ol>
+<p>$ \ $
+      
+      <a class="article-more-link" href="/2020/02/01/Mathematics/Mathematic-Models/">阅读更多...</a>
+      
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+
+    </footer>
+
+  </div>
+
+  
+
+  
+
+  
+  
+  
+
+</article>
+    
+    <article id="post-Computer-Sciencs/神经网络学习" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/01/30/Computer-Sciencs/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0/"
+    >神经网络学习</a> 
+</h2>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2020/01/30/Computer-Sciencs/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0/" class="article-date">
+  <time datetime="2020-01-30T09:25:27.000Z" itemprop="datePublished">2020-01-30</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Computer-Science/">Computer Science</a> / <a class="article-category-link" href="/categories/Computer-Science/Machine-Learning/">Machine Learning</a> / <a class="article-category-link" href="/categories/Computer-Science/Machine-Learning/Neural-Networks/">Neural Networks</a>
+  </div>
+
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <h1 id="神经网络-学习笔记">神经网络 学习笔记</h1>
+<p>学习资源: <a href="">neuralnetworksanddeeplearning.com</a></p>
+<h2 id="chapter-12">Chapter 1、2</h2>
+<h3 id="基本概念">1.1 基本概念</h3>
+<ul>
+<li><p>activation function 激活函数/传递函数 定义了该节点在给定的输入或输入的集合下的输出，比如 sigmoid function</p></li>
+<li><p>perceptron model 感知器：输入 <span class="math inline">\(0,1\)</span> 二值函数，输出 <span class="math inline">\(0,1\)</span> 二值函数</p></li>
+<li><p>sigmoid neurons S 神经元</p>
+<p>​ 中间部分更精细，<span class="math inline">\(\displaystyle\sigma(z)=\frac{1}{1+e^{-z}}\)</span> 输入二值，输出为 <span class="math inline">\([0,1]\)</span> 之间的数，极限性质和感知器一样</p></li>
+<li><p>feedforward neural networks 前馈神经网络</p>
+<p>​ 没有反馈的神经网络，由输入层(input layer)、隐藏层(hidden layer)、输出层(output layer)构成</p></li>
+</ul>
+<p>$ \ $
+      
+      <a class="article-more-link" href="/2020/01/30/Computer-Sciencs/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0/">阅读更多...</a>
+      
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/notes/" rel="tag">notes</a></li></ul>
+
+
+    </footer>
+
+  </div>
+
+  
+
+  
+
+  
+  
+  
+
+</article>
+    
+    <article id="post-Computer-Sciencs/数值分析-学习笔记" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/01/28/Computer-Sciencs/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"
+    >数值分析 学习笔记</a> 
+</h2>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2020/01/28/Computer-Sciencs/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="article-date">
+  <time datetime="2020-01-28T13:20:51.000Z" itemprop="datePublished">2020-01-28</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Computer-Science/">Computer Science</a> / <a class="article-category-link" href="/categories/Computer-Science/Numerical-Analysis/">Numerical Analysis</a>
+  </div>
+
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <h1 id="数值分析-学习笔记">数值分析 学习笔记</h1>
+
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+
+    </footer>
+
+  </div>
+
+  
+
+  
+
+  
+  
+  
+
+</article>
+    
+    <article id="post-Computer-Sciencs/Python-学习笔记" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/01/28/Computer-Sciencs/Python-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"
+    >Python 学习笔记</a> 
+</h2>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2020/01/28/Computer-Sciencs/Python-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="article-date">
+  <time datetime="2020-01-28T09:36:38.000Z" itemprop="datePublished">2020-01-28</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Computer-Science/">Computer Science</a> / <a class="article-category-link" href="/categories/Computer-Science/Language-Learning/">Language Learning</a> / <a class="article-category-link" href="/categories/Computer-Science/Language-Learning/Python/">Python</a>
+  </div>
+
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <h1 id="python-学习笔记">Python 学习笔记</h1>
+<h2 id="pandas-library">pandas library</h2>
+<h3 id="day-1">Day #1</h3>
+<p>df = pd.read_csv(' ')</p>
+<p>df.head(n)</p>
+<p>df.tail(n)</p>
+<p>df.nlargest(n,'name')</p>
+<p>df.nsmallest(n,'name')</p>
+<p>df [Pd['bla bla']=='labalaba']</p>
+<h3 id="day-2">Day #2</h3>
+<p>df.shape</p>
+<p>df.columns.tolist( )</p>
+<p>df['name'].unique( )</p>
+<p>df = df.replace('Orig' , 'New')</p>
+<p>df.isnull( ) // Checks if each value in the dato frame is missing</p>
+<p>Trick: print(df.isnull().sum()) // return the total amount of missing values for each feature(column)</p>
+<p>NaN stands for 'not a number'</p>
+<p><strong>creating columns:</strong></p>
+<p>df['new column name'] = fomula</p>
+<p>e.g. df['% Female'] = df['Female'] / df['Total']</p>
+<p>df.dtypes</p>
+<p>df.select_dtypes(['object'])</p>
+<p><strong>measures of spread or distribution</strong></p>
+<p>df['column name'].mean( )</p>
+<p>df['column name'].median( )</p>
+<p>df['column name'].mode( )</p>
+<p>df.groupby(by='column name').agg('mean')</p>
+<p>// agg stands for 'aggregate'. group the data by the 'column name'</p>
+<p>df['column name'].max( ) — df['column name'].min( )</p>
+<p>df['column name'].std( ) // standard deviation</p>
+<p>df['column name'].var( ) // variance</p>
+<p>df.groupby(by='column name').agg('std')</p>
+<p><strong>correlation coefficient</strong></p>
+<p>df.corr( )</p>
+<p>df.corr( )['x'] ['y']</p>
+<h3 id="day-3">Day #3</h3>
+<h4 id="bar-chart-条形图">Bar Chart 条形图</h4>
+<p>df_top10 = df.nlargest(10,'Total')</p>
+<p>df_top10.plot.bar(x='Major Name', y='Total')</p>
+<h4 id="histograms-直方图">Histograms 直方图</h4>
+<p>df.hist(column = '% Female')</p>
+<h4 id="boxplot-箱形图-超有用">Boxplot 箱形图 超有用</h4>
+<p>df.boxplot(column = '% Female', vert=False)</p>
+<h4 id="scatterplots-散点图">Scatterplots 散点图</h4>
+<p>df.plot.scatter(x='Male', y='Female')</p>
+<p>##. . .</p>
+<h4 id="simulation">Simulation</h4>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> random<br>random.ranint(<span class="hljs-number">1</span>,<span class="hljs-number">10</span>)<br><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">1</span>,<span class="hljs-number">100</span>):<br>  print(random.randint(<span class="hljs-number">1</span>,<span class="hljs-number">10</span>))<br></code></pre></td></tr></table></figure>
+<h3 id="day-4">Day #4</h3>
+<ul>
+<li>generate a dataset of random numbers</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> random <span class="hljs-keyword">as</span> rd<br>arr=[]<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">100</span>):<br>  value=rd.randint(<span class="hljs-number">1</span>,<span class="hljs-number">10</span>)<br>  arr.append(&#123;<span class="hljs-string">'value'</span>:value&#125;)<br></code></pre></td></tr></table></figure>
+<ul>
+<li><p><strong>Monty Hall Game</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd<br><span class="hljs-keyword">import</span> random<br><br>results = []<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">1000</span>):<br>  prize = random.randint(<span class="hljs-number">1</span>, <span class="hljs-number">3</span>)<br>  choice = random.randint(<span class="hljs-number">1</span>, <span class="hljs-number">3</span>)<br>  print(<span class="hljs-string">"We picked door "</span> + str(choice))<br><br>  <span class="hljs-comment"># Show a door that is not the winning door:</span><br>  <span class="hljs-keyword">if</span> prize != <span class="hljs-number">1</span> <span class="hljs-keyword">and</span> choice != <span class="hljs-number">1</span>: showdoor = <span class="hljs-number">1</span><br>  <span class="hljs-keyword">elif</span> prize != <span class="hljs-number">2</span> <span class="hljs-keyword">and</span> choice != <span class="hljs-number">2</span>: showdoor = <span class="hljs-number">2</span><br>  <span class="hljs-keyword">else</span>: showdoor = <span class="hljs-number">3</span><br>  print(<span class="hljs-string">"We were shown that door "</span> + str(showdoor) + <span class="hljs-string">" was a goat"</span>)<br><br>  <span class="hljs-comment"># We did NOT swap the door:</span><br>  <span class="hljs-keyword">if</span>   choice == <span class="hljs-number">1</span> <span class="hljs-keyword">and</span> showdoor == <span class="hljs-number">2</span>: choice = <span class="hljs-number">3</span><br>  <span class="hljs-keyword">elif</span> choice == <span class="hljs-number">1</span> <span class="hljs-keyword">and</span> showdoor == <span class="hljs-number">3</span>: choice = <span class="hljs-number">2</span><br><br>  <span class="hljs-keyword">elif</span> choice == <span class="hljs-number">2</span> <span class="hljs-keyword">and</span> showdoor == <span class="hljs-number">1</span>: choice = <span class="hljs-number">3</span><br>  <span class="hljs-keyword">elif</span> choice == <span class="hljs-number">2</span> <span class="hljs-keyword">and</span> showdoor == <span class="hljs-number">3</span>: choice = <span class="hljs-number">1</span><br><br>  <span class="hljs-keyword">elif</span> choice == <span class="hljs-number">3</span> <span class="hljs-keyword">and</span> showdoor == <span class="hljs-number">1</span>: choice = <span class="hljs-number">2</span><br>  <span class="hljs-keyword">elif</span> choice == <span class="hljs-number">3</span> <span class="hljs-keyword">and</span> showdoor == <span class="hljs-number">2</span>: choice = <span class="hljs-number">1</span><br>    <br>  print(<span class="hljs-string">"We DID swap doors."</span>)<br><br>  <span class="hljs-comment"># Check if we won:</span><br>  <span class="hljs-keyword">if</span> prize == choice:<br>    print(<span class="hljs-string">"WE WIN!!!!!!!!!!!!!!!"</span>)<br>    results.append( &#123;<span class="hljs-string">"result"</span>: <span class="hljs-number">1</span>&#125; )<br>  <span class="hljs-keyword">else</span>:<br>    print(<span class="hljs-string">" :( "</span>)<br>    results.append( &#123;<span class="hljs-string">"result"</span>: <span class="hljs-number">0</span>&#125; )<br>    <br>df = pd.DataFrame(results)<br></code></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="其他">其他</h2>
+<p>enumerate() 函数用于将一个可遍历的数据对象(如列表、元组或字符串)组合为一个索引序列，同时列出数据和数据下标，一般用在 for 循环当中</p>
+<p>向量范数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">while</span> sum(i**<span class="hljs-number">2</span> <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> f(x)) &gt;= TOL**<span class="hljs-number">2</span>:<br></code></pre></td></tr></table></figure>
+<p>列表一个溢出error的解决</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python">i = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">8</span>, <span class="hljs-number">13</span>]<br>j = [<span class="hljs-literal">None</span>] * len(i)<br><span class="hljs-comment">#j == [None, None, None, None, None, None]</span><br>k = <span class="hljs-number">0</span><br><br><span class="hljs-keyword">for</span> l <span class="hljs-keyword">in</span> i:<br>   j[k] = l<br>   k += <span class="hljs-number">1</span><br></code></pre></td></tr></table></figure>
+<p>Python中初始化一个5 x 3每项为0的数组，最好方法是：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">multilist = [[<span class="hljs-number">0</span> <span class="hljs-keyword">for</span> col <span class="hljs-keyword">in</span> range(<span class="hljs-number">5</span>)] <span class="hljs-keyword">for</span> row <span class="hljs-keyword">in</span> range(<span class="hljs-number">3</span>)]<br></code></pre></td></tr></table></figure>
+<p>np数组索引：</p>
+<p>A[i,j]</p>
+<p>A[i,:i] i的前一个</p>
+<p>A[i,i:] 算上i往后</p>
+<p>函数中的参量似乎不是形参</p>
+<p>if all(abs(x1[i]-x0[i]) &lt; eps for i in range(n))</p>
+<p>[max([abs(m[i][j]) for j in range(n)]) for i in range(n)]</p>
+<p>A.shape[0]和A.shape[1]</p>
+<p>print(...,end=' ')</p>
+<p>新的Python语法，是不支持的代码对齐中，混用TAB和空格的。所以出现上述错误提示了。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">map(func, seq1[, seq2,…])<br></code></pre></td></tr></table></figure>
+<p>第一个参数接受一个函数名，后面的参数接受一个或多个可迭代的序列，返回的是一个集合。 Python函数编程中的map()函数是将func作用于seq中的每一个元素，并将所有的调用的结果作为一个list返回。如果func为None，作用同zip()。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">print(“&#123;:<span class="hljs-number">.3</span>f&#125;<span class="hljs-string">".format())</span><br></code></pre></td></tr></table></figure>
+<p>Matrix product of two arrays:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">numpy.matmul(*x1*, *x2*, */*, *out=<span class="hljs-literal">None</span>*, ***, *casting=<span class="hljs-string">'same_kind'</span>*, *order=<span class="hljs-string">'K'</span>*, *dtype=<span class="hljs-literal">None</span>*, *subok=<span class="hljs-literal">True</span>*[, *signature*, *extobj*]) *= *<br></code></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python">D = np.diag(np.diag(A)) <span class="hljs-comment"># A的对角元构成的矩阵</span><br>L = np.tri(*np.shape(A),<span class="hljs-number">-1</span>) * (-A)  <span class="hljs-comment"># A的下三角元的相反数构成的矩阵L</span><br>U = D - L -A <span class="hljs-comment">#A的上三角元的相反数构成的元素</span><br>M = np.linalg.inv(D-L)  <span class="hljs-comment">#求（D-L）的逆</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python">numpy.tri(N, M=None, k=0, dtype=&lt;class 'float'&gt;)[source]<br>/*An array with ones at and below the given diagonal and zeros elsewhere.*/<br>/*k : int, optional<br>The sub-diagonal at and below which the array is filled. k = 0 is the main diagonal, while k &lt; 0 is below it, and k &gt; 0 is above. The default is 0.*/<br>np.tri(3, 5, 2, dtype=int)<br>array([[1, 1, 1, 0, 0],<br>       [1, 1, 1, 1, 0],<br>       [1, 1, 1, 1, 1]])<br></code></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">list(enumerate(<span class="hljs-string">'abc'</span>, <span class="hljs-number">1</span>)) <br>[(<span class="hljs-number">1</span>, <span class="hljs-string">'a'</span>), (<span class="hljs-number">2</span>, <span class="hljs-string">'b'</span>), (<span class="hljs-number">3</span>, <span class="hljs-string">'c'</span>)]<br></code></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment">#三元运算</span><br>[on_true] <span class="hljs-keyword">if</span> [expression] <span class="hljs-keyword">else</span> [on_false]<br>x, y = <span class="hljs-number">50</span>, <span class="hljs-number">25</span><br>small = x <span class="hljs-keyword">if</span> x &lt; y <span class="hljs-keyword">else</span> y<br></code></pre></td></tr></table></figure>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs dockerfile">xk = x.<span class="hljs-keyword">copy</span><span class="bash">()</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python">a = [i/<span class="hljs-number">100.0</span> <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">10</span>, <span class="hljs-number">50</span>)]<br><br>numpy.arange(<span class="hljs-number">0.1</span>, <span class="hljs-number">0.5</span>, <span class="hljs-number">0.01</span>)<br></code></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python">x = np.linspace(<span class="hljs-number">-10</span>,<span class="hljs-number">10</span>,<span class="hljs-number">500</span>)<br>y = f(x)<br>plt.plot(x,y,color=<span class="hljs-string">"orange"</span>,label=<span class="hljs-string">"$x^2 + 10 * sin(x) + 1$"</span>,linewidth=<span class="hljs-number">2</span>)<br></code></pre></td></tr></table></figure>
+<p>获取横纵坐标的简洁写法</p>
+<p>plot里面可以用latex！</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">res = minimize_scalar(f, bounds = (<span class="hljs-number">-5</span>, <span class="hljs-number">0</span>), method = <span class="hljs-string">'bounded'</span>)<br><span class="hljs-keyword">print</span> <span class="hljs-string">"(-5, 0)"</span>, res.x<br></code></pre></td></tr></table></figure>
+<p>获取极值以及对应的坐标</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment">#支持中文显示</span><br><span class="hljs-keyword">from</span> pylab <span class="hljs-keyword">import</span> *<br>mpl.rcParams[<span class="hljs-string">'font.sans-serif'</span>] = [<span class="hljs-string">'SimHei'</span>]<br> <br><span class="hljs-comment">#创建数据</span><br>x = np.linspace(<span class="hljs-number">-5</span>, <span class="hljs-number">5</span>, <span class="hljs-number">100</span>)<br>y1 = np.sin(x)<br>y2 = np.cos(x)<br> <br><span class="hljs-comment">#创建figure窗口</span><br>plt.figure(num=<span class="hljs-number">3</span>, figsize=(<span class="hljs-number">8</span>, <span class="hljs-number">5</span>))<br><span class="hljs-comment">#画曲线1</span><br>plt.plot(x, y1)<br><span class="hljs-comment">#画曲线2</span><br>plt.plot(x, y2, color=<span class="hljs-string">'blue'</span>, linewidth=<span class="hljs-number">5.0</span>, linestyle=<span class="hljs-string">'--'</span>)<br><span class="hljs-comment">#设置坐标轴范围</span><br>plt.xlim((<span class="hljs-number">-5</span>, <span class="hljs-number">5</span>))<br>plt.ylim((<span class="hljs-number">-2</span>, <span class="hljs-number">2</span>))<br><span class="hljs-comment">#设置坐标轴名称</span><br>plt.xlabel(<span class="hljs-string">'xxxxxxxxxxx'</span>)<br>plt.ylabel(<span class="hljs-string">'yyyyyyyyyyy'</span>)<br><span class="hljs-comment">#设置坐标轴刻度</span><br>my_x_ticks = np.arange(<span class="hljs-number">-5</span>, <span class="hljs-number">5</span>, <span class="hljs-number">0.5</span>)<br>my_y_ticks = np.arange(<span class="hljs-number">-2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">0.3</span>)<br>plt.xticks(my_x_ticks)<br>plt.yticks(my_y_ticks)<br> <br><span class="hljs-comment">#显示出所有设置</span><br>plt.show()<br></code></pre></td></tr></table></figure>
+<p>python添加元素</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python">p_arr = np.concatenate((p_arr,[p_])) <span class="hljs-comment"># 先将p_变成list形式进行拼接，注意输入为一个tuple</span><br>p_arr = np.append(p_arr,p_) <span class="hljs-comment">#直接向p_arr里添加p_</span><br><span class="hljs-comment">#注意一定不要忘记用赋值覆盖原p_arr不然不会变</span><br></code></pre></td></tr></table></figure>
+<p>Np.cos 自变量是弧度</p>
+<p>卡西欧计算器cos自变量是角度</p>
+<p>当函数要接受元组或者字典参数时，它分别使用*和**前缀。</p>
+<p>如果使用**前缀，多余的参数会被认为是字典.</p>
+<h2 id="绘制三维图">绘制三维图</h2>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs python">fig = plt.figure()<br>ax = Axes3D(fig)<br>X = np.meshgrid(X)<br>Y = np.meshgrid(Y)<br>Z = f(X,Y)<br>ax.plot_surface(X,Y,Z,cmap=plt.get_cmap(<span class="hljs-string">'rainbow'</span>))<br></code></pre></td></tr></table></figure>
+<h2 id="聚类分析">聚类分析</h2>
+<h3 id="k-均值聚类">1. K-均值聚类</h3>
+<p>划分式聚类方法。</p>
+<p>已知要分点聚类数，随机生成类数个质心，从质心出发逐渐分类</p>
+<ul>
+<li>生成 KMeans 类</li>
+<li>使用 KMeans 中的 fit_predict 函数直接得聚类后各点对应的类标签</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> sklearn.datasets <span class="hljs-keyword">import</span> make_blobs<br><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np<br><span class="hljs-keyword">import</span> matplotlib.pyplot <span class="hljs-keyword">as</span> plt<br><span class="hljs-keyword">from</span> sklearn.cluster <span class="hljs-keyword">import</span> KMeans<br><br><span class="hljs-comment"># 生成n_samples个点对,data[1]是每个成员的整数标签(类别)</span><br>data = make_blobs(n_samples=<span class="hljs-number">500</span>, n_features=<span class="hljs-number">2</span>, centers=<span class="hljs-number">8</span>,<br>                  cluster_std=<span class="hljs-number">1.6</span>, random_state=<span class="hljs-number">50</span>)<br>points = data[<span class="hljs-number">0</span>]<br>fig1 = plt.figure()  <span class="hljs-comment"># 生成画布</span><br>fig1 = plt.scatter(points[:, <span class="hljs-number">0</span>], points[:, <span class="hljs-number">1</span>], c=data[<span class="hljs-number">1</span>],<br>                   cmap=<span class="hljs-string">'viridis'</span>)<br>plt.title(<span class="hljs-string">'before'</span>)<br>plt.xlim(<span class="hljs-number">-15</span>, <span class="hljs-number">15</span>)<br>plt.ylim(<span class="hljs-number">-15</span>, <span class="hljs-number">15</span>)<br><br><span class="hljs-comment"># create kmeans object</span><br>kmeans = KMeans(n_clusters=<span class="hljs-number">8</span>)<br><br><span class="hljs-comment"># print location of clusters learned by kmeans object</span><br><span class="hljs-comment"># print(kmeans.cluster_centers_)</span><br><br>km_res = kmeans.fit_predict(points)<br><br>fig2 = plt.figure()<br>fig2 = plt.scatter(points[:, <span class="hljs-number">0</span>], points[:, <span class="hljs-number">1</span>], c=km_res,<br>                   cmap=<span class="hljs-string">'viridis'</span>)  <span class="hljs-comment"># c:color 按data[1]给每个点对应的颜色</span><br>plt.title(<span class="hljs-string">'after'</span>)<br>plt.xlim(<span class="hljs-number">-15</span>, <span class="hljs-number">15</span>)<br>plt.ylim(<span class="hljs-number">-15</span>, <span class="hljs-number">15</span>)<br>plt.show()<br></code></pre></td></tr></table></figure>
+<h3 id="层次分析聚类">2. 层次分析聚类</h3>
+<p>层次化聚类方法。</p>
+<p>从每个点各为一类开始，“归并”。</p>
+<p>步骤：</p>
+<ul>
+<li>生成距离矩阵：pdist函数</li>
+<li>进行层次聚类，使用ward提出的离差平方和方法效果较好： linkage函数。 注：返回的Z的第一列和第二列代表聚集的两类的序列号，第三列代表第一列和第二列序号所代表的集群在聚集时的距离(与层次聚类图的高度相等)，第四列代表聚集时所包含的原始数据的个数</li>
+<li>绘制树状图 dendrogram 函数</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd<br><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np<br><span class="hljs-keyword">import</span> matplotlib.pyplot <span class="hljs-keyword">as</span> plt<br><span class="hljs-keyword">import</span> scipy<br><span class="hljs-keyword">import</span> scipy.cluster.hierarchy <span class="hljs-keyword">as</span> sch<br><br><br><span class="hljs-comment"># 生成待聚类的数据点,这里生成了20个点,每个点4维:</span><br>points = scipy.randn(<span class="hljs-number">20</span>, <span class="hljs-number">4</span>)<br><br><span class="hljs-comment"># 生成点与点之间的距离矩阵,这里用的欧氏距离:</span><br>disMat = sch.distance.pdist(points, <span class="hljs-string">'euclidean'</span>)<br><span class="hljs-comment"># 进行层次聚类:</span><br>Z = sch.linkage(disMat, method=<span class="hljs-string">'ward'</span>)<br><span class="hljs-comment"># 将层级聚类结果以树状图表示出来并保存为plot_dendrogram.png</span><br>P = sch.dendrogram(Z)<br>plt.savefig(<span class="hljs-string">'plot_dendrogram.png'</span>)<br><br><span class="hljs-comment"># 根据linkage matrix Z得到聚类结果:</span><br>cluster = sch.fcluster(Z, t=<span class="hljs-number">4</span>, criterion=<span class="hljs-string">'maxclust'</span>)<span class="hljs-comment">#t表示最大聚类簇数</span><br>print(<span class="hljs-string">"Original cluster by hierarchy clustering:\n"</span>, cluster)<br><br>plt.show()<br></code></pre></td></tr></table></figure>
+<h3 id="应用">3. 应用</h3>
+<p>首先使用变量聚类法找出相关度较低的“主变量”（主要指标），删除主变量之外的次变量，然后根据主变量使用样本聚类分析法进行样本分类。</p>
+<h2 id="主成分分析-pca">主成分分析 PCA</h2>
+<p>Principle Component Analysis. 将相关度很高的向量转化为相关度较低的向量。</p>
+<p>Python 实现：</p>
+<p>直接调库：<strong>sklearn.decomposition.PCA</strong> （类）</p>
+<p>参数：</p>
+<ul>
+<li>n_component : 想要将到的维数；或者规定主成分的累计贡献率阀值（percentage）</li>
+<li>whiten: 是否白化，即归一化</li>
+<li>explained_variance_ : 代表降维后的各主成分的方差值。方差值越大，则说明越是重要的主成分。</li>
+<li>explained_variance_ratio_ : 代表降维后的各主成分的方差值占总方差值的比例(累计贡献率)</li>
+<li>Y = fit_transform(X) 利用主成分分析方法对数据降维，返回对X降维后的矩阵: X.shape=(n_samples,n_features); Y.shape=(n_samples,n_components)</li>
+<li>fit(X) 利用主成分分析法对X降维和变换，X已经改变</li>
+<li>transform(X) 返回 n_samples<span class="math inline">\(\times\)</span> n_components 的切掉后面的矩阵</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np<br><span class="hljs-keyword">import</span> matplotlib.pyplot <span class="hljs-keyword">as</span> plt<br><span class="hljs-keyword">from</span> sklearn.decomposition <span class="hljs-keyword">import</span> PCA<br><br>x = np.array([[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>], [<span class="hljs-number">1</span>, <span class="hljs-number">4</span>], [<span class="hljs-number">5</span>, <span class="hljs-number">8</span>]])<br>pca = PCA(n_components=<span class="hljs-number">0.9</span>)<br>y = pca.fit_transform(x)<br>print(<span class="hljs-string">"累计贡献率："</span>, pca.explained_variance_ratio_)<br>print(<span class="hljs-string">"变换后的x"</span>, y)<br><span class="hljs-comment">#or:</span><br><span class="hljs-comment">#pca.fit(x)</span><br><span class="hljs-comment">#y=pca.transform(x)</span><br></code></pre></td></tr></table></figure>
+<p>（numpy练习）</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np<br><br><span class="hljs-comment"># 归一化</span><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">stdData</span><span class="hljs-params">(dataMat)</span>:</span><br>    meanVal = np.mean(dataMat, axis=<span class="hljs-number">0</span>)  <span class="hljs-comment"># 按列求均值，即求各个特征的均值</span><br>    _, n = dataMat.shape<br>    stdval = np.std(dataMat, axis=<span class="hljs-number">0</span>)<br>    newData = (dataMat - meanVal)<br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(n):<br>        newData[:, i] /= stdval[i]<br>    <span class="hljs-keyword">return</span> newData<br><br><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">percentage2n</span><span class="hljs-params">(eigVals, percentage)</span>:</span><br>    sortEig = np.sort(eigVals)  <span class="hljs-comment"># 升序</span><br>    sortEig = sortEig[<span class="hljs-number">-1</span>::<span class="hljs-number">-1</span>]  <span class="hljs-comment"># 逆转，即降序</span><br>    arraySum = sum(sortEig)<br>    tmpSum = <span class="hljs-number">0</span><br>    num = <span class="hljs-number">0</span><br>    contribute = []  <span class="hljs-comment"># 信息贡献率</span><br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> sortEig:<br>        contribute.append(i / arraySum)<br>    contribute = np.array(contribute)<br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> sortEig:<br>        tmpSum += i<br>        num += <span class="hljs-number">1</span><br>        <span class="hljs-keyword">if</span> tmpSum &gt;= arraySum * percentage:<br>            <span class="hljs-keyword">return</span> num, contribute<br><br><span class="hljs-comment">#主成分分析</span><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">PCA</span><span class="hljs-params">(dataMat, percentage=<span class="hljs-number">0.9</span>)</span>:</span><br>    newData = stdData(dataMat)<br>    corMat = np.corrcoef(newData, rowvar=<span class="hljs-number">0</span>)<br>    <span class="hljs-comment"># 求特征值和特征向量,特征向量是按列放的，即一列代表一个特征向量</span><br>    eigVals, eigVects = np.linalg.eig(np.mat(corMat))<br>    eigValIndice = np.argsort(eigVals)  <span class="hljs-comment"># 对特征值从小到大排序</span><br>    n, contribute = percentage2n(eigVals, percentage)  <span class="hljs-comment"># 达到累积贡献率百分比的n,默认90%</span><br>    n_eigValIndice = eigValIndice[<span class="hljs-number">-1</span>:-(n + <span class="hljs-number">1</span>):<span class="hljs-number">-1</span>]  <span class="hljs-comment"># 最大的n个特征值的下标</span><br>    n_eigVect = eigVects[:, n_eigValIndice]  <span class="hljs-comment"># 最大的n个特征值对应的特征向量</span><br>    lowDDataMat = newData[:,:n] * n_eigVect  <span class="hljs-comment"># 低维特征空间的数据</span><br>    contribute = contribute[:n]<br>    score = np.float(contribute * lowDDataMat)  <span class="hljs-comment"># 基于主成分分析的综合评价得分</span><br>    <span class="hljs-keyword">return</span> lowDDataMat, score<br><br><br>x = np.array([[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>], [<span class="hljs-number">1</span>, <span class="hljs-number">4</span>], [<span class="hljs-number">5</span>, <span class="hljs-number">8</span>]])<br>print(PCA(x))<br></code></pre></td></tr></table></figure>
+
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+
+    </footer>
+
+  </div>
+
+  
+
+  
+
+  
+  
+  
+
+</article>
+    
+    <article id="post-LaTex/Latex-Tricks" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/01/25/LaTex/Latex-Tricks/"
+    >LaTex Tricks</a> 
+</h2>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2020/01/25/LaTex/Latex-Tricks/" class="article-date">
+  <time datetime="2020-01-25T03:21:47.000Z" itemprop="datePublished">2020-01-25</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/LaTex/">LaTex</a>
+  </div>
+
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <h1 id="latex-tricks">LaTex Tricks</h1>
+<h4 id="字母上面加东西">字母上面加东西：</h4>
+<ul>
+<li><p>$ x$ : x, $ x$ : x , <span class="math inline">\(\hat x\)</span> : x, <span class="math inline">\(\widehat x\)</span> : x</p></li>
+<li><p><span class="math inline">\(\widetilde {x}, \widetilde{ab}\)</span> : *** {x}, </p></li>
+<li><span class="math inline">\(\dot x\)</span> : x, <span class="math inline">\(\ddot x\)</span> : x</li>
+<li><p><span class="math inline">\(\vec{x}\)</span> : x</p></li>
+<li><p>东西上写东西 <span class="math inline">\(\overset{a}{bcd}\)</span> ： </p></li>
+</ul>
+<h4 id="数学常用">数学常用：</h4>
+<ul>
+<li><p>$ <em>{1in}$ : </em>{1in}{1in}</p></li>
+<li><p><span class="math inline">\(\because\)</span> -- , <span class="math inline">\(\therefore\)</span> -- </p></li>
+<li><p><span class="math inline">\(\forall\)</span> : , $ $ : </p></li>
+<li><p><span class="math inline">\(\sqrt[n]{abc}\)</span> : </p>
+<p>
+      
+      <a class="article-more-link" href="/2020/01/25/LaTex/Latex-Tricks/">阅读更多...</a>
+      
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+
+    </footer>
+
+  </div>
+
+  
+
+  
+
+  
+  
+  
+
+</article>
+    
+    <article id="post-Computer-Sciencs/Image-Processing学习笔记" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/01/24/Computer-Sciencs/Image-Processing%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"
+    >Image Processing 学习笔记</a> 
+</h2>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2020/01/24/Computer-Sciencs/Image-Processing%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="article-date">
+  <time datetime="2020-01-24T15:34:36.000Z" itemprop="datePublished">2020-01-24</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Computer-Science/">Computer Science</a> / <a class="article-category-link" href="/categories/Computer-Science/Image-Processing/">Image Processing</a>
+  </div>
+
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <h1 id="图像信息处理">图像信息处理</h1>
+<h2 id="灰度变换与空间滤波">1 灰度变换与空间滤波</h2>
+<h3 id="灰度变换str">1.1 灰度变换：<span class="math inline">\(s=T(r)\)</span></h3>
+<ul>
+<li>图像反转：<span class="math inline">\(s=L-1-r\)</span></li>
+<li>对数变换：<span class="math inline">\(s=c\log(1+r)\)</span></li>
+<li>伽马变换：<span class="math inline">\(s=cr^\gamma\)</span></li>
+<li>分段分式线性变换：对比度拉伸、灰度级分层、比特平面分层</li>
+</ul>
+<p>$ \ $
+      
+      <a class="article-more-link" href="/2020/01/24/Computer-Sciencs/Image-Processing%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">阅读更多...</a>
+      
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+
+    </footer>
+
+  </div>
+
+  
+
+  
+
+  
+  
+  
+
+</article>
+    
+    <article id="post-Computer-Sciencs/Git学习笔记" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/01/24/Computer-Sciencs/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"
+    >Computer-Sciencs/Git学习笔记</a> 
+</h2>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2020/01/24/Computer-Sciencs/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="article-date">
+  <time datetime="2020-01-24T00:04:02.033Z" itemprop="datePublished">2020-01-24</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Computer-Science/">Computer Science</a> / <a class="article-category-link" href="/categories/Computer-Science/Git/">Git</a>
+  </div>
+
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <h2 id="git学习">Git学习</h2>
+<h3 id="创建版本库">创建版本库</h3>
+<p>mkdir dirname // make directory 创建目录 dirname 为目录名</p>
+<p>pwd //print working directory 查看当前工作目录的完整路径</p>
+<p>ls -a // 显示所有文件及目录，包括隐藏档</p>
+<p>git init</p>
+<h3 id="修改与提交">修改与提交</h3>
+<p>git add filename1.txt filename2.txt // 把要提交的所有<em>修改</em> 放到暂存区</p>
+<p>git commit -m &quot;what I did in this commission&quot; // 一次性把暂存区的所有修改提交到分支 -m表示message</p>
+<p>git log // 查看修改日志</p>
+<p>git log --graph // 查看分支合并图</p>
+<p>git log --pretty=oneline // 每次修改在一行简明显示</p>
+<p>
+      
+      <a class="article-more-link" href="/2020/01/24/Computer-Sciencs/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">阅读更多...</a>
+      
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+
+    </footer>
+
+  </div>
+
+  
+
+  
+
+  
+  
+  
+
+</article>
+    
+    <article id="post-Mathematics/Abstract-Algebra" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/01/20/Mathematics/Abstract-Algebra/"
+    >Abstract Algebra</a> 
+</h2>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2020/01/20/Mathematics/Abstract-Algebra/" class="article-date">
+  <time datetime="2020-01-20T02:20:43.000Z" itemprop="datePublished">2020-01-20</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Mathematics/">Mathematics</a> / <a class="article-category-link" href="/categories/Mathematics/Algebra/">Algebra</a>
+  </div>
+
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <h1 id="抽象代数内容整理">抽象代数内容整理</h1>
+<h2 id="群论">1 群论</h2>
+<h3 id="群-group">1.1 群 Group</h3>
+<h4 id="群的定义">1.1.1 群的定义</h4>
+<p>一个<em>群</em> 是带有下列性质的合成法则的集合<span class="math inline">\(G\)</span> :</p>
+<ol type="1">
+<li>合成法则满足结合律</li>
+<li>包含单位元</li>
+<li>每个元素都有逆元</li>
+</ol>
+<p>=&gt; 消去律</p>
+<p>$ \ $
+      
+      <a class="article-more-link" href="/2020/01/20/Mathematics/Abstract-Algebra/">阅读更多...</a>
+      
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BB%A3%E6%95%B0/" rel="tag">代数</a></li></ul>
+
+
+    </footer>
+
+  </div>
+
+  
+
+  
+
+  
+  
+  
+
+</article>
+    
+    <article id="post-Other Things/搭建此博客过程中的心得" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/01/19/Other%20Things/%E6%90%AD%E5%BB%BA%E6%AD%A4%E5%8D%9A%E5%AE%A2%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E5%BF%83%E5%BE%97/"
+    >搭建此博客过程中的心得</a> 
+</h2>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2020/01/19/Other%20Things/%E6%90%AD%E5%BB%BA%E6%AD%A4%E5%8D%9A%E5%AE%A2%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E5%BF%83%E5%BE%97/" class="article-date">
+  <time datetime="2020-01-19T14:34:59.000Z" itemprop="datePublished">2020-01-19</time>
+</a>
+      
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <h1 id="搭建此博客过程中的心得">搭建此博客过程中的心得</h1>
+<h2 id="hexo框架">1. <a href="https://zhuanlan.zhihu.com/p/26625249" target="_blank" rel="noopener">Hexo框架</a></h2>
+<p>看到“绑定域名”之前就可以了。</p>
+<p>理解以下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs php+HTML">hexo clean % 清除当前缓存<br>hexo g -d % generate 生成博客<br>hexo d % deploy 将博客部署到GitHub<br>hexo s % hexo server的简写 之后可以在localhost上访问<br>hexo new &quot;bulabula&quot; %生成名为bulabula的md文件（一篇新文章）<br></code></pre></td></tr></table></figure>
+<h2 id="购买域名">2. 购买域名</h2>
+<p>选择了阿里云，发现域名买起来也挺方便的。</p>
+<p>
+      
+      <a class="article-more-link" href="/2020/01/19/Other%20Things/%E6%90%AD%E5%BB%BA%E6%AD%A4%E5%8D%9A%E5%AE%A2%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E5%BF%83%E5%BE%97/">阅读更多...</a>
+      
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+
+    </footer>
+
+  </div>
+
+  
+
+  
+
+  
+  
+  
+
+</article>
+    
+    <article id="post-Computer-Sciencs/Supvised Learning" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/01/19/Computer-Sciencs/Supvised%20Learning/"
+    >监督学习</a> 
+</h2>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2020/01/19/Computer-Sciencs/Supvised%20Learning/" class="article-date">
+  <time datetime="2020-01-19T07:04:47.652Z" itemprop="datePublished">2020-01-19</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Computer-Science/">Computer Science</a> / <a class="article-category-link" href="/categories/Computer-Science/Machine-Learning/">Machine Learning</a>
+  </div>
+
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <h1 id="supvised-learning">Supvised Learning</h1>
+<h2 id="linear-regression">1.Linear Regression</h2>
+<p>output hypotheses function: <span class="math display">\[h(x)= \theta^Tx\]</span></p>
+<p><span class="math inline">\(x\)</span> is the input vector: <span class="math display">\[x=(x_1,x_2,\cdots,x_n)^T\]</span></p>
+<p><span class="math inline">\(\theta\)</span> is the parameter vector: <span class="math display">\[\theta=(\theta_1,\theta_2,\cdots,\theta_n)^T\]</span></p>
+<p><span class="math inline">\(y\)</span> is the training output</p>
+<p><span class="math inline">\(X\)</span> is the training input matrix: <span class="math display">\[X= (x^{(1)},x^{(2)},\cdots,x^{(m)})\]</span></p>
+<p><span class="math inline">\(Y\)</span> is the training output matrix: <span class="math display">\[Y=(y^{(1)},y^{(2)},\cdots,y^{(m)})\]</span></p>
+<p>$\ $</p>
+<h3 id="lms-algorithm">LMS algorithm</h3>
+<ul>
+<li>cost function:<br />
+<span class="math display">\[
+J(\theta)=\frac{1}{2}\parallel{\theta^T X-Y}\parallel^2\\
+        or : J(\theta)=\frac{1}{2}\sum\limits_{i=1}^{m}(h(x^{(i)})-y^{(i)})^2
+        \notag
+\]</span></li>
+</ul>
+<p>use <strong>matrix derivative</strong> to minimize <span class="math inline">\(J\)</span></p>
+<ul>
+<li>gradient descent :</li>
+</ul>
+<p><span class="math display">\[
+\theta_j := \theta_j-\alpha \frac{\partial}{\partial\theta_j}J(\theta)
+\notag
+\]</span></p>
+<p>
+      
+      <a class="article-more-link" href="/2020/01/19/Computer-Sciencs/Supvised%20Learning/">阅读更多...</a>
+      
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/notes/" rel="tag">notes</a></li></ul>
+
+
+    </footer>
+
+  </div>
+
+  
+
+  
+
+  
+  
+  
+
+</article>
+    
+  </article>
+  
+
+  
+  <nav class="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/page/2/">上一页</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/">下一页</a>
+  </nav>
+  
+</section>
+</div>
+
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2020
+        <i class="ri-heart-fill heart_icon"></i> Longqian Huang
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>Visitors:<span id="busuanzi_value_site_uv"></span></s>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>Views:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+      </li>
+    </ul>
+  </div>
+</footer>
+      <div class="float_btns">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+      </div>
+    </main>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/logo.png" alt="Peter&#39;s Blog"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/Notes/">Notes</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/Projects">Projects</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/images/A%20Fancy%20Man.png">关于我</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="http://c01dkit.com" target="_blank" rel="noopener">友链</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <script>
+      if (window.matchMedia("(max-width: 768px)").matches) {
+        document.querySelector('.content').classList.remove('on');
+        document.querySelector('.sidebar').classList.remove('on');
+      }
+    </script>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i></p>
+  <div class="reward-box">
+    
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Subtitle -->
+
+<script>
+  try {
+    var typed = new Typed("#subtitle", {
+      strings: ['Mathematics, Computer-Science, Physics.', 'Now I will scroll . . .', ''],
+      startDelay: 0,
+      typeSpeed: 70,
+      loop: 10,
+      backSpeed: false,
+      showCursor: true
+    });
+  } catch (err) {
+    console.log(err)
+  }
+</script>
+
+<!-- Tocbot -->
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script>
+
+<!-- MathJax -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+  });
+
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.6/unpacked/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+  var ayerConfig = {
+    mathjax: true
+  }
+</script>
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+
+
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+
+<!-- ClickLove -->
+
+
+<script src="/js/clickLove.js"></script>
+
+
+<!-- CodeCopy -->
+
+
+<link rel="stylesheet" href="/css/clipboard.css">
+
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+
+
+
+    
+  </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            displayMath: [ ['$','$'], ["\\[","\\]"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js"></script>
+
+
+<!-- <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['
+
+</html>,'
+
+</html>], ["\\(","\\)"] ],
+      displayMath: [ ['$','$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js"></script> --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+
+</html>

@@ -1,0 +1,1675 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8" />
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>
+     Peter&#39;s Blog
+  </title>
+  <meta name="generator" content="hexo-theme-ayer">
+  
+  <link rel="shortcut icon" href="/images/favicon.png" />
+  
+  
+<link rel="stylesheet" href="/dist/main.css">
+
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/css/remixicon.min.css">
+
+  
+<link rel="stylesheet" href="/css/custom.css">
+
+  
+  
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+  
+  
+
+  
+
+</head>
+
+</html>
+
+<body>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="app">
+    <main class="content on">
+      
+<section class="cover">
+    
+      
+      <a class="forkMe" href="https://github.com/longqianh"
+        target="_blank"><img width="149" height="149" src="/images/forkme.png"
+          class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
+    
+  <div class="cover-frame">
+    <div class="bg-box">
+      <img src="/images/IDR_THEME_NTP_BACKGROUND.png" alt="image frame" />
+    </div>
+    <div class="cover-inner text-center text-white">
+      <h1><a href="/">Peter&#39;s Blog</a></h1>
+      <div id="subtitle-box">
+        
+        <span id="subtitle"></span>
+        
+      </div>
+      <div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="cover-learn-more">
+    <a href="javascript:void(0)" class="anchor"><i class="ri-arrow-down-line"></i></a>
+  </div>
+</section>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script>
+
+<div id="main">
+  <section class="outer">
+  <article class="articles">
+    
+    
+    
+    
+    <article id="post-Mathematics/Linear-Algebra" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/02/28/Mathematics/Linear-Algebra/"
+    >Linear Algebra</a> 
+</h2>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2020/02/28/Mathematics/Linear-Algebra/" class="article-date">
+  <time datetime="2020-02-28T01:44:42.000Z" itemprop="datePublished">2020-02-28</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Mathematics/">Mathematics</a> / <a class="article-category-link" href="/categories/Mathematics/Algebra/">Algebra</a>
+  </div>
+
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <h1 id="线性代数学习笔记">线性代数学习笔记</h1>
+<p>不加入例题</p>
+<p>主要是例题中用到的基本性质和定理的证明</p>
+<p>推荐网站：<a href="https://ccjou.wordpress.com/" target="_blank" rel="noopener">线代启示录</a></p>
+<h2 id="线性空间">1. 线性空间</h2>
+<h3 id="基的可扩充性">基的可扩充性</h3>
+<p><span class="math inline">\(V^n\)</span> 的任意一组线性无关的向量都可扩充为一组基。</p>
+<p>证明：</p>
+<p>​ 对于一个有 <span class="math inline">\(m\)</span> 个向量的线性无关组，若 <span class="math inline">\(m&lt;n\)</span> ，则 <span class="math inline">\(V\)</span> 中肯定<strong>存在向量 <span class="math inline">\(x\)</span> 不能被他们表示</strong>。</p>
+<p>​ 可以证明 <span class="math inline">\(x\)</span> 与他们线性无关，把 <span class="math inline">\(x\)</span> 添进去，构成新的线性无关组。</p>
+<p>​ 这样一直添，最后可以扩充为一组基。</p>
+<h3 id="维数公式">维数公式</h3>
+<p><span class="math display">\[
+dim\ W_1+dim\ W_2=dim(W_1+W_2)+dim(W_1\cap W_2)
+\notag
+\]</span></p>
+<p>证明：</p>
+<p>​ 取 <span class="math inline">\(W_1\cap W_2\)</span> 的一组基，分别扩充为 <span class="math inline">\(W_1\)</span> 和 <span class="math inline">\(W_2\)</span> 的基，</p>
+<p>​ 则它们组合起来组成的向量组可以张成 <span class="math inline">\(W_1+W_2\)</span> 。</p>
+<p>​ 接下来只需证明它们线性无关。 <span class="math display">\[
+\begin{aligned}
+W_1\cap W_2&amp;=\mathcal{L}(\alpha_1,\cdots,\alpha_r)\\
+W_1&amp;=\mathcal{L}(\alpha_1,\cdots,\alpha_r,\beta_1,\cdots,\beta_s)\\
+W_2&amp;=\mathcal{L}(\alpha_1,\cdots,\alpha_r,\gamma_1,\cdots,\gamma_t)\\
+\implies W_1+W_2&amp;=\mathcal{L}(\alpha_1,\cdots,\alpha_r,\beta_1,\cdots,\beta_s,\gamma_1,\cdots,\gamma_t)
+\end{aligned}
+\]</span></p>
+<p>​ 按线性无关定义写出式子，把 <span class="math inline">\(\gamma\)</span> 项移到等式右边，</p>
+<p>​ 利用 <span class="math inline">\(W_1\cap W_2\)</span> 可以把两边都表示成 <span class="math inline">\(\alpha\)</span> 项的线性组合，</p>
+<p>​ 依次利用移项后是 <span class="math inline">\(W_2\)</span> 和 $ W_1 $ 的基，最后得到全是 <span class="math inline">\(0\)</span>。</p>
+<h3 id="直和">直和</h3>
+<p>设 <span class="math inline">\(U_1,\cdots,U_m\)</span> 都是 <span class="math inline">\(V\)</span> 的子空间，则:</p>
+<ul>
+<li>（定义）<span class="math inline">\(U_1+\cdots+U_m\)</span> 是直和，如果 <span class="math inline">\(U_1+\cdots+U_m\)</span> 中的每个元素都可以唯一的表示成 <span class="math inline">\(u_1+\cdots+u_m\)</span> ，其中每个 <span class="math inline">\(u_j\in U_j\)</span>。</li>
+<li><p><span class="math inline">\(\iff\)</span> <span class="math inline">\(0\)</span> 唯一分解成 <span class="math inline">\(0+\cdots+0\)</span></p></li>
+<li><p>对于两个子空间的直和，<span class="math inline">\(U+W=U\oplus W\iff U\cap W=\{0\}\)</span></p></li>
+</ul>
+<h5 id="常用结论">常用结论：</h5>
+<ul>
+<li><span class="math inline">\(\dim V&lt;\infty\)</span> ，若 <span class="math inline">\(T\in \mathcal{L}[V]\)</span> 是幂等变换，则 <span class="math inline">\(V=N(T)\oplus R(T)\)</span> .</li>
+<li><span class="math inline">\(T\in\mathcal{L}[V],\dim V=n\implies V=R(T^n)\oplus N(T^n)\)</span></li>
+</ul>
+<h2 id="线性映射">2. 线性映射</h2>
+<h3 id="线性映射的维数定理">线性映射的维数定理</h3>
+<p><span class="math inline">\(T:V\to W&#39;\)</span>, <span class="math inline">\(dim\ N(T)+dim\ R(T)=dim\ V\)</span></p>
+<p>即：<span class="math inline">\(dim\ Ker(T)+dim\ Im(T)=dim\ V\)</span></p>
+<p>证明1：</p>
+<p>​ 去证 <strong><span class="math inline">\(\overline T:\overline V\to W\)</span>, <span class="math inline">\(\overline v\mapsto T(v)\)</span> 是线性映射且为双射</strong>, <span class="math inline">\(\overline T\)</span> 是由 <span class="math inline">\(T\)</span> 诱导出来的线性映射。</p>
+<p>​ 其中 <span class="math inline">\(W=Im(T)\)</span>, <span class="math inline">\(\overline V=V/ker(T)\)</span>。 从而 <span class="math inline">\(V/ker(T)\cong Im(T)\)</span>。</p>
+<ol type="1">
+<li><p><span class="math inline">\(\overline T\)</span> 的<strong>定义是合理的</strong>：<span class="math inline">\(\overline T(\overline v)=T(v), \forall k\in Ker(T),\overline v=v+k\)</span></p>
+<p>这需要证明对 <span class="math inline">\(\overline v=v+k_1\)</span> 和 <span class="math inline">\(\overline {v+k_2}=\overline v=v+k_2\)</span>, <span class="math inline">\(\overline T(\overline {v+k_1})=\overline T(\overline {v+k_2})=T(v)\)</span>.</p>
+<p>即 <span class="math inline">\(\overline T(\overline v)=T(v)\)</span> 的成立不依赖于 $v’v=v+Ker(T) $ 的选取</p>
+<p>这是由于 <span class="math inline">\(\forall k\in Ker(T),\overline T(\overline {v+k})=T(v+k)=T(v)+T(k)=T(v)\)</span></p></li>
+<li><p><span class="math inline">\(\overline T\)</span> <strong>是线性映射</strong>：</p>
+<ul>
+<li><p>加法：</p>
+<p><span class="math inline">\(\overline T(\overline {v_1+v_2})=T(v_1+v_2)=T(v_1)+T(v_2)=\overline T(\overline v_1)+\overline T(\overline v_2)\)</span></p></li>
+<li><p>数乘：</p>
+<p><span class="math inline">\(\overline T(\lambda \overline {v})=\overline T(\overline {\lambda v})=T(\lambda v)=\lambda T(v)=\lambda\overline T(\overline v)\)</span></p></li>
+</ul></li>
+<li><p><span class="math inline">\(\overline T\)</span> <strong>是双射</strong>：</p>
+<ul>
+<li><p>单射：</p>
+<p><span class="math inline">\(\overline T(\overline v)=0=&gt;T(v)=0=&gt;v\in Ker(T)=&gt;\overline v=0\\ =&gt;Ker(\overline T)=0\)</span></p></li>
+<li><p>满射：</p>
+<p><span class="math inline">\(\forall w\in W=Im(T),\exist v\in V,s.t.\quad T(v)=w\\ =&gt;\exist\overline v, \overline T(\overline v)=T(v)=w\)</span></p></li>
+</ul></li>
+</ol>
+<p>证明2:</p>
+<p>​ 取 $ N(T)$ 的一组基 <span class="math inline">\((v_1,\cdots,v_s)\)</span> ，将其扩充为 <span class="math inline">\(V\)</span> 的一组基 <span class="math inline">\((v_1,\cdots,v_s,v_{s+1},\cdots,v_n)\)</span></p>
+<p>​ 则 <span class="math inline">\(R(T)=\mathcal{L}\big[T(v_1),\cdots,T(v_n)\big]=\mathcal{L}\big[T(v_{s+1}),\cdots,T(v_n)\big]\)</span></p>
+<p>​ 因此 <span class="math inline">\(T(v_{s+1}),\cdots,T(v_{n})\)</span> 可张成 <span class="math inline">\(R(T)\)</span> ，只需证明它们线性无关。</p>
+<p>​ 如果 <span class="math inline">\(a_1 T(v_{s+1})+\cdots +a_{n-s}T(v_{n})=0\)</span></p>
+<p>​ 则 <span class="math inline">\(T(a_1v_{s+1}+\cdots+a_{n-s}v_n)=0\)</span></p>
+<p>​ <span class="math inline">\(=&gt; a_1v_{s+1}+\cdots+a_{n-s}v_n\in N(T)\)</span></p>
+<p>​ 故 <span class="math inline">\(\exist v_1,\cdots,v_s, \quad a_1v_{s+1}+\cdots+a_{n-s}v_n=b_1v_1+\cdots b_sv_s\)</span></p>
+<p>​ 全部移到左边，由于 <span class="math inline">\(v_1,\cdots,v_n\)</span> 是 <span class="math inline">\(V\)</span> 的基，全部系数为 <span class="math inline">\(0\)</span>.</p>
+<h3 id="线性映射的一些定理">线性映射的一些定理</h3>
+<ul>
+<li><p>到更大维数向量空间的线性映射不是满的</p>
+<p>一定有东西会表示不出来</p></li>
+<li><p>到更小维数向量空间的线性映射不是单的</p></li>
+</ul>
+<h3 id="线性映射的矩阵表示">线性映射的矩阵表示</h3>
+<p>(搞晕了很久 现在终于弄明白了)</p>
+<h4 id="对基">（1）对基</h4>
+<p><span class="math display">\[
+T(e_1,\cdots,e_n)=(f_1,\cdots,f_m)M(T)\\
+Te_k=M(T)第k列
+\notag
+\]</span></p>
+<p>​ 其中，<span class="math inline">\(e\)</span> 是原空间的基， <span class="math inline">\(f\)</span> 是像空间的基。</p>
+<h4 id="对向量">（2）对向量</h4>
+<p>​ 设 <span class="math inline">\(X=(x_1,\cdots,x_n)^T\)</span> 为向量 <span class="math inline">\(\xi\)</span> 在基 <span class="math inline">\(e=(e_1,\cdots,e_n)\)</span> 下的坐标。 <span class="math display">\[
+\xi=(e_1,\cdots,e_n)X
+\notag
+\]</span> ​ <span class="math inline">\(T\)</span> 作用后的向量为： <span class="math display">\[
+\begin{aligned}
+T(\xi)&amp;=T(e_1,\cdots,e_n)X\\
+&amp;=(f_1,\cdots,f_m)M(T)X
+\end{aligned}
+\]</span> ​ <span class="math inline">\(T\)</span> 作用后得到的向量的坐标是 <span class="math inline">\(M(T)X\)</span>.</p>
+<p>(美妙的证明)</p>
+<h4 id="线性映射在不同基下表示表示矩阵的关系">（3）线性映射在不同基下表示表示矩阵的关系</h4>
+<p>相似。 <span class="math display">\[
+\begin{aligned}
+T[(e_1,\cdots,e_n)]&amp;=T[(f_1,\cdots,f_m)A]\\
+&amp;=T[(f_1,\cdots,f_m)]A\\
+&amp;=(f_1,\cdots,f_m)M_fA\\
+&amp;=(e_1,\cdots,e_n)A^{-1}M_fA
+\end{aligned}
+\]</span> 所以，<span class="math inline">\(M_e=A^{-1}M_fA\)</span>, <span class="math inline">\(A\)</span> 为基的过渡矩阵，<span class="math inline">\(M_e,M_f\)</span> 为线性映射在不同基下的矩阵表示。</p>
+<h4 id="同一个向量在不同基下的坐标关系">（4）同一个向量在不同基下的坐标关系</h4>
+<p><span class="math inline">\(T:V\to W\)</span></p>
+<p><span class="math inline">\(\xi=(v_1,\cdots,v_n)A=(w_1,\cdots,w_m)B\)</span></p>
+<p>其中 <span class="math inline">\(A=(a_1,\cdots,a_n)^T\)</span>, <span class="math inline">\(B=(b_1,\cdots,b_m)^T\)</span> (注意有转置，<strong>基是行向量，坐标是列向量</strong>)</p>
+<p>是 <span class="math inline">\(\xi\)</span> 在不同基下的坐标</p>
+<p>则 ： <span class="math display">\[
+B=M(T)^{-1}A\notag
+\]</span></p>
+<h4 id="总结">（5）总结</h4>
+<p>由此可见，线性映射对应的矩阵：</p>
+<ul>
+<li>对基的变换是右乘作用，对基的 <span class="math inline">\(k\)</span> 分量变换后的结果为矩阵的第 <span class="math inline">\(k\)</span> 列</li>
+<li>对向量的坐标的变换为左乘</li>
+<li>在不同基下的表示矩阵相似</li>
+</ul>
+<h3 id="线性方程组">线性方程组</h3>
+<p>设矩阵 <span class="math inline">\(A\in M_{m\times n}(\mathbf{F})\)</span>, 若 <span class="math inline">\(r(A)=r\)</span>, 则齐次线性方程组 <span class="math inline">\(AX=0\)</span> 的解空间 <span class="math inline">\(N(A)\)</span> 是一个 <span class="math inline">\(n-r\)</span> 维子空间。</p>
+<p>证明：</p>
+<p>​ <span class="math inline">\(A\)</span> 与一个线性映射 <span class="math inline">\(\sigma\in L(V_1,V_2)\)</span> 对应, <span class="math inline">\(\dim V_1=n, \dim V_2=m\)</span> .</p>
+<p>​ <span class="math inline">\(AX=0\)</span> 解空间中的基是 <span class="math inline">\(\sigma\)</span> 核空间的基关于 <span class="math inline">\(V_1\)</span> 的坐标, 解空间的基和 <span class="math inline">\(N(\sigma)\)</span> 的基一一对应 .</p>
+<p>简单证明：</p>
+<p>​ 把 <span class="math inline">\(A\)</span> 看作线性变换， <span class="math inline">\(rank(A)=Range(A)\)</span> , <span class="math inline">\(A\)</span> 的核 <span class="math inline">\(N(A)\)</span> 就是方程组的解空间。</p>
+<p><strong>注</strong>：矩阵的秩：矩阵列向量中极大线性无关组的元素个数，等于矩阵作为线性变换对应矩阵的像空间维数。</p>
+<h3 id="幂等变换的性质">幂等变换的性质</h3>
+<p>幂等变换: <span class="math inline">\(T:V\to W,\quad T^2=T\)</span></p>
+<ul>
+<li><p><span class="math inline">\(N(T)=\{v-T(v)\mid v\in V \}\)</span></p></li>
+<li><span class="math inline">\(N(T)\cap R(T)=0\)</span></li>
+<li><p><span class="math inline">\(V=N(T)\oplus R(T)\)</span></p></li>
+</ul>
+<p>证明：</p>
+<p>​ 对第二条，只需证明核空间与像空间的交是 <span class="math inline">\(0\)</span></p>
+<p>​ 如果 <span class="math inline">\(w\in N(T)\cap R(T)\)</span>, 则：</p>
+<p>​ 由于 <span class="math inline">\(w\in N(T)\)</span>, <span class="math inline">\(T(w)=0\)</span></p>
+<p>​ 由于 <span class="math inline">\(w\in R(T)\)</span>, <span class="math inline">\(\exist v\in V,w=T(v)\)</span>, <strong>两边再作用一下 <span class="math inline">\(T\)</span></strong>, 得到：<span class="math inline">\(0=T(w)=T^2(v)=T(v)=w\)</span></p>
+<p>​</p>
+<p>​ 对第一条，</p>
+<p>​ 这是由于 $vV,T^2(v)=T(v)=&gt;T[T(v)-v]=0=&gt;T(v)-vN(T)=&gt;{v-T(v)}N(T)\ vN(T),v=v-T(v)=&gt;{v-T(v)}N(T) $</p>
+<h3 id="算子">算子</h3>
+<p>算子：向量空间到自身的线性映射</p>
+<p>对有限为空间的算子 <span class="math inline">\(T\)</span>：<span class="math inline">\(T\)</span> 可逆<span class="math inline">\(\iff\)</span> <span class="math inline">\(T\)</span> 单 <span class="math inline">\(\iff T\)</span> 满</p>
+<h3 id="对偶">对偶</h3>
+<h2 id="内积空间">3. 内积空间</h2>
+<p>带有内积的向量空间。</p>
+<p>内积：对第一个分量成线性，对第二个分量成共轭线性，有共轭对称性。</p>
+<h3 id="线性映射的内积表示">线性映射的内积表示</h3>
+<p><span class="math display">\[
+\begin{align}
+T((v_1,\dots,v_n)&amp;=(v_1,\dots,v_n)A\notag \\
+T(v_i)&amp;=\sum_{j=1}^n v_j a_{ji}\notag \\
+\therefore \quad a_{ij}&amp;=\langle Tv_j,v_i\rangle
+\end{align}
+\]</span></p>
+<h3 id="柯西-施瓦茨不等式">柯西-施瓦茨不等式</h3>
+<p><span class="math display">\[
+|\langle u,v \rangle|\leq\|u\|\|v\|
+\]</span></p>
+<p>证明：</p>
+<p>将 <span class="math inline">\(u\)</span> 正交分解: <span class="math display">\[
+u=\frac{\langle u,v\rangle}{\|v^2\|}v + w
+\]</span> 则 <span class="math display">\[
+\begin{aligned}
+\|u\|^2&amp;=\bigg\|\frac{\langle u,v\rangle}{\|v^2\|}v\bigg\|^2+\|w\|^2\\
+&amp;\geq \bigg\|\frac{\langle u,v\rangle}{\|v^2\|}v\bigg\|^2=\frac{|\langle u,v\rangle|^2}{\|v\|^2}
+\end{aligned}
+\]</span> 乘过去即得。</p>
+<h3 id="shcmidt-正交化">Shcmidt 正交化</h3>
+<p>设 <span class="math inline">\(v_1,\dots,v_m\)</span> 是 <span class="math inline">\(V\)</span> 中的线性无关向量组，设 <span class="math inline">\(e_1=v_1/\|v_1\|\)</span>. <span class="math display">\[
+e_j=\frac{v_j-\langle v_j,e_1\rangle e_1-\cdots-\langle v_j,e_{j-1}\rangle e_{j-1}}{\|v_j-\langle v_j,e_1\rangle e_1-\cdots-\langle v_j,e_{j-1}\rangle e_{j-1}\|}
+\]</span> <span class="math inline">\(\{e_1,\dots,e_m\}\)</span> 是 <span class="math inline">\(V\)</span> 中的规范正交组。</p>
+<h3 id="舒尔定理">舒尔定理</h3>
+<p>设 <span class="math inline">\(V\)</span> 是有限维的复向量空间且 <span class="math inline">\(T\in \mathcal{L}(V,\mathbf{F})\)</span> ，则 <span class="math inline">\(T\)</span> 关于 <span class="math inline">\(V\)</span> 的某个规范正交基具有上三角矩阵。</p>
+<p>证明：</p>
+<p>​ 设 <span class="math inline">\(V=span\{v_1,\dots,v_n\}\)</span> , <span class="math inline">\(\{e_1,\dots,e_n\}\)</span> 为其规范正交基。</p>
+<p>​ 则 <span class="math inline">\(span\{e_1,\dots,e_n\}=span\{v_1,\dots,v_n\}\)</span></p>
+<p>​ 由于存在 <span class="math inline">\(T\)</span> ,其关于 <span class="math inline">\(\{v_1,\dots,v_n\}\)</span> 具有上三角矩阵，则对于每个 <span class="math inline">\(j=1,\dots,n\)</span></p>
+<p>​ $ span{v_1,,v_j}$在 <span class="math inline">\(T\)</span> 作用下不变</p>
+<p>​ 故 <span class="math inline">\(span\{e_1,\dots,e_j\}=span\{v_1,\dots,v_j\}\)</span> 在 <span class="math inline">\(T\)</span> 作用下不变</p>
+<p>​ 所以 <span class="math inline">\(T\)</span> 关于 <span class="math inline">\(\{e_1,\dots,e_n\}\)</span> 具有上三角矩阵。</p>
+<h5 id="关于上三角矩阵">关于上三角矩阵</h5>
+<p>设 <span class="math inline">\(T\in\mathcal{L}[V]\)</span>，<span class="math inline">\((v_1,\dots,v_n)\)</span> 是 <span class="math inline">\(V\)</span> 的基。</p>
+<p>TFAE：</p>
+<ul>
+<li><span class="math inline">\(T\)</span> 关于 <span class="math inline">\(v_1,\dots,v_n\)</span> 的矩阵是上三角的</li>
+<li><span class="math inline">\(Tv_j\in span\{v_1,\dots,v_j\}\)</span></li>
+<li><span class="math inline">\(span\{v_1,\dots,v_j\}\)</span> 在 <span class="math inline">\(T\)</span> 作用下不变</li>
+</ul>
+<h3 id="对偶空间">对偶空间</h3>
+<h4 id="符号说明">符号说明</h4>
+<ul>
+<li><span class="math inline">\(\mathcal{L}(V,W)\)</span> 表示从 <span class="math inline">\(V\)</span> 到 <span class="math inline">\(W\)</span> 的全部线性映射</li>
+<li><span class="math inline">\(\mathbf{F}^{m,n}\triangleq \mathbf{F}^m\times\mathbf{F}^n\)</span> 可看作所有 <span class="math inline">\(m\times n\)</span> 矩阵</li>
+<li>线性泛函：从 <span class="math inline">\(V\)</span> 到 <span class="math inline">\(\mathbf{F}\)</span> 的线性映射，即为 <span class="math inline">\(\mathcal{L}(V,\mathbf{F})\)</span> 中的元素</li>
+<li><p>对偶空间 <span class="math inline">\(V’\)</span>：<span class="math inline">\(V\)</span> 上所有线性泛函构成的向量空间</p></li>
+<li>对偶基 <span class="math inline">\(\{\varphi_1,\dots,\varphi_n\}\)</span>： <span class="math inline">\(\varphi_j(e_k)=\delta_{jk}\)</span></li>
+<li>对偶映射 <span class="math inline">\(T’\)</span>：<span class="math inline">\(T’(\varphi)=\varphi\circ T ,\quad T’\in\mathcal{L}(V’,W’), \varphi\in W’,T’\in V&#39;\)</span></li>
+<li><p>零化子 <span class="math inline">\(U^0\)</span>：<span class="math inline">\(U^0=\{\varphi\in V’:\varphi(u)=0,\forall u\in U\},U\subset V\)</span></p></li>
+</ul>
+<h4 id="重要结论">重要结论</h4>
+<ul>
+<li><p><span class="math inline">\(\mathcal{M}(T)\)</span> 为 <span class="math inline">\(T\in\mathcal{L}(V,W)\)</span> 的矩阵表示 , 其实是一个从 <span class="math inline">\(\mathcal{L}(V,W)\to\mathbf{F}^{m,n}\)</span> 的同构。</p></li>
+<li>对偶映射的代数性质：<span class="math inline">\((aS+bT)’=aS’+bT’\)</span>, <span class="math inline">\((ST)’=T’S&#39;\)</span></li>
+<li><span class="math inline">\(T’\)</span> 的矩阵是 <span class="math inline">\(T\)</span> 的矩阵的转置</li>
+<li><span class="math inline">\(\dim V’=\dim V\)</span></li>
+<li><span class="math inline">\(\dim U+\dim U^0=\dim V\)</span></li>
+<li><span class="math inline">\(T 满\iff T’单, N(T’)=R(T)^0\)</span></li>
+<li><p>$ T单T’满,R(T’)=N(T)^0$</p></li>
+<li><p><span class="math inline">\(\dim R(T)=\dim R(T&#39;)\)</span></p></li>
+</ul>
+<h3 id="里斯表示定理">里斯表示定理</h3>
+<p>设 <span class="math inline">\(V\)</span> 是有限维的且 <span class="math inline">\(\varphi\)</span> 是 <span class="math inline">\(V\)</span> 上的线性泛函，则存在唯一的向量 <span class="math inline">\(u\in V\)</span> 使得对每个 <span class="math inline">\(v\in V\)</span> 均有 <span class="math inline">\(\varphi(v)=\langle v,u\rangle\)</span>.</p>
+<h2 id="多项式">4. 多项式</h2>
+<h3 id="带余除法">带余除法</h3>
+<p>设 <span class="math inline">\(p,s\in \mathcal{P}(\mathbb{F})\)</span> 且 <span class="math inline">\(s\neq 0\)</span>, 则存在唯一多项式 <span class="math inline">\(q,r\in\mathcal{P}(\mathbb{F})\)</span> 使得 <span class="math display">\[
+p=sq+r
+\notag
+\]</span> 且 <span class="math inline">\(\deg\ r&lt;\deg\ s\)</span> .</p>
+<p>证明：</p>
+<p>​ 记 <span class="math inline">\(n=\deg p,m =\deg s\)</span></p>
+<p>​ <span class="math inline">\(n&gt;m\)</span> 时： <span class="math display">\[
+\begin{aligned}
+&amp;\because T:\mathcal{P_{n-m}}\times\mathcal{P_{m-1}}\to\mathcal{P_{n}},\quad (q,r)\mapsto sq+r \quad 是线性双射
+\\
+&amp;\therefore\{(q,r)\mid q\in \mathcal{P_{n-m}},r\in\mathcal{P_{m-1}}\}\cong\{sq+r\mid q\in \mathcal{P_{n-m}},r\in\mathcal{P_{m-1}}\}
+\\
+&amp;\because \dim \mathcal{P_{n-m}}\times\mathcal{P_{m-1}}=(n-m+1)+(m-1+1)=n+1\\
+&amp;\therefore \dim R(T)=n+1=\dim \mathcal{P_n}\\
+&amp;\therefore \{sq+r\mid q\in \mathcal{P_{n-m}},r\in\mathcal{P_{m-1}}\}\cong \mathcal{P_n(\mathbb{F})}
+\end{aligned}
+\]</span></p>
+<h3 id="代数基本定理">代数基本定理</h3>
+<p>任何一个次数大于 <span class="math inline">\(0\)</span> 的复多项式都至少有一个复数根。</p>
+<p>证明：</p>
+<p>​ 若 <span class="math inline">\(p\in \mathbf{C}[x]\)</span> 没有根，则 <span class="math inline">\(\displaystyle\frac 1 p\)</span> 为全平面有界的解析函数。由刘维尔定理知其必为常数。</p>
+<h3 id="拉格朗日多项式">拉格朗日多项式</h3>
+<p><span class="math display">\[
+f_i (x)=\prod_{\substack{s=1\\s\neq i}}^n \frac{x-c_s}{c_i-c_s}
+\]</span></p>
+<p><span class="math inline">\(\{f_0,f_1,\dots,f_n\}\)</span> 构成了 $[x]_{n} $ 的一组代入意义下的单位正交基（ <span class="math inline">\(f_i(c_j)=\delta_{ij}\)</span>）</p>
+<p>拉格朗日插值公式： $g(x)=b_i f_i $ 满足： <span class="math inline">\(g(c_i)=b_i\)</span> .</p>
+<h2 id="矩阵">5. 矩阵</h2>
+<h3 id="秩">秩</h3>
+<ul>
+<li>定义与意义</li>
+</ul>
+<p>矩阵的列向量的极大线性无关组的元素个数。</p>
+<p><span class="math inline">\(A:m\times n\iff \sigma:\mathbb{R}^n\to\mathbb{R}^m\)</span></p>
+<p>由于： <span class="math display">\[
+R(A)=\left(
+\begin{matrix}
+a_{11}x_1+a_{12}x_2+\cdots+a_{1n}x_n\\
+a_{21}x_1+a_{22}x_2+\cdots+a_{2n}x_n\\
+\vdots\\
+a_{m1}x_1+a_{m2}x_2+\cdots+a_{mn}x_n
+\end{matrix}
+\right)
+=\mathscr{L}\left\{ \left(\begin{aligned}a_{11}\\a_{21}\\ \vdots \\ a_{m1}\end{aligned}\right),\left(\begin{aligned}a_{12}\\a_{22}\\ \vdots \\ a_{m2}\end{aligned}\right),\cdots,\left(\begin{aligned}a_{1n}\\a_{2n}\\ \vdots \\ a_{mn}\end{aligned}\right)\right\}
+\]</span> <span class="math inline">\(A\)</span> 的列秩等于 <span class="math inline">\(A\)</span> 的列空间维数，也是对应线性映射的像空间维数 <span class="math inline">\(\dim R(A)\)</span>。</p>
+<ul>
+<li>行秩 <span class="math inline">\(=\)</span> 列秩</li>
+</ul>
+<h3 id="行列式">行列式</h3>
+<ul>
+<li><span class="math inline">\(\det (A)=\det(A^T)\)</span> 证：初等矩阵转置行列式不变，将矩阵 <span class="math inline">\(A\)</span> 进行初等矩阵分解</li>
+</ul>
+<h2 id="特征值理论">6. 特征值理论</h2>
+<h3 id="特征向量线性无关">特征向量线性无关</h3>
+<p>相应于不同特征值的特征向量线性无关。</p>
+<p>证明：</p>
+<p>​ 设 <span class="math inline">\(T\in \mathcal{L}(V)\)</span> ，设 <span class="math inline">\(\lambda_1,\dots,\lambda_m\)</span> 是 <span class="math inline">\(T\)</span> 对互不相同的特征值， <span class="math inline">\(v_1,\dots,v_m\)</span> 是相应的特征向量，则 <span class="math inline">\(v_1,\dots,v_m\)</span> 是线性无关的。</p>
+<p>​ 设 <span class="math inline">\(k\)</span> 是使得 <span class="math inline">\(v_k=span\{v_1,\dots,v_{k-1}\}\)</span> 成立的<strong>最小</strong>正整数。 <span class="math display">\[
+\begin{aligned}
+v_k&amp;=a_1v_1+\cdots+a_{k-1}v_{k-1}\\
+T(v_k)=\lambda_k v_k&amp;=a_1\lambda_1v_1+\cdots+a_{k-1}\lambda_{k-1}v_{k-1}\\
+\lambda_k v_k&amp;=a_1\lambda_k v_1+\cdots+a_{k-1}\lambda_{k}v_{k-1}
+\\
+\\
+\implies &amp;a_1(\lambda_1-\lambda_k)v_1+\cdots+a_{k-1}(\lambda_{k-1}-\lambda_{k})v_{k-1}=0\\
+\implies &amp;a_1=\cdots=a_{k-1}=0
+\end{aligned}
+\]</span> ​ 矛盾，故不存在这样的 <span class="math inline">\(k\)</span> ， 特征向量线性无关。</p>
+<h3 id="特征子空间">特征子空间</h3>
+<p>特征子空间是不变子空间。</p>
+<p>特征子空间的和是直和。</p>
+<p><span class="math inline">\(i.e.\)</span> <span class="math display">\[
+W=E_{\lambda_1}+\cdots + E_{\lambda_m}=E_{\lambda_1}\oplus \cdots \oplus E_{\lambda_m}
+\notag
+\]</span> 证明：</p>
+<p>设<span class="math inline">\(\lambda_j\)</span> 和 <span class="math inline">\(E_{\lambda_j}\)</span> 是 <span class="math inline">\(n\)</span> 维线性空间 <span class="math inline">\(V\)</span> 的线性变换 <span class="math inline">\(T\)</span> 的 <span class="math inline">\(m\)</span> 个互不相同的特征值及相应的特征子空间，则只需证明<strong>零向量</strong>在 <span class="math inline">\(W\)</span> 中的<strong>分解唯一</strong>。</p>
+<p>即证： <span class="math inline">\(\xi_1+\cdots \xi_m=0\implies \xi_i=0,\quad \xi_i\in E_{\lambda_i}\)</span></p>
+<p>注意 <span class="math inline">\(\xi_i\)</span> 是特征子空间 <span class="math inline">\(E_{\lambda_i}\)</span> 中的向量，由属于 <span class="math inline">\(\lambda_i\)</span> 的特征向量线性组合而成，仍有 <span class="math inline">\(T(\xi_i)=\lambda_i\xi_i\)</span></p>
+<p><strong>归纳</strong>证明： $$ \begin{aligned} m=2: _1+_2=0 &amp;T(_1+_2)=_1_1+_2_2=0\ &amp;(_1-_2)_2=0\ &amp;_1=_2=0\</p>
+<p>\end{aligned} <span class="math display">\[
+设对 $m-1$ 结论成立，考虑 $m$ :
+\]</span> \begin{aligned} &amp; _1++_m=0\ &amp;T(_1++_m)=_1_1++_m_m=0\ &amp;(_1-_m)<em>1++(</em>{m-1}-<em>m)</em>{m-1}=0\ &amp; <em>1==</em>{m-1}=0_m=0 \end{aligned} $$</p>
+<p>由此也可以得到属于不同特征值的特征向量线性无关，因为 <span class="math inline">\(E_{\lambda_i}\cap E_{\lambda_j}={\vec 0}\)</span></p>
+<h3 id="可对角化的条件">可对角化的条件</h3>
+<p><span class="math inline">\(n\)</span> 维线性空间 <span class="math inline">\(V\)</span> 上的线性变换 <span class="math inline">\(T\)</span> 的表示矩阵 <span class="math inline">\(M(T)\)</span> 可对角化：</p>
+<p>$ $ <span class="math inline">\(T\)</span> 有 <span class="math inline">\(n\)</span> 个(线性无关的)特征向量 or <span class="math inline">\(V\)</span> 有由 <span class="math inline">\(T\)</span> 的特征向量构成的基</p>
+<p><span class="math inline">\(\iff\)</span> $V=E_{<em>1}E</em>{_m} $ (已经知道和是直和，接下来只需证明和就是 <span class="math inline">\(V\)</span> ,由有由特征向量构成的基即得)</p>
+<p><span class="math inline">\(\iff\)</span> <span class="math inline">\(T\)</span> 的每个特征值的重数等于其特征子空间的维数 ( 代数重数 <span class="math inline">\(=\)</span> 几何重数 ）, 且不同特征值的重数之和等 于 <span class="math inline">\(n\)</span></p>
+<p>注：一般情况下，代数重数大于等于几何重数，证明先放一放。</p>
+<h3 id="矩阵的秩维数与特征值">矩阵的秩、维数与特征值</h3>
+<p>特征值个数等于矩阵的维数。其中，不等于 <span class="math inline">\(0\)</span> 且<strong>不同</strong>的特征值个数为矩阵的秩。</p>
+<p>也就是说，矩阵的秩是特征子空间的种类数，如何理解和证明？</p>
+<h3 id="广义特征向量">广义特征向量</h3>
+<h4 id="零空间的停止增长">零空间的停止增长</h4>
+<h4 id="广义特征向量线性无关性">广义特征向量线性无关性</h4>
+<h4 id="广义特征空间">广义特征空间</h4>
+<h5 id="刻画">刻画</h5>
+<h2 id="算子理论">7. 算子理论</h2>
+<h3 id="不变子空间">不变子空间</h3>
+<p>待整理</p>
+<h3 id="正交投影">正交投影</h3>
+<p>待整理</p>
+<h3 id="自伴算子">自伴算子</h3>
+<p><span class="math inline">\(T=T^*\)</span>.</p>
+<p>类比：<span class="math inline">\(z\)</span> 是实数</p>
+<h4 id="性质">性质</h4>
+<ul>
+<li><p><span class="math inline">\(\langle Tv,w\rangle=\langle v,Tw\rangle\)</span></p></li>
+<li><p>特征值都是实数</p>
+<p>证：<span class="math inline">\(\lambda\|v\|^2=\langle \lambda v,v\rangle=\langle Tv,v\rangle=\langle v,Tv\rangle=\langle v,\lambda v\rangle=\overline\lambda \|v\|^2\)</span></p></li>
+<li><p>在 <span class="math inline">\(\mathbf{C}\)</span>, 只有零算子才能使 <span class="math inline">\(Tv\)</span> 总正交于 <span class="math inline">\(v\)</span> : <span class="math inline">\(\forall v\in V ,\langle Tv,v\rangle=0\implies T\equiv 0\)</span></p>
+<p>证： <span class="math display">\[
+\begin{aligned}
+\forall u,w\in V\\
+\langle Tu,w \rangle=&amp;\frac{\left\langle T(u+w),u+w\right\rangle-\left\langle T(u-w),u-w\right\rangle}{4}\\
+&amp;+\frac{\left\langle T(u+iw),u+iw\right\rangle-\left\langle T(u-iw),u-iw\right\rangle}{4}
+\end{aligned}
+\]</span></p></li>
+<li><p>在 <span class="math inline">\(\mathbf{C}\)</span>, $vV,Tv,v $ (充要)</p>
+<p>证： <span class="math inline">\(\langle Tv,v\rangle-\overline{\langle Tv,v\rangle}=0\)</span></p></li>
+<li><p>相应于不同特征值的特征向量正交</p></li>
+</ul>
+<h3 id="正规算子">正规算子</h3>
+<p>和伴随可交换：<span class="math inline">\(TT^*=T^*T\)</span></p>
+<p>类比：复数 <span class="math inline">\(z\)</span> : 显然 <span class="math inline">\(zz^*=z^*z\)</span></p>
+<h4 id="性质-1">性质</h4>
+<ul>
+<li><p><span class="math inline">\(\|Tv\|=\|T^* v\|\)</span> (充要)</p>
+<p>证： <span class="math inline">\(TT^*-T^*T=0\iff \forall v\in V, \langle (TT^*-T^*T)v,v\rangle=0\iff \|T^*v\|^2=\|Tv\|^2\)</span></p></li>
+<li><p><span class="math inline">\(T\)</span> 和 <span class="math inline">\(T^*\)</span> 有相同的特征向量 （是充分的吗？）</p>
+<p>具体：<span class="math inline">\(v\)</span> 是 <span class="math inline">\(T\)</span> 的相应于特征值 <span class="math inline">\(\lambda\)</span> 的特征向量，则 <span class="math inline">\(v\)</span> 也是 <span class="math inline">\(T^*\)</span> 的相应于 <span class="math inline">\(\overline\lambda\)</span> 的特征向量</p>
+<p>证：<span class="math inline">\(0=\|(T-\lambda I)v\|=\|(T-\lambda I)^*v\|=\|(T^*-\overline\lambda I)v\|\)</span></p></li>
+<li><p>相应于不同特征值的特征向量正交</p>
+<p>证：<span class="math inline">\((\lambda-\mu)\langle v,w\rangle=\langle \lambda v,w\rangle-\langle v,\overline\mu w\rangle=\langle Tv,w\rangle-\langle v,T^*w\rangle=0\)</span></p>
+<p>注：<span class="math inline">\(\lambda\)</span> 是 <span class="math inline">\(T\)</span> 的特征值当且仅当 <span class="math inline">\(\overline\lambda\)</span> 是 <span class="math inline">\(T^*\)</span> 的特征值。 （ <span class="math inline">\(\det (T-\lambda I)=0\iff \det (T^*-\overline \lambda I)=0\)</span> ）</p></li>
+</ul>
+<h3 id="幂零算子">幂零算子</h3>
+<h3 id="谱分解">谱分解</h3>
+<h4 id="复谱定理">复谱定理</h4>
+<h4 id="实谱定理">实谱定理</h4>
+<h4 id="谱分解定理">谱分解定理</h4>
+<h3 id="奇异值分解">奇异值分解</h3>
+<h4 id="正算子">正算子</h4>
+<h5 id="刻画-1">刻画</h5>
+<h4 id="等距同构">等距同构</h4>
+<h5 id="刻画-2">刻画</h5>
+<h4 id="极分解">极分解</h4>
+<h4 id="奇异值分解-1">奇异值分解</h4>
+<h5 id="奇异值">奇异值</h5>
+<h5 id="线性变换奇异值定理">线性变换奇异值定理</h5>
+<h5 id="矩阵的奇异值分解">矩阵的奇异值分解</h5>
+
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+
+    </footer>
+
+  </div>
+
+  
+
+  
+
+  
+  
+  
+
+</article>
+    
+    <article id="post-Computer-Sciencs/Deep learning/论文笔记-L2-Net" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/02/23/Computer-Sciencs/Deep%20learning/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0-L2-Net/"
+    >L2-Net</a> 
+</h2>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2020/02/23/Computer-Sciencs/Deep%20learning/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0-L2-Net/" class="article-date">
+  <time datetime="2020-02-23T08:42:04.000Z" itemprop="datePublished">2020-02-23</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Computer-Science/">Computer Science</a> / <a class="article-category-link" href="/categories/Computer-Science/Deep-Learning/">Deep Learning</a> / <a class="article-category-link" href="/categories/Computer-Science/Deep-Learning/Paper-Notes/">Paper Notes</a>
+  </div>
+
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <p>论文链接：http://www.nlpr.ia.ac.cn/fanbin/pub/L2-Net_CVPR17.pdf</p>
+<p>代码链接：https://github.com/yuruntian/L2-Net</p>
+<p>研读次数：1</p>
+<h2 id="提出的好方法">提出的好方法</h2>
+<ul>
+<li><p>a progressive sampling strategy 渐进采样策略，可使网络在有限次数内获得大量样本</p></li>
+<li><p>Discriminative Intermediate Feature map (DIF) 在中间的特征层施加了额外的监督</p></li>
+<li><p>Loss function that takes three important error aspects into account:</p>
+<ul>
+<li>descriptor similarity 未完全理解</li>
+<li>descriptor compactness : ‘An interesting finding is that the degree of overfitting is directly related to the degree of correlation among descriptor dimensions’</li>
+<li>intermediate feature maps 未完全理解</li>
+</ul></li>
+</ul>
+<h3 id="须了解的相关知识">须了解的相关知识</h3>
+<ul>
+<li>SIFT descriptor</li>
+<li>NNS (nearest neighbor search)</li>
+<li>MatchNet (a typical Siamese network)</li>
+</ul>
+<h3 id="应用">应用</h3>
+<ul>
+<li>实现 <em>特征匹配</em> 的神经网络的训练</li>
+</ul>
+
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/notes/" rel="tag">notes</a></li></ul>
+
+
+    </footer>
+
+  </div>
+
+  
+
+  
+
+  
+  
+  
+
+</article>
+    
+    <article id="post-Computer-Sciencs/Deep learning/论文笔记-SOS-Net" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/02/23/Computer-Sciencs/Deep%20learning/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0-SOS-Net/"
+    >SOS-Net</a> 
+</h2>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2020/02/23/Computer-Sciencs/Deep%20learning/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0-SOS-Net/" class="article-date">
+  <time datetime="2020-02-23T08:42:04.000Z" itemprop="datePublished">2020-02-23</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Computer-Science/">Computer Science</a> / <a class="article-category-link" href="/categories/Computer-Science/Deep-Learning/">Deep Learning</a> / <a class="article-category-link" href="/categories/Computer-Science/Deep-Learning/Paper-Notes/">Paper Notes</a>
+  </div>
+
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <p>代码链接：https://github.com/scape-research/SOSNet</p>
+<p>研读次数：1</p>
+<p>对 L2-Net 和超越L2的 Hard-Net 的超越。</p>
+<h2 id="待学的东西">待学的东西</h2>
+<ul>
+<li>Von Mises-Fisher distribution</li>
+<li>BOLD</li>
+<li>Hard-Net</li>
+<li>First Order Similarity (FOS)</li>
+<li><span class="math inline">\(K\)</span> Nearest Neighbors (KNN)</li>
+</ul>
+
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/notes/" rel="tag">notes</a></li></ul>
+
+
+    </footer>
+
+  </div>
+
+  
+
+  
+
+  
+  
+  
+
+</article>
+    
+    <article id="post-Physics/数理方法" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/02/19/Physics/%E6%95%B0%E7%90%86%E6%96%B9%E6%B3%95/"
+    >数理方法</a> 
+</h2>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2020/02/19/Physics/%E6%95%B0%E7%90%86%E6%96%B9%E6%B3%95/" class="article-date">
+  <time datetime="2020-02-19T07:25:17.000Z" itemprop="datePublished">2020-02-19</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Physics/">Physics</a>
+  </div>
+
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <h1 id="数理方法整理">数理方法整理</h1>
+<center>
+作者：黄隆钤 混合1801
+</center>
+<h2 id="一-数学物理定解问题">一 数学物理定解问题</h2>
+<h3 id="定解问题的导出">1.1 定解问题的导出</h3>
+<h4 id="振动方程">（1）振动方程</h4>
+<p><span class="math display">\[
+u_{tt}-a^2u_{xx}=f(x,t)
+\\
+u_{tt}-a^2\Delta u =f(\mathbf{x},t) \qquad (high\ dim)
+\]</span></p>
+<ul>
+<li><p>弦的横振动</p>
+<p><img src="https://tva1.sinaimg.cn/large/0082zybply1gc1rytn6i6j313l0lcabz.jpg" style="zoom:50%;" /></p></li>
+</ul>
+<p>$ \ $
+      
+      <a class="article-more-link" href="/2020/02/19/Physics/%E6%95%B0%E7%90%86%E6%96%B9%E6%B3%95/">阅读更多...</a>
+      
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+
+    </footer>
+
+  </div>
+
+  
+
+  
+
+  
+  
+  
+
+</article>
+    
+    <article id="post-Physics/Theoretical-mechanics" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/02/18/Physics/Theoretical-mechanics/"
+    >Theoretical Mechanics</a> 
+</h2>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2020/02/18/Physics/Theoretical-mechanics/" class="article-date">
+  <time datetime="2020-02-18T06:11:16.000Z" itemprop="datePublished">2020-02-18</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Physics/">Physics</a>
+  </div>
+
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <h1 id="理论力学笔记">理论力学笔记</h1>
+<p>ing～</p>
+
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+
+    </footer>
+
+  </div>
+
+  
+
+  
+
+  
+  
+  
+
+</article>
+    
+    <article id="post-Physics/Electromagnetism" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/02/18/Physics/Electromagnetism/"
+    >Electromagnetism</a> 
+</h2>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2020/02/18/Physics/Electromagnetism/" class="article-date">
+  <time datetime="2020-02-18T05:32:41.000Z" itemprop="datePublished">2020-02-18</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Physics/">Physics</a>
+  </div>
+
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <h1 id="电动力学笔记">电动力学笔记</h1>
+<h2 id="麦克斯韦方程和规范理论概述起源杨振宁">0 麦克斯韦方程和规范理论概述起源（杨振宁）</h2>
+<ul>
+<li><p>Electrotonic state, Faraday<br />
+<span class="math display">\[
+H=\nabla \times A
+\]</span></p></li>
+<li><p>Maxwell <span class="math display">\[
+Light=EM\ waves
+\]</span></p></li>
+<li><p>Maxwell : A Dynamical Theory of the Electromagnetic Field <span class="math display">\[
+energy\;\ density=\frac{1}{8\pi ^2}(E^2+H^2)
+\]</span></p></li>
+<li><p>Dirac‘s sea</p></li>
+<li><p>Renormalization <span class="math display">\[
+\alpha=(g-2)/2
+\]</span></p></li>
+<li>gauge theory 规范理论, non-Abelian gauge theory, 重整化群</li>
+<li><p>Symmetry breaking, Standard Mode</p></li>
+</ul>
+<p><strong>“妙的地方”</strong></p>
+<p>$ \ $
+      
+      <a class="article-more-link" href="/2020/02/18/Physics/Electromagnetism/">阅读更多...</a>
+      
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+
+    </footer>
+
+  </div>
+
+  
+
+  
+
+  
+  
+  
+
+</article>
+    
+    <article id="post-Other Things/2020" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/02/11/Other%20Things/2020/"
+    >2020</a> 
+</h2>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2020/02/11/Other%20Things/2020/" class="article-date">
+  <time datetime="2020-02-11T10:30:49.000Z" itemprop="datePublished">2020-02-11</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Life/">Life</a>
+  </div>
+
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <h2 id="section">2020</h2>
+<ul>
+<li><p>大二冬学期期末 1.1～1.17</p></li>
+<li><p>搞博客，研究hexo 1.17～1.20</p></li>
+<li><p><a href="%5Bhttps://github.com/Pratitya/wuhan2020-timeline/blob/master/%E6%97%B6%E9%97%B4%E7%BA%BFTIMELINE.md%5D(https://github.com/Pratitya/wuhan2020-timeline/blob/master/时间线TIMELINE.md)">新冠病毒</a></p>
+<p>$ \ $
+      
+      <a class="article-more-link" href="/2020/02/11/Other%20Things/2020/">阅读更多...</a>
+      
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+
+    </footer>
+
+  </div>
+
+  
+
+  
+
+  
+  
+  
+
+</article>
+    
+    <article id="post-Other Things/Movies" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/02/07/Other%20Things/Movies/"
+    >Movies</a> 
+</h2>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2020/02/07/Other%20Things/Movies/" class="article-date">
+  <time datetime="2020-02-07T11:00:58.000Z" itemprop="datePublished">2020-02-07</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/life/">life</a> / <a class="article-category-link" href="/categories/life/movie/">movie</a>
+  </div>
+
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <h1 id="电影们">电影们</h1>
+<ul>
+<li>小丑</li>
+<li>爱尔兰杀手</li>
+</ul>
+
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+
+    </footer>
+
+  </div>
+
+  
+
+  
+
+  
+  
+  
+
+</article>
+    
+    <article id="post-Mathematics/Mathematical-Modeling" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/02/07/Mathematics/Mathematical-Modeling/"
+    >Mathematic Modeling</a> 
+</h2>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2020/02/07/Mathematics/Mathematical-Modeling/" class="article-date">
+  <time datetime="2020-02-07T08:37:29.000Z" itemprop="datePublished">2020-02-07</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Mathematics/">Mathematics</a> / <a class="article-category-link" href="/categories/Mathematics/Mathematics-Modeling/">Mathematics Modeling</a>
+  </div>
+
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <h1 id="美赛历年题目学习">美赛历年题目学习</h1>
+<h2 id="english">English</h2>
+<ul>
+<li>a schematic diagram</li>
+<li>Attributes 属性</li>
+</ul>
+<h2 id="icm-d">2016 ICM D</h2>
+<h3 id="关键词">1. 关键词</h3>
+<p>信息.</p>
+<h3 id="有用的理论">2. 有用的理论</h3>
+<ul>
+<li>图论
+<ul>
+<li>Nodes
+<ul>
+<li>Type : media / person node</li>
+<li>Degree</li>
+<li>State : unknown, known, tired</li>
+</ul></li>
+<li>Edges
+<ul>
+<li>Start node</li>
+<li>End node</li>
+<li>Time ( ～ communication tools )</li>
+</ul></li>
+</ul></li>
+<li>Pareto Principle
+<ul>
+<li>帕雷托法则指出，约仅有20%的变因操纵着80%的局面。也就是说：所有变量中，最重要的仅有20%，虽然剩余的80%占了多数，控制的范围却远低于“关键的少数”。</li>
+<li>应用： If the news value meets the Pareto principle, then 20% of the news contains 80% of the total value of all the news in real world.</li>
+</ul></li>
+</ul>
+<p>$ \ $
+      
+      <a class="article-more-link" href="/2020/02/07/Mathematics/Mathematical-Modeling/">阅读更多...</a>
+      
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+
+    </footer>
+
+  </div>
+
+  
+
+  
+
+  
+  
+  
+
+</article>
+    
+    <article id="post-Other Things/学习规划" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/02/06/Other%20Things/%E5%AD%A6%E4%B9%A0%E8%A7%84%E5%88%92/"
+    >学习规划</a> 
+</h2>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2020/02/06/Other%20Things/%E5%AD%A6%E4%B9%A0%E8%A7%84%E5%88%92/" class="article-date">
+  <time datetime="2020-02-05T17:01:05.000Z" itemprop="datePublished">2020-02-06</time>
+</a>
+      
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <h2 id="大二下">大二下</h2>
+<p>$ \ $
+      
+      <a class="article-more-link" href="/2020/02/06/Other%20Things/%E5%AD%A6%E4%B9%A0%E8%A7%84%E5%88%92/">阅读更多...</a>
+      
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+
+    </footer>
+
+  </div>
+
+  
+
+  
+
+  
+  
+  
+
+</article>
+    
+  </article>
+  
+
+  
+  <nav class="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/">上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/">下一页</a>
+  </nav>
+  
+</section>
+</div>
+
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2020
+        <i class="ri-heart-fill heart_icon"></i> Longqian Huang
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>Visitors:<span id="busuanzi_value_site_uv"></span></s>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>Views:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+      </li>
+    </ul>
+  </div>
+</footer>
+      <div class="float_btns">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+      </div>
+    </main>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/logo.png" alt="Peter&#39;s Blog"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/Notes/">Notes</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/Projects">Projects</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/images/A%20Fancy%20Man.png">关于我</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="http://c01dkit.com" target="_blank" rel="noopener">友链</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <script>
+      if (window.matchMedia("(max-width: 768px)").matches) {
+        document.querySelector('.content').classList.remove('on');
+        document.querySelector('.sidebar').classList.remove('on');
+      }
+    </script>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i></p>
+  <div class="reward-box">
+    
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Subtitle -->
+
+<script>
+  try {
+    var typed = new Typed("#subtitle", {
+      strings: ['Mathematics, Computer-Science, Physics.', 'Now I will scroll . . .', ''],
+      startDelay: 0,
+      typeSpeed: 70,
+      loop: 10,
+      backSpeed: false,
+      showCursor: true
+    });
+  } catch (err) {
+    console.log(err)
+  }
+</script>
+
+<!-- Tocbot -->
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script>
+
+<!-- MathJax -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+  });
+
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.6/unpacked/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+  var ayerConfig = {
+    mathjax: true
+  }
+</script>
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+
+
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+
+<!-- ClickLove -->
+
+
+<script src="/js/clickLove.js"></script>
+
+
+<!-- CodeCopy -->
+
+
+<link rel="stylesheet" href="/css/clipboard.css">
+
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+
+
+
+    
+  </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            displayMath: [ ['$','$'], ["\\[","\\]"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js"></script>
+
+
+<!-- <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['
+
+</html>,'
+
+</html>], ["\\(","\\)"] ],
+      displayMath: [ ['$','$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js"></script> --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+
+</html>
