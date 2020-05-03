@@ -73,7 +73,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">555</span>
+            <span class="post-count">548</span>
         </span>
     </span>
 
@@ -107,55 +107,50 @@
       
 
       
-      <h2 id="git学习">Git学习</h2>
-<h3 id="创建版本库">创建版本库</h3>
-<p>mkdir dirname // make directory 创建目录 dirname 为目录名</p>
+      <h2 id="Git学习"><a href="#Git学习" class="headerlink" title="Git学习"></a>Git学习</h2><h3 id="创建版本库"><a href="#创建版本库" class="headerlink" title="创建版本库"></a>创建版本库</h3><p>mkdir dirname // make directory 创建目录 dirname 为目录名</p>
 <p>pwd //print working directory 查看当前工作目录的完整路径</p>
 <p>ls -a // 显示所有文件及目录，包括隐藏档</p>
 <p>git init</p>
-<h3 id="修改与提交">修改与提交</h3>
-<p>git add filename1.txt filename2.txt // 把要提交的所有<em>修改</em> 放到暂存区</p>
-<p>git commit -m &quot;what I did in this commission&quot; // 一次性把暂存区的所有修改提交到分支 -m表示message</p>
+<h3 id="修改与提交"><a href="#修改与提交" class="headerlink" title="修改与提交"></a>修改与提交</h3><p>git add filename1.txt filename2.txt // 把要提交的所有<em>修改</em> 放到暂存区</p>
+<p>git commit -m “what I did in this commission” // 一次性把暂存区的所有修改提交到分支 -m表示message</p>
 <p>git log // 查看修改日志</p>
-<p>git log --graph // 查看分支合并图</p>
-<p>git log --pretty=oneline // 每次修改在一行简明显示</p>
-<p><a id="more"></a></p>
+<p>git log —graph // 查看分支合并图</p>
+<p>git log —pretty=oneline // 每次修改在一行简明显示</p>
+ <a id="more"></a>
 <p>git reflog // 查看命令历史</p>
-<p>git reset --hard versionnumber // 彻底回退到某版本</p>
+<p>git reset —hard versionnumber // 彻底回退到某版本</p>
 <p>git status // 查看版本库状态</p>
 <p>cat filename // 查看文件内容</p>
-<p>git diff HEAD -- readme.txt // 查看版本库最新版本和工作区的readme文件的区别</p>
-<p>git restore --staged filename // 撤销提交到暂存区</p>
+<p>git diff HEAD — readme.txt // 查看版本库最新版本和工作区的readme文件的区别</p>
+<p>git restore —staged filename // 撤销提交到暂存区</p>
 <p>rm filename // remove 删除文件</p>
 <p>rmdir dirname // 删除空文件目录</p>
 <p>git rm filename // 从版本库中删除文件</p>
-<p>git checkout -- filename // 误删文件的恢复</p>
-<h3 id="远程仓库">远程仓库</h3>
-<p>git remote add origin git@github.com:longqianh/learngit.git</p>
+<p>git checkout — filename // 误删文件的恢复</p>
+<h3 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h3><p>git remote add origin git@github.com:longqianh/learngit.git</p>
 <p>git push -u origin master</p>
 <p>git clone git@github.com:longqianh/learngit.git</p>
-<h3 id="分支管理">分支管理</h3>
-<p>git checkout</p>
+<h3 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h3><p>git checkout </p>
 <p>git branch // 查看分支</p>
 <p>git branch -d branchname // 删除分支</p>
 <p>git branch branchname // 创建分支</p>
 <p>git checkout branchname 或 git checkout branchname // 切换分支</p>
 <p>git checkout -b branchname 或 git switch -c branchname // 创建并切换分支</p>
 <p>git merge branchname // 合并branch分支到master上</p>
-<p>git merge --no-ff -m &quot;branchname&quot; // 合并branch分支到master上,并产生一条记录</p>
+<p>git merge —no-ff -m “branchname” // 合并branch分支到master上,并产生一条记录</p>
 <p>建议：使用分支完成某个任务，合并后再删掉分支</p>
 <p>git remote // 查看远程库信息</p>
-<p>git branch --set-upstream branchname origin/branchname // 建立本地分支与远程分支的关联</p>
+<p>git branch —set-upstream branchname origin/branchname // 建立本地分支与远程分支的关联</p>
 <p>git pull // 拉取远程分支新提交并合并</p>
 <p>git push branchname // 向远程仓库推送分支</p>
-<p>git tag tagname // 给分支打标签</p>
-<p>git tag -a tagname -m &quot;message&quot; // 给标签加说明</p>
+<p>git tag tagname  // 给分支打标签</p>
+<p>git tag -a tagname -m “message” // 给标签加说明</p>
 <p>git tag // 查看所有标签</p>
 <p>git push tagname // 推送一个本地标签到远程</p>
-<p>git push --tag // 推送所有本地标签</p>
+<p>git push —tag // 推送所有本地标签</p>
 <p>git tag -d tagname // 删除标签</p>
 <p>git push origin :refs/tags/tagname // 删除一个远程标签</p>
-<p>git config --global alias.st status // 配置别名 加--global对当前用户起作用，不加则对当前仓库起作用</p>
+<p>git config —global alias.st status // 配置别名 加—global对当前用户起作用，不加则对当前仓库起作用</p>
 
       
       <!-- reward -->
@@ -323,7 +318,7 @@
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/Notes/">Notes</a>
+      <a class="nav-item-link" href="/Notes">Notes</a>
     </li>
     
     <li class="nav-item">
@@ -636,42 +631,7 @@
 
 
     
-  </div>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            displayMath: [ ['$','$'], ["\\[","\\]"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js"></script>
-
-
-<!-- <script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX", "output/HTML-CSS"],
-    tex2jax: {
-      inlineMath: [ ['
-
-</html>,'
-
-</html>], ["\\(","\\)"] ],
-      displayMath: [ ['$','$'], ["\\[","\\]"] ],
-      processEscapes: true
-    },
-    "HTML-CSS": { availableFonts: ["TeX"] }
-  });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js"></script> --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 
 </html>

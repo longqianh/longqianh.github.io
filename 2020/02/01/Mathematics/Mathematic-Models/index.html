@@ -107,145 +107,145 @@
       
 
       
-      <h1 id="数学建模-模型学习">数学建模 模型学习</h1>
-<h2 id="确定性连续模型">1 确定性连续模型</h2>
-<h2 id="静态优化模型微分法建模">1.1 静态优化模型/微分法建模</h2>
-<h3 id="不允许缺货的存贮模型">1.1.1 不允许缺货的存贮模型</h3>
-<ol type="1">
+      <h1 id="数学建模-模型学习"><a href="#数学建模-模型学习" class="headerlink" title="数学建模 模型学习"></a>数学建模 模型学习</h1><h2 id="1-确定性连续模型"><a href="#1-确定性连续模型" class="headerlink" title="1 确定性连续模型"></a>1 确定性连续模型</h2><h2 id="1-1-静态优化模型-微分法建模"><a href="#1-1-静态优化模型-微分法建模" class="headerlink" title="1.1 静态优化模型/微分法建模"></a>1.1 静态优化模型/微分法建模</h2><h3 id="1-1-1-不允许缺货的存贮模型"><a href="#1-1-1-不允许缺货的存贮模型" class="headerlink" title="1.1.1 不允许缺货的存贮模型"></a>1.1.1 不允许缺货的存贮模型</h3><ol>
 <li><p>模型假设：</p>
 <ul>
-<li>每天存货费用：<span class="math inline">\(c_1\)</span> 元/吨</li>
-<li>每次订货费用：<span class="math inline">\(c_2\)</span> 元</li>
-<li>每天货物需求量：<span class="math inline">\(r\)</span> 吨/天</li>
-<li>任意时刻 <span class="math inline">\(t\)</span> 的货物贮存量：<span class="math inline">\(q(t)\)</span></li>
-<li>订货周期：<span class="math inline">\(T\)</span> 天</li>
-<li>每次订货数量：<span class="math inline">\(Q\)</span> 吨</li>
-</ul></li>
+<li>每天存货费用：$c_1$  元/吨</li>
+<li>每次订货费用：$c_2$  元</li>
+<li>每天货物需求量：$r$ 吨/天</li>
+<li>任意时刻 $t$ 的货物贮存量：$q(t)$</li>
+<li>订货周期：$T$  天</li>
+<li>每次订货数量：$Q$  吨</li>
+</ul>
+</li>
 <li><p>模型假设：</p>
-<p>每次订货后库存量均匀下降： <span class="math display">\[
+<p>每次订货后库存量均匀下降：</p>
+<script type="math/tex; mode=display">
 \frac{dq}{dt}=-r,\qquad q(0)=Q \\
-q(t)=-r\cdot t+Q
-\]</span></p></li>
+q(t)=-r\cdot t+Q</script></li>
 <li><p>模型建立：</p>
 <ul>
 <li>订货数量、订货周期、每日货物需求的关系：</li>
 </ul>
-<p><span class="math display">\[
-Q=r\cdot T
-\]</span></p>
-<ul>
-<li>每日平均花费：</li>
-</ul>
-<p><span class="math display">\[
-Cost(T)=\frac{1}{T}\cdot(c_2+c_1\int_0^Tq(t)dt)=\frac{c_2}{T}+\frac{1}{2}c_1 rT
-\]</span></p>
-<ul>
-<li>目标：<span class="math inline">\(min[Cost]\)</span></li>
-</ul>
-<p><span class="math display">\[
-\frac{dCost}{dT}=0\\=&gt; T=\sqrt{\frac{2c_2}{c_1r}},\quad Q=\sqrt{\frac{2c_2r}{c_1}}
-\]</span></p></li>
+<script type="math/tex; mode=display">
+Q=r\cdot T</script></li>
 </ol>
-<p>$ \ $ <a id="more"></a></p>
-<h3 id="允许缺货的存贮模型">1.1.2 允许缺货的存贮模型</h3>
-<h2 id="遗传算法-ga">2 遗传算法 GA</h2>
-<h3 id="算法流程">2.1 算法流程</h3>
 <ul>
-<li><p>适应度函数</p>
-<p>目标函数，函数的最优值便是适应度最高（最适合生存）的种群的适应度</p></li>
-<li><p>变异</p>
-<p>产生跳出局部最优解的可能</p></li>
+<li><p>每日平均花费：</p>
+<script type="math/tex; mode=display">
+Cost(T)=\frac{1}{T}\cdot(c_2+c_1\int_0^Tq(t)dt)=\frac{c_2}{T}+\frac{1}{2}c_1 rT</script></li>
 </ul>
-<h3 id="单目标优化">2.2 单目标优化</h3>
-<p>pass</p>
-<h2 id="综合评价方法">3 综合评价方法</h2>
-<h3 id="层次分析法-ahp">3.1 层次分析法 AHP</h3>
-<p>Analytic Hierarchy Process.</p>
+<ul>
+<li><p>目标：$min[Cost]$</p>
+<script type="math/tex; mode=display">
+\frac{dCost}{dT}=0\\=> T=\sqrt{\frac{2c_2}{c_1r}},\quad Q=\sqrt{\frac{2c_2r}{c_1}}</script></li>
+</ul>
+<p>$ \ $ <a id="more"></a></p>
+<h3 id="1-1-2-允许缺货的存贮模型"><a href="#1-1-2-允许缺货的存贮模型" class="headerlink" title="1.1.2 允许缺货的存贮模型"></a>1.1.2 允许缺货的存贮模型</h3><h2 id="2-遗传算法-GA"><a href="#2-遗传算法-GA" class="headerlink" title="2 遗传算法 GA"></a>2 遗传算法 GA</h2><h3 id="2-1-算法流程"><a href="#2-1-算法流程" class="headerlink" title="2.1 算法流程"></a>2.1 算法流程</h3><ul>
+<li><p>适应度函数</p>
+<p>目标函数，函数的最优值便是适应度最高（最适合生存）的种群的适应度</p>
+</li>
+<li><p>变异</p>
+<p>产生跳出局部最优解的可能</p>
+</li>
+</ul>
+<h3 id="2-2-单目标优化"><a href="#2-2-单目标优化" class="headerlink" title="2.2 单目标优化"></a>2.2 单目标优化</h3><p>pass</p>
+<h2 id="3-综合评价方法"><a href="#3-综合评价方法" class="headerlink" title="3 综合评价方法"></a>3 综合评价方法</h2><h3 id="3-1-层次分析法-AHP"><a href="#3-1-层次分析法-AHP" class="headerlink" title="3.1 层次分析法 AHP"></a>3.1 层次分析法 AHP</h3><p>Analytic Hierarchy Process.</p>
 <p><a href="https://zhuanlan.zhihu.com/p/38207837" target="_blank" rel="noopener">算法流程</a>：</p>
 <ul>
-<li><p>建模，确定各层次因素</p></li>
+<li><p>建模，确定各层次因素</p>
+</li>
 <li><p>进行单层次排序（从上往下）</p>
 <ul>
 <li>对于每一个上一层对元素，挨个分析每一层因素的相对重要性，构建成对比较矩阵（使用<strong>1-9标度法</strong>）</li>
 <li>进行一致性检验（传递性），不通过则需要调整相对重要性</li>
-<li>获得归一化的最大特征向量，最为当前层对上一层对权重向量</li>
-</ul></li>
-<li><p>进行层次总排序，获得最下层每个元素对最终目标的归一化权重向量（从下往上）</p></li>
-<li><p>得到决策结果</p></li>
+<li>获得归一化的最大特征向量，最为当前层对上一层对权重向量 </li>
+</ul>
+</li>
+<li><p>进行层次总排序，获得最下层每个元素对最终目标的归一化权重向量（从下往上）</p>
+</li>
+<li><p>得到决策结果</p>
+</li>
 </ul>
 <p>为什么特征向量可以作为权重？</p>
-<p>可证充分性。<span class="math inline">\(AX\)</span>的列向量的第 <span class="math inline">\(i\)</span> 个元素可以作为第 <span class="math inline">\(i\)</span> 个指标的综合评价（=<span class="math inline">\(\sum_j\)</span>第 <span class="math inline">\(i\)</span> 个元素对第 <span class="math inline">\(j\)</span> 个元素的重要程度<span class="math inline">\(\times\)</span> 第 <span class="math inline">\(j\)</span> 个元素的最终权重），正比于第 <span class="math inline">\(i\)</span> 个元素的最终权重（$AX=X $）</p>
-<h3 id="主成分分析-pca">3.2 主成分分析 PCA</h3>
-<p>Principle Component Analysis.</p>
+<p>可证充分性。$AX$的列向量的第 $i$ 个元素可以作为第 $i$ 个指标的综合评价（=$\sum_j$第 $i$ 个元素对第 $j$ 个元素的重要程度$\times$ 第 $j$ 个元素的最终权重），正比于第 $i$ 个元素的最终权重（$AX=\lambda X $）</p>
+<h3 id="3-2-主成分分析-PCA"><a href="#3-2-主成分分析-PCA" class="headerlink" title="3.2 主成分分析 PCA"></a>3.2 主成分分析 PCA</h3><p>Principle Component Analysis.</p>
 <p>应用：</p>
 <ul>
-<li><p>变量较多，需要从数据中挖掘出主要成分。通过正交变换，消除变量之间的相关影响。</p></li>
-<li><p>对多变量的截面数据表进行最佳综合简化。</p></li>
-<li><p>对指标进行客观赋权。（从相关系数矩阵的特征值引出的信息贡献率可作为”新变量“的权重）</p></li>
+<li><p>变量较多，需要从数据中挖掘出主要成分。通过正交变换，消除变量之间的相关影响。</p>
+</li>
+<li><p>对多变量的截面数据表进行最佳综合简化。</p>
+</li>
+<li><p>对指标进行客观赋权。（从相关系数矩阵的特征值引出的信息贡献率可作为”新变量“的权重）</p>
+</li>
 </ul>
 <p>算法流程：</p>
 <ul>
-<li>设指标变量为 <span class="math inline">\(\mathbf{x}=[x_1,\cdots,x_n]\)</span></li>
-<li>将变量标准化、去除量纲：<span class="math inline">\(\mathbf{\widetilde x}=\displaystyle\frac{\mathbf{x}-\mu}{\sigma}\)</span></li>
-<li>获得 <span class="math inline">\(\mathbf{\widetilde x}\)</span> 的相关系数矩阵 <span class="math inline">\(R=(r_{ij})_{n\times n }\)</span></li>
-<li>计算 <span class="math inline">\(R\)</span> 的特征值 <span class="math inline">\(\lambda_1\geq\cdots \geq\lambda_n\)</span> 和对应的特征(列)向量 <span class="math inline">\(\mathbf{\mu_1,\cdots\mu_n}\)</span></li>
-<li>设 <span class="math inline">\(\mathbf{\mu_i}=[\mu_{1i},\cdots,\mu_{ni}]^T\)</span>, 得到新的变量：<span class="math inline">\(\mathbf{y_i}=\sum_j \mu_{ji}\cdot\widetilde x_i\)</span></li>
-<li>特征值 <span class="math inline">\(\lambda_i\)</span> 的信息贡献率 <span class="math inline">\(b_i=\lambda_i\big/(\sum_i \lambda_i)\)</span>, 累计贡献率 <span class="math inline">\(\alpha_p=(\sum_{j=1}^p \lambda_j)\big/(\sum_i\lambda_i)\)</span></li>
+<li>设指标变量为 $\mathbf{x}=[x_1,\cdots,x_n]$</li>
+<li>将变量标准化、去除量纲：$\mathbf{\widetilde x}=\displaystyle\frac{\mathbf{x}-\mu}{\sigma}$</li>
+<li>获得 $\mathbf{\widetilde x}$ 的相关系数矩阵 $R=(r<em>{ij})</em>{n\times n }$</li>
+<li>计算 $R$ 的特征值 $\lambda_1\geq\cdots \geq\lambda_n$ 和对应的特征(列)向量 $\mathbf{\mu_1,\cdots\mu_n}$</li>
+<li>设 $\mathbf{\mu<em>i}=[\mu</em>{1i},\cdots,\mu<em>{ni}]^T$, 得到新的变量：$\mathbf{y_i}=\sum_j \mu</em>{ji}\cdot\widetilde x_i$</li>
+<li>特征值 $\lambda<em>i$ 的信息贡献率 $b_i=\lambda_i\big/(\sum_i \lambda_i)$, 累计贡献率 $\alpha_p=(\sum</em>{j=1}^p \lambda_j)\big/(\sum_i\lambda_i)$</li>
 <li>根据累计贡献率挑选出主成分</li>
-<li>根据信息贡献率得到基于主成分的综合评价得分：<span class="math inline">\(Z=\sum_{j=1}^p b_j y_j\)</span></li>
+<li>根据信息贡献率得到基于主成分的综合评价得分：$Z=\sum_{j=1}^p b_j y_j$</li>
 </ul>
-<h3 id="模糊综合评价">3.3 模糊综合评价</h3>
-<p>Fuzzy Comprehension Evaluation.</p>
+<h3 id="3-3-模糊综合评价"><a href="#3-3-模糊综合评价" class="headerlink" title="3.3 模糊综合评价"></a>3.3 模糊综合评价</h3><p>Fuzzy Comprehension Evaluation.</p>
 <p>应用：评价的人多的时候比较好，比如人事考核，军训打分。</p>
-<h4 id="一级模糊综合评判">（1）一级模糊综合评判</h4>
-<ul>
-<li><p>确定因素集 <span class="math inline">\(U=\{u_1,\cdots,u_n\}\)</span></p></li>
-<li><p>确定各因素权重 <span class="math inline">\(A=[a_1,\cdots,a_n]\)</span></p>
+<h4 id="（1）一级模糊综合评判"><a href="#（1）一级模糊综合评判" class="headerlink" title="（1）一级模糊综合评判"></a>（1）一级模糊综合评判</h4><ul>
+<li><p>确定因素集 $U={u_1,\cdots,u_n}$</p>
+</li>
+<li><p>确定各因素权重  $A=[a_1,\cdots,a_n]$</p>
 <ul>
 <li>主成分分析</li>
 <li><a href="https://zhuanlan.zhihu.com/p/28067337" target="_blank" rel="noopener">熵权法</a>（基于多个样本在指标下的离散程度赋权）</li>
 <li>专家评估</li>
 <li>众人打分</li>
-</ul></li>
-<li><p>确定评语集 <span class="math inline">\(V=\{v_1,\cdots,v_m\}\)</span></p></li>
-<li><p>对每个因素 <span class="math inline">\(u_i\)</span> 获得一个对应评语集的评价向量 <span class="math inline">\(R_i=[r_{i1},\cdots,r_{im}]\)</span>, 得到模糊综合判断矩阵 <span class="math inline">\(R=(r_{ij})_{n\times m}\)</span> （<span class="math inline">\(r_{ij}\%\)</span> 的人认为第 <span class="math inline">\(i\)</span> 个因素可以达到评语 <span class="math inline">\(v_j\)</span> ）</p></li>
-<li><p>综合评判 <span class="math inline">\(B=A\cdot R=[b_1,\cdots, b_m]\)</span>, 可取数值最大的评语作为最终结果（最大隶属度原则）</p></li>
 </ul>
-<h4 id="多级模糊综合评判">（2）多级模糊综合评判</h4>
-<p><a href="http://html.rhhz.net/ZGJCYJ/html/2007-03-30.htm" target="_blank" rel="noopener">例子</a></p>
-<h3 id="灰色关联评估">3.4 灰色关联评估</h3>
-<p>灰色系统理论的一个分支，应用于受多种相互关联因素影响的事物和现象的综合评价问题。</p>
-<h3 id="可作为综合题练习">3.5 可作为综合题练习</h3>
-<p>第1辑第3章医疗保健系统评估问题。</p>
-<h2 id="模拟仿真方法">模拟/仿真方法</h2>
-<h3 id="元胞自动机">元胞自动机</h3>
-<p>制定规则，模拟。</p>
+</li>
+<li><p>确定评语集 $V={v_1,\cdots,v_m}$</p>
+</li>
+<li><p>对每个因素 $u<em>i$ 获得一个对应评语集的评价向量 $R_i=[r</em>{i1},\cdots,r<em>{im}]$, 得到模糊综合判断矩阵 $R=(r</em>{ij})<em>{n\times m}$ （$r</em>{ij}\%$ 的人认为第 $i$ 个因素可以达到评语 $v_j$ ）</p>
+</li>
+<li><p>综合评判 $B=A\cdot R=[b_1,\cdots, b_m]$, 可取数值最大的评语作为最终结果（最大隶属度原则）</p>
+</li>
+</ul>
+<h4 id="（2）多级模糊综合评判"><a href="#（2）多级模糊综合评判" class="headerlink" title="（2）多级模糊综合评判"></a>（2）多级模糊综合评判</h4><p><a href="http://html.rhhz.net/ZGJCYJ/html/2007-03-30.htm" target="_blank" rel="noopener">例子</a></p>
+<h3 id="3-4-灰色关联评估"><a href="#3-4-灰色关联评估" class="headerlink" title="3.4 灰色关联评估"></a>3.4 灰色关联评估</h3><p>灰色系统理论的一个分支，应用于受多种相互关联因素影响的事物和现象的综合评价问题。</p>
+<h3 id="3-5-可作为综合题练习"><a href="#3-5-可作为综合题练习" class="headerlink" title="3.5 可作为综合题练习"></a>3.5 可作为综合题练习</h3><p>第1辑第3章医疗保健系统评估问题。</p>
+<h2 id="模拟-仿真方法"><a href="#模拟-仿真方法" class="headerlink" title="模拟/仿真方法"></a>模拟/仿真方法</h2><h3 id="元胞自动机"><a href="#元胞自动机" class="headerlink" title="元胞自动机"></a>元胞自动机</h3><p>制定规则，模拟。</p>
 <ul>
 <li><a href="https://blog.csdn.net/Harrytsz/article/details/85094334" target="_blank" rel="noopener">模拟交通流</a></li>
-<li><a href="https://blog.csdn.net/weixin_39590507/article/details/86760958" target="_blank" rel="noopener">模拟游客疏散</a></li>
+<li><a href="https://blog.csdn.net/weixin_39590507/article/details/86760958" target="_blank" rel="noopener">模拟游客疏散</a> </li>
 <li><a href="https://github.com/chen622/Louvre" target="_blank" rel="noopener">比较全面地模拟游客疏散</a></li>
 <li><a href="https://blog.csdn.net/your_answer/article/details/79287367" target="_blank" rel="noopener">模拟流言传播</a></li>
 </ul>
-<h2 id="模型">模型</h2>
-<ul>
-<li><p>贝叶斯信念网络 （概率图）</p></li>
-<li><p>小世界模型</p></li>
-<li><p>Lotka–Volterra方程（捕食者-被捕食者方程） 可发挥创造性推广至多捕食者多被捕食者的动态网络。</p></li>
-<li>扩散模型
+<h2 id="模型"><a href="#模型" class="headerlink" title="模型"></a>模型</h2><ul>
+<li><p>贝叶斯信念网络 （概率图）</p>
+</li>
+<li><p>小世界模型</p>
+</li>
+<li><p>Lotka–Volterra方程（捕食者-被捕食者方程） 可发挥创造性推广至多捕食者多被捕食者的动态网络。</p>
+</li>
+<li><p>扩散模型</p>
 <ul>
 <li>扩散方程</li>
 <li>高斯烟流模式：大气污染预测</li>
 <li>技术扩散模型：Bass Diffusion Model</li>
 <li>创新扩散模型：Diffusion of Innovations Theory</li>
-</ul></li>
+</ul>
+</li>
 <li><p>拓扑网络</p>
 <ul>
 <li>局部中心</li>
 <li>影响度</li>
 <li>Pagerank 佩奇排名算法度量网络节中心性</li>
-</ul></li>
-<li><p>普林斯顿海洋模型（POM） 47、48</p></li>
-<li><p>Forrester 世界模型 51</p></li>
+</ul>
+</li>
+<li><p>普林斯顿海洋模型（POM） 47、48</p>
+</li>
+<li><p>Forrester 世界模型 51</p>
+</li>
 </ul>
 
       
@@ -414,7 +414,7 @@ Cost(T)=\frac{1}{T}\cdot(c_2+c_1\int_0^Tq(t)dt)=\frac{c_2}{T}+\frac{1}{2}c_1 rT
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/Notes/">Notes</a>
+      <a class="nav-item-link" href="/Notes">Notes</a>
     </li>
     
     <li class="nav-item">
@@ -727,42 +727,7 @@ Cost(T)=\frac{1}{T}\cdot(c_2+c_1\int_0^Tq(t)dt)=\frac{c_2}{T}+\frac{1}{2}c_1 rT
 
 
     
-  </div>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            displayMath: [ ['$','$'], ["\\[","\\]"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js"></script>
-
-
-<!-- <script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX", "output/HTML-CSS"],
-    tex2jax: {
-      inlineMath: [ ['
-
-</html>,'
-
-</html>], ["\\(","\\)"] ],
-      displayMath: [ ['$','$'], ["\\[","\\]"] ],
-      processEscapes: true
-    },
-    "HTML-CSS": { availableFonts: ["TeX"] }
-  });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js"></script> --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 
 </html>

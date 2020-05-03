@@ -73,7 +73,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">3.2k</span>
+            <span class="post-count">930</span>
         </span>
     </span>
 
@@ -82,7 +82,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">16 min</span>
+            <span class="post-count">4 min</span>
         </span>
     </span>
 </div>
@@ -107,188 +107,183 @@
       
 
       
-      <h1 id="图像信息处理">图像信息处理</h1>
-<h2 id="灰度变换与空间滤波">1 灰度变换与空间滤波</h2>
-<h3 id="灰度变换str">1.1 灰度变换：<span class="math inline">\(s=T(r)\)</span></h3>
-<ul>
-<li>图像反转：<span class="math inline">\(s=L-1-r\)</span></li>
-<li>对数变换：<span class="math inline">\(s=c\log(1+r)\)</span></li>
-<li>伽马变换：<span class="math inline">\(s=cr^\gamma\)</span></li>
+      <h1 id="图像信息处理"><a href="#图像信息处理" class="headerlink" title="图像信息处理"></a>图像信息处理</h1><h2 id="1-灰度变换与空间滤波"><a href="#1-灰度变换与空间滤波" class="headerlink" title="1  灰度变换与空间滤波"></a>1  灰度变换与空间滤波</h2><h3 id="1-1-灰度变换：-s-T-r"><a href="#1-1-灰度变换：-s-T-r" class="headerlink" title="1.1 灰度变换：$s=T(r)$"></a>1.1 灰度变换：$s=T(r)$</h3><ul>
+<li>图像反转：$s=L-1-r$</li>
+<li>对数变换：$s=c\log(1+r)$</li>
+<li>伽马变换：$s=cr^\gamma$</li>
 <li>分段分式线性变换：对比度拉伸、灰度级分层、比特平面分层</li>
 </ul>
 <p>$ \ $ <a id="more"></a></p>
-<h3 id="直方图处理">1.2 直方图处理</h3>
-<p>$ h(r_k)=n_k$ ，<span class="math inline">\(r_k\)</span> 是第 <span class="math inline">\(k\)</span> 级灰度值，<span class="math inline">\(n_k\)</span> 为图像中灰度为 <span class="math inline">\(r_k\)</span> 的像素个数。不妨从 <span class="math inline">\(0\)</span> 开始，令 <span class="math inline">\(r_k=k\)</span></p>
-<p>归一化： <span class="math inline">\(p(r_k)=n_k/MN\)</span></p>
-<h4 id="直方图均衡化">1.2.1 直方图均衡化</h4>
-<ol type="1">
-<li><span class="math inline">\(p_s(s)=p_r(r)\cdot |\displaystyle\frac{dr}{ds}|=p_r(r) / |T^{&#39;}(r)|\)</span></li>
-<li>选取变换函数 <span class="math inline">\(s=T(r)=(L-1) \displaystyle\int_0 ^r p_r(w)dw\)</span></li>
-<li><span class="math inline">\(=&gt; \quad p_s(s)=\displaystyle\frac{1}{L-1}\)</span></li>
-<li>离散形式：$ s_k=T(r_k)=(L-1)<em>{j=0}^k p_r (r </em> j)=_{j=0}^k n_j $，最后取值四舍五入</li>
+<h3 id="1-2-直方图处理"><a href="#1-2-直方图处理" class="headerlink" title="1.2 直方图处理"></a>1.2 直方图处理</h3><p>$ h(r_k)=n_k$ ，$r_k$ 是第 $k$ 级灰度值，$n_k$ 为图像中灰度为 $r_k$ 的像素个数。不妨从 $0$ 开始，令 $r_k=k$</p>
+<p>归一化： $p(r_k)=n_k/MN$</p>
+<h4 id="1-2-1-直方图均衡化"><a href="#1-2-1-直方图均衡化" class="headerlink" title="1.2.1 直方图均衡化"></a>1.2.1 直方图均衡化</h4><ol>
+<li>$p_s(s)=p_r(r)\cdot |\displaystyle\frac{dr}{ds}|=p_r(r) / |T^{‘}(r)|$</li>
+<li>选取变换函数  $s=T(r)=(L-1) \displaystyle\int_0 ^r p_r(w)dw$</li>
+<li>$=&gt; \quad p_s(s)=\displaystyle\frac{1}{L-1}$</li>
+<li>离散形式：$ s<em>k=T(r_k)=(L-1)\displaystyle\sum\limits</em>{j=0}^k p<em>r (r </em> j)=\displaystyle\frac{L-1}{MN}\sum\limits_{j=0}^k n_j $，最后取值四舍五入</li>
 </ol>
-<h4 id="直方图规定化">1.2.2 直方图规定化</h4>
-<h4 id="局部直方图处理">1.2.3 局部直方图处理</h4>
-<p>略～</p>
+<h4 id="1-2-2-直方图规定化"><a href="#1-2-2-直方图规定化" class="headerlink" title="1.2.2 直方图规定化"></a>1.2.2 直方图规定化</h4><h4 id="1-2-3-局部直方图处理"><a href="#1-2-3-局部直方图处理" class="headerlink" title="1.2.3 局部直方图处理"></a>1.2.3 局部直方图处理</h4><p>略～</p>
 <p>$ \ $</p>
-<h2 id="空间滤波">1.2 空间滤波</h2>
-<p>空间滤波器由一个邻域和预定义操作组成。</p>
-<p><span class="math inline">\(g(x,y)=\displaystyle\sum\limits_{s=-a}^b\sum\limits_{t=-b}^b w(s,t)f(x+s,y+t)\)</span></p>
-<h3 id="空间相关与卷积">1.2.1 空间相关与卷积</h3>
-<p>相关上滤波器模版移过图像并计算每个位置乘积之和的处理，卷积的机理类似，但滤波器首先要旋转<span class="math inline">\(180^o\)</span></p>
-<h4 id="平滑空间滤波器">1.2.1.1 平滑空间滤波器</h4>
-<ul>
-<li>均值滤波器：<span class="math inline">\(g(x,y)=\displaystyle\frac{\sum\limits_{s=-a}^a\sum\limits_{s=-b}^b w(s,t)f(x+s,y+t)}{\sum\limits_{s=-a}^a\sum\limits_{s=-b}^b w(s,t)}\)</span></li>
-<li>统计排序滤波器 $e.g. $ 中值滤波器：去除椒盐噪声</li>
+<h2 id="1-2-空间滤波"><a href="#1-2-空间滤波" class="headerlink" title="1.2 空间滤波"></a>1.2 空间滤波</h2><p>空间滤波器由一个邻域和预定义操作组成。</p>
+<p>$g(x,y)=\displaystyle\sum\limits<em>{s=-a}^b\sum\limits</em>{t=-b}^b w(s,t)f(x+s,y+t)$</p>
+<h3 id="1-2-1-空间相关与卷积"><a href="#1-2-1-空间相关与卷积" class="headerlink" title="1.2.1 空间相关与卷积"></a>1.2.1 空间相关与卷积</h3><p>相关上滤波器模版移过图像并计算每个位置乘积之和的处理，卷积的机理类似，但滤波器首先要旋转$180^o$</p>
+<h4 id="1-2-1-1-平滑空间滤波器"><a href="#1-2-1-1-平滑空间滤波器" class="headerlink" title="1.2.1.1 平滑空间滤波器"></a>1.2.1.1 平滑空间滤波器</h4><ul>
+<li>均值滤波器：$g(x,y)=\displaystyle\frac{\sum\limits<em>{s=-a}^a\sum\limits</em>{s=-b}^b w(s,t)f(x+s,y+t)}{\sum\limits<em>{s=-a}^a\sum\limits</em>{s=-b}^b w(s,t)}$</li>
+<li>统计排序滤波器   $e.g. $ 中值滤波器：去除椒盐噪声</li>
 </ul>
 <p>$ \ $</p>
-<h4 id="锐化空间滤波器">1.2.1.2 锐化空间滤波器</h4>
-<p>定义: <span class="math inline">\(\displaystyle\frac{\partial f}{\partial x}=f(x+1)-f(x)\)</span> , <span class="math inline">\(\displaystyle\frac{\partial ^2f}{\partial^2 x}=f(x+1)+f(x-1)-2f(x)\)</span></p>
-<ol type="1">
-<li>使用拉普拉斯算子</li>
-</ol>
-<p><span class="math inline">\(\nabla^2 f(x,y)=f(x+1,y)+f(x-1,y)+f(x,y+1)+f(x,y-1)-4f(x,y)\)</span></p>
-<p><span class="math inline">\(g(x,y)=f(x,y)+c[\nabla^2 f(x,y)]\)</span></p>
+<h4 id="1-2-1-2-锐化空间滤波器"><a href="#1-2-1-2-锐化空间滤波器" class="headerlink" title="1.2.1.2 锐化空间滤波器"></a>1.2.1.2 锐化空间滤波器</h4><p>定义: $\displaystyle\frac{\partial f}{\partial x}=f(x+1)-f(x)$ , $\displaystyle\frac{\partial ^2f}{\partial^2 x}=f(x+1)+f(x-1)-2f(x)$</p>
+<p>(1) 使用拉普拉斯算子</p>
+<p>$\nabla^2 f(x,y)=f(x+1,y)+f(x-1,y)+f(x,y+1)+f(x,y-1)-4f(x,y)$</p>
+<p>$g(x,y)=f(x,y)+c[\nabla^2 f(x,y)]$</p>
 <p><a href="https://www.cnblogs.com/polly333/p/7269843.html" target="_blank" rel="noopener">比较清楚的介绍</a></p>
-<ol start="2" type="1">
-<li>非锐化掩蔽</li>
+<p>(2) 非锐化掩蔽</p>
+<ol>
+<li>模糊原图像 $\overline f (x,y)$</li>
+<li>从原图像中减去模糊图像（产生差值图像，即模版）$g_{mask}(x,y)=f(x,y)-\overline f(x,y)$</li>
+<li>将模版加到原图像上 $g(x,y)=f(x,y)+k\cdot g_{mask}(x,y)$</li>
 </ol>
-<ol type="1">
-<li>模糊原图像 <span class="math inline">\(\overline f (x,y)\)</span></li>
-<li>从原图像中减去模糊图像（产生差值图像，即模版）<span class="math inline">\(g_{mask}(x,y)=f(x,y)-\overline f(x,y)\)</span></li>
-<li>将模版加到原图像上 <span class="math inline">\(g(x,y)=f(x,y)+k\cdot g_{mask}(x,y)\)</span></li>
-</ol>
-<ol start="3" type="1">
-<li>使用梯度算子</li>
-</ol>
-<p><a href="https://blog.csdn.net/qq_29540745/article/details/51918004" target="_blank" rel="noopener">Soble算子</a>：<span class="math inline">\(M(x,y)=|(z_7+2z_8+z_9)-(z_1+2z_2+z_3)|+|(z_3+2z_6+z_9)-(z_1+2z_4+z_7)\)</span></p>
+<p>(3) 使用梯度算子</p>
+<p><a href="https://blog.csdn.net/qq_29540745/article/details/51918004" target="_blank" rel="noopener">Soble算子</a>：$M(x,y)=|(z_7+2z_8+z_9)-(z_1+2z_2+z_3)|+|(z_3+2z_6+z_9)-(z_1+2z_4+z_7)$</p>
 <p>$ \ $</p>
-<h3 id="使用模糊技术进行灰度变换和空间滤波">1.2.2 使用模糊技术进行灰度变换和空间滤波</h3>
-<h4 id="模糊集合论">1.2.2.1 模糊集合论</h4>
-<ul>
-<li><p>模糊集合：<span class="math inline">\(\{(z,\mu(z))\}\)</span> 有元素和它的隶属度函数组成的数对组成，<span class="math inline">\(\mu(z)\in[0,1]\)</span></p></li>
+<h3 id="1-2-2-使用模糊技术进行灰度变换和空间滤波"><a href="#1-2-2-使用模糊技术进行灰度变换和空间滤波" class="headerlink" title="1.2.2 使用模糊技术进行灰度变换和空间滤波"></a>1.2.2 使用模糊技术进行灰度变换和空间滤波</h3><h4 id="1-2-2-1-模糊集合论"><a href="#1-2-2-1-模糊集合论" class="headerlink" title="1.2.2.1 模糊集合论"></a>1.2.2.1 模糊集合论</h4><ul>
+<li><p>模糊集合：${(z,\mu(z))}$  有元素和它的隶属度函数组成的数对组成，$\mu(z)\in[0,1]$</p>
+</li>
 <li><p>模糊逻辑：</p>
-<p>$ A AND B(_A(z),_B(z)),zZ $ ,</p>
-<p><span class="math inline">\(A\ OR\ B\iff \max(\mu_A(z),\mu_B(z)),\quad \forall z\in Z\)</span> ,</p>
-<p>$A=B_A (z)=_B (z),zZ $ ,</p>
-<p>$AB_A(z)_B(z),zZ $ ,</p>
-<p>$AB_A(z)_B(z),zZ $ .</p></li>
+<p> $ A\ AND\ B\iff\min(\mu_A(z),\mu_B(z)),\quad \forall z\in Z $ ,</p>
+<p> $A\ OR\ B\iff \max(\mu_A(z),\mu_B(z)),\quad \forall z\in Z$ ,</p>
+<p> $A=B\iff\mu_A (z)=\mu_B (z),\quad \forall z\in Z $ , </p>
+<p>$A\subseteq B\iff \mu_A(z)\leq\mu_B(z),\quad \forall z\in Z $ ,</p>
+<p>$A\supseteq B\iff \mu_A(z)\geq\mu_B(z),\quad \forall z\in Z $ .</p>
+</li>
+</ul>
+<ul>
 <li><p>应用步骤：</p>
 <ul>
-<li><span class="math inline">\(IF-THEN\)</span> 形式化</li>
-<li>输入输出模糊化：<span class="math inline">\(\mu_i(z),\mu_o(z)\)</span></li>
-<li>既满足 <span class="math inline">\(IF\)</span> 又满足 <span class="math inline">\(THEN\)</span> <span class="math inline">\(=&gt; INPUT\&amp;OUTPUT\)</span> <span class="math inline">\(=&gt; \mu_3(z,v)=\min\{\mu_i(z),\mu_o(v)\}\)</span></li>
-<li>对每一个 <span class="math inline">\(z_0\)</span> ，最终模糊输出 <span class="math inline">\(Q(v)=\mu_3(z_0,v)\)</span> , 对于多个 <span class="math inline">\(Q_i(v)\)</span> ，全部模糊响应应为单个模糊响应的并集，取 <span class="math inline">\(\max\limits_i (Q_i (v))\)</span></li>
-<li>去模糊：计算集合重心：<span class="math inline">\(v_0=\displaystyle\frac{\sum\limits_{v=1}^K vQ(v)}{\sum\limits_{v=1}^K Q(v)}\)</span></li>
-</ul></li>
+<li>$IF-THEN$ 形式化</li>
+<li>输入输出模糊化：$\mu_i(z),\mu_o(z)$ </li>
+<li>既满足 $IF$ 又满足 $THEN$ $=&gt; INPUT\&amp;OUTPUT$ $=&gt; \mu_3(z,v)=\min{\mu_i(z),\mu_o(v)}$</li>
+<li>对每一个 $z_0$ ，最终模糊输出 $Q(v)=\mu_3(z_0,v)$  , 对于多个 $Q_i(v)$ ，全部模糊响应应为单个模糊响应的并集，取 $\max\limits_i (Q_i (v))$ </li>
+<li>去模糊：计算集合重心：$v<em>0=\displaystyle\frac{\sum\limits</em>{v=1}^K vQ(v)}{\sum\limits_{v=1}^K Q(v)}$</li>
 </ul>
-<h4 id="利用模糊集合论进行灰度变换">1.2.2.2 利用模糊集合论进行灰度变换</h4>
-<ul>
-<li><p>目的：增强对比度。黑的更黑，白的更白，灰的仍灰</p></li>
-<li><p><span class="math inline">\(IF-THEN\)</span> 形式化：</p>
-<ul>
-<li><p>$IFdark,THEN darker $</p></li>
-<li><p><span class="math inline">\(IF\quad gray ,\quad THEN \quad gray\)</span></p></li>
-<li><p><span class="math inline">\(IF\quad white,\quad THEN \quad whiter\)</span></p></li>
-</ul></li>
-<li><p>输入模糊化：<span class="math inline">\(dark-\mu_{id}(z),\quad gray-\mu_{ig}(z),\quad white-\mu_{iw}(z)\)</span></p>
-<ul>
-<li><span class="math display">\[\mu_{id}(z)=\begin{equation}
-\left\{
-\begin{aligned}
-1 &amp;, &amp;  0\leq z&lt; 80, \\
- \displaystyle\frac{1}{47}(127-z)&amp; , &amp; 80\leq z\leq 127,\\ 0&amp;,&amp; 127&lt;z\leq 255\end{aligned}
-\right.
-\end{equation} \]</span></li>
-<li><span class="math display">\[\mu_{ig}(z)=\begin{equation}
-\left\{
-\begin{aligned}
-0 &amp;, &amp;  0\leq z&lt; 80, \\
- \displaystyle\frac{1}{47}(z-80)&amp; , &amp; 80\leq z\leq 127,\\ \displaystyle\frac{1}{47}(174-z)&amp; , &amp; 127&lt;z\leq 174,\\ 0&amp;,&amp; 174&lt;z\leq 255\end{aligned}
-\right.
-\end{equation} \]</span></li>
-<li><span class="math display">\[\mu_{iw}(z)=\begin{equation}
-\left\{
-\begin{aligned}
-0 &amp;, &amp;  0\leq z&lt; 127, \\
- \displaystyle\frac{1}{47}(z-127)&amp; , &amp; 127\leq z\leq 174,\\ 1&amp;,&amp; 174&lt;z\leq 255\end{aligned}
-\right.
-\end{equation} \]</span></li>
-</ul></li>
-<li>输出模糊化：<span class="math inline">\(datker-\mu_{od}(v),\quad gray-\mu_{og}(v),\quad whiter-\mu_{ow}(v)\)</span>
-<ul>
-<li><span class="math display">\[\mu_{od}(v)=\begin{equation}\left \{\begin{aligned}\infty,&amp;\quad v=v_d\\ 0,&amp;\quad otherwise \end{aligned}\right.\end{equation}\]</span></li>
-<li><span class="math display">\[\mu_{og}(v)=\begin{equation}\left \{\begin{aligned}\infty,&amp;\quad v=v_g\\ 0,&amp;\quad otherwise \end{aligned}\right.\end{equation}\]</span></li>
-<li><span class="math display">\[\mu_{ow}(v)=\begin{equation}\left \{\begin{aligned}\infty,&amp;\quad v=v_w\\ 0,&amp;\quad otherwise \end{aligned}\right.\end{equation}\]</span></li>
-</ul></li>
-<li>输出最终模糊响应：<span class="math inline">\(Q(v)=\max\{Q_d,Q_g,Q_w\}=\max\{\min\limits_{v\in Z}\{\mu_{ik}(z_0),\mu_{ok}(v)\}\}\)</span></li>
-<li><p>去模糊：<span class="math inline">\(v_0=\displaystyle\frac{\mu_{id}(z_0)\cdot v_d+\mu_{ig}(z_0)\cdot v_g+\mu_{iw}(z_0)\cdot v_w}{\mu_{id}(z_0)+\mu_{ig}(z_0)+\mu_{iw}(z_0)}\)</span></p></li>
+</li>
 </ul>
-<p><strong>Code : </strong></p>
+<h4 id="1-2-2-2-利用模糊集合论进行灰度变换"><a href="#1-2-2-2-利用模糊集合论进行灰度变换" class="headerlink" title="1.2.2.2 利用模糊集合论进行灰度变换"></a>1.2.2.2 利用模糊集合论进行灰度变换</h4><ul>
+<li><p>目的：增强对比度。黑的更黑，白的更白，灰的仍灰</p>
+</li>
+<li><p>$IF-THEN$ 形式化：</p>
+<ul>
+<li><p>$IF\quad dark,\quad THEN \quad darker $</p>
+</li>
+<li><p>$IF\quad gray ,\quad THEN \quad gray$</p>
+</li>
+<li><p>$IF\quad white,\quad THEN \quad whiter$</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>输入模糊化：$dark-\mu<em>{id}(z),\quad gray-\mu</em>{ig}(z),\quad white-\mu_{iw}(z)$</p>
+<ul>
+<li><script type="math/tex; mode=display">\mu_{id}(z)=\begin{equation}
+\left\{
+\begin{aligned}
+1 &, &  0\leq z< 80, \\
+ \displaystyle\frac{1}{47}(127-z)& , & 80\leq z\leq 127,\\ 0&,& 127<z\leq 255\end{aligned}
+\right.
+\end{equation}</script></li>
+<li><script type="math/tex; mode=display">\mu_{ig}(z)=\begin{equation}
+\left\{
+\begin{aligned}
+0 &, &  0\leq z< 80, \\
+ \displaystyle\frac{1}{47}(z-80)& , & 80\leq z\leq 127,\\ \displaystyle\frac{1}{47}(174-z)& , & 127<z\leq 174,\\ 0&,& 174<z\leq 255\end{aligned}
+\right.
+\end{equation}</script></li>
+<li><script type="math/tex; mode=display">\mu_{iw}(z)=\begin{equation}
+\left\{
+\begin{aligned}
+0 &, &  0\leq z< 127, \\
+ \displaystyle\frac{1}{47}(z-127)& , & 127\leq z\leq 174,\\ 1&,& 174<z\leq 255\end{aligned}
+\right.
+\end{equation}</script></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>输出模糊化：$datker-\mu<em>{od}(v),\quad gray-\mu</em>{og}(v),\quad whiter-\mu_{ow}(v)$<ul>
+<li><script type="math/tex; mode=display">\mu_{od}(v)=\begin{equation}\left \{\begin{aligned}\infty,&\quad v=v_d\\ 0,&\quad otherwise \end{aligned}\right.\end{equation}</script></li>
+<li><script type="math/tex; mode=display">\mu_{og}(v)=\begin{equation}\left \{\begin{aligned}\infty,&\quad v=v_g\\ 0,&\quad otherwise \end{aligned}\right.\end{equation}</script></li>
+<li><script type="math/tex; mode=display">\mu_{ow}(v)=\begin{equation}\left \{\begin{aligned}\infty,&\quad v=v_w\\ 0,&\quad otherwise \end{aligned}\right.\end{equation}</script></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>输出最终模糊响应：$Q(v)=\max{Q<em>d,Q_g,Q_w}=\max{\min\limits</em>{v\in Z}{\mu<em>{ik}(z_0),\mu</em>{ok}(v)}}$</li>
+<li>去模糊：$v<em>0=\displaystyle\frac{\mu</em>{id}(z<em>0)\cdot v_d+\mu</em>{ig}(z<em>0)\cdot v_g+\mu</em>{iw}(z<em>0)\cdot v_w}{\mu</em>{id}(z<em>0)+\mu</em>{ig}(z<em>0)+\mu</em>{iw}(z_0)}$</li>
+</ul>
+<p><strong>Code : </strong> </p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 基于模糊集合论的灰度变换 </span><br><span class="hljs-comment"># 增加对比度</span><br><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np<br><span class="hljs-keyword">import</span> cv2<br><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">f_id</span><span class="hljs-params">(z)</span>:</span><br><br>    <span class="hljs-keyword">if</span> z &lt; <span class="hljs-number">80</span>:<br>        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span><br>    <span class="hljs-keyword">elif</span> z &gt;= <span class="hljs-number">80</span> <span class="hljs-keyword">and</span> z &lt;= <span class="hljs-number">127</span>:<br>        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span> / <span class="hljs-number">47</span> * (<span class="hljs-number">127</span> - z)<br>    <span class="hljs-keyword">else</span>:<br>        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span><br><br><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">f_ig</span><span class="hljs-params">(z)</span>:</span><br><br>    <span class="hljs-keyword">if</span> z &gt;= <span class="hljs-number">80</span> <span class="hljs-keyword">and</span> z &lt;= <span class="hljs-number">127</span>:<br>        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span> / <span class="hljs-number">47</span> * (z - <span class="hljs-number">80</span>)<br>    <span class="hljs-keyword">elif</span> z &gt; <span class="hljs-number">127</span> <span class="hljs-keyword">and</span> z &lt;= <span class="hljs-number">174</span>:<br>        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span> / <span class="hljs-number">47</span> * (<span class="hljs-number">174</span> - z)<br>    <span class="hljs-keyword">else</span>:<br>        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span><br><br><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">f_iw</span><span class="hljs-params">(z)</span>:</span><br><br>    <span class="hljs-keyword">if</span> z &gt;= <span class="hljs-number">127</span> <span class="hljs-keyword">and</span> z &lt;= <span class="hljs-number">174</span>:<br>        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span> / <span class="hljs-number">47</span> * (z - <span class="hljs-number">127</span>)<br>    <span class="hljs-keyword">elif</span> z &gt; <span class="hljs-number">174</span> <span class="hljs-keyword">and</span> z &lt;= <span class="hljs-number">255</span>:<br>        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span><br>    <span class="hljs-keyword">else</span>:<br>        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span><br><br><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">gray_trans</span><span class="hljs-params">(img)</span>:</span><br>    vd = <span class="hljs-number">0</span><br>    vg = <span class="hljs-number">127</span><br>    vw = <span class="hljs-number">255</span><br>    output_img = np.copy(img)<br>    m, n = img.shape<br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">1</span>, m):<br>        <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(<span class="hljs-number">1</span>, n):<br>            tmp1 = f_id(img[i][j]) * vd + f_ig(img[i][j]) * \<br>                vg + f_iw(img[i][j]) * vw<br>            tmp2 = f_id(img[i][j]) + f_ig(img[i][j]) + f_iw(img[i][j])<br>            output_img[i][j] = tmp1 / tmp2<br>    <span class="hljs-keyword">return</span> output_img<br><br><br>img = cv2.imread(<span class="hljs-string">'test.jpg'</span>, <span class="hljs-number">0</span>)<br>img2 = gray_trans(img)<br>cv2.imshow(<span class="hljs-string">'before'</span>, img)<br>cv2.imshow(<span class="hljs-string">'after'</span>, img2)<br>cv2.waitKey(<span class="hljs-number">0</span>)<br>cv2.destroyAllWindows()<br></code></pre></td></tr></table></figure>
 <p><strong>效果：</strong>(before and after)</p>
-<figure>
-<img src="https://tva1.sinaimg.cn/large/006tNbRwly1gbdwm7ycd7j30dm0go0w3.jpg" alt="before" /><figcaption>before</figcaption>
-</figure>
-<figure>
-<img src="https://tva1.sinaimg.cn/large/006tNbRwly1gbdwm89b0zj30dm0goq6v.jpg" alt="after" /><figcaption>after</figcaption>
-</figure>
-<h4 id="利用模糊集合进行空间滤波">1.2.2.3 利用模糊集合进行空间滤波</h4>
-<p>有一种基于模糊集合的边缘提取方法.</p>
-<p>$ \ $</p>
-<h2 id="频率域滤波">2 频率域滤波</h2>
-<h3 id="傅立叶变换基础">2.1 傅立叶变换基础</h3>
-<h4 id="冲激函数相关">2.1.1 冲激函数相关</h4>
-<ol type="1">
-<li><p>冲激函数 对连续函数取样和对离散函数取样定义有所不同</p></li>
-<li><p>冲激串函数：<span class="math inline">\(\displaystyle s_{\Delta T}(t)=\sum\limits_{n=-\infty}^{\infty}\delta(t-n\Delta T)\)</span> , 以 <span class="math inline">\(\Delta T\)</span> 为间隔取样</p></li>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwly1gbdwm7ycd7j30dm0go0w3.jpg" alt="before"></p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwly1gbdwm89b0zj30dm0goq6v.jpg" alt="after"></p>
+<h4 id="1-2-2-3-利用模糊集合进行空间滤波"><a href="#1-2-2-3-利用模糊集合进行空间滤波" class="headerlink" title="1.2.2.3 利用模糊集合进行空间滤波"></a>1.2.2.3 利用模糊集合进行空间滤波</h4><p>有一种基于模糊集合的边缘提取方法.</p>
+<p>$ \ $ </p>
+<h2 id="2-频率域滤波"><a href="#2-频率域滤波" class="headerlink" title="2 频率域滤波"></a>2 频率域滤波</h2><h3 id="2-1-傅立叶变换基础"><a href="#2-1-傅立叶变换基础" class="headerlink" title="2.1 傅立叶变换基础"></a>2.1 傅立叶变换基础</h3><h4 id="2-1-1-冲激函数相关"><a href="#2-1-1-冲激函数相关" class="headerlink" title="2.1.1 冲激函数相关"></a>2.1.1 冲激函数相关</h4><ol>
+<li><p>冲激函数 对连续函数取样和对离散函数取样定义有所不同</p>
+</li>
+<li><p>冲激串函数：$\displaystyle s<em>{\Delta T}(t)=\sum\limits</em>{n=-\infty}^{\infty}\delta(t-n\Delta T)$ , 以 $\Delta T$ 为间隔取样</p>
+</li>
 </ol>
-<h4 id="傅立叶变换相关">2.1.2 傅立叶变换相关</h4>
-<ol type="1">
-<li><p>傅立叶级数：<span class="math inline">\(\displaystyle f(t)=\sum\limits_{n=-\infty}^\infty c_ne^{j\frac{2\pi n}{T}t},\quad c_n=\frac{1}{T}\int_{-\frac{T}{2}}^\frac{T}{2}f(t)e^{-j\frac{2\pi n}{T}t}\)</span>, 其中 <span class="math inline">\(f(t)\)</span> 以 <span class="math inline">\(T\)</span> 为周期</p></li>
-<li><p>傅立叶变换：$[f(t)]=_{-}<sup>f(t)e</sup>{-2t} dt $</p></li>
-<li><p>关于原点对称的宽为 <span class="math inline">\(W\)</span> 、高为 <span class="math inline">\(A\)</span> 的带限函数 <span class="math inline">\(W(t)\)</span> 的傅立叶变换： <span class="math inline">\(\mathcal{F}[W(t)]=AWsinc(m)\)</span>, 其中在数字图像处理中，<span class="math inline">\(sinc(x)=\displaystyle\frac{sin(\pi x)}{\pi x}\)</span></p></li>
-<li><p>冲激函数的傅立叶变换：<span class="math inline">\(\mathcal{F}[\delta(t-t_0)]=e^{-j2\pi\mu t_0}=&gt;\mathcal{F}^{-1}[e^{-j2\pi\mu t_0}]=\delta(t-t_0)=&gt;\mathcal{F}[e^{-j2\pi\mu_0 t}]=\delta(-\mu-\mu_0)\)</span></p></li>
+<h4 id="2-1-2-傅立叶变换相关"><a href="#2-1-2-傅立叶变换相关" class="headerlink" title="2.1.2 傅立叶变换相关"></a>2.1.2 傅立叶变换相关</h4><ol>
+<li><p>傅立叶级数：$\displaystyle f(t)=\sum\limits<em>{n=-\infty}^\infty c_ne^{j\frac{2\pi n}{T}t},\quad c_n=\frac{1}{T}\int</em>{-\frac{T}{2}}^\frac{T}{2}f(t)e^{-j\frac{2\pi n}{T}t}$, 其中 $f(t)$ 以 $T$ 为周期</p>
+</li>
+<li><p>傅立叶变换：$\displaystyle\mathcal{F}[f(t)]=\int_{-\infty}^\infty f(t)e^{-2\pi\mu t} dt $</p>
+</li>
+<li><p>关于原点对称的宽为 $W$ 、高为 $A$ 的带限函数 $W(t)$ 的傅立叶变换： $\mathcal{F}[W(t)]=AWsinc(m)$, 其中在数字图像处理中，$sinc(x)=\displaystyle\frac{sin(\pi x)}{\pi x}$</p>
+</li>
+<li><p>冲激函数的傅立叶变换：$\mathcal{F}[\delta(t-t_0)]=e^{-j2\pi\mu t_0}=&gt;\mathcal{F}^{-1}[e^{-j2\pi\mu t_0}]=\delta(t-t_0)=&gt;\mathcal{F}[e^{-j2\pi\mu_0 t}]=\delta(-\mu-\mu_0)$</p>
+</li>
 <li><p>冲激串函数的傅立叶变换 ：</p>
 <ul>
-<li>将冲激串函数用傅立叶级数展开（不展开直接变换似乎不一致收敛，就不能交换求和号和积分号）：<span class="math inline">\(\displaystyle s_{\Delta T}(t)=\sum\limits_{n=-\infty}^\infty c_ne^{j\frac{2\pi n}{\Delta T}t},\quad c_n=\frac{1}{\Delta T}\int_{-\frac{\Delta T}{2}}^\frac{\Delta T}{2} s_{\Delta T}(t)e^{-j\frac{2\pi n}{\Delta T}t}=\frac{1}{\Delta T}e^0=\frac{1}{\Delta T}\\=&gt;\displaystyle s_{\Delta T}(t)=\frac{1}{\Delta T}\sum\limits_{n=-\infty}^\infty e^{j\frac{2\pi n}{\Delta T}t}\)</span></li>
-<li><span class="math inline">\(S(\mu)=\displaystyle\mathcal{F}[ s_{\Delta T}(t)]=\frac{1}{\Delta T}\sum\limits_{n=-\infty}^\infty \delta(\mu-\frac{n}{\Delta T})\)</span></li>
-</ul></li>
-<li><p>卷积：</p>
-<p><span class="math inline">\(\begin{aligned} f(t)*g(t)&amp;\iff F(\mu)\cdot G(\mu)\\F(\mu)*G(\mu)&amp;\iff f(t)\cdot g(t)\end{aligned}\)</span></p></li>
-</ol>
-<h4 id="取样">2.1.3 取样</h4>
-<ul>
-<li><p>取样后的函数 <span class="math inline">\(\widetilde f(t)=f(t)\cdot s_{\Delta T}(t)=\displaystyle \sum\limits_{n=-\infty}^{\infty}f(t)\delta(t-n\Delta T)\)</span></p></li>
-<li><p>每个取样值：由加权后的冲激强度给出。 <span class="math inline">\(f_k=\displaystyle\int_{-\infty}^{\infty}f(t)\delta(t-k\Delta T)=f(k\Delta T)\)</span></p></li>
-<li><p>取样后的函数的傅立叶变换：<span class="math inline">\(\displaystyle \widetilde F(\mu)=F(\mu)*S(\mu)=\frac{1}{\Delta T}\sum\limits_{n=-\infty}^{\infty}\int_{-\infty}^{\infty}F(\tau)\delta(\mu-\frac{n}{\Delta T}-\tau)d\tau=\frac{1}{\Delta T}\sum\limits_{n=-\infty}^{\infty}F(\mu-\frac{n}{\Delta T})\)</span></p>
-<p>这是取样前函数<span class="math inline">\(F(\mu)\)</span> 的一个拷贝的无限、周期序列，确切的说是周期为 <span class="math inline">\(\displaystyle\frac{1}{\Delta T}\)</span> 的无限延伸的连续函数。</p></li>
-<li><p>另一方面，直接变换得：<span class="math inline">\(\widetilde F(\mu)=\displaystyle \sum_{n=-\infty}^{\infty}\int_{-\infty}^{\infty}f(t)\delta (t-n\Delta T)e^{-j2\pi \mu t}dt= \sum_{n=-\infty}^{\infty}f(n\Delta T)e^{-j2\pi \mu n\Delta T}\)</span></p></li>
-<li><strong>取样定理</strong>：如果一超过函数最高频率的两倍的取样率来获得样本，连续的带限函数可以完全地从它的样本集来恢复。 <span class="math inline">\(\displaystyle\frac{1}{\Delta T}&gt;2\mu_{max}\)</span></li>
-<li>复原：令 <span class="math inline">\(H(\mu)=\begin{equation}\left\{\begin{aligned} \Delta T,&amp;\quad -\mu_{max}\leqslant\mu\leqslant\mu_{max}\\ 0.&amp;\quad otherwise\end{aligned}\right.\end{equation}\)</span>, <span class="math inline">\(F(\mu)=H(\mu)\cdot \widetilde F(\mu)\)</span>，进而由傅立叶逆变换可复原 <span class="math inline">\(f\)</span></li>
-<li><p>但是，在实践中我们通常要限制函数的持续时间，相当于要乘一个周期内为 <span class="math inline">\(1\)</span> 其他地方为 <span class="math inline">\(0\)</span> 的函数，而这在频率域内相当于用 <span class="math inline">\(sinc(x)\)</span> 作卷积，这就引入了频率域无限周期分量。这样，在频率域截取时总无法截取全部周期，混淆总会产生。</p></li>
+<li>将冲激串函数用傅立叶级数展开（不展开直接变换似乎不一致收敛，就不能交换求和号和积分号）：$\displaystyle s<em>{\Delta T}(t)=\sum\limits</em>{n=-\infty}^\infty c<em>ne^{j\frac{2\pi n}{\Delta T}t},\quad c_n=\frac{1}{\Delta T}\int</em>{-\frac{\Delta T}{2}}^\frac{\Delta T}{2} s<em>{\Delta T}(t)e^{-j\frac{2\pi n}{\Delta T}t}=\frac{1}{\Delta T}e^0=\frac{1}{\Delta T}\=&gt;\displaystyle  s</em>{\Delta T}(t)=\frac{1}{\Delta T}\sum\limits_{n=-\infty}^\infty e^{j\frac{2\pi n}{\Delta T}t}$</li>
+<li>$S(\mu)=\displaystyle\mathcal{F}[ s<em>{\Delta T}(t)]=\frac{1}{\Delta T}\sum\limits</em>{n=-\infty}^\infty \delta(\mu-\frac{n}{\Delta T})$</li>
 </ul>
-<h3 id="离散傅立叶变换-dft">2.2 离散傅立叶变换 DFT</h3>
-<h4 id="单变量dft">2.2.1 单变量<span class="math inline">\(DFT\)</span></h4>
-<p>对 <span class="math inline">\(\widetilde F(\mu)\)</span> 的一个周期取样是 <span class="math inline">\(DFT\)</span> 的基础。</p>
-<p>记 <span class="math inline">\(f(n\Delta T)\)</span> 为 <span class="math inline">\(f_n\)</span> , <span class="math inline">\(\widetilde F(\mu)=\displaystyle \sum_{n=-\infty}^{\infty}f_ne^{-j2\pi \mu n\Delta T}\)</span></p>
-<p>想在周期 <span class="math inline">\(\mu = 0\)</span> 和 <span class="math inline">\(\mu=\displaystyle\frac{1}{\Delta T}\)</span> 之间得到 <span class="math inline">\(M\)</span> 个等间距的<em>样本</em> ，可令 <span class="math inline">\(\mu=\displaystyle\frac{m}{M\Delta T}\)</span>.</p>
-<p>离散傅立叶变换 <span class="math inline">\(DFT\)</span> 为： <span class="math display">\[
-F_m=\sum\limits_{n=0}^{M-1}f_ne^{-j2\pi mn/M}
-\]</span> 离散傅立叶逆变换 <span class="math inline">\(IDFT\)</span> 为： <span class="math display">\[
-f_n=\frac{1}{M}\sum\limits_{m=0}^{M-1}F_m e^{j2\pi mn/M}
-\]</span> 为了更方便表示，引入 <span class="math inline">\(u\)</span> 和 <span class="math inline">\(x\)</span> 代替 <span class="math inline">\(m\)</span> 和 <span class="math inline">\(n\)</span> ：</p>
-<p><span class="math inline">\(DFT\)</span>： <span class="math display">\[
-F(u)=\sum\limits_{x=0}^{M-1}f(x)e^{-j2\pi ux/M}
-\]</span> <span class="math inline">\(IDFT\)</span>： <span class="math display">\[
-f(x)=\frac{1}{M}\sum\limits_{u=0}^{M-1}F(u)e^{j2\pi ux/M}
-\]</span></p>
-<p>（PS：有点小疑问：为什么是 <span class="math inline">\(f(x)\)</span> 而不是 $ f(xT)$ ？）</p>
-<p>傅立叶正变换和逆变换得到的函数都是无限周期的，周期为 <span class="math inline">\(M\)</span>。</p>
-<h3 id="二维dft">2.2.2 二维DFT</h3>
-<p>略</p>
-<h3 id="频率域滤波器">2.2.3 频率域滤波器</h3>
-<p>过程：空间域 <span class="math inline">\(=&gt;\)</span> 傅立叶变换转到频率域 <span class="math inline">\(=&gt;\)</span> 在频率域使用模版处理振幅或者相位 <span class="math inline">\(=&gt;\)</span> 傅立叶逆变换回到空间域</p>
+</li>
+<li><p>卷积：</p>
+<p>$\begin{aligned} f(t)<em>g(t)&amp;\iff F(\mu)\cdot G(\mu)\F(\mu)</em>G(\mu)&amp;\iff f(t)\cdot g(t)\end{aligned}$</p>
+</li>
+</ol>
+<h4 id="2-1-3-取样"><a href="#2-1-3-取样" class="headerlink" title="2.1.3 取样"></a>2.1.3 取样</h4><ul>
+<li><p>取样后的函数 $\widetilde f(t)=f(t)\cdot s<em>{\Delta T}(t)=\displaystyle \sum\limits</em>{n=-\infty}^{\infty}f(t)\delta(t-n\Delta T)$</p>
+</li>
+<li><p>每个取样值：由加权后的冲激强度给出。 $f<em>k=\displaystyle\int</em>{-\infty}^{\infty}f(t)\delta(t-k\Delta T)=f(k\Delta T)$</p>
+</li>
+<li><p>取样后的函数的傅立叶变换：$\displaystyle \widetilde F(\mu)=F(\mu)*S(\mu)=\frac{1}{\Delta T}\sum\limits<em>{n=-\infty}^{\infty}\int</em>{-\infty}^{\infty}F(\tau)\delta(\mu-\frac{n}{\Delta T}-\tau)d\tau=\frac{1}{\Delta T}\sum\limits_{n=-\infty}^{\infty}F(\mu-\frac{n}{\Delta T})$</p>
+<p>这是取样前函数$F(\mu)$ 的一个拷贝的无限、周期序列，确切的说是周期为 $\displaystyle\frac{1}{\Delta T}$ 的无限延伸的连续函数。</p>
+</li>
+<li><p>另一方面，直接变换得：$\widetilde F(\mu)=\displaystyle \sum<em>{n=-\infty}^{\infty}\int</em>{-\infty}^{\infty}f(t)\delta (t-n\Delta T)e^{-j2\pi \mu t}dt= \sum_{n=-\infty}^{\infty}f(n\Delta T)e^{-j2\pi \mu n\Delta T}$ </p>
+</li>
+<li><p><strong>取样定理</strong>：如果一超过函数最高频率的两倍的取样率来获得样本，连续的带限函数可以完全地从它的样本集来恢复。 $\displaystyle\frac{1}{\Delta T}&gt;2\mu_{max}$</p>
+</li>
+<li>复原：令 $H(\mu)=\begin{equation}\left{\begin{aligned} \Delta T,&amp;\quad -\mu<em>{max}\leqslant\mu\leqslant\mu</em>{max}\ 0.&amp;\quad otherwise\end{aligned}\right.\end{equation}$,  $F(\mu)=H(\mu)\cdot \widetilde F(\mu)$，进而由傅立叶逆变换可复原 $f$</li>
+<li>但是，在实践中我们通常要限制函数的持续时间，相当于要乘一个周期内为 $1$ 其他地方为 $0$ 的函数，而这在频率域内相当于用 $sinc(x)$ 作卷积，这就引入了频率域无限周期分量。这样，在频率域截取时总无法截取全部周期，混淆总会产生。</li>
+</ul>
+<h3 id="2-2-离散傅立叶变换-DFT"><a href="#2-2-离散傅立叶变换-DFT" class="headerlink" title="2.2 离散傅立叶变换 DFT"></a>2.2 离散傅立叶变换 DFT</h3><h4 id="2-2-1-单变量-DFT"><a href="#2-2-1-单变量-DFT" class="headerlink" title="2.2.1 单变量$DFT$"></a>2.2.1 单变量$DFT$</h4><p>对 $\widetilde F(\mu)$ 的一个周期取样是 $DFT$  的基础。</p>
+<p>记 $f(n\Delta T)$ 为 $f<em>n$ ,  $\widetilde F(\mu)=\displaystyle \sum</em>{n=-\infty}^{\infty}f_ne^{-j2\pi \mu n\Delta T}$ </p>
+<p>想在周期 $\mu = 0$ 和 $\mu=\displaystyle\frac{1}{\Delta T}$ 之间得到 $M$ 个等间距的<em>样本</em> ，可令 $\mu=\displaystyle\frac{m}{M\Delta T}$.</p>
+<p>离散傅立叶变换 $DFT$ 为：</p>
+<script type="math/tex; mode=display">
+F_m=\sum\limits_{n=0}^{M-1}f_ne^{-j2\pi mn/M}</script><p>离散傅立叶逆变换 $IDFT$ 为：</p>
+<script type="math/tex; mode=display">
+f_n=\frac{1}{M}\sum\limits_{m=0}^{M-1}F_m e^{j2\pi mn/M}</script><p>为了更方便表示，引入 $u$ 和 $x$ 代替 $m$ 和 $n$ ：</p>
+<p>$DFT$：</p>
+<script type="math/tex; mode=display">
+F(u)=\sum\limits_{x=0}^{M-1}f(x)e^{-j2\pi ux/M}</script><p>$IDFT$：</p>
+<script type="math/tex; mode=display">
+f(x)=\frac{1}{M}\sum\limits_{u=0}^{M-1}F(u)e^{j2\pi ux/M}</script><p>（PS：有点小疑问：为什么是 $f(x)$ 而不是 $ f(x\Delta T)$ ？）</p>
+<p>傅立叶正变换和逆变换得到的函数都是无限周期的，周期为 $M$。</p>
+<h3 id="2-2-2-二维DFT"><a href="#2-2-2-二维DFT" class="headerlink" title="2.2.2 二维DFT"></a>2.2.2 二维DFT</h3><p>略</p>
+<h3 id="2-2-3-频率域滤波器"><a href="#2-2-3-频率域滤波器" class="headerlink" title="2.2.3 频率域滤波器"></a>2.2.3 频率域滤波器</h3><p>过程：空间域 $=&gt;$ 傅立叶变换转到频率域 $=&gt;$ 在频率域使用模版处理振幅或者相位 $=&gt;$ 傅立叶逆变换回到空间域</p>
 <ul>
 <li>理想低/高通滤波器</li>
 <li>k阶布特沃斯低/高通滤波器</li>
@@ -302,9 +297,7 @@ f(x)=\frac{1}{M}\sum\limits_{u=0}^{M-1}F(u)e^{j2\pi ux/M}
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> cv2<br><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np<br><span class="hljs-keyword">import</span> matplotlib.pyplot <span class="hljs-keyword">as</span> plt<br><br><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">IPF</span><span class="hljs-params">(img, d0, flag)</span>:</span><br>    <span class="hljs-comment">#  理想滤波器 ideal pass filter，d0 为滤波器半径</span><br>    <span class="hljs-comment"># flag == 1 : low pass filter; flag == 0 : high pass filter</span><br>    m, n = img.shape<br>    ans = np.zeros(img.shape)<br><br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(m):<br>        <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(n):<br>            <span class="hljs-keyword">if</span> (i - m / <span class="hljs-number">2</span>)**<span class="hljs-number">2</span> + (j - n / <span class="hljs-number">2</span>)**<span class="hljs-number">2</span> &lt; d0**<span class="hljs-number">2</span>:<br>                ans[i][j] = <span class="hljs-number">1</span><br>    <span class="hljs-keyword">if</span> flag == <span class="hljs-number">0</span>:<br>        ans = <span class="hljs-number">1</span> - ans<br><br>    <span class="hljs-keyword">return</span> ans<br><br><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">GPF</span><span class="hljs-params">(img, d0, flag)</span>:</span><br>    <span class="hljs-comment"># 高斯滤波器</span><br>    m, n = img.shape<br>    d0 = d0**<span class="hljs-number">2</span><br>    ans = np.zeros(img.shape)<br><br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(m):<br>        <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(n):<br>            d = (i - m / <span class="hljs-number">2</span>)**<span class="hljs-number">2</span> + (j - n / <span class="hljs-number">2</span>)**<span class="hljs-number">2</span><br>            <span class="hljs-keyword">if</span> d &lt; d0:<br>                ans[i][j] = np.exp(-d / (<span class="hljs-number">2</span> * d0))<br><br>    <span class="hljs-keyword">if</span> flag == <span class="hljs-number">0</span>:<br>        ans = <span class="hljs-number">1</span> - ans<br><br>    <span class="hljs-keyword">return</span> ans<br><br><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">BPF</span><span class="hljs-params">(img, do, flag, k)</span>:</span><br>    <span class="hljs-comment"># k阶布特沃斯高通滤波器</span><br>    m, n = img.shape<br>    d0 = d0**<span class="hljs-number">2</span><br>    ans = np.zeros(img.shape)<br><br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(m):<br>        <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(n):<br>            d = (i - m / <span class="hljs-number">2</span>)**<span class="hljs-number">2</span> + (j - n / <span class="hljs-number">2</span>)**<span class="hljs-number">2</span><br>            <span class="hljs-keyword">if</span> d &lt; d0:<br>                ans[i][j] = <span class="hljs-number">1</span> / (<span class="hljs-number">1</span> + (d / d0)**k)<br><br>    <span class="hljs-keyword">if</span> flag == <span class="hljs-number">0</span>:<br>        ans = <span class="hljs-number">1</span> - ans<br><br>    <span class="hljs-keyword">return</span> ans<br><br><br><span class="hljs-comment"># 高通滤波--提取轮廓</span><br><span class="hljs-comment"># 低通滤波--模糊化</span><br>img_man = cv2.imread(<span class="hljs-string">'ch03_5.jpg'</span>, <span class="hljs-number">0</span>)  <span class="hljs-comment"># 直接读为灰度图像</span><br>plt.subplot(<span class="hljs-number">131</span>), plt.imshow(img_man, <span class="hljs-string">'gray'</span>), plt.title(<span class="hljs-string">'before'</span>)<br>plt.xticks([]), plt.yticks([])<br><br><br>rows, cols = img_man.shape<br>mask1 = np.ones(img_man.shape, np.uint8)  <span class="hljs-comment"># 高通</span><br>mask1[int(rows / <span class="hljs-number">2</span>) - <span class="hljs-number">30</span>: int(rows / <span class="hljs-number">2</span>) + <span class="hljs-number">30</span>,<br>      int(cols / <span class="hljs-number">2</span>) - <span class="hljs-number">30</span>:int(cols / <span class="hljs-number">2</span>) + <span class="hljs-number">30</span>] = <span class="hljs-number">0</span><br><br>mask2 = np.zeros(img_man.shape, np.uint8)  <span class="hljs-comment"># 低通</span><br>mask2[int(rows / <span class="hljs-number">2</span>) - <span class="hljs-number">30</span>:int(rows / <span class="hljs-number">2</span>) + <span class="hljs-number">30</span>,<br>      int(cols / <span class="hljs-number">2</span>) - <span class="hljs-number">30</span>:int(cols / <span class="hljs-number">2</span>) + <span class="hljs-number">30</span>] = <span class="hljs-number">1</span><br><br><br>mask31 = np.ones(img_man.shape, np.uint8)<br>mask31[int(rows / <span class="hljs-number">2</span>) - <span class="hljs-number">10</span>:int(rows / <span class="hljs-number">2</span>) + <span class="hljs-number">10</span>,<br>       int(cols / <span class="hljs-number">2</span>) - <span class="hljs-number">10</span>:int(cols / <span class="hljs-number">2</span>) + <span class="hljs-number">10</span>] = <span class="hljs-number">0</span><br>mask32 = np.zeros(img_man.shape, np.uint8)<br>mask32[int(rows / <span class="hljs-number">2</span>) - <span class="hljs-number">80</span>:int(rows / <span class="hljs-number">2</span>) + <span class="hljs-number">80</span>,<br>       int(cols / <span class="hljs-number">2</span>) - <span class="hljs-number">80</span>:int(cols / <span class="hljs-number">2</span>) + <span class="hljs-number">80</span>] = <span class="hljs-number">1</span><br>mask3 = mask31 * mask32  <span class="hljs-comment"># 带通</span><br><br>mask = IPF(img_man, <span class="hljs-number">30</span>, <span class="hljs-number">1</span>)<br><br>f1 = np.fft.fft2(img_man)<br>f1shift = np.fft.fftshift(f1)<br>f1shift = f1shift * mask<br>f2shift = np.fft.ifftshift(f1shift)<br>img_new = np.fft.ifft2(f2shift)<br>img_new = np.abs(img_new)<br><span class="hljs-comment"># 调整大小范围便于显示</span><br><span class="hljs-comment"># img_new = (img_new - np.amin(img_new)) / (np.amax(img_new) - np.amin(img_new))</span><br><br>plt.subplot(<span class="hljs-number">132</span>), plt.imshow(mask, <span class="hljs-string">'gray'</span>), plt.title(<span class="hljs-string">'mask'</span>)<br>plt.xticks([]), plt.yticks([])<br>plt.subplot(<span class="hljs-number">133</span>), plt.imshow(img_new, <span class="hljs-string">'gray'</span>), plt.title(<span class="hljs-string">'after'</span>)<br>plt.xticks([]), plt.yticks([])<br>plt.show()<br></code></pre></td></tr></table></figure>
 <p>（2）：频率域拉普拉斯滤波</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">Laplace</span><span class="hljs-params">(shape)</span>:</span><br>    m, n = shape<br>    ans = np.zeros(shape)<br><br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(m):<br>        <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(n):<br>            d = (i - m / <span class="hljs-number">2</span>)**<span class="hljs-number">2</span> + (j - n / <span class="hljs-number">2</span>)**<span class="hljs-number">2</span><br>            ans[i][j] = <span class="hljs-number">1</span> + <span class="hljs-number">4</span> * (np.pi**<span class="hljs-number">2</span>) * d / (m * n)<br>            <span class="hljs-comment"># 之前失败是由于没有处以mn</span><br>    <span class="hljs-keyword">return</span> ans<br><br><br><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">stdimg</span><span class="hljs-params">(img)</span>:</span><br>        <span class="hljs-comment"># 灰度值归一化</span><br>    m, n = img.shape<br>    min_img = np.amin(img)<br>    max_img = np.amax(img)<br>    img = np.float64(img)<br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(m):<br>        <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(n):<br>            img[i][j] = (img[i][j] - min_img) / (max_img - min_img)<br><br>    <span class="hljs-keyword">return</span> img<br><br><br>img = cv2.imread(<span class="hljs-string">'ch03_3.jpg'</span>, <span class="hljs-number">0</span>)<br>img = stdimg(img)<br>f = np.fft.fft2(img)<br>f = np.fft.fftshift(f)<br>mask = Laplace(img.shape)<br>f *= mask<br>img_back = np.fft.ifftshift(f)<br>img_back = np.fft.ifft2(img_back)<br>img_back = np.abs(img_back)<br>plt.subplot(<span class="hljs-number">131</span>), plt.imshow(img, <span class="hljs-string">'gray'</span>), plt.title(<span class="hljs-string">'before'</span>)<br>plt.xticks([]), plt.yticks([])<br>plt.subplot(<span class="hljs-number">132</span>), plt.imshow(mask, <span class="hljs-string">'gray'</span>), plt.title(<span class="hljs-string">'mask'</span>)<br>plt.xticks([]), plt.yticks([])<br>plt.subplot(<span class="hljs-number">133</span>), plt.imshow(img_back, <span class="hljs-string">'gray'</span>), plt.title(<span class="hljs-string">'after'</span>)<br>plt.xticks([]), plt.yticks([])<br><br>plt.show()<br></code></pre></td></tr></table></figure>
-<h2 id="图像复原与重建">3 图像复原与重建</h2>
-<h2 id="彩色图像处理">4 彩色图像处理</h2>
-
+<h2 id="3-图像复原与重建"><a href="#3-图像复原与重建" class="headerlink" title="3 图像复原与重建"></a>3 图像复原与重建</h2><h2 id="4-彩色图像处理"><a href="#4-彩色图像处理" class="headerlink" title="4 彩色图像处理"></a>4 彩色图像处理</h2>
       
       <!-- reward -->
       
@@ -471,7 +464,7 @@ f(x)=\frac{1}{M}\sum\limits_{u=0}^{M-1}F(u)e^{j2\pi ux/M}
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/Notes/">Notes</a>
+      <a class="nav-item-link" href="/Notes">Notes</a>
     </li>
     
     <li class="nav-item">
@@ -784,42 +777,7 @@ f(x)=\frac{1}{M}\sum\limits_{u=0}^{M-1}F(u)e^{j2\pi ux/M}
 
 
     
-  </div>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            displayMath: [ ['$','$'], ["\\[","\\]"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js"></script>
-
-
-<!-- <script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX", "output/HTML-CSS"],
-    tex2jax: {
-      inlineMath: [ ['
-
-</html>,'
-
-</html>], ["\\(","\\)"] ],
-      displayMath: [ ['$','$'], ["\\[","\\]"] ],
-      processEscapes: true
-    },
-    "HTML-CSS": { availableFonts: ["TeX"] }
-  });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js"></script> --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 
 </html>

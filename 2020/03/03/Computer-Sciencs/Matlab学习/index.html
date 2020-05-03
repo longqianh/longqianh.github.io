@@ -107,27 +107,44 @@
       
 
       
-      <h2 id="matlab-学习笔记">Matlab 学习笔记</h2>
+      <h2 id="Matlab-学习笔记"><a href="#Matlab-学习笔记" class="headerlink" title="Matlab 学习笔记"></a>Matlab 学习笔记</h2><ul>
+<li>函数必须以end结尾。将其保存为.m 文件，即可在其他程 序中以文件名（注意不是函数名，文件名和函数名可以不同）调用该函数。</li>
+</ul>
 <ul>
-<li><p>函数必须以end结尾。将其保存为.m 文件，即可在其他程 序中以文件名（注意不是函数名，文件名和函数名可以不同）调用该函数。</p></li>
 <li><p>关系运算</p>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs matlab">a~=b<span class="hljs-comment">%不等于</span><br>a&gt;=b<span class="hljs-comment">%大于等于</span><br>a&lt;=b<span class="hljs-comment">%小于等于</span><br></code></pre></td></tr></table></figure></li>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs matlab">a~=b<span class="hljs-comment">%不等于</span><br>a&gt;=b<span class="hljs-comment">%大于等于</span><br>a&lt;=b<span class="hljs-comment">%小于等于</span><br></code></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
 <li><p>复数</p>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs matlab">a=<span class="hljs-number">1</span>+<span class="hljs-number">2</span><span class="hljs-built_in">i</span><br>z=<span class="hljs-built_in">real</span>(a)<span class="hljs-comment">%实部</span><br>z=<span class="hljs-built_in">imag</span>(a)<span class="hljs-comment">%虚部</span><br>z=<span class="hljs-built_in">angle</span>(a)<span class="hljs-comment">%辐角</span><br>z=<span class="hljs-built_in">abs</span>(a)<span class="hljs-comment">%模</span><br>z=<span class="hljs-built_in">conj</span>(a)<span class="hljs-comment">%共轭</span><br></code></pre></td></tr></table></figure></li>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs matlab">a=<span class="hljs-number">1</span>+<span class="hljs-number">2</span><span class="hljs-built_in">i</span><br>z=<span class="hljs-built_in">real</span>(a)<span class="hljs-comment">%实部</span><br>z=<span class="hljs-built_in">imag</span>(a)<span class="hljs-comment">%虚部</span><br>z=<span class="hljs-built_in">angle</span>(a)<span class="hljs-comment">%辐角</span><br>z=<span class="hljs-built_in">abs</span>(a)<span class="hljs-comment">%模</span><br>z=<span class="hljs-built_in">conj</span>(a)<span class="hljs-comment">%共轭</span><br></code></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
 <li><p>向量操作</p>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs matlab">a=<span class="hljs-built_in">rand</span>(<span class="hljs-number">1</span>,<span class="hljs-number">3</span>)<br>b=<span class="hljs-built_in">rand</span>(<span class="hljs-number">1</span>,<span class="hljs-number">3</span>)<br>c=<span class="hljs-built_in">dot</span>(a,b)<span class="hljs-comment">%内积</span><br>d=<span class="hljs-built_in">cross</span>(a,b)<span class="hljs-comment">%叉乘</span><br>l=<span class="hljs-built_in">length</span>(a)<span class="hljs-comment">%向量长度</span><br>median(a)<span class="hljs-comment">%中位数</span><br>std(a)<span class="hljs-comment">%标准差</span><br>s=<span class="hljs-built_in">sort</span>(a)<span class="hljs-comment">%排序</span><br><span class="hljs-comment">%还有 min max 等</span><br></code></pre></td></tr></table></figure></li>
-<li><p>矩阵操作</p></li>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs matlab">a=<span class="hljs-built_in">rand</span>(<span class="hljs-number">1</span>,<span class="hljs-number">3</span>)<br>b=<span class="hljs-built_in">rand</span>(<span class="hljs-number">1</span>,<span class="hljs-number">3</span>)<br>c=<span class="hljs-built_in">dot</span>(a,b)<span class="hljs-comment">%内积</span><br>d=<span class="hljs-built_in">cross</span>(a,b)<span class="hljs-comment">%叉乘</span><br>l=<span class="hljs-built_in">length</span>(a)<span class="hljs-comment">%向量长度</span><br>median(a)<span class="hljs-comment">%中位数</span><br>std(a)<span class="hljs-comment">%标准差</span><br>s=<span class="hljs-built_in">sort</span>(a)<span class="hljs-comment">%排序</span><br><span class="hljs-comment">%还有 min max 等</span><br></code></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li>矩阵操作</li>
 </ul>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs matlab">a=<span class="hljs-built_in">rand</span>(<span class="hljs-number">5</span>,<span class="hljs-number">3</span>)<br>b=<span class="hljs-built_in">rand</span>(<span class="hljs-number">5</span>,<span class="hljs-number">3</span>)<br>b=b'<span class="hljs-comment">%转置</span><br>c=a*b<span class="hljs-comment">%矩阵乘法</span><br>d=a.*b<span class="hljs-comment">%逐元素相乘</span><br>m=b^<span class="hljs-number">3</span><span class="hljs-comment">%幂</span><br>m=b.^<span class="hljs-number">3</span><span class="hljs-comment">%点幂</span><br><span class="hljs-built_in">size</span>(b)<span class="hljs-comment">%矩阵大小</span><br>b=<span class="hljs-built_in">reshape</span>(<span class="hljs-number">1</span>,<span class="hljs-number">15</span>)<br>b=<span class="hljs-built_in">flipud</span>(b)<span class="hljs-comment">%上下翻转 up and down</span><br>b=<span class="hljs-built_in">fliplr</span>(b)<span class="hljs-comment">%左右翻转 left and right</span><br>e=<span class="hljs-built_in">diag</span>(b)<span class="hljs-comment">%取出b的对角元素</span><br><br>left_division=a/b<span class="hljs-comment">% b*inv(a)</span><br>right_division=a\b<span class="hljs-comment">% inv(a)*b</span><br><span class="hljs-comment">%X=A\B是方程A*X=B的解，X=A\B是方程X*A=B的解 </span><br><span class="hljs-comment">%记忆：朝向哪 逆在哪</span><br></code></pre></td></tr></table></figure>
 <ul>
 <li><p>绘图</p>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs matlab">x=<span class="hljs-built_in">linspace</span>(<span class="hljs-number">1</span>,<span class="hljs-number">10</span>,<span class="hljs-number">100</span>)<br>y1=<span class="hljs-built_in">sin</span>(x)<br>y2=<span class="hljs-built_in">cos</span>(x)<br>y3=<span class="hljs-built_in">tan</span>(x)<br><span class="hljs-built_in">plot</span>(x,y1,<span class="hljs-string">'blue'</span>,x,y2,<span class="hljs-string">'LineWidth'</span>,<span class="hljs-number">2</span>,<span class="hljs-string">'color'</span>,<span class="hljs-string">'red'</span>)<br><span class="hljs-comment">%要在同一图中画出多条曲线，只需将坐标依次放入plot函数即可</span><br>axis([<span class="hljs-number">0</span> <span class="hljs-number">4</span>*<span class="hljs-built_in">pi</span> <span class="hljs-number">-1.2</span> <span class="hljs-number">1.2</span>])<span class="hljs-comment">%设置坐标轴范围</span><br>xlim([<span class="hljs-number">1</span> <span class="hljs-number">2</span>])<span class="hljs-comment">%单独控制</span><br>xlabel(<span class="hljs-string">'x'</span>); ylabel(<span class="hljs-string">'y'</span>);<br><span class="hljs-built_in">legend</span>(<span class="hljs-string">'sin(x)'</span>,<span class="hljs-string">'cos(x)'</span>);<br>title(<span class="hljs-string">'Sine and Cosine Functions'</span>);<br><span class="hljs-comment">%title里可以使用latex语法</span><br><span class="hljs-comment">%如 ：title('$y_1=\sin(4\pi t+\pi /3)$','interpreter','latex')</span><br><span class="hljs-comment">% 注明解释器为latex即可</span><br><br><span class="hljs-comment">%绘制子图</span><br>subplot(<span class="hljs-number">2</span>,<span class="hljs-number">2</span>,<span class="hljs-number">1</span>); <span class="hljs-built_in">plot</span>(x,y1);<br>subplot(<span class="hljs-number">2</span>,<span class="hljs-number">2</span>,<span class="hljs-number">2</span>); <span class="hljs-built_in">plot</span>(x,y2);<br>subplot(<span class="hljs-number">2</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>); <span class="hljs-built_in">plot</span>(x,y3);<br></code></pre></td></tr></table></figure></li>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs matlab">x=<span class="hljs-built_in">linspace</span>(<span class="hljs-number">1</span>,<span class="hljs-number">10</span>,<span class="hljs-number">100</span>)<br>y1=<span class="hljs-built_in">sin</span>(x)<br>y2=<span class="hljs-built_in">cos</span>(x)<br>y3=<span class="hljs-built_in">tan</span>(x)<br><span class="hljs-built_in">plot</span>(x,y1,<span class="hljs-string">'blue'</span>,x,y2,<span class="hljs-string">'LineWidth'</span>,<span class="hljs-number">2</span>,<span class="hljs-string">'color'</span>,<span class="hljs-string">'red'</span>)<br><span class="hljs-comment">%要在同一图中画出多条曲线，只需将坐标依次放入plot函数即可</span><br>axis([<span class="hljs-number">0</span> <span class="hljs-number">4</span>*<span class="hljs-built_in">pi</span> <span class="hljs-number">-1.2</span> <span class="hljs-number">1.2</span>])<span class="hljs-comment">%设置坐标轴范围</span><br>xlim([<span class="hljs-number">1</span> <span class="hljs-number">2</span>])<span class="hljs-comment">%单独控制</span><br>xlabel(<span class="hljs-string">'x'</span>); ylabel(<span class="hljs-string">'y'</span>);<br><span class="hljs-built_in">legend</span>(<span class="hljs-string">'sin(x)'</span>,<span class="hljs-string">'cos(x)'</span>);<br>title(<span class="hljs-string">'Sine and Cosine Functions'</span>);<br><span class="hljs-comment">%title里可以使用latex语法</span><br><span class="hljs-comment">%如 ：title('$y_1=\sin(4\pi t+\pi /3)$','interpreter','latex')</span><br><span class="hljs-comment">% 注明解释器为latex即可</span><br><br><span class="hljs-comment">%绘制子图</span><br>subplot(<span class="hljs-number">2</span>,<span class="hljs-number">2</span>,<span class="hljs-number">1</span>); <span class="hljs-built_in">plot</span>(x,y1);<br>subplot(<span class="hljs-number">2</span>,<span class="hljs-number">2</span>,<span class="hljs-number">2</span>); <span class="hljs-built_in">plot</span>(x,y2);<br>subplot(<span class="hljs-number">2</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>); <span class="hljs-built_in">plot</span>(x,y3);<br></code></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
 <li><p>信号处理</p>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs matlab"><span class="hljs-comment">%噪声</span><br>snr=<span class="hljs-number">10</span>; <span class="hljs-comment">%Signal‐to‐noise ratio in dB.</span><br>yn=awgn(y,snr,<span class="hljs-string">'measured'</span>); <span class="hljs-comment">% Add white Gaussian noise. 白噪声</span><br><br><span class="hljs-comment">%函数</span><br>k1=<span class="hljs-number">-3</span>; k2=<span class="hljs-number">3</span>; k=k1:k2; n=<span class="hljs-number">0</span>;<br>step=stepfun(t,t0)<span class="hljs-comment">%t是向量形式的变量,t0表示延迟 阶跃函数</span><br>delta=+(k==n) <span class="hljs-comment">% 冲激函数</span><br>stem(k,delta,<span class="hljs-string">'filled'</span>)<span class="hljs-comment">% 离散函数绘制 stem为绘制杆状图</span><br><br><span class="hljs-comment">%rectpuls和tripuls函数产生指定宽度和高度的矩形和三角脉冲。</span><br></code></pre></td></tr></table></figure></li>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs matlab"><span class="hljs-comment">%噪声</span><br>snr=<span class="hljs-number">10</span>; <span class="hljs-comment">%Signal‐to‐noise ratio in dB.</span><br>yn=awgn(y,snr,<span class="hljs-string">'measured'</span>); <span class="hljs-comment">% Add white Gaussian noise. 白噪声</span><br><br><span class="hljs-comment">%函数</span><br>k1=<span class="hljs-number">-3</span>; k2=<span class="hljs-number">3</span>; k=k1:k2; n=<span class="hljs-number">0</span>;<br>step=stepfun(t,t0)<span class="hljs-comment">%t是向量形式的变量,t0表示延迟 阶跃函数</span><br>delta=+(k==n) <span class="hljs-comment">% 冲激函数</span><br>stem(k,delta,<span class="hljs-string">'filled'</span>)<span class="hljs-comment">% 离散函数绘制 stem为绘制杆状图</span><br><br><span class="hljs-comment">%rectpuls和tripuls函数产生指定宽度和高度的矩形和三角脉冲。</span><br></code></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
 <li><p>其他技巧</p>
 <ul>
-<li>nargin, nargout 的使用</li>
-</ul></li>
+<li>nargin, nargout 的使用 </li>
+</ul>
+</li>
 </ul>
 
       
@@ -296,7 +313,7 @@
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/Notes/">Notes</a>
+      <a class="nav-item-link" href="/Notes">Notes</a>
     </li>
     
     <li class="nav-item">
@@ -609,42 +626,7 @@
 
 
     
-  </div>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            displayMath: [ ['$','$'], ["\\[","\\]"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js"></script>
-
-
-<!-- <script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX", "output/HTML-CSS"],
-    tex2jax: {
-      inlineMath: [ ['
-
-</html>,'
-
-</html>], ["\\(","\\)"] ],
-      displayMath: [ ['$','$'], ["\\[","\\]"] ],
-      processEscapes: true
-    },
-    "HTML-CSS": { availableFonts: ["TeX"] }
-  });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js"></script> --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 
 </html>

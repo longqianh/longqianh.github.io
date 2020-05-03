@@ -120,45 +120,39 @@
       
 
       
-      <h1 id="数学建模-模型学习">数学建模 模型学习</h1>
-<h2 id="确定性连续模型">1 确定性连续模型</h2>
-<h2 id="静态优化模型微分法建模">1.1 静态优化模型/微分法建模</h2>
-<h3 id="不允许缺货的存贮模型">1.1.1 不允许缺货的存贮模型</h3>
-<ol type="1">
+      <h1 id="数学建模-模型学习"><a href="#数学建模-模型学习" class="headerlink" title="数学建模 模型学习"></a>数学建模 模型学习</h1><h2 id="1-确定性连续模型"><a href="#1-确定性连续模型" class="headerlink" title="1 确定性连续模型"></a>1 确定性连续模型</h2><h2 id="1-1-静态优化模型-微分法建模"><a href="#1-1-静态优化模型-微分法建模" class="headerlink" title="1.1 静态优化模型/微分法建模"></a>1.1 静态优化模型/微分法建模</h2><h3 id="1-1-1-不允许缺货的存贮模型"><a href="#1-1-1-不允许缺货的存贮模型" class="headerlink" title="1.1.1 不允许缺货的存贮模型"></a>1.1.1 不允许缺货的存贮模型</h3><ol>
 <li><p>模型假设：</p>
 <ul>
-<li>每天存货费用：<span class="math inline">\(c_1\)</span> 元/吨</li>
-<li>每次订货费用：<span class="math inline">\(c_2\)</span> 元</li>
-<li>每天货物需求量：<span class="math inline">\(r\)</span> 吨/天</li>
-<li>任意时刻 <span class="math inline">\(t\)</span> 的货物贮存量：<span class="math inline">\(q(t)\)</span></li>
-<li>订货周期：<span class="math inline">\(T\)</span> 天</li>
-<li>每次订货数量：<span class="math inline">\(Q\)</span> 吨</li>
-</ul></li>
+<li>每天存货费用：$c_1$  元/吨</li>
+<li>每次订货费用：$c_2$  元</li>
+<li>每天货物需求量：$r$ 吨/天</li>
+<li>任意时刻 $t$ 的货物贮存量：$q(t)$</li>
+<li>订货周期：$T$  天</li>
+<li>每次订货数量：$Q$  吨</li>
+</ul>
+</li>
 <li><p>模型假设：</p>
-<p>每次订货后库存量均匀下降： <span class="math display">\[
+<p>每次订货后库存量均匀下降：</p>
+<script type="math/tex; mode=display">
 \frac{dq}{dt}=-r,\qquad q(0)=Q \\
-q(t)=-r\cdot t+Q
-\]</span></p></li>
+q(t)=-r\cdot t+Q</script></li>
 <li><p>模型建立：</p>
 <ul>
 <li>订货数量、订货周期、每日货物需求的关系：</li>
 </ul>
-<p><span class="math display">\[
-Q=r\cdot T
-\]</span></p>
-<ul>
-<li>每日平均花费：</li>
-</ul>
-<p><span class="math display">\[
-Cost(T)=\frac{1}{T}\cdot(c_2+c_1\int_0^Tq(t)dt)=\frac{c_2}{T}+\frac{1}{2}c_1 rT
-\]</span></p>
-<ul>
-<li>目标：<span class="math inline">\(min[Cost]\)</span></li>
-</ul>
-<p><span class="math display">\[
-\frac{dCost}{dT}=0\\=&gt; T=\sqrt{\frac{2c_2}{c_1r}},\quad Q=\sqrt{\frac{2c_2r}{c_1}}
-\]</span></p></li>
+<script type="math/tex; mode=display">
+Q=r\cdot T</script></li>
 </ol>
+<ul>
+<li><p>每日平均花费：</p>
+<script type="math/tex; mode=display">
+Cost(T)=\frac{1}{T}\cdot(c_2+c_1\int_0^Tq(t)dt)=\frac{c_2}{T}+\frac{1}{2}c_1 rT</script></li>
+</ul>
+<ul>
+<li><p>目标：$min[Cost]$</p>
+<script type="math/tex; mode=display">
+\frac{dCost}{dT}=0\\=> T=\sqrt{\frac{2c_2}{c_1r}},\quad Q=\sqrt{\frac{2c_2r}{c_1}}</script></li>
+</ul>
 <p>$ \ $
       
       <a class="article-more-link" href="/2020/02/01/Mathematics/Mathematic-Models/">阅读更多...</a>
@@ -229,17 +223,18 @@ Cost(T)=\frac{1}{T}\cdot(c_2+c_1\int_0^Tq(t)dt)=\frac{c_2}{T}+\frac{1}{2}c_1 rT
       
 
       
-      <h1 id="神经网络-学习笔记">神经网络 学习笔记</h1>
-<p>学习资源: <a href="">neuralnetworksanddeeplearning.com</a></p>
-<h2 id="chapter-12">Chapter 1、2</h2>
-<h3 id="基本概念">1.1 基本概念</h3>
-<ul>
-<li><p>activation function 激活函数/传递函数 定义了该节点在给定的输入或输入的集合下的输出，比如 sigmoid function</p></li>
-<li><p>perceptron model 感知器：输入 <span class="math inline">\(0,1\)</span> 二值函数，输出 <span class="math inline">\(0,1\)</span> 二值函数</p></li>
-<li><p>sigmoid neurons S 神经元</p>
-<p>​ 中间部分更精细，<span class="math inline">\(\displaystyle\sigma(z)=\frac{1}{1+e^{-z}}\)</span> 输入二值，输出为 <span class="math inline">\([0,1]\)</span> 之间的数，极限性质和感知器一样</p></li>
+      <h1 id="神经网络-学习笔记"><a href="#神经网络-学习笔记" class="headerlink" title="神经网络 学习笔记"></a>神经网络 学习笔记</h1><p>学习资源: <a href="">neuralnetworksanddeeplearning.com</a></p>
+<h2 id="Chapter-1、2"><a href="#Chapter-1、2" class="headerlink" title="Chapter 1、2"></a>Chapter 1、2</h2><h3 id="1-1-基本概念"><a href="#1-1-基本概念" class="headerlink" title="1.1 基本概念"></a>1.1 基本概念</h3><ul>
+<li><p>activation function 激活函数/传递函数   定义了该节点在给定的输入或输入的集合下的输出，比如 sigmoid function</p>
+</li>
+<li><p>perceptron model 感知器：输入 $0,1$ 二值函数，输出 $0,1$ 二值函数</p>
+</li>
+<li><p>sigmoid neurons  S 神经元  </p>
+<p>​    中间部分更精细，$\displaystyle\sigma(z)=\frac{1}{1+e^{-z}}$ 输入二值，输出为 $[0,1]$ 之间的数，极限性质和感知器一样</p>
+</li>
 <li><p>feedforward neural networks 前馈神经网络</p>
-<p>​ 没有反馈的神经网络，由输入层(input layer)、隐藏层(hidden layer)、输出层(output layer)构成</p></li>
+<p>​    没有反馈的神经网络，由输入层(input layer)、隐藏层(hidden layer)、输出层(output layer)构成</p>
+</li>
 </ul>
 <p>$ \ $
       
@@ -313,8 +308,7 @@ Cost(T)=\frac{1}{T}\cdot(c_2+c_1\int_0^Tq(t)dt)=\frac{c_2}{T}+\frac{1}{2}c_1 rT
       
 
       
-      <h1 id="数值分析-学习笔记">数值分析 学习笔记</h1>
-
+      <h1 id="数值分析-学习笔记"><a href="#数值分析-学习笔记" class="headerlink" title="数值分析 学习笔记"></a>数值分析 学习笔记</h1>
       
       <!-- reward -->
       
@@ -381,65 +375,53 @@ Cost(T)=\frac{1}{T}\cdot(c_2+c_1\int_0^Tq(t)dt)=\frac{c_2}{T}+\frac{1}{2}c_1 rT
       
 
       
-      <h1 id="python-学习笔记">Python 学习笔记</h1>
-<h2 id="pandas-library">pandas library</h2>
-<h3 id="day-1">Day #1</h3>
-<p>df = pd.read_csv(' ')</p>
+      <h1 id="Python-学习笔记"><a href="#Python-学习笔记" class="headerlink" title="Python 学习笔记"></a>Python 学习笔记</h1><h2 id="pandas-library"><a href="#pandas-library" class="headerlink" title="pandas library"></a>pandas library</h2><h3 id="Day-1"><a href="#Day-1" class="headerlink" title="Day #1"></a>Day #1</h3><p>df = pd.read_csv(‘ ‘)</p>
 <p>df.head(n)</p>
 <p>df.tail(n)</p>
-<p>df.nlargest(n,'name')</p>
-<p>df.nsmallest(n,'name')</p>
-<p>df [Pd['bla bla']=='labalaba']</p>
-<h3 id="day-2">Day #2</h3>
-<p>df.shape</p>
+<p>df.nlargest(n,’name’)</p>
+<p>df.nsmallest(n,’name’)</p>
+<p>df [Pd[‘bla bla’]==’labalaba’]</p>
+<h3 id="Day-2"><a href="#Day-2" class="headerlink" title="Day #2"></a>Day #2</h3><p>df.shape</p>
 <p>df.columns.tolist( )</p>
-<p>df['name'].unique( )</p>
-<p>df = df.replace('Orig' , 'New')</p>
-<p>df.isnull( ) // Checks if each value in the dato frame is missing</p>
-<p>Trick: print(df.isnull().sum()) // return the total amount of missing values for each feature(column)</p>
-<p>NaN stands for 'not a number'</p>
+<p>df[‘name’].unique( )</p>
+<p>df = df.replace(‘Orig’ , ‘New’)</p>
+<p>df.isnull( )     // Checks if each value in the dato frame is missing</p>
+<p>Trick: print(df.isnull().sum())      // return the total amount of missing values for each feature(column)</p>
+<p>NaN stands for ‘not a number’</p>
 <p><strong>creating columns:</strong></p>
-<p>df['new column name'] = fomula</p>
-<p>e.g. df['% Female'] = df['Female'] / df['Total']</p>
+<p>df[‘new column name’] = fomula </p>
+<p>e.g.     df[‘% Female’] = df[‘Female’] / df[‘Total’]</p>
 <p>df.dtypes</p>
-<p>df.select_dtypes(['object'])</p>
+<p>df.select_dtypes([‘object’])</p>
 <p><strong>measures of spread or distribution</strong></p>
-<p>df['column name'].mean( )</p>
-<p>df['column name'].median( )</p>
-<p>df['column name'].mode( )</p>
-<p>df.groupby(by='column name').agg('mean')</p>
-<p>// agg stands for 'aggregate'. group the data by the 'column name'</p>
-<p>df['column name'].max( ) — df['column name'].min( )</p>
-<p>df['column name'].std( ) // standard deviation</p>
-<p>df['column name'].var( ) // variance</p>
-<p>df.groupby(by='column name').agg('std')</p>
+<p>df[‘column name’].mean( )</p>
+<p>df[‘column name’].median( )</p>
+<p>df[‘column name’].mode( )</p>
+<p>df.groupby(by=’column name’).agg(‘mean’) </p>
+<p> // agg stands for ‘aggregate’.  group the data by the ‘column name’</p>
+<p>df[‘column name’].max( ) — df[‘column name’].min( )</p>
+<p>df[‘column name’].std( )    // standard deviation </p>
+<p>df[‘column name’].var( )    // variance</p>
+<p>df.groupby(by=’column name’).agg(‘std’)</p>
 <p><strong>correlation coefficient</strong></p>
 <p>df.corr( )</p>
-<p>df.corr( )['x'] ['y']</p>
-<h3 id="day-3">Day #3</h3>
-<h4 id="bar-chart-条形图">Bar Chart 条形图</h4>
-<p>df_top10 = df.nlargest(10,'Total')</p>
-<p>df_top10.plot.bar(x='Major Name', y='Total')</p>
-<h4 id="histograms-直方图">Histograms 直方图</h4>
-<p>df.hist(column = '% Female')</p>
-<h4 id="boxplot-箱形图-超有用">Boxplot 箱形图 超有用</h4>
-<p>df.boxplot(column = '% Female', vert=False)</p>
-<h4 id="scatterplots-散点图">Scatterplots 散点图</h4>
-<p>df.plot.scatter(x='Male', y='Female')</p>
-<p>##. . .</p>
-<h4 id="simulation">Simulation</h4>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> random<br>random.ranint(<span class="hljs-number">1</span>,<span class="hljs-number">10</span>)<br><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">1</span>,<span class="hljs-number">100</span>):<br>  print(random.randint(<span class="hljs-number">1</span>,<span class="hljs-number">10</span>))<br></code></pre></td></tr></table></figure>
-<h3 id="day-4">Day #4</h3>
-<ul>
+<p>df.corr( )[‘x’] [‘y’]</p>
+<h3 id="Day-3"><a href="#Day-3" class="headerlink" title="Day #3"></a>Day #3</h3><h4 id="Bar-Chart-条形图"><a href="#Bar-Chart-条形图" class="headerlink" title="Bar Chart 条形图"></a>Bar Chart 条形图</h4><p>df_top10 = df.nlargest(10,’Total’)</p>
+<p>df_top10.plot.bar(x=’Major Name’, y=’Total’)</p>
+<h4 id="Histograms-直方图"><a href="#Histograms-直方图" class="headerlink" title="Histograms 直方图"></a>Histograms 直方图</h4><p>df.hist(column = ‘% Female’)</p>
+<h4 id="Boxplot-箱形图-超有用"><a href="#Boxplot-箱形图-超有用" class="headerlink" title="Boxplot 箱形图 超有用"></a>Boxplot 箱形图 超有用</h4><p>df.boxplot(column = ‘% Female’, vert=False)</p>
+<h4 id="Scatterplots-散点图"><a href="#Scatterplots-散点图" class="headerlink" title="Scatterplots 散点图"></a>Scatterplots 散点图</h4><p>df.plot.scatter(x=’Male’, y=’Female’)</p>
+<h2 id=""><a href="#" class="headerlink" title=". . ."></a>. . .</h2><h4 id="Simulation"><a href="#Simulation" class="headerlink" title="Simulation"></a>Simulation</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> random<br>random.ranint(<span class="hljs-number">1</span>,<span class="hljs-number">10</span>)<br><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">1</span>,<span class="hljs-number">100</span>):<br>  print(random.randint(<span class="hljs-number">1</span>,<span class="hljs-number">10</span>))<br></code></pre></td></tr></table></figure>
+<h3 id="Day-4"><a href="#Day-4" class="headerlink" title="Day #4"></a>Day #4</h3><ul>
 <li>generate a dataset of random numbers</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> random <span class="hljs-keyword">as</span> rd<br>arr=[]<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">100</span>):<br>  value=rd.randint(<span class="hljs-number">1</span>,<span class="hljs-number">10</span>)<br>  arr.append(&#123;<span class="hljs-string">'value'</span>:value&#125;)<br></code></pre></td></tr></table></figure>
 <ul>
-<li><p><strong>Monty Hall Game</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd<br><span class="hljs-keyword">import</span> random<br><br>results = []<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">1000</span>):<br>  prize = random.randint(<span class="hljs-number">1</span>, <span class="hljs-number">3</span>)<br>  choice = random.randint(<span class="hljs-number">1</span>, <span class="hljs-number">3</span>)<br>  print(<span class="hljs-string">"We picked door "</span> + str(choice))<br><br>  <span class="hljs-comment"># Show a door that is not the winning door:</span><br>  <span class="hljs-keyword">if</span> prize != <span class="hljs-number">1</span> <span class="hljs-keyword">and</span> choice != <span class="hljs-number">1</span>: showdoor = <span class="hljs-number">1</span><br>  <span class="hljs-keyword">elif</span> prize != <span class="hljs-number">2</span> <span class="hljs-keyword">and</span> choice != <span class="hljs-number">2</span>: showdoor = <span class="hljs-number">2</span><br>  <span class="hljs-keyword">else</span>: showdoor = <span class="hljs-number">3</span><br>  print(<span class="hljs-string">"We were shown that door "</span> + str(showdoor) + <span class="hljs-string">" was a goat"</span>)<br><br>  <span class="hljs-comment"># We did NOT swap the door:</span><br>  <span class="hljs-keyword">if</span>   choice == <span class="hljs-number">1</span> <span class="hljs-keyword">and</span> showdoor == <span class="hljs-number">2</span>: choice = <span class="hljs-number">3</span><br>  <span class="hljs-keyword">elif</span> choice == <span class="hljs-number">1</span> <span class="hljs-keyword">and</span> showdoor == <span class="hljs-number">3</span>: choice = <span class="hljs-number">2</span><br><br>  <span class="hljs-keyword">elif</span> choice == <span class="hljs-number">2</span> <span class="hljs-keyword">and</span> showdoor == <span class="hljs-number">1</span>: choice = <span class="hljs-number">3</span><br>  <span class="hljs-keyword">elif</span> choice == <span class="hljs-number">2</span> <span class="hljs-keyword">and</span> showdoor == <span class="hljs-number">3</span>: choice = <span class="hljs-number">1</span><br><br>  <span class="hljs-keyword">elif</span> choice == <span class="hljs-number">3</span> <span class="hljs-keyword">and</span> showdoor == <span class="hljs-number">1</span>: choice = <span class="hljs-number">2</span><br>  <span class="hljs-keyword">elif</span> choice == <span class="hljs-number">3</span> <span class="hljs-keyword">and</span> showdoor == <span class="hljs-number">2</span>: choice = <span class="hljs-number">1</span><br>    <br>  print(<span class="hljs-string">"We DID swap doors."</span>)<br><br>  <span class="hljs-comment"># Check if we won:</span><br>  <span class="hljs-keyword">if</span> prize == choice:<br>    print(<span class="hljs-string">"WE WIN!!!!!!!!!!!!!!!"</span>)<br>    results.append( &#123;<span class="hljs-string">"result"</span>: <span class="hljs-number">1</span>&#125; )<br>  <span class="hljs-keyword">else</span>:<br>    print(<span class="hljs-string">" :( "</span>)<br>    results.append( &#123;<span class="hljs-string">"result"</span>: <span class="hljs-number">0</span>&#125; )<br>    <br>df = pd.DataFrame(results)<br></code></pre></td></tr></table></figure></li>
+<li><p><strong>Monty Hall Game</strong> </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd<br><span class="hljs-keyword">import</span> random<br><br>results = []<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">1000</span>):<br>  prize = random.randint(<span class="hljs-number">1</span>, <span class="hljs-number">3</span>)<br>  choice = random.randint(<span class="hljs-number">1</span>, <span class="hljs-number">3</span>)<br>  print(<span class="hljs-string">"We picked door "</span> + str(choice))<br><br>  <span class="hljs-comment"># Show a door that is not the winning door:</span><br>  <span class="hljs-keyword">if</span> prize != <span class="hljs-number">1</span> <span class="hljs-keyword">and</span> choice != <span class="hljs-number">1</span>: showdoor = <span class="hljs-number">1</span><br>  <span class="hljs-keyword">elif</span> prize != <span class="hljs-number">2</span> <span class="hljs-keyword">and</span> choice != <span class="hljs-number">2</span>: showdoor = <span class="hljs-number">2</span><br>  <span class="hljs-keyword">else</span>: showdoor = <span class="hljs-number">3</span><br>  print(<span class="hljs-string">"We were shown that door "</span> + str(showdoor) + <span class="hljs-string">" was a goat"</span>)<br><br>  <span class="hljs-comment"># We did NOT swap the door:</span><br>  <span class="hljs-keyword">if</span>   choice == <span class="hljs-number">1</span> <span class="hljs-keyword">and</span> showdoor == <span class="hljs-number">2</span>: choice = <span class="hljs-number">3</span><br>  <span class="hljs-keyword">elif</span> choice == <span class="hljs-number">1</span> <span class="hljs-keyword">and</span> showdoor == <span class="hljs-number">3</span>: choice = <span class="hljs-number">2</span><br><br>  <span class="hljs-keyword">elif</span> choice == <span class="hljs-number">2</span> <span class="hljs-keyword">and</span> showdoor == <span class="hljs-number">1</span>: choice = <span class="hljs-number">3</span><br>  <span class="hljs-keyword">elif</span> choice == <span class="hljs-number">2</span> <span class="hljs-keyword">and</span> showdoor == <span class="hljs-number">3</span>: choice = <span class="hljs-number">1</span><br><br>  <span class="hljs-keyword">elif</span> choice == <span class="hljs-number">3</span> <span class="hljs-keyword">and</span> showdoor == <span class="hljs-number">1</span>: choice = <span class="hljs-number">2</span><br>  <span class="hljs-keyword">elif</span> choice == <span class="hljs-number">3</span> <span class="hljs-keyword">and</span> showdoor == <span class="hljs-number">2</span>: choice = <span class="hljs-number">1</span><br>    <br>  print(<span class="hljs-string">"We DID swap doors."</span>)<br><br>  <span class="hljs-comment"># Check if we won:</span><br>  <span class="hljs-keyword">if</span> prize == choice:<br>    print(<span class="hljs-string">"WE WIN!!!!!!!!!!!!!!!"</span>)<br>    results.append( &#123;<span class="hljs-string">"result"</span>: <span class="hljs-number">1</span>&#125; )<br>  <span class="hljs-keyword">else</span>:<br>    print(<span class="hljs-string">" :( "</span>)<br>    results.append( &#123;<span class="hljs-string">"result"</span>: <span class="hljs-number">0</span>&#125; )<br>    <br>df = pd.DataFrame(results)<br></code></pre></td></tr></table></figure>
+</li>
 </ul>
-<h2 id="其他">其他</h2>
-<p>enumerate() 函数用于将一个可遍历的数据对象(如列表、元组或字符串)组合为一个索引序列，同时列出数据和数据下标，一般用在 for 循环当中</p>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>enumerate() 函数用于将一个可遍历的数据对象(如列表、元组或字符串)组合为一个索引序列，同时列出数据和数据下标，一般用在 for 循环当中</p>
 <p>向量范数</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">while</span> sum(i**<span class="hljs-number">2</span> <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> f(x)) &gt;= TOL**<span class="hljs-number">2</span>:<br></code></pre></td></tr></table></figure>
 <p>列表一个溢出error的解决</p>
@@ -452,12 +434,12 @@ Cost(T)=\frac{1}{T}\cdot(c_2+c_1\int_0^Tq(t)dt)=\frac{c_2}{T}+\frac{1}{2}c_1 rT
 <p>A[i,i:] 算上i往后</p>
 <p>函数中的参量似乎不是形参</p>
 <p>if all(abs(x1[i]-x0[i]) &lt; eps for i in range(n))</p>
-<p>[max([abs(m[i][j]) for j in range(n)]) for i in range(n)]</p>
+<p>[max([abs(m[i][j]) for j in range(n)]) for i in range(n)] </p>
 <p>A.shape[0]和A.shape[1]</p>
-<p>print(...,end=' ')</p>
+<p>print(…,end=’ ‘)</p>
 <p>新的Python语法，是不支持的代码对齐中，混用TAB和空格的。所以出现上述错误提示了。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">map(func, seq1[, seq2,…])<br></code></pre></td></tr></table></figure>
-<p>第一个参数接受一个函数名，后面的参数接受一个或多个可迭代的序列，返回的是一个集合。 Python函数编程中的map()函数是将func作用于seq中的每一个元素，并将所有的调用的结果作为一个list返回。如果func为None，作用同zip()。</p>
+<p>第一个参数接受一个函数名，后面的参数接受一个或多个可迭代的序列，返回的是一个集合。<br>Python函数编程中的map()函数是将func作用于seq中的每一个元素，并将所有的调用的结果作为一个list返回。如果func为None，作用同zip()。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">print(“&#123;:<span class="hljs-number">.3</span>f&#125;<span class="hljs-string">".format())</span><br></code></pre></td></tr></table></figure>
 <p>Matrix product of two arrays:</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">numpy.matmul(*x1*, *x2*, */*, *out=<span class="hljs-literal">None</span>*, ***, *casting=<span class="hljs-string">'same_kind'</span>*, *order=<span class="hljs-string">'K'</span>*, *dtype=<span class="hljs-literal">None</span>*, *subok=<span class="hljs-literal">True</span>*[, *signature*, *extobj*]) *= *<br></code></pre></td></tr></table></figure>
@@ -477,44 +459,38 @@ Cost(T)=\frac{1}{T}\cdot(c_2+c_1\int_0^Tq(t)dt)=\frac{c_2}{T}+\frac{1}{2}c_1 rT
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python">p_arr = np.concatenate((p_arr,[p_])) <span class="hljs-comment"># 先将p_变成list形式进行拼接，注意输入为一个tuple</span><br>p_arr = np.append(p_arr,p_) <span class="hljs-comment">#直接向p_arr里添加p_</span><br><span class="hljs-comment">#注意一定不要忘记用赋值覆盖原p_arr不然不会变</span><br></code></pre></td></tr></table></figure>
 <p>Np.cos 自变量是弧度</p>
 <p>卡西欧计算器cos自变量是角度</p>
-<p>当函数要接受元组或者字典参数时，它分别使用*和**前缀。</p>
+<p>当函数要接受元组或者字典参数时，它分别使用<em>和*</em>前缀。</p>
 <p>如果使用**前缀，多余的参数会被认为是字典.</p>
-<h2 id="绘制三维图">绘制三维图</h2>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs python">fig = plt.figure()<br>ax = Axes3D(fig)<br>X = np.meshgrid(X)<br>Y = np.meshgrid(Y)<br>Z = f(X,Y)<br>ax.plot_surface(X,Y,Z,cmap=plt.get_cmap(<span class="hljs-string">'rainbow'</span>))<br></code></pre></td></tr></table></figure>
-<h2 id="聚类分析">聚类分析</h2>
-<h3 id="k-均值聚类">1. K-均值聚类</h3>
-<p>划分式聚类方法。</p>
+<h2 id="绘制三维图"><a href="#绘制三维图" class="headerlink" title="绘制三维图"></a>绘制三维图</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs python">fig = plt.figure()<br>ax = Axes3D(fig)<br>X = np.meshgrid(X)<br>Y = np.meshgrid(Y)<br>Z = f(X,Y)<br>ax.plot_surface(X,Y,Z,cmap=plt.get_cmap(<span class="hljs-string">'rainbow'</span>))<br></code></pre></td></tr></table></figure>
+<h2 id="聚类分析"><a href="#聚类分析" class="headerlink" title="聚类分析"></a>聚类分析</h2><h3 id="1-K-均值聚类"><a href="#1-K-均值聚类" class="headerlink" title="1. K-均值聚类"></a>1. K-均值聚类</h3><p>划分式聚类方法。</p>
 <p>已知要分点聚类数，随机生成类数个质心，从质心出发逐渐分类</p>
 <ul>
 <li>生成 KMeans 类</li>
 <li>使用 KMeans 中的 fit_predict 函数直接得聚类后各点对应的类标签</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> sklearn.datasets <span class="hljs-keyword">import</span> make_blobs<br><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np<br><span class="hljs-keyword">import</span> matplotlib.pyplot <span class="hljs-keyword">as</span> plt<br><span class="hljs-keyword">from</span> sklearn.cluster <span class="hljs-keyword">import</span> KMeans<br><br><span class="hljs-comment"># 生成n_samples个点对,data[1]是每个成员的整数标签(类别)</span><br>data = make_blobs(n_samples=<span class="hljs-number">500</span>, n_features=<span class="hljs-number">2</span>, centers=<span class="hljs-number">8</span>,<br>                  cluster_std=<span class="hljs-number">1.6</span>, random_state=<span class="hljs-number">50</span>)<br>points = data[<span class="hljs-number">0</span>]<br>fig1 = plt.figure()  <span class="hljs-comment"># 生成画布</span><br>fig1 = plt.scatter(points[:, <span class="hljs-number">0</span>], points[:, <span class="hljs-number">1</span>], c=data[<span class="hljs-number">1</span>],<br>                   cmap=<span class="hljs-string">'viridis'</span>)<br>plt.title(<span class="hljs-string">'before'</span>)<br>plt.xlim(<span class="hljs-number">-15</span>, <span class="hljs-number">15</span>)<br>plt.ylim(<span class="hljs-number">-15</span>, <span class="hljs-number">15</span>)<br><br><span class="hljs-comment"># create kmeans object</span><br>kmeans = KMeans(n_clusters=<span class="hljs-number">8</span>)<br><br><span class="hljs-comment"># print location of clusters learned by kmeans object</span><br><span class="hljs-comment"># print(kmeans.cluster_centers_)</span><br><br>km_res = kmeans.fit_predict(points)<br><br>fig2 = plt.figure()<br>fig2 = plt.scatter(points[:, <span class="hljs-number">0</span>], points[:, <span class="hljs-number">1</span>], c=km_res,<br>                   cmap=<span class="hljs-string">'viridis'</span>)  <span class="hljs-comment"># c:color 按data[1]给每个点对应的颜色</span><br>plt.title(<span class="hljs-string">'after'</span>)<br>plt.xlim(<span class="hljs-number">-15</span>, <span class="hljs-number">15</span>)<br>plt.ylim(<span class="hljs-number">-15</span>, <span class="hljs-number">15</span>)<br>plt.show()<br></code></pre></td></tr></table></figure>
-<h3 id="层次分析聚类">2. 层次分析聚类</h3>
-<p>层次化聚类方法。</p>
+<h3 id="2-层次分析聚类"><a href="#2-层次分析聚类" class="headerlink" title="2. 层次分析聚类"></a>2. 层次分析聚类</h3><p>层次化聚类方法。</p>
 <p>从每个点各为一类开始，“归并”。</p>
 <p>步骤：</p>
 <ul>
 <li>生成距离矩阵：pdist函数</li>
 <li>进行层次聚类，使用ward提出的离差平方和方法效果较好： linkage函数。 注：返回的Z的第一列和第二列代表聚集的两类的序列号，第三列代表第一列和第二列序号所代表的集群在聚集时的距离(与层次聚类图的高度相等)，第四列代表聚集时所包含的原始数据的个数</li>
-<li>绘制树状图 dendrogram 函数</li>
+<li>绘制树状图 dendrogram 函数 </li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd<br><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np<br><span class="hljs-keyword">import</span> matplotlib.pyplot <span class="hljs-keyword">as</span> plt<br><span class="hljs-keyword">import</span> scipy<br><span class="hljs-keyword">import</span> scipy.cluster.hierarchy <span class="hljs-keyword">as</span> sch<br><br><br><span class="hljs-comment"># 生成待聚类的数据点,这里生成了20个点,每个点4维:</span><br>points = scipy.randn(<span class="hljs-number">20</span>, <span class="hljs-number">4</span>)<br><br><span class="hljs-comment"># 生成点与点之间的距离矩阵,这里用的欧氏距离:</span><br>disMat = sch.distance.pdist(points, <span class="hljs-string">'euclidean'</span>)<br><span class="hljs-comment"># 进行层次聚类:</span><br>Z = sch.linkage(disMat, method=<span class="hljs-string">'ward'</span>)<br><span class="hljs-comment"># 将层级聚类结果以树状图表示出来并保存为plot_dendrogram.png</span><br>P = sch.dendrogram(Z)<br>plt.savefig(<span class="hljs-string">'plot_dendrogram.png'</span>)<br><br><span class="hljs-comment"># 根据linkage matrix Z得到聚类结果:</span><br>cluster = sch.fcluster(Z, t=<span class="hljs-number">4</span>, criterion=<span class="hljs-string">'maxclust'</span>)<span class="hljs-comment">#t表示最大聚类簇数</span><br>print(<span class="hljs-string">"Original cluster by hierarchy clustering:\n"</span>, cluster)<br><br>plt.show()<br></code></pre></td></tr></table></figure>
-<h3 id="应用">3. 应用</h3>
-<p>首先使用变量聚类法找出相关度较低的“主变量”（主要指标），删除主变量之外的次变量，然后根据主变量使用样本聚类分析法进行样本分类。</p>
-<h2 id="主成分分析-pca">主成分分析 PCA</h2>
-<p>Principle Component Analysis. 将相关度很高的向量转化为相关度较低的向量。</p>
+<h3 id="3-应用"><a href="#3-应用" class="headerlink" title="3. 应用"></a>3. 应用</h3><p>首先使用变量聚类法找出相关度较低的“主变量”（主要指标），删除主变量之外的次变量，然后根据主变量使用样本聚类分析法进行样本分类。</p>
+<h2 id="主成分分析-PCA"><a href="#主成分分析-PCA" class="headerlink" title="主成分分析 PCA"></a>主成分分析 PCA</h2><p>Principle Component Analysis. 将相关度很高的向量转化为相关度较低的向量。</p>
 <p>Python 实现：</p>
 <p>直接调库：<strong>sklearn.decomposition.PCA</strong> （类）</p>
 <p>参数：</p>
 <ul>
 <li>n_component : 想要将到的维数；或者规定主成分的累计贡献率阀值（percentage）</li>
 <li>whiten: 是否白化，即归一化</li>
-<li>explained_variance_ : 代表降维后的各主成分的方差值。方差值越大，则说明越是重要的主成分。</li>
-<li>explained_variance_ratio_ : 代表降维后的各主成分的方差值占总方差值的比例(累计贡献率)</li>
+<li>explained<em>variance</em> : 代表降维后的各主成分的方差值。方差值越大，则说明越是重要的主成分。</li>
+<li>explained<em>variance_ratio</em> : 代表降维后的各主成分的方差值占总方差值的比例(累计贡献率)</li>
 <li>Y = fit_transform(X) 利用主成分分析方法对数据降维，返回对X降维后的矩阵: X.shape=(n_samples,n_features); Y.shape=(n_samples,n_components)</li>
 <li>fit(X) 利用主成分分析法对X降维和变换，X已经改变</li>
-<li>transform(X) 返回 n_samples<span class="math inline">\(\times\)</span> n_components 的切掉后面的矩阵</li>
+<li>transform(X) 返回 n_samples$\times$ n_components 的切掉后面的矩阵</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np<br><span class="hljs-keyword">import</span> matplotlib.pyplot <span class="hljs-keyword">as</span> plt<br><span class="hljs-keyword">from</span> sklearn.decomposition <span class="hljs-keyword">import</span> PCA<br><br>x = np.array([[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>], [<span class="hljs-number">1</span>, <span class="hljs-number">4</span>], [<span class="hljs-number">5</span>, <span class="hljs-number">8</span>]])<br>pca = PCA(n_components=<span class="hljs-number">0.9</span>)<br>y = pca.fit_transform(x)<br>print(<span class="hljs-string">"累计贡献率："</span>, pca.explained_variance_ratio_)<br>print(<span class="hljs-string">"变换后的x"</span>, y)<br><span class="hljs-comment">#or:</span><br><span class="hljs-comment">#pca.fit(x)</span><br><span class="hljs-comment">#y=pca.transform(x)</span><br></code></pre></td></tr></table></figure>
 <p>（numpy练习）</p>
@@ -586,22 +562,30 @@ Cost(T)=\frac{1}{T}\cdot(c_2+c_1\int_0^Tq(t)dt)=\frac{c_2}{T}+\frac{1}{2}c_1 rT
       
 
       
-      <h1 id="latex-tricks">LaTex Tricks</h1>
-<h4 id="字母上面加东西">字母上面加东西：</h4>
-<ul>
-<li><p>$ x$ : x, $ x$ : x , <span class="math inline">\(\hat x\)</span> : x, <span class="math inline">\(\widehat x\)</span> : x</p></li>
-<li><p><span class="math inline">\(\widetilde {x}, \widetilde{ab}\)</span> : *** {x}, </p></li>
-<li><span class="math inline">\(\dot x\)</span> : x, <span class="math inline">\(\ddot x\)</span> : x</li>
-<li><p><span class="math inline">\(\vec{x}\)</span> : x</p></li>
-<li><p>东西上写东西 <span class="math inline">\(\overset{a}{bcd}\)</span> ： </p></li>
+      <h1 id="LaTex-Tricks"><a href="#LaTex-Tricks" class="headerlink" title="LaTex Tricks"></a>LaTex Tricks</h1><h4 id="字母上面加东西："><a href="#字母上面加东西：" class="headerlink" title="字母上面加东西："></a>字母上面加东西：</h4><ul>
+<li>$ \overline x$ : \overline x,   $ \bar x$  :  \bar x , $\hat x$ : \hat x,  $\widehat x$ : \widehat x</li>
 </ul>
-<h4 id="数学常用">数学常用：</h4>
 <ul>
-<li><p>$ <em>{1in}$ : </em>{1in}{1in}</p></li>
-<li><p><span class="math inline">\(\because\)</span> -- , <span class="math inline">\(\therefore\)</span> -- </p></li>
-<li><p><span class="math inline">\(\forall\)</span> : , $ $ : </p></li>
-<li><p><span class="math inline">\(\sqrt[n]{abc}\)</span> : </p>
-<p>
+<li>$\widetilde {x}, \widetilde{ab}$ : <strong>\widetilde</strong> {x}, \widetilde{ab}</li>
+</ul>
+<ul>
+<li>$\dot x$ : \dot x,  $\ddot x$ : \ddot x</li>
+<li><p>$\vec{x}$ : \vec x</p>
+</li>
+<li><p>东西上写东西 $\overset{a}{bcd}$  ： \overset{a}{bcd}</p>
+</li>
+</ul>
+<h4 id="数学常用："><a href="#数学常用：" class="headerlink" title="数学常用："></a>数学常用：</h4><ul>
+<li>$ \sum\limits<em>{1\leq i\leq n}$ : \sum\sum\limits</em>{1\leq i\leq n}{1\leq i\leq n}</li>
+</ul>
+<ul>
+<li>$\because$ — \because,  $\therefore$ — \therefore</li>
+</ul>
+<ul>
+<li>$\forall$ :  \forall,  $ \exists $ : \exists</li>
+</ul>
+<ul>
+<li><p>$\sqrt[n]{abc}$   : \sqrt[n]{abc}</p>
       
       <a class="article-more-link" href="/2020/01/25/LaTex/Latex-Tricks/">阅读更多...</a>
       
@@ -671,13 +655,10 @@ Cost(T)=\frac{1}{T}\cdot(c_2+c_1\int_0^Tq(t)dt)=\frac{c_2}{T}+\frac{1}{2}c_1 rT
       
 
       
-      <h1 id="图像信息处理">图像信息处理</h1>
-<h2 id="灰度变换与空间滤波">1 灰度变换与空间滤波</h2>
-<h3 id="灰度变换str">1.1 灰度变换：<span class="math inline">\(s=T(r)\)</span></h3>
-<ul>
-<li>图像反转：<span class="math inline">\(s=L-1-r\)</span></li>
-<li>对数变换：<span class="math inline">\(s=c\log(1+r)\)</span></li>
-<li>伽马变换：<span class="math inline">\(s=cr^\gamma\)</span></li>
+      <h1 id="图像信息处理"><a href="#图像信息处理" class="headerlink" title="图像信息处理"></a>图像信息处理</h1><h2 id="1-灰度变换与空间滤波"><a href="#1-灰度变换与空间滤波" class="headerlink" title="1  灰度变换与空间滤波"></a>1  灰度变换与空间滤波</h2><h3 id="1-1-灰度变换：-s-T-r"><a href="#1-1-灰度变换：-s-T-r" class="headerlink" title="1.1 灰度变换：$s=T(r)$"></a>1.1 灰度变换：$s=T(r)$</h3><ul>
+<li>图像反转：$s=L-1-r$</li>
+<li>对数变换：$s=c\log(1+r)$</li>
+<li>伽马变换：$s=cr^\gamma$</li>
 <li>分段分式线性变换：对比度拉伸、灰度级分层、比特平面分层</li>
 </ul>
 <p>$ \ $
@@ -750,19 +731,15 @@ Cost(T)=\frac{1}{T}\cdot(c_2+c_1\int_0^Tq(t)dt)=\frac{c_2}{T}+\frac{1}{2}c_1 rT
       
 
       
-      <h2 id="git学习">Git学习</h2>
-<h3 id="创建版本库">创建版本库</h3>
-<p>mkdir dirname // make directory 创建目录 dirname 为目录名</p>
+      <h2 id="Git学习"><a href="#Git学习" class="headerlink" title="Git学习"></a>Git学习</h2><h3 id="创建版本库"><a href="#创建版本库" class="headerlink" title="创建版本库"></a>创建版本库</h3><p>mkdir dirname // make directory 创建目录 dirname 为目录名</p>
 <p>pwd //print working directory 查看当前工作目录的完整路径</p>
 <p>ls -a // 显示所有文件及目录，包括隐藏档</p>
 <p>git init</p>
-<h3 id="修改与提交">修改与提交</h3>
-<p>git add filename1.txt filename2.txt // 把要提交的所有<em>修改</em> 放到暂存区</p>
-<p>git commit -m &quot;what I did in this commission&quot; // 一次性把暂存区的所有修改提交到分支 -m表示message</p>
+<h3 id="修改与提交"><a href="#修改与提交" class="headerlink" title="修改与提交"></a>修改与提交</h3><p>git add filename1.txt filename2.txt // 把要提交的所有<em>修改</em> 放到暂存区</p>
+<p>git commit -m “what I did in this commission” // 一次性把暂存区的所有修改提交到分支 -m表示message</p>
 <p>git log // 查看修改日志</p>
-<p>git log --graph // 查看分支合并图</p>
-<p>git log --pretty=oneline // 每次修改在一行简明显示</p>
-<p>
+<p>git log —graph // 查看分支合并图</p>
+<p>git log —pretty=oneline // 每次修改在一行简明显示</p>
       
       <a class="article-more-link" href="/2020/01/24/Computer-Sciencs/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">阅读更多...</a>
       
@@ -832,12 +809,8 @@ Cost(T)=\frac{1}{T}\cdot(c_2+c_1\int_0^Tq(t)dt)=\frac{c_2}{T}+\frac{1}{2}c_1 rT
       
 
       
-      <h1 id="抽象代数内容整理">抽象代数内容整理</h1>
-<h2 id="群论">1 群论</h2>
-<h3 id="群-group">1.1 群 Group</h3>
-<h4 id="群的定义">1.1.1 群的定义</h4>
-<p>一个<em>群</em> 是带有下列性质的合成法则的集合<span class="math inline">\(G\)</span> :</p>
-<ol type="1">
+      <h1 id="抽象代数内容整理"><a href="#抽象代数内容整理" class="headerlink" title="抽象代数内容整理"></a>抽象代数内容整理</h1><h2 id="1-群论"><a href="#1-群论" class="headerlink" title="1  群论"></a>1  群论</h2><h3 id="1-1-群-Group"><a href="#1-1-群-Group" class="headerlink" title="1.1 群 Group"></a>1.1 群 Group</h3><h4 id="1-1-1-群的定义"><a href="#1-1-1-群的定义" class="headerlink" title="1.1.1 群的定义"></a>1.1.1 群的定义</h4><p>一个<em>群</em> 是带有下列性质的合成法则的集合$G$ :</p>
+<ol>
 <li>合成法则满足结合律</li>
 <li>包含单位元</li>
 <li>每个元素都有逆元</li>
@@ -911,14 +884,10 @@ Cost(T)=\frac{1}{T}\cdot(c_2+c_1\int_0^Tq(t)dt)=\frac{c_2}{T}+\frac{1}{2}c_1 rT
       
 
       
-      <h1 id="搭建此博客过程中的心得">搭建此博客过程中的心得</h1>
-<h2 id="hexo框架">1. <a href="https://zhuanlan.zhihu.com/p/26625249" target="_blank" rel="noopener">Hexo框架</a></h2>
-<p>看到“绑定域名”之前就可以了。</p>
+      <h1 id="搭建此博客过程中的心得"><a href="#搭建此博客过程中的心得" class="headerlink" title="搭建此博客过程中的心得"></a>搭建此博客过程中的心得</h1><h2 id="1-Hexo框架"><a href="#1-Hexo框架" class="headerlink" title="1. Hexo框架"></a>1. <a href="https://zhuanlan.zhihu.com/p/26625249" target="_blank" rel="noopener">Hexo框架</a></h2><p>看到“绑定域名”之前就可以了。</p>
 <p>理解以下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs php+HTML">hexo clean % 清除当前缓存<br>hexo g -d % generate 生成博客<br>hexo d % deploy 将博客部署到GitHub<br>hexo s % hexo server的简写 之后可以在localhost上访问<br>hexo new &quot;bulabula&quot; %生成名为bulabula的md文件（一篇新文章）<br></code></pre></td></tr></table></figure>
-<h2 id="购买域名">2. 购买域名</h2>
-<p>选择了阿里云，发现域名买起来也挺方便的。</p>
-<p>
+<h2 id="2-购买域名"><a href="#2-购买域名" class="headerlink" title="2. 购买域名"></a>2. 购买域名</h2><p>选择了阿里云，发现域名买起来也挺方便的。</p>
       
       <a class="article-more-link" href="/2020/01/19/Other%20Things/%E6%90%AD%E5%BB%BA%E6%AD%A4%E5%8D%9A%E5%AE%A2%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E5%BF%83%E5%BE%97/">阅读更多...</a>
       
@@ -988,33 +957,26 @@ Cost(T)=\frac{1}{T}\cdot(c_2+c_1\int_0^Tq(t)dt)=\frac{c_2}{T}+\frac{1}{2}c_1 rT
       
 
       
-      <h1 id="supvised-learning">Supvised Learning</h1>
-<h2 id="linear-regression">1.Linear Regression</h2>
-<p>output hypotheses function: <span class="math display">\[h(x)= \theta^Tx\]</span></p>
-<p><span class="math inline">\(x\)</span> is the input vector: <span class="math display">\[x=(x_1,x_2,\cdots,x_n)^T\]</span></p>
-<p><span class="math inline">\(\theta\)</span> is the parameter vector: <span class="math display">\[\theta=(\theta_1,\theta_2,\cdots,\theta_n)^T\]</span></p>
-<p><span class="math inline">\(y\)</span> is the training output</p>
-<p><span class="math inline">\(X\)</span> is the training input matrix: <span class="math display">\[X= (x^{(1)},x^{(2)},\cdots,x^{(m)})\]</span></p>
-<p><span class="math inline">\(Y\)</span> is the training output matrix: <span class="math display">\[Y=(y^{(1)},y^{(2)},\cdots,y^{(m)})\]</span></p>
-<p>$\ $</p>
-<h3 id="lms-algorithm">LMS algorithm</h3>
-<ul>
-<li>cost function:<br />
-<span class="math display">\[
+      <h1 id="Supvised-Learning"><a href="#Supvised-Learning" class="headerlink" title="Supvised Learning"></a>Supvised Learning</h1><h2 id="1-Linear-Regression"><a href="#1-Linear-Regression" class="headerlink" title="1.Linear Regression"></a>1.Linear Regression</h2><p>output hypotheses function:    <script type="math/tex">h(x)= \theta^Tx</script></p>
+<p>$x$  is the input vector: <script type="math/tex">x=(x_1,x_2,\cdots,x_n)^T</script></p>
+<p>$\theta$  is the parameter vector:    <script type="math/tex">\theta=(\theta_1,\theta_2,\cdots,\theta_n)^T</script></p>
+<p>$y$  is the training output </p>
+<p>$X$ is the training input matrix:   <script type="math/tex">X= (x^{(1)},x^{(2)},\cdots,x^{(m)})</script></p>
+<p>$Y$ is the training output matrix:    <script type="math/tex">Y=(y^{(1)},y^{(2)},\cdots,y^{(m)})</script></p>
+<p>$\ $ </p>
+<h3 id="LMS-algorithm"><a href="#LMS-algorithm" class="headerlink" title="LMS algorithm"></a>LMS algorithm</h3><ul>
+<li><p>cost function:    </p>
+<script type="math/tex; mode=display">
 J(\theta)=\frac{1}{2}\parallel{\theta^T X-Y}\parallel^2\\
         or : J(\theta)=\frac{1}{2}\sum\limits_{i=1}^{m}(h(x^{(i)})-y^{(i)})^2
-        \notag
-\]</span></li>
+        \notag</script><p>use <strong>matrix derivative</strong> to minimize $J$     </p>
+</li>
+<li><p>gradient descent :    </p>
+</li>
 </ul>
-<p>use <strong>matrix derivative</strong> to minimize <span class="math inline">\(J\)</span></p>
-<ul>
-<li>gradient descent :</li>
-</ul>
-<p><span class="math display">\[
+<script type="math/tex; mode=display">
 \theta_j := \theta_j-\alpha \frac{\partial}{\partial\theta_j}J(\theta)
-\notag
-\]</span></p>
-<p>
+\notag</script>
       
       <a class="article-more-link" href="/2020/01/19/Computer-Sciencs/Supvised%20Learning/">阅读更多...</a>
       
@@ -1125,7 +1087,7 @@ J(\theta)=\frac{1}{2}\parallel{\theta^T X-Y}\parallel^2\\
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/Notes/">Notes</a>
+      <a class="nav-item-link" href="/Notes">Notes</a>
     </li>
     
     <li class="nav-item">
@@ -1421,42 +1383,7 @@ J(\theta)=\frac{1}{2}\parallel{\theta^T X-Y}\parallel^2\\
 
 
     
-  </div>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            displayMath: [ ['$','$'], ["\\[","\\]"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js"></script>
-
-
-<!-- <script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX", "output/HTML-CSS"],
-    tex2jax: {
-      inlineMath: [ ['
-
-</html>,'
-
-</html>], ["\\(","\\)"] ],
-      displayMath: [ ['$','$'], ["\\[","\\]"] ],
-      processEscapes: true
-    },
-    "HTML-CSS": { availableFonts: ["TeX"] }
-  });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js"></script> --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 
 </html>

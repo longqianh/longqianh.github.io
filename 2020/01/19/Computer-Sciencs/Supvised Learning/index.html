@@ -73,7 +73,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">388</span>
+            <span class="post-count">381</span>
         </span>
     </span>
 
@@ -107,79 +107,60 @@
       
 
       
-      <h1 id="supvised-learning">Supvised Learning</h1>
-<h2 id="linear-regression">1.Linear Regression</h2>
-<p>output hypotheses function: <span class="math display">\[h(x)= \theta^Tx\]</span></p>
-<p><span class="math inline">\(x\)</span> is the input vector: <span class="math display">\[x=(x_1,x_2,\cdots,x_n)^T\]</span></p>
-<p><span class="math inline">\(\theta\)</span> is the parameter vector: <span class="math display">\[\theta=(\theta_1,\theta_2,\cdots,\theta_n)^T\]</span></p>
-<p><span class="math inline">\(y\)</span> is the training output</p>
-<p><span class="math inline">\(X\)</span> is the training input matrix: <span class="math display">\[X= (x^{(1)},x^{(2)},\cdots,x^{(m)})\]</span></p>
-<p><span class="math inline">\(Y\)</span> is the training output matrix: <span class="math display">\[Y=(y^{(1)},y^{(2)},\cdots,y^{(m)})\]</span></p>
-<p>$\ $</p>
-<h3 id="lms-algorithm">LMS algorithm</h3>
-<ul>
-<li>cost function:<br />
-<span class="math display">\[
+      <h1 id="Supvised-Learning"><a href="#Supvised-Learning" class="headerlink" title="Supvised Learning"></a>Supvised Learning</h1><h2 id="1-Linear-Regression"><a href="#1-Linear-Regression" class="headerlink" title="1.Linear Regression"></a>1.Linear Regression</h2><p>output hypotheses function:    <script type="math/tex">h(x)= \theta^Tx</script></p>
+<p>$x$  is the input vector: <script type="math/tex">x=(x_1,x_2,\cdots,x_n)^T</script></p>
+<p>$\theta$  is the parameter vector:    <script type="math/tex">\theta=(\theta_1,\theta_2,\cdots,\theta_n)^T</script></p>
+<p>$y$  is the training output </p>
+<p>$X$ is the training input matrix:   <script type="math/tex">X= (x^{(1)},x^{(2)},\cdots,x^{(m)})</script></p>
+<p>$Y$ is the training output matrix:    <script type="math/tex">Y=(y^{(1)},y^{(2)},\cdots,y^{(m)})</script></p>
+<p>$\ $ </p>
+<h3 id="LMS-algorithm"><a href="#LMS-algorithm" class="headerlink" title="LMS algorithm"></a>LMS algorithm</h3><ul>
+<li><p>cost function:    </p>
+<script type="math/tex; mode=display">
 J(\theta)=\frac{1}{2}\parallel{\theta^T X-Y}\parallel^2\\
         or : J(\theta)=\frac{1}{2}\sum\limits_{i=1}^{m}(h(x^{(i)})-y^{(i)})^2
-        \notag
-\]</span></li>
+        \notag</script><p>use <strong>matrix derivative</strong> to minimize $J$     </p>
+</li>
+<li><p>gradient descent :    </p>
+</li>
 </ul>
-<p>use <strong>matrix derivative</strong> to minimize <span class="math inline">\(J\)</span></p>
-<ul>
-<li>gradient descent :</li>
-</ul>
-<p><span class="math display">\[
+<script type="math/tex; mode=display">
 \theta_j := \theta_j-\alpha \frac{\partial}{\partial\theta_j}J(\theta)
-\notag
-\]</span></p>
-<p><a id="more"></a></p>
+\notag</script> <a id="more"></a>
 <ul>
-<li>Newton's method:<br />
-<span class="math display">\[
-\theta:=\theta-H^{-1}\nabla_\theta l(\theta)\notag
-\]</span> where <span class="math inline">\(H\)</span> is the Hessian: <span class="math display">\[\displaystyle H_{ij}=\frac{\partial^2l(\theta)}{\partial\theta_i\partial\theta_j}\]</span></li>
+<li>Newton’s method:    <script type="math/tex; mode=display">
+\theta:=\theta-H^{-1}\nabla_\theta l(\theta)\notag</script>where $H$ is the Hessian: <script type="math/tex">\displaystyle H_{ij}=\frac{\partial^2l(\theta)}{\partial\theta_i\partial\theta_j}</script></li>
 </ul>
-<p>​</p>
-<h3 id="locally-weighted-linear-regression">Locally Weighted Linear Regression</h3>
-<p>cost function: <span class="math display">\[\displaystyle J(\theta)=\sum\limits_i w^{(i)}(y^{(i)}-\theta^T x^{(i)})^2\]</span></p>
-<p>weight <span class="math inline">\(w\)</span> : <span class="math display">\[w^{(i)}=exp(-(x^{(i)}-x)^2/2\tau^2)\]</span></p>
-<h2 id="generalized-linear-models-glm">2. Generalized Linear Models (GLM)</h2>
-<ul>
-<li><h3 id="the-exponential-family">The exponential family</h3></li>
+<p>​      </p>
+<h3 id="Locally-Weighted-Linear-Regression"><a href="#Locally-Weighted-Linear-Regression" class="headerlink" title="Locally Weighted Linear Regression"></a>Locally Weighted Linear Regression</h3><p>cost function:   <script type="math/tex">\displaystyle J(\theta)=\sum\limits_i w^{(i)}(y^{(i)}-\theta^T x^{(i)})^2</script></p>
+<p>weight $w$ :      <script type="math/tex">w^{(i)}=exp(-(x^{(i)}-x)^2/2\tau^2)</script></p>
+<h2 id="2-Generalized-Linear-Models-GLM"><a href="#2-Generalized-Linear-Models-GLM" class="headerlink" title="2. Generalized Linear Models (GLM)"></a>2. Generalized Linear Models (GLM)</h2><ul>
+<li><h3 id="The-exponential-family"><a href="#The-exponential-family" class="headerlink" title="The exponential family"></a>The exponential family</h3></li>
 </ul>
-<p><span class="math display">\[p(y;\eta)=b(y)\exp(\eta^T T(y)-a(\eta))\]</span></p>
-<p>where <span class="math inline">\(\eta\)</span> is the canonical parameter</p>
+<script type="math/tex; mode=display">p(y;\eta)=b(y)\exp(\eta^T T(y)-a(\eta))</script><p>  where $\eta$  is the canonical parameter</p>
 <ul>
-<li><h4 id="bernoulli-distribution">Bernoulli distribution</h4></li>
-<li><h4 id="gaussian-distribution">Gaussian distribution</h4></li>
-<li><h4 id="possion-distribution">Possion distribution</h4></li>
-<li><h4 id="logistic-regression">Logistic Regression</h4>
-<span class="math display">\[h(x)=g(\theta^T x)=1/(1+e^{-\theta^T x})\]</span></li>
+<li><h4 id="Bernoulli-distribution"><a href="#Bernoulli-distribution" class="headerlink" title="Bernoulli distribution"></a>Bernoulli distribution</h4></li>
+<li><h4 id="Gaussian-distribution"><a href="#Gaussian-distribution" class="headerlink" title="Gaussian distribution"></a>Gaussian distribution</h4></li>
+<li><h4 id="Possion-distribution"><a href="#Possion-distribution" class="headerlink" title="Possion distribution"></a>Possion distribution</h4></li>
+<li><h4 id="Logistic-Regression"><a href="#Logistic-Regression" class="headerlink" title="Logistic Regression"></a>Logistic Regression</h4><script type="math/tex; mode=display">h(x)=g(\theta^T x)=1/(1+e^{-\theta^T x})</script></li>
 </ul>
-<p>To get the parameters, assume :</p>
-<p><span class="math display">\[P(y=1| x;\theta)=h(x)\]</span></p>
-<p><span class="math display">\[P(y=0|x;\theta)=1-h(x)\]</span></p>
-<p>then:</p>
-<p><span class="math display">\[L(\theta)=p(\vec{y}|X;\theta)\]</span></p>
-<p><span class="math display">\[ =\prod\limits_{i=1}^m p(y^{(i)}|x^{(i)};\theta)\]</span> <span class="math display">\[=\prod\limits_{i=1}^m (h(x^{(i)})^{y^{(i)}})(1-h(x^{(i)}))^{1-y^{(i)}}\]</span></p>
-<p>to maximize the likelihood, we can use gradient descent again.</p>
+<p> To get the parameters, assume :</p>
+<script type="math/tex; mode=display">P(y=1| x;\theta)=h(x)</script><script type="math/tex; mode=display">P(y=0|x;\theta)=1-h(x)</script><p>  then:</p>
+<script type="math/tex; mode=display">L(\theta)=p(\vec{y}|X;\theta)</script><script type="math/tex; mode=display">=\prod\limits_{i=1}^m p(y^{(i)}|x^{(i)};\theta)$$   $$=\prod\limits_{i=1}^m (h(x^{(i)})^{y^{(i)}})(1-h(x^{(i)}))^{1-y^{(i)}}</script><p>  to maximize the likelihood, we can use gradient descent again.</p>
 <ul>
-<li><h4 id="softmax-regression">Softmax Regression</h4>
-<p>Multi-output <span class="math inline">\(\vec{y}\)</span></p>
-<p><span class="math inline">\(p(y=i|x;\theta)=\frac{e^\eta_i}{\sum_{j=1}^k e^{\eta_j}}\)</span></p>
-<h3 id="common-method">✨Common method</h3>
-<p><strong>Step 1</strong> : Assume a distribution</p>
-<p><strong>Step 2</strong> : Fit the GLM and get <span class="math inline">\(\eta\)</span> as well as mean <span class="math inline">\(E(y;\eta)\)</span></p>
-<p>in GLM, <span class="math inline">\(\eta\)</span> is assumed as <span class="math inline">\(\theta^T x\)</span></p>
-<p><span class="math inline">\(h(x)=E(y;\eta)=E(y|x;\theta)\)</span></p>
-<p><strong>Step 3</strong> : Estimate the parameter</p>
-<p>Maximize the likelihood function <span class="math inline">\(L(\theta)=p(y|x)\)</span> and get <span class="math inline">\(\theta\)</span></p></li>
+<li><h4 id="Softmax-Regression"><a href="#Softmax-Regression" class="headerlink" title="Softmax Regression"></a>Softmax Regression</h4><p>Multi-output $\vec{y}$</p>
+<p>$p(y=i|x;\theta)=\frac{e^\eta<em>i}{\sum</em>{j=1}^k e^{\eta_j}}$</p>
+</li>
 </ul>
-<h2 id="generative-learning-algorithms">3. Generative Learning algorithms</h2>
-<ul>
-<li><h4 id="gaussian-discriminant-analysis-多元高斯分布">Gaussian discriminant analysis <a href="https://zhuanlan.zhihu.com/p/58987388" target="_blank" rel="noopener">多元高斯分布</a></h4></li>
-<li><h4 id="naive-bayes-朴素贝叶斯">Naive Bayes <a href="https://zhuanlan.zhihu.com/p/25493221" target="_blank" rel="noopener">朴素贝叶斯</a></h4></li>
+<h3 id="✨Common-method"><a href="#✨Common-method" class="headerlink" title="✨Common method"></a>✨Common method</h3><p>  <strong>Step 1</strong>  :    Assume a distribution</p>
+<p>  <strong>Step 2</strong> :     Fit the GLM and get  $\eta$  as well as mean $E(y;\eta)$</p>
+<p>  in GLM, $\eta$  is assumed as $\theta^T x$</p>
+<p>  $h(x)=E(y;\eta)=E(y|x;\theta)$</p>
+<p>  <strong>Step 3</strong>    :  Estimate the parameter</p>
+<p>  Maximize  the likelihood function $L(\theta)=p(y|x)$ and get $\theta$</p>
+<h2 id="3-Generative-Learning-algorithms"><a href="#3-Generative-Learning-algorithms" class="headerlink" title="3. Generative Learning algorithms"></a>3. Generative Learning algorithms</h2><ul>
+<li><h4 id="Gaussian-discriminant-analysis-多元高斯分布"><a href="#Gaussian-discriminant-analysis-多元高斯分布" class="headerlink" title="Gaussian discriminant analysis   多元高斯分布"></a>Gaussian discriminant analysis   <a href="https://zhuanlan.zhihu.com/p/58987388" target="_blank" rel="noopener">多元高斯分布</a></h4></li>
+<li><h4 id="Naive-Bayes-朴素贝叶斯"><a href="#Naive-Bayes-朴素贝叶斯" class="headerlink" title="Naive Bayes        朴素贝叶斯"></a>Naive Bayes        <a href="https://zhuanlan.zhihu.com/p/25493221" target="_blank" rel="noopener">朴素贝叶斯</a></h4></li>
 </ul>
 
       
@@ -350,7 +331,7 @@ J(\theta)=\frac{1}{2}\parallel{\theta^T X-Y}\parallel^2\\
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/Notes/">Notes</a>
+      <a class="nav-item-link" href="/Notes">Notes</a>
     </li>
     
     <li class="nav-item">
@@ -663,42 +644,7 @@ J(\theta)=\frac{1}{2}\parallel{\theta^T X-Y}\parallel^2\\
 
 
     
-  </div>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            displayMath: [ ['$','$'], ["\\[","\\]"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js"></script>
-
-
-<!-- <script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX", "output/HTML-CSS"],
-    tex2jax: {
-      inlineMath: [ ['
-
-</html>,'
-
-</html>], ["\\(","\\)"] ],
-      displayMath: [ ['$','$'], ["\\[","\\]"] ],
-      processEscapes: true
-    },
-    "HTML-CSS": { availableFonts: ["TeX"] }
-  });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js"></script> --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 
 </html>
