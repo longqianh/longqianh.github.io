@@ -1,5 +1,5 @@
 ---
-title: 数学建模 模型学习
+title: Mathematics Models
 date: 2020-02-01 20:28:07
 tags:
 categories:

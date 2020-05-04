@@ -1,5 +1,5 @@
 ---
-title: Mathematical Modeling
+title: Mathematic Modeling
 date: 2020-02-07 16:37:29
 tags:
 categories:

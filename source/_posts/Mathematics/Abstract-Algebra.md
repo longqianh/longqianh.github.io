@@ -57,11 +57,11 @@ $ \\ $
 
 $\varphi : G\to G', s.t \\ \forall a,b \in G, \quad \varphi(ab)=\varphi(a)\varphi(b)  $
 
-$=>$ $\varphi$ 把单位元映射为单位元，把逆元映射为逆元
+$\implies$ $\varphi$ 把单位元映射为单位元，把逆元映射为逆元
 
-$=>$ $ im \varphi \leqslant G', \quad ker \varphi \trianglelefteq G$ 
+$\implies$ $ im \varphi \leqslant G', \quad \ker \varphi \trianglelefteq G$ 
 
-$=>$ 群同态基本定理： $G/ker\varphi \cong im\varphi$
+$\implies$ 群同态基本定理： $G/\ker\varphi \cong im\varphi$
 
 $ \\ $
 
@@ -69,13 +69,19 @@ $ \\ $
 
 双射群同态。
 
-$=>$ 第一同构定理：
+$\implies$ 第一同构定理：
 
- $ \varphi$是一个满同态， $\pi $ 是典范态射 $(canonical)$ 
+ $ \varphi$ 是一个满同态， $\pi $ 是典范态射 $(canonical)$ 
 
 则存在唯一一个同构映射$\overline \varphi : \overline G\to G' \quad  s.t. \quad \varphi=\overline\varphi \circ \pi$
 
-$ \\ $
+
+
+- 验证 $\varphi:G\to G’$ 是同构的方法：
+
+  只需验证 $\ker \varphi=\{1\},im\varphi=G'$
+
+  
 
 #### 1.1.5 陪集 
 
@@ -85,9 +91,9 @@ $ \\ $
 
 $ H\leqslant G, a\in G, aH=\{ah|a\in H  \}$ 
 
-$=>$ $a\in bH \Leftrightarrow aH=bH$
+$\implies$ $a\in bH \Leftrightarrow aH=bH$
 
-$=>$ $ |G|=[G:H]\cdot|H|$
+$\implies$ $ |G|=[G:H]\cdot|H|$
 
 $ \\ $
 
@@ -95,7 +101,7 @@ $ \\ $
 
 子群的阶整除群的阶。 $i.e. |H| \biggm| |G|$
 
-$=>$ 素数阶群是循环群
+$\implies$ 素数阶群是循环群
 
   $ \\ $
 
@@ -105,9 +111,9 @@ $\varphi : G\to G' $ 是一个满同态.
 
 $ K=ker\varphi, H'\leqslant G', H\supset K$ .
 
-$=>$ 若 $H'$ 是正规子群，则 $H$ 也是正规子群。$\varphi$ 是满射，$H$ 是正规子群，则$H'$ 也是正规子群。
+$\implies$ 若 $H'$ 是正规子群，则 $H$ 也是正规子群。$\varphi$ 是满射，$H$ 是正规子群，则$H'$ 也是正规子群。
 
-$=>$ $\{G的含有K的子群 \}\longleftrightarrow \{G'的子群\}$
+$\implies$ $\{G的含有K的子群 \}\longleftrightarrow \{G'的子群\}$
 
 $ \\ $
 
@@ -117,9 +123,9 @@ $G\times G'=\{(g,g') |g\in G, g'\in G'\}$
 
 $ \\ $
 
-$=>$ $r$、$s$ 互素，则 $C_{rs}\cong C_r\times C_s$
+$\implies$ $r$、$s$ 互素，则 $C_{rs}\cong C_r\times C_s$
 
-$=>$ 命题 $2.11.4$ :
+$\implies$ 命题 $2.11.4$ :
 
 $H,K \leqslant G, let \quad f:H\times K \to G$ 是一个映射，
 
@@ -139,7 +145,7 @@ $\overline G=G/N\triangleq \{ \overline g|\overline g=gN,g\in G \}$
 
 $ \\ $
 
-$=>$ 典范态射：$\pi : G\to \overline G \quad g\mapsto\overline g$  	这是一个满同态。
+$\implies$ 典范态射：$\pi : G\to \overline G \quad g\mapsto\overline g$  	这是一个满同态。
 
 $ \\ $
 
@@ -163,9 +169,9 @@ $|G|=|G_s|\cdot |O_s|$
 
 $ \\ $
 
-$=>$  $|O_s|=[G:G_s]$
+$\implies$  $|O_s|=[G:G_s]$
 
-$=>$ $|S|=|O_1|+|O_2|+\cdots +|O_k|$
+$\implies$ $|S|=|O_1|+|O_2|+\cdots +|O_k|$
 
 $ \\ $
 
@@ -205,7 +211,7 @@ $C(x)=\{x'\in G|x'=gxg^{-1},g\in G\}$
 
 $ \\ $
 
-$=>$ $|G|=|Z(x)|\cdot |C(x)|$
+$\implies$ $|G|=|Z(x)|\cdot |C(x)|$
 
 $ \\ $
 
@@ -251,7 +257,7 @@ $ \\ $
 
 $ \\ $
 
-$=>$ 群 $G$ 只有一个 $Sylow-p$ 子群$\iff$这个子群是正规子群
+$\implies$ 群 $G$ 只有一个 $Sylow-p$ 子群$\iff$这个子群是正规子群
 
 $ \\ $
 
@@ -315,9 +321,9 @@ $ \\ $
 
 $ \\ $
 
-$=>$ 整数环 $Z$ 的极大理想是有素数生成的主理想。
+$\implies$ 整数环 $Z$ 的极大理想是有素数生成的主理想。
 
-$=>$ $F$ 是一个域，$F[x]$ 的极大理想是由既约的首一多项式生成的主理想
+$\implies$ $F$ 是一个域，$F[x]$ 的极大理想是由既约的首一多项式生成的主理想
 
 $ \\ $
 
@@ -438,7 +444,7 @@ $ \\ $
 
 $\pi : V\to \overline V\quad v\rightsquigarrow\overline v=[v+W]$ 
 
-$\pi$ 是一个满同态，$Ker\pi =W$
+$\pi$ 是一个满同态，$\ker\pi =W$
 
 $ \\ $
 
@@ -649,7 +655,7 @@ Assume $\sigma(\xi_N)=\xi_N ^a$ where $(a,N)=1$
 
 we have :  $\phi: Gal(\mathbb{Q}(\xi_N)/\mathbb{Q})\to (\mathbb{Z}/N\mathbb Z)^{\times}$  is bijective.
 
-$ \phi $ is injective since $ker \phi=1$ （identity mapping)
+$ \phi $ is injective since $\ker \phi=1$ （identity mapping)
 
 $\phi$ is surjective since $\forall p,(p,N)=1 ,\exists \sigma\in Gal(\mathbb{Q}(\xi_N)/\mathbb{Q}),\quad s.t.\quad \sigma(\xi_N)=\xi_N^p$
 

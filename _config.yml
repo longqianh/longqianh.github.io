@@ -4,7 +4,7 @@
 
 # Site
 title: Peter's Blog
-subtitle: '  Mathematics  .  Computer-Science  .  Physics .'
+# subtitle: '  Mathematics  .  Computer-Science  .  Physics .'
 description: ''
 keywords:
 author: Longqian Huang
@@ -24,6 +24,7 @@ pretty_urls:
 # Directory
 source_dir: source
 public_dir: public
+# project_dir: Projects #added
 tag_dir: tags
 archive_dir: archives
 category_dir: categories
@@ -48,7 +49,7 @@ external_link:
   exclude: ''
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
@@ -121,7 +122,7 @@ theme: ayer
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: git@github.com:longqianh/longqianh.github.io.git
+  repo: git@github.com:longqianh/longqianh.github.io.git
   branch: master
 
 #backup

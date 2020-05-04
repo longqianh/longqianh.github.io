@@ -22,6 +22,8 @@
     <%- partial('post/tocbot') %>
     <% } %>
 
+    <% if (theme.excerpt_all&&index){ %>
+    <% }else{ %>
     <div class="article-entry" itemprop="articleBody">
       <%- partial('post/justifiedGallery') %>
       <%- partial('post/gallery') %>
@@ -33,17 +35,33 @@
       <% } else { %>
       <%- post.content %>
       <% } %>
-      <!-- 打赏 -->
+      <!-- reward -->
       <% if ((theme.reward_type === 2 || (theme.reward_type === 1 && post.reward)) && !index && !post.no_reward){ %>
       <div id="reward-btn">
-        打赏
+        <%= __('post.reward') %>
       </div>
       <% } %>
     </div>
+    <% } %>
+    
+      <!-- copyright -->
+      <% if (((theme.copyright_type === 2) || (theme.copyright_type === 1 && post.copyright)) && !index){ %>
+        <div class="declare">
+          <ul class="post-copyright">
+            <li>
+              <i class="ri-copyright-line"></i>
+              <strong><%= __('post.copyright_title') %>： </strong>
+              <%= __('post.copyright_content') %>
+            </li>
+          </ul>
+        </div>
+        <% } %>
     <footer class="article-footer">
-      <a data-url="<%- post.permalink %>" data-id="<%= post._id %>"
-        class="article-share-link"><%- theme.share_text %></a>
+      <% if (!index && theme.share_enable){ %>
+          <%- partial('post/share') %>
+      <% } %>
       <%- partial('post/tag') %>
+
     </footer>
 
   </div>
@@ -62,6 +80,10 @@
 
   <% if (is_post()) { %>
   <%- partial('post/gitalk') %>
+  <% } %>
+  
+  <% if (theme.minivaline && theme.minivaline.enable && !post.no_minivaline){ %>
+  <%- partial('post/minivaline') %>
   <% } %>
 
 </article>

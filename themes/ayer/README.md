@@ -3,6 +3,10 @@
 <h3 align="center">一个安静且优雅的 Hexo 主题</h3>
 
 <p align="center">
+
+  <img alt="GitHub" src="https://img.shields.io/github/license/Shen-Yu/hexo-theme-ayer">
+   <img alt="platform" src="https://img.shields.io/badge/platform-PC--ios--android-ea5a76.svg">
+  <br>
   <a href="https://travis-ci.org/Shen-Yu/hexo-theme-ayer?branch=master" target="_blank" rel="noopener noreferrer">
     <img alt="travis-ci" src="https://travis-ci.org/Shen-Yu/hexo-theme-ayer.svg?branch=master">
   </a>
@@ -14,18 +18,18 @@
   </a>
   <br>
   <a href="https://github.com/Shen-Yu/hexo-theme-ayer/releases" target="_blank" rel="noopener noreferrer">
-    <img alt="GitHub release" src="https://img.shields.io/badge/release-v1.5-blue.svg">
-  </a>
+    <img alt="GitHub tag (latest by date)" src="https://img.shields.io/github/v/tag/Shen-Yu/hexo-theme-ayer?color=blue">
+  </a> 
  <img alt="language" src="https://img.shields.io/badge/language-ejs--stylus-orange.svg">
   <a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener noreferrer">
     <img alt="hexo" src="https://img.shields.io/badge/hexo-%3E%3D3.0-blue.svg">
   </a>
- <img alt="platform" src="https://img.shields.io/badge/platform-PC--ios--android-cc2e8b.svg">
+  <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/Shen-Yu/hexo-theme-ayer?color=%23af8ddc">
 </p>
 
 ---
 
-:ocean: Ayer is a clean and elegant theme for Hexo, also fast, powerful and responsive. It contains many awesome features, It's perfect for your blog, "Ayer" means "water" in Malaysian and "yesterday" in Spanish. If you have any queries or advice during the process of using, Please contact me!  
+:ocean: Ayer is a clean and elegant theme for Hexo, also fast, powerful and responsive. It contains many awesome features, It's perfect for your blog, "Ayer" means "water" in Malaysian and "yesterday" in Spanish. If you have any queries or advice during the process of using, Please contact me!  shenyu@hotmail.com
 
 <b>注：收藏本主题请点右上角Star，谢谢~</b>
 
@@ -60,16 +64,31 @@ git pull
 
 ### Configuration
 
-let me know if you can’t find anything.
+let me know if you have any questions.
 
 ``` yml
 # Menu-Sidebar
 menu:
   Home: /
   Archives: /archives
+  Categories: /categories
+  Tags: /tags
   Gallery: http://shenyu-vip.lofter.com
   Travel: /tags/旅行/
   About: /2019/about
+
+# Subtitle and Typing animation
+# https://github.com/mattboldt/typed.js
+subtitle:
+  enable: true
+  text: A clean and elegant theme
+  text2: It's perfect for your hexo blog
+  text3: Have fun!  #Supports up to three lines of text
+  startDelay: 0
+  typeSpeed: 200
+  loop: true
+  backSpeed: 100
+  showCursor: true
 
 # Favicon and sidebar logo
 favicon: /favicon.ico
@@ -83,11 +102,19 @@ cover:
   logo: /images/ayer.svg
 
 # ProgressBar  
-progressBar: ture
+progressBar: true
 
 # Article Setting
 # (Use this to excerpt if article is too long：<!--more-->)
 excerpt_link: Read More...
+excerpt_all: false
+
+# Copy code button
+copy_btn: true
+# Share
+share_enable: true
+# If you are not in China, maybe you prefer to set:false
+share_china: true
 # share text
 share_text: Share
 # search text
@@ -101,6 +128,9 @@ nav_text:
 
 # Catalog in article
 toc: true
+
+# images in the article support click to fullscreen
+image_viewer: true
 
 # https://github.com/willin/hexo-wordcount
 word_count:
@@ -118,11 +148,28 @@ alipay: /images/alipay.jpg
 # qrcode image path
 weixin: /images/wechat.jpg
 
+# Copyright
+# type：0-close all； 1-only display in article which you have configured copyright: true； 2-all articles
+copyright_type: 2
+
 # Search
+# https://github.com/theme-next/hexo-generator-searchdb
 search: true
 
 # RSS
+# leave it empty if you dont' need
 rss: /atom.xml
+
+# DarkMode
+darkmode: true
+
+# ClickLove
+clickLove: false
+
+# articleWidth and sidebarWidth
+layout:
+  article_width: 80rem
+  sidebar_width: 8rem
 
 # Comment：1、Valine (recommended)；2、Gitalk
 
@@ -135,6 +182,7 @@ leancloud:
 # Valine Setting
 valine:
   enable: true 
+  verify: false # comment verify
   avatar: mp # (https://valine.js.org/avatar.html)
   placeholder: Add some comments to my article~ # placeholder
 
@@ -152,9 +200,6 @@ github:
   # (Set false if you don't need)
   url: https://github.com/Shen-Yu/hexo-theme-ayer
 
-# fancybox(Use for gallery, set false if you don't need)
-fancybox: true
-
 # pv&uv statistics
 busuanzi:
   enable: true
@@ -169,8 +214,14 @@ google_analytics: ''
 # Baidu Analytics
 baidu_analytics: ''
 
-# mathjax
+# Mathjax Support
 mathjax: true
+
+# Katex Support
+katex:
+  enable: false # true
+  allpost: true
+  copy_tex: false
 
 # since year
 since: 2019
@@ -205,7 +256,7 @@ pageFooter: true
   Then add the plugin configuration in hexo's configuration file `_config.yml` (note: not the theme's configuration file):
   
   ```yml
-  feed:
+  feed:m 
       type: atom
       path: atom.xml
       limit: 20
@@ -226,7 +277,7 @@ pageFooter: true
 ``` bash
   hexo new page categories
 ```
-Then paste following codes to file: _posts/categories/index.md
+Then paste following codes to file: /source/categories/index.md
 ``` md
 ---
 title: categories
@@ -237,19 +288,6 @@ layout: "categories"
 
 ### Tags
 Same as categories.
-
-### Post poster
-
-``` md
----
-title: Post name
-
-photos: [
-        ["img_url"],
-        ["img_url"]
-        ]
----
-```
 
 ### Gallery
 Need to write in the head of the markdown, this is not a good way to write, I hope to get a better way to write on github.
@@ -279,7 +317,7 @@ Use Tocbot to parse the title tags (h1~h6) in the content and insert the directo
 
 	``` md
 	---
-  toc: false
+  no_toc: true
   ---
 	```
 
