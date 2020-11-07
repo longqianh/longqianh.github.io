@@ -80,6 +80,161 @@
     
     
     
+    <article id="post-Projects-Stringless-Piano" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/08/22/Projects-Stringless-Piano/"
+    >Stringless Piano</a> 
+</h2>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2020/08/22/Projects-Stringless-Piano/" class="article-date">
+  <time datetime="2020-08-22T09:36:21.000Z" itemprop="datePublished">2020-08-22</time>
+</a>
+      
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <p>这是电子系统设计课程的项目。</p>
+<p>C代码及部分说明我放到了<a href="https://github.com/longqianh/Stringless-Piano.git" target="_blank" rel="noopener">GitHub</a> （时间太紧张了，来不及整理）</p>
+<p>关于PCB设计原理的思考直接写到了报告中：</p>
+
+
+	<div class="row">
+    <embed src="/pdf_files/无弦琴实习报告.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+
+    </footer>
+
+  </div>
+
+  
+
+  
+
+  
+  
+  
+
+</article>
+    
+    <article id="post-Computer-Science-C-Cpp-Notes" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/08/07/Computer-Science-C-Cpp-Notes/"
+    >Cpp-Notes</a> 
+</h2>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2020/08/07/Computer-Science-C-Cpp-Notes/" class="article-date">
+  <time datetime="2020-08-07T15:55:44.000Z" itemprop="datePublished">2020-08-07</time>
+</a>
+      
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <h2 id="c-notes">C++ Notes</h2>
+<p><a href="https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/contents/" target="_blank" rel="noopener">代码风格</a></p>
+<h3 id="头文件保护">头文件保护</h3>
+<p>为防止被多重包含，添加预处理指令。</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> _HPP_H_</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> _HPP_H_</span></span><br><span class="line"><span class="comment">/*头文件的一系列声明*/</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br></pre></td></tr></table></figure>
+<h3 id="宏"><a href="https://docs.microsoft.com/en-us/cpp/preprocessor/token-pasting-operator-hash-hash?view=vs-2019" target="_blank" rel="noopener">宏</a></h3>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> CAT(N) X ## N <span class="comment">//## 在宏定义中将两个字符连接起来，构成一个新的标识符</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> PRINTF_XN(n) printf(<span class="meta-string">"X"</span> # n <span class="meta-string">"=%d\n"</span>,X ## n); <span class="comment">//# 将对应变量字符串化</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">CAT</span><span class="params">(<span class="number">1</span>)</span> </span>= <span class="number">2</span>;</span><br><span class="line">    PRINTF_XN(<span class="number">1</span>); <span class="comment">//打印出X1=2</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"当前源代码函数名：__FUNCTION__==%s\n"</span>,__FUNCTION__);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"当前源代码行号：__LINE__==%d\n"</span>,__LINE__);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"当前源代码文件名：__FILE__==%s\n"</span>,__FILE__);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"当前编译日期〔注意和当前系统日期区别开来〕:__DATE__==%s\n"</span>,__DATE__);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"当前编译时间〔注意和当前系统日期区别开来〕:__TIME__==%s\n"</span>,__TIME__);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"当前系统时间戳：__TIMESTAMP__==%s\n"</span>,__TIMESTAMP__);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"当要求程序严格遵循ANSIC标准时该标识符被赋值为1:__STDC__==%d\n"</span>,__STDC__);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"当用C++编译程序编译时，标识符__cplusplus就会被定义:__cplusplus==%ld\n"</span>,__cplusplus);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// copy from https://blog.csdn.net/wyg1065395142/article/details/50930395</span></span><br></pre></td></tr></table></figure>
+<h1 id="类继承">类继承</h1>
+<p>如果要在派生类中重新定义基类的方法，通常应将基类的方法声明为虚的 <code>virtual</code>。这样，程序将根据对象类型而不是引用或指针类型来选择方法版本。</p>
+<p>为基类声明一个虚析构函数 <code>virtual ~Base() {}</code> 也是一种惯例。确保释放派生对象时，按正确的顺序调用析构函数。</p>
+<h2 id="指针">指针</h2>
+<p>指针的类型不过是解释数据的方式不同罢了，这样的道理也可用于很多场合的强制类型转换，例如将int类型指针转换为char型指针，并不会改变内存的实际内容，只是<strong>修改了解释方式</strong>而已。而 <code>void *</code> 是一种无类型指针，任何类型指针都可以转为<code>void*</code>，它无条件接受各种类型。而既然是无类型指针，那么就不要尝试 <em>解引用</em> 和进行 <em>算数运算</em>。</p>
+<p><code>void*</code>能包容地接受各种类型的指针。也就是说，如果你期望接口能够接受任何类型的参数，你可以使用 <code>void*</code> 类型。但是在具体使用的时候，必须转换为具体的指针类型。</p>
+<h2 id="模版">模版</h2>
+<p>模板只是其定义实现的指令，算不上真正的代码，只有在模板实例化时才会生成真正的代码。因此，如果将.h和.cpp分开实现，编译器并不会编译.cpp生成单独的代码。而在实例化模板时，根据.h找到声明，但没有相应的实现指令，所以会报错:unresolved error... 因此，一般将定义和声明放在一起，在实例化时才能找到定义。</p>
+<p><code>main.cpp,tree.cpp,tree.h</code> 模版在 .h声明，在.cpp实现。而编译时模版的实例化在main中，在tree中（tree.cpp—&gt;tree.o）没有将模版实例化，因此会报错。</p>
+<h2 id="gcc编译">gcc编译</h2>
+<p>https://www.cnblogs.com/battlescars/p/cpp_linux_gcc.html</p>
+
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+
+    </footer>
+
+  </div>
+
+  
+
+  
+
+  
+  
+  
+
+</article>
+    
     <article id="post-Physics-Holography-Road" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
@@ -118,35 +273,71 @@
       
       <p>This is a notes for my works in holography field.</p>
 <p>And big thanks to Zhongyuan Guo.</p>
+<h1 id="全息">全息</h1>
+<p>什么是全息？</p>
+<p>一种信息的记录方式罢了。</p>
 <h2 id="laser-holography">Laser Holography</h2>
 <p>I started doing semi-conductor holography with my roommates and Jiahao Jiang who has graduated now in our Sophomore year.</p>
 <p>Here is the <a href="/2020/05/03/Projects-Laser-holography/index.html">link</a> to that project.</p>
 <p>I have to say that I forget most of the details, but configuring my own fixer and developer (显影液和定影液) and building the optic path and finally seeing the results is a procedure that has no technical content but somehow a sense of accomplishment.</p>
-<h2 id="dim-holography">3-dim Holography</h2>
 <p>全息的路艰难而漫长，但是充满有趣与理想。我想，还是不写蹩脚的英文了，用中文回顾一下我的所思所想。</p>
 <h3 id="原理">原理</h3>
-<p>光从激光器发出，进入相位型空间光调制器，然后转了个角度出来，到达我们的观察平面。</p>
-<p>这中间发生了什么？</p>
-<p>我们要对光进行建模，用硬核而真实的物理去解释它。</p>
-<h4 id="入射光">入射光</h4>
-<p>入射光为激光器发射出的激光，可以看成电磁场（光场），它满足麦克斯韦方程，进而满足<a href="https://zhuanlan.zhihu.com/p/65634398" target="_blank" rel="noopener">波动方程</a> <span class="math display">\[
+<p>半导体激光全息实验让我就是从头（用化学物品配显影液、定影液）到尾（看到全息像）做了一遍全息照相。其中的原理简单而深刻。</p>
+<p>全息干板为卤化银感光材料，可以记录光波的振幅和相位信息。（振幅信息是由于卤化银受到光的照射程度的不同，变黑的程度也不同；相位信息还有一些疑问）。</p>
+<p>物体发出的物光波与参考光波在干板上发生干涉，干涉后的强度分布为 <span class="math display">\[
+\begin{aligned}
+I(x,y)&amp;=\left|\widetilde E_o(x,y)+\widetilde E_r(x,y)\right|^2\\
+&amp;=\left|\widetilde E_o\right|^2+\left|\widetilde E_r\right|^2+\widetilde E_r(x,y)\widetilde E_o^*(x,y)+\widetilde E_o(x,y)\widetilde E_r^*(x,y)
+\end{aligned}
+\]</span> 全息干板/全息图t(x,y)=k_0+k_1 I(x,y)$ 的衍射屏，参考光再次照射时，透过全息图的光波的复振幅分布 <span class="math display">\[
+\widetilde E&#39;(x,y)=(k_0+k_1\left|\widetilde E_r\right|^2)\widetilde E_r+k_1\left|\widetilde E_o\right|^2\widetilde E_r+k_1\left|\widetilde E_r\right|^2\widetilde E_0+k_1\widetilde E_r^2\widetilde E^*_0
+\notag
+\]</span></p>
+<ul>
+<li><p>第一、二项为零级衍射光</p></li>
+<li><p>第三项为再现物光波，其信息与原物光波完全相同，为+1级衍射光、发散波，是虚像</p></li>
+<li><p>最后一项为-1级衍射光，是会聚波、原物光波的共轭波</p></li>
+</ul>
+<p>因此，可以当场在干板处看到复现出的原物。</p>
+<h2 id="d-holography">3D Holography</h2>
+<p>用全息干板记录物体信息比较麻烦，接下来我们将利用数字全息的方法，用计算机模拟全息照相的过程，用相息图记录数字物体信息。</p>
+<p>利用层析法，将目标物体的轮廓按照 <span class="math inline">\(z\)</span> 方向切为一层一层的图片，图片的灰度正比于全息照相中的物光波振幅，图片的相位就是物体的相位信息。</p>
+<h3 id="菲涅尔衍射积分">菲涅尔衍射积分</h3>
+<p>光场满足麦克斯韦方程，进而满足<a href="https://zhuanlan.zhihu.com/p/65634398" target="_blank" rel="noopener">波动方程</a> <span class="math display">\[
 \nabla^2 \vec E-\frac 1 {c^2} \frac{\partial^2 \vec E}{\partial t^2}=0
 \]</span> 假设解为一般形式 <span class="math display">\[
 U(\vec r,t)=U(\vec r)e^{-2i\pi\nu t}
 \]</span> 带入可以得到三类解，第一类为角谱衍射积分，第二、三类为瑞丽-索末菲积分，我们不进行研究。</p>
-<p>对角谱衍射积分中的根号进行一阶近似，就可以得到菲涅尔衍射积分： <span class="math display">\[
-\begin{align}
-U(x,y,d_0)=\frac{\exp(ikd_0)}{i\lambda d_0}\exp\left[\frac{i\pi}{\lambda d_0}(x^2+y^2)\right]\times\notag\\
-\iint U(X,Y,0)\exp\left[\frac{i\pi}{\lambda d_0}(X^2+Y^2)\right]\notag \\
-\exp\left[-2i\pi\left(\frac{x}{\lambda d_0}X+\frac{y}{\lambda d_0}Y\right)\right]dXdY
-\end{align}
-\]</span> 这个积分在数值计算中就是程序中的 <code>s_fft</code> 函数。</p>
+<p>对角谱衍射积分中的根号进行一阶近似（傍轴近似），就可以得到菲涅尔衍射积分： <span class="math display">\[
+\begin{aligned}
+U(x,y,z_0)&amp;=\frac{\exp(ikz_0)}{i\lambda z_0}\iint\widetilde E(x_0,y_0)\exp\left[\frac{ik}{2z_0}[(x-x_0)^2+(y-y_0)^2]\right] \text{d}x_0\text{d}y_0
+\\&amp;=\frac{\exp(ikz_0)}{i\lambda z_0}\exp\left[\frac{i\pi}{\lambda z_0}(x^2+y^2)\right]\times
+\iint U(x_0,y_0,0)\exp\left[\frac{i\pi}{\lambda z_0}(x_0^2+y_0^2)\right]
+\exp\left[-i2\pi\left(\frac{x}{\lambda z_0}x_0+\frac{y}{\lambda z_0}y_0\right)\right]\text{d}x_0\text{d}y_0
+\\&amp;=\frac{\exp(ikz_0)}{i\lambda z_0}\exp\left[\frac{i\pi}{\lambda z_0}(x^2+y^2)\right]\times \operatorname{FFT}\left\{U(x_0,y_0,0)\exp\left[\frac{i\pi}{\lambda z_0}(x_0^2+y_0^2)\right]\right\}
+\end{aligned}
+\]</span> 菲涅尔衍射原理告诉我们，从光从物面 <span class="math inline">\(U_0(x_0,y_0,0)\)</span> 传播到像面 <span class="math inline">\(U(x,y,z_0)\)</span>， 像面上每一点都是物面所有点透射的光的相干叠加，这也是为什么相息图的每一个点都能够存储物面所有信息。当然如果只用一个像素点作为相息图，那么可能什么也看不到（可能是噪声很大），像面所有点组成的大相息图，相当于有一个求和平均，减小了噪声。</p>
+<p>这个积分的最后一步就是数值算法，在程序中为 <code>s_fft</code> 函数。</p>
+<h3 id="全息照相的数值模拟">全息照相的数值模拟</h3>
+<p>用菲涅尔衍射积分模拟物体发出的光经过距离 <span class="math inline">\(z_0\)</span> 的传播到达干涉平面的过程，衍射积分的结果就是到达干涉平面时物光波的波阵面。我们将它用Matlab计算出来，提取相位得到相息图，加载到空间光调制器（SLM）上。此时装载着相息图的SLM就相当于记录着参考光和物光干涉信息的全息干板，只是我们假设参考光的光强均匀分布（为1），只放上去了有用的物光波信息（即第三项）。</p>
+<p>此时的SLM有透射系数 <span class="math inline">\(t(x,y)=\arg \left[U(x,y,z_0)\right]\)</span>。</p>
+<p>由傅立叶变化的性质，<span class="math inline">\(2\pi f(-k)\leftrightarrow F(t)\)</span>, 则两次傅立叶变换后，有 <span class="math display">\[
+f(t)\to \frac 1 {2\pi}F(k)\to f(-t)
+\]</span> (严格证明的坑待填)</p>
+<p>即两次Fourier变化等价于原函数取反，二维的则是两个维度都取反。</p>
+<p>参考光照射SLM时，从SLM平面到观察平面，又经过了距离 <span class="math inline">\(z_0\)</span> 的传播，得到的光场为: <span class="math display">\[
+\begin{aligned}
+U&#39;(x_1,y_1,z_0)&amp;=\frac{\exp(ikz_0)}{i\lambda z_0}\exp\left[\frac{i\pi}{\lambda z_0}(x_1^2+y_1^2)\right]\times \operatorname{FFT}\left\{U(x,y,z_0)\exp\left[\frac{i\pi}{\lambda z_0}(x^2+y^2)\right]\right\}\\
+&amp;=\frac{\exp(ikz_0)}{i\lambda z_0}\exp\left[\frac{i\pi}{\lambda z_0}(x_1^2+y_1^2)\right]\times \operatorname{FFT}\left\{\frac{\exp(ikz_0)}{i\lambda z_0}\exp\left[\frac{i\pi}{\lambda z_0}(x^2+y^2)\right]\right\}\times  \left\{U(-x_0,-y_0,0)\exp\left[\frac{i\pi}{\lambda z_0}(x_0^2+y_0^2)\right]\right\}\\
+&amp;=?
+\end{aligned}
+\]</span></p>
 <h4 id="传播与slm调制">传播与SLM调制</h4>
 <p>光经过空间光调制器（SLM）然后出来。这中间又发生了什么？</p>
 <p>(SLM)可以在空间上调制光的强度和相位分布，是一种动态光学元件。</p>
 <p>入射光经过了相位型SLM的调制，相位发生了变化。</p>
 <p>具体怎么变得还需要再探究啊。</p>
-<h3 id="三维物体的数值编码">三维物体的数值编码</h3>
+<h3 id="三维物体的相息图的数值计算过程">三维物体的相息图的数值计算过程</h3>
 <p>弄不清楚SLM调制的原理是一个很让人头大的事情，但是还是要把东西捋一遍，看看我都干了啥。</p>
 <p>这一部分主要是记录如何将三维物体编码成相息图，也算是Matlab程序的一个说明。</p>
 <p>将相息图加载到相位型空间光调制器上，激光一照就可以神奇地显示我们准备展示的三维物体。</p>
@@ -175,15 +366,30 @@ U(x,y,d_0)=\frac{\exp(ikd_0)}{i\lambda d_0}\exp\left[\frac{i\pi}{\lambda d_0}(x^
 <h4 id="实验效果图">6 实验效果图</h4>
 <p>非常好看！感动地哭！</p>
 <figure>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghr77l5ggkj313z0u00ya.jpg" alt="res" /><figcaption>res</figcaption>
+<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghr77l5ggkj313z0u00ya.jpg" alt="res" /><figcaption aria-hidden="true">res</figcaption>
 </figure>
 <h3 id="三维显示">三维显示</h3>
 <p>刘旭老师说，“用一个小杯子，里面掺进去一些牛奶，形成各种浓度的悬浊液，如果是三维显示，那么在悬浊液中就会有体三维的效果，浓度要好好的调一下，不能太浓，太浓的话就一个长长的光束的尾巴”，一定要好好做一下！</p>
+<h2 id="随想">随想</h2>
+<p>这些天事很多，脑子里乱乱的。但是3D全息变得越来越有趣了，14年有一篇文章，做出来了3D的动态彩色全息，那个彩色魔方真的让我着迷。</p>
+<p><del>关于全息，我感觉自己的知识还是太浅薄。</del></p>
+<p><del>比如原理部分，虽然推了好多遍，但还是没有深入理解。</del></p>
+<p><del>比如叠加法，自己没有复现过。</del></p>
+<p><del>比如划分法，一直整不出来。</del></p>
+<p><del>比如闪耀光栅，自己写的代码似乎不对。</del></p>
+<p><del>比如相息图，我没有搞清楚他的每一个像素所起的作用。</del></p>
+<p><del>比如SLM，不知道他是怎么调制的。</del></p>
+<p><del>关于3D全息，我到现在也不清楚自己做的究竟是不是3D的。</del></p>
+<p><del>关于彩色全息，那篇转动的魔方的文章让我震惊，真的想复现出来，结果被卡在各种地方。八年前啊。</del></p>
+<p><del>哦还有，振幅和相位在图片中所起到的作用。</del></p>
 <h3 id="ideas">ideas</h3>
 <ul>
-<li>深度学习GAN，生成相息图。</li>
-<li>尝试叠加相息图，看一下有没有可加性</li>
+<li>深度学习GAN，生成相息图</li>
+<li>将衍射零级光的能量转移到一级斑</li>
 </ul>
+<h3 id="有用的东西">有用的东西</h3>
+<p><a href="https://www.zhihu.com/question/23718291" target="_blank" rel="noopener">幅度谱与相位谱</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/71870912" target="_blank" rel="noopener">4f系统</a></p>
 
       
       <!-- reward -->
@@ -507,12 +713,12 @@ U(x,y,d_0)=\frac{\exp(ikd_0)}{i\lambda d_0}\exp\left[\frac{i\pi}{\lambda d_0}(x^
 <p>FSO Communication is an idea of wireless communication using light based on the theory of light propagation in free space.</p>
 <p>Devices using technology of FSO communication make up a system. It is a outdoor system of <em>wireless optical communication system</em> (WOCS) and has some branches. Below is a classification tree of WOCS [1] :</p>
 <figure>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djubq55j30oo0ewq49.jpg" alt="WOCS classifications" /><figcaption>WOCS classifications</figcaption>
+<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djubq55j30oo0ewq49.jpg" alt="WOCS classifications" /><figcaption aria-hidden="true">WOCS classifications</figcaption>
 </figure>
 <p>From that we know that we have choices of terrestrial links and space links. We considered both and think that terrestrial links is practical but space links is as well interesting and maybe a future-hot point.</p>
 <p>Below is a diagram of FSO communication link [1] (which maybe what we will construct in the next few days):</p>
 <figure>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djwkyeuj30nu0eimyd.jpg" alt="System composition" /><figcaption>System composition</figcaption>
+<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djwkyeuj30nu0eimyd.jpg" alt="System composition" /><figcaption aria-hidden="true">System composition</figcaption>
 </figure>
 <h2 id="system-design">2. System Design</h2>
 <h3 id="type-of-the-system">2.1 Type of the system</h3>
@@ -524,7 +730,7 @@ U(x,y,d_0)=\frac{\exp(ikd_0)}{i\lambda d_0}\exp\left[\frac{i\pi}{\lambda d_0}(x^
 <li>850 nm</li>
 <li>1550 nm</li>
 </ul>
-<p>We digged further and found that 1550 nm lasers are considered &quot;eye safe&quot; at much higher power levels than traditionally used 850nm lasers.</p>
+<p>We digged further and found that 1550 nm lasers are considered "eye safe" at much higher power levels than traditionally used 850nm lasers.</p>
 <p>So our choice for wavelength is 1550 nm. And the benefits are as follows [1] :</p>
 <ul>
 <li>reduce background noise and Rayleigh scattering</li>
@@ -543,7 +749,7 @@ U(x,y,d_0)=\frac{\exp(ikd_0)}{i\lambda d_0}\exp\left[\frac{i\pi}{\lambda d_0}(x^
 <p>We have four choices and they all have own advantages and disadvantages:</p>
 <h5 id="gas-laser">Gas laser</h5>
 <figure>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk4mvtij30xc0iugos.jpg" alt="Carbon dioxide laser - Wikipedia" /><figcaption>Carbon dioxide laser - Wikipedia</figcaption>
+<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk4mvtij30xc0iugos.jpg" alt="Carbon dioxide laser - Wikipedia" /><figcaption aria-hidden="true">Carbon dioxide laser - Wikipedia</figcaption>
 </figure>
 <ul>
 <li>Carbon dioxide laser are stable and less sensitive to atomospheric effects</li>
@@ -562,7 +768,7 @@ U(x,y,d_0)=\frac{\exp(ikd_0)}{i\lambda d_0}\exp\left[\frac{i\pi}{\lambda d_0}(x^
 </ul>
 <h5 id="fiber-laser-4">Fiber laser [4]</h5>
 <figure>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk51ei3j30zk0k075c.jpg" alt="Fiber laser cutting machine FOL-3015AJ" /><figcaption>Fiber laser cutting machine FOL-3015AJ</figcaption>
+<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk51ei3j30zk0k075c.jpg" alt="Fiber laser cutting machine FOL-3015AJ" /><figcaption aria-hidden="true">Fiber laser cutting machine FOL-3015AJ</figcaption>
 </figure>
 <ul>
 <li>The laser light is both generated and delivered by an inherently flexible medium, which allows easier delivery to the focusing location and target.</li>
@@ -586,7 +792,7 @@ U(x,y,d_0)=\frac{\exp(ikd_0)}{i\lambda d_0}\exp\left[\frac{i\pi}{\lambda d_0}(x^
 <h3 id="demo-fso-communication-system">3.1 Demo: FSO communication system</h3>
 <p>We considered the composition of the system and drew a structure graph as below:</p>
 <figure>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djy58q7j31t00u0q79.jpg" alt="FSOCS" /><figcaption>FSOCS</figcaption>
+<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djy58q7j31t00u0q79.jpg" alt="FSOCS" /><figcaption aria-hidden="true">FSOCS</figcaption>
 </figure>
 <p>We put our emphasis on the <em>Transmitter</em> part and the following sections are our simulation work.</p>
 <h4 id="layout">3.1.1 Layout</h4>
@@ -594,16 +800,16 @@ U(x,y,d_0)=\frac{\exp(ikd_0)}{i\lambda d_0}\exp\left[\frac{i\pi}{\lambda d_0}(x^
 <p>The transmitter part is in the left and we will dig into it later.</p>
 <p>In the middle is the FSO Channel. Since Ground-to-Satellite system has at least 90 km (see <em>regions of atmosphere</em> diagram below) , we set the range of the FSO channel 100 km. On the left and right of the FSO channel are two opticla amplifiers, from simulation result we can found their role in the system.</p>
 <figure>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk5x5ydj318t0rswih.jpg" alt="Regions of atmosphere" /><figcaption>Regions of atmosphere</figcaption>
+<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk5x5ydj318t0rswih.jpg" alt="Regions of atmosphere" /><figcaption aria-hidden="true">Regions of atmosphere</figcaption>
 </figure>
 <p>On the right is the Receiver part. It consists of PIN Photodiode (which transfer optic wave into electric signal), Law Pass Bessel Filter (which is used to filter out noise) and Data Recovery Module (which do the demodulation and get the recovered signal).</p>
 <p>We use BER Analyter to analyse the bit error rate of the system.</p>
 <figure>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djvig9aj31720cb7aq.jpg" alt="FSO demo layout" /><figcaption>FSO demo layout</figcaption>
+<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djvig9aj31720cb7aq.jpg" alt="FSO demo layout" /><figcaption aria-hidden="true">FSO demo layout</figcaption>
 </figure>
 <h4 id="simulation-result">3.1.2 Simulation result</h4>
 <figure>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djzynsxj318n0md140.jpg" alt="simulation result" /><figcaption>simulation result</figcaption>
+<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djzynsxj318n0md140.jpg" alt="simulation result" /><figcaption aria-hidden="true">simulation result</figcaption>
 </figure>
 <p>Above is our simulation result from which we can found that loss is huge. The reason is FSO channel is too long.</p>
 <p>Because of the time and technology limitation, we didn’t get a good simulation result. Below is something we considered:</p>
@@ -638,19 +844,19 @@ U(x,y,d_0)=\frac{\exp(ikd_0)}{i\lambda d_0}\exp\left[\frac{i\pi}{\lambda d_0}(x^
 <p>We use OptiSystem to construct our <em>optical transmitter</em> and further more, we digged a little deeper and build a demo of the whole <em>FSO communication system.</em></p>
 <p>Below are the layout of our system.</p>
 <figure>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk0rwezj30sm0cladg.jpg" alt="FSO-transmitter-layout" /><figcaption>FSO-transmitter-layout</figcaption>
+<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk0rwezj30sm0cladg.jpg" alt="FSO-transmitter-layout" /><figcaption aria-hidden="true">FSO-transmitter-layout</figcaption>
 </figure>
 <p>From the figure we can see the structure of the transmitter clearly.</p>
 <ul>
 <li><p>We use simple <em>Bit Sequence Generator</em> to generate electric signal and use <em>NRZ Pulse Generator</em> to generate electric pulse.</p></li>
-<li>We use <em>Fiber Laser</em> as our laser device. As there isn’t Fiber Laser device in the software, we put a CW Laser and add a description. CW Laser can generate 1550 nm optical wave.</li>
-<li>We use <span class="math inline">\(LiNbO_3\)</span> Mach-Zehnder Modulator in our transmitter. The reasons have been stated in section 2.</li>
+<li><p>We use <em>Fiber Laser</em> as our laser device. As there isn’t Fiber Laser device in the software, we put a CW Laser and add a description. CW Laser can generate 1550 nm optical wave.</p></li>
+<li><p>We use <span class="math inline">\(LiNbO_3\)</span> Mach-Zehnder Modulator in our transmitter. The reasons have been stated in section 2.</p></li>
 <li><p>Put the optic signal and electric pulse into the MZ Modulator, we can get the modulated optical signal.</p></li>
 </ul>
 <p>Above are the details of our transmitter, we then use Optical Power Meter and Optical Spectrum Analyzer to do the simulation.</p>
 <p>Results are as follows :</p>
 <figure>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk1s5hnj312r0jtwln.jpg" alt="FSO-transmitter-simulation-result" /><figcaption>FSO-transmitter-simulation-result</figcaption>
+<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk1s5hnj312r0jtwln.jpg" alt="FSO-transmitter-simulation-result" /><figcaption aria-hidden="true">FSO-transmitter-simulation-result</figcaption>
 </figure>
 <p>We can see from the figure that the transmitter has <span class="math inline">\(2.485\)</span> dBm los and the output power is <span class="math inline">\(56.432\times 10^{-3} W\)</span>. We need optical amplifiers to make it larger.</p>
 <h3 id="electro-optic-modulation-process">3.3 Electro-optic Modulation Process</h3>
@@ -659,24 +865,24 @@ U(x,y,d_0)=\frac{\exp(ikd_0)}{i\lambda d_0}\exp\left[\frac{i\pi}{\lambda d_0}(x^
 <p>Then we perform the 2D geometrical modeling since the system is symmetric.</p>
 <p>We can find that the structure has core and cladding:</p>
 <figure>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk3n0tdj30xo0hnaab.jpg" alt="structure of core and cladding" /><figcaption>structure of core and cladding</figcaption>
+<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk3n0tdj30xo0hnaab.jpg" alt="structure of core and cladding" /><figcaption aria-hidden="true">structure of core and cladding</figcaption>
 </figure>
 <p>Next we set the boundary conditions so that the COSMOL can do the calculation. We set the applied voltage boundary of the light or rather the boundary of the wave:</p>
 <figure>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djz4eraj309n09pmx5.jpg" alt="step1" /><figcaption>step1</figcaption>
+<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djz4eraj309n09pmx5.jpg" alt="step1" /><figcaption aria-hidden="true">step1</figcaption>
 </figure>
 <p>Before calculation, we set some configurations:</p>
 <figure>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk2mm1hj309h05pa9y.jpg" alt="step2" /><figcaption>step2</figcaption>
+<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk2mm1hj309h05pa9y.jpg" alt="step2" /><figcaption aria-hidden="true">step2</figcaption>
 </figure>
 <p>(To be clear: “步骤 <span class="math inline">\(k\)</span> ” &lt;—&gt; “ Step <span class="math inline">\(k\)</span> ” , “求解器配置” &lt;—&gt; “Solver Configuration” and “作业配置” &lt;—&gt; “ Work Configuration” )</p>
 <p>Finally, we get the simulation result. In the figure it is the distribution of the electric field in the waveguide. We also get the loss, transmittance and reflectance of the system.</p>
 <p>(The first line of the figure “表面：电场模” &lt;—&gt; “Surface: Electric field mode” )</p>
 <figure>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk362bij30xd0h9wer.jpg" alt="EF distribution" /><figcaption>EF distribution</figcaption>
+<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk362bij30xd0h9wer.jpg" alt="EF distribution" /><figcaption aria-hidden="true">EF distribution</figcaption>
 </figure>
 <figure>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk16evoj30xe0grq39.jpg" alt="Property inside" /><figcaption>Property inside</figcaption>
+<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk16evoj30xe0grq39.jpg" alt="Property inside" /><figcaption aria-hidden="true">Property inside</figcaption>
 </figure>
 <p>However, we cannot get the change of the phase. It seems that the software has some limitation. And we didn’t consider the electric signals. These are something that can be improved.</p>
 <h2 id="reference">Reference</h2>
@@ -931,252 +1137,8 @@ U(x,y,d_0)=\frac{\exp(ikd_0)}{i\lambda d_0}\exp\left[\frac{i\pi}{\lambda d_0}(x^
 
 <p>Final grade ：</p>
 <figure>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ggiob5huksj318e04ojrm.jpg" alt="grade" /><figcaption>grade</figcaption>
+<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ggiob5huksj318e04ojrm.jpg" alt="grade" /><figcaption aria-hidden="true">grade</figcaption>
 </figure>
-
-      
-      <!-- reward -->
-      
-    </div>
-    
-    
-      <!-- copyright -->
-      
-    <footer class="article-footer">
-      
-      
-
-    </footer>
-
-  </div>
-
-  
-
-  
-
-  
-  
-  
-
-</article>
-    
-    <article id="post-Computer-Science-Machine-Learning-TensorFlow-Notes" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2020/05/05/Computer-Science-Machine-Learning-TensorFlow-Notes/"
-    >TensorFlow Notes</a> 
-</h2>
- 
-
-    </header>
-    
-
-    
-    <div class="article-meta">
-      <a href="/2020/05/05/Computer-Science-Machine-Learning-TensorFlow-Notes/" class="article-date">
-  <time datetime="2020-05-05T13:18:07.000Z" itemprop="datePublished">2020-05-05</time>
-</a>
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Computer-Science/">Computer Science</a> / <a class="article-category-link" href="/categories/Computer-Science/Machine-Learning/">Machine Learning</a>
-  </div>
-
-      
-      
-      
-    </div>
-    
-
-    
-
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-
-      
-      <p>This is my notes for TensorFlow.</p>
-<p>推荐网站：</p>
-<ul>
-<li><a href="tf.wiki">简单粗暴 TensorFlow 2</a></li>
-<li><a href="https://keras.io/zh/" target="_blank" rel="noopener">Keras 中文文档</a></li>
-</ul>
-<h1 id="tensorflow-学习笔记">TensorFlow 学习笔记</h1>
-<h2 id="数学基础部分">1. 数学基础部分</h2>
-<h3 id="损失函数交叉熵">损失函数：交叉熵</h3>
-<p><a href="https://blog.csdn.net/tsyccnh/article/details/79163834" target="_blank" rel="noopener">参考文章：深入理解交叉熵</a></p>
-<ol type="1">
-<li><p>来源 ：信息论</p></li>
-<li><p>信息量:</p></li>
-</ol>
-<p><span class="math display">\[
-I(x)=-\ln \left[p(x)\right]
-\]</span></p>
-<p>衡量事件 <span class="math inline">\(X=x\)</span> 包含信息的多少，发生概率越小，信息量越大。</p>
-<ol start="3" type="1">
-<li>信息熵：</li>
-</ol>
-<p><span class="math display">\[
-H(X)=E\left[I(X)\right]=-\sum_{i=1}^n p(x_i)\ln\left[p(x_i)\right]
-\]</span></p>
-<p>事件包含的信息量的期望。</p>
-<ol start="4" type="1">
-<li>相对熵：KL divergence <span class="math display">\[
-D_{KL}(A\| B)=-\sum_{i=1}^n p_A(x_i)\ln\left[\frac{p_A(x_i)}{p_B(x_i)}\right]
-\]</span></li>
-</ol>
-<p><span class="math inline">\(A\)</span> 与 <span class="math inline">\(B\)</span> 之间的对数差（即是信息量的差）在 <span class="math inline">\(A\)</span> 上的期望值。</p>
-<p>理解：相对熵在数学上为 <span class="math inline">\(A\)</span> 和<span class="math inline">\(B\)</span> 对数差的期望，进一步可以看成是 <strong><span class="math inline">\(B\)</span> 对<span class="math inline">\(A\)</span> 的信息量的差的期望</strong>。非常符合直觉。</p>
-<ol start="5" type="1">
-<li>交叉熵 <span class="math display">\[
-\begin{align}
-D_{KL}(A\|B)&amp;=-\sum_{i=1}^n p_A(x_i)\ln\left[p_A(x_i)\right]+\sum_{i=1}^n p_A(x_i)\ln\left[ p_B(x_i)\right]\\
-&amp;=H(A)+H(A,B)
-\end{align}
-\]</span></li>
-</ol>
-<p>后一项 <span class="math inline">\(H(A,B)\)</span> 就是交叉熵： <span class="math display">\[
-H(A,B)=\sum_{i=1}^np_A(x_i)\ln\left[p_B(x_i)\right]
-\]</span></p>
-<ol start="6" type="1">
-<li>应用</li>
-</ol>
-<p>机器学习中，<span class="math inline">\(A\)</span> 为真实分布，<span class="math inline">\(B\)</span> 为预测分布。由于 <span class="math inline">\(A\)</span> 的信息量是不变的，相对熵中可以只关注交叉熵。交叉熵作为损失函数很好地衡量信息量的差。</p>
-<p>线性回归问题中均方误差 <span class="math inline">\(MSE\)</span> 比较好用，在<strong>逻辑分类问题</strong>中交叉熵更加符合直觉。</p>
-<h2 id="算法基础部分">2. 算法基础部分</h2>
-<h3 id="adam">Adam</h3>
-<p>待办：研究论文的数学部分</p>
-<p><a href="https://blog.csdn.net/willduan1/article/details/78070086" target="_blank" rel="noopener">参考网站</a></p>
-<p>理解：更好地更新权重参数</p>
-<p>应用：Well suited for problems that are large in terms of data and/or parameters. The method is also appropriate for non-stationary objectives and problems with very noisy and/or sparse gradients.</p>
-<h3 id="cross-validation">Cross Validation</h3>
-<p>交叉验证。将数据集打乱分成 <span class="math inline">\(k\)</span> 份不相交的集合，循环训练 <span class="math inline">\(k\)</span> 次，第 <span class="math inline">\(i\)</span> 次用除了第 <span class="math inline">\(i\)</span> 集合的部分训练，用第 <span class="math inline">\(i\)</span> 集合计算损失函数，最后的损失函数为所有损失的平均。</p>
-<p>待办：这种做法的合理性和优越性</p>
-<p>K-fold cross-validation procedure</p>
-<figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 算法伪代码</span></span><br><span class="line">Define KFoldXV(D,A,L,k)<span class="symbol">:</span></span><br><span class="line"><span class="symbol">Require:</span> D the given dataset</span><br><span class="line"><span class="symbol">Require:</span> A the learning algorithm, seen as a function that takes a dataset as input <span class="keyword">and</span> outputs a learned function</span><br><span class="line"><span class="symbol">Require:</span> L the loss function, map the chosen test example to a scalar</span><br><span class="line"><span class="symbol">Require:</span> k the number of folds</span><br><span class="line">	</span><br><span class="line">	Split D into k mutually exclusive subsets D_i, whose union is D</span><br><span class="line">	<span class="keyword">for</span> i from <span class="number">1</span> to k <span class="keyword">do</span></span><br><span class="line">    f_i = A(D\D_i) <span class="comment"># 用第i个集合之外的训练</span></span><br><span class="line">    <span class="keyword">for</span> z_j <span class="keyword">in</span> D_i <span class="keyword">do</span></span><br><span class="line">      e_j = L(f_i,z_j) <span class="comment"># 用第i个集合计算损失</span></span><br><span class="line">    <span class="keyword">end</span> <span class="keyword">for</span></span><br><span class="line">  <span class="keyword">end</span> <span class="keyword">for</span></span><br><span class="line">	Return e</span><br></pre></td></tr></table></figure>
-<h3 id="lstm">LSTM</h3>
-<p><a href="https://zhuanlan.zhihu.com/p/32085405" target="_blank" rel="noopener">参考</a></p>
-<p>长短期记忆（Long short-term memory, LSTM）是一种特殊的RNN，主要是为了解决长序列训练过程中的梯度消失和梯度爆炸问题。</p>
-<p>待办：关于激活函数 <span class="math inline">\(\tanh\)</span></p>
-<h2 id="代码基础部分">3. 代码基础部分</h2>
-<p>慢慢填。</p>
-<h3 id="变量与常量">变量与常量</h3>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x = tf.constant([[<span class="number">1.0</span>]])</span><br></pre></td></tr></table></figure>
-<p>注意需转化为张量（or：矩阵），外面多套一层括号。</p>
-<h3 id="tf中的函数">TF中的函数</h3>
-<h4 id="tf.one_hot">tf.one_hot</h4>
-<p><code>tf.one_hot</code> 将输入数组转化为”one-hot“型的输出。和单分类问题有这非常密切的联系（待挖掘）。</p>
-<p>比如：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">-- 输入 --</span><br><span class="line">x=[<span class="number">0</span>,<span class="number">1</span>,<span class="number">-1</span>,<span class="number">2</span>] <span class="comment"># 根据输出 -1 表示不属于任何一类</span></span><br><span class="line">print(tf.one_hot(x,depth=<span class="number">6</span>)) <span class="comment"># depth 应该是总分类数</span></span><br><span class="line"></span><br><span class="line">-- 输出 --</span><br><span class="line">tf.Tensor(</span><br><span class="line">[[<span class="number">1.</span> <span class="number">0.</span> <span class="number">0.</span> <span class="number">0.</span> <span class="number">0.</span> <span class="number">0.</span>]</span><br><span class="line"> [<span class="number">0.</span> <span class="number">1.</span> <span class="number">0.</span> <span class="number">0.</span> <span class="number">0.</span> <span class="number">0.</span>]</span><br><span class="line"> [<span class="number">0.</span> <span class="number">0.</span> <span class="number">0.</span> <span class="number">0.</span> <span class="number">0.</span> <span class="number">0.</span>]</span><br><span class="line"> [<span class="number">0.</span> <span class="number">0.</span> <span class="number">1.</span> <span class="number">0.</span> <span class="number">0.</span> <span class="number">0.</span>]], shape=(<span class="number">4</span>, <span class="number">6</span>), dtype=float32)</span><br></pre></td></tr></table></figure>
-<h4 id="tf.image">tf.image</h4>
-<p>用于图像处理，可以用这个扩充数据集。</p>
-<p><a href="%5Bhttps://medium.com/@lufor129/tensorflow-%E5%9C%96%E7%89%87%E6%95%B8%E6%93%9A%E5%A2%9E%E5%BC%B7-%E4%BA%8C-%E5%9C%96%E7%89%87%E8%99%95%E7%90%86%E5%87%BD%E6%95%B8-1083fb176f9%5D(https://medium.com/@lufor129/tensorflow-圖片數據增強-二-圖片處理函數-1083fb176f9)">推荐/待继续研究</a></p>
-<h4 id="tfds.load">tfds.load</h4>
-<p>载入数据。<code>split</code> <a href="https://www.tensorflow.org/datasets/splits" target="_blank" rel="noopener">有很多玩法</a>。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> tensorflow_datasets <span class="keyword">as</span> tfds</span><br><span class="line">mnist_dataset, mnist_info = tfda.load(<span class="string">'mnist'</span>,split=<span class="string">'train'</span>,\</span><br><span class="line">               with_info=<span class="literal">True</span>,batch_size=<span class="literal">None</span>,\</span><br><span class="line">               shuffle_files=<span class="literal">True</span>, as_supvised=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 重要参数</span></span><br><span class="line"><span class="comment"># split :  Which split of the data to load (e.g. 'train', 'test' ['train', 'test'], 'train[80%:]')</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># shuffle_files </span></span><br><span class="line"></span><br><span class="line"><span class="comment"># as_supvised : bool, if True, the returned tf.data.Dataset will have a 2-tuple structure (input, label)</span></span><br><span class="line"><span class="comment"># batch_size : add a batch dimension to examples</span></span><br><span class="line"></span><br><span class="line">mnist_train = mnist_dataset[<span class="string">'train'</span>]</span><br><span class="line"><span class="comment"># 返回迭代器(generator ) mnist_train</span></span><br><span class="line"></span><br><span class="line">print(mnist_info)</span><br><span class="line"><span class="comment"># 数据集信息</span></span><br><span class="line"></span><br><span class="line">-- result --</span><br><span class="line"></span><br><span class="line">tfds.core.DatasetInfo(</span><br><span class="line">    name=<span class="string">'mnist'</span>,</span><br><span class="line">    version=<span class="number">3.0</span><span class="number">.1</span>,</span><br><span class="line">    description=<span class="string">'The MNIST database of handwritten digits.'</span>,</span><br><span class="line">    homepage=<span class="string">'http://yann.lecun.com/exdb/mnist/'</span>,</span><br><span class="line">    features=FeaturesDict(&#123;</span><br><span class="line">        <span class="string">'image'</span>: Image(shape=(<span class="number">28</span>, <span class="number">28</span>, <span class="number">1</span>), dtype=tf.uint8),</span><br><span class="line">        <span class="string">'label'</span>: ClassLabel(shape=(), dtype=tf.int64, num_classes=<span class="number">10</span>),</span><br><span class="line">    &#125;),</span><br><span class="line">    total_num_examples=<span class="number">70000</span>,</span><br><span class="line">    splits=&#123;</span><br><span class="line">        <span class="string">'test'</span>: <span class="number">10000</span>,</span><br><span class="line">        <span class="string">'train'</span>: <span class="number">60000</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">    supervised_keys=(<span class="string">'image'</span>, <span class="string">'label'</span>),</span><br><span class="line">    citation=<span class="string">"""@article&#123;lecun2010mnist,</span></span><br><span class="line"><span class="string">      title=&#123;MNIST handwritten digit database&#125;,</span></span><br><span class="line"><span class="string">      author=&#123;LeCun, Yann and Cortes, Corinna and Burges, CJ&#125;,</span></span><br><span class="line"><span class="string">      journal=&#123;ATT Labs [Online]. Available: http://yann. lecun. com/exdb/mnist&#125;,</span></span><br><span class="line"><span class="string">      volume=&#123;2&#125;,</span></span><br><span class="line"><span class="string">      year=&#123;2010&#125;</span></span><br><span class="line"><span class="string">    &#125;"""</span>,</span><br><span class="line">    redistribution_info=,</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
-<h4 id="tf.constant_initializer">tf.constant_initializer</h4>
-<p>用于初始化权重矩阵。</p>
-<p>待解决：如何查看初始化的矩阵的内容</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">W = np.array([[</span><br><span class="line">    [<span class="number">0</span>, <span class="number">0</span>, <span class="number">-1</span>],</span><br><span class="line">    [<span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>],</span><br><span class="line">    [<span class="number">-2</span>, <span class="number">0</span>, <span class="number">2</span>]</span><br><span class="line">]], dtype=np.float32)</span><br><span class="line">kernel_initializer = tf.constant_initializer(W)</span><br><span class="line"></span><br><span class="line">print(kernel_initializer)</span><br><span class="line"></span><br><span class="line">-- result --</span><br><span class="line">&lt;tensorflow.python.ops.init_ops_v2.Constant object at <span class="number">0x135f09810</span>&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="模型搭建与训练">4. 模型搭建与训练</h2>
-<h3 id="线性回归">线性回归</h3>
-<h4 id="搭模型">搭模型</h4>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 模版</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyModel</span><span class="params">(tf.keras.Model)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        super().__init__()     <span class="comment"># Python 2 下使用 super(MyModel, self).__init__()</span></span><br><span class="line">        <span class="comment"># 此处添加初始化代码（包含 call 方法中会用到的层），例如</span></span><br><span class="line">        <span class="comment"># layer1 = tf.keras.layers.BuiltInLayer(...)</span></span><br><span class="line">        <span class="comment"># layer2 = MyCustomLayer(...)</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">call</span><span class="params">(self, input)</span>:</span></span><br><span class="line">        <span class="comment"># 此处添加模型调用的代码（处理输入并返回输出），例如</span></span><br><span class="line">        <span class="comment"># x = layer1(input)</span></span><br><span class="line">        <span class="comment"># output = layer2(x)</span></span><br><span class="line">        <span class="keyword">return</span> output</span><br><span class="line"></span><br><span class="line"><span class="comment"># 线性模型</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Linear</span><span class="params">(tf.keras.Model)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        super().__init__() <span class="comment"># Python 3 直接 super(). 就可以了</span></span><br><span class="line">        <span class="comment"># 全连接层 训练的参数为矩阵A和b : y = AX+b</span></span><br><span class="line">        self.dense = tf.keras.layers.Dense(</span><br><span class="line">            units=<span class="number">1</span>, <span class="comment"># 输出的最后一维 feature的层数</span></span><br><span class="line">            activation=<span class="literal">None</span>,</span><br><span class="line">	          <span class="comment"># 设置 Keras 各层权重随机初始值</span></span><br><span class="line">            kernel_initializer=tf.zeros_initializer(),</span><br><span class="line">            bias_initializer=tf.zeros_initializer()</span><br><span class="line">        )</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">call</span><span class="params">(self, input)</span>:</span></span><br><span class="line">        output = self.dense(input)</span><br><span class="line">        <span class="keyword">return</span> output</span><br></pre></td></tr></table></figure>
-<h4 id="训练模型">训练模型</h4>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 手动预处理</span></span><br><span class="line">X_raw = np.array([<span class="number">2013</span>, <span class="number">2014</span>, <span class="number">2015</span>, <span class="number">2016</span>, <span class="number">2017</span>], dtype=np.float32)</span><br><span class="line">y_raw = np.array([<span class="number">12000</span>, <span class="number">14000</span>, <span class="number">15000</span>, <span class="number">16500</span>, <span class="number">17500</span>], dtype=np.float32)</span><br><span class="line"></span><br><span class="line">X = (X_raw - X_raw.min()) / (X_raw.max() - X_raw.min())</span><br><span class="line">y = (y_raw - y_raw.min()) / (y_raw.max() - y_raw.min())</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 训练</span></span><br><span class="line">num_epoch = <span class="number">10000</span></span><br><span class="line">model = Linear()</span><br><span class="line">optimizer = tf.keras.optimizers.SGD(learning_rate=<span class="number">0.01</span>)</span><br><span class="line">X = tf.constant([X])  <span class="comment"># X 是向量, [X] 是矩阵,可以转为张量</span></span><br><span class="line">y = tf.constant([y])</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(num_epoch):</span><br><span class="line">    <span class="keyword">with</span> tf.GradientTape() <span class="keyword">as</span> tape: <span class="comment"># 开始记录梯度</span></span><br><span class="line">        y_pred = model(X)</span><br><span class="line">        loss = tf.reduce_mean(tf.square(y_pred - y)) </span><br><span class="line">        <span class="comment"># 均方误差 reduce_mean 对所有tensor所有元素求平均</span></span><br><span class="line"></span><br><span class="line">    grads = tape.gradient(loss, model.variables) <span class="comment"># 对损失函数的每一个变量求偏导</span></span><br><span class="line">    optimizer.apply_gradients(grads_and_vars=zip(grads, model.variables))</span><br><span class="line">    <span class="comment">#  apply_gradient 根据得到的梯度更新参数 传入一个list : [(grad_1,var_1),</span></span><br><span class="line">    <span class="comment"># (grad_2,var_2),...,(grad_n,var_n)]</span></span><br><span class="line">print(y_pred)</span><br></pre></td></tr></table></figure>
-<h4 id="评估模型">评估模型</h4>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">sparse_categorical_accuracy = tf.keras.metrics.SparseCategoricalAccuracy()</span><br><span class="line">num_batches = int(data_loader.num_test_data // batch_size)</span><br><span class="line"><span class="keyword">for</span> batch_index <span class="keyword">in</span> range(num_batches):</span><br><span class="line">    start_index, end_index = batch_index * \</span><br><span class="line">        batch_size, (batch_index + <span class="number">1</span>) * batch_size</span><br><span class="line">    y_pred = model.predict(data_loader.test_data[start_index: end_index])</span><br><span class="line">    sparse_categorical_accuracy.update_state(</span><br><span class="line">        y_true=data_loader.test_label[start_index: end_index], y_pred=y_pred)</span><br><span class="line">print(<span class="string">"test accuracy: %f"</span> % sparse_categorical_accuracy.result())</span><br></pre></td></tr></table></figure>
-<h3 id="卷积神经网络">卷积神经网络</h3>
-<p><code>tfwiki</code> 讲的特别好。理解卷积核<span class="math inline">\((filter)\)</span>减少参数的作用，通过滑动（卷积）扫描整个图像，过程中的权重参数是同一个核的，就是所谓的共享权重。</p>
-<p>有关卷积的动态示例可以到<a href="https://github.com/vdumoulin/conv_arithmetic" target="_blank" rel="noopener">这里</a>。有时间学一下他的<code>tex</code>代码。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CNN</span><span class="params">(tf.keras.Model)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        super().__init__()</span><br><span class="line">        self.conv1 = tf.keras.layers.Conv2D(</span><br><span class="line">            filters=<span class="number">32</span>,             <span class="comment"># 卷积层神经元（卷积核）数目 </span></span><br><span class="line">            kernel_size=[<span class="number">5</span>, <span class="number">5</span>],     <span class="comment"># 感受野大小</span></span><br><span class="line">            padding=<span class="string">'same'</span>,         <span class="comment"># padding策略（vaild 或 same）</span></span><br><span class="line">            activation=tf.nn.relu   <span class="comment"># 激活函数</span></span><br><span class="line">        )</span><br><span class="line">        self.pool1 = tf.keras.layers.MaxPool2D(pool_size=[<span class="number">2</span>, <span class="number">2</span>], strides=<span class="number">2</span>)</span><br><span class="line">        <span class="comment"># 横向和纵向都是每两个取一个最大的，因此大小变化像这样：28,28 -&gt; 14,14</span></span><br><span class="line">        self.conv2 = tf.keras.layers.Conv2D(</span><br><span class="line">            filters=<span class="number">64</span>,</span><br><span class="line">            kernel_size=[<span class="number">5</span>, <span class="number">5</span>],</span><br><span class="line">            padding=<span class="string">'same'</span>, <span class="comment"># 'same' 策略保证卷积前后大小相同</span></span><br><span class="line">            activation=tf.nn.relu</span><br><span class="line">        )</span><br><span class="line">        self.pool2 = tf.keras.layers.MaxPool2D(pool_size=[<span class="number">2</span>, <span class="number">2</span>], strides=<span class="number">2</span>)</span><br><span class="line">        self.flatten = tf.keras.layers.Reshape(target_shape=(<span class="number">7</span> * <span class="number">7</span> * <span class="number">64</span>,))</span><br><span class="line">        self.dense1 = tf.keras.layers.Dense(units=<span class="number">1024</span>, activation=tf.nn.relu)</span><br><span class="line">        self.dense2 = tf.keras.layers.Dense(units=<span class="number">10</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">call</span><span class="params">(self, inputs)</span>:</span></span><br><span class="line">        x = self.conv1(inputs)                  <span class="comment"># [batch_size, 28, 28, 32]</span></span><br><span class="line">        x = self.pool1(x)                       <span class="comment"># [batch_size, 14, 14, 32]</span></span><br><span class="line">        x = self.conv2(x)                       <span class="comment"># [batch_size, 14, 14, 64]</span></span><br><span class="line">        x = self.pool2(x)                       <span class="comment"># [batch_size, 7, 7, 64]</span></span><br><span class="line">        x = self.flatten(x)                     <span class="comment"># [batch_size, 7 * 7 * 64]</span></span><br><span class="line">        x = self.dense1(x)                      <span class="comment"># [batch_size, 1024]</span></span><br><span class="line">        x = self.dense2(x)                      <span class="comment"># [batch_size, 10]</span></span><br><span class="line">        output = tf.nn.softmax(x)</span><br><span class="line">        <span class="keyword">return</span> output</span><br></pre></td></tr></table></figure>
-<p>待看：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">kernel_initializer=tf.constant_initializer(W),</span><br><span class="line">bias_initializer=tf.constant_initializer(b)</span><br><span class="line">      </span><br><span class="line"></span><br><span class="line">dataset = dataset.map(<span class="keyword">lambda</span> img, label: (tf.image.resize(img, [<span class="number">224</span>, <span class="number">224</span>]) / <span class="number">255.0</span>, label)).shuffle(<span class="number">1024</span>).batch(<span class="number">32</span>)</span><br><span class="line">model = tf.keras.applications.MobileNetV2(weights=<span class="literal">None</span>, classes=<span class="number">5</span>)</span><br></pre></td></tr></table></figure>
-<h2 id="tf.data">tf.data</h2>
-
-      
-      <!-- reward -->
-      
-    </div>
-    
-    
-      <!-- copyright -->
-      
-    <footer class="article-footer">
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/TensorFlow/" rel="tag">TensorFlow</a></li></ul>
-
-
-    </footer>
-
-  </div>
-
-  
-
-  
-
-  
-  
-  
-
-</article>
-    
-    <article id="post-Projects-Laser-holography" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2020/05/03/Projects-Laser-holography/"
-    >Laser Holography</a> 
-</h2>
- 
-
-    </header>
-    
-
-    
-    <div class="article-meta">
-      <a href="/2020/05/03/Projects-Laser-holography/" class="article-date">
-  <time datetime="2020-05-02T19:00:58.000Z" itemprop="datePublished">2020-05-03</time>
-</a>
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Projects/">Projects</a> / <a class="article-category-link" href="/categories/Projects/Optics/">Optics</a>
-  </div>
-
-      
-      
-      
-    </div>
-    
-
-    
-
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-
-      
-      <p>This is the my final report for Semiconductor Laser Holography experiement in physics experiment course.</p>
-<p>I did the experiment with my dear roommates Yiheng Mao and Weiming Zhou, under the guidance of teacher Xing Chen.</p>
-
-
-	<div class="row">
-    <embed src="/pdf_files/半导体激光全息实验总结.pdf" width="100%" height="550" type="application/pdf">
-	</div>
-
-
-
 
       
       <!-- reward -->

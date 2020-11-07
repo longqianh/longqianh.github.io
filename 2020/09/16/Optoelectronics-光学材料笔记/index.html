@@ -41,7 +41,7 @@
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="app">
     <main class="content on">
       <section class="outer">
-  <article id="post-Physics-光学材料笔记" class="article article-type-post" itemscope
+  <article id="post-Optoelectronics-光学材料笔记" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
@@ -58,7 +58,7 @@
 
     
     <div class="article-meta">
-      <a href="/2020/09/16/Physics-%E5%85%89%E5%AD%A6%E6%9D%90%E6%96%99%E7%AC%94%E8%AE%B0/" class="article-date">
+      <a href="/2020/09/16/Optoelectronics-%E5%85%89%E5%AD%A6%E6%9D%90%E6%96%99%E7%AC%94%E8%AE%B0/" class="article-date">
   <time datetime="2020-09-16T01:57:23.000Z" itemprop="datePublished">2020-09-16</time>
 </a>
       
@@ -69,7 +69,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">29</span>
+            <span class="post-count">420</span>
         </span>
     </span>
 
@@ -105,6 +105,31 @@
       
       <h1 id="光学材料笔记">光学材料笔记</h1>
 <p>记录一些在光学材料与元件制造课程中的整理和总结。</p>
+<h2 id="光学玻璃">光学玻璃</h2>
+<h2 id="光学晶体">光学晶体</h2>
+<h3 id="点群">点群</h3>
+<p>这是「晶体学」的知识，「固体物理学」也可学到。</p>
+<p>晶体学中，晶体学点群是对称操作的集合（旋转、面对称、中心对称）。</p>
+<p>给定一个一定构型的立方晶系，根据它所具有的对称性（以对称操作要素描述），可以形成各种组合，化简后得到32个点群。给定一个晶体，根据它的布拉维点阵，我们可以确定它是具有哪一种对称性。</p>
+<p>国际符号用存在于某个特定方向上的对称元素来表示点群。</p>
+<p>比如一个正交晶系，它有 mm2 / 222 / mmm 这三种对称性组合（具体描述为 <span class="math inline">\(G_22P\)</span> / <span class="math inline">\(3G_2\)</span> / <span class="math inline">\(3G_23PC\)</span> )。给定一个正交晶系的晶体，通过判断它的点阵符合那种对称组合所生成的点阵（一个点由对称性生出的点阵列），我们可以确定它所属的点群。</p>
+<p><strong>m与对称元素PC？</strong></p>
+<p><strong>可以从 mmm 推出 <span class="math inline">\(3G_23PC\)</span> 吗？</strong></p>
+<h3 id="张量">张量</h3>
+<p>这里的张量算是对物理学中张量的简化，省去了方向并矢的书写。</p>
+<p>二阶张量变换定律：</p>
+<p>张量在坐标系的变换前后，物理公式的形式应该保持不变，即 <span class="math display">\[
+p_i=T_{ij}q_j\longmapsto p_i&#39;=T_{ij}&#39;q_j&#39;
+\]</span> 考虑到 <span class="math display">\[
+p_i&#39;=a_{ik}p_k,\; q_l=a_{jl}q_j
+\]</span> 有 <span class="math display">\[
+p_i&#39;=a_{ik}p_k=a_{ik}T_{kl}q_{l}=a_{ik}a_{lj}T_{kl}q_j&#39;
+\]</span> 因此 <span class="math display">\[
+\begin{align}
+T_{ij}&#39;&amp;=a_{ik}a_{jl}T_{kl}\\
+T_{ij}&amp;=a_{ki}a_{lj}T_{kl}&#39;
+\end{align}
+\]</span></p>
 
       
       <!-- reward -->
@@ -169,7 +194,7 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://longqianh.com/2020/09/16/Physics-%E5%85%89%E5%AD%A6%E6%9D%90%E6%96%99%E7%AC%94%E8%AE%B0/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://longqianh.com/2020/09/16/Optoelectronics-%E5%85%89%E5%AD%A6%E6%9D%90%E6%96%99%E7%AC%94%E8%AE%B0/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -195,7 +220,7 @@
       </a>
     
     
-      <a href="/2020/09/16/Physics-%E7%89%A9%E7%90%86%E5%85%89%E5%AD%A6%E7%AC%94%E8%AE%B0/" class="article-nav-link">
+      <a href="/2020/09/16/Optoelectronics-%E7%89%A9%E7%90%86%E5%85%89%E5%AD%A6%E7%AC%94%E8%AE%B0/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
         <div class="article-nav-title">物理光学笔记</div>
       </a>

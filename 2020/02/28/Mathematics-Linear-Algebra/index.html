@@ -140,7 +140,7 @@ W_2&amp;=\mathcal{L}(\alpha_1,\cdots,\alpha_r,\gamma_1,\cdots,\gamma_t)\\
 <h3 id="直和">直和</h3>
 <p>设 <span class="math inline">\(U_1,\cdots,U_m\)</span> 都是 <span class="math inline">\(V\)</span> 的子空间，则:</p>
 <ul>
-<li>（定义）<span class="math inline">\(U_1+\cdots+U_m\)</span> 是直和，如果 <span class="math inline">\(U_1+\cdots+U_m\)</span> 中的每个元素都可以唯一的表示成 <span class="math inline">\(u_1+\cdots+u_m\)</span> ，其中每个 <span class="math inline">\(u_j\in U_j\)</span>。</li>
+<li><p>（定义）<span class="math inline">\(U_1+\cdots+U_m\)</span> 是直和，如果 <span class="math inline">\(U_1+\cdots+U_m\)</span> 中的每个元素都可以唯一的表示成 <span class="math inline">\(u_1+\cdots+u_m\)</span> ，其中每个 <span class="math inline">\(u_j\in U_j\)</span>。</p></li>
 <li><p><span class="math inline">\(\iff\)</span> <span class="math inline">\(0\)</span> 唯一分解成 <span class="math inline">\(0+\cdots+0\)</span></p></li>
 <li><p>对于两个子空间的直和，<span class="math inline">\(U+W=U\oplus W\iff U\cap W=\{0\}\)</span></p></li>
 </ul>
@@ -260,7 +260,7 @@ B=M(T)^{-1}A\notag
 <p>幂等变换: <span class="math inline">\(T:V\to W,\quad T^2=T\)</span></p>
 <ul>
 <li><p><span class="math inline">\(N(T)=\{v-T(v)\mid v\in V \}\)</span></p></li>
-<li><span class="math inline">\(N(T)\cap R(T)=0\)</span></li>
+<li><p><span class="math inline">\(N(T)\cap R(T)=0\)</span></p></li>
 <li><p><span class="math inline">\(V=N(T)\oplus R(T)\)</span></p></li>
 </ul>
 <p>证明：</p>
@@ -326,22 +326,22 @@ e_j=\frac{v_j-\langle v_j,e_1\rangle e_1-\cdots-\langle v_j,e_{j-1}\rangle e_{j-
 <h3 id="对偶空间">对偶空间</h3>
 <h4 id="符号说明">符号说明</h4>
 <ul>
-<li><span class="math inline">\(\mathcal{L}(V,W)\)</span> 表示从 <span class="math inline">\(V\)</span> 到 <span class="math inline">\(W\)</span> 的全部线性映射</li>
-<li><span class="math inline">\(\mathbf{F}^{m,n}\triangleq \mathbf{F}^m\times\mathbf{F}^n\)</span> 可看作所有 <span class="math inline">\(m\times n\)</span> 矩阵</li>
-<li>线性泛函：从 <span class="math inline">\(V\)</span> 到 <span class="math inline">\(\mathbf{F}\)</span> 的线性映射，即为 <span class="math inline">\(\mathcal{L}(V,\mathbf{F})\)</span> 中的元素</li>
+<li><p><span class="math inline">\(\mathcal{L}(V,W)\)</span> 表示从 <span class="math inline">\(V\)</span> 到 <span class="math inline">\(W\)</span> 的全部线性映射</p></li>
+<li><p><span class="math inline">\(\mathbf{F}^{m,n}\triangleq \mathbf{F}^m\times\mathbf{F}^n\)</span> 可看作所有 <span class="math inline">\(m\times n\)</span> 矩阵</p></li>
+<li><p>线性泛函：从 <span class="math inline">\(V\)</span> 到 <span class="math inline">\(\mathbf{F}\)</span> 的线性映射，即为 <span class="math inline">\(\mathcal{L}(V,\mathbf{F})\)</span> 中的元素</p></li>
 <li><p>对偶空间 <span class="math inline">\(V’\)</span>：<span class="math inline">\(V\)</span> 上所有线性泛函构成的向量空间</p></li>
-<li>对偶基 <span class="math inline">\(\{\varphi_1,\dots,\varphi_n\}\)</span>： <span class="math inline">\(\varphi_j(e_k)=\delta_{jk}\)</span></li>
-<li>对偶映射 <span class="math inline">\(T’\)</span>：<span class="math inline">\(T’(\varphi)=\varphi\circ T ,\quad T’\in\mathcal{L}(V’,W’), \varphi\in W’,T’\in V&#39;\)</span></li>
+<li><p>对偶基 <span class="math inline">\(\{\varphi_1,\dots,\varphi_n\}\)</span>： <span class="math inline">\(\varphi_j(e_k)=\delta_{jk}\)</span></p></li>
+<li><p>对偶映射 <span class="math inline">\(T’\)</span>：<span class="math inline">\(T’(\varphi)=\varphi\circ T ,\quad T’\in\mathcal{L}(V’,W’), \varphi\in W’,T’\in V&#39;\)</span></p></li>
 <li><p>零化子 <span class="math inline">\(U^0\)</span>：<span class="math inline">\(U^0=\{\varphi\in V’:\varphi(u)=0,\forall u\in U\},U\subset V\)</span></p></li>
 </ul>
 <h4 id="重要结论">重要结论</h4>
 <ul>
 <li><p><span class="math inline">\(\mathcal{M}(T)\)</span> 为 <span class="math inline">\(T\in\mathcal{L}(V,W)\)</span> 的矩阵表示 , 其实是一个从 <span class="math inline">\(\mathcal{L}(V,W)\to\mathbf{F}^{m,n}\)</span> 的同构。</p></li>
-<li>对偶映射的代数性质：<span class="math inline">\((aS+bT)’=aS’+bT’\)</span>, <span class="math inline">\((ST)’=T’S&#39;\)</span></li>
-<li><span class="math inline">\(T’\)</span> 的矩阵是 <span class="math inline">\(T\)</span> 的矩阵的转置</li>
-<li><span class="math inline">\(\dim V’=\dim V\)</span></li>
-<li><span class="math inline">\(\dim U+\dim U^0=\dim V\)</span></li>
-<li><span class="math inline">\(T 满\iff T’单, N(T’)=R(T)^0\)</span></li>
+<li><p>对偶映射的代数性质：<span class="math inline">\((aS+bT)’=aS’+bT’\)</span>, <span class="math inline">\((ST)’=T’S&#39;\)</span></p></li>
+<li><p><span class="math inline">\(T’\)</span> 的矩阵是 <span class="math inline">\(T\)</span> 的矩阵的转置</p></li>
+<li><p><span class="math inline">\(\dim V’=\dim V\)</span></p></li>
+<li><p><span class="math inline">\(\dim U+\dim U^0=\dim V\)</span></p></li>
+<li><p><span class="math inline">\(T 满\iff T’单, N(T’)=R(T)^0\)</span></p></li>
 <li><p>$ T单T’满,R(T’)=N(T)^0$</p></li>
 <li><p><span class="math inline">\(\dim R(T)=\dim R(T&#39;)\)</span></p></li>
 </ul>
@@ -427,8 +427,15 @@ W=E_{\lambda_1}+\cdots + E_{\lambda_m}=E_{\lambda_1}\oplus \cdots \oplus E_{\lam
 <p>设<span class="math inline">\(\lambda_j\)</span> 和 <span class="math inline">\(E_{\lambda_j}\)</span> 是 <span class="math inline">\(n\)</span> 维线性空间 <span class="math inline">\(V\)</span> 的线性变换 <span class="math inline">\(T\)</span> 的 <span class="math inline">\(m\)</span> 个互不相同的特征值及相应的特征子空间，则只需证明<strong>零向量</strong>在 <span class="math inline">\(W\)</span> 中的<strong>分解唯一</strong>。</p>
 <p>即证： <span class="math inline">\(\xi_1+\cdots \xi_m=0\implies \xi_i=0,\quad \xi_i\in E_{\lambda_i}\)</span></p>
 <p>注意 <span class="math inline">\(\xi_i\)</span> 是特征子空间 <span class="math inline">\(E_{\lambda_i}\)</span> 中的向量，由属于 <span class="math inline">\(\lambda_i\)</span> 的特征向量线性组合而成，仍有 <span class="math inline">\(T(\xi_i)=\lambda_i\xi_i\)</span></p>
-<p><strong>归纳</strong>证明： $$ \begin{aligned} m=2: _1+_2=0 &amp;T(_1+_2)=_1_1+_2_2=0\ &amp;(_1-_2)_2=0\ &amp;_1=_2=0\</p>
-<p>\end{aligned} $$</p>
+<strong>归纳</strong>证明： $$
+<span class="math display">\[\begin{aligned}
+m=2: \quad \xi_1+\xi_2=0 &amp;\implies T(\xi_1+\xi_2)=\lambda_1\xi_1+\lambda_2\xi_2=0\\
+&amp;\implies (\lambda_1-\lambda_2)\xi_2=0\\
+&amp;\implies \xi_1=\xi_2=0\\
+
+
+\end{aligned}\]</span>
+<p>$$</p>
 <p>设对 $ m-1 $ 结论成立，考虑 $ m $ : <span class="math display">\[
 \begin{aligned}
 &amp; \xi_1+\cdots+\xi_m=0\\
@@ -458,7 +465,7 @@ W=E_{\lambda_1}+\cdots + E_{\lambda_m}=E_{\lambda_1}\oplus \cdots \oplus E_{\lam
 <p>证明（感谢张鸿博！！）：</p>
 <ul>
 <li><p>根据互相包含可以很容易地证明 <span class="math inline">\(G_\lambda=N\left((T-\lambda I)^{\dim V}\right)\)</span></p></li>
-<li>零空间有一个包含链，<span class="math inline">\((T-\lambda I)\)</span> 的次数每增加一次，它的零空间就增加一维。最多到 <span class="math inline">\(\dim G_\lambda=d\)</span> 就停止增长了。</li>
+<li><p>零空间有一个包含链，<span class="math inline">\((T-\lambda I)\)</span> 的次数每增加一次，它的零空间就增加一维。最多到 <span class="math inline">\(\dim G_\lambda=d\)</span> 就停止增长了。</p></li>
 <li><p>于是 <span class="math inline">\(N\left((T-\lambda I)^{\dim V}\right)=N\left((T-\lambda I)^{d}\right)\)</span></p></li>
 </ul></li>
 </ul>
@@ -480,7 +487,7 @@ x=\dim k-\dim E_\lambda+1
 <h4 id="广义特征空间">广义特征空间</h4>
 <h5 id="刻画">刻画</h5>
 <ul>
-<li><span class="math inline">\(G(\lambda,T)=\operatorname{null} (T-\lambda I)^{\dim V}\)</span></li>
+<li><p><span class="math inline">\(G(\lambda,T)=\operatorname{null} (T-\lambda I)^{\dim V}\)</span></p></li>
 <li><p><span class="math inline">\((T-\lambda I)\mid_{G(\lambda,T)}\)</span> （要限制在<span class="math inline">\(G_\lambda\)</span>上）是幂零的</p></li>
 <li><p>广义本征空间是 <span class="math inline">\(T\)</span> 下的不变子空间</p></li>
 </ul>
@@ -497,7 +504,7 @@ x=\dim k-\dim E_\lambda+1
 <p>任何复方阵 <span class="math inline">\(A\)</span> 必相似于分块对角阵 <span class="math inline">\(J=\operatorname{diag}\left[J(\lambda_1),\dots,J(\lambda_s)\right]\)</span>, 其中 <span class="math inline">\(\lambda_1,\dots,\lambda_s\)</span> 是 <span class="math inline">\(A\)</span> 的所有互不相同的特征值，<span class="math inline">\(J(\lambda_i)\)</span> 是分块对角矩阵 <span class="math inline">\(J(\lambda_i)=\operatorname{diag}\left[J_{p_{i1}}(\lambda_i),\dots,J_{p_{it_i}}(\lambda_i)\right]\)</span> .</p>
 <ul>
 <li><p>标准型中 <span class="math inline">\(J(\lambda_i)\)</span> 的阶数为 <span class="math inline">\(\dim G_{\lambda_i}\)</span>, 它的约当块块数 <span class="math inline">\(t_i=\dim E_{\lambda_i}\)</span>.</p></li>
-<li>利用标准型可以求极小多项式 <span class="math inline">\(p(x)=(x-\lambda_1)^{l_1}\cdots(x-\lambda_s)^{l_s}\)</span>, 其中 <span class="math inline">\(l_i\)</span> 为 <span class="math inline">\(J(\lambda_i)\)</span> 中小块 <span class="math inline">\(J_{p_{it_i}}\)</span> 的最高阶数.</li>
+<li><p>利用标准型可以求极小多项式 <span class="math inline">\(p(x)=(x-\lambda_1)^{l_1}\cdots(x-\lambda_s)^{l_s}\)</span>, 其中 <span class="math inline">\(l_i\)</span> 为 <span class="math inline">\(J(\lambda_i)\)</span> 中小块 <span class="math inline">\(J_{p_{it_i}}\)</span> 的最高阶数.</p></li>
 <li><p>通常方法是先求本征值 <span class="math inline">\(\lambda_i\)</span>，然后得到 <span class="math inline">\(\lambda_i\)</span> 对应的所有广义本征向量（广义本征空间的一组基），<span class="math inline">\(T-\lambda_i\)</span> 对每个广义本征向量一直作用，就得到了 <span class="math inline">\(J(\lambda_i)\)</span> 的循环基。</p></li>
 <li><p>“点图法”求 Jordan标准型：先找一组规范正交基 <span class="math inline">\(\{e_1,\dots,e_n\}\)</span>, 对每个 <span class="math inline">\(e_i\)</span> 作用 <span class="math inline">\((T-\lambda_iI)^j\)</span> 直到为 <span class="math inline">\(0\)</span>, 可以得到 Jordan块 <span class="math inline">\(J(\lambda_i)\)</span>. （有些疑问）</p></li>
 <li><p>深入探究：若 <span class="math inline">\(v_1,\dots,v_n\)</span> 是 <span class="math inline">\(T\)</span> 的 Jordan基，<span class="math inline">\(v_i\)</span>落在第 <span class="math inline">\(k\)</span> 个 Jordan块，则 <span class="math inline">\(v_i=1\cdot v_{i-1}+\lambda_k v_i\)</span>.</p></li>
@@ -589,7 +596,9 @@ x=\dim k-\dim E_\lambda+1
 <p>设 <span class="math inline">\(\mathbf{F}=\mathbf{R}\)</span> 且 <span class="math inline">\(T\in \mathcal{L}(V)\)</span> , 则下列条件等价：</p>
 <ul>
 <li><span class="math inline">\(T\)</span> 是正规但不是自伴的</li>
-<li><span class="math inline">\(T\)</span> 关于 <span class="math inline">\(V\)</span> 的某个规范正交基的矩阵是分块对角的，每个块数 <span class="math inline">\(1\times 1\)</span> 矩阵或者为 $ \begin{pmatrix} a &amp; -b\ b &amp; a \end{pmatrix} $ 的形式，其中 $b&gt; 0 $.</li>
+<li><span class="math inline">\(T\)</span> 关于 <span class="math inline">\(V\)</span> 的某个规范正交基的矩阵是分块对角的，每个块数 <span class="math inline">\(1\times 1\)</span> 矩阵或者为 $
+<span class="math display">\[\begin{pmatrix} a &amp; -b\\ b &amp; a \end{pmatrix}\]</span>
+$ 的形式，其中 $b&gt; 0 $.</li>
 </ul>
 <h4 id="谱分解定理">谱分解定理</h4>
 <p>设 <span class="math inline">\(T_i\)</span> 是 <span class="math inline">\(T\)</span> 的正交投影，<span class="math inline">\(\mathbf{F}=\mathbf{C}\)</span> 时 <span class="math inline">\(T\)</span> 是正规的或 <span class="math inline">\(\mathbf{F}=\mathbf{R}\)</span> 时 <span class="math inline">\(T\)</span> 是自伴的，<span class="math inline">\(\sigma(T)=\{\lambda_1,\dots,\lambda_n\}\)</span> 是 <span class="math inline">\(T\)</span> 的<em>谱</em>，则：</p>
@@ -604,18 +613,18 @@ x=\dim k-\dim E_\lambda+1
 <p>TFAE:</p>
 <ul>
 <li><p><span class="math inline">\(T\)</span> 是正的</p></li>
-<li>自伴的且所有本征值非负</li>
-<li>有唯一正平方根</li>
+<li><p>自伴的且所有本征值非负</p></li>
+<li><p>有唯一正平方根</p></li>
 <li><p>存在 <span class="math inline">\(R\in\mathcal{L}(V)\)</span> 使得 <span class="math inline">\(T=R^*R\)</span></p></li>
 </ul>
 <h4 id="等距同构">等距同构</h4>
 <p><span class="math inline">\(\forall v\in V,\|Sv\|=\|v\|\)</span></p>
 <h5 id="刻画-2">刻画</h5>
 <ul>
-<li><span class="math inline">\(S\)</span> 是等距同构</li>
-<li><span class="math inline">\(\forall u,v\in V,\langle Su,Sv\rangle=\langle u,v\rangle\)</span></li>
+<li><p><span class="math inline">\(S\)</span> 是等距同构</p></li>
+<li><p><span class="math inline">\(\forall u,v\in V,\langle Su,Sv\rangle=\langle u,v\rangle\)</span></p></li>
 <li><p>对 <span class="math inline">\(V\)</span> 中任意规范正交基 <span class="math inline">\(e_1,\dots,e_n\)</span>, <span class="math inline">\(Se_1,\dots,Se_n\)</span> 也是规范正交基 <span class="math inline">\(\implies\)</span> 常用等距同构：规范正交基之间的变换算子</p></li>
-<li><span class="math inline">\(S^*S=SS^*=I\)</span></li>
+<li><p><span class="math inline">\(S^*S=SS^*=I\)</span></p></li>
 <li><p><span class="math inline">\(S^*\)</span> 是等距同构</p></li>
 </ul>
 <h4 id="极分解">极分解</h4>

@@ -73,7 +73,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">13.2k</span>
+            <span class="post-count">13.5k</span>
         </span>
     </span>
 
@@ -82,7 +82,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">71 min</span>
+            <span class="post-count">73 min</span>
         </span>
     </span>
 </div>
@@ -433,8 +433,14 @@ x^2\frac{d^2R}{dr^2}+x\frac{dR}{dx}-\left(x^2+m^2\right)R=0
 \end{align}
 \]</span></p>
 <p><span class="math inline">\((\ref{EulerODE})\)</span> 为欧拉型 ODE，解为 <span class="math inline">\(\displaystyle R\left(r\right)=Cr^l+D\frac{1}{r^{l+1}}\)</span></p>
-<p>$ ()$为 <strong>球函数方程</strong>， 现进一步分离变量，设 <span class="math inline">\(Y\left(\theta,\varphi\right)=H\left(\theta\right)\cdot\Phi\left(\varphi\right)\)</span> , 代入得 : $$ \begin{aligned}&amp;()+H+l(l+1)H=0\ &amp; ()+l(l+1)^2=-\ &amp;''+=0 ,()+[l(l+1)^2-]H=0</p>
-<p>\end{aligned} $$</p>
+<p>$ ()$为 <strong>球函数方程</strong>， 现进一步分离变量，设 <span class="math inline">\(Y\left(\theta,\varphi\right)=H\left(\theta\right)\cdot\Phi\left(\varphi\right)\)</span> , 代入得 : $$</p>
+<span class="math display">\[\begin{aligned}&amp;\Phi\cdot\frac{1}{\sin \theta}\frac{d}{d\theta}\left(\sin\theta\frac{dH}{d\theta}\right)+H\cdot\frac{1}{\sin^2\theta}\frac{d^2\Phi}{d\varphi^2}+l\left(l+1\right)H\cdot\Phi=0\\
+\implies  &amp; \quad \frac{\sin\theta}{H}\frac{d}{d\theta}\left(\sin\theta\frac{dH}{d\theta}\right)+l\left(l+1\right)\sin^2\theta=-\frac{1}{\Phi}\frac{d^2\Phi}{d\varphi^2}\triangleq\lambda\\
+\implies&amp;\quad \Phi&#39;&#39;+\lambda\Phi=0 ,\quad \sin\theta\frac{d}{d\theta}\left(\sin\theta\frac{dH}{d\theta}\right)+[l\left(l+1\right)\sin^2\theta-\lambda\big]H=0
+
+
+\end{aligned}\]</span>
+<p>$$</p>
 <p>关于 <span class="math inline">\(\Phi\)</span> 的方程结合自然周期条件 <span class="math inline">\(\Phi\left(\varphi\right)=\Phi\left(\varphi+2\pi\right)\)</span>, 可得： <span class="math display">\[
 \lambda=m^2,\quad m=0,1,2,3,\cdots\\
 \Phi\left(\varphi\right)=A\cos m\varphi+B\sin m\varphi
@@ -465,8 +471,13 @@ x^2\frac{d^2R}{dr^2}+x\frac{dR}{dx}-\left(x^2+m^2\right)R=0
 \]</span></p>
 <p>波动方程 <span class="math inline">\(u_{tt}-a^2\Delta u=0\)</span> 或者输运方程 <span class="math inline">\(u_t-a^2\Delta u=0\)</span> 分离时间和空间变量 (令 <span class="math inline">\(u\left(\vec r,t\right)=T\left(t\right)R\left(\vec r\right)\)</span>)后将得到亥姆霍兹方程。</p>
 <h4 id="柱坐标系-1">（1）柱坐标系</h4>
-<p>$$ \begin{aligned} &amp;v+k^2 v=0\ &amp;v_{rr}+v_r+v_{}+v_{zz}+k^2 v=0\</p>
-<p>\end{aligned} $$</p>
+$$
+<span class="math display">\[\begin{aligned}
+&amp;\Delta v+k^2 v=0\\
+&amp;v_{rr}+\frac{1}{r}v_r+\frac{1}{r^2}v_{\varphi\varphi}+v_{zz}+k^2 v=0\\
+
+\end{aligned}\]</span>
+<p>$$</p>
 <p>设 <span class="math inline">\(v\left(r,\varphi,z\right)\triangleq R\left(r\right)\Phi\left(\varphi\right)Z\left(z\right)\)</span></p>
 <p>先分离 <span class="math inline">\(\Phi\)</span> : <span class="math display">\[
 \frac{r^2 R&#39;&#39;Z+r R&#39;Z+r^2Z&#39;&#39;+k^2r^2 R Z}{RZ}=-\frac{\Phi&#39;&#39;}{\Phi}\triangleq\lambda
@@ -709,8 +720,20 @@ a_{k+2}&amp;=\frac{k\left(k+1\right)-l\left(l+1\right)}{\left(k+2\right)\left(k+
 P_l\left(x\right)=\sum_{k=0}^{[l/2]}\left(-1\right)^k\frac{\left(2l-2k\right)!}{2^l k! \left(l-k\right)!\left(l-2k\right)!}x^{l-2k}
 \]</span></p>
 <hr />
-<p>常用： $$ \begin{aligned} &amp; P_0(x)=1\ &amp;P_1(x)=x\ &amp;P_2(x)=(3x<sup>2-1)\ &amp;P_3(x)=(5x</sup>3-3x)\ &amp;P_4(x)=(35x<sup>4-30x</sup>2+3)\</p>
-<p>&amp;P_l(1)=1\ &amp;P_l(-1)=(-1)^l\ &amp; P_{2n}(0)=(-1)^{n}\ &amp; P_{2n+1}(0)=0 \end{aligned} $$</p>
+常用： $$
+<span class="math display">\[\begin{aligned}
+&amp; P_0\left(x\right)=1\\
+&amp;P_1\left(x\right)=x\\
+&amp;P_2\left(x\right)=\frac{1}{2}\left(3x^2-1\right)\\
+&amp;P_3\left(x\right)=\frac{1}{2}\left(5x^3-3x\right)\\
+&amp;P_4\left(x\right)=\frac{1}{8}\left(35x^4-30x^2+3\right)\\
+
+&amp;P_l\left(1\right)=1\\
+&amp;P_l\left(-1\right)=\left(-1\right)^l\\
+&amp; P_{2n}\left(0\right)=\left(-1\right)^{n}\frac{\left(2l-1\right)!!}{\left(2l\right)!!}\\
+&amp; P_{2n+1}\left(0\right)=0
+\end{aligned}\]</span>
+<p>$$</p>
 <hr />
 <h4 id="勒让德函数的相关性质">（2）勒让德函数的相关性质</h4>
 <ul>
@@ -874,23 +897,21 @@ Z&#39;&#39;-\mu Z=0,\\
 \end{aligned}
 \\
 \]</span></p>
-$$ \begin{aligned} &amp;=0: u={
-<span class="math display">\[\begin{aligned}1\\z\end{aligned}\]</span>
-}{\begin{aligned}&amp;1\ &amp;\end{aligned}}+{
-<span class="math display">\[\begin{aligned}1\\z\end{aligned}\]</span>
-}{
-<span class="math display">\[\begin{aligned}\cos m\varphi\\ \sin m\varphi \end{aligned}\]</span>
-<p>}{\begin{aligned}&amp;^m\ &amp;1/^{m}\end{aligned}}</p>
-\ \ &amp;&gt;0: u={
-<span class="math display">\[\begin{aligned}e^{\sqrt\mu z}\\e^{-\sqrt\mu z}\end{aligned}\]</span>
-}{
-<span class="math display">\[\begin{aligned}\cos m\varphi\\ \sin m\varphi \end{aligned}\]</span>
-}{\begin{aligned}J_m()\N_m()\\end{aligned}}\ \ &amp;&lt;0: u={
-<span class="math display">\[\begin{aligned}\cos\sqrt{-\mu} z\\\sin\sqrt{-\mu} z\end{aligned}\]</span>
-}{
-<span class="math display">\[\begin{aligned}\cos m\varphi\\ \sin m\varphi \end{aligned}\]</span>
-<p>}{\begin{aligned} I_m( )\ I_{-m}( )\\end{aligned}}\</p>
-<p>\end{aligned} $$</p>
+$$
+<span class="math display">\[\begin{aligned}
+&amp;\mu=0:
+u=\left\{\begin{aligned}1\\z\end{aligned}\right\}\left\{\begin{aligned}&amp;1\\ &amp;\ln\rho\end{aligned}\right\}+\left\{\begin{aligned}1\\z\end{aligned}\right\}\left\{\begin{aligned}\cos m\varphi\\ \sin m\varphi \end{aligned}\right\}\left\{\begin{aligned}&amp;\rho^m\\ &amp;1/\rho^{m}\end{aligned}\right\}
+
+\\
+\\
+&amp;\mu&gt;0:
+u=\left\{\begin{aligned}e^{\sqrt\mu z}\\e^{-\sqrt\mu z}\end{aligned}\right\}\left\{\begin{aligned}\cos m\varphi\\ \sin m\varphi \end{aligned}\right\}\left\{\begin{aligned}J_m\left(\sqrt\mu \rho\right)\\N_m\left(\sqrt\mu \rho\right)\\\end{aligned}\right\}\\
+\\
+&amp;\mu&lt;0: 
+u=\left\{\begin{aligned}\cos\sqrt{-\mu} z\\\sin\sqrt{-\mu} z\end{aligned}\right\}\left\{\begin{aligned}\cos m\varphi\\ \sin m\varphi \end{aligned}\right\}\left\{\begin{aligned} \widetilde  I_m\left(\sqrt{-\mu} \rho\right)\\ \widetilde I_{-m}\left(\sqrt{-\mu} \rho\right)\\\end{aligned}\right\}\\
+
+\end{aligned}\]</span>
+<p>$$</p>
 <h4 id="球坐标亥姆霍兹方程">（2）球坐标亥姆霍兹方程</h4>
 <p><span class="math display">\[
 \frac{1}{r^2}\frac{\partial }{\partial r}\left(r^2\frac{\partial v}{\partial r}\right)+\frac{1}{r^2 \sin \theta}\frac{\partial }{\partial\theta}\left(\sin\theta\frac{\partial v}{\partial\theta}\right)+\frac{1}{r^2\sin^2\theta}\frac{\partial^2 v}{\partial\varphi^2}+k^2v=0
@@ -1028,7 +1049,7 @@ N_\nu\left(x\right)=\frac{J_\nu \left(x\right)\cos \nu\pi-J_{-\nu}\left(x\right)
 </ul>
 <h4 id="汉克尔函数">(3) 汉克尔函数</h4>
 <ul>
-<li>公式 $$ \begin{align} &amp;H<sup>{(1)}<em>{} (x)=J</em>(x)+iN_{}(x)\ &amp;H</sup>{(2)}<em>{}(x)=J</em>(x)-iN_(x)</li>
+<li>公式 $$ \begin{align} &amp;H^{(1)}<em>{} (x)=J</em>(x)+iN_{}(x)\ &amp;H^{(2)}<em>{}(x)=J</em>(x)-iN_(x)</li>
 </ul>
 <p>\end{align} $$</p>
 <ul>
@@ -1167,7 +1188,7 @@ u(\vec r)=\int _V G(\vec r,\vec r&#39;)f(\vec r&#39;)d\tau&#39;+\iint_\Sigma \va
 \]</span></p>
 <h4 id="第二类边值问题">（2）第二类边值问题</h4>
 <p>$=(r) $, 不能做到让 <span class="math inline">\(\displaystyle \frac{\partial G}{\partial n}=0\)</span>, 因为其物理意义为内部有热源但边界处绝热——不稳定，会炸掉。</p>
-<p>解决方法是补充一个汇： 取格林函数满足 $G=(r-r_0)-1 {V_T} $, 再令 <span class="math inline">\(\displaystyle \frac{\partial G}{\partial n}=0\)</span></p>
+<p>解决方法是补充一个汇： 取格林函数满足 $G=(r-r_0)- {V_T} $, 再令 <span class="math inline">\(\displaystyle \frac{\partial G}{\partial n}=0\)</span></p>
 <p>几乎不变地推过来，得到： <span class="math display">\[
 u(\vec r)=\int_V G(\vec r,\vec r&#39;)f(\vec r&#39;)d\tau&#39;-\iint_\Sigma G(\vec r,\vec r&#39;)\frac{\partial u}{\partial n&#39;}da&#39;-\frac 1 {V_T}\int_V u(\vec r,\vec r&#39;)d\tau&#39;
 \]</span></p>
@@ -1179,8 +1200,13 @@ u(\vec r)=\int_V G(\vec r,\vec r&#39;)f(\vec r&#39;)d\tau&#39;-\iint_\Sigma G(\v
 u(\vec r)=\int_V G(\vec r,\vec r&#39;)f(\vec r&#39;)d\tau&#39;-\frac 1 \alpha \iint_\Sigma G(\vec r,\vec r&#39;)\varphi(\vec r&#39;)da&#39;
 \]</span></p>
 <h3 id="常用格林函数">7.4 常用格林函数</h3>
-<p>用格林函数解第一类边值问题时，格林函数 <span class="math inline">\(G\)</span> 满足： $$ \begin{cases} G=(r-r_0)\ G|_{}=0</p>
-<p>\end{cases} $$ 由此可以解出格林函数。</p>
+用格林函数解第一类边值问题时，格林函数 <span class="math inline">\(G\)</span> 满足： $$
+<span class="math display">\[\begin{cases}
+\Delta G=\delta(\vec r-\vec r_0)\\
+G\biggm|_{\Sigma}=0
+
+\end{cases}\]</span>
+<p>$$ 由此可以解出格林函数。</p>
 <p><span class="math inline">\(G\)</span> 相当于 <span class="math inline">\(\vec r_0\)</span> 处点电荷和边界 $$ 上感应电荷产生的空间总电势，且边界处的电势为 <span class="math inline">\(0\)</span>。因此可以通过电像法直接写出。</p>
 <h4 id="二维泊松方程基本解">（1）二维泊松方程基本解</h4>
 <p><span class="math display">\[
@@ -1242,8 +1268,15 @@ f\left(x\right)&amp;=\frac 1 {2\pi}\int_{-\infty}^\infty F\left(\omega\right)e^{
 \]</span></p></li>
 <li><p>对称性 <span class="math display">\[
 \mathcal{F^{-1}}\left[f\left(x\right)\right]\left(\omega\right)=\frac 1 {2\pi}\mathcal{F}\left[f\left(x\right)\right]\left(-\omega\right)
-\]</span> 例如： $$ \begin{aligned} &amp;=2 {1+^2}\ &amp; (x)=e<sup>{-|x|}\ &amp;(x)=2e</sup>{-|-x|}\ &amp;i.e.()=e^{-|x|}</p>
-<p>\end{aligned} $$</p></li>
+\]</span> 例如： $$</p>
+<span class="math display">\[\begin{aligned}
+&amp;\mathcal{F}\left[e^{-|x|}\right]=\frac 2 {1+\omega^2}\\
+\implies&amp; \mathcal{F^{-1}}\left[\frac 2 {1+\omega^2}\right]\left(x\right)=e^{-|x|}\\
+\implies &amp;\mathcal{F}\left[\frac 2 {1+\omega^2}\right]\left(x\right)=2\pi\cdot  e^{-|-x|}\\
+&amp;i.e.\quad \mathcal{F}\left[\frac 1 {1+x^2}\right]\left(\omega\right)=\pi e^{-|x|}
+
+\end{aligned}\]</span>
+<p>$$</p></li>
 </ul>
 <h4 id="多重傅立叶积分">（3）多重傅立叶积分</h4>
 <p>对每个参数逐个进行变换。 <span class="math display">\[

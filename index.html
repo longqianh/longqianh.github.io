@@ -80,6 +80,436 @@
     
     
     
+    <article id="post-Optoelectronics-LADAR" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/11/06/Optoelectronics-LADAR/"
+    >LADAR 「激光雷达」</a> 
+</h2>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2020/11/06/Optoelectronics-LADAR/" class="article-date">
+  <time datetime="2020-11-06T11:31:14.000Z" itemprop="datePublished">2020-11-06</time>
+</a>
+      
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <p>光电子学的一个大作业是设计探月三维成像激光雷达，开始毫无头绪，后来在玉泉图书馆找到一本哈工大的书「激光雷达系统设计」（王春晖，陈德应著）。想着以后要把书还回去，目前网上找到的资料大多是论文，而莫得这本宝书，就简要地「抄」一下这本书的部分章节。</p>
+<h1 id="激光雷达系统设计">激光雷达系统设计</h1>
+<p>激光雷达是指以激光作为载波、以光电探测器作为接收器件、以光学望远镜作为天线的光雷达。</p>
+<h3 id="发射光学系统">发射光学系统</h3>
+<p>在远距离激光雷达系统设计中，为了增加作用距离，常常需要压缩激光源地发散角，即采用望远镜系统对激光源进行扩束，这时该定向辐射源具有一定辐射面积，人们常常把这类光源成为空间受限定相光源。由于激光器发射光束具有高斯光束地特点，这时在受限空间内光强分布的不均匀性就凸显出来。一般假设这种光源的方向图函数是高斯型的，即 <span class="math display">\[
+f(\theta,\varphi)=\exp\left[-\frac{r^2}{(z\alpha)^2}\right]=\exp\left[-\frac{\theta^2}{\alpha^2}\right]
+\]</span> 注：方向图函数定义为任意方向 <span class="math inline">\(\vec n\)</span> 上的辐射强度 <span class="math inline">\(I(\vec n)\)</span> 与最大光强之比 <span class="math inline">\(I(\vec n)/I_{\max}=I(\theta,\varphi)/I_{\max}\)</span>。</p>
+<p>书中给了激光发射机的光度学模型和波动学模型，但是没有对激光器进行详细叙述。感觉这是对激光发射的结果进行了建模，而产生激光的过程还需要参考别的书籍。</p>
+<h2 id="接收光学系统">接收光学系统</h2>
+<p>对于远距离探测，常采用望远镜加物镜的结构设计或远心成像光学系统。</p>
+<p>光电探测器是指能把光辐射能转换成一种便于测量（电压或电流）的物理量器件。光电流时光电探测器对入射光功率的响应，它的变化也就反映光信号的变化。</p>
+<p>接收光学系统应由入瞳直径为 <span class="math inline">\(D\)</span>、焦距为 <span class="math inline">\(f\)</span> 到 成像物镜以及光敏面直径 <span class="math inline">\(d\)</span> 的光电探测器组成。</p>
+<h3 id="光学天线">光学天线</h3>
+<p>光学天线的基本功能，就是将激光发射机所发射的激光波束变成激光雷达所需要的照射波束，把激光能量发送到空间，并尽可能多地收集从目标返回地激光能量。光学天线按功能分为发射光学天线和接收光学天线。</p>
+<p>光学天线的设计思路：针对是相干探测还是直接探测激光雷达系统，同时考虑发射光束和接受光束的截面函数、波前相位、偏振态以及光学系统准直度等因素，合理选取、优化设计光学天线与探测器光敏面的几何参数。</p>
+<h3 id="光电探测器传递函数">光电探测器传递函数</h3>
+<p>常见的光电探测器往往是矩形的。假设一个单元探测器的 <em>线度</em> 为 <span class="math inline">\(d\)</span>, 则这个矩形函数的傅立叶变换为 <span class="math inline">\(sinc\)</span> 函数，但愿探测器作为空间滤波器的传递函数为： <span class="math display">\[
+H_{dl}=\operatorname{sinc}(\pi d f).
+\]</span> 如果探测器是面阵的，即含有 <span class="math inline">\(n\times m\)</span> 个单元探测器，每个单元的线度为 <span class="math inline">\((d_x,d_y)\)</span>，单元之间的间距为 <span class="math inline">\((b_x,b_y)\)</span>，重复周期为 <span class="math inline">\((c_x=d_x+b_x,c_y=d_y+b_y)\)</span>,则根据傅立叶变换的位移定理，列阵探测器的传递函数为： <span class="math display">\[
+H_{dnm}=\left(\operatorname{sinc}(\pi d_x f_x)\frac{\sin(\pi c_x n f_x)}{\sin(\pi c_x f_x)}\right)\left(\operatorname{sinc}(\pi d_y f_y)\frac{\sin(\pi c_y m f_y)}{\sin(\pi c_y f_y)}\right).
+\]</span></p>
+<h2 id="微弱光信号探测">微弱光信号探测</h2>
+<h3 id="a-直接探测">A 直接探测</h3>
+<p>信号光 <span class="math inline">\(\to\)</span> 光学天线（光学接收系统) <span class="math inline">\(\to\)</span> 光电探测器 <span class="math inline">\(\to\)</span> 放大器 <span class="math inline">\(\to\;\cdots\)</span></p>
+<ul>
+<li>输出光电流</li>
+</ul>
+<p><span class="math display">\[
+i=\frac{e\eta}{h\nu}P=\frac{e\eta}{2h\nu}\int_S|U(\vec r,t)|^2\text dS\propto |U|^2=I(\vec r,t)
+\]</span></p>
+<ul>
+<li><p>输出电功率</p>
+<p>设光探测器的负载电阻为 <span class="math inline">\(R_L\)</span>. <span class="math display">\[
+P_s=i^2R_L=\left(\frac{e\eta}{h\nu}\right)^2P^2R_L
+\]</span></p></li>
+<li><p>信噪比</p>
+<p>设入射到光电探测器的信号光功率为 <span class="math inline">\(P_s\)</span>, 噪声功率为 <span class="math inline">\(P_n\)</span>, 输出的信号电功率为 <span class="math inline">\(S_p\)</span>, 噪声功率为 <span class="math inline">\(N_p\)</span>, 则 <span class="math display">\[
+S_p+N_p=\left(\frac{e\eta}{h\nu}\right)^2R_L(P_s+P_n)^2=\left(\frac{e\eta}{h\nu}\right)^2R_L(P_s^2+2P_nP_s+P_n^2),
+\]</span></p>
+<p>考虑到信号和噪声的独立性，有 $$ <span class="math display">\[\begin{align}
+S_p&amp;=\left(\frac{e\eta}{h\nu}\right)^2R_LP_s^2\\
+N_p&amp;=\left(\frac{e\eta}{h\nu}\right)^2R_L(2P_sP_n+P_n^2)\\
+
+\end{align}\]</span> <span class="math display">\[
+因此输出信噪比
+\]</span> SNR_D==, $$</p>
+<p>直接探测的输出信噪比在 <span class="math inline">\(P_s/P_n\gg 1\)</span> 时 <span class="math display">\[
+SNR_D\approx\frac{P_s}{2P_n}.
+\]</span> 这从理论上漂亮地证明了直接探测方法不能改善信噪比，且经过光电转换后信噪比损失了3dB。</p></li>
+</ul>
+<h3 id="b-外差探测相干探测">B 外差探测/相干探测</h3>
+<p>加入了本振激光器，光探测器输出的中频功率正比于信号光和本振光平均功率的乘积，因而只要本振光功率足够大，对极微弱光信号仍能得到可观的中频输出！</p>
+<p>外差探测引入了相干光，利用干涉获得有关光信号的全部信息，这也是一种全息吧！</p>
+<h4 id="本振光数学模型">本振光数学模型</h4>
+<p>本机振荡激光器输出的高斯光束由于是短距离传输，其波面有两种情况：一是高斯光束经过精心设计的成像物镜后，束腰落在探测器光敏面上，高斯光束束腰的波阵面表现为平面波的性质，且控制高斯光束束腰半径 <span class="math inline">\(W_0\gg R_D\)</span>, 这时本振光截面函数相对于探测器光敏面而言可认为是均匀光束： <span class="math display">\[
+U_{LOU}(\vec r)=Ae^{-j\vec k\cdot\vec r}.
+\]</span> 二是高斯光束的束腰没有聚焦在光电探测器光敏面，这时本振光复振幅分布的数学模型为: <span class="math display">\[
+U_{LOG}(\vec r)=\frac{A}{W(z)}\exp\left[-\frac{\rho^2}{W^2(z)}\right]\exp\left[-jkz-jk\frac{\rho^2}{2R(z)}+\phi(z)\right].
+\]</span></p>
+<h4 id="信号光数学模型">信号光数学模型</h4>
+<p>主振激光器发射的高斯光束，由于要经过长距离的传输，并被探测目标反射或后向散射形成信号光，信号光回波的光斑将变得非常大（达到几米的数量级），光学接受天线的有效孔径却很小，能被光学天线接受的部分信号光近似为平面波。因此，位于光学天线系统焦平面处探测器光敏面的信号光的复振幅分布对于圆对称光学系统用光束光学天线系统的艾里斑图样。信号光的复振幅数学模型为： <span class="math display">\[
+U_{SA}(\vec r)=A\frac{2J_1(\chi)}{\chi}e^{-j\vec k\cdot \vec r}
+\]</span> 其中，<span class="math inline">\(\chi=\pi r/\lambda F\)</span> 为探测器光学参数，F为接收光学天线系统的F数。（注意，根据菲涅尔衍射原理，还应存在一个二次位相因子，由于激光雷达的作用距离R远大于接收光学系统的孔径d，可将此忽略）</p>
+<h4 id="光学天线与探测器最佳匹配关系">光学天线与探测器最佳匹配关系</h4>
+<p>考虑空间失配角情况下使系统外差效率 <span class="math inline">\(\eta_H\)</span> 最大，得到高斯光束模场半径最佳值约为 <span class="math display">\[
+W\approx 0.77\frac{\lambda f}{d},
+\]</span> 上式为高斯光束艾里斑相干激光雷达光学天线与探测器最佳匹配关系。</p>
+<h2 id="激光雷达方程">激光雷达方程</h2>
+<p>激光雷达系统设计的一个基本问题是确定达到接收机孔径的光强总通量，进而确定入射到探测器光敏面元件上的总的光功率。激光雷达方程通常用来确定激光雷达在特定条件下对某个特殊目标的接收功率。</p>
+<p>书中只给了一些理论推导，莫得一个应用实例，感觉有道理但不太直观。就不抄了。</p>
+<h3 id="参考文献">参考文献</h3>
+<p>[1] 王春晖, 陈德应. 激光雷达系统设计[J].</p>
+
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+
+    </footer>
+
+  </div>
+
+  
+
+  
+
+  
+  
+  
+
+</article>
+    
+    <article id="post-Optoelectronics-Optoelectronics" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/10/23/Optoelectronics-Optoelectronics/"
+    >Optoelectronics</a> 
+</h2>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2020/10/23/Optoelectronics-Optoelectronics/" class="article-date">
+  <time datetime="2020-10-23T01:45:43.000Z" itemprop="datePublished">2020-10-23</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Optoelectronics/">Optoelectronics</a>
+  </div>
+
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <h1 id="光电子学笔记">光电子学笔记</h1>
+<h2 id="matrix-optics">Matrix Optics</h2>
+<h2 id="gaussian-beam">Gaussian Beam</h2>
+<h2 id="photon-optics-光子光学">Photon Optics 「光子光学」</h2>
+<p>Category :</p>
+<ul>
+<li>Single Photon’s Property</li>
+<li>Photon Stream</li>
+</ul>
+<h3 id="photon-interference-单光子干涉">1. Photon Interference 「单光子干涉」</h3>
+<p>If a histogram of the locations of the detected photon is constructed by repeating the experiment many times, the classical interference pattern obtained by carrying out the experiment only once with a strong beam of light emerges.</p>
+<p><strong>单光子干涉的统计规律和经典光波干涉的现象一致。</strong>干涉现象应该是单光子干涉的统计规律的显现，或者说其本质是单光子干涉。</p>
+<p>单光子是可以干涉的，这来自光子本身的性质。光子的性质由一个概率波 <span class="math inline">\(\psi\)</span> 描述，当处于两条缝可以选择的叠加态时，<span class="math inline">\(|\psi|^2\)</span> 就会出现干涉项。</p>
+<p>我感觉这很数学，很妙，物理学家从现象中挖出了光子的本质。</p>
+<p>参考：</p>
+<ul>
+<li>如何解释单光子干涉？ - 灵剑的回答 - 知乎 https://www.zhihu.com/question/40343270/answer/111817926</li>
+<li>为何单个电子通过双缝会发生干涉？ - 赵泠的回答 - 知乎 https://www.zhihu.com/question/61933450/answer/1225803587</li>
+</ul>
+<h3 id="photon-stream-光子流">2. Photon Stream 「光子流」</h3>
+<p>光子流中光子的到达是随机的，量子力学成功地找到了这种随机性的来源：不确定性原理。</p>
+<p>接下来要对这种随机性进行建模，涉及一些随机过程和数理统计。</p>
+<h4 id="描述光子流">描述光子流</h4>
+<ul>
+<li>平均光子通量密度 <span class="math inline">\(\phi(\vec r)=\displaystyle \frac{I(\vec r)}{h\bar\nu}\)</span> ：单位时间单位面积的平均光子数</li>
+<li>平均光子通量 <span class="math inline">\(\Phi(\vec r)=\int \phi(\vec r)\ \text{d}A=\displaystyle\frac{P}{h\bar\nu}\)</span> ：单位时间的平均光子数</li>
+<li>平均光子数 <span class="math inline">\(\bar n=\int \Phi\ \text{d}t=\displaystyle \frac{E}{h\bar\nu}\)</span></li>
+</ul>
+<p>在频域，用对应的谱密度去描述。</p>
+<h4 id="光子流中的到达光子数">光子流中的到达光子数</h4>
+<h5 id="coherent-light">（1）Coherent Light</h5>
+<p>相干光有恒定的功率。因此有确定的平均光子数，这也是其服从的泊松分布的强度。</p>
+<p>为什么光子数分布 <span class="math inline">\(p(n)\)</span> 服从泊松分布？</p>
+<p>对于一段时间 <span class="math inline">\(T\)</span>, 将其等分为非常多的份数 <span class="math inline">\(N\)</span>, 使得每一份时间 <span class="math inline">\(T/N\)</span> 里最多出现一个光子。出现一个光子的概率应为 <span class="math inline">\(\bar n/N\)</span>，整个时间段 <span class="math inline">\(T\)</span> 内出现 <span class="math inline">\(n\)</span> 个光子的概率就服从二项分布： <span class="math display">\[
+p(n)=C_N^n(\bar n/N)^n(1-\bar n/N)^{N-n}
+\]</span> <span class="math inline">\(N\to \infty\)</span>, 二项分布成为 Poisson 分布： <span class="math display">\[
+p(n)=\frac{\bar n^n e^{-\bar n}}{n!}
+\]</span></p>
+<h5 id="thermal-light">（2）Thermal Light</h5>
+<p>对于热光，要考虑热平衡条件下的分布—玻尔兹曼分布。</p>
+<p><em>Boltzmann Distribution</em>：gives the probability that a system will be in a certain state as a function of that state's energy.</p>
+<p>（推导）The Boltzmann distribution is the distribution that maximizes the entropy <span class="math display">\[
+H(p_1,p_2,\dots,p_M)=-\sum_{i=1}^Mp_i\log_2 p_i
+\]</span> subject to the constraint that <span class="math inline">\(\sum p_i\varepsilon_i\)</span> equals a particular mean energy value.</p>
+<p>热平衡条件下的熵应为最大，由此导出玻尔兹曼分布： <span class="math display">\[
+p_i\propto e^{-\varepsilon_i/kT}
+\]</span> 即处于粒子状态 <span class="math inline">\(i\)</span> 的概率与状态 <span class="math inline">\(i\)</span> 的能量 <span class="math inline">\(\varepsilon_i\)</span> 的关系。</p>
+<p>对于光子流，其光子数的分布为： <span class="math display">\[
+p(n)\propto \left[\exp\left(-\frac{nh\nu}{kT}\right)\right]^n\label{photon-dis-boltz}
+\]</span> 由 <span class="math inline">\(\bar n=\sum np(n)\)</span> 得到 <span class="math display">\[
+\bar n=\frac{1}{\exp(h\nu/kT)-1}
+\]</span> 将其带入 (<span class="math inline">\(\ref{photon-dis-boltz}\)</span>)，得到 Bose-Einstein 分布： <span class="math display">\[
+p(n)=\frac{1}{\bar n+1}\left(\frac{\bar n}{\bar n+1}\right)^n.
+\]</span></p>
+<h4 id="坑待填">（3）坑待填</h4>
+<ul>
+<li>doubly stochastic Poisson process (DSPP)</li>
+<li>quantum states of light
+<ul>
+<li>Two-Photon Optics</li>
+</ul></li>
+</ul>
+<h2 id="light-and-matter">Light and Matter</h2>
+<h3 id="跃迁与辐射">1. 跃迁与辐射</h3>
+<p>需要对原子的辐射、跃迁进行完整的建模。</p>
+<p>接下来进行宏观的分析。</p>
+<ul>
+<li>自发辐射寿命</li>
+</ul>
+<p>设单位时间内自发辐射概率密度为 <span class="math inline">\(\operatorname P_{sp}\)</span>，即 <span class="math inline">\(1s\)</span> 辐射 <span class="math inline">\(\operatorname{P}_{sp}\)</span> 个光子，因此光子的自发辐射寿命 <span class="math display">\[
+t_{sp}=\frac{1}{\operatorname{P}_{sp}}
+\]</span> 即每个光子辐射出来“平均”需要多少 <span class="math inline">\(s\)</span>。</p>
+<p>事实上，<span class="math inline">\(\text dN/\text dt=-Np_{sp}\implies N=e^{-p_{sp}t}\)</span>, <span class="math inline">\(t_{sp}\)</span> 为粒子数减小为原来 <span class="math inline">\(1/e\)</span> 时的时间间隔。</p>
+<ul>
+<li>跃迁截面</li>
+</ul>
+<p>跃迁截面可以看作有效作用面积： <span class="math display">\[
+\sigma(\nu)=Sg(\nu),\quad \int_0^\infty g(\nu)\text d\nu=1
+\]</span> <span class="math inline">\(S\)</span> 为相互作用强度，<span class="math inline">\(g(\nu)\)</span> 为线型函数。</p>
+<p>对洛伦兹线形，有 <span class="math inline">\(g(\nu_0)=2/(\pi\Delta \nu)\)</span>, <span class="math inline">\(\Delta\nu=1/2\pi t_{sp}\)</span></p>
+<ul>
+<li>辐射概率密度</li>
+</ul>
+<p>对自发辐射、吸收和受激辐射<strong>（怎么来的？）</strong>： <span class="math display">\[
+\begin{align}
+\operatorname p_{sp}&amp;=\frac{c}{V}\sigma(\nu)\\
+\operatorname P_{ab}&amp;=n\frac{c}{V}\sigma(\nu)\\
+W_i:=\operatorname P_{st}&amp;=n\frac{c}{V}\sigma(\nu)
+\end{align}
+\]</span> 其中 <span class="math inline">\(n\)</span> 为相互作用过程中的光子数。</p>
+<p>一般光子自发辐射寿命可测，由此可去算 <span class="math inline">\(S\)</span>： $$ <span class="math display">\[\begin{align}
+\operatorname P_{sp}&amp;=\int_0^\infty \left[\frac{c}{V}\sigma(\nu)\right]\left[VM(\nu)\right]\text d \nu\approx M(\nu_0)cS\\
+\implies &amp; S=\frac{\lambda^2}{8\pi t_{sp}}
+
+\end{align}\]</span> $$</p>
+<ul>
+<li><p>受激辐射概率密度</p>
+<p><span class="math inline">\(W_i\)</span> 可以理解为一个未被激励的原子吸收一个光子的概率密度 <span class="math inline">\(\implies\)</span> 吸收光子的平均密度为 <span class="math inline">\(N_1W_i\)</span>。</p>
+<p>对于单频光：<span class="math inline">\(n=\phi V/c\)</span> <span class="math display">\[
+W_i=\operatorname P_{sp}=\phi \cdot \sigma(\nu)
+\]</span> 对于宽频光：需知道其光谱能量密度 <span class="math inline">\(\rho(\nu)\)</span> <span class="math display">\[
+\begin{align}
+W_i&amp;=\int_0^\infty n(\nu)\operatorname P_{st}(\nu)\text d\nu=\int_0^\infty \left[\rho(\nu)V\text d \nu\right/h\nu]\left[\frac{c}{V}\sigma(nu)\right]\\
+&amp;\approx \frac{\bar n}{t_{sp}}
+\end{align}
+\]</span> 其中 <span class="math inline">\(\bar n=\displaystyle\frac{\lambda_0^3}{8\pi h}\rho(\nu_0)=\frac{cS\operatorname P_{sp}\rho(\nu_0)}{h\nu_0}\)</span> 代表每个模式的平均光子数。</p></li>
+<li><p>爱因斯坦系数</p></li>
+</ul>
+<h3 id="速率方程">2. 速率方程</h3>
+<p>我们需要描述泵浦作用下原子内部的跃迁情况，这相当于原子辐射和跃迁的微观分析。</p>
+<p>设泵源使得的由下能级跃迁到能级2的速率为 <span class="math inline">\(R_2\)</span>,（单位时间单位体积的粒子数） 从能级1跃迁到其他能级的速率为 <span class="math inline">\(R_1\)</span>。</p>
+<p>由跃迁速率和能级寿命的反比关系，能级寿命 <span class="math inline">\(\tau_2^{-1}=\tau_{21}^{-1}+\tau_{20}^{-1}\)</span>, <span class="math inline">\(\tau_{21}^{-1}=\tau_{sp}^{-1}+\tau_{nr}^{-1}\)</span>, <span class="math inline">\(\tau_{nr}\)</span> 为非辐射跃迁成分。</p>
+<p>不考虑辐射时，有： <span class="math display">\[
+\begin{align}
+\frac{\text dN_2}{\text dt}&amp;=R_2-\frac{N_2}{\tau_2}\\
+\frac{\text dN_1}{\text d t}&amp;=-R_1-\frac{N_1}{\tau_1}+\frac{N_2}{\tau_{21}}
+\end{align}
+\]</span> 稳态条件下（ <span class="math inline">\(\text dN/\text d t=0\)</span> ）解得无辐射时稳态粒子数差 <span class="math display">\[
+N_0=R_2\tau_2(1-\frac{\tau_1}{\tau_{21}})+R_1\tau_1
+\]</span></p>
+<p>考虑辐射时： <span class="math display">\[
+\begin{aligned}
+\frac{\text dN_2}{\text dt}&amp;=R_2-\frac{N_2}{\tau_2}+N_1W_i-N_2W_i\\
+\frac{\text dN_1}{\text d t}&amp;=-R_1-\frac{N_1}{\tau_1}+\frac{N_2}{\tau_{21}}-N_1W_i+N_2W_i
+\end{aligned}
+\]</span> 稳态条件下解得： <span class="math display">\[
+N=\frac{N_0}{1+\tau_sW_i}
+\]</span> 这就意味着随着辐射变强，<span class="math inline">\(W_i\)</span> 增大（<strong>为什么会增大？</strong>），反转粒子数出现饱和。其中 <span class="math inline">\(\tau_s=\tau_2+\tau_1(1-\displaystyle\frac{\tau_2}{\tau_{21}})\)</span> 。</p>
+<p>对于四能级泵浦机制，外部的能量源以速率 <span class="math inline">\(R\)</span> 将原子从能级0泵浦到能级3（<strong>如何做到？</strong>），有以下假设：</p>
+<ul>
+<li><p>能级1和能级3是短寿命的 <span class="math inline">\(N_1\approx N_3\approx 0\)</span></p></li>
+<li><p>能级3到能级2的衰减非常快 <span class="math inline">\(R_2=R\)</span></p></li>
+<li><p>能级1没有原子泵浦进入和流出 <span class="math inline">\(R_1=0\)</span></p></li>
+<li><p>能级2和能级1之间的非辐射跃迁一般可以忽略 <span class="math inline">\(\tau_{20}\gg t_{sp}\gg \tau_1 \implies \tau_s\approx t_{sp}\)</span></p></li>
+</ul>
+<p>三能及泵浦机制抽去了四能级机制中基态能级和长寿命能级2度中间级，它有以下假设：</p>
+<ul>
+<li>3—1衰减很慢，3—2衰减很快 <span class="math inline">\(\tau_{32}\ll \tau_{31}\)</span> <span class="math inline">\(\implies \tau_2=\tau_{21},\tau_1=\infty\)</span></li>
+<li>能级3寿命很短 <span class="math inline">\(N_a=N_1+N_2\)</span></li>
+<li>能级2和能级1之间的非辐射跃迁可忽略 <span class="math inline">\(t_{sp}\ll t_{nr}\)</span> （速率很慢）</li>
+</ul>
+<p>由此重新求解速率方程，得到 <span class="math inline">\(\tau_s\approx 2t_{sp}\)</span> .</p>
+<h2 id="laser-theory-激光器机理">Laser Theory 「激光器机理」</h2>
+<p>反转粒子数</p>
+<p>平均光子通量密度</p>
+<p>饱和平均光子通量密度</p>
+<h3 id="增益饱和">1. 增益饱和</h3>
+<ul>
+<li>增益系数</li>
+</ul>
+<p>单位时间光子数净增量： $$ <span class="math display">\[\begin{align}
+\text d\phi&amp;=(N_2-N_1)W_i\cdot \text dz=NW_i\text dz\\
+\implies \frac{\text d\phi(z)}{\text d z}&amp;=NW_i=N\phi(z)\sigma(\nu):=\gamma(\nu)\phi(z)\\
+\phi(z)&amp;=\phi(0)e^{\gamma(\nu)z}, I(z)=I(0)e^{\gamma(\nu)z}
+
+\end{align}\]</span> <span class="math display">\[
+由此，激光介质的增益系数
+\]</span> ()=N() $$</p>
+<ul>
+<li>增益饱和</li>
+</ul>
+<p>小信号增益系数 <span class="math display">\[
+\gamma_0(\nu)=N_0\sigma(\nu)=N_0\frac{\lambda^2}{8\pi t_{sp}}g(\nu)
+\]</span> 由反转粒子数 <span class="math inline">\(N\)</span> 存在饱和以及跃迁截面的不变性，有：</p>
+<p>饱和放大增益系数 <span class="math display">\[
+\gamma(\nu)=\frac{\gamma_0(\nu)}{1+\phi/\phi_s}
+\]</span></p>
+<p>其中饱和光子流密度 <span class="math display">\[
+\phi_s=\frac{1}{\tau_s\sigma(\nu)}
+\]</span></p>
+<ul>
+<li><p>总增益</p>
+<p>通过求解 <span class="math display">\[
+\frac{\text d\phi}{\text d z}=\frac{\gamma_0\phi}{1+\phi/\phi_s}
+\]</span> 可以得到输出光子流密度 <span class="math inline">\(\phi(d)\)</span> 与输入光子流密度 <span class="math inline">\(\phi(0)\)</span> 的关系。</p>
+<p>在确定增益系数 <span class="math inline">\(\gamma\)</span> 后，由 <span class="math display">\[
+G=e^{(\gamma-\alpha_r) d}
+\]</span> 得到总增益。如果是宽频光入射，则需对频率进行积分： <span class="math display">\[
+G=\frac{1}{2\Delta \nu}\int_{\nu_0-\Delta \nu}^{\nu_0+\Delta\nu}e^{[\gamma(\nu)-\alpha_r]d}\text d \nu
+\]</span></p></li>
+<li><p>相移</p>
+<p>（不明白） <span class="math display">\[
+H(\nu)=\frac{1}{2}\gamma(\nu)-i\varphi(\nu)
+\]</span> 放大器系统传递函数的实部和虚部满足希尔伯特变换的关系，由此推出 <span class="math display">\[
+\phi(\nu)=\frac{\nu-\nu_0}{\Delta\nu}\gamma(\nu)
+\]</span></p></li>
+</ul>
+<h3 id="反馈与损耗">2. 反馈与损耗</h3>
+<p>首先描述一个光学谐振腔，有模式间隔、细度、光谱半宽度、腔内光子寿命、品质因子。</p>
+<p>s</p>
+<p>对于一个光学谐振腔，腔内光子寿命 <span class="math display">\[
+\tau_p=\frac{1}{\alpha_r c}
+\]</span> 其中 <span class="math inline">\(\alpha_r\)</span> 为光学谐振腔的总衰减系数： <span class="math display">\[
+\begin{align}
+\alpha_r&amp;=\alpha_s+\alpha_{m1}+\alpha_{m2}
+\\
+&amp;=\alpha_s+\frac{1}{2d}\ln\frac{1}{R_1}+\frac{1}{2d}\ln\frac{1}{R_2}
+\end{align}
+\]</span> 其中 <span class="math inline">\(\alpha_s\)</span> 为分布是损耗的衰减系数，光沿谐振腔来回一周时有： <span class="math display">\[
+\phi(z+2d)=\phi(z)e^{-\alpha_r2d}=\phi(0)R_1R_2e^{-\alpha_s2d}
+\]</span></p>
+<h3 id="激光振荡条件">3. 激光振荡条件</h3>
+<ul>
+<li>增益条件：</li>
+</ul>
+<p><span class="math display">\[
+\gamma_0(\nu)&gt;\alpha_r\implies N_0&gt;\frac{\alpha_r}{\sigma(\nu)}:=N_t
+\]</span></p>
+<p>阈值反转粒子数差 <span class="math display">\[
+N_t=\frac{\alpha_r}{\sigma(\nu)}
+\]</span></p>
+<ul>
+<li>位相条件： <span class="math display">\[
+2kd+2\phi(\nu)d=2\pi q,\quad q=1,2,\dots
+\]</span> 可得冷腔频率 <span class="math inline">\(\nu_q\)</span> 被拉向中心频率 <span class="math inline">\(\nu_0\)</span>： <span class="math display">\[
+\nu=\nu_q-\frac{c}{2\pi}\frac{\nu-\nu_0}{\Delta \nu}\gamma(\nu)
+\]</span></li>
+</ul>
+<h3 id="激光输出特性">4. 激光输出特性</h3>
+<p>功率：每秒的输出光子能量 <span class="math display">\[
+P=h\nu\cdot n
+\]</span> 输出光子流密度</p>
+<p>输出光子数</p>
+<h3 id="调q激光器">5. 调Q激光器</h3>
+<h3 id="腔倒空激光器">6. 腔倒空激光器</h3>
+<h3 id="锁模激光器">7. 锁模激光器</h3>
+<p>班级毅行</p>
+<p>光强～透射率 看到的光越强，透射率越大嘛！</p>
+
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+
+    </footer>
+
+  </div>
+
+  
+
+  
+
+  
+  
+  
+
+</article>
+    
     <article id="post-Projects-3D-Holography" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
@@ -157,7 +587,7 @@
 
 </article>
     
-    <article id="post-Physics-光学材料笔记" class="article article-type-post" itemscope
+    <article id="post-Optoelectronics-光学材料笔记" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
@@ -165,7 +595,7 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2020/09/16/Physics-%E5%85%89%E5%AD%A6%E6%9D%90%E6%96%99%E7%AC%94%E8%AE%B0/"
+  <a class="article-title" href="/2020/09/16/Optoelectronics-%E5%85%89%E5%AD%A6%E6%9D%90%E6%96%99%E7%AC%94%E8%AE%B0/"
     >光学材料笔记</a> 
 </h2>
  
@@ -175,7 +605,7 @@
 
     
     <div class="article-meta">
-      <a href="/2020/09/16/Physics-%E5%85%89%E5%AD%A6%E6%9D%90%E6%96%99%E7%AC%94%E8%AE%B0/" class="article-date">
+      <a href="/2020/09/16/Optoelectronics-%E5%85%89%E5%AD%A6%E6%9D%90%E6%96%99%E7%AC%94%E8%AE%B0/" class="article-date">
   <time datetime="2020-09-16T01:57:23.000Z" itemprop="datePublished">2020-09-16</time>
 </a>
       
@@ -195,6 +625,31 @@
       
       <h1 id="光学材料笔记">光学材料笔记</h1>
 <p>记录一些在光学材料与元件制造课程中的整理和总结。</p>
+<h2 id="光学玻璃">光学玻璃</h2>
+<h2 id="光学晶体">光学晶体</h2>
+<h3 id="点群">点群</h3>
+<p>这是「晶体学」的知识，「固体物理学」也可学到。</p>
+<p>晶体学中，晶体学点群是对称操作的集合（旋转、面对称、中心对称）。</p>
+<p>给定一个一定构型的立方晶系，根据它所具有的对称性（以对称操作要素描述），可以形成各种组合，化简后得到32个点群。给定一个晶体，根据它的布拉维点阵，我们可以确定它是具有哪一种对称性。</p>
+<p>国际符号用存在于某个特定方向上的对称元素来表示点群。</p>
+<p>比如一个正交晶系，它有 mm2 / 222 / mmm 这三种对称性组合（具体描述为 <span class="math inline">\(G_22P\)</span> / <span class="math inline">\(3G_2\)</span> / <span class="math inline">\(3G_23PC\)</span> )。给定一个正交晶系的晶体，通过判断它的点阵符合那种对称组合所生成的点阵（一个点由对称性生出的点阵列），我们可以确定它所属的点群。</p>
+<p><strong>m与对称元素PC？</strong></p>
+<p><strong>可以从 mmm 推出 <span class="math inline">\(3G_23PC\)</span> 吗？</strong></p>
+<h3 id="张量">张量</h3>
+<p>这里的张量算是对物理学中张量的简化，省去了方向并矢的书写。</p>
+<p>二阶张量变换定律：</p>
+<p>张量在坐标系的变换前后，物理公式的形式应该保持不变，即 <span class="math display">\[
+p_i=T_{ij}q_j\longmapsto p_i&#39;=T_{ij}&#39;q_j&#39;
+\]</span> 考虑到 <span class="math display">\[
+p_i&#39;=a_{ik}p_k,\; q_l=a_{jl}q_j
+\]</span> 有 <span class="math display">\[
+p_i&#39;=a_{ik}p_k=a_{ik}T_{kl}q_{l}=a_{ik}a_{lj}T_{kl}q_j&#39;
+\]</span> 因此 <span class="math display">\[
+\begin{align}
+T_{ij}&#39;&amp;=a_{ik}a_{jl}T_{kl}\\
+T_{ij}&amp;=a_{ki}a_{lj}T_{kl}&#39;
+\end{align}
+\]</span></p>
 
       
       <!-- reward -->
@@ -222,7 +677,7 @@
 
 </article>
     
-    <article id="post-Physics-物理光学笔记" class="article article-type-post" itemscope
+    <article id="post-Optoelectronics-物理光学笔记" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
@@ -230,7 +685,7 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2020/09/16/Physics-%E7%89%A9%E7%90%86%E5%85%89%E5%AD%A6%E7%AC%94%E8%AE%B0/"
+  <a class="article-title" href="/2020/09/16/Optoelectronics-%E7%89%A9%E7%90%86%E5%85%89%E5%AD%A6%E7%AC%94%E8%AE%B0/"
     >物理光学笔记</a> 
 </h2>
  
@@ -240,7 +695,7 @@
 
     
     <div class="article-meta">
-      <a href="/2020/09/16/Physics-%E7%89%A9%E7%90%86%E5%85%89%E5%AD%A6%E7%AC%94%E8%AE%B0/" class="article-date">
+      <a href="/2020/09/16/Optoelectronics-%E7%89%A9%E7%90%86%E5%85%89%E5%AD%A6%E7%AC%94%E8%AE%B0/" class="article-date">
   <time datetime="2020-09-16T01:42:00.000Z" itemprop="datePublished">2020-09-16</time>
 </a>
       
@@ -260,14 +715,73 @@
       
       <h1 id="物理光学笔记">物理光学笔记</h1>
 <p>记录一下自己在学习物理光学过程中的思考和总结。</p>
-<h2 id="光的反射和折射">光的反射和折射</h2>
-<h3 id="在电介质中">在电介质中</h3>
+<h2 id="光的电磁理论基础">光的电磁理论基础</h2>
+<h3 id="菲涅尔公式">菲涅尔公式</h3>
 <ul>
-<li>菲涅尔公式</li>
-<li>倏逝波</li>
-<li>应用</li>
+<li><p><span class="math inline">\(r_p,r_s,t_p,t_s\)</span></p></li>
+<li><p>布儒斯特角：全偏振临界角，<span class="math inline">\(r_p=0,\theta_1+\theta_2=90^\circ\)</span></p></li>
 </ul>
-<h3 id="在导体中">在导体中</h3>
+<h3 id="全反射探究">全反射探究</h3>
+<ul>
+<li>存在倏逝波</li>
+<li>有相位变化 <span class="math inline">\(\delta=\delta_s-\delta_p\)</span></li>
+<li>无能量损失</li>
+</ul>
+<h3 id="偏振">偏振</h3>
+<p>关键是 <span class="math inline">\(p\)</span> 光和 <span class="math inline">\(s\)</span> 光的相位差（可看作振动方向垂直的光波的叠加）</p>
+<ul>
+<li>线偏振：<span class="math inline">\(\delta=0\)</span> 或 <span class="math inline">\(\pi\)</span></li>
+<li><span class="math inline">\(\sin\delta&lt;0\)</span> 右旋偏振，<span class="math inline">\(\sin\delta&gt;0\)</span> 左旋偏振</li>
+<li>偏振椭圆的相关量</li>
+</ul>
+<h3 id="光波的傅立叶分析">光波的傅立叶分析</h3>
+<p>实际光波是一个<em>波列</em>。波的单色性和波列长度有关。</p>
+<p>有效空间频率范围 <span class="math inline">\(\Delta k=\pi/L\)</span></p>
+<p>有效波长范围 <span class="math inline">\(\Delta \lambda=\lambda^2/2L\)</span></p>
+<p>时间频率范围 <span class="math inline">\(\Delta \nu=\Delta \left(c/\lambda\right)=c/2L\)</span></p>
+<h2 id="傅立叶光学">傅立叶光学</h2>
+<h3 id="菲涅尔衍射">菲涅尔衍射</h3>
+<p>菲涅尔傍轴近似下： <span class="math display">\[
+\begin{align}
+\widetilde E(u,v)&amp;=\widetilde E(x,y)=\frac{1}{i\lambda z_1}\exp\left[ik\left(z_1+\frac{x^2+y^2}{2z_1}\right)\right]\iint_{-\infty}^\infty \widetilde E(x_1,y_1)\exp\left[\frac{ik}{2z_1}(x_1^2+y_1^2)\right]\exp\left[-ik(\frac{x}{z_1}x_1+\frac{y}{z_1}y_1)\right]\operatorname{dx_1dy_1}\\
+&amp;=\widetilde A\cdot\mathcal{F}\left(\widetilde E(x_1,y_1)\cdot \exp\left[\frac{ik}{2z_1}(x_1^2+y_1^2)\right]\right)
+\end{align}
+\]</span> 注意前面含 <span class="math inline">\((x,y)\)</span> 的相位因子在光强不显现，但可以利用干涉证明其存在。</p>
+<h3 id="夫琅和费衍射">夫琅和费衍射</h3>
+<p>在夫琅和费远场近似下： <span class="math display">\[
+\begin{align}
+\widetilde E(u,v)&amp;=\widetilde E(x,y)=\frac{1}{i\lambda z_1}\exp\left[ik\left(z_1+\frac{x^2+y^2}{2z_1}\right)\right]\iint_{-\infty}^\infty \widetilde E(x_1,y_1)\exp\left[-ik(\frac{x}{z_1}x_1+\frac{y}{z_1}y_1)\right]\operatorname{dx_1dy_1}\\
+&amp;=\widetilde A\cdot\iint_{-\infty}^\infty \widetilde E(x_1,y_1)\exp\left[-i2\pi(ux_1+vy_1)\right]\operatorname{dx_1dy_1}\\
+&amp;=\widetilde A\cdot\mathcal{F}\left[\widetilde E(x_1,y_1)\right]
+\end{align}
+\]</span> 其中，<span class="math inline">\((u,v)=\displaystyle (\frac{x}{\lambda z_1},\frac{y}{\lambda z_1})=(\frac{\cos\alpha}{\lambda},\frac{\cos\beta}{\lambda})\)</span> 为空间频率 <span class="math inline">\(1/\lambda\)</span> 在 <span class="math inline">\(x,y\)</span> 方向的分解。</p>
+<p>一张复杂的图片有许多不同的空间频率的单频信息组成，当单色波正入射在待分析的图像上时，通过夫琅和费衍射，一定空间频率的单频信息就被向特定方向衍射的平面波输送出来，所有衍射波最终会聚在焦面上的不同位置而形象地展示出原图片的频谱。这一过程的“运算速度”显然远高于计算机，一照就出来了。</p>
+<p>理想的夫琅和费衍射系统是一个傅立叶频谱分析器。</p>
+<h3 id="透镜">透镜</h3>
+<p>进入透镜的发散球面波，出去时变成了会聚的： <span class="math display">\[
+\widetilde E(x_1,y_1)=A\exp(ikd_0)\exp\left[\frac{ik}{2d_0}(x_1^2+y_1^2)\right]\to \widetilde E&#39;(x_1,y_1)=A\exp(-ikd)\exp\left[-\frac{ik}{2d}(x_1^2+y_1^2)\right]
+\]</span></p>
+<p>透镜的透射系数： $$ <span class="math display">\[\begin{align}
+\widetilde t(x_1,y_1)&amp;=\frac{\widetilde E}{\widetilde E&#39;}=\exp\left[-ik\frac{(x_1^2+y_1^2)}{2}\left(\frac 1 d+\frac 1 {d_0}\right)\right]\\
+&amp;=\exp\left(-ik\frac{x_1^2+y_1^2}{2f}\right)
+
+\end{align}\]</span> $$ 其中 <span class="math inline">\(f\)</span> 满足：<span class="math inline">\(\displaystyle\frac{1}{d_0}+\frac{1}{d}=\frac{1}{f}\)</span> .</p>
+<h3 id="深入理解透镜的傅立叶变换性质">深入理解透镜的傅立叶变换性质</h3>
+<p>光经过有限大物体后的传播过程就是衍射的过程，根据传播距离可以用夫琅和费衍射或者菲涅尔衍射计算传播到像面后的光场分布。可以说，衍射无处不在，传播就有衍射。</p>
+<p>假设有这么一个夫琅和费衍射系统：光源—狭缝（衍射平面）-透镜--成像平面</p>
+<p>设光透过衍射平面后的场分布为 <span class="math inline">\(\widetilde E(x_1,y_1)\)</span>, 透过透镜后的场分布为： <span class="math display">\[
+\widetilde E&#39;(x_1,y_1)=\widetilde E(x_1,y_1)\cdot \widetilde t(x_1,y_1)
+\]</span> 然后衍射到透镜后焦面，由于是有限距离，应该用菲涅尔衍射去计算： $$ <span class="math display">\[\begin{align}
+\widetilde E(u,v)&amp;=\widetilde E(x,y)=\frac{e^{ikf}}{i\lambda f}e^{ik\frac{x^2+y^2}{2f}}\mathcal{F}\left[\widetilde E&#39;(x_1,y_1)\exp\left(ik\frac{x_1^2+y_1^2}{2f}\right)\right]\\
+&amp;=\widetilde A\cdot\mathcal{F}\left[\widetilde E(x_1,y_1)\right]\mid_{u=\frac{x}{\lambda f},v=\frac{y}{\lambda f}}
+
+\end{align}\]</span> $$ 注意透镜的透射系数刚刚好消掉了菲涅尔衍射的那个系数，使最终结果成为了一个干净的傅立叶变换。</p>
+<p>因此整个夫琅和费衍射系统本来是夫琅和费衍射，做个傅立叶变换就好了，但是要在很远处才能观察。为了在近处观察加了透镜，要改为菲涅尔衍射去计算，结果兜兜转转算完得到和夫琅和费衍射一样的形式。</p>
+<p>另一方面可以看到，从衍射平面到透镜再到透镜后焦面，整合后等价于做一个傅立叶变换，这就是透镜的傅立叶变换性质：透镜前的场知道了，加个透镜则后焦面的场就是做一个傅立叶变换。这是透镜的透射系数和菲涅尔衍射美妙的结合。</p>
+<p>相位因子？</p>
+<p>如果透镜和衍射平面有一定距离 <span class="math inline">\(d_0\)</span>, 那么这时候夫琅和费衍射的东西就显现出来了，这相当于夫琅和费衍射多传播了 <span class="math inline">\(d_0\)</span>, 透镜前的光场 <span class="math display">\[
+\widetilde E(x_2,y_2)=\widetilde E(x_1,y_1)\cdot e^{ik(d_0+)}
+\]</span></p>
 
       
       <!-- reward -->
@@ -295,7 +809,7 @@
 
 </article>
     
-    <article id="post-Physics-Quantum-Mechanics-Notes" class="article article-type-post" itemscope
+    <article id="post-Physics-Quantum-Mechanics" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
@@ -303,7 +817,7 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2020/09/15/Physics-Quantum-Mechanics-Notes/"
+  <a class="article-title" href="/2020/09/15/Physics-Quantum-Mechanics/"
     >Quantum-Mechanics</a> 
 </h2>
  
@@ -313,7 +827,7 @@
 
     
     <div class="article-meta">
-      <a href="/2020/09/15/Physics-Quantum-Mechanics-Notes/" class="article-date">
+      <a href="/2020/09/15/Physics-Quantum-Mechanics/" class="article-date">
   <time datetime="2020-09-15T10:41:11.000Z" itemprop="datePublished">2020-09-15</time>
 </a>
       
@@ -358,6 +872,59 @@
 <p>After we understand the principle of the motion of electrons, we consider the <em>being</em> (or state) of it : what is the being of an electron inside the apparatus in the 6th experiment ?</p>
 <p>We know it is white, so it cannot be hard or soft, otherwise we will get half-half result by the uncertaintu principle. It cannot be both hard and soft since the experiment has proved there is only one direction has electron every experiment. It cannot be neither since we can get results.</p>
 <p>The electron has probability of being hard or soft (but we cannot know what exactly is) and such state is called <strong>superposition</strong>.</p>
+<h2 id="bells-inequality">Bell’s Inequality</h2>
+<p>In lecture 2, the professor demonstrated some intersting experiments that are waiting to be explained by quantum language.</p>
+<ul>
+<li>Atom exist. But atomic orbics are unstable.</li>
+<li>Atomic spectra are discrete. When excites/sparks the simple gas like $ H_2$, we get light sent out by it. If we take the light and shine it on a prism, we would find distinct patterns : discrete spectra. Experimentalists found the wavelengths satisfy <span class="math inline">\(1/\lambda=R\cdot(1/n^2-1/m^2)\)</span>.</li>
+<li>Photoelectric effect. Stop voltage has no relation with intensity, but is linear to frequency. And it was found that the coefficient is just <span class="math inline">\(h\)</span>, the Planck constant derived from Blackbody radiation.</li>
+<li>Since photon has zero mass, we can develop the momentum equation <span class="math inline">\(p=h/\lambda\)</span> with <span class="math inline">\(E=pc\)</span> and <span class="math inline">\(E=h\nu\)</span>. This means photon has the particle’s property--momentum. Note that <span class="math inline">\(E=h\nu\)</span> is very unusual.</li>
+<li>Double-slit experiment with electron. The electron comes one in one, and was found randomly positioned. But when enough, the statistic told us the electrons were interfered. (I think) The electrons are particles, but they have unique properties that with a large number, they possess the property of a wave.</li>
+<li>Bragg scattering. If we send in a beam of electrons to a crystal and watch out the scattering from different angles, we would find the interference effect. The intensity as a function of angle of the out beam satisfies the function as if the electron is a wave with the wavelength <span class="math inline">\(\lambda=2d\sin\theta/n\)</span>. The electron diffracts off the crystal.</li>
+<li>Send out <span class="math inline">\(C_{60}\)</span> one by one and make them go through a diffraction grating.</li>
+</ul>
+<p><strong>Some questions</strong> about the above experimental facts : Does this experiment suggests that the electron <em>individually</em> has the property of a wave? I think the only perferm wave property when the number is large? The last experiment may solve my question, but again the interference effect occurs only when there is a large number of <span class="math inline">\(C_{60}\)</span>. Maybe the property of statistical property can be seen as the individual property.</p>
+<p>Next comes the <em>Bell’s inequality</em>.</p>
+<p>If the state of the stuff is definite, then we have: <span class="math display">\[
+\operatorname{Num}(A,\bar B)+\operatorname{Num}(B,\bar C)\ge \operatorname{Num}(A,\bar C)
+\]</span> The proof is the following: <span class="math display">\[
+\begin{aligned}
+\operatorname{LHS}&amp;=\operatorname{Num}(A,\bar B,C)+\operatorname{Num}(A,\bar B,\bar C)+\operatorname{Num}(A,B,\bar C)+\operatorname{Num}(\bar A,B,\bar C)\\
+&amp;\ge \operatorname{Num}(A,B,\bar C)+\operatorname{Num}(A,\bar B,\bar C)\\
+&amp;=\operatorname{Num}(A,\bar C)\\
+&amp;=\operatorname{RHS}
+\end{aligned}
+\]</span> But Bell found by experiment that: <span class="math display">\[
+\operatorname{Num}(\uparrow_0,\downarrow_\theta)+\operatorname{Num}(\uparrow_\theta,\downarrow_{2\theta})&lt;\operatorname{Num}(\uparrow_0,\downarrow_{2\theta})
+\\
+\]</span> Where the up and down arrows are angular momentums of the electron. I think this can be explained only if the three binary states can be superposed.</p>
+<h2 id="wave-function">Wave Function</h2>
+<h3 id="postulate-of-wavefunction">Postulate of Wavefunction</h3>
+<p>An essential postulate: The configuration or <em>state</em> of a quantum object is completely specified by a wavefunction denoted as <span class="math inline">\(\psi(x)\)</span>, <span class="math inline">\(\psi\in\mathbb{C}\)</span> .</p>
+<p>Classical: <span class="math inline">\((\vec p,\vec x)\to\)</span> Quantum: <span class="math inline">\(\psi(\vec x)\)</span></p>
+<p>Furthermore, <span class="math inline">\(p(x)=|\psi(x)|^2\)</span> determines the probability (density) that an object in the state <span class="math inline">\(\psi(x)\)</span> will be found at position <span class="math inline">\(x\)</span>. Note that the <em>dimension</em> of <span class="math inline">\(\psi\)</span> is square root of length since <span class="math inline">\(\displaystyle \int|\psi|^2 \text{d}x=1\)</span>.</p>
+<h3 id="de-broglie-relations">De Broglie Relations</h3>
+<p>From de Broglie’s generalization of momentum-wavelength relation of photon, we have <span class="math display">\[
+\begin{aligned}
+E&amp;=\hbar\omega\\
+\vec p&amp;=\hbar \vec k
+\end{aligned}
+\]</span> where <span class="math inline">\(\hbar:=h/2\pi\)</span>.</p>
+<h3 id="mathematics-of-superposition">Mathematics of Superposition</h3>
+<p>Given to two possible states of a quantum system corresponding to two wavelengths <span class="math inline">\(\psi_a\)</span> and <span class="math inline">\(\psi_b\)</span>, the system could also be in a superposition <span class="math inline">\(\psi=\alpha\psi_a+\beta\psi_b\)</span> with <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> in <span class="math inline">\(\mathbb{C}\)</span> satisfying normalization.</p>
+Hence for the superposition state, we have the probability density $$
+<span class="math display">\[\begin{aligned}
+\mathbb{p}(x)&amp;=|\alpha\psi_a(x)+\beta\psi_b(x)|^2\\
+&amp;=|\alpha\psi_a(x)|^2+|\beta\psi_b(x)|^2+\alpha^*\beta\psi_a^*(x)\psi_b(x)+\alpha\beta^*\psi_a(x)\psi_b^*(x)
+
+\end{aligned}\]</span>
+<p>$$ which exhibits quantum interference aside from the usual addition probability. It’s the interference between the different momentum that leads to certainty in the position.</p>
+<p>By using the tool of Fourier Transformation, we see that any wavefunction <span class="math inline">\(\psi(x)\)</span> can be expressed as a superposition of states <span class="math inline">\(e^{ikx}\)</span> with definite momenta <span class="math inline">\(p=k\)</span> as <span class="math display">\[
+\begin{aligned}
+\psi(x)&amp;=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^\infty \widetilde \psi(x)e^{ikx}\text{d}k\\
+\widetilde\psi(k)&amp;=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^\infty \psi(x)e^{-ikx}\text{d}x.
+\end{aligned}
+\]</span> I think that means when state is expressed in wavefunction, position and momentum are tightly correlated.</p>
 
       
       <!-- reward -->
@@ -422,8 +989,33 @@
 
       
       <h1 id="note-for-data-structure">Note for Data Structure</h1>
-<h2 id="trees">Trees</h2>
-<p>a little confused in preorder traverse, postorder traverse.</p>
+<h2 id="二叉树">二叉树</h2>
+<h4 id="树的遍历">树的遍历</h4>
+<ul>
+<li>前序：根节点—左子树—右子树</li>
+<li>后序：左子树—右子树—根节点</li>
+<li>中序：左子树—根节点—右子树</li>
+</ul>
+<h4 id="由遍历序列确定二叉树">由遍历序列确定二叉树</h4>
+<ul>
+<li>在先/后序序列中确定根节点</li>
+<li>在中序序列中搜索根节点，并将中序序列拆分为左右两个子树的中序序列</li>
+<li>递归执行前两步</li>
+</ul>
+<p>中序和后序遍历的堆栈实现</p>
+<h3 id="穿线二叉树">穿线二叉树</h3>
+<p>跟随指针</p>
+<p>遍历：</p>
+<ul>
+<li>找到二叉树最左端节点并访问</li>
+<li>查看flag：
+<ul>
+<li>1 访问右边节点</li>
+<li>0 whlie找到右孩子的最左端节点</li>
+</ul></li>
+<li>循环</li>
+</ul>
+<h3 id="最小公共祖先-lca">最小公共祖先 LCA</h3>
 
       
       <!-- reward -->
@@ -580,7 +1172,7 @@
 <p><em>常见考点</em>：求出所有互达等价类，各状态的周期和常返性，计算所有正常返态的平均回转时，计算极限概率</p>
 <p><strong>是否常返</strong>：</p>
 <ul>
-<li>有限马尔可夫链可以利用闭互达等价类直接判断：如果状态空间 <span class="math inline">\(I\)</span> 有限，则状态 <span class="math inline">\(i\)</span> 常返当且仅当 <span class="math inline">\(i\)</span> 的互达等价类是闭的，且这时 <span class="math inline">\(i\)</span> 一定是正常返</li>
+<li><p>有限马尔可夫链可以利用闭互达等价类直接判断：如果状态空间 <span class="math inline">\(I\)</span> 有限，则状态 <span class="math inline">\(i\)</span> 常返当且仅当 <span class="math inline">\(i\)</span> 的互达等价类是闭的，且这时 <span class="math inline">\(i\)</span> 一定是正常返</p></li>
 <li><p>利用互达等价类减少计算：若状态 <span class="math inline">\(i\)</span> 和 <span class="math inline">\(j\)</span> 互达，则 <span class="math inline">\(d(i)=d(j)\)</span> （周期相等），<span class="math inline">\(i\)</span> 常返/正常返当且仅当 <span class="math inline">\(j\)</span> 常返/正常返</p></li>
 <li><p>通过计算来判断：计算 <span class="math inline">\(f_{ii}=\sum\limits_{n}f_{ii}^{(n)}\)</span>, <span class="math inline">\(f_{ii}=1\)</span> 常返，<span class="math inline">\(f_{ii}&lt;1\)</span> 暂留。其中 <span class="math inline">\(f_{ij}^{(n)}\)</span> 是 <span class="math inline">\(i\)</span> 出发在第 <span class="math inline">\(n\)</span> 步首次击中 <span class="math inline">\(j\)</span> 的概率。对于非封闭的互达等价类，通过计算 <span class="math inline">\(f_{ii}\)</span> 说明暂留性。</p></li>
 <li><p>是否正常返：计算平均回转时 <span class="math inline">\(\mu_i=\sum\limits_n nf_{ii}^{(n)}\)</span>, 看是否有限, 若无限则为零常返</p></li>
@@ -607,8 +1199,8 @@
 <h4 id="定义">定义</h4>
 <ul>
 <li><p>独立增量过程</p></li>
-<li><span class="math inline">\(N(0)=0\)</span></li>
-<li><span class="math inline">\(N(t)-N(s)\sim \pi(\lambda(t-s))\)</span></li>
+<li><p><span class="math inline">\(N(0)=0\)</span></p></li>
+<li><p><span class="math inline">\(N(t)-N(s)\sim \pi(\lambda(t-s))\)</span></p></li>
 <li><p><span class="math inline">\(\displaystyle P(N(t)-N(s)=k)=\frac{[\lambda (t-s)]^ke^{-\lambda(t-s)}}{k!}\)</span></p></li>
 </ul>
 <h4 id="数字特征">数字特征</h4>
@@ -620,7 +1212,7 @@
 </ul>
 <h4 id="推广">推广</h4>
 <ul>
-<li>合成、分解后依旧是泊松过程</li>
+<li><p>合成、分解后依旧是泊松过程</p></li>
 <li><p>非齐次：<span class="math inline">\(\lambda=\lambda(t)\)</span></p></li>
 <li><p><span class="math inline">\(\{N(t)\}\)</span> 为强度 <span class="math inline">\(\lambda\)</span> 的泊松过程 <span class="math inline">\(\iff\)</span> 时间间隔 <span class="math inline">\(T_1,T_2,\cdots\)</span> 相互独立，且服从均值为 <span class="math inline">\(1/\lambda\)</span> 的指数分布</p></li>
 </ul>
@@ -629,7 +1221,7 @@
 <h4 id="定义-1">定义</h4>
 <ul>
 <li><p>独立增量过程</p></li>
-<li><span class="math inline">\(X(0)=0\)</span></li>
+<li><p><span class="math inline">\(X(0)=0\)</span></p></li>
 <li><p><span class="math inline">\(X(t)-X(s)\sim N(0,\sigma^2(t-s))\)</span></p></li>
 </ul>
 <h4 id="数字特征-1">数字特征</h4>
@@ -645,7 +1237,7 @@
 <ul>
 <li><span class="math inline">\(\{B(t+\tau)-B(\tau)\}\)</span> 也是</li>
 <li><span class="math inline">\(\{\displaystyle \frac 1 c B(c^2t)\}\)</span> 也是</li>
-<li>$B(t)=tB(1 t) $ 也是 （定义 <span class="math inline">\(0\)</span> 处为 <span class="math inline">\(0\)</span>）</li>
+<li>$B(t)=tB( t) $ 也是 （定义 <span class="math inline">\(0\)</span> 处为 <span class="math inline">\(0\)</span>）</li>
 </ul>
 <p>布朗桥过程：</p>
 <ul>
@@ -759,151 +1351,6 @@
 <li><p>关于失真度，一直不知道怎么办。测评的时候学到了使用示波器，用math指令的FFT显示波形，然后用curser的y移动到基波的频率，再到一次谐波的频率，然后好像做了什么运算（好像是除，忘记了）。这样看的话，必须要用单片机实现FFT，以后有机会可以仔细研究。突然想到，可以用示波器的FFT看滤出来的正弦波是否干净。</p></li>
 <li><p>焊接电路板的时候可以用AD先布个局，然后再从正面布线，测评时看到信电的一些作品真的超级美观</p></li>
 </ul>
-
-      
-      <!-- reward -->
-      
-    </div>
-    
-    
-      <!-- copyright -->
-      
-    <footer class="article-footer">
-      
-      
-
-    </footer>
-
-  </div>
-
-  
-
-  
-
-  
-  
-  
-
-</article>
-    
-    <article id="post-Projects-Stringless-Piano" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2020/08/22/Projects-Stringless-Piano/"
-    >Stringless Piano</a> 
-</h2>
- 
-
-    </header>
-    
-
-    
-    <div class="article-meta">
-      <a href="/2020/08/22/Projects-Stringless-Piano/" class="article-date">
-  <time datetime="2020-08-22T09:36:21.000Z" itemprop="datePublished">2020-08-22</time>
-</a>
-      
-      
-      
-      
-    </div>
-    
-
-    
-
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-
-      
-      <p>这是电子系统设计课程的项目。</p>
-<p>C代码及部分说明我放到了<a href="https://github.com/longqianh/Stringless-Piano.git" target="_blank" rel="noopener">GitHub</a> （时间太紧张了，来不及整理）</p>
-<p>关于PCB设计原理的思考直接写到了报告中：</p>
-
-
-	<div class="row">
-    <embed src="/pdf_files/无弦琴实习报告.pdf" width="100%" height="550" type="application/pdf">
-	</div>
-
-
-
-
-      
-      <!-- reward -->
-      
-    </div>
-    
-    
-      <!-- copyright -->
-      
-    <footer class="article-footer">
-      
-      
-
-    </footer>
-
-  </div>
-
-  
-
-  
-
-  
-  
-  
-
-</article>
-    
-    <article id="post-Computer-Science-C-Cpp-Notes" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2020/08/07/Computer-Science-C-Cpp-Notes/"
-    >Cpp-Notes</a> 
-</h2>
- 
-
-    </header>
-    
-
-    
-    <div class="article-meta">
-      <a href="/2020/08/07/Computer-Science-C-Cpp-Notes/" class="article-date">
-  <time datetime="2020-08-07T15:55:44.000Z" itemprop="datePublished">2020-08-07</time>
-</a>
-      
-      
-      
-      
-    </div>
-    
-
-    
-
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-
-      
-      <h2 id="c-notes">C++ Notes</h2>
-<h3 id="头文件保护">头文件保护</h3>
-<p>为防止被多重包含，添加预处理指令。</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> _HPP_H_</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> _HPP_H_</span></span><br><span class="line"><span class="comment">/*头文件的一系列声明*/</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br></pre></td></tr></table></figure>
-<h3 id="右值语意转移引用完美转发">右值语意、转移引用、完美转发</h3>
-<h3 id="智能指针">智能指针</h3>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="built_in">std</span>::make_shared</span><br><span class="line"><span class="built_in">std</span>::<span class="built_in">unique_ptr</span></span><br><span class="line"><span class="built_in">std</span>::<span class="built_in">shared_ptr</span></span><br></pre></td></tr></table></figure>
-<h3 id="字节对齐">字节对齐</h3>
 
       
       <!-- reward -->

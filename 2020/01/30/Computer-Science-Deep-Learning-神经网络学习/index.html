@@ -125,7 +125,7 @@
 <ul>
 <li><span class="math inline">\(x\)</span> ：输入的训练集（一个矩阵，每一列是一次单独的输入）, <span class="math inline">\(y\)</span> ：最终输出，<span class="math inline">\(y=w\cdot x+b\)</span></li>
 <li><span class="math inline">\(w\)</span>：weights，由矩阵组成的向量。<span class="math inline">\(w_j\)</span> 是一个 <span class="math inline">\(m\times n\)</span> 型矩阵，连接 <span class="math inline">\(j-1\)</span> 层和 <span class="math inline">\(j\)</span> 层，其中 <span class="math inline">\(j-1\)</span> 层有 <span class="math inline">\(n\)</span> 个神经元，$ j $ 层有 <span class="math inline">\(m\)</span> 个神经元</li>
-<li><span class="math inline">\(b\)</span> ：biases，由 $ m1$ 型矩阵组成的向量。 <span class="math inline">\(b_k\)</span> 是一个<span class="math inline">\(m\times 1\)</span> 型矩阵，连接 <span class="math inline">\(j-1\)</span> 层和 <span class="math inline">\(j\)</span> 层，其中第 <span class="math inline">\(j\)</span> 层有 <span class="math inline">\(m\)</span> 个神经元</li>
+<li><span class="math inline">\(b\)</span> ：biases，由 $ m$ 型矩阵组成的向量。 <span class="math inline">\(b_k\)</span> 是一个<span class="math inline">\(m\times 1\)</span> 型矩阵，连接 <span class="math inline">\(j-1\)</span> 层和 <span class="math inline">\(j\)</span> 层，其中第 <span class="math inline">\(j\)</span> 层有 <span class="math inline">\(m\)</span> 个神经元</li>
 <li>Cost function ： $ C(w,b)=<em>x |y(x)-a |^2=</em>{i=1}<sup>{n}[y(x<sup>{(i)})-a</sup>{(i)}]</sup>2 $</li>
 </ul>
 <h4 id="方法">1.2.2 方法</h4>
@@ -161,12 +161,12 @@ b_{k}&amp;:=b_{ k}-\eta\cdot \frac{\partial C}{\partial b_{k}}=b_{k}-\eta\cdot \
 <p>最终结果产生的偏差是由于每个神经元产生的误差叠加起来造成的。通过前向反馈得到的结果若与正确结果有偏差，则从此偏差反向推导，可得到各层神经元产生的误差。</p>
 <h3 id="符号表示">2.2 符号表示</h3>
 <ul>
-<li><span class="math inline">\(w_{jk}^l\)</span> ：连接第 <span class="math inline">\(l-1\)</span>层第 <span class="math inline">\(k\)</span> 个神经元和第 <span class="math inline">\(l\)</span> 层第 <span class="math inline">\(j\)</span> 个神经元的权重</li>
-<li><span class="math inline">\(w^l\)</span> ：连接第 <span class="math inline">\(l-1\)</span> 和第 <span class="math inline">\(l\)</span> 层网络的权重矩阵</li>
-<li><span class="math inline">\(b_j^l\)</span> ：第 <span class="math inline">\(l\)</span> 层第 <span class="math inline">\(j\)</span> 个神经元的 bias</li>
-<li><span class="math inline">\(z_j^l\)</span> ：第 <span class="math inline">\(l\)</span> 层网络的带权输入 <span class="math inline">\(z_j^l=\displaystyle\sum_k w_{jk}^l a_k^{l-1}+b_j^l\)</span>，<span class="math inline">\(z^l=w^l a^{l-1}+b^l\)</span></li>
+<li><p><span class="math inline">\(w_{jk}^l\)</span> ：连接第 <span class="math inline">\(l-1\)</span>层第 <span class="math inline">\(k\)</span> 个神经元和第 <span class="math inline">\(l\)</span> 层第 <span class="math inline">\(j\)</span> 个神经元的权重</p></li>
+<li><p><span class="math inline">\(w^l\)</span> ：连接第 <span class="math inline">\(l-1\)</span> 和第 <span class="math inline">\(l\)</span> 层网络的权重矩阵</p></li>
+<li><p><span class="math inline">\(b_j^l\)</span> ：第 <span class="math inline">\(l\)</span> 层第 <span class="math inline">\(j\)</span> 个神经元的 bias</p></li>
+<li><p><span class="math inline">\(z_j^l\)</span> ：第 <span class="math inline">\(l\)</span> 层网络的带权输入 <span class="math inline">\(z_j^l=\displaystyle\sum_k w_{jk}^l a_k^{l-1}+b_j^l\)</span>，<span class="math inline">\(z^l=w^l a^{l-1}+b^l\)</span></p></li>
 <li><p><span class="math inline">\(\delta_j^l\)</span> ：第 <span class="math inline">\(l\)</span> 层第 <span class="math inline">\(j\)</span> 个神经元产生的误差,，定义 <span class="math inline">\(\displaystyle \delta^l_j \equiv \frac{\partial C}{\partial z^l_j}\)</span></p></li>
-<li><span class="math inline">\(a_j^l\)</span> ：第 <span class="math inline">\(l\)</span> 层网络的第 <span class="math inline">\(j\)</span> 个神经元的激活量，<span class="math inline">\(a_j^l=\sigma(z_j^l)\)</span></li>
+<li><p><span class="math inline">\(a_j^l\)</span> ：第 <span class="math inline">\(l\)</span> 层网络的第 <span class="math inline">\(j\)</span> 个神经元的激活量，<span class="math inline">\(a_j^l=\sigma(z_j^l)\)</span></p></li>
 <li><p><span class="math inline">\(C\)</span> ：损失函数，用小批量输入的平均值近似。</p></li>
 </ul>
 <h3 id="重要的关系公式">2.3 重要的关系公式</h3>

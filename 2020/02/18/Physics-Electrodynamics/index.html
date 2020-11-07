@@ -73,7 +73,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">8.8k</span>
+            <span class="post-count">9k</span>
         </span>
     </span>
 
@@ -82,7 +82,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">46 min</span>
+            <span class="post-count">48 min</span>
         </span>
     </span>
 </div>
@@ -125,7 +125,7 @@ energy\;\ density=\frac{1}{8\pi ^2}(E^2+H^2)
 <li><p>Renormalization <span class="math display">\[
 \alpha=(g-2)/2
 \]</span></p></li>
-<li>gauge theory 规范理论, non-Abelian gauge theory, 重整化群</li>
+<li><p>gauge theory 规范理论, non-Abelian gauge theory, 重整化群</p></li>
 <li><p>Symmetry breaking, Standard Mode</p></li>
 </ul>
 <p><strong>“妙的地方”</strong></p>
@@ -487,8 +487,15 @@ f=j\times B
 <p><span class="math inline">\(\vec M\)</span> 为单位体积内的磁矩。</p>
 <p>这一部分需要再细细整理。</p>
 <h3 id="边界条件">边界条件</h3>
-<p>$$ \begin{aligned} D^{}_1-D_2^&amp;=_f\ E_1<sup>{}-E</sup>{}_2&amp;=0 \ H_1<sup>{}-H_2</sup>{}&amp;=K_fn\ B_1<sup>-B_2</sup>&amp;=0</p>
-<p>\end{aligned} $$</p>
+$$
+<span class="math display">\[\begin{aligned}
+\vec D^{\perp }_1-\vec D_2^\perp&amp;=\sigma_f\\
+\vec E_1^{\parallel}-\vec E^{\parallel}_2&amp;=0  \\ 
+\vec H_1^{\parallel}-\vec H_2^{\parallel}&amp;=\vec K_f\times\vec n\\
+\vec B_1^\perp-\vec B_2^\perp&amp;=0 
+
+\end{aligned}\]</span>
+<p>$$</p>
 <h2 id="电磁场能动量">4 电磁场能动量</h2>
 <h3 id="能量">能量</h3>
 <p>能流密度： <span class="math display">\[
@@ -497,8 +504,13 @@ f=j\times B
 w=\frac{1}{2}(\varepsilon_0 E^2+\frac{1}{\mu_0}B^2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             )
 \]</span></p>
 <h3 id="麦克斯韦应力张量">麦克斯韦应力张量</h3>
-<p>$$ \begin{aligned} f&amp;=E+vB=E+jB\ &amp;=-_0_0</p>
-<p>\end{aligned} $$</p>
+$$
+<span class="math display">\[\begin{aligned}
+\vec f&amp;=\rho \vec E+\rho \vec v\times\vec B=\rho\vec E+\vec j\times \vec B\\
+&amp;=\nabla\cdot \overleftrightarrow{\mathcal{T}}-\varepsilon_0\mu_0\frac{\partial \vec S}{\partial t}
+
+\end{aligned}\]</span>
+<p>$$</p>
 <p>其中，麦克斯韦应力张量： <span class="math display">\[
 \overleftrightarrow{\mathcal{T}}=\varepsilon_0\vec E\vec E+\frac{1}{\mu_0}\vec B\vec B-\frac{1}{2}\big(\varepsilon_0\vec E^2+\frac{1}{\mu_0}\vec B^2\big)\overleftrightarrow I
 \]</span> 分量形式为： <span class="math display">\[
@@ -558,8 +570,13 @@ f(\vec x-\vec x&#39;)&amp;=f(\vec x)-\sum_{i=1}^3 x_i\frac{\partial f}{\partial 
 &amp;=f(\vec x)-\vec x&#39;\cdot \nabla f(\vec x)+\frac{1}{2}\vec x&#39;\vec x&#39;\colon \nabla\nabla f(\vec x)+\cdots
 \end{aligned}
 \]</span></p>
-<p>$$ \begin{aligned} &amp;()=-=- \ &amp;()=-=</p>
-<p>\end{aligned} $$</p>
+$$
+<span class="math display">\[\begin{aligned}
+&amp;\nabla(\frac{1}{|\vec r-\vec r_0|})=-\frac{\vec e_r}{|\vec r-\vec r_0|^2}=-\frac{\vec r}{r^3} \\
+&amp;\nabla\nabla(\frac{1}{|\vec r-\vec r_0|})=-\frac{\overleftrightarrow I r^3- r^2 \vec e_r\vec r}{r^6}=\frac{3\vec e_r\vec e_r-\overleftrightarrow I}{|\vec r-\vec r_0|^3}
+
+\end{aligned}\]</span>
+<p>$$</p>
 <ul>
 <li><p>常用展开：把 <span class="math inline">\(\displaystyle \frac{1}{|\vec r- \vec r|}\)</span> 在 <span class="math inline">\(\vec r’=0\)</span> 附近作泰勒展开 <span class="math display">\[
 \frac{1}{|\vec r-\vec r&#39;|}=\frac{1}{r}+\frac{\vec r&#39;\cdot\vec e_r}{r^2}+\frac{(3\vec r&#39;\vec r&#39;-r&#39;^2\overleftrightarrow I):\vec e_r\vec e_r}{2r^3}+\cdots
@@ -654,7 +671,7 @@ U&amp;=-\vec p\cdot\vec E\\
 <p>电流由库仑每秒来量度， <span class="math inline">\(1A=1C/s\)</span></p>
 <ul>
 <li><p>线电流 : $I=v=I d$</p></li>
-<li>面电流密度 : <span class="math inline">\(\displaystyle\vec K\equiv\frac{d\vec I}{dl_{\perp}}=\sigma\vec v\)</span> （电流带带上的电流除以带宽度） <span class="math inline">\(I=\displaystyle\int_\ell \vec K\cdot d\vec \ell\)</span></li>
+<li><p>面电流密度 : <span class="math inline">\(\displaystyle\vec K\equiv\frac{d\vec I}{dl_{\perp}}=\sigma\vec v\)</span> （电流带带上的电流除以带宽度） <span class="math inline">\(I=\displaystyle\int_\ell \vec K\cdot d\vec \ell\)</span></p></li>
 <li><p>体电流密度 : <span class="math inline">\(\displaystyle\vec J\equiv\frac{d\vec I}{da_{\perp}}=\rho \vec v\)</span> （垂直于电流方向上单位面积流过的电流） <span class="math inline">\(I=\displaystyle\int_S \vec J\cdot d\vec \sigma\)</span></p></li>
 </ul>
 <p>注： <span class="math display">\[
@@ -669,7 +686,7 @@ Id\vec \ell&amp;=Iad\varphi\vec e_\varphi\\
 \end{aligned}
 \]</span> <strong>相关公式</strong></p>
 <ul>
-<li>表面电流密度 <span class="math inline">\(\vec K=\vec M\cdot \hat n\)</span></li>
+<li><p>表面电流密度 <span class="math inline">\(\vec K=\vec M\cdot \hat n\)</span></p></li>
 <li><p>内部体电流密度 <span class="math inline">\(\vec J=\nabla\times \vec M\)</span></p></li>
 <li><p>磁感应强度 <span class="math inline">\(\vec B=\mu_0 \vec K\)</span></p></li>
 </ul>
@@ -790,16 +807,37 @@ m&amp;=\frac {dq}{dt}S=\frac{q_e}{2\pi a/v}\pi a^2=\frac 1 2q_e v r
 &amp;\vec g=\frac 1 {c^2}\vec S=\frac 1 c u\hat k
 \end{aligned}
 \]</span></p>
-<p>周期平均值： $$ \begin{aligned} fg&amp;=1 2 Re(fg ^*)\ u&amp;=1 2 E^2\ S&amp;=cu\</p>
-<p>\end{aligned} <span class="math display">\[
+周期平均值： $$
+<span class="math display">\[\begin{aligned}
+\langle fg\rangle&amp;=\frac 1 2 Re(\widetilde f\widetilde g ^*)\\
+\langle u\rangle&amp;=\frac 1 2 \varepsilon E^2\\
+\langle S\rangle&amp;=c\langle u\rangle\\
+
+\end{aligned}\]</span>
+<span class="math display">\[
 强度与辐射压强：
-\]</span> \begin{aligned} I&amp;S\ P&amp;=cg== \end{aligned} $$</p>
+\]</span>
+<span class="math display">\[\begin{aligned}
+I&amp;\triangleq \langle S\rangle\\
+P&amp;=c\bar g=\frac{\langle S \rangle}{c}=\frac{I}{c}
+\end{aligned}\]</span>
+<p>$$</p>
 <h3 id="偏振">偏振</h3>
 <h3 id="在线性介质中的传播">在线性介质中的传播</h3>
 <p>由相位在边界上相等可以得到折射定律和反射定律，利用边界条件进一步分析可得到菲涅尔定律等。</p>
 <h4 id="折射定律和反射定律的导出">折射定律和反射定律的导出</h4>
 <p>$$ Ae<sup>{i(k_ir-t)}+Be</sup>{i(k_rr-t)}=Ce^{i(k_tr-t)}\</p>
-<p>\begin{cases} <em>i=<em>r=<em>t=kc\ k_ir=k_rr=k_tr|</em>{z=0} \end{cases}\ \begin{aligned} &amp;k</em>{i_x}=k</em>{r_x}=k_{t_x}\ &amp;k_i_i=k_r_r=k_t_t \end{aligned} $$</p>
+
+<span class="math display">\[\begin{cases}
+\omega_i=\omega_r=\omega_t\equiv \omega=kc\\
+\vec k_i\cdot \vec r=\vec k_r\cdot \vec r=\vec k_t\cdot \vec r\biggm |_{z=0}
+\end{cases}\]</span>
+\
+<span class="math display">\[\begin{aligned}
+&amp;\implies k_{i_x}=k_{r_x}=k_{t_x}\\
+&amp;\implies k_i\sin\theta_i=k_r\sin\theta_r=k_t\sin\theta_t
+\end{aligned}\]</span>
+<p>$$</p>
 <p>进而可以推出折射定律和反射定律。</p>
 <h4 id="菲涅尔方程">菲涅尔方程</h4>
 <p>入射面：入射光线和界面法线所确定的平面</p>
@@ -997,8 +1035,14 @@ G=\frac 1 r g_1(t-\frac r c)\notag
 \]</span> 对比非零处可以得到 <span class="math display">\[
 g_1(t-\frac r c)=f(\vec 0,t-\frac r c)\notag
 \]</span></p>
-<p>$$ \begin{aligned} G(r,t)&amp;=&amp; r'=0\ G(r-r',t)&amp;=&amp; r'0\ (r,t)&amp;=G(r-r',t)d'</p>
-<p>\end{aligned} $$</p>
+$$
+<span class="math display">\[\begin{aligned}
+\therefore G(\vec r,t)&amp;=\frac{f(0,t-\displaystyle \frac r c)}{r}&amp; \vec r&#39;=\vec 0\\
+\implies  G(\vec r-\vec r&#39;,t)&amp;=\frac{f(0,t-\displaystyle \frac {|\vec r -\vec r&#39;|} c)}{r}&amp; \vec r&#39;\neq\vec 0\\
+\psi(\vec r,t)&amp;=\int G(\vec r-\vec r&#39;,t)d\tau&#39;
+
+\end{aligned}\]</span>
+<p>$$</p>
 <h3 id="李纳-维谢尔势">李纳-维谢尔势</h3>
 <p>特定轨迹 <span class="math inline">\(\vec w(t)\)</span> 的运动点电荷产生的势（推迟势）。 $$ <span class="math display">\[\begin{align}
 \phi(\vec r,t)&amp;=\frac{1}{4\pi\varepsilon_0}\frac{q}{|\vec r-\vec w(t_r)|}\cdot \frac{1}{\displaystyle 1-\frac{\vec v(t_r)}{c}\cdot\frac{\vec r-\vec w(t_r)}{|\vec r-\vec w(t_r)|}}\\
@@ -1188,13 +1232,13 @@ V&amp;=\frac{1}{4\pi\varepsilon_0}\left(\frac{q_0\cos[\omega(t-\vec r_{+}/c)]}{\
 <h4 id="电磁波的辐射">电磁波的辐射</h4>
 <ul>
 <li><p>远场辐射</p></li>
-<li>偶极辐射</li>
+<li><p>偶极辐射</p></li>
 <li><p>轫致辐射</p></li>
-<li>库伦相互作用辐射</li>
-<li>四极辐射和磁偶极辐射</li>
-<li>近场辐射</li>
-<li>快速运动电荷的辐射</li>
-<li>辐射阻尼</li>
+<li><p>库伦相互作用辐射</p></li>
+<li><p>四极辐射和磁偶极辐射</p></li>
+<li><p>近场辐射</p></li>
+<li><p>快速运动电荷的辐射</p></li>
+<li><p>辐射阻尼</p></li>
 <li><p>散射</p></li>
 </ul>
 <h3 id="运动电荷的场-1">运动电荷的场</h3>
