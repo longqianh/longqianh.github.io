@@ -378,10 +378,9 @@ S_p+N_p=\left(\frac{e\eta}{h\nu}\right)^2R_L(P_s+P_n)^2=\left(\frac{e\eta}{h\nu}
 S_p&amp;=\left(\frac{e\eta}{h\nu}\right)^2R_LP_s^2\\
 N_p&amp;=\left(\frac{e\eta}{h\nu}\right)^2R_L(2P_sP_n+P_n^2)\\
 
-\end{align}\]</span> $$</p>
-<p>因此输出信噪比 <span class="math display">\[
-SNR_D=\frac{S_p}{N_n}=\frac{P_s^2}{2P_sP_n+P_n^2},
-\]</span></p>
+\end{align}\]</span> <span class="math display">\[
+因此输出信噪比
+\]</span> SNR_D==, $$</p>
 <p>直接探测的输出信噪比在 <span class="math inline">\(P_s/P_n\gg 1\)</span> 时 <span class="math display">\[
 SNR_D\approx\frac{P_s}{2P_n}.
 \]</span> 这从理论上漂亮地证明了直接探测方法不能改善信噪比，且经过光电转换后信噪比损失了3dB。</p></li>
@@ -476,8 +475,79 @@ W\approx 0.77\frac{\lambda f}{d},
 
       
       <h1 id="光电子学笔记">光电子学笔记</h1>
-<h2 id="matrix-optics">Matrix Optics</h2>
-<h2 id="gaussian-beam">Gaussian Beam</h2>
+<h2 id="matrix-optics-矩阵光学">Matrix Optics 「矩阵光学」</h2>
+<h3 id="光学元件的传播矩阵">光学元件的传播矩阵</h3>
+<p>小坑待填.</p>
+<h3 id="光线在周期系统的位置轨迹">光线在周期系统的位置轨迹</h3>
+<p><span class="math display">\[
+\begin{pmatrix}
+y_{m+1}\\
+\theta_{m+1}
+\end{pmatrix}=M\begin{pmatrix}
+y_m\\
+\theta_m
+\end{pmatrix}
+\]</span></p>
+<p>其中 <span class="math inline">\(M=\displaystyle\begin{pmatrix}A&amp;B\\C&amp;D\end{pmatrix}\)</span> 为周期系统的传播矩阵。</p>
+<p>进而得到 <span class="math display">\[
+\begin{align}
+y_{m+1}&amp;=Ay_m+B\theta_m\\
+\theta_{m+1}&amp;=Cy_m+D\theta_m
+\end{align}
+\]</span> 整理得 <span class="math display">\[
+\begin{align}
+y_{m+2}&amp;=(A+D)y_{m+1}+(BC-AD)y_m \notag\\
+i.e. \quad y_{m+2}&amp;=2by_{m+1}-F^2y_m\\
+\end{align}
+\]</span></p>
+<p>其中 <span class="math inline">\(b=(A+D)/2,F^2=\det (M)\)</span>.</p>
+<p>尝试解 <span class="math inline">\(y_m=y_0h^m\)</span>, 可得 <span class="math display">\[
+y_m=y_0F^me^{\pm im\varphi}
+\]</span> 其中 <span class="math inline">\(\varphi\)</span> 满足 <span class="math inline">\(b=F\cos\varphi\)</span>.</p>
+<p>可见，传递矩阵的 <span class="math inline">\(\det\)</span> 带来幅值增益，其 <span class="math inline">\(\operatorname {trace}\)</span> 带来相位增益。</p>
+<h3 id="谐振腔稳定条件">谐振腔稳定条件</h3>
+<p>可以证明（？） <span class="math inline">\(\det(M)=n_i/n_f\)</span>, 其中 <span class="math inline">\(n_i,n_f\)</span> 分别为系统基本单元初始和最后一部分的折射率。</p>
+<p>稳定需要传播的光束不会溢出光学系统，因而需要 <span class="math inline">\(\varphi=\arccos(b)\)</span> 为实数： <span class="math display">\[
+|b|\le1\iff\frac{|A+D|}{2}\le 1. \label{stable-cond0}
+\]</span> 对于谐振腔系统：自由空间 <span class="math inline">\(\to\)</span> 透镜2 <span class="math inline">\(\to\)</span> 自由空间 <span class="math inline">\(\to\)</span> 透镜1的周期组合，可得其传递矩阵 <span class="math display">\[
+M=M_{1}M_dM_2M_d=\begin{pmatrix}
+1-d/f_1 &amp; \\
+&amp; -d/f_2+(1-d/f_2)(1-d/f_1)
+\end{pmatrix},
+\]</span> 根据稳定条件 <span class="math inline">\((\ref{stable-cond0})\)</span> ,有： <span class="math display">\[
+\begin{align}
+&amp;0\le1-d/f_1-d/f_2+d^2/2f_1f_2= 2(1-d/2f_1)(1-d/2f_2)-1\le 1\notag
+\\
+\iff &amp; 0\le \left(1-\frac{d}{2f_1}\right)\left(1-\frac{d}{2f_2}\right)\le 1
+.
+\tag{$\star$}
+\label{stable-cond}
+\end{align}
+\]</span></p>
+<p>(<span class="math inline">\(\ref{stable-cond}\)</span>) 就是谐振腔稳定条件。</p>
+<p>对于球面谐振腔，传递矩阵中的 <span class="math inline">\(\displaystyle -\frac{1}{f}\)</span> 换成了 <span class="math inline">\(\displaystyle\frac{2}{R}\)</span>，因而稳定条件变为： <span class="math display">\[
+0\le \left(1+\frac{d}{R_1}\right)\left(1+\frac{d}{R_2}\right)\le 1.
+\]</span></p>
+<h2 id="gaussian-beam-高斯光束">Gaussian Beam 「高斯光束」</h2>
+<h3 id="高斯光束的推导">高斯光束的推导</h3>
+<p>​ 高斯光束是傍轴亥姆霍兹方程的一个试探解。</p>
+<h3 id="高斯光束的性质">高斯光束的性质</h3>
+<p>波函数 <span class="math display">\[
+U(\vec r)=\frac{A_1}{iz_0}\frac{W_0}{W(z)}\exp\left[-\frac{\rho^2}{W^2(z)}\right]\exp\left[-ikz-ik\frac{\rho^2}{2R(z)}+i\zeta(z)\right]
+\]</span></p>
+<p>光强 <span class="math display">\[
+I(\rho,z)=|U|^2=I_0\left[\frac{W_0}{W(z)}\right]^2\exp\left[-\frac{2\rho^2}{W^2(z)}\right]
+\]</span></p>
+<p>功率 <span class="math display">\[
+P=\int_0^\infty I(\rho,z)2\pi\rho\text d\rho=\frac{1}{2}\pi W_0^2 I_0
+\]</span></p>
+<h3 id="高斯光束的传播">高斯光束的传播</h3>
+<h4 id="abcd定律">ABCD定律</h4>
+<p>高斯光束经过一个具有ABCD矩阵的光学系统后的 <span class="math inline">\(q\)</span> 参数： <span class="math display">\[
+q_2=\frac{Aq_1+B}{Cq_1+D},
+\]</span> 其中 <span class="math inline">\(q\)</span> 满足 <span class="math display">\[
+\frac{1}{q(z)}=\frac{1}{R(z)}-j\frac{\lambda}{\pi W^2(z)}.
+\]</span></p>
 <h2 id="photon-optics-光子光学">Photon Optics 「光子光学」</h2>
 <p>Category :</p>
 <ul>
@@ -488,11 +558,11 @@ W\approx 0.77\frac{\lambda f}{d},
 <p>If a histogram of the locations of the detected photon is constructed by repeating the experiment many times, the classical interference pattern obtained by carrying out the experiment only once with a strong beam of light emerges.</p>
 <p><strong>单光子干涉的统计规律和经典光波干涉的现象一致。</strong>干涉现象应该是单光子干涉的统计规律的显现，或者说其本质是单光子干涉。</p>
 <p>单光子是可以干涉的，这来自光子本身的性质。光子的性质由一个概率波 <span class="math inline">\(\psi\)</span> 描述，当处于两条缝可以选择的叠加态时，<span class="math inline">\(|\psi|^2\)</span> 就会出现干涉项。</p>
-<p>我感觉这很数学，很妙，物理学家从现象中挖出了光子的本质。</p>
+<p>我感觉这很数学，很妙，物理学家从现象中挖出了光子的本质。光子不得不是概率波。</p>
 <p>参考：</p>
 <ul>
-<li>如何解释单光子干涉？ - 灵剑的回答 - 知乎 https://www.zhihu.com/question/40343270/answer/111817926</li>
-<li>为何单个电子通过双缝会发生干涉？ - 赵泠的回答 - 知乎 https://www.zhihu.com/question/61933450/answer/1225803587</li>
+<li><a href="https://www.zhihu.com/question/40343270/answer/111817926" target="_blank" rel="noopener">如何解释单光子干涉</a></li>
+<li><a href="https://www.zhihu.com/question/61933450/answer/1225803587" target="_blank" rel="noopener">为何单个电子通过双缝会发生干涉？</a></li>
 </ul>
 <h3 id="photon-stream-光子流">2. Photon Stream 「光子流」</h3>
 <p>光子流中光子的到达是随机的，量子力学成功地找到了这种随机性的来源：不确定性原理。</p>
@@ -529,7 +599,10 @@ p(n)\propto \left[\exp\left(-\frac{nh\nu}{kT}\right)\right]^n\label{photon-dis-b
 \]</span> 将其带入 (<span class="math inline">\(\ref{photon-dis-boltz}\)</span>)，得到 Bose-Einstein 分布： <span class="math display">\[
 p(n)=\frac{1}{\bar n+1}\left(\frac{\bar n}{\bar n+1}\right)^n.
 \]</span></p>
-<h4 id="坑待填">（3）坑待填</h4>
+<p>作为一个应用，热平衡时（求解速率方程时的热平衡条件）： <span class="math display">\[
+\frac{N_2}{N_1}=\exp\left(-\frac{E_2-E_1}{k_B T}\right)=\exp\left(-\frac{h\nu}{k_B T}\right).
+\]</span></p>
+<h5 id="坑待填">（3）坑待填</h5>
 <ul>
 <li>doubly stochastic Poisson process (DSPP)</li>
 <li>quantum states of light
@@ -561,10 +634,10 @@ t_{sp}=\frac{1}{\operatorname{P}_{sp}}
 <p>对自发辐射、吸收和受激辐射<strong>（怎么来的？）</strong>： <span class="math display">\[
 \begin{align}
 \operatorname p_{sp}&amp;=\frac{c}{V}\sigma(\nu)\\
-\operatorname P_{ab}&amp;=n\frac{c}{V}\sigma(\nu)\\
-W_i:=\operatorname P_{st}&amp;=n\frac{c}{V}\sigma(\nu)
+\operatorname P_{ab}&amp;=\bar n\frac{c}{V}\sigma(\nu)\\
+\operatorname P_{st}&amp;=\bar n\frac{c}{V}\sigma(\nu)
 \end{align}
-\]</span> 其中 <span class="math inline">\(n\)</span> 为相互作用过程中的光子数。</p>
+\]</span> 其中 <span class="math inline">\(\bar n\)</span> 为相互作用过程中的(平均)光子数。</p>
 <p>一般光子自发辐射寿命可测，由此可去算 <span class="math inline">\(S\)</span>： $$ <span class="math display">\[\begin{align}
 \operatorname P_{sp}&amp;=\int_0^\infty \left[\frac{c}{V}\sigma(\nu)\right]\left[VM(\nu)\right]\text d \nu\approx M(\nu_0)cS\\
 \implies &amp; S=\frac{\lambda^2}{8\pi t_{sp}}
@@ -572,16 +645,24 @@ W_i:=\operatorname P_{st}&amp;=n\frac{c}{V}\sigma(\nu)
 \end{align}\]</span> $$</p>
 <ul>
 <li><p>受激辐射概率密度</p>
-<p><span class="math inline">\(W_i\)</span> 可以理解为一个未被激励的原子吸收一个光子的概率密度 <span class="math inline">\(\implies\)</span> 吸收光子的平均密度为 <span class="math inline">\(N_1W_i\)</span>。</p>
+<p>用 <span class="math inline">\(W_i\)</span> 表示吸收概率密度，也等于受激辐射概率密度，<span class="math inline">\(W_i=\bar n/t_{sp}\)</span>, 概率密度的单位为 <span class="math inline">\(s^{-1}\)</span>。</p>
 <p>对于单频光：<span class="math inline">\(n=\phi V/c\)</span> <span class="math display">\[
-W_i=\operatorname P_{sp}=\phi \cdot \sigma(\nu)
+W_i=\operatorname P_{st}=P_{ab}=\phi \cdot \sigma(\nu)
 \]</span> 对于宽频光：需知道其光谱能量密度 <span class="math inline">\(\rho(\nu)\)</span> <span class="math display">\[
 \begin{align}
 W_i&amp;=\int_0^\infty n(\nu)\operatorname P_{st}(\nu)\text d\nu=\int_0^\infty \left[\rho(\nu)V\text d \nu\right/h\nu]\left[\frac{c}{V}\sigma(nu)\right]\\
 &amp;\approx \frac{\bar n}{t_{sp}}
 \end{align}
 \]</span> 其中 <span class="math inline">\(\bar n=\displaystyle\frac{\lambda_0^3}{8\pi h}\rho(\nu_0)=\frac{cS\operatorname P_{sp}\rho(\nu_0)}{h\nu_0}\)</span> 代表每个模式的平均光子数。</p></li>
-<li><p>爱因斯坦系数</p></li>
+<li><p>爱因斯坦系数</p>
+<p><span class="math display">\[
+\begin{align}
+P_{sp}&amp;=\mathbb{A}\\
+W_i&amp;=\mathbb{B} \rho(\nu_0)
+\end{align}
+\]</span> 其中 <span class="math inline">\(\rho(\nu)\)</span> 为光谱能量密度，<span class="math inline">\(\mathbb{A},\mathbb{B}\)</span> 为爱因斯坦系数，有： <span class="math display">\[
+\mathbb{A}=\frac{1}{t_{sp}},\mathbb{B}=\frac{\lambda^3}{8\pi ht_{sp}}.
+\]</span></p></li>
 </ul>
 <h3 id="速率方程">2. 速率方程</h3>
 <p>我们需要描述泵浦作用下原子内部的跃迁情况，这相当于原子辐射和跃迁的微观分析。</p>
@@ -601,14 +682,14 @@ N_0=R_2\tau_2(1-\frac{\tau_1}{\tau_{21}})+R_1\tau_1
 \frac{\text dN_1}{\text d t}&amp;=-R_1-\frac{N_1}{\tau_1}+\frac{N_2}{\tau_{21}}-N_1W_i+N_2W_i
 \end{aligned}
 \]</span> 稳态条件下解得： <span class="math display">\[
-N=\frac{N_0}{1+\tau_sW_i}
-\]</span> 这就意味着随着辐射变强，<span class="math inline">\(W_i\)</span> 增大（<strong>为什么会增大？</strong>），反转粒子数出现饱和。其中 <span class="math inline">\(\tau_s=\tau_2+\tau_1(1-\displaystyle\frac{\tau_2}{\tau_{21}})\)</span> 。</p>
-<p>对于四能级泵浦机制，外部的能量源以速率 <span class="math inline">\(R\)</span> 将原子从能级0泵浦到能级3（<strong>如何做到？</strong>），有以下假设：</p>
+N=\frac{N_0}{1+\tau_sW_i} \label{sat}
+\]</span> 这就意味着随着<strong>辐射变强</strong>（增加输入光子流密度，“用光直接泵浦”），<span class="math inline">\(W_i\)</span> 增大，反转粒子数出现饱和。其中 <span class="math inline">\(\tau_s=\tau_2+\tau_1(1-\displaystyle\frac{\tau_2}{\tau_{21}})\)</span> 。</p>
+<p>对于四能级泵浦机制，外部的能量源以速率 <span class="math inline">\(R\)</span> 将原子从能级0泵浦到能级3，有以下假设：</p>
 <ul>
 <li><p>能级1和能级3是短寿命的 <span class="math inline">\(N_1\approx N_3\approx 0\)</span></p></li>
 <li><p>能级3到能级2的衰减非常快 <span class="math inline">\(R_2=R\)</span></p></li>
 <li><p>能级1没有原子泵浦进入和流出 <span class="math inline">\(R_1=0\)</span></p></li>
-<li><p>能级2和能级1之间的非辐射跃迁一般可以忽略 <span class="math inline">\(\tau_{20}\gg t_{sp}\gg \tau_1 \implies \tau_s\approx t_{sp}\)</span></p></li>
+<li><p>能级2和能级1之间的 <em>非辐射跃迁</em> 一般可以忽略 <span class="math inline">\(\tau_{20}\gg t_{sp}\gg \tau_1 \implies \tau_s\approx t_{sp}\)</span></p></li>
 </ul>
 <p>三能及泵浦机制抽去了四能级机制中基态能级和长寿命能级2度中间级，它有以下假设：</p>
 <ul>
@@ -617,15 +698,21 @@ N=\frac{N_0}{1+\tau_sW_i}
 <li>能级2和能级1之间的非辐射跃迁可忽略 <span class="math inline">\(t_{sp}\ll t_{nr}\)</span> （速率很慢）</li>
 </ul>
 <p>由此重新求解速率方程，得到 <span class="math inline">\(\tau_s\approx 2t_{sp}\)</span> .</p>
+<h4 id="光子数密度的速率方程">光子数密度的速率方程</h4>
+<p><span class="math display">\[
+\frac{\text d n}{\text d t}=-\frac{n}{\tau_p}+NW_i
+\]</span></p>
+<p>注意 <span class="math inline">\(NW_i=N_2W_i-N_1W_i=N_2P_{st}-N_1P_{ab}\)</span> 是由二能级的受激辐射（原子接收光子再双倍产生光子）和一能级的吸收（低能级原子接收光子）组成的。</p>
 <h2 id="laser-theory-激光器机理">Laser Theory 「激光器机理」</h2>
-<p>反转粒子数</p>
-<p>平均光子通量密度</p>
-<p>饱和平均光子通量密度</p>
+<p>激光泵浦提供了一个初始反转粒子数 <span class="math inline">\(N_0\)</span>, 由泵浦速率 <span class="math inline">\(R\)</span> 和相关光子能级寿命计算得到。</p>
+<p>这个初始反转粒子数如果高于阈值<span class="math inline">\(N_t\)</span>, 有 <span class="math inline">\(\gamma_0=N_0\sigma&gt;\alpha_r=N_t\sigma\)</span> ，激光开始振荡，腔内光子流密度不断增加（增加原因：受激辐射大？）。</p>
+<p>光子流密度增加过程中，光子原子相互作用会消耗反转粒子数 <span class="math inline">\(N\)</span>，腔内增益系数 <span class="math inline">\(\gamma=N\sigma\)</span> 随着 <span class="math inline">\(N\)</span> 的消耗而逐渐趋于饱和，这个过程中腔内光子流密度不断增加但增加速率逐渐降低。</p>
+<p>最后增益系数钳位到损耗吸数，激光器进入稳态，腔内光子流密度达到最大值，反转粒子数降低到稳态值 <span class="math inline">\(N_t\)</span>。</p>
 <h3 id="增益饱和">1. 增益饱和</h3>
 <ul>
 <li>增益系数</li>
 </ul>
-<p>单位时间光子数净增量： $$ <span class="math display">\[\begin{align}
+<p>单位时间光子数净增量（只有受激辐射才会贡献净增量，因而只需要算 <span class="math inline">\(N\cdot W_i\)</span>）： $$ <span class="math display">\[\begin{align}
 \text d\phi&amp;=(N_2-N_1)W_i\cdot \text dz=NW_i\text dz\\
 \implies \frac{\text d\phi(z)}{\text d z}&amp;=NW_i=N\phi(z)\sigma(\nu):=\gamma(\nu)\phi(z)\\
 \phi(z)&amp;=\phi(0)e^{\gamma(\nu)z}, I(z)=I(0)e^{\gamma(\nu)z}
@@ -638,12 +725,16 @@ N=\frac{N_0}{1+\tau_sW_i}
 </ul>
 <p>小信号增益系数 <span class="math display">\[
 \gamma_0(\nu)=N_0\sigma(\nu)=N_0\frac{\lambda^2}{8\pi t_{sp}}g(\nu)
-\]</span> 由反转粒子数 <span class="math inline">\(N\)</span> 存在饱和以及跃迁截面的不变性，有：</p>
+\]</span> 由反转粒子数 <span class="math inline">\(N\)</span> 存在饱和 (<span class="math inline">\(\ref{sat}\)</span>) 以及跃迁截面的不变性，有：</p>
 <p>饱和放大增益系数 <span class="math display">\[
 \gamma(\nu)=\frac{\gamma_0(\nu)}{1+\phi/\phi_s}
 \]</span></p>
 <p>其中饱和光子流密度 <span class="math display">\[
 \phi_s=\frac{1}{\tau_s\sigma(\nu)}
+\]</span></p>
+<p>在四能级系统中 <span class="math inline">\(\tau_s\approx t_{sp}\)</span>, 三能级系统中 <span class="math inline">\(\tau_s\approx 2t_{sp}\)</span>。增益饱和本质上是光子与介质作用耗空反转粒子数的结果。</p>
+<p>由于 <span class="math inline">\(I=h\nu\phi\)</span>, 有 <span class="math display">\[
+\gamma(\nu)=\frac{\gamma_0(\nu)}{1+I/I_s}.
 \]</span></p>
 <ul>
 <li><p>总增益</p>
@@ -664,7 +755,6 @@ H(\nu)=\frac{1}{2}\gamma(\nu)-i\varphi(\nu)
 </ul>
 <h3 id="反馈与损耗">2. 反馈与损耗</h3>
 <p>首先描述一个光学谐振腔，有模式间隔、细度、光谱半宽度、腔内光子寿命、品质因子。</p>
-<p>s</p>
 <p>对于一个光学谐振腔，腔内光子寿命 <span class="math display">\[
 \tau_p=\frac{1}{\alpha_r c}
 \]</span> 其中 <span class="math inline">\(\alpha_r\)</span> 为光学谐振腔的总衰减系数： <span class="math display">\[
@@ -680,12 +770,15 @@ H(\nu)=\frac{1}{2}\gamma(\nu)-i\varphi(\nu)
 <ul>
 <li>增益条件：</li>
 </ul>
-<p><span class="math display">\[
-\gamma_0(\nu)&gt;\alpha_r\implies N_0&gt;\frac{\alpha_r}{\sigma(\nu)}:=N_t
-\]</span></p>
-<p>阈值反转粒子数差 <span class="math display">\[
+<p>激光振荡的 <em>启动</em> 必须满足小信号增益大于损耗系数： $$ <span class="math display">\[\begin{align}
+&amp;\gamma_0(\nu)&gt;\alpha_r\\
+\implies &amp;N_0&gt;\frac{\alpha_r}{\sigma(\nu)}:=N_t
+
+\end{align}\]</span> $$</p>
+<p>其中： <span class="math display">\[
 N_t=\frac{\alpha_r}{\sigma(\nu)}
 \]</span></p>
+<p>为阈值反转粒子数差，决定了激光振荡能够启动的最小泵浦速率 <span class="math inline">\(R_t\)</span>。</p>
 <ul>
 <li>位相条件： <span class="math display">\[
 2kd+2\phi(\nu)d=2\pi q,\quad q=1,2,\dots
@@ -694,15 +787,79 @@ N_t=\frac{\alpha_r}{\sigma(\nu)}
 \]</span></li>
 </ul>
 <h3 id="激光输出特性">4. 激光输出特性</h3>
-<p>功率：每秒的输出光子能量 <span class="math display">\[
-P=h\nu\cdot n
-\]</span> 输出光子流密度</p>
-<p>输出光子数</p>
-<h3 id="调q激光器">5. 调Q激光器</h3>
-<h3 id="腔倒空激光器">6. 腔倒空激光器</h3>
-<h3 id="锁模激光器">7. 锁模激光器</h3>
+<h4 id="稳态情况">稳态情况</h4>
+<p>激光振荡启动后，随着反转粒子数的耗空，将出现增益饱和，光子流密度停止增长，激光振荡由此达到稳态。</p>
+<p>根据 <span class="math display">\[
+\frac{\gamma_0(\nu)}{1+\phi/\phi_s}=\alpha_r
+\]</span> 可以确定饱和时<strong>腔内的光子流密度</strong>: <span class="math display">\[
+\phi=\begin{cases}\displaystyle\phi_s(\nu)\left[\frac{\gamma_0(\nu)}{\alpha_r}-1\right],&amp;&amp; \gamma_0(\nu)&gt;\alpha_r\\
+0,&amp;&amp;\gamma_0(\nu)\le\alpha_r
+\end{cases}
+\]</span> 或 <span class="math display">\[
+\phi=\begin{cases}\displaystyle\phi_s(\nu)\left[\frac{N_0}{N_t}-1\right],&amp;&amp; N0&gt;N_t\\
+0,&amp;&amp;N_0\le N_t
+\end{cases}
+\]</span> 注意小信号增益系数 <span class="math inline">\(\gamma_0(\nu)=N_0\sigma(\nu)\)</span>, 而不是 <span class="math inline">\(N\sigma(\nu)\)</span>, 这是因为 <span class="math inline">\(\gamma_0\)</span> 是不考虑饱和情况时的增益系数，对应着无辐射时的粒子数差 <span class="math inline">\(N_0\)</span> ，考虑辐射时的粒子数差 <span class="math inline">\(N\)</span> 将出现饱和。</p>
+<p>内部的光子数密度为： <span class="math display">\[
+n=\frac{\phi}{c}.
+\]</span> 稳态情况下总的光子密度损失率（由 <span class="math inline">\(\tau_p\)</span> 造成）等于超额的泵浦速率 <span class="math inline">\(R-R_t\)</span>: <span class="math display">\[
+\frac{n}{\tau_p}=\frac{N_0-N_t}{\tau_s}\approx R-\frac{N_t}{t_{sp}}:=R-R_t
+\]</span></p>
+<h4 id="输出情况">输出情况</h4>
+<ul>
+<li>输出光子流密度为</li>
+</ul>
+<p><span class="math display">\[
+\phi_0=\frac{T\phi}{2}
+\]</span></p>
+<ul>
+<li>激光输出强度为</li>
+</ul>
+<p><span class="math display">\[
+I_0=h\nu\cdot\phi_0
+\]</span></p>
+<ul>
+<li>激光输出功率为</li>
+</ul>
+<p><span class="math display">\[
+P=I_0A
+\]</span></p>
+<p><span class="math inline">\(A\)</span> 为激光束到截面。</p>
+<p>需要指出的一点是，输出光子流密度可以优化（存在极大值），存在一个最佳透射率 <span class="math inline">\(T\)</span> 使激光的输出强度（～输出光子流密度）最大。</p>
+<h3 id="选频">5. 选频</h3>
+<p>如果在腔内用F-P标准具进行选频，则需要： <span class="math display">\[
+\begin{align}
+\nu_F&#39;&amp;\ge B\\
+\delta \nu&#39;&amp;\ge\nu_F
+\end{align}
+\]</span> 其中 <span class="math inline">\(B\)</span> 为增益系数等于损耗系数所确定的带宽，<span class="math inline">\(\nu_F’,\delta\nu’\)</span> 均为 F-P 标准具的特性参数。</p>
+<p>另外，标准具放在腔内显然较好，因为放在腔外会损失掉未选中频率的能量。</p>
+<h3 id="调q激光器">6. 调Q激光器</h3>
+<h3 id="关于锁模">7. 关于锁模</h3>
+<p>多模输出的光中可分解出多个频率分量，即多种模式。这些模式的光相位不同，非常杂乱，叠加输出的结果是得到一个均值强度的光。这给人一种浪费的感觉，锁模技术是将这些模式的光相位锁成一致，进而使之干涉增强。这样得到的激光将是一个序列脉冲，更加纯净，强度和频率也都非常可以。</p>
+<p>经过干涉叠加的计算（留坑），锁模脉冲序列的时间间隔 <span class="math display">\[
+T_F=\frac{2d}{c},
+\]</span> 脉冲宽度（半高全宽） <span class="math display">\[
+\tau_{pulse}=\frac{T_F}{M},
+\]</span> 平均强度和峰值强度 <span class="math display">\[
+\begin{align}
+\bar I&amp;=M|A|^2,\\
+I_p&amp;=M^2|A|^2=M\bar I.
+\end{align}
+\]</span></p>
 <p>班级毅行</p>
 <p>光强～透射率 看到的光越强，透射率越大嘛！</p>
+<p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gkhvtpltboj316m06u10e.jpg" alt="image-20201108171454948" style="zoom:33%;" /></p>
+<h2 id="discussionquestions">discussion&amp;questions</h2>
+<ul>
+<li>烧孔？</li>
+</ul>
+<p><span class="math display">\[
+\gamma_0-\gamma_s=\gamma_0-\frac{\gamma_0}{1+\phi/\phi_s}
+\]</span></p>
+<ul>
+<li>5.7 如果激光被泵浦了，但是泵浦强度不足以产生激光振荡</li>
+</ul>
 
       
       <!-- reward -->
@@ -767,7 +924,9 @@ P=h\nu\cdot n
 
       
       <h1 id="d-holography">3D Holography</h1>
-<p>This is a project that I have spent at least three months. I learnt a lot from it, and will dig deeper later on. Big thanks to my senior Zhongyuan Guo for his guidance. Thanks to my teacher Xing Chen for his careful instructions.</p>
+<p>This is a project that I have spent at least three months. I learnt a lot from it, and is digging deeper.</p>
+<p>Big thanks to my seniors Zhongyuan Guo and Zhaoyu Gong for their guidance. Thanks to my teacher Xing Chen for his careful instructions.</p>
+<h2 id="course">Course</h2>
 <p>I finally made a Matlab application and we can get a stereo view of an object after encoding it and put on an SLM. I have put the code on Github <a href="https://github.com/longqianh/3d-holography" target="_blank" rel="noopener">here</a>.</p>
 <p>Some thoughts about holography are put <a href="/2020/08/06/Physics-Holography-Road/index.html">here</a>.</p>
 <p>Below is a brief course article:</p>
@@ -779,7 +938,24 @@ P=h\nu\cdot n
 
 
 .</p>
-<p>I will put a more meticulous article later.</p>
+<h2 id="competition">Competition</h2>
+<p>We competed in Zhejiang Physics Innovation Competition. Below are the research article and speech powerpoint.</p>
+<p>
+
+	<div class="row">
+    <embed src="/pdf_files/省物创作品研究报告.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+.</p>
+<p>
+
+	<div class="row">
+    <embed src="/pdf_files/物理创新竞赛省赛ppt.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+.</p>
 
       
       <!-- reward -->
@@ -847,9 +1023,21 @@ P=h\nu\cdot n
 <p>记录一些在光学材料与元件制造课程中的整理和总结。</p>
 <h2 id="光学玻璃">光学玻璃</h2>
 <h2 id="光学晶体">光学晶体</h2>
-<h3 id="点群">点群</h3>
-<p>这是「晶体学」的知识，「固体物理学」也可学到。</p>
-<p>晶体学中，晶体学点群是对称操作的集合（旋转、面对称、中心对称）。</p>
+<p>以下摘自《晶体物理学基础》(陈纲等)。</p>
+<h3 id="对称操作">对称操作</h3>
+<p>如果经过某种操作（转动、镜像、中心反演等）以后，晶体中的各个点都变到新的位置，但是晶形保持不变，那么称这种操作为晶体的对称操作。</p>
+<p>在晶体中，任何一个对称操作 <span class="math inline">\(P\)</span> 可以重复多次 ( <span class="math inline">\(P^m\)</span> ) ，直至晶体每个点都回到原来的位置 (<span class="math inline">\(P^n=E\)</span> )。</p>
+<h3 id="jones符号">Jones符号</h3>
+<p>对称操作除了用矩阵表示外，可以用Jones符号表示。</p>
+<p><span class="math inline">\((\bar x_1 x_2 x_3)\)</span> 诸如此，表示 <span class="math inline">\(x_1’=\bar x_1,x_2’=x_2,x_3’=x_3\)</span>, 即绕 <span class="math inline">\(x_1\)</span> 轴旋转+中心对称。</p>
+<h3 id="对称元素">对称元素</h3>
+<p>对称元素时晶体中的某些点、线和面，晶体的对称操作是相对于他们进行的，它们在对称操作过程中保持不动。</p>
+<p>采用数字符号进行表示：<span class="math inline">\(1,2,3,4,6\)</span> 依次表示1、2、3、4、6次旋转轴，<span class="math inline">\(\bar 1,\bar 2,\bar 3,\bar 4,\bar 6\)</span> 分别等价于反演中心、反射镜面、3+反演中心、四度反轴（转90度再做中心对称）、3+垂直3次轴的镜面。</p>
+<p>注：晶体只有 <span class="math inline">\(\bar 4\)</span> 和晶体有 <span class="math inline">\(4\)</span> 也有 <span class="math inline">\(\bar 1\)</span> 所拥有的对称操作集合时不一样的，后者包含前者，对称性更高。</p>
+<p>但是晶体有 <span class="math inline">\(\bar 3\)</span> 就等价于有 <span class="math inline">\(3\)</span> 也有 <span class="math inline">\(\bar 1\)</span>。</p>
+<h3 id="晶体学点群">晶体学点群</h3>
+<p>晶体晶形等<strong>对称操作的集合</strong>称为晶体学点群（简称点群）。</p>
+<p>知道了晶体的所有对称操作或者所有对称元素，就知道了它所属的点群。</p>
 <p>给定一个一定构型的立方晶系，根据它所具有的对称性（以对称操作要素描述），可以形成各种组合，化简后得到32个点群。给定一个晶体，根据它的布拉维点阵，我们可以确定它是具有哪一种对称性。</p>
 <p>国际符号用存在于某个特定方向上的对称元素来表示点群。</p>
 <p>比如一个正交晶系，它有 mm2 / 222 / mmm 这三种对称性组合（具体描述为 <span class="math inline">\(G_22P\)</span> / <span class="math inline">\(3G_2\)</span> / <span class="math inline">\(3G_23PC\)</span> )。给定一个正交晶系的晶体，通过判断它的点阵符合那种对称组合所生成的点阵（一个点由对称性生出的点阵列），我们可以确定它所属的点群。</p>
@@ -1074,36 +1262,39 @@ T_{ij}&amp;=a_{ki}a_{lj}T_{kl}&#39;
 <p>We made <em>boxes</em> that can <em>measure</em> such properties. For instance, white electron and black electron will exit the box from different directions. From the direction we know the white/black property of the electron. Denote ‘C-Box’ (color box) for the boxes that can measure W/B property and similarly, ‘H-Box’ (hardness box) for those can measure ‘H/S’ property.</p>
 <p>We have mirrors and combinator that put the two directions together, so that we can continue more complicated experiments. Note that they only change the directions.</p>
 <p>Below are the experiments from physicists.</p>
+<p>First there are some basic and naive experiments.</p>
 <ol type="1">
-<li><p>White electron —&gt; C-Box —&gt; W, Soft electron—&gt;H-Box—&gt; S</p></li>
-<li><p>White electron —&gt; H-Box —&gt; <span class="math inline">\(50\%\)</span> H and <span class="math inline">\(50\%\)</span> S, Hard electron —&gt; C-Box —&gt; <span class="math inline">\(50\%\)</span> W and <span class="math inline">\(50\%\)</span> B</p></li>
-<li><p>White electron —&gt; C-Box —&gt; W or B (got the property) —&gt; mirror and combinator —&gt; C-Box —&gt; W</p></li>
-<li><p>White electron —&gt; H-Box —&gt; <span class="math inline">\(50\%\)</span> H and <span class="math inline">\(50\%\)</span> S (got the property) —&gt; mirror and combinator —&gt; H-Box —&gt; <span class="math inline">\(50\%\)</span> H and <span class="math inline">\(50\%\)</span> S</p></li>
+<li>Electrons —&gt; C-Box —&gt; W and B —&gt; choose W —&gt; C-Box —&gt; W (repeatability of color / hardness)</li>
+<li>Electrons —&gt; H-Box —&gt; H and S —&gt; choose H —&gt;C-Box —&gt; W (50%) and B (50%) (lack of correlation of color with hardness)</li>
 </ol>
-<p>Then comes the weird experiments.</p>
-<ol start="5" type="1">
-<li><p>White electron —&gt; H-Box —&gt; H or S ( got the hardness property) —&gt; C-Box —&gt; <strong>Not</strong> White, but <span class="math inline">\(50\%\)</span> W and <span class="math inline">\(50\%\)</span> B</p></li>
-<li><p>White electron —&gt; H-Box —&gt; mirror and combinator —&gt; C-Box —&gt; <strong>Not</strong> <span class="math inline">\(50\%\)</span> W and <span class="math inline">\(50\%\)</span> B, but totally W</p></li>
-<li><p>White electron —&gt; H-Box —&gt; mirror and combinator, and putting a wall/barrier in the soft path —&gt; C-Box —&gt; <span class="math inline">\(50\%\)</span> W and <span class="math inline">\(50\%\)</span> B</p></li>
+<p>Then comes the weird experiment.</p>
+<ol start="3" type="1">
+<li>Electrons —&gt; C-Box —&gt; W and B —&gt; choose W —&gt; H-Box —&gt; H and S —&gt; choose H —&gt; C-Box —&gt; <strong>Not</strong> (100%) W, but <span class="math inline">\(50\%\)</span> W and <span class="math inline">\(50\%\)</span> B</li>
 </ol>
-<p>For 5. , this is because the color and hardness property cannot be measured simultaneously, which is the <strong>uncertainty principle</strong>. (Though we know it is white at the begining, as long as we know the hardness, we cannot know the color property anymore)</p>
-<p>For 6. , it seems contradict with 6., but I think, maybe the key is that we actually do not know the hardness state after the electron passed the H-Box since it is an intermediate process.</p>
-<p>For 7. , I suddenly understand this : since we block the soft path, we know that the input is hard electron, then uncertainty principle guided that the color property cannot be measured, hence a half-half outcome.</p>
-<p>After we understand the principle of the motion of electrons, we consider the <em>being</em> (or state) of it : what is the being of an electron inside the apparatus in the 6th experiment ?</p>
-<p>We know it is white, so it cannot be hard or soft, otherwise we will get half-half result by the uncertaintu principle. It cannot be both hard and soft since the experiment has proved there is only one direction has electron every experiment. It cannot be neither since we can get results.</p>
-<p>The electron has probability of being hard or soft (but we cannot know what exactly is) and such state is called <strong>superposition</strong>.</p>
+<p>Apparently, hardness box tampers with color. Therefore experiment 3 tells us color and hardness property cannot be measured simultaneously, which is the <strong>uncertainty principle</strong>. Though we know it is white at the begining, as long as we measure the hardness, the color property white is not repeatable anymore.</p>
+<p>Then we use combinator to dig deeper.</p>
+<ol start="4" type="1">
+<li><p>White electrons —&gt; H-Box —&gt; <span class="math inline">\(50\%\)</span> H and <span class="math inline">\(50\%\)</span> S —&gt; combinator —&gt; H-Box —&gt; <span class="math inline">\(50\%\)</span> H and <span class="math inline">\(50\%\)</span> S</p></li>
+<li><p>White electrons —&gt; H-Box —&gt; 50% H and 50% S —&gt; combinator —&gt; C-Box —&gt; (100%) W</p></li>
+<li><p>White electrons —&gt; H-Box —&gt; 50% H and 50% S —&gt; put a wall in the Soft's path —&gt; combinator —&gt; C-Box —&gt; <span class="math inline">\(50\%\)</span> W and <span class="math inline">\(50\%\)</span> B</p></li>
+</ol>
+<p>Experiment 4 tells us combinator does not change the proberties of electrons. Experiment 5 got totally W because the added combination part act as if H/S property doesn’t be measured, hence the W/B property will not be disturbed. Experiment 6 shows a disturbing one from which we can see the uncertainty principle plays a role.</p>
+<p>After we understand the principle of the motion of electrons, we consider the <em>being</em> (or state) of it : what is the state of an electron inside the apparatus in the Experiment 5?</p>
+<p>We know it is white, so it cannot be hard or soft, otherwise we will get half-half result by the uncertainty principle. It cannot be both hard and soft since different property will go in different direction.In one path the electron cannot have both properties. It cannot be neither since we can get some results.</p>
+<p>Therefore, the only condition is the electron has probability of being hard or soft (but we cannot know what exactly is) and such state is called <strong>superposition</strong>.</p>
+<p>Being in a definite state of position means that being in a superposition of having different values for momentum.</p>
 <h2 id="bells-inequality">Bell’s Inequality</h2>
-<p>In lecture 2, the professor demonstrated some intersting experiments that are waiting to be explained by quantum language.</p>
+<p>In lecture 2, the professor demonstrated some intersting experiments that are waiting to be explained using quantum language.</p>
 <ul>
-<li>Atom exist. But atomic orbics are unstable.</li>
-<li>Atomic spectra are discrete. When excites/sparks the simple gas like $ H_2$, we get light sent out by it. If we take the light and shine it on a prism, we would find distinct patterns : discrete spectra. Experimentalists found the wavelengths satisfy <span class="math inline">\(1/\lambda=R\cdot(1/n^2-1/m^2)\)</span>.</li>
-<li>Photoelectric effect. Stop voltage has no relation with intensity, but is linear to frequency. And it was found that the coefficient is just <span class="math inline">\(h\)</span>, the Planck constant derived from Blackbody radiation.</li>
-<li>Since photon has zero mass, we can develop the momentum equation <span class="math inline">\(p=h/\lambda\)</span> with <span class="math inline">\(E=pc\)</span> and <span class="math inline">\(E=h\nu\)</span>. This means photon has the particle’s property--momentum. Note that <span class="math inline">\(E=h\nu\)</span> is very unusual.</li>
-<li>Double-slit experiment with electron. The electron comes one in one, and was found randomly positioned. But when enough, the statistic told us the electrons were interfered. (I think) The electrons are particles, but they have unique properties that with a large number, they possess the property of a wave.</li>
-<li>Bragg scattering. If we send in a beam of electrons to a crystal and watch out the scattering from different angles, we would find the interference effect. The intensity as a function of angle of the out beam satisfies the function as if the electron is a wave with the wavelength <span class="math inline">\(\lambda=2d\sin\theta/n\)</span>. The electron diffracts off the crystal.</li>
-<li>Send out <span class="math inline">\(C_{60}\)</span> one by one and make them go through a diffraction grating.</li>
+<li><p>Atom exist. But atomic orbits are unstable.</p></li>
+<li><p>Atomic spectra are discrete. When excites/sparks the simple gas like $ H_2$, we get light sent out by it. If we take the light and shine it on a prism, we would find distinct patterns : discrete spectra. Experimentalists found the wavelengths satisfy <span class="math inline">\(1/\lambda=R\cdot(1/n^2-1/m^2)\)</span>.</p></li>
+<li><p>Photoelectric effect. Stop voltage has no relation with intensity, but is linear to frequency. And it was found that the coefficient is just <span class="math inline">\(h\)</span>, the Planck constant derived from Blackbody radiation.</p></li>
+<li><p>Since photon has zero mass, we can develop the momentum equation <span class="math inline">\(p=h/\lambda\)</span> with <span class="math inline">\(E=pc\)</span> and <span class="math inline">\(E=h\nu\)</span>. This means photon has the particle’s property--momentum. Note that <span class="math inline">\(E=h\nu\)</span> is very unusual.</p></li>
+<li><p>Double-slit experiment with electron. The electron comes one in one, and was found randomly positioned. But when the quantity is enough, the statistic told us the electrons were interfered.</p>
+<p><img src="../../../../Library/Application%20Support/typora-user-images/image-20201109153712555.png" alt="image-20201109153712555" style="zoom:25%;" /></p></li>
+<li><p>Bragg scattering. If we send in a beam of electrons to a crystal and watch out the scattering from different angles, we would find the interference effect. The intensity as a function of angle of the out beam satisfies the function as if the electron is a wave with the wavelength <span class="math inline">\(\lambda=2d\sin\theta/n\)</span>. The <strong>electron diffracts</strong> off the crystal.</p></li>
+<li><p>Send out <span class="math inline">\(C_{60}\)</span> one by one and make them go through a diffraction grating. [ ]</p></li>
 </ul>
-<p><strong>Some questions</strong> about the above experimental facts : Does this experiment suggests that the electron <em>individually</em> has the property of a wave? I think the only perferm wave property when the number is large? The last experiment may solve my question, but again the interference effect occurs only when there is a large number of <span class="math inline">\(C_{60}\)</span>. Maybe the property of statistical property can be seen as the individual property.</p>
 <p>Next comes the <em>Bell’s inequality</em>.</p>
 <p>If the state of the stuff is definite, then we have: <span class="math display">\[
 \operatorname{Num}(A,\bar B)+\operatorname{Num}(B,\bar C)\ge \operatorname{Num}(A,\bar C)
@@ -1117,12 +1308,12 @@ T_{ij}&amp;=a_{ki}a_{lj}T_{kl}&#39;
 \]</span> But Bell found by experiment that: <span class="math display">\[
 \operatorname{Num}(\uparrow_0,\downarrow_\theta)+\operatorname{Num}(\uparrow_\theta,\downarrow_{2\theta})&lt;\operatorname{Num}(\uparrow_0,\downarrow_{2\theta})
 \\
-\]</span> Where the up and down arrows are angular momentums of the electron. I think this can be explained only if the three binary states can be superposed.</p>
+\]</span> Where the up and down arrows indicate the spin angular momentum of the electron. I think this can be explained only if the three binary states can be superposed.</p>
 <h2 id="wave-function">Wave Function</h2>
 <h3 id="postulate-of-wavefunction">Postulate of Wavefunction</h3>
 <p>An essential postulate: The configuration or <em>state</em> of a quantum object is completely specified by a wavefunction denoted as <span class="math inline">\(\psi(x)\)</span>, <span class="math inline">\(\psi\in\mathbb{C}\)</span> .</p>
 <p>Classical: <span class="math inline">\((\vec p,\vec x)\to\)</span> Quantum: <span class="math inline">\(\psi(\vec x)\)</span></p>
-<p>Furthermore, <span class="math inline">\(p(x)=|\psi(x)|^2\)</span> determines the probability (density) that an object in the state <span class="math inline">\(\psi(x)\)</span> will be found at position <span class="math inline">\(x\)</span>. Note that the <em>dimension</em> of <span class="math inline">\(\psi\)</span> is square root of length since <span class="math inline">\(\displaystyle \int|\psi|^2 \text{d}x=1\)</span>.</p>
+<p>Furthermore, <span class="math inline">\(p(x)=|\psi(x)|^2\)</span> determines the probability (density) that an object in the state <span class="math inline">\(\psi(x)\)</span> will be found at position <span class="math inline">\(x\)</span>. Note that the <em>dimension</em> of <span class="math inline">\(\psi\)</span> is <strong>square root of length</strong> since <span class="math inline">\(\displaystyle \int|\psi|^2 \text{d}x=1\)</span>.</p>
 <h3 id="de-broglie-relations">De Broglie Relations</h3>
 <p>From de Broglie’s generalization of momentum-wavelength relation of photon, we have <span class="math display">\[
 \begin{aligned}
@@ -1144,7 +1335,97 @@ Hence for the superposition state, we have the probability density $$
 \psi(x)&amp;=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^\infty \widetilde \psi(x)e^{ikx}\text{d}k\\
 \widetilde\psi(k)&amp;=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^\infty \psi(x)e^{-ikx}\text{d}x.
 \end{aligned}
-\]</span> I think that means when state is expressed in wavefunction, position and momentum are tightly correlated.</p>
+\]</span> I think that means when state is expressed in wavefunction, position and momentum are tightly correlated, one could indicate the other.</p>
+<h2 id="expectations">Expectations</h2>
+<h3 id="uncertainty-and-expectation">Uncertainty and Expectation</h3>
+<p>To characterize the uncertainty, we use the standard deviation <span class="math display">\[
+\Delta a=\sqrt{\langle a^2\rangle-\langle a\rangle^2}
+\]</span></p>
+<p>The expectation value of a function of position <strong>in a given quantum state</strong> <span class="math inline">\(\psi(x)\)</span> is <span class="math display">\[
+\langle f(x)\rangle =\int_{-\infty}^\infty \psi^\star(x) f(x)\psi(x)\;\text dx.
+\]</span> However, when we consider the expectation of momentum <span class="math inline">\(\langle p\rangle\)</span>, we get problem: <span class="math inline">\(p\)</span> and <span class="math inline">\(x\)</span> cannot be measured simultaneously.</p>
+<p>( In fact we replace <span class="math inline">\(f\)</span> with <span class="math inline">\(\hat f\)</span> when compute the expectation value of an operator )</p>
+<h3 id="hints-to-the-operator">Hints to the operator</h3>
+<p>Notice some hints that indicate us to <em>operator</em>:</p>
+<ul>
+<li><p>For wavefunction <span class="math inline">\(\psi=e^{ikx}\)</span>, <span class="math display">\[
+\begin{aligned}
+\partial_x \psi=ik\psi\implies \frac{\hbar}{i}\partial_x \psi =\hbar k\psi=p\cdot\psi
+\end{aligned}
+\]</span></p></li>
+<li><p>Noether’s theorem states that <em>to every symmetry is associated a conserved quantity</em> .</p>
+<table>
+<colgroup>
+<col style="width: 61%" />
+<col style="width: 38%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Symmetry</th>
+<th style="text-align: center;">Conservation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Translation : <span class="math inline">\(\vec x\to \vec x+\Delta \vec x\)</span></td>
+<td style="text-align: center;">Momentum : <span class="math inline">\(\dot{\vec p}=0\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Time : <span class="math inline">\(t\to t+\Delta t\)</span></td>
+<td style="text-align: center;">Energy : <span class="math inline">\(\dot E=0\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Rotation : <span class="math inline">\(\vec x \to \overleftrightarrow R\cdot \vec x\)</span></td>
+<td style="text-align: center;">Angular Momentum : <span class="math inline">\(\dot{\vec L}=0\)</span></td>
+</tr>
+</tbody>
+</table></li>
+<li><p>For translations behave for functions, <span class="math display">\[
+\begin{align}
+f(x)\to f(x+l)&amp;=f(x)+l\partial_x f(x)+\frac{l^2}{2}\partial_x^2 f(x)+\dots\\
+&amp;=\sum_{n=0}^{\infty} \frac{(l\partial_x)^n}{n!}f(x)\\
+&amp;=e^{l\partial_x}f(x)
+\end{align}
+\]</span> Translations are generated by spatial derivatives <span class="math inline">\(\partial_x\)</span> and it should be associated with <span class="math inline">\(p\)</span>.</p>
+<p>Similarly, <span class="math inline">\(E\sim \partial_t,\; L_z\sim\partial_\varphi\)</span>.</p></li>
+</ul>
+<p>Finally, momentum in quantum mechanics is realized by an operator: <span class="math display">\[
+\hat p=\frac{\hbar}{i}\frac{\partial}{\partial x}.
+\]</span> And we use operator $p $ to compute expectation values: <span class="math display">\[
+\lang p\rang=\int_{-\infty}^\infty \psi^\star(x)\hat p \psi(x)\;\text dx
+\]</span></p>
+<p>I think operator <span class="math inline">\(\hat p\)</span> is introduced more intuitively than mathematically. The key is that we want to calculate expectation of <span class="math inline">\(p\)</span> in a state associated with position <span class="math inline">\(x\)</span>, but from uncertainty principle there is no meaning when <span class="math inline">\(p\)</span> and <span class="math inline">\(x\)</span> occured in one expression. Since momentum is related to position, we come out with operator. Then the <span class="math inline">\(\lang p\rang\)</span> is the expectation of the momentum that can be observed. (Only the momentum that is able to be observed can be taken out from the operator)</p>
+<p>The very interesting thing of momentum operator is it can get distribution of momentum when there is a superposition.</p>
+<h2 id="operators-and-the-schrddotodinger-equation">Operators and the <span class="math inline">\(Schr\ddot{o}dinger \;Equation\)</span></h2>
+<h3 id="common-operator">Common operator</h3>
+<p>For each observable quantity we have an associate operator.</p>
+<ul>
+<li>Momentum : <span class="math inline">\(\hat p=-i\hbar \partial_x\)</span></li>
+<li>Position: <span class="math inline">\(\hat x =x\)</span></li>
+<li>Energy: <span class="math inline">\(\hat E=\displaystyle \frac{\hat p^2}{2m}+V(\hat x)=-\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2}+V(x)\)</span></li>
+</ul>
+<h3 id="commutator-and-a-deep-equation">Commutator and a deep equation</h3>
+<p>To measure the importance of operator (act) order, we define the <em>commutator</em> : <span class="math display">\[
+[\hat A,\hat B]=\hat A\hat B-\hat B\hat A.
+\]</span> And one deep and profound result we get is: <span class="math display">\[
+[\hat x,\hat p]=i\hbar \hat 1, \label{xp}
+\]</span> which indicates the uncertainty principle. Assume the first thing we measure is accurate, then think about it, we cannot measure <span class="math inline">\(x\)</span> and <span class="math inline">\(p\)</span> both accurately, for the simple reason that their commutator is not zero: we cannot get the same result after the second one that is measured. Further more, when expressed in matrix, (<span class="math inline">\(\ref{xp}\)</span>) is a very hard matrix equation and only infinite dimension matrix is can solve.</p>
+<h3 id="the-schrddotodinger-equation">The <span class="math inline">\(Schr\ddot{o}dinger \;Equation\)</span></h3>
+<p>Actually <span class="math inline">\(e^{ikx}\)</span> is an eigenfunction of operator <span class="math inline">\(\hat p\)</span> and every state <span class="math inline">\(\psi(x)\)</span> can be generated by it from Fourier’s Theorem.</p>
+<p>From de Broglie, we know that any object is a wave, and consider a plane wave <span class="math display">\[
+\psi(x,t;k)=e^{i(kx-\omega t)},
+\]</span> which has momentum <span class="math inline">\(p=\hbar k\)</span> and energy <span class="math inline">\(E=\hbar \omega\)</span>.</p>
+<p>Similarly to hint of momentum, we notice <span class="math display">\[
+i\hbar \frac{\partial\psi(x,t)}{\partial t}=\hbar\omega \psi(x,t)=E\psi(x,t),
+\]</span></p>
+<p>which depicts the time evolution of energy <span class="math inline">\(E\)</span>. But maybe we do not know what is energy <span class="math inline">\(E\)</span>.</p>
+<p>A little change <span class="math inline">\(E\to \hat E\)</span> complete the equation and that is the <span class="math inline">\(Schr\ddot{o}dinger \;Equation\)</span> : <span class="math display">\[
+\begin{align}
+i\hbar \frac{\partial}{\partial t}\psi(x,t)&amp;=\hat E \psi(x,t)\\
+i.e.\qquad i\hbar\frac{\partial \psi(x,t)}{\partial t}&amp;=-\frac{\hbar^2}{2m}\frac{\partial^2 \psi(x,t)}{\partial x^2}+V(x)\psi(x,t).
+\end{align}
+\]</span> The equation describing the time evolution of a quantum state.</p>
+<p>It is analogous to the equation of motion $F= $ and <span class="math inline">\(\hat E\)</span> is not defined as the operator <span class="math inline">\(i\hbar\partial_t\)</span> any more than <span class="math inline">\(\vec F\)</span> is defined to be <span class="math inline">\(\hat{\vec p}\)</span> .</p>
 
       
       <!-- reward -->

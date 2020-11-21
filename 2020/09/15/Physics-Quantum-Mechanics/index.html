@@ -69,7 +69,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">1.4k</span>
+            <span class="post-count">2.1k</span>
         </span>
     </span>
 
@@ -78,7 +78,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">8 min</span>
+            <span class="post-count">13 min</span>
         </span>
     </span>
 </div>
@@ -112,36 +112,39 @@
 <p>We made <em>boxes</em> that can <em>measure</em> such properties. For instance, white electron and black electron will exit the box from different directions. From the direction we know the white/black property of the electron. Denote ‘C-Box’ (color box) for the boxes that can measure W/B property and similarly, ‘H-Box’ (hardness box) for those can measure ‘H/S’ property.</p>
 <p>We have mirrors and combinator that put the two directions together, so that we can continue more complicated experiments. Note that they only change the directions.</p>
 <p>Below are the experiments from physicists.</p>
+<p>First there are some basic and naive experiments.</p>
 <ol type="1">
-<li><p>White electron —&gt; C-Box —&gt; W, Soft electron—&gt;H-Box—&gt; S</p></li>
-<li><p>White electron —&gt; H-Box —&gt; <span class="math inline">\(50\%\)</span> H and <span class="math inline">\(50\%\)</span> S, Hard electron —&gt; C-Box —&gt; <span class="math inline">\(50\%\)</span> W and <span class="math inline">\(50\%\)</span> B</p></li>
-<li><p>White electron —&gt; C-Box —&gt; W or B (got the property) —&gt; mirror and combinator —&gt; C-Box —&gt; W</p></li>
-<li><p>White electron —&gt; H-Box —&gt; <span class="math inline">\(50\%\)</span> H and <span class="math inline">\(50\%\)</span> S (got the property) —&gt; mirror and combinator —&gt; H-Box —&gt; <span class="math inline">\(50\%\)</span> H and <span class="math inline">\(50\%\)</span> S</p></li>
+<li>Electrons —&gt; C-Box —&gt; W and B —&gt; choose W —&gt; C-Box —&gt; W (repeatability of color / hardness)</li>
+<li>Electrons —&gt; H-Box —&gt; H and S —&gt; choose H —&gt;C-Box —&gt; W (50%) and B (50%) (lack of correlation of color with hardness)</li>
 </ol>
-<p>Then comes the weird experiments.</p>
-<ol start="5" type="1">
-<li><p>White electron —&gt; H-Box —&gt; H or S ( got the hardness property) —&gt; C-Box —&gt; <strong>Not</strong> White, but <span class="math inline">\(50\%\)</span> W and <span class="math inline">\(50\%\)</span> B</p></li>
-<li><p>White electron —&gt; H-Box —&gt; mirror and combinator —&gt; C-Box —&gt; <strong>Not</strong> <span class="math inline">\(50\%\)</span> W and <span class="math inline">\(50\%\)</span> B, but totally W</p></li>
-<li><p>White electron —&gt; H-Box —&gt; mirror and combinator, and putting a wall/barrier in the soft path —&gt; C-Box —&gt; <span class="math inline">\(50\%\)</span> W and <span class="math inline">\(50\%\)</span> B</p></li>
+<p>Then comes the weird experiment.</p>
+<ol start="3" type="1">
+<li>Electrons —&gt; C-Box —&gt; W and B —&gt; choose W —&gt; H-Box —&gt; H and S —&gt; choose H —&gt; C-Box —&gt; <strong>Not</strong> (100%) W, but <span class="math inline">\(50\%\)</span> W and <span class="math inline">\(50\%\)</span> B</li>
 </ol>
-<p>For 5. , this is because the color and hardness property cannot be measured simultaneously, which is the <strong>uncertainty principle</strong>. (Though we know it is white at the begining, as long as we know the hardness, we cannot know the color property anymore)</p>
-<p>For 6. , it seems contradict with 6., but I think, maybe the key is that we actually do not know the hardness state after the electron passed the H-Box since it is an intermediate process.</p>
-<p>For 7. , I suddenly understand this : since we block the soft path, we know that the input is hard electron, then uncertainty principle guided that the color property cannot be measured, hence a half-half outcome.</p>
-<p>After we understand the principle of the motion of electrons, we consider the <em>being</em> (or state) of it : what is the being of an electron inside the apparatus in the 6th experiment ?</p>
-<p>We know it is white, so it cannot be hard or soft, otherwise we will get half-half result by the uncertaintu principle. It cannot be both hard and soft since the experiment has proved there is only one direction has electron every experiment. It cannot be neither since we can get results.</p>
-<p>The electron has probability of being hard or soft (but we cannot know what exactly is) and such state is called <strong>superposition</strong>.</p>
+<p>Apparently, hardness box tampers with color. Therefore experiment 3 tells us color and hardness property cannot be measured simultaneously, which is the <strong>uncertainty principle</strong>. Though we know it is white at the begining, as long as we measure the hardness, the color property white is not repeatable anymore.</p>
+<p>Then we use combinator to dig deeper.</p>
+<ol start="4" type="1">
+<li><p>White electrons —&gt; H-Box —&gt; <span class="math inline">\(50\%\)</span> H and <span class="math inline">\(50\%\)</span> S —&gt; combinator —&gt; H-Box —&gt; <span class="math inline">\(50\%\)</span> H and <span class="math inline">\(50\%\)</span> S</p></li>
+<li><p>White electrons —&gt; H-Box —&gt; 50% H and 50% S —&gt; combinator —&gt; C-Box —&gt; (100%) W</p></li>
+<li><p>White electrons —&gt; H-Box —&gt; 50% H and 50% S —&gt; put a wall in the Soft's path —&gt; combinator —&gt; C-Box —&gt; <span class="math inline">\(50\%\)</span> W and <span class="math inline">\(50\%\)</span> B</p></li>
+</ol>
+<p>Experiment 4 tells us combinator does not change the proberties of electrons. Experiment 5 got totally W because the added combination part act as if H/S property doesn’t be measured, hence the W/B property will not be disturbed. Experiment 6 shows a disturbing one from which we can see the uncertainty principle plays a role.</p>
+<p>After we understand the principle of the motion of electrons, we consider the <em>being</em> (or state) of it : what is the state of an electron inside the apparatus in the Experiment 5?</p>
+<p>We know it is white, so it cannot be hard or soft, otherwise we will get half-half result by the uncertainty principle. It cannot be both hard and soft since different property will go in different direction.In one path the electron cannot have both properties. It cannot be neither since we can get some results.</p>
+<p>Therefore, the only condition is the electron has probability of being hard or soft (but we cannot know what exactly is) and such state is called <strong>superposition</strong>.</p>
+<p>Being in a definite state of position means that being in a superposition of having different values for momentum.</p>
 <h2 id="bells-inequality">Bell’s Inequality</h2>
-<p>In lecture 2, the professor demonstrated some intersting experiments that are waiting to be explained by quantum language.</p>
+<p>In lecture 2, the professor demonstrated some intersting experiments that are waiting to be explained using quantum language.</p>
 <ul>
-<li>Atom exist. But atomic orbics are unstable.</li>
-<li>Atomic spectra are discrete. When excites/sparks the simple gas like $ H_2$, we get light sent out by it. If we take the light and shine it on a prism, we would find distinct patterns : discrete spectra. Experimentalists found the wavelengths satisfy <span class="math inline">\(1/\lambda=R\cdot(1/n^2-1/m^2)\)</span>.</li>
-<li>Photoelectric effect. Stop voltage has no relation with intensity, but is linear to frequency. And it was found that the coefficient is just <span class="math inline">\(h\)</span>, the Planck constant derived from Blackbody radiation.</li>
-<li>Since photon has zero mass, we can develop the momentum equation <span class="math inline">\(p=h/\lambda\)</span> with <span class="math inline">\(E=pc\)</span> and <span class="math inline">\(E=h\nu\)</span>. This means photon has the particle’s property--momentum. Note that <span class="math inline">\(E=h\nu\)</span> is very unusual.</li>
-<li>Double-slit experiment with electron. The electron comes one in one, and was found randomly positioned. But when enough, the statistic told us the electrons were interfered. (I think) The electrons are particles, but they have unique properties that with a large number, they possess the property of a wave.</li>
-<li>Bragg scattering. If we send in a beam of electrons to a crystal and watch out the scattering from different angles, we would find the interference effect. The intensity as a function of angle of the out beam satisfies the function as if the electron is a wave with the wavelength <span class="math inline">\(\lambda=2d\sin\theta/n\)</span>. The electron diffracts off the crystal.</li>
-<li>Send out <span class="math inline">\(C_{60}\)</span> one by one and make them go through a diffraction grating.</li>
+<li><p>Atom exist. But atomic orbits are unstable.</p></li>
+<li><p>Atomic spectra are discrete. When excites/sparks the simple gas like $ H_2$, we get light sent out by it. If we take the light and shine it on a prism, we would find distinct patterns : discrete spectra. Experimentalists found the wavelengths satisfy <span class="math inline">\(1/\lambda=R\cdot(1/n^2-1/m^2)\)</span>.</p></li>
+<li><p>Photoelectric effect. Stop voltage has no relation with intensity, but is linear to frequency. And it was found that the coefficient is just <span class="math inline">\(h\)</span>, the Planck constant derived from Blackbody radiation.</p></li>
+<li><p>Since photon has zero mass, we can develop the momentum equation <span class="math inline">\(p=h/\lambda\)</span> with <span class="math inline">\(E=pc\)</span> and <span class="math inline">\(E=h\nu\)</span>. This means photon has the particle’s property--momentum. Note that <span class="math inline">\(E=h\nu\)</span> is very unusual.</p></li>
+<li><p>Double-slit experiment with electron. The electron comes one in one, and was found randomly positioned. But when the quantity is enough, the statistic told us the electrons were interfered.</p>
+<p><img src="../../../../Library/Application%20Support/typora-user-images/image-20201109153712555.png" alt="image-20201109153712555" style="zoom:25%;" /></p></li>
+<li><p>Bragg scattering. If we send in a beam of electrons to a crystal and watch out the scattering from different angles, we would find the interference effect. The intensity as a function of angle of the out beam satisfies the function as if the electron is a wave with the wavelength <span class="math inline">\(\lambda=2d\sin\theta/n\)</span>. The <strong>electron diffracts</strong> off the crystal.</p></li>
+<li><p>Send out <span class="math inline">\(C_{60}\)</span> one by one and make them go through a diffraction grating. [ ]</p></li>
 </ul>
-<p><strong>Some questions</strong> about the above experimental facts : Does this experiment suggests that the electron <em>individually</em> has the property of a wave? I think the only perferm wave property when the number is large? The last experiment may solve my question, but again the interference effect occurs only when there is a large number of <span class="math inline">\(C_{60}\)</span>. Maybe the property of statistical property can be seen as the individual property.</p>
 <p>Next comes the <em>Bell’s inequality</em>.</p>
 <p>If the state of the stuff is definite, then we have: <span class="math display">\[
 \operatorname{Num}(A,\bar B)+\operatorname{Num}(B,\bar C)\ge \operatorname{Num}(A,\bar C)
@@ -155,12 +158,12 @@
 \]</span> But Bell found by experiment that: <span class="math display">\[
 \operatorname{Num}(\uparrow_0,\downarrow_\theta)+\operatorname{Num}(\uparrow_\theta,\downarrow_{2\theta})&lt;\operatorname{Num}(\uparrow_0,\downarrow_{2\theta})
 \\
-\]</span> Where the up and down arrows are angular momentums of the electron. I think this can be explained only if the three binary states can be superposed.</p>
+\]</span> Where the up and down arrows indicate the spin angular momentum of the electron. I think this can be explained only if the three binary states can be superposed.</p>
 <h2 id="wave-function">Wave Function</h2>
 <h3 id="postulate-of-wavefunction">Postulate of Wavefunction</h3>
 <p>An essential postulate: The configuration or <em>state</em> of a quantum object is completely specified by a wavefunction denoted as <span class="math inline">\(\psi(x)\)</span>, <span class="math inline">\(\psi\in\mathbb{C}\)</span> .</p>
 <p>Classical: <span class="math inline">\((\vec p,\vec x)\to\)</span> Quantum: <span class="math inline">\(\psi(\vec x)\)</span></p>
-<p>Furthermore, <span class="math inline">\(p(x)=|\psi(x)|^2\)</span> determines the probability (density) that an object in the state <span class="math inline">\(\psi(x)\)</span> will be found at position <span class="math inline">\(x\)</span>. Note that the <em>dimension</em> of <span class="math inline">\(\psi\)</span> is square root of length since <span class="math inline">\(\displaystyle \int|\psi|^2 \text{d}x=1\)</span>.</p>
+<p>Furthermore, <span class="math inline">\(p(x)=|\psi(x)|^2\)</span> determines the probability (density) that an object in the state <span class="math inline">\(\psi(x)\)</span> will be found at position <span class="math inline">\(x\)</span>. Note that the <em>dimension</em> of <span class="math inline">\(\psi\)</span> is <strong>square root of length</strong> since <span class="math inline">\(\displaystyle \int|\psi|^2 \text{d}x=1\)</span>.</p>
 <h3 id="de-broglie-relations">De Broglie Relations</h3>
 <p>From de Broglie’s generalization of momentum-wavelength relation of photon, we have <span class="math display">\[
 \begin{aligned}
@@ -182,7 +185,97 @@ Hence for the superposition state, we have the probability density $$
 \psi(x)&amp;=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^\infty \widetilde \psi(x)e^{ikx}\text{d}k\\
 \widetilde\psi(k)&amp;=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^\infty \psi(x)e^{-ikx}\text{d}x.
 \end{aligned}
-\]</span> I think that means when state is expressed in wavefunction, position and momentum are tightly correlated.</p>
+\]</span> I think that means when state is expressed in wavefunction, position and momentum are tightly correlated, one could indicate the other.</p>
+<h2 id="expectations">Expectations</h2>
+<h3 id="uncertainty-and-expectation">Uncertainty and Expectation</h3>
+<p>To characterize the uncertainty, we use the standard deviation <span class="math display">\[
+\Delta a=\sqrt{\langle a^2\rangle-\langle a\rangle^2}
+\]</span></p>
+<p>The expectation value of a function of position <strong>in a given quantum state</strong> <span class="math inline">\(\psi(x)\)</span> is <span class="math display">\[
+\langle f(x)\rangle =\int_{-\infty}^\infty \psi^\star(x) f(x)\psi(x)\;\text dx.
+\]</span> However, when we consider the expectation of momentum <span class="math inline">\(\langle p\rangle\)</span>, we get problem: <span class="math inline">\(p\)</span> and <span class="math inline">\(x\)</span> cannot be measured simultaneously.</p>
+<p>( In fact we replace <span class="math inline">\(f\)</span> with <span class="math inline">\(\hat f\)</span> when compute the expectation value of an operator )</p>
+<h3 id="hints-to-the-operator">Hints to the operator</h3>
+<p>Notice some hints that indicate us to <em>operator</em>:</p>
+<ul>
+<li><p>For wavefunction <span class="math inline">\(\psi=e^{ikx}\)</span>, <span class="math display">\[
+\begin{aligned}
+\partial_x \psi=ik\psi\implies \frac{\hbar}{i}\partial_x \psi =\hbar k\psi=p\cdot\psi
+\end{aligned}
+\]</span></p></li>
+<li><p>Noether’s theorem states that <em>to every symmetry is associated a conserved quantity</em> .</p>
+<table>
+<colgroup>
+<col style="width: 61%" />
+<col style="width: 38%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Symmetry</th>
+<th style="text-align: center;">Conservation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Translation : <span class="math inline">\(\vec x\to \vec x+\Delta \vec x\)</span></td>
+<td style="text-align: center;">Momentum : <span class="math inline">\(\dot{\vec p}=0\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Time : <span class="math inline">\(t\to t+\Delta t\)</span></td>
+<td style="text-align: center;">Energy : <span class="math inline">\(\dot E=0\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Rotation : <span class="math inline">\(\vec x \to \overleftrightarrow R\cdot \vec x\)</span></td>
+<td style="text-align: center;">Angular Momentum : <span class="math inline">\(\dot{\vec L}=0\)</span></td>
+</tr>
+</tbody>
+</table></li>
+<li><p>For translations behave for functions, <span class="math display">\[
+\begin{align}
+f(x)\to f(x+l)&amp;=f(x)+l\partial_x f(x)+\frac{l^2}{2}\partial_x^2 f(x)+\dots\\
+&amp;=\sum_{n=0}^{\infty} \frac{(l\partial_x)^n}{n!}f(x)\\
+&amp;=e^{l\partial_x}f(x)
+\end{align}
+\]</span> Translations are generated by spatial derivatives <span class="math inline">\(\partial_x\)</span> and it should be associated with <span class="math inline">\(p\)</span>.</p>
+<p>Similarly, <span class="math inline">\(E\sim \partial_t,\; L_z\sim\partial_\varphi\)</span>.</p></li>
+</ul>
+<p>Finally, momentum in quantum mechanics is realized by an operator: <span class="math display">\[
+\hat p=\frac{\hbar}{i}\frac{\partial}{\partial x}.
+\]</span> And we use operator $p $ to compute expectation values: <span class="math display">\[
+\lang p\rang=\int_{-\infty}^\infty \psi^\star(x)\hat p \psi(x)\;\text dx
+\]</span></p>
+<p>I think operator <span class="math inline">\(\hat p\)</span> is introduced more intuitively than mathematically. The key is that we want to calculate expectation of <span class="math inline">\(p\)</span> in a state associated with position <span class="math inline">\(x\)</span>, but from uncertainty principle there is no meaning when <span class="math inline">\(p\)</span> and <span class="math inline">\(x\)</span> occured in one expression. Since momentum is related to position, we come out with operator. Then the <span class="math inline">\(\lang p\rang\)</span> is the expectation of the momentum that can be observed. (Only the momentum that is able to be observed can be taken out from the operator)</p>
+<p>The very interesting thing of momentum operator is it can get distribution of momentum when there is a superposition.</p>
+<h2 id="operators-and-the-schrddotodinger-equation">Operators and the <span class="math inline">\(Schr\ddot{o}dinger \;Equation\)</span></h2>
+<h3 id="common-operator">Common operator</h3>
+<p>For each observable quantity we have an associate operator.</p>
+<ul>
+<li>Momentum : <span class="math inline">\(\hat p=-i\hbar \partial_x\)</span></li>
+<li>Position: <span class="math inline">\(\hat x =x\)</span></li>
+<li>Energy: <span class="math inline">\(\hat E=\displaystyle \frac{\hat p^2}{2m}+V(\hat x)=-\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2}+V(x)\)</span></li>
+</ul>
+<h3 id="commutator-and-a-deep-equation">Commutator and a deep equation</h3>
+<p>To measure the importance of operator (act) order, we define the <em>commutator</em> : <span class="math display">\[
+[\hat A,\hat B]=\hat A\hat B-\hat B\hat A.
+\]</span> And one deep and profound result we get is: <span class="math display">\[
+[\hat x,\hat p]=i\hbar \hat 1, \label{xp}
+\]</span> which indicates the uncertainty principle. Assume the first thing we measure is accurate, then think about it, we cannot measure <span class="math inline">\(x\)</span> and <span class="math inline">\(p\)</span> both accurately, for the simple reason that their commutator is not zero: we cannot get the same result after the second one that is measured. Further more, when expressed in matrix, (<span class="math inline">\(\ref{xp}\)</span>) is a very hard matrix equation and only infinite dimension matrix is can solve.</p>
+<h3 id="the-schrddotodinger-equation">The <span class="math inline">\(Schr\ddot{o}dinger \;Equation\)</span></h3>
+<p>Actually <span class="math inline">\(e^{ikx}\)</span> is an eigenfunction of operator <span class="math inline">\(\hat p\)</span> and every state <span class="math inline">\(\psi(x)\)</span> can be generated by it from Fourier’s Theorem.</p>
+<p>From de Broglie, we know that any object is a wave, and consider a plane wave <span class="math display">\[
+\psi(x,t;k)=e^{i(kx-\omega t)},
+\]</span> which has momentum <span class="math inline">\(p=\hbar k\)</span> and energy <span class="math inline">\(E=\hbar \omega\)</span>.</p>
+<p>Similarly to hint of momentum, we notice <span class="math display">\[
+i\hbar \frac{\partial\psi(x,t)}{\partial t}=\hbar\omega \psi(x,t)=E\psi(x,t),
+\]</span></p>
+<p>which depicts the time evolution of energy <span class="math inline">\(E\)</span>. But maybe we do not know what is energy <span class="math inline">\(E\)</span>.</p>
+<p>A little change <span class="math inline">\(E\to \hat E\)</span> complete the equation and that is the <span class="math inline">\(Schr\ddot{o}dinger \;Equation\)</span> : <span class="math display">\[
+\begin{align}
+i\hbar \frac{\partial}{\partial t}\psi(x,t)&amp;=\hat E \psi(x,t)\\
+i.e.\qquad i\hbar\frac{\partial \psi(x,t)}{\partial t}&amp;=-\frac{\hbar^2}{2m}\frac{\partial^2 \psi(x,t)}{\partial x^2}+V(x)\psi(x,t).
+\end{align}
+\]</span> The equation describing the time evolution of a quantum state.</p>
+<p>It is analogous to the equation of motion $F= $ and <span class="math inline">\(\hat E\)</span> is not defined as the operator <span class="math inline">\(i\hbar\partial_t\)</span> any more than <span class="math inline">\(\vec F\)</span> is defined to be <span class="math inline">\(\hat{\vec p}\)</span> .</p>
 
       
       <!-- reward -->

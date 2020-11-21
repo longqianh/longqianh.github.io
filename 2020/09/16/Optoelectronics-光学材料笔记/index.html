@@ -69,7 +69,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">420</span>
+            <span class="post-count">781</span>
         </span>
     </span>
 
@@ -78,7 +78,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">1 min</span>
+            <span class="post-count">2 min</span>
         </span>
     </span>
 </div>
@@ -107,9 +107,21 @@
 <p>记录一些在光学材料与元件制造课程中的整理和总结。</p>
 <h2 id="光学玻璃">光学玻璃</h2>
 <h2 id="光学晶体">光学晶体</h2>
-<h3 id="点群">点群</h3>
-<p>这是「晶体学」的知识，「固体物理学」也可学到。</p>
-<p>晶体学中，晶体学点群是对称操作的集合（旋转、面对称、中心对称）。</p>
+<p>以下摘自《晶体物理学基础》(陈纲等)。</p>
+<h3 id="对称操作">对称操作</h3>
+<p>如果经过某种操作（转动、镜像、中心反演等）以后，晶体中的各个点都变到新的位置，但是晶形保持不变，那么称这种操作为晶体的对称操作。</p>
+<p>在晶体中，任何一个对称操作 <span class="math inline">\(P\)</span> 可以重复多次 ( <span class="math inline">\(P^m\)</span> ) ，直至晶体每个点都回到原来的位置 (<span class="math inline">\(P^n=E\)</span> )。</p>
+<h3 id="jones符号">Jones符号</h3>
+<p>对称操作除了用矩阵表示外，可以用Jones符号表示。</p>
+<p><span class="math inline">\((\bar x_1 x_2 x_3)\)</span> 诸如此，表示 <span class="math inline">\(x_1’=\bar x_1,x_2’=x_2,x_3’=x_3\)</span>, 即绕 <span class="math inline">\(x_1\)</span> 轴旋转+中心对称。</p>
+<h3 id="对称元素">对称元素</h3>
+<p>对称元素时晶体中的某些点、线和面，晶体的对称操作是相对于他们进行的，它们在对称操作过程中保持不动。</p>
+<p>采用数字符号进行表示：<span class="math inline">\(1,2,3,4,6\)</span> 依次表示1、2、3、4、6次旋转轴，<span class="math inline">\(\bar 1,\bar 2,\bar 3,\bar 4,\bar 6\)</span> 分别等价于反演中心、反射镜面、3+反演中心、四度反轴（转90度再做中心对称）、3+垂直3次轴的镜面。</p>
+<p>注：晶体只有 <span class="math inline">\(\bar 4\)</span> 和晶体有 <span class="math inline">\(4\)</span> 也有 <span class="math inline">\(\bar 1\)</span> 所拥有的对称操作集合时不一样的，后者包含前者，对称性更高。</p>
+<p>但是晶体有 <span class="math inline">\(\bar 3\)</span> 就等价于有 <span class="math inline">\(3\)</span> 也有 <span class="math inline">\(\bar 1\)</span>。</p>
+<h3 id="晶体学点群">晶体学点群</h3>
+<p>晶体晶形等<strong>对称操作的集合</strong>称为晶体学点群（简称点群）。</p>
+<p>知道了晶体的所有对称操作或者所有对称元素，就知道了它所属的点群。</p>
 <p>给定一个一定构型的立方晶系，根据它所具有的对称性（以对称操作要素描述），可以形成各种组合，化简后得到32个点群。给定一个晶体，根据它的布拉维点阵，我们可以确定它是具有哪一种对称性。</p>
 <p>国际符号用存在于某个特定方向上的对称元素来表示点群。</p>
 <p>比如一个正交晶系，它有 mm2 / 222 / mmm 这三种对称性组合（具体描述为 <span class="math inline">\(G_22P\)</span> / <span class="math inline">\(3G_2\)</span> / <span class="math inline">\(3G_23PC\)</span> )。给定一个正交晶系的晶体，通过判断它的点阵符合那种对称组合所生成的点阵（一个点由对称性生出的点阵列），我们可以确定它所属的点群。</p>
