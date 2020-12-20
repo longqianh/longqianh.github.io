@@ -16,13 +16,13 @@
   <link rel="shortcut icon" href="/ironman.ico" />
   
   
-<link rel="stylesheet" href="/dist/main.css">
+<link rel="stylesheet" href="dist/main.css">
 
   
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/css/remixicon.min.css">
 
   
-<link rel="stylesheet" href="/css/custom.css">
+<link rel="stylesheet" href="css/custom.css">
 
   
   
@@ -45,7 +45,7 @@
     
       
       <a class="forkMe" href="https://github.com/longqianh"
-        target="_blank"><img width="149" height="149" src="/images/forkme.png"
+        target="_blank"><img width="149" height="149" src="images/forkme.png"
           class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
     
   <div class="cover-frame">
@@ -53,7 +53,7 @@
       <img src="/images/myironman.png" alt="image frame" />
     </div>
     <div class="cover-inner text-center text-white">
-      <h1><a href="/">Peter&#39;s Blog</a></h1>
+      <h1><a href="index.html">Peter&#39;s Blog</a></h1>
       <div id="subtitle-box">
         
         <span id="subtitle"></span>
@@ -80,7 +80,7 @@
     
     
     
-    <article id="post-Projects-Lunar-Lidar-Design" class="article article-type-post" itemscope
+    <article id="post-Electronics" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
@@ -88,7 +88,345 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2020/11/07/Projects-Lunar-Lidar-Design/"
+  <a class="article-title" href="2020/12/11/Electronics/"
+    >Electronics</a> 
+</h2>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="2020/12/11/Electronics/" class="article-date">
+  <time datetime="2020-12-11T11:41:32.000Z" itemprop="datePublished">2020-12-11</time>
+</a>
+      
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <p>我的专业是光电，有光也有电。</p>
+<p>刚入大学，电工电子工程训练是我噩梦一般的课程，电学和电学实验我最不擅长。参加电子设计比赛，我拖了队友很大的后腿。</p>
+<p>我想要放弃电，但是我不能。因为他太重要了。</p>
+<h2 id="transistor-三极管">Transistor 三极管</h2>
+<p>三极管是一个非常重要的元件，模电数电经常与他碰面，然而他的原理我直到光电子学讲了半导体物理才明白。</p>
+<p>首先直观地去看三极管，YouTube上有一个非常棒的视频：https://www.youtube.com/watch?v=7ukDKVHnac4</p>
+<p>看完视频基本上可以对三极管有一个宏观和近微观的认识，然后可以看一下知乎的这个回答，了解一下它的微观机理：https://www.zhihu.com/question/34534183/answer/137383173</p>
+<h4 id="半导体">1 半导体</h4>
+<p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glk6kdauiij30zo0eg191.jpg" alt="image-20201211201747794" style="zoom:50%;" /></p>
+<p>图中圆圈表示空穴，负号表示电子。<span class="math inline">\(E_f\)</span> 为热平衡状态下的费米能级。</p>
+<p>Q：为什么N型半导体的大量电子在价带？</p>
+<p>由于 <span class="math inline">\(E_g\)</span> 小，随着温度升高，电子将会因为热激发作用从价带跃过带隙而进入导带。这些电子可以自由移动，称为 <em>自由载流子</em> 。</p>
+<h4 id="pn结">2 PN结</h4>
+<p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glk6sc8psyj30u018jx6p.jpg" alt="image-20201211202519512" style="zoom:50%;" /></p>
+<p>把这P和N型半导体并在一起（metallurgical contact）,由于扩散作用（上边的电子浓度大，N—&gt;P,下边的空穴浓度大，P—&gt;N）在中间的地方形成了结区，平衡时的内建电场阻止了进一步的扩散。两个半导体的费米能级合到了一起。</p>
+<h4 id="二极管">2.5 二极管</h4>
+<p>歪个楼，这时可以考察一下PN结的二极管性质：在P极加正向偏压U（forward biasing），电子可以被正向偏压吸引克服内建电场的势垒从N区进入P区，进而形成电流。</p>
+<p>另外我们会发现费米能级“撕裂”了，这时P区的每个电子都增加了 <span class="math inline">\(eU\)</span> 的能量，根据费米能级的物理含义（电子拥有 <span class="math inline">\(E_f\)</span> 能量（占据该能级）的概率 为 <span class="math inline">\(1/2\)</span>）可以知道P区的新费米能级为 <span class="math inline">\(E_f’=E_f-eU\)</span>.</p>
+<p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glk74l8c8fj30yj0ikh8w.jpg" alt="image-20201211203721245" style="zoom:50%;" /></p>
+<p>相反，如果加反向偏压，则会把P区的空穴和N区的电子往外赶，使内建电场（PN结厚度）增大，无电流产生，不导通。</p>
+<figure>
+<img src="https://tva1.sinaimg.cn/large/0081Kckwly1glk75mqrayj30ed06agov.jpg" alt="image-20201211203829433" /><figcaption aria-hidden="true">image-20201211203829433</figcaption>
+</figure>
+<h4 id="npn结三极管">3 NPN结：三极管</h4>
+<h5 id="放大的原理">放大的原理</h5>
+<p>就像YouTube视频中说的，NPN中总有一个不导通（cb），另一个导通（eb）的原因是电子借助正向偏压克服了内建电场的势垒。</p>
+<p>然后我们就要问了：基极电流 <span class="math inline">\(I_B\)</span> 起到了什么作用？没有它似乎该导通（be）的还是导通，不导通（cb）的仍旧不导通。</p>
+<p>知乎上的那篇答案说清楚了：基极电流注向中间P区注入了电子，使b和e极之间的势垒降低，从而克服势垒从发射极e进入b的电子指数上升。</p>
+<p>由于基极b的厚度很小，跟着 <span class="math inline">\(I_B\)</span> 回流的电子少，大部分电子加入到了中间的P区，然后从P区进入N区，由于是反向偏压，进入的电子使内建电场不断扩大（知乎答案说的“漂移”），这构成了集电极电流。</p>
+<p>（没想通的一点是 集电极电流的部分 反向偏压 但好像电子是可以通过的</p>
+<p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glk7gaj1wij31260u0kjl.jpg" alt="image-20201211204831143" style="zoom:50%;" /></p>
+<h5 id="饱和">饱和</h5>
+<p>三极管的饱和现在就很好解释了：be间的势垒被减到N区所有电子都可以通过，再通电流 <span class="math inline">\(I_B\)</span>，发射极到集电极的电流 <span class="math inline">\(I_{CE}\)</span> 也不会改变了。</p>
+
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+
+    </footer>
+
+  </div>
+
+  
+
+  
+
+  
+  
+  
+
+</article>
+    
+    <article id="post-Terminal" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="2020/12/11/Terminal/"
+    >Terminal</a> 
+</h2>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="2020/12/11/Terminal/" class="article-date">
+  <time datetime="2020-12-10T18:50:37.000Z" itemprop="datePublished">2020-12-11</time>
+</a>
+      
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <h1 id="terminal-use">Terminal Use</h1>
+<h2 id="train-deep-learning-models-on-remote-host">Train deep learning models on remote host</h2>
+<ul>
+<li><p>tmux</p></li>
+<li><p>conda virtual env</p></li>
+<li><p>visdom to monitor remotely</p></li>
+<li><pre class="shell"><code>ssh username@ip
+visdom -p port
+# then detach it
+
+ssh username@ip
+tmux new -s session-to-train
+python main.py
+# then detach it
+
+tmux new -s session-to-run-visdom-without-broken-pipe
+ssh -L port:127.0.0.1:port username@ip
+# then detach it 
+# then monitor the loss etc. in host machine at 127.0.0.1:port
+</code></pre></li>
+</ul>
+
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+
+    </footer>
+
+  </div>
+
+  
+
+  
+
+  
+  
+  
+
+</article>
+    
+    <article id="post-Optics/Experiments" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="2020/12/11/Optics/Experiments/"
+    >Experiments</a> 
+</h2>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="2020/12/11/Optics/Experiments/" class="article-date">
+  <time datetime="2020-12-10T17:36:33.000Z" itemprop="datePublished">2020-12-11</time>
+</a>
+      
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <h2 id="调制平行光">调制平行光</h2>
+<h3 id="自准直法">自准直法</h3>
+<h3 id="剪切干涉法">剪切干涉法</h3>
+
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+
+    </footer>
+
+  </div>
+
+  
+
+  
+
+  
+  
+  
+
+</article>
+    
+    <article id="post-Other Things/FloydHub Notes" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="2020/11/27/Other%20Things/FloydHub%20Notes/"
+    >FloydHub Notes</a> 
+</h2>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="2020/11/27/Other%20Things/FloydHub%20Notes/" class="article-date">
+  <time datetime="2020-11-27T08:26:23.000Z" itemprop="datePublished">2020-11-27</time>
+</a>
+      
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <p>FloydHub is a nice place to train and practice deep learning models.</p>
+<p>There are some notes of some command line operation.</p>
+<h2 id="first">First</h2>
+<ul>
+<li>Log in: <code>floyd login</code></li>
+<li>Create a new project with name <code>proj-name</code></li>
+<li>Initialize: <code>floyd init proj-name</code>
+<ul>
+<li>this will start a CLI (command line interface) job</li>
+</ul></li>
+<li>Run: <code>floyd run "python run.py"</code>
+<ul>
+<li>by default, run on cpu ; to specify, use <code>--gpu</code></li>
+</ul></li>
+</ul>
+<h2 id="second">Second</h2>
+<ul>
+<li><p>Employ: <code>--mode serve</code> NEED TO DEEP IN LATER</p></li>
+<li><p>Immediately display logs: add command <code>-f</code> or <code>--follow</code></p></li>
+</ul>
+<h2 id="third">Third</h2>
+<ul>
+<li>View output: <code>floyd output</code>
+<ul>
+<li>this command will execute a web page of Floyd</li>
+</ul></li>
+<li>Info of job: <code>floyd info</code></li>
+<li>Status of jobs: <code>floyd status</code></li>
+</ul>
+
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+
+    </footer>
+
+  </div>
+
+  
+
+  
+
+  
+  
+  
+
+</article>
+    
+    <article id="post-Projects/Lunar Lidar Design" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="2020/11/07/Projects/Lunar%20Lidar%20Design/"
     >Lunar Lidar Design</a> 
 </h2>
  
@@ -98,7 +436,7 @@
 
     
     <div class="article-meta">
-      <a href="/2020/11/07/Projects-Lunar-Lidar-Design/" class="article-date">
+      <a href="2020/11/07/Projects/Lunar%20Lidar%20Design/" class="article-date">
   <time datetime="2020-11-07T13:16:27.000Z" itemprop="datePublished">2020-11-07</time>
 </a>
       
@@ -153,7 +491,7 @@
 
 </article>
     
-    <article id="post-Projects-Invisibility-Cloak" class="article article-type-post" itemscope
+    <article id="post-Projects/Invisibility Cloak" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
@@ -161,7 +499,7 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2020/11/07/Projects-Invisibility-Cloak/"
+  <a class="article-title" href="2020/11/07/Projects/Invisibility%20Cloak/"
     >Invisibility Cloak</a> 
 </h2>
  
@@ -171,7 +509,7 @@
 
     
     <div class="article-meta">
-      <a href="/2020/11/07/Projects-Invisibility-Cloak/" class="article-date">
+      <a href="2020/11/07/Projects/Invisibility%20Cloak/" class="article-date">
   <time datetime="2020-11-07T13:16:15.000Z" itemprop="datePublished">2020-11-07</time>
 </a>
       
@@ -226,7 +564,7 @@
 
 </article>
     
-    <article id="post-Projects-Light-Sheet-Design" class="article article-type-post" itemscope
+    <article id="post-Projects/Light Sheet Design" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
@@ -234,7 +572,7 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2020/11/07/Projects-Light-Sheet-Design/"
+  <a class="article-title" href="2020/11/07/Projects/Light%20Sheet%20Design/"
     >Light Sheet Design</a> 
 </h2>
  
@@ -244,7 +582,7 @@
 
     
     <div class="article-meta">
-      <a href="/2020/11/07/Projects-Light-Sheet-Design/" class="article-date">
+      <a href="2020/11/07/Projects/Light%20Sheet%20Design/" class="article-date">
   <time datetime="2020-11-07T13:16:04.000Z" itemprop="datePublished">2020-11-07</time>
 </a>
       
@@ -299,7 +637,7 @@
 
 </article>
     
-    <article id="post-Optoelectronics-LADAR" class="article article-type-post" itemscope
+    <article id="post-Optoelectronics /LADAR" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
@@ -307,7 +645,7 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2020/11/06/Optoelectronics-LADAR/"
+  <a class="article-title" href="2020/11/06/Optoelectronics%20/LADAR/"
     >LADAR 「激光雷达」</a> 
 </h2>
  
@@ -317,7 +655,7 @@
 
     
     <div class="article-meta">
-      <a href="/2020/11/06/Optoelectronics-LADAR/" class="article-date">
+      <a href="2020/11/06/Optoelectronics%20/LADAR/" class="article-date">
   <time datetime="2020-11-06T11:31:14.000Z" itemprop="datePublished">2020-11-06</time>
 </a>
       
@@ -434,7 +772,7 @@ W\approx 0.77\frac{\lambda f}{d},
 
 </article>
     
-    <article id="post-Optoelectronics-Optoelectronics" class="article article-type-post" itemscope
+    <article id="post-Optoelectronics /光电子学笔记" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
@@ -442,8 +780,8 @@ W\approx 0.77\frac{\lambda f}{d},
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2020/10/23/Optoelectronics-Optoelectronics/"
-    >Optoelectronics</a> 
+  <a class="article-title" href="2020/10/23/Optoelectronics%20/%E5%85%89%E7%94%B5%E5%AD%90%E5%AD%A6%E7%AC%94%E8%AE%B0/"
+    >光电子学笔记</a> 
 </h2>
  
 
@@ -452,12 +790,12 @@ W\approx 0.77\frac{\lambda f}{d},
 
     
     <div class="article-meta">
-      <a href="/2020/10/23/Optoelectronics-Optoelectronics/" class="article-date">
+      <a href="2020/10/23/Optoelectronics%20/%E5%85%89%E7%94%B5%E5%AD%90%E5%AD%A6%E7%AC%94%E8%AE%B0/" class="article-date">
   <time datetime="2020-10-23T01:45:43.000Z" itemprop="datePublished">2020-10-23</time>
 </a>
       
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Optoelectronics/">Optoelectronics</a>
+    <a class="article-category-link" href="categories/Optoelectronics/">Optoelectronics</a>
   </div>
 
       
@@ -474,7 +812,7 @@ W\approx 0.77\frac{\lambda f}{d},
       
 
       
-      <h1 id="光电子学笔记">光电子学笔记</h1>
+      <h1 id="optoelectronics">Optoelectronics</h1>
 <h2 id="matrix-optics-矩阵光学">Matrix Optics 「矩阵光学」</h2>
 <h3 id="光学元件的传播矩阵">光学元件的传播矩阵</h3>
 <p>小坑待填.</p>
@@ -887,7 +1225,7 @@ I_p&amp;=M^2|A|^2=M\bar I.
 
 </article>
     
-    <article id="post-Projects-3D-Holography" class="article article-type-post" itemscope
+    <article id="post-Projects/3D-Holography" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
@@ -895,7 +1233,7 @@ I_p&amp;=M^2|A|^2=M\bar I.
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2020/09/16/Projects-3D-Holography/"
+  <a class="article-title" href="2020/09/16/Projects/3D-Holography/"
     >3D-Holography</a> 
 </h2>
  
@@ -905,7 +1243,7 @@ I_p&amp;=M^2|A|^2=M\bar I.
 
     
     <div class="article-meta">
-      <a href="/2020/09/16/Projects-3D-Holography/" class="article-date">
+      <a href="2020/09/16/Projects/3D-Holography/" class="article-date">
   <time datetime="2020-09-16T14:06:06.000Z" itemprop="datePublished">2020-09-16</time>
 </a>
       
@@ -983,574 +1321,13 @@ I_p&amp;=M^2|A|^2=M\bar I.
 
 </article>
     
-    <article id="post-Optoelectronics-光学材料笔记" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2020/09/16/Optoelectronics-%E5%85%89%E5%AD%A6%E6%9D%90%E6%96%99%E7%AC%94%E8%AE%B0/"
-    >光学材料笔记</a> 
-</h2>
- 
-
-    </header>
-    
-
-    
-    <div class="article-meta">
-      <a href="/2020/09/16/Optoelectronics-%E5%85%89%E5%AD%A6%E6%9D%90%E6%96%99%E7%AC%94%E8%AE%B0/" class="article-date">
-  <time datetime="2020-09-16T01:57:23.000Z" itemprop="datePublished">2020-09-16</time>
-</a>
-      
-      
-      
-      
-    </div>
-    
-
-    
-
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-
-      
-      <h1 id="光学材料笔记">光学材料笔记</h1>
-<p>记录一些在光学材料与元件制造课程中的整理和总结。</p>
-<h2 id="光学玻璃">光学玻璃</h2>
-<h2 id="光学晶体">光学晶体</h2>
-<p>以下摘自《晶体物理学基础》(陈纲等)。</p>
-<h3 id="对称操作">对称操作</h3>
-<p>如果经过某种操作（转动、镜像、中心反演等）以后，晶体中的各个点都变到新的位置，但是晶形保持不变，那么称这种操作为晶体的对称操作。</p>
-<p>在晶体中，任何一个对称操作 <span class="math inline">\(P\)</span> 可以重复多次 ( <span class="math inline">\(P^m\)</span> ) ，直至晶体每个点都回到原来的位置 (<span class="math inline">\(P^n=E\)</span> )。</p>
-<h3 id="jones符号">Jones符号</h3>
-<p>对称操作除了用矩阵表示外，可以用Jones符号表示。</p>
-<p><span class="math inline">\((\bar x_1 x_2 x_3)\)</span> 诸如此，表示 <span class="math inline">\(x_1’=\bar x_1,x_2’=x_2,x_3’=x_3\)</span>, 即绕 <span class="math inline">\(x_1\)</span> 轴旋转+中心对称。</p>
-<h3 id="对称元素">对称元素</h3>
-<p>对称元素时晶体中的某些点、线和面，晶体的对称操作是相对于他们进行的，它们在对称操作过程中保持不动。</p>
-<p>采用数字符号进行表示：<span class="math inline">\(1,2,3,4,6\)</span> 依次表示1、2、3、4、6次旋转轴，<span class="math inline">\(\bar 1,\bar 2,\bar 3,\bar 4,\bar 6\)</span> 分别等价于反演中心、反射镜面、3+反演中心、四度反轴（转90度再做中心对称）、3+垂直3次轴的镜面。</p>
-<p>注：晶体只有 <span class="math inline">\(\bar 4\)</span> 和晶体有 <span class="math inline">\(4\)</span> 也有 <span class="math inline">\(\bar 1\)</span> 所拥有的对称操作集合时不一样的，后者包含前者，对称性更高。</p>
-<p>但是晶体有 <span class="math inline">\(\bar 3\)</span> 就等价于有 <span class="math inline">\(3\)</span> 也有 <span class="math inline">\(\bar 1\)</span>。</p>
-<h3 id="晶体学点群">晶体学点群</h3>
-<p>晶体晶形等<strong>对称操作的集合</strong>称为晶体学点群（简称点群）。</p>
-<p>知道了晶体的所有对称操作或者所有对称元素，就知道了它所属的点群。</p>
-<p>给定一个一定构型的立方晶系，根据它所具有的对称性（以对称操作要素描述），可以形成各种组合，化简后得到32个点群。给定一个晶体，根据它的布拉维点阵，我们可以确定它是具有哪一种对称性。</p>
-<p>国际符号用存在于某个特定方向上的对称元素来表示点群。</p>
-<p>比如一个正交晶系，它有 mm2 / 222 / mmm 这三种对称性组合（具体描述为 <span class="math inline">\(G_22P\)</span> / <span class="math inline">\(3G_2\)</span> / <span class="math inline">\(3G_23PC\)</span> )。给定一个正交晶系的晶体，通过判断它的点阵符合那种对称组合所生成的点阵（一个点由对称性生出的点阵列），我们可以确定它所属的点群。</p>
-<p><strong>m与对称元素PC？</strong></p>
-<p><strong>可以从 mmm 推出 <span class="math inline">\(3G_23PC\)</span> 吗？</strong></p>
-<h3 id="张量">张量</h3>
-<p>这里的张量算是对物理学中张量的简化，省去了方向并矢的书写。</p>
-<p>二阶张量变换定律：</p>
-<p>张量在坐标系的变换前后，物理公式的形式应该保持不变，即 <span class="math display">\[
-p_i=T_{ij}q_j\longmapsto p_i&#39;=T_{ij}&#39;q_j&#39;
-\]</span> 考虑到 <span class="math display">\[
-p_i&#39;=a_{ik}p_k,\; q_l=a_{jl}q_j
-\]</span> 有 <span class="math display">\[
-p_i&#39;=a_{ik}p_k=a_{ik}T_{kl}q_{l}=a_{ik}a_{lj}T_{kl}q_j&#39;
-\]</span> 因此 <span class="math display">\[
-\begin{align}
-T_{ij}&#39;&amp;=a_{ik}a_{jl}T_{kl}\\
-T_{ij}&amp;=a_{ki}a_{lj}T_{kl}&#39;
-\end{align}
-\]</span></p>
-
-      
-      <!-- reward -->
-      
-    </div>
-    
-    
-      <!-- copyright -->
-      
-    <footer class="article-footer">
-      
-      
-
-    </footer>
-
-  </div>
-
-  
-
-  
-
-  
-  
-  
-
-</article>
-    
-    <article id="post-Optoelectronics-物理光学笔记" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2020/09/16/Optoelectronics-%E7%89%A9%E7%90%86%E5%85%89%E5%AD%A6%E7%AC%94%E8%AE%B0/"
-    >物理光学笔记</a> 
-</h2>
- 
-
-    </header>
-    
-
-    
-    <div class="article-meta">
-      <a href="/2020/09/16/Optoelectronics-%E7%89%A9%E7%90%86%E5%85%89%E5%AD%A6%E7%AC%94%E8%AE%B0/" class="article-date">
-  <time datetime="2020-09-16T01:42:00.000Z" itemprop="datePublished">2020-09-16</time>
-</a>
-      
-      
-      
-      
-    </div>
-    
-
-    
-
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-
-      
-      <h1 id="物理光学笔记">物理光学笔记</h1>
-<p>记录一下自己在学习物理光学过程中的思考和总结。</p>
-<h2 id="光的电磁理论基础">光的电磁理论基础</h2>
-<h3 id="菲涅尔公式">菲涅尔公式</h3>
-<ul>
-<li><p><span class="math inline">\(r_p,r_s,t_p,t_s\)</span></p></li>
-<li><p>布儒斯特角：全偏振临界角，<span class="math inline">\(r_p=0,\theta_1+\theta_2=90^\circ\)</span></p></li>
-</ul>
-<h3 id="全反射探究">全反射探究</h3>
-<ul>
-<li>存在倏逝波</li>
-<li>有相位变化 <span class="math inline">\(\delta=\delta_s-\delta_p\)</span></li>
-<li>无能量损失</li>
-</ul>
-<h3 id="偏振">偏振</h3>
-<p>关键是 <span class="math inline">\(p\)</span> 光和 <span class="math inline">\(s\)</span> 光的相位差（可看作振动方向垂直的光波的叠加）</p>
-<ul>
-<li>线偏振：<span class="math inline">\(\delta=0\)</span> 或 <span class="math inline">\(\pi\)</span></li>
-<li><span class="math inline">\(\sin\delta&lt;0\)</span> 右旋偏振，<span class="math inline">\(\sin\delta&gt;0\)</span> 左旋偏振</li>
-<li>偏振椭圆的相关量</li>
-</ul>
-<h3 id="光波的傅立叶分析">光波的傅立叶分析</h3>
-<p>实际光波是一个<em>波列</em>。波的单色性和波列长度有关。</p>
-<p>有效空间频率范围 <span class="math inline">\(\Delta k=\pi/L\)</span></p>
-<p>有效波长范围 <span class="math inline">\(\Delta \lambda=\lambda^2/2L\)</span></p>
-<p>时间频率范围 <span class="math inline">\(\Delta \nu=\Delta \left(c/\lambda\right)=c/2L\)</span></p>
-<h2 id="傅立叶光学">傅立叶光学</h2>
-<h3 id="菲涅尔衍射">菲涅尔衍射</h3>
-<p>菲涅尔傍轴近似下： <span class="math display">\[
-\begin{align}
-\widetilde E(u,v)&amp;=\widetilde E(x,y)=\frac{1}{i\lambda z_1}\exp\left[ik\left(z_1+\frac{x^2+y^2}{2z_1}\right)\right]\iint_{-\infty}^\infty \widetilde E(x_1,y_1)\exp\left[\frac{ik}{2z_1}(x_1^2+y_1^2)\right]\exp\left[-ik(\frac{x}{z_1}x_1+\frac{y}{z_1}y_1)\right]\operatorname{dx_1dy_1}\\
-&amp;=\widetilde A\cdot\mathcal{F}\left(\widetilde E(x_1,y_1)\cdot \exp\left[\frac{ik}{2z_1}(x_1^2+y_1^2)\right]\right)
-\end{align}
-\]</span> 注意前面含 <span class="math inline">\((x,y)\)</span> 的相位因子在光强不显现，但可以利用干涉证明其存在。</p>
-<h3 id="夫琅和费衍射">夫琅和费衍射</h3>
-<p>在夫琅和费远场近似下： <span class="math display">\[
-\begin{align}
-\widetilde E(u,v)&amp;=\widetilde E(x,y)=\frac{1}{i\lambda z_1}\exp\left[ik\left(z_1+\frac{x^2+y^2}{2z_1}\right)\right]\iint_{-\infty}^\infty \widetilde E(x_1,y_1)\exp\left[-ik(\frac{x}{z_1}x_1+\frac{y}{z_1}y_1)\right]\operatorname{dx_1dy_1}\\
-&amp;=\widetilde A\cdot\iint_{-\infty}^\infty \widetilde E(x_1,y_1)\exp\left[-i2\pi(ux_1+vy_1)\right]\operatorname{dx_1dy_1}\\
-&amp;=\widetilde A\cdot\mathcal{F}\left[\widetilde E(x_1,y_1)\right]
-\end{align}
-\]</span> 其中，<span class="math inline">\((u,v)=\displaystyle (\frac{x}{\lambda z_1},\frac{y}{\lambda z_1})=(\frac{\cos\alpha}{\lambda},\frac{\cos\beta}{\lambda})\)</span> 为空间频率 <span class="math inline">\(1/\lambda\)</span> 在 <span class="math inline">\(x,y\)</span> 方向的分解。</p>
-<p>一张复杂的图片有许多不同的空间频率的单频信息组成，当单色波正入射在待分析的图像上时，通过夫琅和费衍射，一定空间频率的单频信息就被向特定方向衍射的平面波输送出来，所有衍射波最终会聚在焦面上的不同位置而形象地展示出原图片的频谱。这一过程的“运算速度”显然远高于计算机，一照就出来了。</p>
-<p>理想的夫琅和费衍射系统是一个傅立叶频谱分析器。</p>
-<h3 id="透镜">透镜</h3>
-<p>进入透镜的发散球面波，出去时变成了会聚的： <span class="math display">\[
-\widetilde E(x_1,y_1)=A\exp(ikd_0)\exp\left[\frac{ik}{2d_0}(x_1^2+y_1^2)\right]\to \widetilde E&#39;(x_1,y_1)=A\exp(-ikd)\exp\left[-\frac{ik}{2d}(x_1^2+y_1^2)\right]
-\]</span></p>
-<p>透镜的透射系数： $$ <span class="math display">\[\begin{align}
-\widetilde t(x_1,y_1)&amp;=\frac{\widetilde E}{\widetilde E&#39;}=\exp\left[-ik\frac{(x_1^2+y_1^2)}{2}\left(\frac 1 d+\frac 1 {d_0}\right)\right]\\
-&amp;=\exp\left(-ik\frac{x_1^2+y_1^2}{2f}\right)
-
-\end{align}\]</span> $$ 其中 <span class="math inline">\(f\)</span> 满足：<span class="math inline">\(\displaystyle\frac{1}{d_0}+\frac{1}{d}=\frac{1}{f}\)</span> .</p>
-<h3 id="深入理解透镜的傅立叶变换性质">深入理解透镜的傅立叶变换性质</h3>
-<p>光经过有限大物体后的传播过程就是衍射的过程，根据传播距离可以用夫琅和费衍射或者菲涅尔衍射计算传播到像面后的光场分布。可以说，衍射无处不在，传播就有衍射。</p>
-<p>假设有这么一个夫琅和费衍射系统：光源—狭缝（衍射平面）-透镜--成像平面</p>
-<p>设光透过衍射平面后的场分布为 <span class="math inline">\(\widetilde E(x_1,y_1)\)</span>, 透过透镜后的场分布为： <span class="math display">\[
-\widetilde E&#39;(x_1,y_1)=\widetilde E(x_1,y_1)\cdot \widetilde t(x_1,y_1)
-\]</span> 然后衍射到透镜后焦面，由于是有限距离，应该用菲涅尔衍射去计算： $$ <span class="math display">\[\begin{align}
-\widetilde E(u,v)&amp;=\widetilde E(x,y)=\frac{e^{ikf}}{i\lambda f}e^{ik\frac{x^2+y^2}{2f}}\mathcal{F}\left[\widetilde E&#39;(x_1,y_1)\exp\left(ik\frac{x_1^2+y_1^2}{2f}\right)\right]\\
-&amp;=\widetilde A\cdot\mathcal{F}\left[\widetilde E(x_1,y_1)\right]\mid_{u=\frac{x}{\lambda f},v=\frac{y}{\lambda f}}
-
-\end{align}\]</span> $$ 注意透镜的透射系数刚刚好消掉了菲涅尔衍射的那个系数，使最终结果成为了一个干净的傅立叶变换。</p>
-<p>因此整个夫琅和费衍射系统本来是夫琅和费衍射，做个傅立叶变换就好了，但是要在很远处才能观察。为了在近处观察加了透镜，要改为菲涅尔衍射去计算，结果兜兜转转算完得到和夫琅和费衍射一样的形式。</p>
-<p>另一方面可以看到，从衍射平面到透镜再到透镜后焦面，整合后等价于做一个傅立叶变换，这就是透镜的傅立叶变换性质：透镜前的场知道了，加个透镜则后焦面的场就是做一个傅立叶变换。这是透镜的透射系数和菲涅尔衍射美妙的结合。</p>
-<p>相位因子？</p>
-<p>如果透镜和衍射平面有一定距离 <span class="math inline">\(d_0\)</span>, 那么这时候夫琅和费衍射的东西就显现出来了，这相当于夫琅和费衍射多传播了 <span class="math inline">\(d_0\)</span>, 透镜前的光场 <span class="math display">\[
-\widetilde E(x_2,y_2)=\widetilde E(x_1,y_1)\cdot e^{ik(d_0+)}
-\]</span></p>
-
-      
-      <!-- reward -->
-      
-    </div>
-    
-    
-      <!-- copyright -->
-      
-    <footer class="article-footer">
-      
-      
-
-    </footer>
-
-  </div>
-
-  
-
-  
-
-  
-  
-  
-
-</article>
-    
-    <article id="post-Physics-Quantum-Mechanics" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2020/09/15/Physics-Quantum-Mechanics/"
-    >Quantum-Mechanics</a> 
-</h2>
- 
-
-    </header>
-    
-
-    
-    <div class="article-meta">
-      <a href="/2020/09/15/Physics-Quantum-Mechanics/" class="article-date">
-  <time datetime="2020-09-15T10:41:11.000Z" itemprop="datePublished">2020-09-15</time>
-</a>
-      
-      
-      
-      
-    </div>
-    
-
-    
-
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-
-      
-      <h1 id="quantum-mechanics-notes">Quantum-Mechanics-Notes</h1>
-<p>Notes for quantum mechanics of MIT-OCW 8.04.</p>
-<p><em>’This is the goal of 8.04: we will step beyond the scale of daily experiences to develop an intuition for electrons, atoms, and superposition.’</em></p>
-<h2 id="uncertainty-principle-and-superposition">Uncertainty Principle and Superposition</h2>
-<p>Think about a series of experiments.</p>
-<p>Electron has two propeties : <em>white/black</em> and <em>hard/soft</em> (Denote by W/B &amp; H/S).</p>
-<p>We made <em>boxes</em> that can <em>measure</em> such properties. For instance, white electron and black electron will exit the box from different directions. From the direction we know the white/black property of the electron. Denote ‘C-Box’ (color box) for the boxes that can measure W/B property and similarly, ‘H-Box’ (hardness box) for those can measure ‘H/S’ property.</p>
-<p>We have mirrors and combinator that put the two directions together, so that we can continue more complicated experiments. Note that they only change the directions.</p>
-<p>Below are the experiments from physicists.</p>
-<p>First there are some basic and naive experiments.</p>
-<ol type="1">
-<li>Electrons —&gt; C-Box —&gt; W and B —&gt; choose W —&gt; C-Box —&gt; W (repeatability of color / hardness)</li>
-<li>Electrons —&gt; H-Box —&gt; H and S —&gt; choose H —&gt;C-Box —&gt; W (50%) and B (50%) (lack of correlation of color with hardness)</li>
-</ol>
-<p>Then comes the weird experiment.</p>
-<ol start="3" type="1">
-<li>Electrons —&gt; C-Box —&gt; W and B —&gt; choose W —&gt; H-Box —&gt; H and S —&gt; choose H —&gt; C-Box —&gt; <strong>Not</strong> (100%) W, but <span class="math inline">\(50\%\)</span> W and <span class="math inline">\(50\%\)</span> B</li>
-</ol>
-<p>Apparently, hardness box tampers with color. Therefore experiment 3 tells us color and hardness property cannot be measured simultaneously, which is the <strong>uncertainty principle</strong>. Though we know it is white at the begining, as long as we measure the hardness, the color property white is not repeatable anymore.</p>
-<p>Then we use combinator to dig deeper.</p>
-<ol start="4" type="1">
-<li><p>White electrons —&gt; H-Box —&gt; <span class="math inline">\(50\%\)</span> H and <span class="math inline">\(50\%\)</span> S —&gt; combinator —&gt; H-Box —&gt; <span class="math inline">\(50\%\)</span> H and <span class="math inline">\(50\%\)</span> S</p></li>
-<li><p>White electrons —&gt; H-Box —&gt; 50% H and 50% S —&gt; combinator —&gt; C-Box —&gt; (100%) W</p></li>
-<li><p>White electrons —&gt; H-Box —&gt; 50% H and 50% S —&gt; put a wall in the Soft's path —&gt; combinator —&gt; C-Box —&gt; <span class="math inline">\(50\%\)</span> W and <span class="math inline">\(50\%\)</span> B</p></li>
-</ol>
-<p>Experiment 4 tells us combinator does not change the proberties of electrons. Experiment 5 got totally W because the added combination part act as if H/S property doesn’t be measured, hence the W/B property will not be disturbed. Experiment 6 shows a disturbing one from which we can see the uncertainty principle plays a role.</p>
-<p>After we understand the principle of the motion of electrons, we consider the <em>being</em> (or state) of it : what is the state of an electron inside the apparatus in the Experiment 5?</p>
-<p>We know it is white, so it cannot be hard or soft, otherwise we will get half-half result by the uncertainty principle. It cannot be both hard and soft since different property will go in different direction.In one path the electron cannot have both properties. It cannot be neither since we can get some results.</p>
-<p>Therefore, the only condition is the electron has probability of being hard or soft (but we cannot know what exactly is) and such state is called <strong>superposition</strong>.</p>
-<p>Being in a definite state of position means that being in a superposition of having different values for momentum.</p>
-<h2 id="bells-inequality">Bell’s Inequality</h2>
-<p>In lecture 2, the professor demonstrated some intersting experiments that are waiting to be explained using quantum language.</p>
-<ul>
-<li><p>Atom exist. But atomic orbits are unstable.</p></li>
-<li><p>Atomic spectra are discrete. When excites/sparks the simple gas like $ H_2$, we get light sent out by it. If we take the light and shine it on a prism, we would find distinct patterns : discrete spectra. Experimentalists found the wavelengths satisfy <span class="math inline">\(1/\lambda=R\cdot(1/n^2-1/m^2)\)</span>.</p></li>
-<li><p>Photoelectric effect. Stop voltage has no relation with intensity, but is linear to frequency. And it was found that the coefficient is just <span class="math inline">\(h\)</span>, the Planck constant derived from Blackbody radiation.</p></li>
-<li><p>Since photon has zero mass, we can develop the momentum equation <span class="math inline">\(p=h/\lambda\)</span> with <span class="math inline">\(E=pc\)</span> and <span class="math inline">\(E=h\nu\)</span>. This means photon has the particle’s property--momentum. Note that <span class="math inline">\(E=h\nu\)</span> is very unusual.</p></li>
-<li><p>Double-slit experiment with electron. The electron comes one in one, and was found randomly positioned. But when the quantity is enough, the statistic told us the electrons were interfered.</p>
-<p><img src="../../../../Library/Application%20Support/typora-user-images/image-20201109153712555.png" alt="image-20201109153712555" style="zoom:25%;" /></p></li>
-<li><p>Bragg scattering. If we send in a beam of electrons to a crystal and watch out the scattering from different angles, we would find the interference effect. The intensity as a function of angle of the out beam satisfies the function as if the electron is a wave with the wavelength <span class="math inline">\(\lambda=2d\sin\theta/n\)</span>. The <strong>electron diffracts</strong> off the crystal.</p></li>
-<li><p>Send out <span class="math inline">\(C_{60}\)</span> one by one and make them go through a diffraction grating. [ ]</p></li>
-</ul>
-<p>Next comes the <em>Bell’s inequality</em>.</p>
-<p>If the state of the stuff is definite, then we have: <span class="math display">\[
-\operatorname{Num}(A,\bar B)+\operatorname{Num}(B,\bar C)\ge \operatorname{Num}(A,\bar C)
-\]</span> The proof is the following: <span class="math display">\[
-\begin{aligned}
-\operatorname{LHS}&amp;=\operatorname{Num}(A,\bar B,C)+\operatorname{Num}(A,\bar B,\bar C)+\operatorname{Num}(A,B,\bar C)+\operatorname{Num}(\bar A,B,\bar C)\\
-&amp;\ge \operatorname{Num}(A,B,\bar C)+\operatorname{Num}(A,\bar B,\bar C)\\
-&amp;=\operatorname{Num}(A,\bar C)\\
-&amp;=\operatorname{RHS}
-\end{aligned}
-\]</span> But Bell found by experiment that: <span class="math display">\[
-\operatorname{Num}(\uparrow_0,\downarrow_\theta)+\operatorname{Num}(\uparrow_\theta,\downarrow_{2\theta})&lt;\operatorname{Num}(\uparrow_0,\downarrow_{2\theta})
-\\
-\]</span> Where the up and down arrows indicate the spin angular momentum of the electron. I think this can be explained only if the three binary states can be superposed.</p>
-<h2 id="wave-function">Wave Function</h2>
-<h3 id="postulate-of-wavefunction">Postulate of Wavefunction</h3>
-<p>An essential postulate: The configuration or <em>state</em> of a quantum object is completely specified by a wavefunction denoted as <span class="math inline">\(\psi(x)\)</span>, <span class="math inline">\(\psi\in\mathbb{C}\)</span> .</p>
-<p>Classical: <span class="math inline">\((\vec p,\vec x)\to\)</span> Quantum: <span class="math inline">\(\psi(\vec x)\)</span></p>
-<p>Furthermore, <span class="math inline">\(p(x)=|\psi(x)|^2\)</span> determines the probability (density) that an object in the state <span class="math inline">\(\psi(x)\)</span> will be found at position <span class="math inline">\(x\)</span>. Note that the <em>dimension</em> of <span class="math inline">\(\psi\)</span> is <strong>square root of length</strong> since <span class="math inline">\(\displaystyle \int|\psi|^2 \text{d}x=1\)</span>.</p>
-<h3 id="de-broglie-relations">De Broglie Relations</h3>
-<p>From de Broglie’s generalization of momentum-wavelength relation of photon, we have <span class="math display">\[
-\begin{aligned}
-E&amp;=\hbar\omega\\
-\vec p&amp;=\hbar \vec k
-\end{aligned}
-\]</span> where <span class="math inline">\(\hbar:=h/2\pi\)</span>.</p>
-<h3 id="mathematics-of-superposition">Mathematics of Superposition</h3>
-<p>Given to two possible states of a quantum system corresponding to two wavelengths <span class="math inline">\(\psi_a\)</span> and <span class="math inline">\(\psi_b\)</span>, the system could also be in a superposition <span class="math inline">\(\psi=\alpha\psi_a+\beta\psi_b\)</span> with <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> in <span class="math inline">\(\mathbb{C}\)</span> satisfying normalization.</p>
-Hence for the superposition state, we have the probability density $$
-<span class="math display">\[\begin{aligned}
-\mathbb{p}(x)&amp;=|\alpha\psi_a(x)+\beta\psi_b(x)|^2\\
-&amp;=|\alpha\psi_a(x)|^2+|\beta\psi_b(x)|^2+\alpha^*\beta\psi_a^*(x)\psi_b(x)+\alpha\beta^*\psi_a(x)\psi_b^*(x)
-
-\end{aligned}\]</span>
-<p>$$ which exhibits quantum interference aside from the usual addition probability. It’s the interference between the different momentum that leads to certainty in the position.</p>
-<p>By using the tool of Fourier Transformation, we see that any wavefunction <span class="math inline">\(\psi(x)\)</span> can be expressed as a superposition of states <span class="math inline">\(e^{ikx}\)</span> with definite momenta <span class="math inline">\(p=k\)</span> as <span class="math display">\[
-\begin{aligned}
-\psi(x)&amp;=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^\infty \widetilde \psi(x)e^{ikx}\text{d}k\\
-\widetilde\psi(k)&amp;=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^\infty \psi(x)e^{-ikx}\text{d}x.
-\end{aligned}
-\]</span> I think that means when state is expressed in wavefunction, position and momentum are tightly correlated, one could indicate the other.</p>
-<h2 id="expectations">Expectations</h2>
-<h3 id="uncertainty-and-expectation">Uncertainty and Expectation</h3>
-<p>To characterize the uncertainty, we use the standard deviation <span class="math display">\[
-\Delta a=\sqrt{\langle a^2\rangle-\langle a\rangle^2}
-\]</span></p>
-<p>The expectation value of a function of position <strong>in a given quantum state</strong> <span class="math inline">\(\psi(x)\)</span> is <span class="math display">\[
-\langle f(x)\rangle =\int_{-\infty}^\infty \psi^\star(x) f(x)\psi(x)\;\text dx.
-\]</span> However, when we consider the expectation of momentum <span class="math inline">\(\langle p\rangle\)</span>, we get problem: <span class="math inline">\(p\)</span> and <span class="math inline">\(x\)</span> cannot be measured simultaneously.</p>
-<p>( In fact we replace <span class="math inline">\(f\)</span> with <span class="math inline">\(\hat f\)</span> when compute the expectation value of an operator )</p>
-<h3 id="hints-to-the-operator">Hints to the operator</h3>
-<p>Notice some hints that indicate us to <em>operator</em>:</p>
-<ul>
-<li><p>For wavefunction <span class="math inline">\(\psi=e^{ikx}\)</span>, <span class="math display">\[
-\begin{aligned}
-\partial_x \psi=ik\psi\implies \frac{\hbar}{i}\partial_x \psi =\hbar k\psi=p\cdot\psi
-\end{aligned}
-\]</span></p></li>
-<li><p>Noether’s theorem states that <em>to every symmetry is associated a conserved quantity</em> .</p>
-<table>
-<colgroup>
-<col style="width: 61%" />
-<col style="width: 38%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;">Symmetry</th>
-<th style="text-align: center;">Conservation</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">Translation : <span class="math inline">\(\vec x\to \vec x+\Delta \vec x\)</span></td>
-<td style="text-align: center;">Momentum : <span class="math inline">\(\dot{\vec p}=0\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">Time : <span class="math inline">\(t\to t+\Delta t\)</span></td>
-<td style="text-align: center;">Energy : <span class="math inline">\(\dot E=0\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">Rotation : <span class="math inline">\(\vec x \to \overleftrightarrow R\cdot \vec x\)</span></td>
-<td style="text-align: center;">Angular Momentum : <span class="math inline">\(\dot{\vec L}=0\)</span></td>
-</tr>
-</tbody>
-</table></li>
-<li><p>For translations behave for functions, <span class="math display">\[
-\begin{align}
-f(x)\to f(x+l)&amp;=f(x)+l\partial_x f(x)+\frac{l^2}{2}\partial_x^2 f(x)+\dots\\
-&amp;=\sum_{n=0}^{\infty} \frac{(l\partial_x)^n}{n!}f(x)\\
-&amp;=e^{l\partial_x}f(x)
-\end{align}
-\]</span> Translations are generated by spatial derivatives <span class="math inline">\(\partial_x\)</span> and it should be associated with <span class="math inline">\(p\)</span>.</p>
-<p>Similarly, <span class="math inline">\(E\sim \partial_t,\; L_z\sim\partial_\varphi\)</span>.</p></li>
-</ul>
-<p>Finally, momentum in quantum mechanics is realized by an operator: <span class="math display">\[
-\hat p=\frac{\hbar}{i}\frac{\partial}{\partial x}.
-\]</span> And we use operator $p $ to compute expectation values: <span class="math display">\[
-\lang p\rang=\int_{-\infty}^\infty \psi^\star(x)\hat p \psi(x)\;\text dx
-\]</span></p>
-<p>I think operator <span class="math inline">\(\hat p\)</span> is introduced more intuitively than mathematically. The key is that we want to calculate expectation of <span class="math inline">\(p\)</span> in a state associated with position <span class="math inline">\(x\)</span>, but from uncertainty principle there is no meaning when <span class="math inline">\(p\)</span> and <span class="math inline">\(x\)</span> occured in one expression. Since momentum is related to position, we come out with operator. Then the <span class="math inline">\(\lang p\rang\)</span> is the expectation of the momentum that can be observed. (Only the momentum that is able to be observed can be taken out from the operator)</p>
-<p>The very interesting thing of momentum operator is it can get distribution of momentum when there is a superposition.</p>
-<h2 id="operators-and-the-schrddotodinger-equation">Operators and the <span class="math inline">\(Schr\ddot{o}dinger \;Equation\)</span></h2>
-<h3 id="common-operator">Common operator</h3>
-<p>For each observable quantity we have an associate operator.</p>
-<ul>
-<li>Momentum : <span class="math inline">\(\hat p=-i\hbar \partial_x\)</span></li>
-<li>Position: <span class="math inline">\(\hat x =x\)</span></li>
-<li>Energy: <span class="math inline">\(\hat E=\displaystyle \frac{\hat p^2}{2m}+V(\hat x)=-\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2}+V(x)\)</span></li>
-</ul>
-<h3 id="commutator-and-a-deep-equation">Commutator and a deep equation</h3>
-<p>To measure the importance of operator (act) order, we define the <em>commutator</em> : <span class="math display">\[
-[\hat A,\hat B]=\hat A\hat B-\hat B\hat A.
-\]</span> And one deep and profound result we get is: <span class="math display">\[
-[\hat x,\hat p]=i\hbar \hat 1, \label{xp}
-\]</span> which indicates the uncertainty principle. Assume the first thing we measure is accurate, then think about it, we cannot measure <span class="math inline">\(x\)</span> and <span class="math inline">\(p\)</span> both accurately, for the simple reason that their commutator is not zero: we cannot get the same result after the second one that is measured. Further more, when expressed in matrix, (<span class="math inline">\(\ref{xp}\)</span>) is a very hard matrix equation and only infinite dimension matrix is can solve.</p>
-<h3 id="the-schrddotodinger-equation">The <span class="math inline">\(Schr\ddot{o}dinger \;Equation\)</span></h3>
-<p>Actually <span class="math inline">\(e^{ikx}\)</span> is an eigenfunction of operator <span class="math inline">\(\hat p\)</span> and every state <span class="math inline">\(\psi(x)\)</span> can be generated by it from Fourier’s Theorem.</p>
-<p>From de Broglie, we know that any object is a wave, and consider a plane wave <span class="math display">\[
-\psi(x,t;k)=e^{i(kx-\omega t)},
-\]</span> which has momentum <span class="math inline">\(p=\hbar k\)</span> and energy <span class="math inline">\(E=\hbar \omega\)</span>.</p>
-<p>Similarly to hint of momentum, we notice <span class="math display">\[
-i\hbar \frac{\partial\psi(x,t)}{\partial t}=\hbar\omega \psi(x,t)=E\psi(x,t),
-\]</span></p>
-<p>which depicts the time evolution of energy <span class="math inline">\(E\)</span>. But maybe we do not know what is energy <span class="math inline">\(E\)</span>.</p>
-<p>A little change <span class="math inline">\(E\to \hat E\)</span> complete the equation and that is the <span class="math inline">\(Schr\ddot{o}dinger \;Equation\)</span> : <span class="math display">\[
-\begin{align}
-i\hbar \frac{\partial}{\partial t}\psi(x,t)&amp;=\hat E \psi(x,t)\\
-i.e.\qquad i\hbar\frac{\partial \psi(x,t)}{\partial t}&amp;=-\frac{\hbar^2}{2m}\frac{\partial^2 \psi(x,t)}{\partial x^2}+V(x)\psi(x,t).
-\end{align}
-\]</span> The equation describing the time evolution of a quantum state.</p>
-<p>It is analogous to the equation of motion $F= $ and <span class="math inline">\(\hat E\)</span> is not defined as the operator <span class="math inline">\(i\hbar\partial_t\)</span> any more than <span class="math inline">\(\vec F\)</span> is defined to be <span class="math inline">\(\hat{\vec p}\)</span> .</p>
-
-      
-      <!-- reward -->
-      
-    </div>
-    
-    
-      <!-- copyright -->
-      
-    <footer class="article-footer">
-      
-      
-
-    </footer>
-
-  </div>
-
-  
-
-  
-
-  
-  
-  
-
-</article>
-    
-    <article id="post-Computer-Science-Data-Structure-notes" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2020/09/15/Computer-Science-Data-Structure-notes/"
-    >Data-Structure-Notes</a> 
-</h2>
- 
-
-    </header>
-    
-
-    
-    <div class="article-meta">
-      <a href="/2020/09/15/Computer-Science-Data-Structure-notes/" class="article-date">
-  <time datetime="2020-09-15T04:19:48.000Z" itemprop="datePublished">2020-09-15</time>
-</a>
-      
-      
-      
-      
-    </div>
-    
-
-    
-
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-
-      
-      <h1 id="note-for-data-structure">Note for Data Structure</h1>
-<h2 id="二叉树">二叉树</h2>
-<h4 id="树的遍历">树的遍历</h4>
-<ul>
-<li>前序：根节点—左子树—右子树</li>
-<li>后序：左子树—右子树—根节点</li>
-<li>中序：左子树—根节点—右子树</li>
-</ul>
-<h4 id="由遍历序列确定二叉树">由遍历序列确定二叉树</h4>
-<ul>
-<li>在先/后序序列中确定根节点</li>
-<li>在中序序列中搜索根节点，并将中序序列拆分为左右两个子树的中序序列</li>
-<li>递归执行前两步</li>
-</ul>
-<p>中序和后序遍历的堆栈实现</p>
-<h3 id="穿线二叉树">穿线二叉树</h3>
-<p>跟随指针</p>
-<p>遍历：</p>
-<ul>
-<li>找到二叉树最左端节点并访问</li>
-<li>查看flag：
-<ul>
-<li>1 访问右边节点</li>
-<li>0 whlie找到右孩子的最左端节点</li>
-</ul></li>
-<li>循环</li>
-</ul>
-<h3 id="最小公共祖先-lca">最小公共祖先 LCA</h3>
-
-      
-      <!-- reward -->
-      
-    </div>
-    
-    
-      <!-- copyright -->
-      
-    <footer class="article-footer">
-      
-      
-
-    </footer>
-
-  </div>
-
-  
-
-  
-
-  
-  
-  
-
-</article>
-    
   </article>
   
 
   
   <nav class="page-nav">
     
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/">下一页</a>
+    <span class="page-number current">1</span><a class="page-number" href="page/2/">2</a><a class="page-number" href="page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="page/6/">6</a><a class="extend next" rel="next" href="page/2/">下一页</a>
   </nav>
   
 </section>
@@ -1618,13 +1395,13 @@ i.e.\qquad i\hbar\frac{\partial \psi(x,t)}{\partial t}&amp;=-\frac{\hbar^2}{2m}\
 <nav class="navbar">
   
   <div class="logo">
-    <a href="/"><img src="/images/cat.png" alt="Peter&#39;s Blog"></a>
+    <a href="index.html"><img src="/images/cat.png" alt="Peter&#39;s Blog"></a>
   </div>
   
   <ul class="nav nav-main">
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/">主页</a>
+      <a class="nav-item-link" href="index.html">主页</a>
     </li>
     
     <li class="nav-item">
@@ -1644,7 +1421,7 @@ i.e.\qquad i\hbar\frac{\partial \psi(x,t)}{\partial t}&amp;=-\frac{\hbar^2}{2m}\
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="http://c01dkit.com" target="_blank" rel="noopener">友链</a>
+      <a class="nav-item-link" href="http://c01dkit.com/" target="_blank" rel="noopener">友链</a>
     </li>
     
   </ul>
@@ -1728,7 +1505,7 @@ i.e.\qquad i\hbar\frac{\partial \psi(x,t)}{\partial t}&amp;=-\frac{\hbar^2}{2m}\
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
 <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
 
-<script src="/dist/main.js"></script>
+<script src="dist/main.js"></script>
 
 <!-- ImageViewer -->
 
@@ -1938,42 +1715,7 @@ i.e.\qquad i\hbar\frac{\partial \psi(x,t)}{\partial t}&amp;=-\frac{\hbar^2}{2m}\
 
 
     
-  </div>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            displayMath: [ ['$','$'], ["\\[","\\]"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js"></script>
-
-
-<!-- <script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX", "output/HTML-CSS"],
-    tex2jax: {
-      inlineMath: [ ['
-
-</html>,'
-
-</html>], ["\\(","\\)"] ],
-      displayMath: [ ['$','$'], ["\\[","\\]"] ],
-      processEscapes: true
-    },
-    "HTML-CSS": { availableFonts: ["TeX"] }
-  });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js"></script> --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 
 </html>

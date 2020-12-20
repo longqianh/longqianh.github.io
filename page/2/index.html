@@ -16,17 +16,17 @@
   <link rel="shortcut icon" href="/ironman.ico" />
   
   
-<link rel="stylesheet" href="/dist/main.css">
+<link rel="stylesheet" href="../../dist/main.css">
 
   
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/css/remixicon.min.css">
+<link rel="stylesheet" href="../../https:/cdn.jsdelivr.net/gh/Shen-Yu/cdn/css/remixicon.min.css">
 
   
-<link rel="stylesheet" href="/css/custom.css">
+<link rel="stylesheet" href="../../css/custom.css">
 
   
   
-<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<script src="../../https:/cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
   
   
@@ -45,7 +45,7 @@
     
       
       <a class="forkMe" href="https://github.com/longqianh"
-        target="_blank"><img width="149" height="149" src="/images/forkme.png"
+        target="_blank"><img width="149" height="149" src="../../images/forkme.png"
           class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
     
   <div class="cover-frame">
@@ -53,7 +53,7 @@
       <img src="/images/myironman.png" alt="image frame" />
     </div>
     <div class="cover-inner text-center text-white">
-      <h1><a href="/">Peter&#39;s Blog</a></h1>
+      <h1><a href="../../index.html">Peter&#39;s Blog</a></h1>
       <div id="subtitle-box">
         
         <span id="subtitle"></span>
@@ -80,7 +80,7 @@
     
     
     
-    <article id="post-Computer-Science-Machine-Learning-PyTorch-Notes" class="article article-type-post" itemscope
+    <article id="post-Optoelectronics /光学材料笔记" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
@@ -88,7 +88,555 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2020/09/14/Computer-Science-Machine-Learning-PyTorch-Notes/"
+  <a class="article-title" href="../../2020/09/16/Optoelectronics%20/%E5%85%89%E5%AD%A6%E6%9D%90%E6%96%99%E7%AC%94%E8%AE%B0/"
+    >光学材料笔记</a> 
+</h2>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="../../2020/09/16/Optoelectronics%20/%E5%85%89%E5%AD%A6%E6%9D%90%E6%96%99%E7%AC%94%E8%AE%B0/" class="article-date">
+  <time datetime="2020-09-16T01:57:23.000Z" itemprop="datePublished">2020-09-16</time>
+</a>
+      
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <h1 id="光学材料笔记">光学材料笔记</h1>
+<p>记录一些在光学材料与元件制造课程中的整理和总结。</p>
+<h2 id="光学玻璃">光学玻璃</h2>
+<h2 id="光学晶体">光学晶体</h2>
+<p>以下摘自《晶体物理学基础》(陈纲等)。</p>
+<h3 id="对称操作">对称操作</h3>
+<p>如果经过某种操作（转动、镜像、中心反演等）以后，晶体中的各个点都变到新的位置，但是晶形保持不变，那么称这种操作为晶体的对称操作。</p>
+<p>在晶体中，任何一个对称操作 <span class="math inline">\(P\)</span> 可以重复多次 ( <span class="math inline">\(P^m\)</span> ) ，直至晶体每个点都回到原来的位置 (<span class="math inline">\(P^n=E\)</span> )。</p>
+<h3 id="jones符号">Jones符号</h3>
+<p>对称操作除了用矩阵表示外，可以用Jones符号表示。</p>
+<p><span class="math inline">\((\bar x_1 x_2 x_3)\)</span> 诸如此，表示 <span class="math inline">\(x_1’=\bar x_1,x_2’=x_2,x_3’=x_3\)</span>, 即绕 <span class="math inline">\(x_1\)</span> 轴旋转+中心对称。</p>
+<h3 id="对称元素">对称元素</h3>
+<p>对称元素时晶体中的某些点、线和面，晶体的对称操作是相对于他们进行的，它们在对称操作过程中保持不动。</p>
+<p>采用数字符号进行表示：<span class="math inline">\(1,2,3,4,6\)</span> 依次表示1、2、3、4、6次旋转轴，<span class="math inline">\(\bar 1,\bar 2,\bar 3,\bar 4,\bar 6\)</span> 分别等价于反演中心、反射镜面、3+反演中心、四度反轴（转90度再做中心对称）、3+垂直3次轴的镜面。</p>
+<p>注：晶体只有 <span class="math inline">\(\bar 4\)</span> 和晶体有 <span class="math inline">\(4\)</span> 也有 <span class="math inline">\(\bar 1\)</span> 所拥有的对称操作集合时不一样的，后者包含前者，对称性更高。</p>
+<p>但是晶体有 <span class="math inline">\(\bar 3\)</span> 就等价于有 <span class="math inline">\(3\)</span> 也有 <span class="math inline">\(\bar 1\)</span>。</p>
+<h3 id="晶体学点群">晶体学点群</h3>
+<p>晶体晶形等<strong>对称操作的集合</strong>称为晶体学点群（简称点群）。</p>
+<p>知道了晶体的所有对称操作或者所有对称元素，就知道了它所属的点群。</p>
+<p>给定一个一定构型的立方晶系，根据它所具有的对称性（以对称操作要素描述），可以形成各种组合，化简后得到32个点群。给定一个晶体，根据它的布拉维点阵，我们可以确定它是具有哪一种对称性。</p>
+<p>国际符号用存在于某个特定方向上的对称元素来表示点群。</p>
+<p>比如一个正交晶系，它有 mm2 / 222 / mmm 这三种对称性组合（具体描述为 <span class="math inline">\(G_22P\)</span> / <span class="math inline">\(3G_2\)</span> / <span class="math inline">\(3G_23PC\)</span> )。给定一个正交晶系的晶体，通过判断它的点阵符合那种对称组合所生成的点阵（一个点由对称性生出的点阵列），我们可以确定它所属的点群。</p>
+<p><strong>m与对称元素PC？</strong></p>
+<p><strong>可以从 mmm 推出 <span class="math inline">\(3G_23PC\)</span> 吗？</strong></p>
+<h3 id="张量">张量</h3>
+<p>这里的张量算是对物理学中张量的简化，省去了方向并矢的书写。</p>
+<p>二阶张量变换定律：</p>
+<p>张量在坐标系的变换前后，物理公式的形式应该保持不变，即 <span class="math display">\[
+p_i=T_{ij}q_j\longmapsto p_i&#39;=T_{ij}&#39;q_j&#39;
+\]</span> 考虑到 <span class="math display">\[
+p_i&#39;=a_{ik}p_k,\; q_l=a_{jl}q_j
+\]</span> 有 <span class="math display">\[
+p_i&#39;=a_{ik}p_k=a_{ik}T_{kl}q_{l}=a_{ik}a_{lj}T_{kl}q_j&#39;
+\]</span> 因此 <span class="math display">\[
+\begin{align}
+T_{ij}&#39;&amp;=a_{ik}a_{jl}T_{kl}\\
+T_{ij}&amp;=a_{ki}a_{lj}T_{kl}&#39;
+\end{align}
+\]</span></p>
+
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+
+    </footer>
+
+  </div>
+
+  
+
+  
+
+  
+  
+  
+
+</article>
+    
+    <article id="post-Optoelectronics /物理光学笔记" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="../../2020/09/16/Optoelectronics%20/%E7%89%A9%E7%90%86%E5%85%89%E5%AD%A6%E7%AC%94%E8%AE%B0/"
+    >物理光学笔记</a> 
+</h2>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="../../2020/09/16/Optoelectronics%20/%E7%89%A9%E7%90%86%E5%85%89%E5%AD%A6%E7%AC%94%E8%AE%B0/" class="article-date">
+  <time datetime="2020-09-16T01:42:00.000Z" itemprop="datePublished">2020-09-16</time>
+</a>
+      
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <h1 id="物理光学笔记">物理光学笔记</h1>
+<p>记录一下自己在学习物理光学过程中的思考和总结。</p>
+<h2 id="光的电磁理论基础">光的电磁理论基础</h2>
+<h3 id="菲涅尔公式">菲涅尔公式</h3>
+<ul>
+<li><p><span class="math inline">\(r_p,r_s,t_p,t_s\)</span></p></li>
+<li><p>布儒斯特角：全偏振临界角，<span class="math inline">\(r_p=0,\theta_1+\theta_2=90^\circ\)</span></p></li>
+</ul>
+<h3 id="全反射探究">全反射探究</h3>
+<ul>
+<li>存在倏逝波</li>
+<li>有相位变化 <span class="math inline">\(\delta=\delta_s-\delta_p\)</span></li>
+<li>无能量损失</li>
+</ul>
+<h3 id="偏振">偏振</h3>
+<p>关键是 <span class="math inline">\(p\)</span> 光和 <span class="math inline">\(s\)</span> 光的相位差（可看作振动方向垂直的光波的叠加）</p>
+<ul>
+<li>线偏振：<span class="math inline">\(\delta=0\)</span> 或 <span class="math inline">\(\pi\)</span></li>
+<li><span class="math inline">\(\sin\delta&lt;0\)</span> 右旋偏振，<span class="math inline">\(\sin\delta&gt;0\)</span> 左旋偏振</li>
+<li>偏振椭圆的相关量</li>
+</ul>
+<h3 id="光波的傅立叶分析">光波的傅立叶分析</h3>
+<p>实际光波是一个<em>波列</em>。波的单色性和波列长度有关。</p>
+<p>有效空间频率范围 <span class="math inline">\(\Delta k=\pi/L\)</span></p>
+<p>有效波长范围 <span class="math inline">\(\Delta \lambda=\lambda^2/2L\)</span></p>
+<p>时间频率范围 <span class="math inline">\(\Delta \nu=\Delta \left(c/\lambda\right)=c/2L\)</span></p>
+<h2 id="傅立叶光学">傅立叶光学</h2>
+<h3 id="菲涅尔衍射">菲涅尔衍射</h3>
+<p>菲涅尔傍轴近似下： <span class="math display">\[
+\begin{align}
+\widetilde E(u,v)&amp;=\widetilde E(x,y)=\frac{1}{i\lambda z_1}\exp\left[ik\left(z_1+\frac{x^2+y^2}{2z_1}\right)\right]\iint_{-\infty}^\infty \widetilde E(x_1,y_1)\exp\left[\frac{ik}{2z_1}(x_1^2+y_1^2)\right]\exp\left[-ik(\frac{x}{z_1}x_1+\frac{y}{z_1}y_1)\right]\operatorname{dx_1dy_1}\\
+&amp;=\widetilde A\cdot\mathcal{F}\left(\widetilde E(x_1,y_1)\cdot \exp\left[\frac{ik}{2z_1}(x_1^2+y_1^2)\right]\right)
+\end{align}
+\]</span> 注意前面含 <span class="math inline">\((x,y)\)</span> 的相位因子在光强不显现，但可以利用干涉证明其存在。</p>
+<p>突然理解了3dgray的代码：<strong>傅立叶变换之后是uv（频率域），但实际是xy，只是有个线性对应关系，因此要换算回去：乘 lambda z</strong></p>
+<h3 id="夫琅和费衍射">夫琅和费衍射</h3>
+<p>在夫琅和费远场近似下： <span class="math display">\[
+\begin{align}
+\widetilde E(u,v)&amp;=\widetilde E(x,y)=\frac{1}{i\lambda z_1}\exp\left[ik\left(z_1+\frac{x^2+y^2}{2z_1}\right)\right]\iint_{-\infty}^\infty \widetilde E(x_1,y_1)\exp\left[-ik(\frac{x}{z_1}x_1+\frac{y}{z_1}y_1)\right]\operatorname{dx_1dy_1}\\
+&amp;=\widetilde A\cdot\iint_{-\infty}^\infty \widetilde E(x_1,y_1)\exp\left[-i2\pi(ux_1+vy_1)\right]\operatorname{dx_1dy_1}\\
+&amp;=\widetilde A\cdot\mathcal{F}\left[\widetilde E(x_1,y_1)\right]
+\end{align}
+\]</span> 其中，<span class="math inline">\((u,v)=\displaystyle (\frac{x}{\lambda z_1},\frac{y}{\lambda z_1})=(\frac{\cos\alpha}{\lambda},\frac{\cos\beta}{\lambda})\)</span> 为空间频率 <span class="math inline">\(1/\lambda\)</span> 在 <span class="math inline">\(x,y\)</span> 方向的分解。</p>
+<p>一张复杂的图片有许多不同的空间频率的单频信息组成，当单色波正入射在待分析的图像上时，通过夫琅和费衍射，一定空间频率的单频信息就被向特定方向衍射的平面波输送出来，所有衍射波最终会聚在焦面上的不同位置而形象地展示出原图片的频谱。这一过程的“运算速度”显然远高于计算机，一照就出来了。</p>
+<p>理想的夫琅和费衍射系统是一个傅立叶频谱分析器。</p>
+<p><strong>太近效果不好的原因可能是远场近似不再适用</strong></p>
+<h3 id="透镜">透镜</h3>
+<p>进入透镜的发散球面波，出去时变成了会聚的： <span class="math display">\[
+\widetilde E(x_1,y_1)=A\exp(ikd_0)\exp\left[\frac{ik}{2d_0}(x_1^2+y_1^2)\right]\to \widetilde E&#39;(x_1,y_1)=A\exp(-ikd)\exp\left[-\frac{ik}{2d}(x_1^2+y_1^2)\right]
+\]</span></p>
+<p>透镜的透射系数： $$ <span class="math display">\[\begin{align}
+\widetilde t(x_1,y_1)&amp;=\frac{\widetilde E}{\widetilde E&#39;}=\exp\left[-ik\frac{(x_1^2+y_1^2)}{2}\left(\frac 1 d+\frac 1 {d_0}\right)\right]\\
+&amp;=\exp\left(-ik\frac{x_1^2+y_1^2}{2f}\right)
+
+\end{align}\]</span> $$ 其中 <span class="math inline">\(f\)</span> 满足：<span class="math inline">\(\displaystyle\frac{1}{d_0}+\frac{1}{d}=\frac{1}{f}\)</span> .</p>
+<h3 id="深入理解透镜的傅立叶变换性质">深入理解透镜的傅立叶变换性质</h3>
+<p>光经过有限大物体后的传播过程就是衍射的过程，根据传播距离可以用夫琅和费衍射或者菲涅尔衍射计算传播到像面后的光场分布。可以说，衍射无处不在，传播就有衍射。</p>
+<p>假设有这么一个夫琅和费衍射系统：光源—狭缝（衍射平面）-透镜--成像平面</p>
+<p>设光透过衍射平面后的场分布为 <span class="math inline">\(\widetilde E(x_1,y_1)\)</span>, 透过透镜后的场分布为： <span class="math display">\[
+\widetilde E&#39;(x_1,y_1)=\widetilde E(x_1,y_1)\cdot \widetilde t(x_1,y_1)
+\]</span> 然后衍射到透镜后焦面，由于是有限距离，应该用菲涅尔衍射去计算： $$ <span class="math display">\[\begin{align}
+\widetilde E(u,v)&amp;=\widetilde E(x,y)=\frac{e^{ikf}}{i\lambda f}e^{ik\frac{x^2+y^2}{2f}}\mathcal{F}\left[\widetilde E&#39;(x_1,y_1)\exp\left(ik\frac{x_1^2+y_1^2}{2f}\right)\right]\\
+&amp;=\widetilde A\cdot\mathcal{F}\left[\widetilde E(x_1,y_1)\right]\mid_{u=\frac{x}{\lambda f},v=\frac{y}{\lambda f}}
+
+\end{align}\]</span> $$ 注意透镜的透射系数刚刚好消掉了菲涅尔衍射的那个系数，使最终结果成为了一个干净的傅立叶变换。</p>
+<p>因此整个夫琅和费衍射系统本来是夫琅和费衍射，做个傅立叶变换就好了，但是要在很远处才能观察。为了在近处观察加了透镜，要改为菲涅尔衍射去计算，结果兜兜转转算完得到和夫琅和费衍射一样的形式。</p>
+<p>另一方面可以看到，从衍射平面到透镜再到透镜后焦面，整合后等价于做一个傅立叶变换，这就是透镜的傅立叶变换性质：透镜前的场知道了，加个透镜则后焦面的场就是做一个傅立叶变换。这是透镜的透射系数和菲涅尔衍射美妙的结合。</p>
+<p>相位因子？</p>
+<p>如果透镜和衍射平面有一定距离 <span class="math inline">\(d_0\)</span>, 那么这时候夫琅和费衍射的东西就显现出来了，这相当于夫琅和费衍射多传播了 <span class="math inline">\(d_0\)</span>, 透镜前的光场 <span class="math display">\[
+\widetilde E(x_2,y_2)=\widetilde E(x_1,y_1)\cdot e^{ik(d_0+)}
+\]</span></p>
+<p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glmiswqeu2j30u0140hdw.jpg" alt="image-20201213205208266" style="zoom:67%;" /></p>
+<h2 id="总结干涉测量">总结：干涉测量</h2>
+
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+
+    </footer>
+
+  </div>
+
+  
+
+  
+
+  
+  
+  
+
+</article>
+    
+    <article id="post-Physics/Quantum-Mechanics" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="../../2020/09/15/Physics/Quantum-Mechanics/"
+    >Quantum-Mechanics</a> 
+</h2>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="../../2020/09/15/Physics/Quantum-Mechanics/" class="article-date">
+  <time datetime="2020-09-15T10:41:11.000Z" itemprop="datePublished">2020-09-15</time>
+</a>
+      
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <h1 id="quantum-mechanics-notes">Quantum-Mechanics-Notes</h1>
+<p>Notes for quantum mechanics of MIT-OCW 8.04.</p>
+<p><em>’This is the goal of 8.04: we will step beyond the scale of daily experiences to develop an intuition for electrons, atoms, and superposition.’</em></p>
+<h2 id="uncertainty-principle-and-superposition">Uncertainty Principle and Superposition</h2>
+<p>Think about a series of experiments.</p>
+<p>Electron has two propeties : <em>white/black</em> and <em>hard/soft</em> (Denote by W/B &amp; H/S).</p>
+<p>We made <em>boxes</em> that can <em>measure</em> such properties. For instance, white electron and black electron will exit the box from different directions. From the direction we know the white/black property of the electron. Denote ‘C-Box’ (color box) for the boxes that can measure W/B property and similarly, ‘H-Box’ (hardness box) for those can measure ‘H/S’ property.</p>
+<p>We have mirrors and combinator that put the two directions together, so that we can continue more complicated experiments. Note that they only change the directions.</p>
+<p>Below are the experiments from physicists.</p>
+<p>First there are some basic and naive experiments.</p>
+<ol type="1">
+<li>Electrons —&gt; C-Box —&gt; W and B —&gt; choose W —&gt; C-Box —&gt; W (repeatability of color / hardness)</li>
+<li>Electrons —&gt; H-Box —&gt; H and S —&gt; choose H —&gt;C-Box —&gt; W (50%) and B (50%) (lack of correlation of color with hardness)</li>
+</ol>
+<p>Then comes the weird experiment.</p>
+<ol start="3" type="1">
+<li>Electrons —&gt; C-Box —&gt; W and B —&gt; choose W —&gt; H-Box —&gt; H and S —&gt; choose H —&gt; C-Box —&gt; <strong>Not</strong> (100%) W, but <span class="math inline">\(50\%\)</span> W and <span class="math inline">\(50\%\)</span> B</li>
+</ol>
+<p>Apparently, hardness box tampers with color. Therefore experiment 3 tells us color and hardness property cannot be measured simultaneously, which is the <strong>uncertainty principle</strong>. Though we know it is white at the begining, as long as we measure the hardness, the color property white is not repeatable anymore.</p>
+<p>Then we use combinator to dig deeper.</p>
+<ol start="4" type="1">
+<li><p>White electrons —&gt; H-Box —&gt; <span class="math inline">\(50\%\)</span> H and <span class="math inline">\(50\%\)</span> S —&gt; combinator —&gt; H-Box —&gt; <span class="math inline">\(50\%\)</span> H and <span class="math inline">\(50\%\)</span> S</p></li>
+<li><p>White electrons —&gt; H-Box —&gt; 50% H and 50% S —&gt; combinator —&gt; C-Box —&gt; (100%) W</p></li>
+<li><p>White electrons —&gt; H-Box —&gt; 50% H and 50% S —&gt; put a wall in the Soft's path —&gt; combinator —&gt; C-Box —&gt; <span class="math inline">\(50\%\)</span> W and <span class="math inline">\(50\%\)</span> B</p></li>
+</ol>
+<p>Experiment 4 tells us combinator does not change the proberties of electrons. Experiment 5 got totally W because the added combination part act as if H/S property doesn’t be measured, hence the W/B property will not be disturbed. Experiment 6 shows a disturbing one from which we can see the uncertainty principle plays a role.</p>
+<p>After we understand the principle of the motion of electrons, we consider the <em>being</em> (or state) of it : what is the state of an electron inside the apparatus in the Experiment 5?</p>
+<p>We know it is white, so it cannot be hard or soft, otherwise we will get half-half result by the uncertainty principle. It cannot be both hard and soft since different property will go in different direction.In one path the electron cannot have both properties. It cannot be neither since we can get some results.</p>
+<p>Therefore, the only condition is the electron has probability of being hard or soft (but we cannot know what exactly is) and such state is called <strong>superposition</strong>.</p>
+<p>Being in a definite state of position means that being in a superposition of having different values for momentum.</p>
+<h2 id="bells-inequality">Bell’s Inequality</h2>
+<p>In lecture 2, the professor demonstrated some intersting experiments that are waiting to be explained using quantum language.</p>
+<ul>
+<li><p>Atom exist. But atomic orbits are unstable.</p></li>
+<li><p>Atomic spectra are discrete. When excites/sparks the simple gas like $ H_2$, we get light sent out by it. If we take the light and shine it on a prism, we would find distinct patterns : discrete spectra. Experimentalists found the wavelengths satisfy <span class="math inline">\(1/\lambda=R\cdot(1/n^2-1/m^2)\)</span>.</p></li>
+<li><p>Photoelectric effect. Stop voltage has no relation with intensity, but is linear to frequency. And it was found that the coefficient is just <span class="math inline">\(h\)</span>, the Planck constant derived from Blackbody radiation.</p></li>
+<li><p>Since photon has zero mass, we can develop the momentum equation <span class="math inline">\(p=h/\lambda\)</span> with <span class="math inline">\(E=pc\)</span> and <span class="math inline">\(E=h\nu\)</span>. This means photon has the particle’s property--momentum. Note that <span class="math inline">\(E=h\nu\)</span> is very unusual.</p></li>
+<li><p>Double-slit experiment with electron. The electron comes one in one, and was found randomly positioned. But when the quantity is enough, the statistic told us the electrons were interfered.</p>
+<p><img src="../../../../Library/Application%20Support/typora-user-images/image-20201109153712555.png" alt="image-20201109153712555" style="zoom:25%;" /></p></li>
+<li><p>Bragg scattering. If we send in a beam of electrons to a crystal and watch out the scattering from different angles, we would find the interference effect. The intensity as a function of angle of the out beam satisfies the function as if the electron is a wave with the wavelength <span class="math inline">\(\lambda=2d\sin\theta/n\)</span>. The <strong>electron diffracts</strong> off the crystal.</p></li>
+<li><p>Send out <span class="math inline">\(C_{60}\)</span> one by one and make them go through a diffraction grating. [ ]</p></li>
+</ul>
+<p>Next comes the <em>Bell’s inequality</em>.</p>
+<p>If the state of the stuff is definite, then we have: <span class="math display">\[
+\operatorname{Num}(A,\bar B)+\operatorname{Num}(B,\bar C)\ge \operatorname{Num}(A,\bar C)
+\]</span> The proof is the following: <span class="math display">\[
+\begin{aligned}
+\operatorname{LHS}&amp;=\operatorname{Num}(A,\bar B,C)+\operatorname{Num}(A,\bar B,\bar C)+\operatorname{Num}(A,B,\bar C)+\operatorname{Num}(\bar A,B,\bar C)\\
+&amp;\ge \operatorname{Num}(A,B,\bar C)+\operatorname{Num}(A,\bar B,\bar C)\\
+&amp;=\operatorname{Num}(A,\bar C)\\
+&amp;=\operatorname{RHS}
+\end{aligned}
+\]</span> But Bell found by experiment that: <span class="math display">\[
+\operatorname{Num}(\uparrow_0,\downarrow_\theta)+\operatorname{Num}(\uparrow_\theta,\downarrow_{2\theta})&lt;\operatorname{Num}(\uparrow_0,\downarrow_{2\theta})
+\\
+\]</span> Where the up and down arrows indicate the spin angular momentum of the electron. I think this can be explained only if the three binary states can be superposed.</p>
+<h2 id="wave-function">Wave Function</h2>
+<h3 id="postulate-of-wavefunction">Postulate of Wavefunction</h3>
+<p>An essential postulate: The configuration or <em>state</em> of a quantum object is completely specified by a wavefunction denoted as <span class="math inline">\(\psi(x)\)</span>, <span class="math inline">\(\psi\in\mathbb{C}\)</span> .</p>
+<p>Classical: <span class="math inline">\((\vec p,\vec x)\to\)</span> Quantum: <span class="math inline">\(\psi(\vec x)\)</span></p>
+<p>Furthermore, <span class="math inline">\(p(x)=|\psi(x)|^2\)</span> determines the probability (density) that an object in the state <span class="math inline">\(\psi(x)\)</span> will be found at position <span class="math inline">\(x\)</span>. Note that the <em>dimension</em> of <span class="math inline">\(\psi\)</span> is <strong>square root of length</strong> since <span class="math inline">\(\displaystyle \int|\psi|^2 \text{d}x=1\)</span>.</p>
+<h3 id="de-broglie-relations">De Broglie Relations</h3>
+<p>From de Broglie’s generalization of momentum-wavelength relation of photon, we have <span class="math display">\[
+\begin{aligned}
+E&amp;=\hbar\omega\\
+\vec p&amp;=\hbar \vec k
+\end{aligned}
+\]</span> where <span class="math inline">\(\hbar:=h/2\pi\)</span>.</p>
+<h3 id="mathematics-of-superposition">Mathematics of Superposition</h3>
+<p>Given to two possible states of a quantum system corresponding to two wavelengths <span class="math inline">\(\psi_a\)</span> and <span class="math inline">\(\psi_b\)</span>, the system could also be in a superposition <span class="math inline">\(\psi=\alpha\psi_a+\beta\psi_b\)</span> with <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> in <span class="math inline">\(\mathbb{C}\)</span> satisfying normalization.</p>
+Hence for the superposition state, we have the probability density $$
+<span class="math display">\[\begin{aligned}
+\mathbb{p}(x)&amp;=|\alpha\psi_a(x)+\beta\psi_b(x)|^2\\
+&amp;=|\alpha\psi_a(x)|^2+|\beta\psi_b(x)|^2+\alpha^*\beta\psi_a^*(x)\psi_b(x)+\alpha\beta^*\psi_a(x)\psi_b^*(x)
+
+\end{aligned}\]</span>
+<p>$$ which exhibits quantum interference aside from the usual addition probability. It’s the interference between the different momentum that leads to certainty in the position.</p>
+<p>By using the tool of Fourier Transformation, we see that any wavefunction <span class="math inline">\(\psi(x)\)</span> can be expressed as a superposition of states <span class="math inline">\(e^{ikx}\)</span> with definite momenta <span class="math inline">\(p=k\)</span> as <span class="math display">\[
+\begin{aligned}
+\psi(x)&amp;=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^\infty \widetilde \psi(x)e^{ikx}\text{d}k\\
+\widetilde\psi(k)&amp;=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^\infty \psi(x)e^{-ikx}\text{d}x.
+\end{aligned}
+\]</span> I think that means when state is expressed in wavefunction, position and momentum are tightly correlated, one could indicate the other.</p>
+<h2 id="expectations">Expectations</h2>
+<h3 id="uncertainty-and-expectation">Uncertainty and Expectation</h3>
+<p>To characterize the uncertainty, we use the standard deviation <span class="math display">\[
+\Delta a=\sqrt{\langle a^2\rangle-\langle a\rangle^2}
+\]</span></p>
+<p>The expectation value of a function of position <strong>in a given quantum state</strong> <span class="math inline">\(\psi(x)\)</span> is <span class="math display">\[
+\langle f(x)\rangle =\int_{-\infty}^\infty \psi^\star(x) f(x)\psi(x)\;\text dx.
+\]</span> However, when we consider the expectation of momentum <span class="math inline">\(\langle p\rangle\)</span>, we get problem: <span class="math inline">\(p\)</span> and <span class="math inline">\(x\)</span> cannot be measured simultaneously.</p>
+<p>( In fact we replace <span class="math inline">\(f\)</span> with <span class="math inline">\(\hat f\)</span> when compute the expectation value of an operator )</p>
+<h3 id="hints-to-the-operator">Hints to the operator</h3>
+<p>Notice some hints that indicate us to <em>operator</em>:</p>
+<ul>
+<li><p>For wavefunction <span class="math inline">\(\psi=e^{ikx}\)</span>, <span class="math display">\[
+\begin{aligned}
+\partial_x \psi=ik\psi\implies \frac{\hbar}{i}\partial_x \psi =\hbar k\psi=p\cdot\psi
+\end{aligned}
+\]</span></p></li>
+<li><p>Noether’s theorem states that <em>to every symmetry is associated a conserved quantity</em> .</p>
+<table>
+<colgroup>
+<col style="width: 61%" />
+<col style="width: 38%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Symmetry</th>
+<th style="text-align: center;">Conservation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Translation : <span class="math inline">\(\vec x\to \vec x+\Delta \vec x\)</span></td>
+<td style="text-align: center;">Momentum : <span class="math inline">\(\dot{\vec p}=0\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Time : <span class="math inline">\(t\to t+\Delta t\)</span></td>
+<td style="text-align: center;">Energy : <span class="math inline">\(\dot E=0\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Rotation : <span class="math inline">\(\vec x \to \overleftrightarrow R\cdot \vec x\)</span></td>
+<td style="text-align: center;">Angular Momentum : <span class="math inline">\(\dot{\vec L}=0\)</span></td>
+</tr>
+</tbody>
+</table></li>
+<li><p>For translations behave for functions, <span class="math display">\[
+\begin{align}
+f(x)\to f(x+l)&amp;=f(x)+l\partial_x f(x)+\frac{l^2}{2}\partial_x^2 f(x)+\dots\\
+&amp;=\sum_{n=0}^{\infty} \frac{(l\partial_x)^n}{n!}f(x)\\
+&amp;=e^{l\partial_x}f(x)
+\end{align}
+\]</span> Translations are generated by spatial derivatives <span class="math inline">\(\partial_x\)</span> and it should be associated with <span class="math inline">\(p\)</span>.</p>
+<p>Similarly, <span class="math inline">\(E\sim \partial_t,\; L_z\sim\partial_\varphi\)</span>.</p></li>
+</ul>
+<p>Finally, momentum in quantum mechanics is realized by an operator: <span class="math display">\[
+\hat p=\frac{\hbar}{i}\frac{\partial}{\partial x}.
+\]</span> And we use operator $p $ to compute expectation values: <span class="math display">\[
+\lang p\rang=\int_{-\infty}^\infty \psi^\star(x)\hat p \psi(x)\;\text dx
+\]</span></p>
+<p>I think operator <span class="math inline">\(\hat p\)</span> is introduced more intuitively than mathematically. The key is that we want to calculate expectation of <span class="math inline">\(p\)</span> in a state associated with position <span class="math inline">\(x\)</span>, but from uncertainty principle there is no meaning when <span class="math inline">\(p\)</span> and <span class="math inline">\(x\)</span> occured in one expression. Since momentum is related to position, we come out with operator. Then the <span class="math inline">\(\lang p\rang\)</span> is the expectation of the momentum that can be observed. (Only the momentum that is able to be observed can be taken out from the operator)</p>
+<p>The very interesting thing of momentum operator is it can get distribution of momentum when there is a superposition.</p>
+<h2 id="operators-and-the-schrddotodinger-equation">Operators and the <span class="math inline">\(Schr\ddot{o}dinger \;Equation\)</span></h2>
+<h3 id="common-operator">Common operator</h3>
+<p>For each observable quantity we have an associate operator.</p>
+<ul>
+<li>Momentum : <span class="math inline">\(\hat p=-i\hbar \partial_x\)</span></li>
+<li>Position: <span class="math inline">\(\hat x =x\)</span></li>
+<li>Energy: <span class="math inline">\(\hat E=\displaystyle \frac{\hat p^2}{2m}+V(\hat x)=-\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2}+V(x)\)</span></li>
+</ul>
+<h3 id="commutator-and-a-deep-equation">Commutator and a deep equation</h3>
+<p>To measure the importance of operator (act) order, we define the <em>commutator</em> : <span class="math display">\[
+[\hat A,\hat B]=\hat A\hat B-\hat B\hat A.
+\]</span> And one deep and profound result we get is: <span class="math display">\[
+[\hat x,\hat p]=i\hbar \hat 1, \label{xp}
+\]</span> which indicates the uncertainty principle. Assume the first thing we measure is accurate, then think about it, we cannot measure <span class="math inline">\(x\)</span> and <span class="math inline">\(p\)</span> both accurately, for the simple reason that their commutator is not zero: we cannot get the same result after the second one that is measured. Further more, when expressed in matrix, (<span class="math inline">\(\ref{xp}\)</span>) is a very hard matrix equation and only infinite dimension matrix is can solve.</p>
+<h3 id="the-schrddotodinger-equation">The <span class="math inline">\(Schr\ddot{o}dinger \;Equation\)</span></h3>
+<p>Actually <span class="math inline">\(e^{ikx}\)</span> is an eigenfunction of operator <span class="math inline">\(\hat p\)</span> and every state <span class="math inline">\(\psi(x)\)</span> can be generated by it from Fourier’s Theorem.</p>
+<p>From de Broglie, we know that any object is a wave, and consider a plane wave <span class="math display">\[
+\psi(x,t;k)=e^{i(kx-\omega t)},
+\]</span> which has momentum <span class="math inline">\(p=\hbar k\)</span> and energy <span class="math inline">\(E=\hbar \omega\)</span>.</p>
+<p>Similarly to hint of momentum, we notice <span class="math display">\[
+i\hbar \frac{\partial\psi(x,t)}{\partial t}=\hbar\omega \psi(x,t)=E\psi(x,t),
+\]</span></p>
+<p>which depicts the time evolution of energy <span class="math inline">\(E\)</span>. But maybe we do not know what is energy <span class="math inline">\(E\)</span>.</p>
+<p>A little change <span class="math inline">\(E\to \hat E\)</span> complete the equation and that is the <span class="math inline">\(Schr\ddot{o}dinger \;Equation\)</span> : <span class="math display">\[
+\begin{align}
+i\hbar \frac{\partial}{\partial t}\psi(x,t)&amp;=\hat E \psi(x,t)\\
+i.e.\qquad i\hbar\frac{\partial \psi(x,t)}{\partial t}&amp;=-\frac{\hbar^2}{2m}\frac{\partial^2 \psi(x,t)}{\partial x^2}+V(x)\psi(x,t).
+\end{align}
+\]</span> The equation describing the time evolution of a quantum state.</p>
+<p>It is analogous to the equation of motion $F= $ and <span class="math inline">\(\hat E\)</span> is not defined as the operator <span class="math inline">\(i\hbar\partial_t\)</span> any more than <span class="math inline">\(\vec F\)</span> is defined to be <span class="math inline">\(\hat{\vec p}\)</span> .</p>
+
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+
+    </footer>
+
+  </div>
+
+  
+
+  
+
+  
+  
+  
+
+</article>
+    
+    <article id="post-Computer-Science/Data-Structure-notes" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="../../2020/09/15/Computer-Science/Data-Structure-notes/"
+    >Data-Structure-Notes</a> 
+</h2>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="../../2020/09/15/Computer-Science/Data-Structure-notes/" class="article-date">
+  <time datetime="2020-09-15T04:19:48.000Z" itemprop="datePublished">2020-09-15</time>
+</a>
+      
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <h1 id="note-for-data-structure">Note for Data Structure</h1>
+<h3 id="维护最大堆">维护最大堆</h3>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">// MAP-HEAPIFY</span><br><span class="line">MAX_HEAPIFY(A,i)</span><br><span class="line">	l = LEFT(i)</span><br><span class="line">    r = RIGHT(i)</span><br><span class="line">    <span class="keyword">if</span> l &lt;= A.size <span class="keyword">and</span> A[l]&gt;A[i]</span><br><span class="line">        largest = l</span><br><span class="line">    <span class="keyword">else</span> </span><br><span class="line">    	largest = i</span><br><span class="line">    <span class="keyword">if</span> r &lt;= A.size <span class="keyword">and</span> A[r]&gt;A[largest]</span><br><span class="line">    	largest = r</span><br><span class="line">    <span class="keyword">if</span> largest != i</span><br><span class="line">    	exchange(A[i],A[largest]) // 交换了 i 和 largest 位置的元素</span><br><span class="line">    	MAX_HEAPIFY(A,largest)</span><br></pre></td></tr></table></figure>
+<p>维护最大/小堆的时间复杂度为 <span class="math inline">\(\log(n)\)</span>，常用在连续取出最大值或最小值。</p>
+<h4 id="优先队列">优先队列</h4>
+<p>普通的队列是先进先出，而在优先队列中，元素被赋予优先级。当访问元素时，具有最高优先级的元素最先删除。优先队列具有最高级先出 （first in, largest out）的行为特征。</p>
+<p>优先队列在队列基础上添加了内部的一个排序，它本质是一个堆实现的。因而维护堆的时候可以直接用STL的 <code>priority_queue</code>.</p>
+<p>less是从大到小，greater是从小到大？</p>
+<ul>
+<li><a href="https://blog.csdn.net/qq_24279775/article/details/102560671" target="_blank" rel="noopener">重载</a></li>
+</ul>
+
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+
+    </footer>
+
+  </div>
+
+  
+
+  
+
+  
+  
+  
+
+</article>
+    
+    <article id="post-Computer-Science/Machine Learning/PyTorch-Notes" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="../../2020/09/14/Computer-Science/Machine%20Learning/PyTorch-Notes/"
     >PyTorch Notes</a> 
 </h2>
  
@@ -98,7 +646,7 @@
 
     
     <div class="article-meta">
-      <a href="/2020/09/14/Computer-Science-Machine-Learning-PyTorch-Notes/" class="article-date">
+      <a href="../../2020/09/14/Computer-Science/Machine%20Learning/PyTorch-Notes/" class="article-date">
   <time datetime="2020-09-14T13:44:31.000Z" itemprop="datePublished">2020-09-14</time>
 </a>
       
@@ -164,7 +712,7 @@
 
 </article>
     
-    <article id="post-Mathematics-随机过程复习总结" class="article article-type-post" itemscope
+    <article id="post-Mathematics/随机过程复习总结" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
@@ -172,7 +720,7 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2020/09/07/Mathematics-%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93/"
+  <a class="article-title" href="../../2020/09/07/Mathematics/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93/"
     >随机过程复习总结</a> 
 </h2>
  
@@ -182,7 +730,7 @@
 
     
     <div class="article-meta">
-      <a href="/2020/09/07/Mathematics-%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93/" class="article-date">
+      <a href="../../2020/09/07/Mathematics/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93/" class="article-date">
   <time datetime="2020-09-06T18:36:57.000Z" itemprop="datePublished">2020-09-07</time>
 </a>
       
@@ -335,7 +883,7 @@
 
 </article>
     
-    <article id="post-Life-TP-LINK电子设计竞赛" class="article article-type-post" itemscope
+    <article id="post-Life/TP-LINK电子设计竞赛" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
@@ -343,7 +891,7 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2020/08/26/Life-TP-LINK%E7%94%B5%E5%AD%90%E8%AE%BE%E8%AE%A1%E7%AB%9E%E8%B5%9B/"
+  <a class="article-title" href="../../2020/08/26/Life/TP-LINK%E7%94%B5%E5%AD%90%E8%AE%BE%E8%AE%A1%E7%AB%9E%E8%B5%9B/"
     >Post</a> 
 </h2>
  
@@ -353,7 +901,7 @@
 
     
     <div class="article-meta">
-      <a href="/2020/08/26/Life-TP-LINK%E7%94%B5%E5%AD%90%E8%AE%BE%E8%AE%A1%E7%AB%9E%E8%B5%9B/" class="article-date">
+      <a href="../../2020/08/26/Life/TP-LINK%E7%94%B5%E5%AD%90%E8%AE%BE%E8%AE%A1%E7%AB%9E%E8%B5%9B/" class="article-date">
   <time datetime="2020-08-26T08:08:33.000Z" itemprop="datePublished">2020-08-26</time>
 </a>
       
@@ -417,7 +965,7 @@
 
 </article>
     
-    <article id="post-Projects-Stringless-Piano" class="article article-type-post" itemscope
+    <article id="post-Projects/Stringless-Piano" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
@@ -425,7 +973,7 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2020/08/22/Projects-Stringless-Piano/"
+  <a class="article-title" href="../../2020/08/22/Projects/Stringless-Piano/"
     >Stringless Piano</a> 
 </h2>
  
@@ -435,7 +983,7 @@
 
     
     <div class="article-meta">
-      <a href="/2020/08/22/Projects-Stringless-Piano/" class="article-date">
+      <a href="../../2020/08/22/Projects/Stringless-Piano/" class="article-date">
   <time datetime="2020-08-22T09:36:21.000Z" itemprop="datePublished">2020-08-22</time>
 </a>
       
@@ -491,7 +1039,7 @@
 
 </article>
     
-    <article id="post-Computer-Science-C-Cpp-Notes" class="article article-type-post" itemscope
+    <article id="post-Computer-Science/C++/Cpp-Notes" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
@@ -499,7 +1047,7 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2020/08/07/Computer-Science-C-Cpp-Notes/"
+  <a class="article-title" href="../../2020/08/07/Computer-Science/C++/Cpp-Notes/"
     >Cpp-Notes</a> 
 </h2>
  
@@ -509,7 +1057,7 @@
 
     
     <div class="article-meta">
-      <a href="/2020/08/07/Computer-Science-C-Cpp-Notes/" class="article-date">
+      <a href="../../2020/08/07/Computer-Science/C++/Cpp-Notes/" class="article-date">
   <time datetime="2020-08-07T15:55:44.000Z" itemprop="datePublished">2020-08-07</time>
 </a>
       
@@ -572,7 +1120,7 @@
 
 </article>
     
-    <article id="post-Physics-Holography-Road" class="article article-type-post" itemscope
+    <article id="post-Physics/Holography-Road" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
@@ -580,7 +1128,7 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2020/08/06/Physics-Holography-Road/"
+  <a class="article-title" href="../../2020/08/06/Physics/Holography-Road/"
     >Holography</a> 
 </h2>
  
@@ -590,7 +1138,7 @@
 
     
     <div class="article-meta">
-      <a href="/2020/08/06/Physics-Holography-Road/" class="article-date">
+      <a href="../../2020/08/06/Physics/Holography-Road/" class="article-date">
   <time datetime="2020-08-06T12:25:38.000Z" itemprop="datePublished">2020-08-06</time>
 </a>
       
@@ -734,19 +1282,27 @@ u=\frac{\Delta x}{\lambda z},
 </ul>
 <h2 id="数字闪耀光栅技术">数字闪耀光栅技术</h2>
 <p>通过改变加载在SLM的相息图的相位，实现闪耀光栅的效果，就好比把平整的SLM变成了有凸起的闪耀光栅。</p>
-<p>移动一半的间距对应着一半的波长，进而对应着一半的相位 <span class="math inline">\(\pi\)</span>。</p>
-<p>代码其实非常简单：</p>
-<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">planex=-M/<span class="number">2</span>:M/<span class="number">2</span><span class="number">-1</span>; <span class="comment">% move along x axis</span></span><br><span class="line">planey=-N/<span class="number">2</span>:N/<span class="number">2</span><span class="number">-1</span>; <span class="comment">% move along y axis</span></span><br><span class="line">phase=<span class="built_in">angle</span>(U_slm);</span><br><span class="line">phase=<span class="built_in">mod</span>(phase+planey'.*<span class="built_in">pi</span>+planex.*<span class="built_in">pi</span>,<span class="number">2</span>*<span class="built_in">pi</span>);</span><br></pre></td></tr></table></figure>
+<p>通过相位的改变实现对干涉各级像的移动，移动的距离根据干涉一级像的位置（像的位置）确定： <span class="math display">\[
+\text{d}\varphi=\frac{\text d x}{L_0}\cdot2\pi
+\]</span> SLM上每个点都相差这个相位，于是： <span class="math display">\[
+\text d\varphi(m,n)=\text d\varphi\cdot m+\text d\varphi\cdot n
+\]</span></p>
+<p>代码：</p>
+<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">L0=lambda*z0/pix;</span><br><span class="line">xx_num=-M/<span class="number">2</span>:M/<span class="number">2</span><span class="number">-1</span>;</span><br><span class="line">yy_num=-N/<span class="number">2</span>:N/<span class="number">2</span><span class="number">-1</span>;</span><br><span class="line">phase=phase+<span class="built_in">pi</span>.*xx_num+<span class="built_in">pi</span>.*yy_num'; <span class="comment">% move to center</span></span><br><span class="line">phase=<span class="built_in">mod</span>(phase+<span class="number">2</span>*<span class="built_in">pi</span>*dx/L0.*xx_num+<span class="number">2</span>*<span class="built_in">pi</span>*dy/L0.*yy_num',<span class="number">2</span>*<span class="built_in">pi</span>);</span><br></pre></td></tr></table></figure>
 <h2 id="随机相位技术">随机相位技术</h2>
 <p>模拟的是毛玻璃的散射，达到使振幅均匀化的效果。</p>
 <ul>
 <li>叠加随机相位不改变复现像，因为增加相位没有改变复振幅，原物体的光强没有改变，因而复现像的光强也不会改变</li>
 <li>叠加随机相位使振幅均匀化了，这是由于随机相位的叠加消除了干涉：干涉使像面的振幅大小不同，或者说是振幅的信息起了作用。加入随机相位后干涉消除了，但是传播后复现像的光强不会改变，说明振幅信息不再是主要信息，只能剩下的相位信息为主要信息，说明振幅的信息被放进了相位。</li>
 </ul>
+<h2 id="为什么需要相位信息">为什么需要相位信息？</h2>
+<p>https://www.zhihu.com/question/328160313</p>
+<p>这个问题问的好。按理说人眼也是只能感受光强，但是根据光的传播的知识，相位联系着深度：物体上不同深度 <span class="math inline">\(z\)</span> 相同 <span class="math inline">\((x,y)\)</span> 处的点的散射光相位是有差别的。</p>
+<p>全息底片营造的相干光<strong>带有相位信息，左眼和右眼看到的强度分布会有一点点差别</strong>，即“双目视差”，从而有了“立体感”。</p>
 <h2 id="todos">Todos：</h2>
 <ul>
 <li>GS迭代修改</li>
-<li>deeplearning</li>
+<li><strong>deeplearning</strong></li>
 <li>精确屏蔽单点</li>
 </ul>
 
@@ -776,518 +1332,13 @@ u=\frac{\Delta x}{\lambda z},
 
 </article>
     
-    <article id="post-Computer-Science-Deep-Learning-Action-Recognition-Road" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2020/08/06/Computer-Science-Deep-Learning-Action-Recognition-Road/"
-    >Action-Recognition-Road</a> 
-</h2>
- 
-
-    </header>
-    
-
-    
-    <div class="article-meta">
-      <a href="/2020/08/06/Computer-Science-Deep-Learning-Action-Recognition-Road/" class="article-date">
-  <time datetime="2020-08-06T12:19:55.000Z" itemprop="datePublished">2020-08-06</time>
-</a>
-      
-      
-      
-      
-    </div>
-    
-
-    
-
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-
-      
-      <p>This is a notes for action recognition things in deep learning field. Started this in 2020’s summer in a Huawei’s Ascend project with Hongyu Chen, Yifan Yu and Longzhong Lin.</p>
-<h2 id="pose-estimation">Pose Estimation</h2>
-<ul>
-<li>OpenPose</li>
-<li>Tf-pose</li>
-<li>AlphaPose</li>
-</ul>
-<h2 id="action-recognition">Action Recognition</h2>
-<ul>
-<li>ST-GCN</li>
-<li>MS-G3D</li>
-</ul>
-
-      
-      <!-- reward -->
-      
-    </div>
-    
-    
-      <!-- copyright -->
-      
-    <footer class="article-footer">
-      
-      
-
-    </footer>
-
-  </div>
-
-  
-
-  
-
-  
-  
-  
-
-</article>
-    
-    <article id="post-Computer-Science-Deep-Learning-Image-Matching-Road" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2020/08/06/Computer-Science-Deep-Learning-Image-Matching-Road/"
-    >Image-Matching Road</a> 
-</h2>
- 
-
-    </header>
-    
-
-    
-    <div class="article-meta">
-      <a href="/2020/08/06/Computer-Science-Deep-Learning-Image-Matching-Road/" class="article-date">
-  <time datetime="2020-08-06T11:25:01.000Z" itemprop="datePublished">2020-08-06</time>
-</a>
-      
-      
-      
-      
-    </div>
-    
-
-    
-
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-
-      
-      <p>This is a notes for image imatching things in deep learning field.</p>
-<p>Started this in 2020’s summer and it is a part of a SRTP project regarding an AR app, with Haojie He and Lingming Zhang.</p>
-<h2 id="superpoint-superglue">SuperPoint &amp; SuperGlue</h2>
-<h3 id="overview">Overview</h3>
-<p>SuperPoint is a great feature extractor.</p>
-<p>SuperGlue is a good image matching network based on features extracted from image.</p>
-<p>It is a really nice project by Magic Leap.</p>
-<p>I did a little simplification and put the code <a href="https://github.com/longqianh/Image-Matching.git" target="_blank" rel="noopener">here</a>.</p>
-<h3 id="experience-and-thoughts">Experience and thoughts</h3>
-<p>For SuperPoint, I think it is a mature network and can be used as a helpful feature extracting tool. (And there are some wonderful tricks in the code! )</p>
-<p>For SuperGlue, I didn’t quite get the key of it, such as the Attention Network, the Encoding Method.</p>
-<p>In addition, it is quite hard to transfer models from SuperGlue. I have already transferred SuperPoint into Libtorch code and it can be used in C++. It is also easy to be transfered to ONNX or other frameworks. However, I suffered a lot to transfer SuperGlue into libtorch code or ONNX. Hence the SuperGlue can work fine on Python but has some difficulty ( for me ) to be deployed.</p>
-<p>So I think later on I will find a more simple ( hopefully, also more powerful ) matching network so that it can be easily deployed. Or maybe I can create my own networks and do some trainings.</p>
-
-      
-      <!-- reward -->
-      
-    </div>
-    
-    
-      <!-- copyright -->
-      
-    <footer class="article-footer">
-      
-      
-
-    </footer>
-
-  </div>
-
-  
-
-  
-
-  
-  
-  
-
-</article>
-    
-    <article id="post-Computer-Science-C-CMake-Notes" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2020/08/04/Computer-Science-C-CMake-Notes/"
-    >Cmake Notes</a> 
-</h2>
- 
-
-    </header>
-    
-
-    
-    <div class="article-meta">
-      <a href="/2020/08/04/Computer-Science-C-CMake-Notes/" class="article-date">
-  <time datetime="2020-08-04T12:05:05.000Z" itemprop="datePublished">2020-08-04</time>
-</a>
-      
-      
-      
-      
-    </div>
-    
-
-    
-
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-
-      
-      <h2 id="notes-for-cmake-commands">Notes for cmake commands</h2>
-<p><code>add_executable(executable_name main.cpp)</code></p>
-<p>使用给定的源文件，为工程引入一个可执行文件。</p>
-<h3 id="add-libraries">add libraries</h3>
-<p>添加静态库。</p>
-<ul>
-<li>internal library</li>
-</ul>
-<figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line"><span class="keyword">add_library</span>(say-hello hello.hpp hello.cpp)</span><br><span class="line"><span class="comment"># will generate static library *.a</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">add_executable</span>(a main.cpp)</span><br><span class="line"><span class="keyword">target_link_libraries</span>(a PRIVATE say-hello)</span><br></pre></td></tr></table></figure>
-<ul>
-<li><p>external library : take <strong>opencv</strong> as an example</p>
-<figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line"><span class="keyword">set</span>(OpenCV_DIR /usr/local/Cellar/opencv/<span class="number">4.4</span>.<span class="number">0</span>/lib/cmake/opencv4) <span class="comment"># path to opencv where there is .cmake file</span></span><br><span class="line"><span class="keyword">find_package</span>(OpenCV REQUIRED)</span><br><span class="line"><span class="keyword">target_link_libraries</span>(a <span class="variable">$&#123;OpenCV_LIBS&#125;</span>)</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h3 id="add_link_libraries">add_link_libraries</h3>
-<p>添加动态链接库。</p>
-<h4 id="internal">internal</h4>
-<figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line"><span class="keyword">link_directories</span>(<span class="variable">$&#123;PROJECT_SOURCE_DIR&#125;</span>/lib) <span class="comment"># path to the dylib</span></span><br><span class="line"><span class="keyword">add_executable</span>(a main.cpp)</span><br><span class="line"><span class="keyword">target_link_libraries</span>(<span class="variable">$&#123;PROJECT_NAME&#125;</span> dylibpath)</span><br></pre></td></tr></table></figure>
-<h4 id="external">external</h4>
-<p>Take <strong>libtorch</strong> as an example.</p>
-<figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line"><span class="keyword">find_package</span>(Torch REAUIRED) <span class="comment"># find an external project, and load its settings</span></span><br><span class="line"><span class="keyword">message</span>(STATUS <span class="string">"find libtorch in: $&#123;TORCH_LIBRARIES&#125;"</span>) <span class="comment"># print message</span></span><br><span class="line"><span class="keyword">add_executable</span>(a main.cpp)</span><br><span class="line"><span class="keyword">target_link_libraries</span>(a <span class="variable">$&#123;TORCH_LIBRARIES&#125;</span>) </span><br><span class="line"><span class="keyword">set_property</span>(<span class="keyword">TARGET</span> a PROPERTY CXX_STANDARD <span class="number">14</span>) <span class="comment"># You need C++14 to compile PyTorch</span></span><br></pre></td></tr></table></figure>
-<h3 id="how-to-build">how to build</h3>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">mkdir build</span><br><span class="line">cd build</span><br><span class="line">cmake .. # CMakeLists.txt in ..</span><br><span class="line">make</span><br></pre></td></tr></table></figure>
-
-      
-      <!-- reward -->
-      
-    </div>
-    
-    
-      <!-- copyright -->
-      
-    <footer class="article-footer">
-      
-      
-
-    </footer>
-
-  </div>
-
-  
-
-  
-
-  
-  
-  
-
-</article>
-    
-    <article id="post-Projects-FSO-communication-system" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2020/07/30/Projects-FSO-communication-system/"
-    >FSO Communication System</a> 
-</h2>
- 
-
-    </header>
-    
-
-    
-    <div class="article-meta">
-      <a href="/2020/07/30/Projects-FSO-communication-system/" class="article-date">
-  <time datetime="2020-07-30T14:33:15.000Z" itemprop="datePublished">2020-07-30</time>
-</a>
-      
-      
-      
-      
-    </div>
-    
-
-    
-
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-
-      
-      <p>This is the project I have done in 2020 UIUC’s OPTIC summer program.</p>
-<p>Thank you all , my teammates!</p>
-<ul>
-<li>Group Number : 3</li>
-<li>Group Leader : Longqian Huang</li>
-<li>Group members : Liang Sun, Yuxuan Liu, Junchi Feng, Yuhao Ma, Jinquan Shi, Zhuo Cheng, Yiru Pan, Dongao Cui, Muxi Zhao</li>
-</ul>
-<p>By the way, I think I did a great job in the presentation. The recording of our presentation is here. The powerpoint (Keynote) can be accessed <a href="https://mega.nz/folder/NcYTxASI#RFHN-JpP7UUpRwfXU4NIxw" target="_blank" rel="noopener">here</a>.</p>
-<p>Or you can get I quick view of the presentation below: (without the video)</p>
-
-
-	<div class="row">
-    <embed src="/pdf_files/FSOCS.pdf" width="100%" height="550" type="application/pdf">
-	</div>
-
-
-
-<p>Next is our output article :)</p>
-<h1 id="free-space-optical-communication-system">Free Space Optical Communication System</h1>
-<h2 id="what-is-fso-communication-system">1. What is FSO Communication System</h2>
-<p>We read the review and searched the Wikipedia to get a overview of FSO Communication System.</p>
-<p>FSO Communication is an idea of wireless communication using light based on the theory of light propagation in free space.</p>
-<p>Devices using technology of FSO communication make up a system. It is a outdoor system of <em>wireless optical communication system</em> (WOCS) and has some branches. Below is a classification tree of WOCS [1] :</p>
-<figure>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djubq55j30oo0ewq49.jpg" alt="WOCS classifications" /><figcaption aria-hidden="true">WOCS classifications</figcaption>
-</figure>
-<p>From that we know that we have choices of terrestrial links and space links. We considered both and think that terrestrial links is practical but space links is as well interesting and maybe a future-hot point.</p>
-<p>Below is a diagram of FSO communication link [1] (which maybe what we will construct in the next few days):</p>
-<figure>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djwkyeuj30nu0eimyd.jpg" alt="System composition" /><figcaption aria-hidden="true">System composition</figcaption>
-</figure>
-<h2 id="system-design">2. System Design</h2>
-<h3 id="type-of-the-system">2.1 Type of the system</h3>
-<p>We will construct <em>Ground-to-Satellite Link</em> as the type of the FSO communication system. Below is a concept figure of the system.</p>
-<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh6v9igawcj30of0dhabh.jpg" alt="qeyssat-satellite-879x485"  /></p>
-<h3 id="wavelength-to-use">2.2 Wavelength to use</h3>
-<p>The main consideration is attenuation after propagating long distance. From [2] we know to make attenuation less, infrared band is a good choice. Then we have two choices:</p>
-<ul>
-<li>850 nm</li>
-<li>1550 nm</li>
-</ul>
-<p>We digged further and found that 1550 nm lasers are considered "eye safe" at much higher power levels than traditionally used 850nm lasers.</p>
-<p>So our choice for wavelength is 1550 nm. And the benefits are as follows [1] :</p>
-<ul>
-<li>reduce background noise and Rayleigh scattering</li>
-<li>high transmitter power</li>
-<li>Eye-save wavelength ( the maximum permissible exposure for eye is much higher at 1550 nm wavelength )</li>
-</ul>
-<h3 id="laser-type">2.3 Laser Type</h3>
-<h4 id="led-or-cw">2.3.1 LED or CW</h4>
-<p>To be clear:</p>
-<ul>
-<li><p>A light-emitting diode (<em>LED</em>) is a semiconductor light source that emits light when current flows through it.</p></li>
-<li><p>A continuous wave (CW) laser is a laser that emits a continuous laser beam with a controlled heat output, as beam duration and intensity.</p></li>
-</ul>
-<p>For ground-to-satellite links, we don’t think a light of LED can surrive after passing the atmosphere. So we definitely choose CW laser.</p>
-<h4 id="comparasion">2.3.2 Comparasion</h4>
-<p>We have four choices and they all have own advantages and disadvantages:</p>
-<h5 id="gas-laser">Gas laser</h5>
-<figure>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk4mvtij30xc0iugos.jpg" alt="Carbon dioxide laser - Wikipedia" /><figcaption aria-hidden="true">Carbon dioxide laser - Wikipedia</figcaption>
-</figure>
-<ul>
-<li>Carbon dioxide laser are stable and less sensitive to atomospheric effects</li>
-<li>Large volume and unreliability</li>
-</ul>
-<h5 id="solid-state-laser">Solid-state laser</h5>
-<ul>
-<li>Stable and narrow spectral linewidth</li>
-<li>Very high peak power</li>
-</ul>
-<h5 id="semiconductor-laser">Semiconductor laser</h5>
-<ul>
-<li>Compact in size, light weight, easy to operate</li>
-<li>Quite low output power hence <strong>require additional amplifier</strong> for long distance communication</li>
-<li>Diodes require great care</li>
-</ul>
-<h5 id="fiber-laser-4">Fiber laser [4]</h5>
-<figure>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk51ei3j30zk0k075c.jpg" alt="Fiber laser cutting machine FOL-3015AJ" /><figcaption aria-hidden="true">Fiber laser cutting machine FOL-3015AJ</figcaption>
-</figure>
-<ul>
-<li>The laser light is both generated and delivered by an inherently flexible medium, which allows easier delivery to the focusing location and target.</li>
-<li>Fiber lasers can have active regions several kilometers long, and so can provide very high optical gain.</li>
-<li>Fiber lasers are compact compared to solid-state or gas lasers of comparable power ( because the fiber can be bent and coiled)</li>
-<li>The additional power and better beam quality provide cleaner cut edges and faster cutting speeds</li>
-</ul>
-<h4 id="choice-of-laser-device-type">2.3.3 Choice of laser device type</h4>
-<p>It seems that fiber laser is great in comparison with others. We first considered solid state laser but fiber laser seems to be better and it has many applications in telecommunications. So we choose <strong>fiber laser</strong> as our type of laser device.</p>
-<h3 id="modulator">2.4 Modulator</h3>
-<p>We have two consideration of the modulator, to be clear:</p>
-<ul>
-<li><p>Electro-optic modulator [6]</p>
-<p>An electro-optic modulator (EOM) is an optical device in which a signal-controlled element exhibiting an electro-optic effect is used to modulate a beam of light.</p></li>
-<li><p>Acoustic-optic modulator [5]</p>
-<p>An acousto-optic modulator (AOM), uses the acousto-optic effect to and shift the frequency of light using sound waves.</p></li>
-</ul>
-<p>We found little applications in telecommunications about acoustic-optic modulator and it seems electro-optic modulator has a more mature technology. We found that <span class="math inline">\(LiNbO_3\)</span> has nice performance in the application of long distance communication and there are a lot of type we could choose as provided in [7]. So we choose electro-optic modulator for our ground-to-satellite FOS communication system goal.</p>
-<p>To be more specific, we will use <em><span class="math inline">\(LiNbO_3\)</span> Mach-Zehnder Modulator</em> for its good performance.</p>
-<h2 id="simulation">3. Simulation</h2>
-<h3 id="demo-fso-communication-system">3.1 Demo: FSO communication system</h3>
-<p>We considered the composition of the system and drew a structure graph as below:</p>
-<figure>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djy58q7j31t00u0q79.jpg" alt="FSOCS" /><figcaption aria-hidden="true">FSOCS</figcaption>
-</figure>
-<p>We put our emphasis on the <em>Transmitter</em> part and the following sections are our simulation work.</p>
-<h4 id="layout">3.1.1 Layout</h4>
-<p>Below is the layout of our communication system. We used OptiSystem software to do the simulation.</p>
-<p>The transmitter part is in the left and we will dig into it later.</p>
-<p>In the middle is the FSO Channel. Since Ground-to-Satellite system has at least 90 km (see <em>regions of atmosphere</em> diagram below) , we set the range of the FSO channel 100 km. On the left and right of the FSO channel are two opticla amplifiers, from simulation result we can found their role in the system.</p>
-<figure>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk5x5ydj318t0rswih.jpg" alt="Regions of atmosphere" /><figcaption aria-hidden="true">Regions of atmosphere</figcaption>
-</figure>
-<p>On the right is the Receiver part. It consists of PIN Photodiode (which transfer optic wave into electric signal), Law Pass Bessel Filter (which is used to filter out noise) and Data Recovery Module (which do the demodulation and get the recovered signal).</p>
-<p>We use BER Analyter to analyse the bit error rate of the system.</p>
-<figure>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djvig9aj31720cb7aq.jpg" alt="FSO demo layout" /><figcaption aria-hidden="true">FSO demo layout</figcaption>
-</figure>
-<h4 id="simulation-result">3.1.2 Simulation result</h4>
-<figure>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djzynsxj318n0md140.jpg" alt="simulation result" /><figcaption aria-hidden="true">simulation result</figcaption>
-</figure>
-<p>Above is our simulation result from which we can found that loss is huge. The reason is FSO channel is too long.</p>
-<p>Because of the time and technology limitation, we didn’t get a good simulation result. Below is something we considered:</p>
-<ul>
-<li><p>how to overcome the problem of very big loss</p></li>
-<li><p>how to choose the laser power</p></li>
-<li><p>how to choose photodetector</p>
-<ul>
-<li>photodiode</li>
-<li>optical power detector</li>
-<li>optical phase detector</li>
-</ul></li>
-<li><p>how to choose filters</p>
-<ul>
-<li>low pass
-<ul>
-<li>Gaussian filter</li>
-<li>Bessel filter</li>
-<li>etc.</li>
-</ul></li>
-<li>height pass</li>
-<li>band pass</li>
-</ul></li>
-<li><p>how to set parameters of optical amplifier</p>
-<ul>
-<li>gain</li>
-<li>noise figure</li>
-</ul></li>
-</ul>
-<h3 id="optical-transmitter">3.2 Optical transmitter</h3>
-<p>From COSMOL, we get the some insight of the modulator. But it is not that clear.</p>
-<p>We use OptiSystem to construct our <em>optical transmitter</em> and further more, we digged a little deeper and build a demo of the whole <em>FSO communication system.</em></p>
-<p>Below are the layout of our system.</p>
-<figure>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk0rwezj30sm0cladg.jpg" alt="FSO-transmitter-layout" /><figcaption aria-hidden="true">FSO-transmitter-layout</figcaption>
-</figure>
-<p>From the figure we can see the structure of the transmitter clearly.</p>
-<ul>
-<li><p>We use simple <em>Bit Sequence Generator</em> to generate electric signal and use <em>NRZ Pulse Generator</em> to generate electric pulse.</p></li>
-<li><p>We use <em>Fiber Laser</em> as our laser device. As there isn’t Fiber Laser device in the software, we put a CW Laser and add a description. CW Laser can generate 1550 nm optical wave.</p></li>
-<li><p>We use <span class="math inline">\(LiNbO_3\)</span> Mach-Zehnder Modulator in our transmitter. The reasons have been stated in section 2.</p></li>
-<li><p>Put the optic signal and electric pulse into the MZ Modulator, we can get the modulated optical signal.</p></li>
-</ul>
-<p>Above are the details of our transmitter, we then use Optical Power Meter and Optical Spectrum Analyzer to do the simulation.</p>
-<p>Results are as follows :</p>
-<figure>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk1s5hnj312r0jtwln.jpg" alt="FSO-transmitter-simulation-result" /><figcaption aria-hidden="true">FSO-transmitter-simulation-result</figcaption>
-</figure>
-<p>We can see from the figure that the transmitter has <span class="math inline">\(2.485\)</span> dBm los and the output power is <span class="math inline">\(56.432\times 10^{-3} W\)</span>. We need optical amplifiers to make it larger.</p>
-<h3 id="electro-optic-modulation-process">3.3 Electro-optic Modulation Process</h3>
-<p>In order to give a more specific model, we use COMSOL to simulate the <em>Electro-optic modulation process</em>. Below are what we have done.</p>
-<p>We choose the <strong>wave optics module</strong>.</p>
-<p>Then we perform the 2D geometrical modeling since the system is symmetric.</p>
-<p>We can find that the structure has core and cladding:</p>
-<figure>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk3n0tdj30xo0hnaab.jpg" alt="structure of core and cladding" /><figcaption aria-hidden="true">structure of core and cladding</figcaption>
-</figure>
-<p>Next we set the boundary conditions so that the COSMOL can do the calculation. We set the applied voltage boundary of the light or rather the boundary of the wave:</p>
-<figure>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djz4eraj309n09pmx5.jpg" alt="step1" /><figcaption aria-hidden="true">step1</figcaption>
-</figure>
-<p>Before calculation, we set some configurations:</p>
-<figure>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk2mm1hj309h05pa9y.jpg" alt="step2" /><figcaption aria-hidden="true">step2</figcaption>
-</figure>
-<p>(To be clear: “步骤 <span class="math inline">\(k\)</span> ” &lt;—&gt; “ Step <span class="math inline">\(k\)</span> ” , “求解器配置” &lt;—&gt; “Solver Configuration” and “作业配置” &lt;—&gt; “ Work Configuration” )</p>
-<p>Finally, we get the simulation result. In the figure it is the distribution of the electric field in the waveguide. We also get the loss, transmittance and reflectance of the system.</p>
-<p>(The first line of the figure “表面：电场模” &lt;—&gt; “Surface: Electric field mode” )</p>
-<figure>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk362bij30xd0h9wer.jpg" alt="EF distribution" /><figcaption aria-hidden="true">EF distribution</figcaption>
-</figure>
-<figure>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk16evoj30xe0grq39.jpg" alt="Property inside" /><figcaption aria-hidden="true">Property inside</figcaption>
-</figure>
-<p>However, we cannot get the change of the phase. It seems that the software has some limitation. And we didn’t consider the electric signals. These are something that can be improved.</p>
-<h2 id="reference">Reference</h2>
-<p>[1] Kaushal H, Jain V K, Kar S. Free space optical communication[M]. Gurgaon, Haryana: Springer, 2017.</p>
-<p>[2] 高瞻, 丁铁骑, 吕辉. 光无线通信系统通信波长的选择[J]. 通讯世界, 2002, 8(12): 70-71.</p>
-<p>[3] https://seminex.com/1550nm-lasers.aspx/</p>
-<p>[4] https://www.wikiwand.com/en/Fiber_laser</p>
-<p>[5] https://www.wikiwand.com/en/Acousto-optic_modulator</p>
-<p>[6] https://www.wikiwand.com/en/Electro-optic_modulator</p>
-<p>[7] https://www.newport.com/medias/sys_master/images/images/h31/hfb/8797089398814/Electro-Optic-Modulator-Brochure.pdf</p>
-
-      
-      <!-- reward -->
-      
-    </div>
-    
-    
-      <!-- copyright -->
-      
-    <footer class="article-footer">
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Projects/" rel="tag">Projects</a></li></ul>
-
-
-    </footer>
-
-  </div>
-
-  
-
-  
-
-  
-  
-  
-
-</article>
-    
   </article>
   
 
   
   <nav class="page-nav">
     
-    <a class="extend prev" rel="prev" href="/">上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/3/">下一页</a>
+    <a class="extend prev" rel="prev" href="../../">上一页</a><a class="page-number" href="../../">1</a><span class="page-number current">2</span><a class="page-number" href="../3/">3</a><a class="page-number" href="../4/">4</a><span class="space">&hellip;</span><a class="page-number" href="../6/">6</a><a class="extend next" rel="next" href="../3/">下一页</a>
   </nav>
   
 </section>
@@ -1355,33 +1406,33 @@ u=\frac{\Delta x}{\lambda z},
 <nav class="navbar">
   
   <div class="logo">
-    <a href="/"><img src="/images/cat.png" alt="Peter&#39;s Blog"></a>
+    <a href="../../index.html"><img src="/images/cat.png" alt="Peter&#39;s Blog"></a>
   </div>
   
   <ul class="nav nav-main">
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/">主页</a>
+      <a class="nav-item-link" href="../../index.html">主页</a>
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/archives">归档</a>
+      <a class="nav-item-link" href="../../archives">归档</a>
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/categories">分类</a>
+      <a class="nav-item-link" href="../../categories">分类</a>
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/Projects">Projects</a>
+      <a class="nav-item-link" href="../../Projects">Projects</a>
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/Notes">Notes</a>
+      <a class="nav-item-link" href="../../Notes">Notes</a>
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="http://c01dkit.com" target="_blank" rel="noopener">友链</a>
+      <a class="nav-item-link" href="../../http:/c01dkit.com">友链</a>
     </li>
     
   </ul>
@@ -1395,7 +1446,7 @@ u=\frac{\Delta x}{\lambda z},
       </a>
       
       
-      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+      <a class="nav-item-link" target="_blank" href="../../atom.xml" title="RSS Feed">
         <i class="ri-rss-line"></i>
       </a>
       
@@ -1424,23 +1475,23 @@ u=\frac{\Delta x}{\lambda z},
   <div class="reward-box">
     
     <div class="reward-item">
-      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/alipay.jpg">
+      <img class="reward-img" src="../../https:/cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/alipay.jpg">
       <span class="reward-type">支付宝</span>
     </div>
     
     
     <div class="reward-item">
-      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/wechat.jpg">
+      <img class="reward-img" src="../../https:/cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/wechat.jpg">
       <span class="reward-type">微信</span>
     </div>
     
   </div>
 </div>
     
-<script src="/js/jquery-2.0.3.min.js"></script>
+<script src="../../js/jquery-2.0.3.min.js"></script>
 
 
-<script src="/js/lazyload.min.js"></script>
+<script src="../../js/lazyload.min.js"></script>
 
 <!-- Subtitle -->
 
@@ -1465,7 +1516,7 @@ u=\frac{\Delta x}{\lambda z},
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
 <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
 
-<script src="/dist/main.js"></script>
+<script src="../../dist/main.js"></script>
 
 <!-- ImageViewer -->
 
@@ -1607,7 +1658,7 @@ u=\frac{\Delta x}{\lambda z},
 <!-- busuanzi  -->
 
 
-<script src="/js/busuanzi-2.3.pure.min.js"></script>
+<script src="../../js/busuanzi-2.3.pure.min.js"></script>
 
 
 <!-- ClickLove -->
@@ -1615,7 +1666,7 @@ u=\frac{\Delta x}{\lambda z},
 <!-- CodeCopy -->
 
 
-<link rel="stylesheet" href="/css/clipboard.css">
+<link rel="stylesheet" href="../../css/clipboard.css">
 
 <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
 <script>
@@ -1675,42 +1726,7 @@ u=\frac{\Delta x}{\lambda z},
 
 
     
-  </div>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            displayMath: [ ['$','$'], ["\\[","\\]"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js"></script>
-
-
-<!-- <script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX", "output/HTML-CSS"],
-    tex2jax: {
-      inlineMath: [ ['
-
-</html>,'
-
-</html>], ["\\(","\\)"] ],
-      displayMath: [ ['$','$'], ["\\[","\\]"] ],
-      processEscapes: true
-    },
-    "HTML-CSS": { availableFonts: ["TeX"] }
-  });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js"></script> --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 
 </html>
