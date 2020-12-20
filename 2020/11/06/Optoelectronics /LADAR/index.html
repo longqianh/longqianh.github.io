@@ -111,6 +111,7 @@
 f(\theta,\varphi)=\exp\left[-\frac{r^2}{(z\alpha)^2}\right]=\exp\left[-\frac{\theta^2}{\alpha^2}\right]
 \]</span> 注：方向图函数定义为任意方向 <span class="math inline">\(\vec n\)</span> 上的辐射强度 <span class="math inline">\(I(\vec n)\)</span> 与最大光强之比 <span class="math inline">\(I(\vec n)/I_{\max}=I(\theta,\varphi)/I_{\max}\)</span>。</p>
 <p>书中给了激光发射机的光度学模型和波动学模型，但是没有对激光器进行详细叙述。感觉这是对激光发射的结果进行了建模，而产生激光的过程还需要参考别的书籍。</p>
+<a id="more"></a>
 <h2 id="接收光学系统">接收光学系统</h2>
 <p>对于远距离探测，常采用望远镜加物镜的结构设计或远心成像光学系统。</p>
 <p>光电探测器是指能把光辐射能转换成一种便于测量（电压或电流）的物理量器件。光电流时光电探测器对入射光功率的响应，它的变化也就反映光信号的变化。</p>
@@ -373,7 +374,7 @@ W\approx 0.77\frac{\lambda f}{d},
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="../../../../../http:/c01dkit.com">友链</a>
+      <a class="nav-item-link" href="../../../../../Friends">友链</a>
     </li>
     
   </ul>
@@ -684,7 +685,42 @@ W\approx 0.77\frac{\lambda f}{d},
 
 
     
-  </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            displayMath: [ ['$','$'], ["\\[","\\]"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js"></script>
+
+
+<!-- <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['
+
+</html>,'
+
+</html>], ["\\(","\\)"] ],
+      displayMath: [ ['$','$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js"></script> --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 
 </html>

@@ -80,91 +80,6 @@
     
     
     
-    <article id="post-LaTex/Latex-Tricks" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="../../2020/01/25/LaTex/Latex-Tricks/"
-    >LaTex Tricks</a> 
-</h2>
- 
-
-    </header>
-    
-
-    
-    <div class="article-meta">
-      <a href="../../2020/01/25/LaTex/Latex-Tricks/" class="article-date">
-  <time datetime="2020-01-25T03:21:47.000Z" itemprop="datePublished">2020-01-25</time>
-</a>
-      
-  <div class="article-category">
-    <a class="article-category-link" href="../../categories/LaTex/">LaTex</a>
-  </div>
-
-      
-      
-      
-    </div>
-    
-
-    
-
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-
-      
-      <h1 id="latex-tricks">LaTex Tricks</h1>
-<h4 id="字母上面加东西">字母上面加东西：</h4>
-<ul>
-<li><p>$ x$ : x, $ x$ : x , <span class="math inline">\(\hat x\)</span> : x, <span class="math inline">\(\widehat x\)</span> : x</p></li>
-<li><p><span class="math inline">\(\widetilde {x}, \widetilde{ab}\)</span> : *** {x}, </p></li>
-<li><p><span class="math inline">\(\dot x\)</span> : x, <span class="math inline">\(\ddot x\)</span> : x</p></li>
-<li><p><span class="math inline">\(\vec{x}\)</span> : x</p></li>
-<li><p>东西上写东西 <span class="math inline">\(\overset{a}{bcd}\)</span> ： </p></li>
-</ul>
-<h4 id="数学常用">数学常用：</h4>
-<ul>
-<li><p>$ <em>{1in}$ : </em>{1in}{1in}</p></li>
-<li><p><span class="math inline">\(\because\)</span> -- , <span class="math inline">\(\therefore\)</span> -- </p></li>
-<li><p><span class="math inline">\(\forall\)</span> : , $ $ : </p></li>
-<li><p><span class="math inline">\(\sqrt[n]{abc}\)</span> : </p>
-<p>
-      
-      <a class="article-more-link" href="../../2020/01/25/LaTex/Latex-Tricks/">阅读更多...</a>
-      
-      
-      <!-- reward -->
-      
-    </div>
-    
-    
-      <!-- copyright -->
-      
-    <footer class="article-footer">
-      
-      
-
-    </footer>
-
-  </div>
-
-  
-
-  
-
-  
-  
-  
-
-</article>
-    
     <article id="post-Computer-Science/Deep Learning/Image-Processing学习笔记" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
@@ -749,7 +664,7 @@ J(\theta)=\frac{1}{2}\parallel{\theta^T X-Y}\parallel^2\\
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="../../http:/c01dkit.com">友链</a>
+      <a class="nav-item-link" href="../../Friends">友链</a>
     </li>
     
   </ul>
@@ -1043,7 +958,42 @@ J(\theta)=\frac{1}{2}\parallel{\theta^T X-Y}\parallel^2\\
 
 
     
-  </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            displayMath: [ ['$','$'], ["\\[","\\]"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js"></script>
+
+
+<!-- <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['
+
+</html>,'
+
+</html>], ["\\(","\\)"] ],
+      displayMath: [ ['$','$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js"></script> --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 
 </html>

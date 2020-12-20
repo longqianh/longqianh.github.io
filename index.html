@@ -80,7 +80,7 @@
     
     
     
-    <article id="post-Electronics" class="article article-type-post" itemscope
+    <article id="post-Electronics/Electronics" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
@@ -88,7 +88,7 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="2020/12/11/Electronics/"
+  <a class="article-title" href="2020/12/11/Electronics/Electronics/"
     >Electronics</a> 
 </h2>
  
@@ -98,7 +98,7 @@
 
     
     <div class="article-meta">
-      <a href="2020/12/11/Electronics/" class="article-date">
+      <a href="2020/12/11/Electronics/Electronics/" class="article-date">
   <time datetime="2020-12-11T11:41:32.000Z" itemprop="datePublished">2020-12-11</time>
 </a>
       
@@ -121,35 +121,16 @@
 <p>我想要放弃电，但是我不能。因为他太重要了。</p>
 <h2 id="transistor-三极管">Transistor 三极管</h2>
 <p>三极管是一个非常重要的元件，模电数电经常与他碰面，然而他的原理我直到光电子学讲了半导体物理才明白。</p>
-<p>首先直观地去看三极管，YouTube上有一个非常棒的视频：https://www.youtube.com/watch?v=7ukDKVHnac4</p>
-<p>看完视频基本上可以对三极管有一个宏观和近微观的认识，然后可以看一下知乎的这个回答，了解一下它的微观机理：https://www.zhihu.com/question/34534183/answer/137383173</p>
+<p>首先直观地去看三极管，<a href="https://www.youtube.com/watch?v=7ukDKVHnac4" target="_blank" rel="noopener">YouTube上有一个非常棒的视频</a></p>
+<p>看完视频基本上可以对三极管有一个宏观和近微观的认识，然后可以看一下<a href="https://www.zhihu.com/question/34534183/answer/137383173" target="_blank" rel="noopener">知乎的这个回答</a>，了解一下它的微观机理</p>
 <h4 id="半导体">1 半导体</h4>
 <p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glk6kdauiij30zo0eg191.jpg" alt="image-20201211201747794" style="zoom:50%;" /></p>
 <p>图中圆圈表示空穴，负号表示电子。<span class="math inline">\(E_f\)</span> 为热平衡状态下的费米能级。</p>
 <p>Q：为什么N型半导体的大量电子在价带？</p>
 <p>由于 <span class="math inline">\(E_g\)</span> 小，随着温度升高，电子将会因为热激发作用从价带跃过带隙而进入导带。这些电子可以自由移动，称为 <em>自由载流子</em> 。</p>
-<h4 id="pn结">2 PN结</h4>
-<p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glk6sc8psyj30u018jx6p.jpg" alt="image-20201211202519512" style="zoom:50%;" /></p>
-<p>把这P和N型半导体并在一起（metallurgical contact）,由于扩散作用（上边的电子浓度大，N—&gt;P,下边的空穴浓度大，P—&gt;N）在中间的地方形成了结区，平衡时的内建电场阻止了进一步的扩散。两个半导体的费米能级合到了一起。</p>
-<h4 id="二极管">2.5 二极管</h4>
-<p>歪个楼，这时可以考察一下PN结的二极管性质：在P极加正向偏压U（forward biasing），电子可以被正向偏压吸引克服内建电场的势垒从N区进入P区，进而形成电流。</p>
-<p>另外我们会发现费米能级“撕裂”了，这时P区的每个电子都增加了 <span class="math inline">\(eU\)</span> 的能量，根据费米能级的物理含义（电子拥有 <span class="math inline">\(E_f\)</span> 能量（占据该能级）的概率 为 <span class="math inline">\(1/2\)</span>）可以知道P区的新费米能级为 <span class="math inline">\(E_f’=E_f-eU\)</span>.</p>
-<p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glk74l8c8fj30yj0ikh8w.jpg" alt="image-20201211203721245" style="zoom:50%;" /></p>
-<p>相反，如果加反向偏压，则会把P区的空穴和N区的电子往外赶，使内建电场（PN结厚度）增大，无电流产生，不导通。</p>
-<figure>
-<img src="https://tva1.sinaimg.cn/large/0081Kckwly1glk75mqrayj30ed06agov.jpg" alt="image-20201211203829433" /><figcaption aria-hidden="true">image-20201211203829433</figcaption>
-</figure>
-<h4 id="npn结三极管">3 NPN结：三极管</h4>
-<h5 id="放大的原理">放大的原理</h5>
-<p>就像YouTube视频中说的，NPN中总有一个不导通（cb），另一个导通（eb）的原因是电子借助正向偏压克服了内建电场的势垒。</p>
-<p>然后我们就要问了：基极电流 <span class="math inline">\(I_B\)</span> 起到了什么作用？没有它似乎该导通（be）的还是导通，不导通（cb）的仍旧不导通。</p>
-<p>知乎上的那篇答案说清楚了：基极电流注向中间P区注入了电子，使b和e极之间的势垒降低，从而克服势垒从发射极e进入b的电子指数上升。</p>
-<p>由于基极b的厚度很小，跟着 <span class="math inline">\(I_B\)</span> 回流的电子少，大部分电子加入到了中间的P区，然后从P区进入N区，由于是反向偏压，进入的电子使内建电场不断扩大（知乎答案说的“漂移”），这构成了集电极电流。</p>
-<p>（没想通的一点是 集电极电流的部分 反向偏压 但好像电子是可以通过的</p>
-<p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glk7gaj1wij31260u0kjl.jpg" alt="image-20201211204831143" style="zoom:50%;" /></p>
-<h5 id="饱和">饱和</h5>
-<p>三极管的饱和现在就很好解释了：be间的势垒被减到N区所有电子都可以通过，再通电流 <span class="math inline">\(I_B\)</span>，发射极到集电极的电流 <span class="math inline">\(I_{CE}\)</span> 也不会改变了。</p>
-
+      
+      <a class="article-more-link" href="2020/12/11/Electronics/Electronics/">阅读更多...</a>
+      
       
       <!-- reward -->
       
@@ -364,34 +345,9 @@ ssh -L port:127.0.0.1:port username@ip
       
       <p>FloydHub is a nice place to train and practice deep learning models.</p>
 <p>There are some notes of some command line operation.</p>
-<h2 id="first">First</h2>
-<ul>
-<li>Log in: <code>floyd login</code></li>
-<li>Create a new project with name <code>proj-name</code></li>
-<li>Initialize: <code>floyd init proj-name</code>
-<ul>
-<li>this will start a CLI (command line interface) job</li>
-</ul></li>
-<li>Run: <code>floyd run "python run.py"</code>
-<ul>
-<li>by default, run on cpu ; to specify, use <code>--gpu</code></li>
-</ul></li>
-</ul>
-<h2 id="second">Second</h2>
-<ul>
-<li><p>Employ: <code>--mode serve</code> NEED TO DEEP IN LATER</p></li>
-<li><p>Immediately display logs: add command <code>-f</code> or <code>--follow</code></p></li>
-</ul>
-<h2 id="third">Third</h2>
-<ul>
-<li>View output: <code>floyd output</code>
-<ul>
-<li>this command will execute a web page of Floyd</li>
-</ul></li>
-<li>Info of job: <code>floyd info</code></li>
-<li>Status of jobs: <code>floyd status</code></li>
-</ul>
-
+      
+      <a class="article-more-link" href="2020/11/27/Other%20Things/FloydHub%20Notes/">阅读更多...</a>
+      
       
       <!-- reward -->
       
@@ -681,71 +637,9 @@ ssh -L port:127.0.0.1:port username@ip
 f(\theta,\varphi)=\exp\left[-\frac{r^2}{(z\alpha)^2}\right]=\exp\left[-\frac{\theta^2}{\alpha^2}\right]
 \]</span> 注：方向图函数定义为任意方向 <span class="math inline">\(\vec n\)</span> 上的辐射强度 <span class="math inline">\(I(\vec n)\)</span> 与最大光强之比 <span class="math inline">\(I(\vec n)/I_{\max}=I(\theta,\varphi)/I_{\max}\)</span>。</p>
 <p>书中给了激光发射机的光度学模型和波动学模型，但是没有对激光器进行详细叙述。感觉这是对激光发射的结果进行了建模，而产生激光的过程还需要参考别的书籍。</p>
-<h2 id="接收光学系统">接收光学系统</h2>
-<p>对于远距离探测，常采用望远镜加物镜的结构设计或远心成像光学系统。</p>
-<p>光电探测器是指能把光辐射能转换成一种便于测量（电压或电流）的物理量器件。光电流时光电探测器对入射光功率的响应，它的变化也就反映光信号的变化。</p>
-<p>接收光学系统应由入瞳直径为 <span class="math inline">\(D\)</span>、焦距为 <span class="math inline">\(f\)</span> 到 成像物镜以及光敏面直径 <span class="math inline">\(d\)</span> 的光电探测器组成。</p>
-<h3 id="光学天线">光学天线</h3>
-<p>光学天线的基本功能，就是将激光发射机所发射的激光波束变成激光雷达所需要的照射波束，把激光能量发送到空间，并尽可能多地收集从目标返回地激光能量。光学天线按功能分为发射光学天线和接收光学天线。</p>
-<p>光学天线的设计思路：针对是相干探测还是直接探测激光雷达系统，同时考虑发射光束和接受光束的截面函数、波前相位、偏振态以及光学系统准直度等因素，合理选取、优化设计光学天线与探测器光敏面的几何参数。</p>
-<h3 id="光电探测器传递函数">光电探测器传递函数</h3>
-<p>常见的光电探测器往往是矩形的。假设一个单元探测器的 <em>线度</em> 为 <span class="math inline">\(d\)</span>, 则这个矩形函数的傅立叶变换为 <span class="math inline">\(sinc\)</span> 函数，但愿探测器作为空间滤波器的传递函数为： <span class="math display">\[
-H_{dl}=\operatorname{sinc}(\pi d f).
-\]</span> 如果探测器是面阵的，即含有 <span class="math inline">\(n\times m\)</span> 个单元探测器，每个单元的线度为 <span class="math inline">\((d_x,d_y)\)</span>，单元之间的间距为 <span class="math inline">\((b_x,b_y)\)</span>，重复周期为 <span class="math inline">\((c_x=d_x+b_x,c_y=d_y+b_y)\)</span>,则根据傅立叶变换的位移定理，列阵探测器的传递函数为： <span class="math display">\[
-H_{dnm}=\left(\operatorname{sinc}(\pi d_x f_x)\frac{\sin(\pi c_x n f_x)}{\sin(\pi c_x f_x)}\right)\left(\operatorname{sinc}(\pi d_y f_y)\frac{\sin(\pi c_y m f_y)}{\sin(\pi c_y f_y)}\right).
-\]</span></p>
-<h2 id="微弱光信号探测">微弱光信号探测</h2>
-<h3 id="a-直接探测">A 直接探测</h3>
-<p>信号光 <span class="math inline">\(\to\)</span> 光学天线（光学接收系统) <span class="math inline">\(\to\)</span> 光电探测器 <span class="math inline">\(\to\)</span> 放大器 <span class="math inline">\(\to\;\cdots\)</span></p>
-<ul>
-<li>输出光电流</li>
-</ul>
-<p><span class="math display">\[
-i=\frac{e\eta}{h\nu}P=\frac{e\eta}{2h\nu}\int_S|U(\vec r,t)|^2\text dS\propto |U|^2=I(\vec r,t)
-\]</span></p>
-<ul>
-<li><p>输出电功率</p>
-<p>设光探测器的负载电阻为 <span class="math inline">\(R_L\)</span>. <span class="math display">\[
-P_s=i^2R_L=\left(\frac{e\eta}{h\nu}\right)^2P^2R_L
-\]</span></p></li>
-<li><p>信噪比</p>
-<p>设入射到光电探测器的信号光功率为 <span class="math inline">\(P_s\)</span>, 噪声功率为 <span class="math inline">\(P_n\)</span>, 输出的信号电功率为 <span class="math inline">\(S_p\)</span>, 噪声功率为 <span class="math inline">\(N_p\)</span>, 则 <span class="math display">\[
-S_p+N_p=\left(\frac{e\eta}{h\nu}\right)^2R_L(P_s+P_n)^2=\left(\frac{e\eta}{h\nu}\right)^2R_L(P_s^2+2P_nP_s+P_n^2),
-\]</span></p>
-<p>考虑到信号和噪声的独立性，有 $$ <span class="math display">\[\begin{align}
-S_p&amp;=\left(\frac{e\eta}{h\nu}\right)^2R_LP_s^2\\
-N_p&amp;=\left(\frac{e\eta}{h\nu}\right)^2R_L(2P_sP_n+P_n^2)\\
-
-\end{align}\]</span> <span class="math display">\[
-因此输出信噪比
-\]</span> SNR_D==, $$</p>
-<p>直接探测的输出信噪比在 <span class="math inline">\(P_s/P_n\gg 1\)</span> 时 <span class="math display">\[
-SNR_D\approx\frac{P_s}{2P_n}.
-\]</span> 这从理论上漂亮地证明了直接探测方法不能改善信噪比，且经过光电转换后信噪比损失了3dB。</p></li>
-</ul>
-<h3 id="b-外差探测相干探测">B 外差探测/相干探测</h3>
-<p>加入了本振激光器，光探测器输出的中频功率正比于信号光和本振光平均功率的乘积，因而只要本振光功率足够大，对极微弱光信号仍能得到可观的中频输出！</p>
-<p>外差探测引入了相干光，利用干涉获得有关光信号的全部信息，这也是一种全息吧！</p>
-<h4 id="本振光数学模型">本振光数学模型</h4>
-<p>本机振荡激光器输出的高斯光束由于是短距离传输，其波面有两种情况：一是高斯光束经过精心设计的成像物镜后，束腰落在探测器光敏面上，高斯光束束腰的波阵面表现为平面波的性质，且控制高斯光束束腰半径 <span class="math inline">\(W_0\gg R_D\)</span>, 这时本振光截面函数相对于探测器光敏面而言可认为是均匀光束： <span class="math display">\[
-U_{LOU}(\vec r)=Ae^{-j\vec k\cdot\vec r}.
-\]</span> 二是高斯光束的束腰没有聚焦在光电探测器光敏面，这时本振光复振幅分布的数学模型为: <span class="math display">\[
-U_{LOG}(\vec r)=\frac{A}{W(z)}\exp\left[-\frac{\rho^2}{W^2(z)}\right]\exp\left[-jkz-jk\frac{\rho^2}{2R(z)}+\phi(z)\right].
-\]</span></p>
-<h4 id="信号光数学模型">信号光数学模型</h4>
-<p>主振激光器发射的高斯光束，由于要经过长距离的传输，并被探测目标反射或后向散射形成信号光，信号光回波的光斑将变得非常大（达到几米的数量级），光学接受天线的有效孔径却很小，能被光学天线接受的部分信号光近似为平面波。因此，位于光学天线系统焦平面处探测器光敏面的信号光的复振幅分布对于圆对称光学系统用光束光学天线系统的艾里斑图样。信号光的复振幅数学模型为： <span class="math display">\[
-U_{SA}(\vec r)=A\frac{2J_1(\chi)}{\chi}e^{-j\vec k\cdot \vec r}
-\]</span> 其中，<span class="math inline">\(\chi=\pi r/\lambda F\)</span> 为探测器光学参数，F为接收光学天线系统的F数。（注意，根据菲涅尔衍射原理，还应存在一个二次位相因子，由于激光雷达的作用距离R远大于接收光学系统的孔径d，可将此忽略）</p>
-<h4 id="光学天线与探测器最佳匹配关系">光学天线与探测器最佳匹配关系</h4>
-<p>考虑空间失配角情况下使系统外差效率 <span class="math inline">\(\eta_H\)</span> 最大，得到高斯光束模场半径最佳值约为 <span class="math display">\[
-W\approx 0.77\frac{\lambda f}{d},
-\]</span> 上式为高斯光束艾里斑相干激光雷达光学天线与探测器最佳匹配关系。</p>
-<h2 id="激光雷达方程">激光雷达方程</h2>
-<p>激光雷达系统设计的一个基本问题是确定达到接收机孔径的光强总通量，进而确定入射到探测器光敏面元件上的总的光功率。激光雷达方程通常用来确定激光雷达在特定条件下对某个特殊目标的接收功率。</p>
-<p>书中只给了一些理论推导，莫得一个应用实例，感觉有道理但不太直观。就不抄了。</p>
-<h3 id="参考文献">参考文献</h3>
-<p>[1] 王春晖, 陈德应. 激光雷达系统设计[J].</p>
-
+      
+      <a class="article-more-link" href="2020/11/06/Optoelectronics%20/LADAR/">阅读更多...</a>
+      
       
       <!-- reward -->
       
@@ -843,362 +737,9 @@ i.e. \quad y_{m+2}&amp;=2by_{m+1}-F^2y_m\\
 y_m=y_0F^me^{\pm im\varphi}
 \]</span> 其中 <span class="math inline">\(\varphi\)</span> 满足 <span class="math inline">\(b=F\cos\varphi\)</span>.</p>
 <p>可见，传递矩阵的 <span class="math inline">\(\det\)</span> 带来幅值增益，其 <span class="math inline">\(\operatorname {trace}\)</span> 带来相位增益。</p>
-<h3 id="谐振腔稳定条件">谐振腔稳定条件</h3>
-<p>可以证明（？） <span class="math inline">\(\det(M)=n_i/n_f\)</span>, 其中 <span class="math inline">\(n_i,n_f\)</span> 分别为系统基本单元初始和最后一部分的折射率。</p>
-<p>稳定需要传播的光束不会溢出光学系统，因而需要 <span class="math inline">\(\varphi=\arccos(b)\)</span> 为实数： <span class="math display">\[
-|b|\le1\iff\frac{|A+D|}{2}\le 1. \label{stable-cond0}
-\]</span> 对于谐振腔系统：自由空间 <span class="math inline">\(\to\)</span> 透镜2 <span class="math inline">\(\to\)</span> 自由空间 <span class="math inline">\(\to\)</span> 透镜1的周期组合，可得其传递矩阵 <span class="math display">\[
-M=M_{1}M_dM_2M_d=\begin{pmatrix}
-1-d/f_1 &amp; \\
-&amp; -d/f_2+(1-d/f_2)(1-d/f_1)
-\end{pmatrix},
-\]</span> 根据稳定条件 <span class="math inline">\((\ref{stable-cond0})\)</span> ,有： <span class="math display">\[
-\begin{align}
-&amp;0\le1-d/f_1-d/f_2+d^2/2f_1f_2= 2(1-d/2f_1)(1-d/2f_2)-1\le 1\notag
-\\
-\iff &amp; 0\le \left(1-\frac{d}{2f_1}\right)\left(1-\frac{d}{2f_2}\right)\le 1
-.
-\tag{$\star$}
-\label{stable-cond}
-\end{align}
-\]</span></p>
-<p>(<span class="math inline">\(\ref{stable-cond}\)</span>) 就是谐振腔稳定条件。</p>
-<p>对于球面谐振腔，传递矩阵中的 <span class="math inline">\(\displaystyle -\frac{1}{f}\)</span> 换成了 <span class="math inline">\(\displaystyle\frac{2}{R}\)</span>，因而稳定条件变为： <span class="math display">\[
-0\le \left(1+\frac{d}{R_1}\right)\left(1+\frac{d}{R_2}\right)\le 1.
-\]</span></p>
-<h2 id="gaussian-beam-高斯光束">Gaussian Beam 「高斯光束」</h2>
-<h3 id="高斯光束的推导">高斯光束的推导</h3>
-<p>​ 高斯光束是傍轴亥姆霍兹方程的一个试探解。</p>
-<h3 id="高斯光束的性质">高斯光束的性质</h3>
-<p>波函数 <span class="math display">\[
-U(\vec r)=\frac{A_1}{iz_0}\frac{W_0}{W(z)}\exp\left[-\frac{\rho^2}{W^2(z)}\right]\exp\left[-ikz-ik\frac{\rho^2}{2R(z)}+i\zeta(z)\right]
-\]</span></p>
-<p>光强 <span class="math display">\[
-I(\rho,z)=|U|^2=I_0\left[\frac{W_0}{W(z)}\right]^2\exp\left[-\frac{2\rho^2}{W^2(z)}\right]
-\]</span></p>
-<p>功率 <span class="math display">\[
-P=\int_0^\infty I(\rho,z)2\pi\rho\text d\rho=\frac{1}{2}\pi W_0^2 I_0
-\]</span></p>
-<h3 id="高斯光束的传播">高斯光束的传播</h3>
-<h4 id="abcd定律">ABCD定律</h4>
-<p>高斯光束经过一个具有ABCD矩阵的光学系统后的 <span class="math inline">\(q\)</span> 参数： <span class="math display">\[
-q_2=\frac{Aq_1+B}{Cq_1+D},
-\]</span> 其中 <span class="math inline">\(q\)</span> 满足 <span class="math display">\[
-\frac{1}{q(z)}=\frac{1}{R(z)}-j\frac{\lambda}{\pi W^2(z)}.
-\]</span></p>
-<h2 id="photon-optics-光子光学">Photon Optics 「光子光学」</h2>
-<p>Category :</p>
-<ul>
-<li>Single Photon’s Property</li>
-<li>Photon Stream</li>
-</ul>
-<h3 id="photon-interference-单光子干涉">1. Photon Interference 「单光子干涉」</h3>
-<p>If a histogram of the locations of the detected photon is constructed by repeating the experiment many times, the classical interference pattern obtained by carrying out the experiment only once with a strong beam of light emerges.</p>
-<p><strong>单光子干涉的统计规律和经典光波干涉的现象一致。</strong>干涉现象应该是单光子干涉的统计规律的显现，或者说其本质是单光子干涉。</p>
-<p>单光子是可以干涉的，这来自光子本身的性质。光子的性质由一个概率波 <span class="math inline">\(\psi\)</span> 描述，当处于两条缝可以选择的叠加态时，<span class="math inline">\(|\psi|^2\)</span> 就会出现干涉项。</p>
-<p>我感觉这很数学，很妙，物理学家从现象中挖出了光子的本质。光子不得不是概率波。</p>
-<p>参考：</p>
-<ul>
-<li><a href="https://www.zhihu.com/question/40343270/answer/111817926" target="_blank" rel="noopener">如何解释单光子干涉</a></li>
-<li><a href="https://www.zhihu.com/question/61933450/answer/1225803587" target="_blank" rel="noopener">为何单个电子通过双缝会发生干涉？</a></li>
-</ul>
-<h3 id="photon-stream-光子流">2. Photon Stream 「光子流」</h3>
-<p>光子流中光子的到达是随机的，量子力学成功地找到了这种随机性的来源：不确定性原理。</p>
-<p>接下来要对这种随机性进行建模，涉及一些随机过程和数理统计。</p>
-<h4 id="描述光子流">描述光子流</h4>
-<ul>
-<li>平均光子通量密度 <span class="math inline">\(\phi(\vec r)=\displaystyle \frac{I(\vec r)}{h\bar\nu}\)</span> ：单位时间单位面积的平均光子数</li>
-<li>平均光子通量 <span class="math inline">\(\Phi(\vec r)=\int \phi(\vec r)\ \text{d}A=\displaystyle\frac{P}{h\bar\nu}\)</span> ：单位时间的平均光子数</li>
-<li>平均光子数 <span class="math inline">\(\bar n=\int \Phi\ \text{d}t=\displaystyle \frac{E}{h\bar\nu}\)</span></li>
-</ul>
-<p>在频域，用对应的谱密度去描述。</p>
-<h4 id="光子流中的到达光子数">光子流中的到达光子数</h4>
-<h5 id="coherent-light">（1）Coherent Light</h5>
-<p>相干光有恒定的功率。因此有确定的平均光子数，这也是其服从的泊松分布的强度。</p>
-<p>为什么光子数分布 <span class="math inline">\(p(n)\)</span> 服从泊松分布？</p>
-<p>对于一段时间 <span class="math inline">\(T\)</span>, 将其等分为非常多的份数 <span class="math inline">\(N\)</span>, 使得每一份时间 <span class="math inline">\(T/N\)</span> 里最多出现一个光子。出现一个光子的概率应为 <span class="math inline">\(\bar n/N\)</span>，整个时间段 <span class="math inline">\(T\)</span> 内出现 <span class="math inline">\(n\)</span> 个光子的概率就服从二项分布： <span class="math display">\[
-p(n)=C_N^n(\bar n/N)^n(1-\bar n/N)^{N-n}
-\]</span> <span class="math inline">\(N\to \infty\)</span>, 二项分布成为 Poisson 分布： <span class="math display">\[
-p(n)=\frac{\bar n^n e^{-\bar n}}{n!}
-\]</span></p>
-<h5 id="thermal-light">（2）Thermal Light</h5>
-<p>对于热光，要考虑热平衡条件下的分布—玻尔兹曼分布。</p>
-<p><em>Boltzmann Distribution</em>：gives the probability that a system will be in a certain state as a function of that state's energy.</p>
-<p>（推导）The Boltzmann distribution is the distribution that maximizes the entropy <span class="math display">\[
-H(p_1,p_2,\dots,p_M)=-\sum_{i=1}^Mp_i\log_2 p_i
-\]</span> subject to the constraint that <span class="math inline">\(\sum p_i\varepsilon_i\)</span> equals a particular mean energy value.</p>
-<p>热平衡条件下的熵应为最大，由此导出玻尔兹曼分布： <span class="math display">\[
-p_i\propto e^{-\varepsilon_i/kT}
-\]</span> 即处于粒子状态 <span class="math inline">\(i\)</span> 的概率与状态 <span class="math inline">\(i\)</span> 的能量 <span class="math inline">\(\varepsilon_i\)</span> 的关系。</p>
-<p>对于光子流，其光子数的分布为： <span class="math display">\[
-p(n)\propto \left[\exp\left(-\frac{nh\nu}{kT}\right)\right]^n\label{photon-dis-boltz}
-\]</span> 由 <span class="math inline">\(\bar n=\sum np(n)\)</span> 得到 <span class="math display">\[
-\bar n=\frac{1}{\exp(h\nu/kT)-1}
-\]</span> 将其带入 (<span class="math inline">\(\ref{photon-dis-boltz}\)</span>)，得到 Bose-Einstein 分布： <span class="math display">\[
-p(n)=\frac{1}{\bar n+1}\left(\frac{\bar n}{\bar n+1}\right)^n.
-\]</span></p>
-<p>作为一个应用，热平衡时（求解速率方程时的热平衡条件）： <span class="math display">\[
-\frac{N_2}{N_1}=\exp\left(-\frac{E_2-E_1}{k_B T}\right)=\exp\left(-\frac{h\nu}{k_B T}\right).
-\]</span></p>
-<h5 id="坑待填">（3）坑待填</h5>
-<ul>
-<li>doubly stochastic Poisson process (DSPP)</li>
-<li>quantum states of light
-<ul>
-<li>Two-Photon Optics</li>
-</ul></li>
-</ul>
-<h2 id="light-and-matter">Light and Matter</h2>
-<h3 id="跃迁与辐射">1. 跃迁与辐射</h3>
-<p>需要对原子的辐射、跃迁进行完整的建模。</p>
-<p>接下来进行宏观的分析。</p>
-<ul>
-<li>自发辐射寿命</li>
-</ul>
-<p>设单位时间内自发辐射概率密度为 <span class="math inline">\(\operatorname P_{sp}\)</span>，即 <span class="math inline">\(1s\)</span> 辐射 <span class="math inline">\(\operatorname{P}_{sp}\)</span> 个光子，因此光子的自发辐射寿命 <span class="math display">\[
-t_{sp}=\frac{1}{\operatorname{P}_{sp}}
-\]</span> 即每个光子辐射出来“平均”需要多少 <span class="math inline">\(s\)</span>。</p>
-<p>事实上，<span class="math inline">\(\text dN/\text dt=-Np_{sp}\implies N=e^{-p_{sp}t}\)</span>, <span class="math inline">\(t_{sp}\)</span> 为粒子数减小为原来 <span class="math inline">\(1/e\)</span> 时的时间间隔。</p>
-<ul>
-<li>跃迁截面</li>
-</ul>
-<p>跃迁截面可以看作有效作用面积： <span class="math display">\[
-\sigma(\nu)=Sg(\nu),\quad \int_0^\infty g(\nu)\text d\nu=1
-\]</span> <span class="math inline">\(S\)</span> 为相互作用强度，<span class="math inline">\(g(\nu)\)</span> 为线型函数。</p>
-<p>对洛伦兹线形，有 <span class="math inline">\(g(\nu_0)=2/(\pi\Delta \nu)\)</span>, <span class="math inline">\(\Delta\nu=1/2\pi t_{sp}\)</span></p>
-<ul>
-<li>辐射概率密度</li>
-</ul>
-<p>对自发辐射、吸收和受激辐射<strong>（怎么来的？）</strong>： <span class="math display">\[
-\begin{align}
-\operatorname p_{sp}&amp;=\frac{c}{V}\sigma(\nu)\\
-\operatorname P_{ab}&amp;=\bar n\frac{c}{V}\sigma(\nu)\\
-\operatorname P_{st}&amp;=\bar n\frac{c}{V}\sigma(\nu)
-\end{align}
-\]</span> 其中 <span class="math inline">\(\bar n\)</span> 为相互作用过程中的(平均)光子数。</p>
-<p>一般光子自发辐射寿命可测，由此可去算 <span class="math inline">\(S\)</span>： $$ <span class="math display">\[\begin{align}
-\operatorname P_{sp}&amp;=\int_0^\infty \left[\frac{c}{V}\sigma(\nu)\right]\left[VM(\nu)\right]\text d \nu\approx M(\nu_0)cS\\
-\implies &amp; S=\frac{\lambda^2}{8\pi t_{sp}}
-
-\end{align}\]</span> $$</p>
-<ul>
-<li><p>受激辐射概率密度</p>
-<p>用 <span class="math inline">\(W_i\)</span> 表示吸收概率密度，也等于受激辐射概率密度，<span class="math inline">\(W_i=\bar n/t_{sp}\)</span>, 概率密度的单位为 <span class="math inline">\(s^{-1}\)</span>。</p>
-<p>对于单频光：<span class="math inline">\(n=\phi V/c\)</span> <span class="math display">\[
-W_i=\operatorname P_{st}=P_{ab}=\phi \cdot \sigma(\nu)
-\]</span> 对于宽频光：需知道其光谱能量密度 <span class="math inline">\(\rho(\nu)\)</span> <span class="math display">\[
-\begin{align}
-W_i&amp;=\int_0^\infty n(\nu)\operatorname P_{st}(\nu)\text d\nu=\int_0^\infty \left[\rho(\nu)V\text d \nu\right/h\nu]\left[\frac{c}{V}\sigma(nu)\right]\\
-&amp;\approx \frac{\bar n}{t_{sp}}
-\end{align}
-\]</span> 其中 <span class="math inline">\(\bar n=\displaystyle\frac{\lambda_0^3}{8\pi h}\rho(\nu_0)=\frac{cS\operatorname P_{sp}\rho(\nu_0)}{h\nu_0}\)</span> 代表每个模式的平均光子数。</p></li>
-<li><p>爱因斯坦系数</p>
-<p><span class="math display">\[
-\begin{align}
-P_{sp}&amp;=\mathbb{A}\\
-W_i&amp;=\mathbb{B} \rho(\nu_0)
-\end{align}
-\]</span> 其中 <span class="math inline">\(\rho(\nu)\)</span> 为光谱能量密度，<span class="math inline">\(\mathbb{A},\mathbb{B}\)</span> 为爱因斯坦系数，有： <span class="math display">\[
-\mathbb{A}=\frac{1}{t_{sp}},\mathbb{B}=\frac{\lambda^3}{8\pi ht_{sp}}.
-\]</span></p></li>
-</ul>
-<h3 id="速率方程">2. 速率方程</h3>
-<p>我们需要描述泵浦作用下原子内部的跃迁情况，这相当于原子辐射和跃迁的微观分析。</p>
-<p>设泵源使得的由下能级跃迁到能级2的速率为 <span class="math inline">\(R_2\)</span>,（单位时间单位体积的粒子数） 从能级1跃迁到其他能级的速率为 <span class="math inline">\(R_1\)</span>。</p>
-<p>由跃迁速率和能级寿命的反比关系，能级寿命 <span class="math inline">\(\tau_2^{-1}=\tau_{21}^{-1}+\tau_{20}^{-1}\)</span>, <span class="math inline">\(\tau_{21}^{-1}=\tau_{sp}^{-1}+\tau_{nr}^{-1}\)</span>, <span class="math inline">\(\tau_{nr}\)</span> 为非辐射跃迁成分。</p>
-<p>不考虑辐射时，有： <span class="math display">\[
-\begin{align}
-\frac{\text dN_2}{\text dt}&amp;=R_2-\frac{N_2}{\tau_2}\\
-\frac{\text dN_1}{\text d t}&amp;=-R_1-\frac{N_1}{\tau_1}+\frac{N_2}{\tau_{21}}
-\end{align}
-\]</span> 稳态条件下（ <span class="math inline">\(\text dN/\text d t=0\)</span> ）解得无辐射时稳态粒子数差 <span class="math display">\[
-N_0=R_2\tau_2(1-\frac{\tau_1}{\tau_{21}})+R_1\tau_1
-\]</span></p>
-<p>考虑辐射时： <span class="math display">\[
-\begin{aligned}
-\frac{\text dN_2}{\text dt}&amp;=R_2-\frac{N_2}{\tau_2}+N_1W_i-N_2W_i\\
-\frac{\text dN_1}{\text d t}&amp;=-R_1-\frac{N_1}{\tau_1}+\frac{N_2}{\tau_{21}}-N_1W_i+N_2W_i
-\end{aligned}
-\]</span> 稳态条件下解得： <span class="math display">\[
-N=\frac{N_0}{1+\tau_sW_i} \label{sat}
-\]</span> 这就意味着随着<strong>辐射变强</strong>（增加输入光子流密度，“用光直接泵浦”），<span class="math inline">\(W_i\)</span> 增大，反转粒子数出现饱和。其中 <span class="math inline">\(\tau_s=\tau_2+\tau_1(1-\displaystyle\frac{\tau_2}{\tau_{21}})\)</span> 。</p>
-<p>对于四能级泵浦机制，外部的能量源以速率 <span class="math inline">\(R\)</span> 将原子从能级0泵浦到能级3，有以下假设：</p>
-<ul>
-<li><p>能级1和能级3是短寿命的 <span class="math inline">\(N_1\approx N_3\approx 0\)</span></p></li>
-<li><p>能级3到能级2的衰减非常快 <span class="math inline">\(R_2=R\)</span></p></li>
-<li><p>能级1没有原子泵浦进入和流出 <span class="math inline">\(R_1=0\)</span></p></li>
-<li><p>能级2和能级1之间的 <em>非辐射跃迁</em> 一般可以忽略 <span class="math inline">\(\tau_{20}\gg t_{sp}\gg \tau_1 \implies \tau_s\approx t_{sp}\)</span></p></li>
-</ul>
-<p>三能及泵浦机制抽去了四能级机制中基态能级和长寿命能级2度中间级，它有以下假设：</p>
-<ul>
-<li>3—1衰减很慢，3—2衰减很快 <span class="math inline">\(\tau_{32}\ll \tau_{31}\)</span> <span class="math inline">\(\implies \tau_2=\tau_{21},\tau_1=\infty\)</span></li>
-<li>能级3寿命很短 <span class="math inline">\(N_a=N_1+N_2\)</span></li>
-<li>能级2和能级1之间的非辐射跃迁可忽略 <span class="math inline">\(t_{sp}\ll t_{nr}\)</span> （速率很慢）</li>
-</ul>
-<p>由此重新求解速率方程，得到 <span class="math inline">\(\tau_s\approx 2t_{sp}\)</span> .</p>
-<h4 id="光子数密度的速率方程">光子数密度的速率方程</h4>
-<p><span class="math display">\[
-\frac{\text d n}{\text d t}=-\frac{n}{\tau_p}+NW_i
-\]</span></p>
-<p>注意 <span class="math inline">\(NW_i=N_2W_i-N_1W_i=N_2P_{st}-N_1P_{ab}\)</span> 是由二能级的受激辐射（原子接收光子再双倍产生光子）和一能级的吸收（低能级原子接收光子）组成的。</p>
-<h2 id="laser-theory-激光器机理">Laser Theory 「激光器机理」</h2>
-<p>激光泵浦提供了一个初始反转粒子数 <span class="math inline">\(N_0\)</span>, 由泵浦速率 <span class="math inline">\(R\)</span> 和相关光子能级寿命计算得到。</p>
-<p>这个初始反转粒子数如果高于阈值<span class="math inline">\(N_t\)</span>, 有 <span class="math inline">\(\gamma_0=N_0\sigma&gt;\alpha_r=N_t\sigma\)</span> ，激光开始振荡，腔内光子流密度不断增加（增加原因：受激辐射大？）。</p>
-<p>光子流密度增加过程中，光子原子相互作用会消耗反转粒子数 <span class="math inline">\(N\)</span>，腔内增益系数 <span class="math inline">\(\gamma=N\sigma\)</span> 随着 <span class="math inline">\(N\)</span> 的消耗而逐渐趋于饱和，这个过程中腔内光子流密度不断增加但增加速率逐渐降低。</p>
-<p>最后增益系数钳位到损耗吸数，激光器进入稳态，腔内光子流密度达到最大值，反转粒子数降低到稳态值 <span class="math inline">\(N_t\)</span>。</p>
-<h3 id="增益饱和">1. 增益饱和</h3>
-<ul>
-<li>增益系数</li>
-</ul>
-<p>单位时间光子数净增量（只有受激辐射才会贡献净增量，因而只需要算 <span class="math inline">\(N\cdot W_i\)</span>）： $$ <span class="math display">\[\begin{align}
-\text d\phi&amp;=(N_2-N_1)W_i\cdot \text dz=NW_i\text dz\\
-\implies \frac{\text d\phi(z)}{\text d z}&amp;=NW_i=N\phi(z)\sigma(\nu):=\gamma(\nu)\phi(z)\\
-\phi(z)&amp;=\phi(0)e^{\gamma(\nu)z}, I(z)=I(0)e^{\gamma(\nu)z}
-
-\end{align}\]</span> <span class="math display">\[
-由此，激光介质的增益系数
-\]</span> ()=N() $$</p>
-<ul>
-<li>增益饱和</li>
-</ul>
-<p>小信号增益系数 <span class="math display">\[
-\gamma_0(\nu)=N_0\sigma(\nu)=N_0\frac{\lambda^2}{8\pi t_{sp}}g(\nu)
-\]</span> 由反转粒子数 <span class="math inline">\(N\)</span> 存在饱和 (<span class="math inline">\(\ref{sat}\)</span>) 以及跃迁截面的不变性，有：</p>
-<p>饱和放大增益系数 <span class="math display">\[
-\gamma(\nu)=\frac{\gamma_0(\nu)}{1+\phi/\phi_s}
-\]</span></p>
-<p>其中饱和光子流密度 <span class="math display">\[
-\phi_s=\frac{1}{\tau_s\sigma(\nu)}
-\]</span></p>
-<p>在四能级系统中 <span class="math inline">\(\tau_s\approx t_{sp}\)</span>, 三能级系统中 <span class="math inline">\(\tau_s\approx 2t_{sp}\)</span>。增益饱和本质上是光子与介质作用耗空反转粒子数的结果。</p>
-<p>由于 <span class="math inline">\(I=h\nu\phi\)</span>, 有 <span class="math display">\[
-\gamma(\nu)=\frac{\gamma_0(\nu)}{1+I/I_s}.
-\]</span></p>
-<ul>
-<li><p>总增益</p>
-<p>通过求解 <span class="math display">\[
-\frac{\text d\phi}{\text d z}=\frac{\gamma_0\phi}{1+\phi/\phi_s}
-\]</span> 可以得到输出光子流密度 <span class="math inline">\(\phi(d)\)</span> 与输入光子流密度 <span class="math inline">\(\phi(0)\)</span> 的关系。</p>
-<p>在确定增益系数 <span class="math inline">\(\gamma\)</span> 后，由 <span class="math display">\[
-G=e^{(\gamma-\alpha_r) d}
-\]</span> 得到总增益。如果是宽频光入射，则需对频率进行积分： <span class="math display">\[
-G=\frac{1}{2\Delta \nu}\int_{\nu_0-\Delta \nu}^{\nu_0+\Delta\nu}e^{[\gamma(\nu)-\alpha_r]d}\text d \nu
-\]</span></p></li>
-<li><p>相移</p>
-<p>（不明白） <span class="math display">\[
-H(\nu)=\frac{1}{2}\gamma(\nu)-i\varphi(\nu)
-\]</span> 放大器系统传递函数的实部和虚部满足希尔伯特变换的关系，由此推出 <span class="math display">\[
-\phi(\nu)=\frac{\nu-\nu_0}{\Delta\nu}\gamma(\nu)
-\]</span></p></li>
-</ul>
-<h3 id="反馈与损耗">2. 反馈与损耗</h3>
-<p>首先描述一个光学谐振腔，有模式间隔、细度、光谱半宽度、腔内光子寿命、品质因子。</p>
-<p>对于一个光学谐振腔，腔内光子寿命 <span class="math display">\[
-\tau_p=\frac{1}{\alpha_r c}
-\]</span> 其中 <span class="math inline">\(\alpha_r\)</span> 为光学谐振腔的总衰减系数： <span class="math display">\[
-\begin{align}
-\alpha_r&amp;=\alpha_s+\alpha_{m1}+\alpha_{m2}
-\\
-&amp;=\alpha_s+\frac{1}{2d}\ln\frac{1}{R_1}+\frac{1}{2d}\ln\frac{1}{R_2}
-\end{align}
-\]</span> 其中 <span class="math inline">\(\alpha_s\)</span> 为分布是损耗的衰减系数，光沿谐振腔来回一周时有： <span class="math display">\[
-\phi(z+2d)=\phi(z)e^{-\alpha_r2d}=\phi(0)R_1R_2e^{-\alpha_s2d}
-\]</span></p>
-<h3 id="激光振荡条件">3. 激光振荡条件</h3>
-<ul>
-<li>增益条件：</li>
-</ul>
-<p>激光振荡的 <em>启动</em> 必须满足小信号增益大于损耗系数： $$ <span class="math display">\[\begin{align}
-&amp;\gamma_0(\nu)&gt;\alpha_r\\
-\implies &amp;N_0&gt;\frac{\alpha_r}{\sigma(\nu)}:=N_t
-
-\end{align}\]</span> $$</p>
-<p>其中： <span class="math display">\[
-N_t=\frac{\alpha_r}{\sigma(\nu)}
-\]</span></p>
-<p>为阈值反转粒子数差，决定了激光振荡能够启动的最小泵浦速率 <span class="math inline">\(R_t\)</span>。</p>
-<ul>
-<li>位相条件： <span class="math display">\[
-2kd+2\phi(\nu)d=2\pi q,\quad q=1,2,\dots
-\]</span> 可得冷腔频率 <span class="math inline">\(\nu_q\)</span> 被拉向中心频率 <span class="math inline">\(\nu_0\)</span>： <span class="math display">\[
-\nu=\nu_q-\frac{c}{2\pi}\frac{\nu-\nu_0}{\Delta \nu}\gamma(\nu)
-\]</span></li>
-</ul>
-<h3 id="激光输出特性">4. 激光输出特性</h3>
-<h4 id="稳态情况">稳态情况</h4>
-<p>激光振荡启动后，随着反转粒子数的耗空，将出现增益饱和，光子流密度停止增长，激光振荡由此达到稳态。</p>
-<p>根据 <span class="math display">\[
-\frac{\gamma_0(\nu)}{1+\phi/\phi_s}=\alpha_r
-\]</span> 可以确定饱和时<strong>腔内的光子流密度</strong>: <span class="math display">\[
-\phi=\begin{cases}\displaystyle\phi_s(\nu)\left[\frac{\gamma_0(\nu)}{\alpha_r}-1\right],&amp;&amp; \gamma_0(\nu)&gt;\alpha_r\\
-0,&amp;&amp;\gamma_0(\nu)\le\alpha_r
-\end{cases}
-\]</span> 或 <span class="math display">\[
-\phi=\begin{cases}\displaystyle\phi_s(\nu)\left[\frac{N_0}{N_t}-1\right],&amp;&amp; N0&gt;N_t\\
-0,&amp;&amp;N_0\le N_t
-\end{cases}
-\]</span> 注意小信号增益系数 <span class="math inline">\(\gamma_0(\nu)=N_0\sigma(\nu)\)</span>, 而不是 <span class="math inline">\(N\sigma(\nu)\)</span>, 这是因为 <span class="math inline">\(\gamma_0\)</span> 是不考虑饱和情况时的增益系数，对应着无辐射时的粒子数差 <span class="math inline">\(N_0\)</span> ，考虑辐射时的粒子数差 <span class="math inline">\(N\)</span> 将出现饱和。</p>
-<p>内部的光子数密度为： <span class="math display">\[
-n=\frac{\phi}{c}.
-\]</span> 稳态情况下总的光子密度损失率（由 <span class="math inline">\(\tau_p\)</span> 造成）等于超额的泵浦速率 <span class="math inline">\(R-R_t\)</span>: <span class="math display">\[
-\frac{n}{\tau_p}=\frac{N_0-N_t}{\tau_s}\approx R-\frac{N_t}{t_{sp}}:=R-R_t
-\]</span></p>
-<h4 id="输出情况">输出情况</h4>
-<ul>
-<li>输出光子流密度为</li>
-</ul>
-<p><span class="math display">\[
-\phi_0=\frac{T\phi}{2}
-\]</span></p>
-<ul>
-<li>激光输出强度为</li>
-</ul>
-<p><span class="math display">\[
-I_0=h\nu\cdot\phi_0
-\]</span></p>
-<ul>
-<li>激光输出功率为</li>
-</ul>
-<p><span class="math display">\[
-P=I_0A
-\]</span></p>
-<p><span class="math inline">\(A\)</span> 为激光束到截面。</p>
-<p>需要指出的一点是，输出光子流密度可以优化（存在极大值），存在一个最佳透射率 <span class="math inline">\(T\)</span> 使激光的输出强度（～输出光子流密度）最大。</p>
-<h3 id="选频">5. 选频</h3>
-<p>如果在腔内用F-P标准具进行选频，则需要： <span class="math display">\[
-\begin{align}
-\nu_F&#39;&amp;\ge B\\
-\delta \nu&#39;&amp;\ge\nu_F
-\end{align}
-\]</span> 其中 <span class="math inline">\(B\)</span> 为增益系数等于损耗系数所确定的带宽，<span class="math inline">\(\nu_F’,\delta\nu’\)</span> 均为 F-P 标准具的特性参数。</p>
-<p>另外，标准具放在腔内显然较好，因为放在腔外会损失掉未选中频率的能量。</p>
-<h3 id="调q激光器">6. 调Q激光器</h3>
-<h3 id="关于锁模">7. 关于锁模</h3>
-<p>多模输出的光中可分解出多个频率分量，即多种模式。这些模式的光相位不同，非常杂乱，叠加输出的结果是得到一个均值强度的光。这给人一种浪费的感觉，锁模技术是将这些模式的光相位锁成一致，进而使之干涉增强。这样得到的激光将是一个序列脉冲，更加纯净，强度和频率也都非常可以。</p>
-<p>经过干涉叠加的计算（留坑），锁模脉冲序列的时间间隔 <span class="math display">\[
-T_F=\frac{2d}{c},
-\]</span> 脉冲宽度（半高全宽） <span class="math display">\[
-\tau_{pulse}=\frac{T_F}{M},
-\]</span> 平均强度和峰值强度 <span class="math display">\[
-\begin{align}
-\bar I&amp;=M|A|^2,\\
-I_p&amp;=M^2|A|^2=M\bar I.
-\end{align}
-\]</span></p>
-<p>班级毅行</p>
-<p>光强～透射率 看到的光越强，透射率越大嘛！</p>
-<p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gkhvtpltboj316m06u10e.jpg" alt="image-20201108171454948" style="zoom:33%;" /></p>
-<h2 id="discussionquestions">discussion&amp;questions</h2>
-<ul>
-<li>烧孔？</li>
-</ul>
-<p><span class="math display">\[
-\gamma_0-\gamma_s=\gamma_0-\frac{\gamma_0}{1+\phi/\phi_s}
-\]</span></p>
-<ul>
-<li>5.7 如果激光被泵浦了，但是泵浦强度不足以产生激光振荡</li>
-</ul>
-
+      
+      <a class="article-more-link" href="2020/10/23/Optoelectronics%20/%E5%85%89%E7%94%B5%E5%AD%90%E5%AD%A6%E7%AC%94%E8%AE%B0/">阅读更多...</a>
+      
       
       <!-- reward -->
       
@@ -1421,7 +962,7 @@ I_p&amp;=M^2|A|^2=M\bar I.
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="http://c01dkit.com/" target="_blank" rel="noopener">友链</a>
+      <a class="nav-item-link" href="/Friends">友链</a>
     </li>
     
   </ul>
@@ -1715,7 +1256,42 @@ I_p&amp;=M^2|A|^2=M\bar I.
 
 
     
-  </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            displayMath: [ ['$','$'], ["\\[","\\]"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js"></script>
+
+
+<!-- <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['
+
+</html>,'
+
+</html>], ["\\(","\\)"] ],
+      displayMath: [ ['$','$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js"></script> --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 
 </html>

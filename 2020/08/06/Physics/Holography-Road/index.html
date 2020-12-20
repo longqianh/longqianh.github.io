@@ -113,6 +113,7 @@
 <p>Here is the <a href="/2020/05/03/Projects-Laser-holography/index.html">link</a> to that project.</p>
 <p>I have to say that I forget most of the details, but configuring my own fixer and developer (显影液和定影液) and building the optic path and finally seeing the results is a procedure that has no technical content but somehow a sense of accomplishment.</p>
 <p>全息的路艰难而漫长，但是充满有趣与理想。我想，还是不写蹩脚的英文了，用中文回顾一下我的所思所想。</p>
+<a id="more"></a>
 <h3 id="原理">原理</h3>
 <p>半导体激光全息实验让我就是从头（用化学物品配显影液、定影液）到尾（看到全息像）做了一遍全息照相。其中的原理简单而深刻。</p>
 <p>全息干板为卤化银感光材料，可以记录光波的振幅和相位信息。（振幅信息是由于卤化银受到光的照射程度的不同，变黑的程度也不同；相位信息还有一些疑问）。</p>
@@ -450,7 +451,7 @@ u=\frac{\Delta x}{\lambda z},
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="../../../../../http:/c01dkit.com">友链</a>
+      <a class="nav-item-link" href="../../../../../Friends">友链</a>
     </li>
     
   </ul>
@@ -761,7 +762,42 @@ u=\frac{\Delta x}{\lambda z},
 
 
     
-  </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            displayMath: [ ['$','$'], ["\\[","\\]"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js"></script>
+
+
+<!-- <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['
+
+</html>,'
+
+</html>], ["\\(","\\)"] ],
+      displayMath: [ ['$','$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js"></script> --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 
 </html>

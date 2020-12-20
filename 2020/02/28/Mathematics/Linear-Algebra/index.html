@@ -137,6 +137,7 @@ W_2&amp;=\mathcal{L}(\alpha_1,\cdots,\alpha_r,\gamma_1,\cdots,\gamma_t)\\
 <p>​ 按线性无关定义写出式子，把 <span class="math inline">\(\gamma\)</span> 项移到等式右边，</p>
 <p>​ 利用 <span class="math inline">\(W_1\cap W_2\)</span> 可以把两边都表示成 <span class="math inline">\(\alpha\)</span> 项的线性组合，</p>
 <p>​ 依次利用移项后是 <span class="math inline">\(W_2\)</span> 和 $ W_1 $ 的基，最后得到全是 <span class="math inline">\(0\)</span>。</p>
+<a id="more"></a>
 <h3 id="直和">直和</h3>
 <p>设 <span class="math inline">\(U_1,\cdots,U_m\)</span> 都是 <span class="math inline">\(V\)</span> 的子空间，则:</p>
 <ul>
@@ -786,9 +787,9 @@ A=U\Sigma V^*
       </a>
     
     
-      <a href="../../../23/Computer-Science/Machine%20Learning/Deep%20learning/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0-L2-Net/" class="article-nav-link">
+      <a href="../../../23/Computer-Science/Machine%20Learning/Deep%20learning/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0-SOS-Net/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">L2-Net</div>
+        <div class="article-nav-title">SOS-Net</div>
       </a>
     
   </nav>
@@ -894,7 +895,7 @@ A=U\Sigma V^*
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="../../../../../http:/c01dkit.com">友链</a>
+      <a class="nav-item-link" href="../../../../../Friends">友链</a>
     </li>
     
   </ul>
@@ -1205,7 +1206,42 @@ A=U\Sigma V^*
 
 
     
-  </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            displayMath: [ ['$','$'], ["\\[","\\]"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js"></script>
+
+
+<!-- <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['
+
+</html>,'
+
+</html>], ["\\(","\\)"] ],
+      displayMath: [ ['$','$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js"></script> --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 
 </html>

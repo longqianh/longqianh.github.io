@@ -138,6 +138,7 @@ i.e. \quad y_{m+2}&amp;=2by_{m+1}-F^2y_m\\
 y_m=y_0F^me^{\pm im\varphi}
 \]</span> 其中 <span class="math inline">\(\varphi\)</span> 满足 <span class="math inline">\(b=F\cos\varphi\)</span>.</p>
 <p>可见，传递矩阵的 <span class="math inline">\(\det\)</span> 带来幅值增益，其 <span class="math inline">\(\operatorname {trace}\)</span> 带来相位增益。</p>
+<a id="more"></a>
 <h3 id="谐振腔稳定条件">谐振腔稳定条件</h3>
 <p>可以证明（？） <span class="math inline">\(\det(M)=n_i/n_f\)</span>, 其中 <span class="math inline">\(n_i,n_f\)</span> 分别为系统基本单元初始和最后一部分的折射率。</p>
 <p>稳定需要传播的光束不会溢出光学系统，因而需要 <span class="math inline">\(\varphi=\arccos(b)\)</span> 为实数： <span class="math display">\[
@@ -691,7 +692,7 @@ I_p&amp;=M^2|A|^2=M\bar I.
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="../../../../../http:/c01dkit.com">友链</a>
+      <a class="nav-item-link" href="../../../../../Friends">友链</a>
     </li>
     
   </ul>
@@ -1002,7 +1003,42 @@ I_p&amp;=M^2|A|^2=M\bar I.
 
 
     
-  </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            displayMath: [ ['$','$'], ["\\[","\\]"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js"></script>
+
+
+<!-- <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['
+
+</html>,'
+
+</html>], ["\\(","\\)"] ],
+      displayMath: [ ['$','$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js"></script> --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 
 </html>
