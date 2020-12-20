@@ -860,7 +860,7 @@ W_2&amp;=\mathcal{L}(\alpha_1,\cdots,\alpha_r,\gamma_1,\cdots,\gamma_t)\\
 
 </article>
     
-    <article id="post-Computer-Science/Machine Learning/Deep learning/论文笔记-SOS-Net" class="article article-type-post" itemscope
+    <article id="post-Computer-Science/Machine Learning/Deep learning/论文笔记-L2-Net" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
@@ -868,8 +868,8 @@ W_2&amp;=\mathcal{L}(\alpha_1,\cdots,\alpha_r,\gamma_1,\cdots,\gamma_t)\\
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="../../2020/02/23/Computer-Science/Machine%20Learning/Deep%20learning/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0-SOS-Net/"
-    >SOS-Net</a> 
+  <a class="article-title" href="../../2020/02/23/Computer-Science/Machine%20Learning/Deep%20learning/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0-L2-Net/"
+    >L2-Net</a> 
 </h2>
  
 
@@ -878,7 +878,7 @@ W_2&amp;=\mathcal{L}(\alpha_1,\cdots,\alpha_r,\gamma_1,\cdots,\gamma_t)\\
 
     
     <div class="article-meta">
-      <a href="../../2020/02/23/Computer-Science/Machine%20Learning/Deep%20learning/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0-SOS-Net/" class="article-date">
+      <a href="../../2020/02/23/Computer-Science/Machine%20Learning/Deep%20learning/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0-L2-Net/" class="article-date">
   <time datetime="2020-02-23T08:42:04.000Z" itemprop="datePublished">2020-02-23</time>
 </a>
       
@@ -900,16 +900,29 @@ W_2&amp;=\mathcal{L}(\alpha_1,\cdots,\alpha_r,\gamma_1,\cdots,\gamma_t)\\
       
 
       
-      <p>代码链接：https://github.com/scape-research/SOSNet</p>
+      <p>论文链接：http://www.nlpr.ia.ac.cn/fanbin/pub/L2-Net_CVPR17.pdf</p>
+<p>代码链接：https://github.com/yuruntian/L2-Net</p>
 <p>研读次数：1</p>
-<p>对 L2-Net 和超越L2的 Hard-Net 的超越。</p>
-<h2 id="待学的东西">待学的东西</h2>
+<h2 id="提出的好方法">提出的好方法</h2>
 <ul>
-<li>Von Mises-Fisher distribution</li>
-<li>BOLD</li>
-<li>Hard-Net</li>
-<li>First Order Similarity (FOS)</li>
-<li><span class="math inline">\(K\)</span> Nearest Neighbors (KNN)</li>
+<li><p>a progressive sampling strategy 渐进采样策略，可使网络在有限次数内获得大量样本</p></li>
+<li><p>Discriminative Intermediate Feature map (DIF) 在中间的特征层施加了额外的监督</p></li>
+<li><p>Loss function that takes three important error aspects into account:</p>
+<ul>
+<li>descriptor similarity 未完全理解</li>
+<li>descriptor compactness : ‘An interesting finding is that the degree of overfitting is directly related to the degree of correlation among descriptor dimensions’</li>
+<li>intermediate feature maps 未完全理解</li>
+</ul></li>
+</ul>
+<h3 id="须了解的相关知识">须了解的相关知识</h3>
+<ul>
+<li>SIFT descriptor</li>
+<li>NNS (nearest neighbor search)</li>
+<li>MatchNet (a typical Siamese network)</li>
+</ul>
+<h3 id="应用">应用</h3>
+<ul>
+<li>实现 <em>特征匹配</em> 的神经网络的训练</li>
 </ul>
 
       
