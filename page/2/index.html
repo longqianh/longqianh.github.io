@@ -116,9 +116,9 @@
       
 
       
-      <p>Project in optoelectronics course. </p>
+      <p>Project in optoelectronics course.</p>
 <p>Techniques used in Light Sheet Microscopy. It is interesting and useful.</p>
-<p> 
+<p>
 
 	<div class="row">
     <embed src="/pdf_files/超扁Light-Sheet光束设计.pdf" width="100%" height="550" type="application/pdf">
@@ -190,10 +190,12 @@
 
       
       <p>光电子学的一个大作业是设计探月三维成像激光雷达，开始毫无头绪，后来在玉泉图书馆找到一本哈工大的书「激光雷达系统设计」（王春晖，陈德应著）。想着以后要把书还回去，目前网上找到的资料大多是论文，而莫得这本宝书，就简要地「抄」一下这本书的部分章节。</p>
-<h1 id="激光雷达系统设计"><a href="#激光雷达系统设计" class="headerlink" title="激光雷达系统设计"></a>激光雷达系统设计</h1><p>激光雷达是指以激光作为载波、以光电探测器作为接收器件、以光学望远镜作为天线的光雷达。</p>
-<h3 id="发射光学系统"><a href="#发射光学系统" class="headerlink" title="发射光学系统"></a>发射光学系统</h3><p>在远距离激光雷达系统设计中，为了增加作用距离，常常需要压缩激光源地发散角，即采用望远镜系统对激光源进行扩束，这时该定向辐射源具有一定辐射面积，人们常常把这类光源成为空间受限定相光源。由于激光器发射光束具有高斯光束地特点，这时在受限空间内光强分布的不均匀性就凸显出来。一般假设这种光源的方向图函数是高斯型的，即</p>
-<script type="math/tex; mode=display">
-f(\theta,\varphi)=\exp\left[-\frac{r^2}{(z\alpha)^2}\right]=\exp\left[-\frac{\theta^2}{\alpha^2}\right]</script><p>注：方向图函数定义为任意方向 $\vec n$ 上的辐射强度 $I(\vec n)$ 与最大光强之比 $I(\vec n)/I_{\max}=I(\theta,\varphi)/I_{\max}$。</p>
+<h1 id="激光雷达系统设计">激光雷达系统设计</h1>
+<p>激光雷达是指以激光作为载波、以光电探测器作为接收器件、以光学望远镜作为天线的光雷达。</p>
+<h3 id="发射光学系统">发射光学系统</h3>
+<p>在远距离激光雷达系统设计中，为了增加作用距离，常常需要压缩激光源地发散角，即采用望远镜系统对激光源进行扩束，这时该定向辐射源具有一定辐射面积，人们常常把这类光源成为空间受限定相光源。由于激光器发射光束具有高斯光束地特点，这时在受限空间内光强分布的不均匀性就凸显出来。一般假设这种光源的方向图函数是高斯型的，即 <span class="math display">\[
+f(\theta,\varphi)=\exp\left[-\frac{r^2}{(z\alpha)^2}\right]=\exp\left[-\frac{\theta^2}{\alpha^2}\right]
+\]</span> 注：方向图函数定义为任意方向 <span class="math inline">\(\vec n\)</span> 上的辐射强度 <span class="math inline">\(I(\vec n)\)</span> 与最大光强之比 <span class="math inline">\(I(\vec n)/I_{\max}=I(\theta,\varphi)/I_{\max}\)</span>。</p>
 <p>书中给了激光发射机的光度学模型和波动学模型，但是没有对激光器进行详细叙述。感觉这是对激光发射的结果进行了建模，而产生激光的过程还需要参考别的书籍。</p>
       
       <a class="article-more-link" href="../../2020/11/06/Optics/LADAR/">阅读更多...</a>
@@ -264,30 +266,37 @@ f(\theta,\varphi)=\exp\left[-\frac{r^2}{(z\alpha)^2}\right]=\exp\left[-\frac{\th
       
 
       
-      <h1 id="Optoelectronics"><a href="#Optoelectronics" class="headerlink" title="Optoelectronics"></a>Optoelectronics</h1><h2 id="Matrix-Optics-「矩阵光学」"><a href="#Matrix-Optics-「矩阵光学」" class="headerlink" title="Matrix Optics 「矩阵光学」"></a>Matrix Optics 「矩阵光学」</h2><h3 id="光学元件的传播矩阵"><a href="#光学元件的传播矩阵" class="headerlink" title="光学元件的传播矩阵"></a>光学元件的传播矩阵</h3><p>小坑待填.</p>
-<h3 id="光线在周期系统的位置轨迹"><a href="#光线在周期系统的位置轨迹" class="headerlink" title="光线在周期系统的位置轨迹"></a>光线在周期系统的位置轨迹</h3><script type="math/tex; mode=display">
+      <h1 id="optoelectronics">Optoelectronics</h1>
+<h2 id="matrix-optics-矩阵光学">Matrix Optics 「矩阵光学」</h2>
+<h3 id="光学元件的传播矩阵">光学元件的传播矩阵</h3>
+<p>小坑待填.</p>
+<h3 id="光线在周期系统的位置轨迹">光线在周期系统的位置轨迹</h3>
+<p><span class="math display">\[
 \begin{pmatrix}
 y_{m+1}\\
 \theta_{m+1}
 \end{pmatrix}=M\begin{pmatrix}
 y_m\\
 \theta_m
-\end{pmatrix}</script><p>其中 $M=\displaystyle\begin{pmatrix}A&amp;B\\C&amp;D\end{pmatrix}$ 为周期系统的传播矩阵。</p>
-<p>进而得到 </p>
-<script type="math/tex; mode=display">
+\end{pmatrix}
+\]</span></p>
+<p>其中 <span class="math inline">\(M=\displaystyle\begin{pmatrix}A&amp;B\\C&amp;D\end{pmatrix}\)</span> 为周期系统的传播矩阵。</p>
+<p>进而得到 <span class="math display">\[
 \begin{align}
-y_{m+1}&=Ay_m+B\theta_m\\
-\theta_{m+1}&=Cy_m+D\theta_m
-\end{align}</script><p>整理得</p>
-<script type="math/tex; mode=display">
+y_{m+1}&amp;=Ay_m+B\theta_m\\
+\theta_{m+1}&amp;=Cy_m+D\theta_m
+\end{align}
+\]</span> 整理得 <span class="math display">\[
 \begin{align}
-y_{m+2}&=(A+D)y_{m+1}+(BC-AD)y_m \notag\\
-i.e. \quad y_{m+2}&=2by_{m+1}-F^2y_m\\
-\end{align}</script><p>其中 $b=(A+D)/2,F^2=\det (M)$.</p>
-<p>尝试解 $y_m=y_0h^m$, 可得</p>
-<script type="math/tex; mode=display">
-y_m=y_0F^me^{\pm im\varphi}</script><p>其中 $\varphi$ 满足 $b=F\cos\varphi$.</p>
-<p>可见，传递矩阵的 $\det$ 带来幅值增益，其 $\operatorname {trace}$ 带来相位增益。</p>
+y_{m+2}&amp;=(A+D)y_{m+1}+(BC-AD)y_m \notag\\
+i.e. \quad y_{m+2}&amp;=2by_{m+1}-F^2y_m\\
+\end{align}
+\]</span></p>
+<p>其中 <span class="math inline">\(b=(A+D)/2,F^2=\det (M)\)</span>.</p>
+<p>尝试解 <span class="math inline">\(y_m=y_0h^m\)</span>, 可得 <span class="math display">\[
+y_m=y_0F^me^{\pm im\varphi}
+\]</span> 其中 <span class="math inline">\(\varphi\)</span> 满足 <span class="math inline">\(b=F\cos\varphi\)</span>.</p>
+<p>可见，传递矩阵的 <span class="math inline">\(\det\)</span> 带来幅值增益，其 <span class="math inline">\(\operatorname {trace}\)</span> 带来相位增益。</p>
       
       <a class="article-more-link" href="../../2020/10/23/Optics/%E5%85%89%E7%94%B5%E5%AD%90%E5%AD%A6%E7%AC%94%E8%AE%B0/">阅读更多...</a>
       
@@ -353,12 +362,14 @@ y_m=y_0F^me^{\pm im\varphi}</script><p>其中 $\varphi$ 满足 $b=F\cos\varphi$.
       
 
       
-      <h1 id="3D-Holography"><a href="#3D-Holography" class="headerlink" title="3D Holography"></a>3D Holography</h1><p>This is a project that I have spent at least three months. I learnt a lot from it, and is digging deeper. </p>
+      <h1 id="d-holography">3D Holography</h1>
+<p>This is a project that I have spent at least three months. I learnt a lot from it, and is digging deeper.</p>
 <p>Big thanks to my seniors Zhongyuan Guo and Zhaoyu Gong for their guidance. Thanks to my teacher Xing Chen for his careful instructions.</p>
-<h2 id="Course"><a href="#Course" class="headerlink" title="Course"></a>Course</h2><p>I finally made a Matlab application and we can get a stereo view of an object after encoding it and put on an SLM. I have put the code on Github <a href="https://github.com/longqianh/3d-holography" target="_blank" rel="noopener">here</a>.</p>
+<h2 id="course">Course</h2>
+<p>I finally made a Matlab application and we can get a stereo view of an object after encoding it and put on an SLM. I have put the code on Github <a href="https://github.com/longqianh/3d-holography" target="_blank" rel="noopener">here</a>.</p>
 <p>Some thoughts about holography are put <a href="/2020/08/06/Physics-Holography-Road/index.html">here</a>.</p>
 <p>Below is a brief course article:</p>
-<p> 
+<p>
 
 	<div class="row">
     <embed src="/pdf_files/物理实验III结题报告.pdf" width="100%" height="550" type="application/pdf">
@@ -366,8 +377,9 @@ y_m=y_0F^me^{\pm im\varphi}</script><p>其中 $\varphi$ 满足 $b=F\cos\varphi$.
 
 
 .</p>
-<h2 id="Competition"><a href="#Competition" class="headerlink" title="Competition"></a>Competition</h2><p>We competed in Zhejiang Physics Innovation Competition. Below are the research article and speech powerpoint.</p>
-<p> 
+<h2 id="competition">Competition</h2>
+<p>We competed in Zhejiang Physics Innovation Competition. Below are the research article and speech powerpoint.</p>
+<p>
 
 	<div class="row">
     <embed src="/pdf_files/省物创作品研究报告.pdf" width="100%" height="550" type="application/pdf">
@@ -375,7 +387,7 @@ y_m=y_0F^me^{\pm im\varphi}</script><p>其中 $\varphi$ 满足 $b=F\cos\varphi$.
 
 
 .</p>
-<p> 
+<p>
 
 	<div class="row">
     <embed src="/pdf_files/物理创新竞赛省赛ppt.pdf" width="100%" height="550" type="application/pdf">
@@ -446,179 +458,189 @@ y_m=y_0F^me^{\pm im\varphi}</script><p>其中 $\varphi$ 满足 $b=F\cos\varphi$.
       
 
       
-      <h1 id="光电材料笔记"><a href="#光电材料笔记" class="headerlink" title="光电材料笔记"></a>光电材料笔记</h1><p>记录一些在光学材料与元件制造课程中的整理和总结。</p>
-<h2 id="光学玻璃"><a href="#光学玻璃" class="headerlink" title="光学玻璃"></a>光学玻璃</h2><ul>
-<li><p>无规网络学说</p>
+      <h1 id="光电材料笔记">光电材料笔记</h1>
+<p>记录一些在光学材料与元件制造课程中的整理和总结。</p>
+<h2 id="光学玻璃">光学玻璃</h2>
+<ul>
+<li>无规网络学说
 <ul>
 <li>网络形成体</li>
 <li>网络中间体</li>
 <li>网络外体</li>
-</ul>
-</li>
-<li><p>命名与化学成分</p>
+</ul></li>
+<li>命名与化学成分
 <ul>
 <li>折射率</li>
 <li>阿贝数</li>
 <li>相对部分色散</li>
-</ul>
-</li>
-<li>色散理论<ul>
+</ul></li>
+<li>色散理论
+<ul>
 <li>折射率、色散、玻璃成分关系：玻璃的分子体积与分子折射度</li>
-</ul>
-</li>
-<li>外场作用<ul>
+</ul></li>
+<li>外场作用
+<ul>
 <li>折射率温度系数</li>
 <li>光弹系数</li>
 <li>光学非线性折射率（强度相关）</li>
-</ul>
-</li>
-<li>吸收与散射<ul>
+</ul></li>
+<li>吸收与散射
+<ul>
 <li>紫外吸收：电子跃迁</li>
 <li>红外吸收：分子振动/转动发生共振</li>
 <li>可见吸收：非本征，来源于杂质</li>
 <li>非线性吸收：主要是共振区附近的双光子吸收</li>
 <li>丁达尔散射、米氏散射，瑞利散射</li>
-</ul>
-</li>
-<li>紫外光学玻璃<ul>
+</ul></li>
+<li>紫外光学玻璃
+<ul>
 <li>光学石英</li>
-<li>萤石 $CaF_2$</li>
-</ul>
-</li>
+<li>萤石 <span class="math inline">\(CaF_2\)</span></li>
+</ul></li>
 <li>红外光学玻璃</li>
-<li>激光玻璃<ul>
+<li>激光玻璃
+<ul>
 <li>由激活离子与基质玻璃所组成的主客体系统</li>
 <li>激活离子：稀土离子</li>
-<li>光谱项 $^{2s+1}L_J$</li>
+<li>光谱项 <span class="math inline">\(^{2s+1}L_J\)</span></li>
 <li>基质玻璃：决定光谱性质</li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<h2 id="光学晶体"><a href="#光学晶体" class="headerlink" title="光学晶体"></a>光学晶体</h2><p>部分摘自《晶体物理学基础》(陈纲等)。</p>
-<h3 id="对称操作"><a href="#对称操作" class="headerlink" title="对称操作"></a>对称操作</h3><p>如果经过某种操作（转动、镜像、中心反演等）以后，晶体中的各个点都变到新的位置，但是晶形保持不变，那么称这种操作为晶体的对称操作。</p>
-<p>在晶体中，任何一个对称操作 $P$ 可以重复多次 ( $P^m$ ) ，直至晶体每个点都回到原来的位置 ($P^n=E$ )。</p>
-<h3 id="Jones符号"><a href="#Jones符号" class="headerlink" title="Jones符号"></a>Jones符号</h3><p>对称操作除了用矩阵表示外，可以用Jones符号表示。</p>
-<p>$(\bar x_1 x_2 x_3)$ 诸如此，表示 $x_1’=\bar x_1,x_2’=x_2,x_3’=x_3$, 即绕 $x_1$ 轴旋转+中心对称。</p>
-<h3 id="对称元素"><a href="#对称元素" class="headerlink" title="对称元素"></a>对称元素</h3><p>对称元素时晶体中的某些点、线和面，晶体的对称操作是相对于他们进行的，它们在对称操作过程中保持不动。</p>
-<p>采用数字符号进行表示：$1,2,3,4,6$ 依次表示1、2、3、4、6次旋转轴，$\bar 1,\bar 2,\bar 3,\bar 4,\bar 6$ 分别等价于反演中心、反射镜面、3+反演中心、四度反轴（转90度再做中心对称）、3+垂直3次轴的镜面。</p>
-<p>注：晶体只有 $\bar 4$ 和晶体有 $4$ 也有 $\bar 1$ 所拥有的对称操作集合时不一样的，后者包含前者，对称性更高。</p>
-<p>但是晶体有 $\bar 3$ 就等价于有 $3$ 也有 $\bar 1$。 </p>
-<h3 id="晶体学点群"><a href="#晶体学点群" class="headerlink" title="晶体学点群"></a>晶体学点群</h3><p>晶体晶形等<strong>对称操作的集合</strong>称为晶体学点群（简称点群）。</p>
+<h2 id="光学晶体">光学晶体</h2>
+<p>部分摘自《晶体物理学基础》(陈纲等)。</p>
+<h3 id="对称操作">对称操作</h3>
+<p>如果经过某种操作（转动、镜像、中心反演等）以后，晶体中的各个点都变到新的位置，但是晶形保持不变，那么称这种操作为晶体的对称操作。</p>
+<p>在晶体中，任何一个对称操作 <span class="math inline">\(P\)</span> 可以重复多次 ( <span class="math inline">\(P^m\)</span> ) ，直至晶体每个点都回到原来的位置 (<span class="math inline">\(P^n=E\)</span> )。</p>
+<h3 id="jones符号">Jones符号</h3>
+<p>对称操作除了用矩阵表示外，可以用Jones符号表示。</p>
+<p><span class="math inline">\((\bar x_1 x_2 x_3)\)</span> 诸如此，表示 <span class="math inline">\(x_1’=\bar x_1,x_2’=x_2,x_3’=x_3\)</span>, 即绕 <span class="math inline">\(x_1\)</span> 轴旋转+中心对称。</p>
+<h3 id="对称元素">对称元素</h3>
+<p>对称元素时晶体中的某些点、线和面，晶体的对称操作是相对于他们进行的，它们在对称操作过程中保持不动。</p>
+<p>采用数字符号进行表示：<span class="math inline">\(1,2,3,4,6\)</span> 依次表示1、2、3、4、6次旋转轴，<span class="math inline">\(\bar 1,\bar 2,\bar 3,\bar 4,\bar 6\)</span> 分别等价于反演中心、反射镜面、3+反演中心、四度反轴（转90度再做中心对称）、3+垂直3次轴的镜面。</p>
+<p>注：晶体只有 <span class="math inline">\(\bar 4\)</span> 和晶体有 <span class="math inline">\(4\)</span> 也有 <span class="math inline">\(\bar 1\)</span> 所拥有的对称操作集合时不一样的，后者包含前者，对称性更高。</p>
+<p>但是晶体有 <span class="math inline">\(\bar 3\)</span> 就等价于有 <span class="math inline">\(3\)</span> 也有 <span class="math inline">\(\bar 1\)</span>。</p>
+<h3 id="晶体学点群">晶体学点群</h3>
+<p>晶体晶形等<strong>对称操作的集合</strong>称为晶体学点群（简称点群）。</p>
 <p>知道了晶体的所有对称操作或者所有对称元素，就知道了它所属的点群。</p>
 <p>给定一个一定构型的立方晶系，根据它所具有的对称性（以对称操作要素描述），可以形成各种组合，化简后得到32个点群。给定一个晶体，根据它的布拉维点阵，我们可以确定它是具有哪一种对称性。</p>
 <p>国际符号用存在于某个特定方向上的对称元素来表示点群。</p>
-<p>比如一个正交晶系，它有 mm2 / 222 / mmm 这三种对称性组合（具体描述为 $G_22P$ / $3G_2$ / $3G_23PC$ )。给定一个正交晶系的晶体，通过判断它的点阵符合那种对称组合所生成的点阵（一个点由对称性生出的点阵列），我们可以确定它所属的点群。</p>
-<h3 id="张量"><a href="#张量" class="headerlink" title="张量"></a>张量</h3><p>张量满足在坐标系的变换前后，对应物理公式的形式保持不变：</p>
-<script type="math/tex; mode=display">
-p_i=T_{ij}q_j\longmapsto p_i'=T_{ij}'q_j'</script><p>考虑到</p>
-<script type="math/tex; mode=display">
-p_i'=a_{ik}p_k,\; q_l=a_{jl}q_j</script><p>有</p>
-<script type="math/tex; mode=display">
-p_i'=a_{ik}p_k=a_{ik}T_{kl}q_{l}=a_{ik}a_{lj}T_{kl}q_j'</script><p>因此</p>
-<script type="math/tex; mode=display">
+<p>比如一个正交晶系，它有 mm2 / 222 / mmm 这三种对称性组合（具体描述为 <span class="math inline">\(G_22P\)</span> / <span class="math inline">\(3G_2\)</span> / <span class="math inline">\(3G_23PC\)</span> )。给定一个正交晶系的晶体，通过判断它的点阵符合那种对称组合所生成的点阵（一个点由对称性生出的点阵列），我们可以确定它所属的点群。</p>
+<h3 id="张量">张量</h3>
+<p>张量满足在坐标系的变换前后，对应物理公式的形式保持不变： <span class="math display">\[
+p_i=T_{ij}q_j\longmapsto p_i&#39;=T_{ij}&#39;q_j&#39;
+\]</span> 考虑到 <span class="math display">\[
+p_i&#39;=a_{ik}p_k,\; q_l=a_{jl}q_j
+\]</span> 有 <span class="math display">\[
+p_i&#39;=a_{ik}p_k=a_{ik}T_{kl}q_{l}=a_{ik}a_{lj}T_{kl}q_j&#39;
+\]</span> 因此 <span class="math display">\[
 \begin{align}
-T_{ij}'&=a_{ik}a_{jl}T_{kl}\\
-T_{ij}&=a_{ki}a_{lj}T_{kl}'
-\end{align}</script><h2 id="介电光学晶体"><a href="#介电光学晶体" class="headerlink" title="介电光学晶体"></a>介电光学晶体</h2><h3 id="力学性能"><a href="#力学性能" class="headerlink" title="力学性能"></a>力学性能</h3><ul>
+T_{ij}&#39;&amp;=a_{ik}a_{jl}T_{kl}\\
+T_{ij}&amp;=a_{ki}a_{lj}T_{kl}&#39;
+\end{align}
+\]</span></p>
+<h2 id="介电光学晶体">介电光学晶体</h2>
+<h3 id="力学性能">力学性能</h3>
+<ul>
 <li>应力张量、应变张量、杨氏模量</li>
 <li>弹光效应</li>
 </ul>
-<h3 id="电学性能"><a href="#电学性能" class="headerlink" title="电学性能"></a>电学性能</h3><ul>
-<li>介电常数张量、逆介电常数张量</li>
-<li><p>压电效应：压电系数</p>
-</li>
-<li><p>热释电效应：热释电系数</p>
-</li>
-<li><p>铁电效应：居里温度</p>
-</li>
-<li><p>电光效应：线性电光效应、二次电光效应</p>
-</li>
+<h3 id="电学性能">电学性能</h3>
+<ul>
+<li><p>介电常数张量、逆介电常数张量</p></li>
+<li><p>压电效应：压电系数</p></li>
+<li><p>热释电效应：热释电系数</p></li>
+<li><p>铁电效应：居里温度</p></li>
+<li><p>电光效应：线性电光效应、二次电光效应</p></li>
 </ul>
-<h3 id="非线性光学性能"><a href="#非线性光学性能" class="headerlink" title="非线性光学性能"></a>非线性光学性能</h3><ul>
-<li><p>非线性极化率</p>
-</li>
-<li><p>略</p>
-</li>
+<h3 id="非线性光学性能">非线性光学性能</h3>
+<ul>
+<li><p>非线性极化率</p></li>
+<li><p>略</p></li>
 </ul>
-<h3 id="电光效应"><a href="#电光效应" class="headerlink" title="电光效应"></a>电光效应</h3><h4 id="计算方法"><a href="#计算方法" class="headerlink" title="计算方法"></a>计算方法</h4><ul>
-<li><p>原光率体：$\beta_{ij}x_ix_j=1$</p>
-</li>
-<li><p>电光效应：$\Delta \beta_{ij} = \gamma_{ij} E_j$  (Einstein sum)</p>
-</li>
-<li>新光率体：$(\beta_{ij}+\Delta\beta_{ij})\ x_ix_j=1$</li>
-<li>坐标变换消除交叉项：$x_i\to x_i’$, 旋转 $\theta$ 角</li>
-<li>新的主光率体 $\beta_{ij}’x_i’x_j’=1$</li>
-<li>主光率体下的逆介电常数差：$\Delta\beta’=\beta’-\beta$</li>
-<li>折射率变化：$\Delta n=n’-n=-\displaystyle\frac 1 2 n^3\Delta\beta$</li>
-<li>双折射变化：$bx_k$ 为垂直入射光方向 $k$ 的 $n_o’-n_e’$</li>
+<h3 id="电光效应">电光效应</h3>
+<h4 id="计算方法">计算方法</h4>
+<ul>
+<li><p>原光率体：<span class="math inline">\(\beta_{ij}x_ix_j=1\)</span></p></li>
+<li><p>电光效应：<span class="math inline">\(\Delta \beta_{ij} = \gamma_{ij} E_j\)</span> (Einstein sum)</p></li>
+<li><p>新光率体：<span class="math inline">\((\beta_{ij}+\Delta\beta_{ij})\ x_ix_j=1\)</span></p></li>
+<li><p>坐标变换消除交叉项：<span class="math inline">\(x_i\to x_i’\)</span>, 旋转 <span class="math inline">\(\theta\)</span> 角</p></li>
+<li><p>新的主光率体 <span class="math inline">\(\beta_{ij}’x_i’x_j’=1\)</span></p></li>
+<li><p>主光率体下的逆介电常数差：<span class="math inline">\(\Delta\beta’=\beta&#39;-\beta\)</span></p></li>
+<li><p>折射率变化：<span class="math inline">\(\Delta n=n’-n=-\displaystyle\frac 1 2 n^3\Delta\beta\)</span></p></li>
+<li><p>双折射变化：<span class="math inline">\(bx_k\)</span> 为垂直入射光方向 <span class="math inline">\(k\)</span> 的 <span class="math inline">\(n_o’-n_e&#39;\)</span></p></li>
 </ul>
-<h4 id="KDP"><a href="#KDP" class="headerlink" title="KDP"></a>KDP</h4><ul>
-<li><p>$KH_2PO_4$</p>
-</li>
-<li><p>室温下 $\bar 42m$ 点群</p>
-</li>
-<li>常温下远大于居里温度，工作在顺电相，没有铁电性</li>
-<li>$\bar 42m$ 点群没有热释电效应，热释电系数都是0</li>
-<li><p>主要应用的<strong>压电</strong>晶体</p>
-</li>
-<li><p>KDP晶体在近紫外区域有很好的透明性，是性能优越的近紫外光学非线性材料及电光晶体</p>
-</li>
-<li>光学非线性：有二阶非线性系数 $\chi_{36}$ (0.39)</li>
-<li>电光效应：正常算</li>
+<h4 id="kdp">KDP</h4>
+<ul>
+<li><p><span class="math inline">\(KH_2PO_4\)</span></p></li>
+<li><p>室温下 <span class="math inline">\(\bar 42m\)</span> 点群</p></li>
+<li><p>常温下远大于居里温度，工作在顺电相，没有铁电性</p></li>
+<li><p><span class="math inline">\(\bar 42m\)</span> 点群没有热释电效应，热释电系数都是0</p></li>
+<li><p>主要应用的<strong>压电</strong>晶体</p></li>
+<li><p>KDP晶体在近紫外区域有很好的透明性，是性能优越的近紫外光学非线性材料及电光晶体</p></li>
+<li><p>光学非线性：有二阶非线性系数 <span class="math inline">\(\chi_{36}\)</span> (0.39)</p></li>
+<li><p>电光效应：正常算</p></li>
 </ul>
-<h4 id="铌酸锂"><a href="#铌酸锂" class="headerlink" title="铌酸锂"></a>铌酸锂</h4><ul>
-<li>$LiNbO_3$</li>
-<li>居里温度很高（一千多摄氏度），室温下为 $3m$ 点群</li>
+<h4 id="铌酸锂">铌酸锂</h4>
+<ul>
+<li><span class="math inline">\(LiNbO_3\)</span></li>
+<li>居里温度很高（一千多摄氏度），室温下为 <span class="math inline">\(3m\)</span> 点群</li>
 <li>压电晶体：较大的压电系数</li>
 <li>热释电晶体：较高的近红外透过率？；非常好的热释电电压响应度优值和探测度优值</li>
-<li>光学非线性：有大的非线性极化率，二阶非线性系数 $\chi_{21},\chi_{23},\chi_{33}$ 较大；但是光损伤阈值较低</li>
-<li>电光晶体—特殊：电场加在光轴方向，通光沿光轴方向，无电致双折射 ( $bx_3’=0$ )</li>
-<li>注：4mm点群同3m点群，电场加在 $E_3$ 方向无纵向双折射，如常温下的 $BaTiO_3$</li>
+<li>光学非线性：有大的非线性极化率，二阶非线性系数 <span class="math inline">\(\chi_{21},\chi_{23},\chi_{33}\)</span> 较大；但是光损伤阈值较低</li>
+<li>电光晶体--特殊：电场加在光轴方向，通光沿光轴方向，无电致双折射 ( <span class="math inline">\(bx_3&#39;=0\)</span> )</li>
+<li>注：4mm点群同3m点群，电场加在 <span class="math inline">\(E_3\)</span> 方向无纵向双折射，如常温下的 <span class="math inline">\(BaTiO_3\)</span></li>
 </ul>
-<h2 id="半导体光学晶体"><a href="#半导体光学晶体" class="headerlink" title="半导体光学晶体"></a>半导体光学晶体</h2><h3 id="IV-族半导体"><a href="#IV-族半导体" class="headerlink" title="IV 族半导体"></a>IV 族半导体</h3><h4 id="Si-Ge"><a href="#Si-Ge" class="headerlink" title="$Si,Ge$"></a>$Si,Ge$</h4><ul>
-<li>$m3m$ 点群</li>
-<li>$Si$：间接带隙 $1.12\ eV$，$Ge$：间接带隙 $0.67\ eV$</li>
+<h2 id="半导体光学晶体">半导体光学晶体</h2>
+<h3 id="iv-族半导体">IV 族半导体</h3>
+<h4 id="sige"><span class="math inline">\(Si,Ge\)</span></h4>
+<ul>
+<li><span class="math inline">\(m3m\)</span> 点群</li>
+<li><span class="math inline">\(Si\)</span>：间接带隙 <span class="math inline">\(1.12\ eV\)</span>，<span class="math inline">\(Ge\)</span>：间接带隙 <span class="math inline">\(0.67\ eV\)</span></li>
 <li>不能做倍频晶体（无二阶非线性）</li>
 <li>硅波导、硅基光源、硅基光调制器（Kerr，F-K，等离子体色散效应）、硅基锗探测器（波导耦合型的优势，兼顾吸收与响应速度）、硅基光学非线性器件</li>
 </ul>
-<h3 id="III-V-族半导体"><a href="#III-V-族半导体" class="headerlink" title="III~V 族半导体"></a>III~V 族半导体</h3><p>$GaAs,GaN,InP$ 等</p>
-<h4 id="GaAs"><a href="#GaAs" class="headerlink" title="$GaAs$"></a>$GaAs$</h4><ul>
-<li>$\bar 43m$ 点群</li>
-<li>直接带隙 $1.43\ eV$ （常温下）</li>
-<li>高环境承受温度（$350^\circ C$）</li>
+<h3 id="iiiv-族半导体">III~V 族半导体</h3>
+<p><span class="math inline">\(GaAs,GaN,InP\)</span> 等</p>
+<h4 id="gaas"><span class="math inline">\(GaAs\)</span></h4>
+<ul>
+<li><span class="math inline">\(\bar 43m\)</span> 点群</li>
+<li>直接带隙 <span class="math inline">\(1.43\ eV\)</span> （常温下）</li>
+<li>高环境承受温度（<span class="math inline">\(350^\circ C\)</span>）</li>
 </ul>
-<h4 id="GaN"><a href="#GaN" class="headerlink" title="$GaN$"></a>$GaN$</h4><ul>
-<li>直接带隙 $3.507 \ eV$ ( $0K$ )， $3.4\ eV$ （室温）</li>
+<h4 id="gan"><span class="math inline">\(GaN\)</span></h4>
+<ul>
+<li>直接带隙 <span class="math inline">\(3.507 \ eV\)</span> ( <span class="math inline">\(0K\)</span> )， <span class="math inline">\(3.4\ eV\)</span> （室温）</li>
 <li>蓝光LED</li>
 </ul>
-<h3 id="思考题"><a href="#思考题" class="headerlink" title="思考题"></a>思考题</h3><ol>
+<h3 id="思考题">思考题</h3>
+<ol type="1">
 <li><p>IV 族半导体材料在集成光学器件领域应用有什么优点与不足？</p>
-<p>讨论Si和Ge。</p>
-</li>
-<li><p>如何有效抑制硅基集成光学器件中可能产生的双光子吸收？</p>
-</li>
+<p>讨论Si和Ge。</p></li>
+<li><p>如何有效抑制硅基集成光学器件中可能产生的双光子吸收？</p></li>
 </ol>
 <ul>
-<li>避开TPA波长。比如Si, TPA为跳两次达到1.12eV，波长为 $1.24/0.56 \mu m =2.4\mu m$， 避开$2.4\mu m$ 这个有强烈吸收的波长 </li>
+<li>避开TPA波长。比如Si, TPA为跳两次达到1.12eV，波长为 <span class="math inline">\(1.24/0.56 \mu m =2.4\mu m\)</span>， 避开<span class="math inline">\(2.4\mu m\)</span> 这个有强烈吸收的波长</li>
 <li>减小泵浦光强度</li>
 </ul>
-<h2 id="有机光学材料"><a href="#有机光学材料" class="headerlink" title="有机光学材料"></a>有机光学材料</h2><ul>
+<h2 id="有机光学材料">有机光学材料</h2>
+<ul>
 <li>有机分子的导电机理 （共轭化合物）</li>
 <li>光学塑料</li>
 <li>有机发光材料 （OLED）</li>
 <li>有机光伏材料</li>
 <li>有机光学非线性材料</li>
 </ul>
-<h3 id="思考题-1"><a href="#思考题-1" class="headerlink" title="思考题"></a>思考题</h3><ol>
+<h3 id="思考题-1">思考题</h3>
+<ol type="1">
 <li>具有共轭结构的有机分子为什么能够在光电子领域有重要的应用价值？</li>
 </ol>
-<p>他们的共轭 $\pi$ 键体系提供了电子的移动轨道，使其具有一定的导电性。他们被发现能够具有无机半导体与导体材料的许多光、电、磁特性，因而能够在光电子领域有重要的应用价值。</p>
-<ol>
+<p>他们的共轭 <span class="math inline">\(\pi\)</span> 键体系提供了电子的移动轨道，使其具有一定的导电性。他们被发现能够具有无机半导体与导体材料的许多光、电、磁特性，因而能够在光电子领域有重要的应用价值。</p>
+<ol start="2" type="1">
 <li>有机光电材料的载流子运动有什么特点？</li>
 </ol>
-<p>载流子可以在具有连续 $\pi$ 键的相邻分子之间做自由迁移运动，而在非晶态的有机材料中，载流子只能在不同分子之间通过跳跃传输的方式完成，载流子迁移率较低。</p>
+<p>载流子可以在具有连续 <span class="math inline">\(\pi\)</span> 键的相邻分子之间做自由迁移运动，而在非晶态的有机材料中，载流子只能在不同分子之间通过跳跃传输的方式完成，载流子迁移率较低。</p>
 <p><strong>在单个分子的离域π键里自由移动，在不同分子之间只能hopping，迁移率较低</strong></p>
-<ol>
+<ol start="3" type="1">
 <li>与光学玻璃相比，光学塑料在光学性能、机械性能及热性能等方面有什么优势与不足？</li>
 </ol>
 <ul>
@@ -626,32 +648,28 @@ T_{ij}&=a_{ki}a_{lj}T_{kl}'
 <li>热性能：光学玻璃具有相对较低的耐热性，吸湿率较高，热膨胀系数是玻璃的10倍以上</li>
 <li>机械性能：光学塑料的相对密度比玻璃小一半，耐冲击性能比玻璃高10倍左右</li>
 </ul>
-<ol>
+<ol start="4" type="1">
 <li>OLED器件的各部分结构对材料有什么样的要求？</li>
 </ol>
 <ul>
 <li>阴极与阳极材料：功函数要能级匹配【什么叫能级匹配？】，阴极材料须是低功函数的金属，阳极材料须有高功函数的特性</li>
 <li>空穴传输材料：在阳极与HTL界面有较低的势垒，材料要有较高的空穴迁移率，能够在高真空中被蒸发沉积或选图沉寂积成为无针孔缺陷的薄膜，具有高的耐热稳定性等</li>
-<li>电子传输材料：具有较大的电子亲合势 $E_A$ 和较高的电子迁移率；化学稳定性和热稳定性好、成膜性能好；具有高的激发态能级，能够有效避免激发态的能量传递，使激子复合发生在发光层而非电子传输层。</li>
+<li>电子传输材料：具有较大的电子亲合势 <span class="math inline">\(E_A\)</span> 和较高的电子迁移率；化学稳定性和热稳定性好、成膜性能好；具有高的激发态能级，能够有效避免激发态的能量传递，使激子复合发生在发光层而非电子传输层。</li>
 <li>发光层：发光效率高等，无具体的普遍要求</li>
 </ul>
-<ol>
+<ol start="5" type="1">
 <li><p>什么是有机太阳能电池的本体异质结结构，该结构对器件性能有什么样的影响？</p>
 <p>电子给体和电子受体分别分立成膜，混合在一起形成的一层薄膜为本体异质结结构。</p>
-<p>对性能的影响：共混能够导致界面面积的增加，增大光生载流子数量。但是同时也会导致纳米形貌的复杂，难以对结构和形貌进行控制和优化。</p>
-</li>
-</ol>
-<ol>
-<li>什么是有机材料的非共振光学非线性效应与共振光学非线性效应？</li>
+<p>对性能的影响：共混能够导致界面面积的增加，增大光生载流子数量。但是同时也会导致纳米形貌的复杂，难以对结构和形貌进行控制和优化。</p></li>
+<li><p>什么是有机材料的非共振光学非线性效应与共振光学非线性效应？</p></li>
 </ol>
 <ul>
 <li>共振响应的光学非线性效应：入射光的频率落在光学非线性材料的吸收区域，二材料的吸收是源于带间跃迁过程或共轭链的振动模式所致。</li>
 <li>非共振响应的光学非线性效应：入射光位于光学非线性材料的透明区域，在该区域不会产生对于入射光子的单光子吸收。</li>
 </ul>
-<ol>
+<ol start="7" type="1">
 <li><p>简述有机发光器件的发光原理</p>
-<p>电子与空穴分别从阴极及阳极注入，并在有机层中进行传输。电子与空穴相遇形成激子，激子复合后将能量以光的形式发射出来。</p>
-</li>
+<p>电子与空穴分别从阴极及阳极注入，并在有机层中进行传输。电子与空穴相遇形成激子，激子复合后将能量以光的形式发射出来。</p></li>
 </ol>
 
       
@@ -716,86 +734,97 @@ T_{ij}&=a_{ki}a_{lj}T_{kl}'
       
 
       
-      <h1 id="物理光学笔记"><a href="#物理光学笔记" class="headerlink" title="物理光学笔记"></a>物理光学笔记</h1><p>记录一下自己在学习物理光学过程中的思考和总结。</p>
-<h2 id="光的电磁理论基础"><a href="#光的电磁理论基础" class="headerlink" title="光的电磁理论基础"></a>光的电磁理论基础</h2><h3 id="菲涅尔公式"><a href="#菲涅尔公式" class="headerlink" title="菲涅尔公式"></a>菲涅尔公式</h3><ul>
-<li><p>$r_p,r_s,t_p,t_s$</p>
-</li>
-<li><p>布儒斯特角：全偏振临界角，$r_p=0,\theta_1+\theta_2=90^\circ$</p>
-</li>
+      <h1 id="物理光学笔记">物理光学笔记</h1>
+<p>记录一下自己在学习物理光学过程中的思考和总结。</p>
+<h2 id="光的电磁理论基础">光的电磁理论基础</h2>
+<h3 id="菲涅尔公式">菲涅尔公式</h3>
+<ul>
+<li><p><span class="math inline">\(r_p,r_s,t_p,t_s\)</span></p></li>
+<li><p>布儒斯特角：全偏振临界角，<span class="math inline">\(r_p=0,\theta_1+\theta_2=90^\circ\)</span></p></li>
 </ul>
-<h3 id="全反射探究"><a href="#全反射探究" class="headerlink" title="全反射探究"></a>全反射探究</h3><ul>
+<h3 id="全反射探究">全反射探究</h3>
+<ul>
 <li>存在倏逝波</li>
-<li>有相位变化 $\delta=\delta_s-\delta_p$ </li>
+<li>有相位变化 <span class="math inline">\(\delta=\delta_s-\delta_p\)</span></li>
 <li>无能量损失</li>
 </ul>
-<h3 id="偏振"><a href="#偏振" class="headerlink" title="偏振"></a>偏振</h3><p>关键是 $p$ 光和 $s$ 光的相位差（可看作振动方向垂直的光波的叠加）</p>
+<h3 id="偏振">偏振</h3>
+<p>关键是 <span class="math inline">\(p\)</span> 光和 <span class="math inline">\(s\)</span> 光的相位差（可看作振动方向垂直的光波的叠加）</p>
 <ul>
-<li>线偏振：$\delta=0$ 或 $\pi$</li>
-<li>$\sin\delta<0$ 右旋偏振，$\sin\delta>0$ 左旋偏振</li>
+<li>线偏振：<span class="math inline">\(\delta=0\)</span> 或 <span class="math inline">\(\pi\)</span></li>
+<li><span class="math inline">\(\sin\delta&lt;0\)</span> 右旋偏振，<span class="math inline">\(\sin\delta&gt;0\)</span> 左旋偏振</li>
 <li>偏振椭圆的相关量</li>
 </ul>
-<h3 id="光波的傅立叶分析"><a href="#光波的傅立叶分析" class="headerlink" title="光波的傅立叶分析"></a>光波的傅立叶分析</h3><p>实际光波是一个<em>波列</em>。波的单色性和波列长度有关。</p>
-<p>有效空间频率范围 $\Delta k=\pi/L$</p>
-<p>有效波长范围 $\Delta \lambda=\lambda^2/2L$</p>
-<p>时间频率范围 $\Delta \nu=\Delta \left(c/\lambda\right)=c/2L$</p>
-<h2 id="光的干涉"><a href="#光的干涉" class="headerlink" title="光的干涉"></a>光的干涉</h2><p>光的干涉，原理上是相干光波的叠加，内容上是求干涉场的分布。</p>
+<h3 id="光波的傅立叶分析">光波的傅立叶分析</h3>
+<p>实际光波是一个<em>波列</em>。波的单色性和波列长度有关。</p>
+<p>有效空间频率范围 <span class="math inline">\(\Delta k=\pi/L\)</span></p>
+<p>有效波长范围 <span class="math inline">\(\Delta \lambda=\lambda^2/2L\)</span></p>
+<p>时间频率范围 <span class="math inline">\(\Delta \nu=\Delta \left(c/\lambda\right)=c/2L\)</span></p>
+<h2 id="光的干涉">光的干涉</h2>
+<p>光的干涉，原理上是相干光波的叠加，内容上是求干涉场的分布。</p>
 <p>光的干涉、衍射和偏振，构成了波动光学的核心内容，干涉场和衍射场讨论的是标量场的光强分布。</p>
 <p>一般地说，干涉场是分立光波的叠加，衍射场是连续元光波的叠加，此时加法变成了积分；偏振场因其振动特点表示出的矢量光波属性，更加注重加法本身，矢量加法在物理上表示不同振动状态合成后振动状态的变化。</p>
-<h2 id="光的衍射"><a href="#光的衍射" class="headerlink" title="光的衍射"></a>光的衍射</h2><h2 id="傅立叶光学"><a href="#傅立叶光学" class="headerlink" title="傅立叶光学"></a>傅立叶光学</h2><h3 id="菲涅尔衍射"><a href="#菲涅尔衍射" class="headerlink" title="菲涅尔衍射"></a>菲涅尔衍射</h3><p>菲涅尔傍轴近似下：</p>
-<script type="math/tex; mode=display">
+<h2 id="光的衍射">光的衍射</h2>
+<h2 id="傅立叶光学">傅立叶光学</h2>
+<h3 id="菲涅尔衍射">菲涅尔衍射</h3>
+<p>菲涅尔傍轴近似下： <span class="math display">\[
 \begin{align}
-\widetilde E(u,v)&=\widetilde E(x,y)=\frac{1}{i\lambda z_1}\exp\left[ik\left(z_1+\frac{x^2+y^2}{2z_1}\right)\right]\iint_{-\infty}^\infty \widetilde E(x_1,y_1)\exp\left[\frac{ik}{2z_1}(x_1^2+y_1^2)\right]\exp\left[-ik(\frac{x}{z_1}x_1+\frac{y}{z_1}y_1)\right]\operatorname{dx_1dy_1}\\
-&=\widetilde A\cdot\mathcal{F}\left(\widetilde E(x_1,y_1)\cdot \exp\left[\frac{ik}{2z_1}(x_1^2+y_1^2)\right]\right)
-\end{align}</script><p>注意前面含 $(x,y)$ 的相位因子在光强不显现，但可以利用干涉证明其存在。</p>
+\widetilde E(u,v)&amp;=\widetilde E(x,y)=\frac{1}{i\lambda z_1}\exp\left[ik\left(z_1+\frac{x^2+y^2}{2z_1}\right)\right]\iint_{-\infty}^\infty \widetilde E(x_1,y_1)\exp\left[\frac{ik}{2z_1}(x_1^2+y_1^2)\right]\exp\left[-ik(\frac{x}{z_1}x_1+\frac{y}{z_1}y_1)\right]\operatorname{dx_1dy_1}\\
+&amp;=\widetilde A\cdot\mathcal{F}\left(\widetilde E(x_1,y_1)\cdot \exp\left[\frac{ik}{2z_1}(x_1^2+y_1^2)\right]\right)
+\end{align}
+\]</span> 注意前面含 <span class="math inline">\((x,y)\)</span> 的相位因子在光强不显现，但可以利用干涉证明其存在。</p>
 <p>突然理解了3dgray的代码：<strong>傅立叶变换之后是uv（频率域），但实际是xy，只是有个线性对应关系，因此要换算回去：乘 lambda z</strong></p>
-<h3 id="夫琅和费衍射"><a href="#夫琅和费衍射" class="headerlink" title="夫琅和费衍射"></a>夫琅和费衍射</h3><p>在夫琅和费远场近似下：</p>
-<script type="math/tex; mode=display">
+<h3 id="夫琅和费衍射">夫琅和费衍射</h3>
+<p>在夫琅和费远场近似下： <span class="math display">\[
 \begin{align}
-\widetilde E(u,v)&=\widetilde E(x,y)=\frac{1}{i\lambda z_1}\exp\left[ik\left(z_1+\frac{x^2+y^2}{2z_1}\right)\right]\iint_{-\infty}^\infty \widetilde E(x_1,y_1)\exp\left[-ik(\frac{x}{z_1}x_1+\frac{y}{z_1}y_1)\right]\operatorname{dx_1dy_1}\\
-&=\widetilde A\cdot\iint_{-\infty}^\infty \widetilde E(x_1,y_1)\exp\left[-i2\pi(ux_1+vy_1)\right]\operatorname{dx_1dy_1}\\
-&=\widetilde A\cdot\mathcal{F}\left[\widetilde E(x_1,y_1)\right]
-\end{align}</script><p>其中，$(u,v)=\displaystyle (\frac{x}{\lambda z_1},\frac{y}{\lambda z_1})=(\frac{\cos\alpha}{\lambda},\frac{\cos\beta}{\lambda})$ 为空间频率 $1/\lambda$ 在 $x,y$ 方向的分解。</p>
+\widetilde E(u,v)&amp;=\widetilde E(x,y)=\frac{1}{i\lambda z_1}\exp\left[ik\left(z_1+\frac{x^2+y^2}{2z_1}\right)\right]\iint_{-\infty}^\infty \widetilde E(x_1,y_1)\exp\left[-ik(\frac{x}{z_1}x_1+\frac{y}{z_1}y_1)\right]\operatorname{dx_1dy_1}\\
+&amp;=\widetilde A\cdot\iint_{-\infty}^\infty \widetilde E(x_1,y_1)\exp\left[-i2\pi(ux_1+vy_1)\right]\operatorname{dx_1dy_1}\\
+&amp;=\widetilde A\cdot\mathcal{F}\left[\widetilde E(x_1,y_1)\right]
+\end{align}
+\]</span> 其中，<span class="math inline">\((u,v)=\displaystyle (\frac{x}{\lambda z_1},\frac{y}{\lambda z_1})=(\frac{\cos\alpha}{\lambda},\frac{\cos\beta}{\lambda})\)</span> 为空间频率 <span class="math inline">\(1/\lambda\)</span> 在 <span class="math inline">\(x,y\)</span> 方向的分解。</p>
 <p>一张复杂的图片有许多不同的空间频率的单频信息组成，当单色波正入射在待分析的图像上时，通过夫琅和费衍射，一定空间频率的单频信息就被向特定方向衍射的平面波输送出来，所有衍射波最终会聚在焦面上的不同位置而形象地展示出原图片的频谱。这一过程的“运算速度”显然远高于计算机，一照就出来了。</p>
 <p>理想的夫琅和费衍射系统是一个傅立叶频谱分析器。</p>
 <p><strong>太近效果不好的原因可能是远场近似不再适用</strong></p>
-<h3 id="透镜"><a href="#透镜" class="headerlink" title="透镜"></a>透镜</h3><p>进入透镜的发散球面波，出去时变成了会聚的：</p>
-<script type="math/tex; mode=display">
-\widetilde E(x_1,y_1)=A\exp(ikd_0)\exp\left[\frac{ik}{2d_0}(x_1^2+y_1^2)\right]\to \widetilde E'(x_1,y_1)=A\exp(-ikd)\exp\left[-\frac{ik}{2d}(x_1^2+y_1^2)\right]</script><p>透镜的透射系数：</p>
-<script type="math/tex; mode=display">
-\begin{align}
-\widetilde t(x_1,y_1)&=\frac{\widetilde E}{\widetilde E'}=\exp\left[-ik\frac{(x_1^2+y_1^2)}{2}\left(\frac 1 d+\frac 1 {d_0}\right)\right]\\
-&=\exp\left(-ik\frac{x_1^2+y_1^2}{2f}\right)
+<h3 id="透镜">透镜</h3>
+<p>进入透镜的发散球面波，出去时变成了会聚的： <span class="math display">\[
+\widetilde E(x_1,y_1)=A\exp(ikd_0)\exp\left[\frac{ik}{2d_0}(x_1^2+y_1^2)\right]\to \widetilde E&#39;(x_1,y_1)=A\exp(-ikd)\exp\left[-\frac{ik}{2d}(x_1^2+y_1^2)\right]
+\]</span></p>
+<p>透镜的透射系数： $$ <span class="math display">\[\begin{align}
+\widetilde t(x_1,y_1)&amp;=\frac{\widetilde E}{\widetilde E&#39;}=\exp\left[-ik\frac{(x_1^2+y_1^2)}{2}\left(\frac 1 d+\frac 1 {d_0}\right)\right]\\
+&amp;=\exp\left(-ik\frac{x_1^2+y_1^2}{2f}\right)
 
-\end{align}</script><p>其中 $f$ 满足：$\displaystyle\frac{1}{d_0}+\frac{1}{d}=\frac{1}{f}$ .</p>
-<h3 id="深入理解透镜的傅立叶变换性质"><a href="#深入理解透镜的傅立叶变换性质" class="headerlink" title="深入理解透镜的傅立叶变换性质"></a>深入理解透镜的傅立叶变换性质</h3><p>光经过有限大物体后的传播过程就是衍射的过程，根据传播距离可以用夫琅和费衍射或者菲涅尔衍射计算传播到像面后的光场分布。可以说，衍射无处不在，传播就有衍射。</p>
-<p>假设有这么一个夫琅和费衍射系统：光源—狭缝（衍射平面）-透镜—成像平面</p>
-<p>设光透过衍射平面后的场分布为 $\widetilde E(x_1,y_1)$, 透过透镜后的场分布为：</p>
-<script type="math/tex; mode=display">
-\widetilde E'(x_1,y_1)=\widetilde E(x_1,y_1)\cdot \widetilde t(x_1,y_1)</script><p>然后衍射到透镜后焦面，由于是有限距离，应该用菲涅尔衍射去计算：</p>
-<script type="math/tex; mode=display">
-\begin{align}
-\widetilde E(u,v)&=\widetilde E(x,y)=\frac{e^{ikf}}{i\lambda f}e^{ik\frac{x^2+y^2}{2f}}\mathcal{F}\left[\widetilde E'(x_1,y_1)\exp\left(ik\frac{x_1^2+y_1^2}{2f}\right)\right]\\
-&=\widetilde A\cdot\mathcal{F}\left[\widetilde E(x_1,y_1)\right]\mid_{u=\frac{x}{\lambda f},v=\frac{y}{\lambda f}}
+\end{align}\]</span> $$ 其中 <span class="math inline">\(f\)</span> 满足：<span class="math inline">\(\displaystyle\frac{1}{d_0}+\frac{1}{d}=\frac{1}{f}\)</span> .</p>
+<h3 id="深入理解透镜的傅立叶变换性质">深入理解透镜的傅立叶变换性质</h3>
+<p>光经过有限大物体后的传播过程就是衍射的过程，根据传播距离可以用夫琅和费衍射或者菲涅尔衍射计算传播到像面后的光场分布。可以说，衍射无处不在，传播就有衍射。</p>
+<p>假设有这么一个夫琅和费衍射系统：光源—狭缝（衍射平面）-透镜--成像平面</p>
+<p>设光透过衍射平面后的场分布为 <span class="math inline">\(\widetilde E(x_1,y_1)\)</span>, 透过透镜后的场分布为： <span class="math display">\[
+\widetilde E&#39;(x_1,y_1)=\widetilde E(x_1,y_1)\cdot \widetilde t(x_1,y_1)
+\]</span> 然后衍射到透镜后焦面，由于是有限距离，应该用菲涅尔衍射去计算： $$ <span class="math display">\[\begin{align}
+\widetilde E(u,v)&amp;=\widetilde E(x,y)=\frac{e^{ikf}}{i\lambda f}e^{ik\frac{x^2+y^2}{2f}}\mathcal{F}\left[\widetilde E&#39;(x_1,y_1)\exp\left(ik\frac{x_1^2+y_1^2}{2f}\right)\right]\\
+&amp;=\widetilde A\cdot\mathcal{F}\left[\widetilde E(x_1,y_1)\right]\mid_{u=\frac{x}{\lambda f},v=\frac{y}{\lambda f}}
 
-\end{align}</script><p>注意透镜的透射系数刚刚好消掉了菲涅尔衍射的那个系数，使最终结果成为了一个干净的傅立叶变换。</p>
+\end{align}\]</span> $$ 注意透镜的透射系数刚刚好消掉了菲涅尔衍射的那个系数，使最终结果成为了一个干净的傅立叶变换。</p>
 <p>因此整个夫琅和费衍射系统本来是夫琅和费衍射，做个傅立叶变换就好了，但是要在很远处才能观察。为了在近处观察加了透镜，要改为菲涅尔衍射去计算，结果兜兜转转算完得到和夫琅和费衍射一样的形式。</p>
 <p>另一方面可以看到，从衍射平面到透镜再到透镜后焦面，整合后等价于做一个傅立叶变换，这就是透镜的傅立叶变换性质：透镜前的场知道了，加个透镜则后焦面的场就是做一个傅立叶变换。这是透镜的透射系数和菲涅尔衍射美妙的结合。</p>
-<h3 id="与透镜有一定距离"><a href="#与透镜有一定距离" class="headerlink" title="与透镜有一定距离"></a>与透镜有一定距离</h3><p>算了一个难忘的下午…</p>
+<h3 id="与透镜有一定距离">与透镜有一定距离</h3>
+<p>算了一个难忘的下午...</p>
 <p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gmxse8szhnj31to0rb1kx.jpg" alt="image-20210123180601121" style="zoom: 33%;" /></p>
-<p>将菲涅尔衍射积分写成系统函数的形式：</p>
-<script type="math/tex; mode=display">
-U \left( x _ { 0 } , y _ { 0 } \right) = \iint _ { S } h \left( x _ { 0 } - x _ { 1 } , y _ { 0 } - y _ { 1 } \right) U \left( x _ { 1 } , y _ { 1 } \right) d x _ { 1 } d y _ { 1 }</script><p>其中：</p>
-<script type="math/tex; mode=display">
-h \left( x _ { 0 } - x _ { 1 } , y _ { 0 } - y _ { 1 } \right) \cong \frac {  e ^ { - j k z } } { j \lambda z } e ^ { - \frac { j k } { 2 z } \left[ \left( x _ { 1 } - x _ { 0 } \right) ^ { 2 } + \left( y _ { 1 } - y _ { 0 } \right) ^ { 2 } \right] }</script><p>因此菲涅尔衍射中在距离 $z$ 的自由传播空间可以看作一个冲激响应为</p>
-<script type="math/tex; mode=display">
-h \left( x _ { 0 } , y _ { 0 } \right) = \frac {  e ^ { - j k z } } { j \lambda z } e ^ { - \frac { j k } { 2 z } \left[ x _ { 0 } ^ { 2 } + y _ { 0 } ^ { 2 } \right] }</script><p>的系统，其系统函数为</p>
-<script type="math/tex; mode=display">
-\begin{aligned} H \left( u , v \right) & = F _ { 2 D } \left\{ h \left( x _ { 0 } , y _ { 0 } \right) \right\} \\ & =  \frac { e ^ { - j k z } } { j \lambda z } F _ { x } \left\{ e ^ { - \frac { j k } { 2 z } x _ { 0 } ^ { 2 } } \right\} F _ { y } \left\{ e ^ { - \frac { j k } { 2 z } y _ { 0 } ^ { 2 } } \right\} \end{aligned}</script><p>利用</p>
-<script type="math/tex; mode=display">
-F \left\{ e ^ { j \alpha t ^ { 2 } } \right\} = \sqrt { \frac { \pi } { \alpha } } e ^ { j \frac { \pi } { 4 } } e ^ { - j \frac { ( 2 \pi f ) ^ { 2 } } { 4 \alpha } }</script><p>带入可得：</p>
-<script type="math/tex; mode=display">
-\begin{aligned} H \left( u, v \right) = e ^ { - j k z } e ^ { j \pi \lambda z \left( u ^ { 2 } + v ^ { 2 } \right) } \end{aligned}</script><p> 其中 $u\cong x/\lambda f,v\cong y/\lambda f. $</p>
-<h2 id="偏振光"><a href="#偏振光" class="headerlink" title="偏振光"></a>偏振光</h2><h3 id="偏振光的测定"><a href="#偏振光的测定" class="headerlink" title="偏振光的测定"></a>偏振光的测定</h3><ol>
+<p>将菲涅尔衍射积分写成系统函数的形式： <span class="math display">\[
+U \left( x _ { 0 } , y _ { 0 } \right) = \iint _ { S } h \left( x _ { 0 } - x _ { 1 } , y _ { 0 } - y _ { 1 } \right) U \left( x _ { 1 } , y _ { 1 } \right) d x _ { 1 } d y _ { 1 }
+\]</span> 其中： <span class="math display">\[
+h \left( x _ { 0 } - x _ { 1 } , y _ { 0 } - y _ { 1 } \right) \cong \frac {  e ^ { - j k z } } { j \lambda z } e ^ { - \frac { j k } { 2 z } \left[ \left( x _ { 1 } - x _ { 0 } \right) ^ { 2 } + \left( y _ { 1 } - y _ { 0 } \right) ^ { 2 } \right] }
+\]</span> 因此菲涅尔衍射中在距离 <span class="math inline">\(z\)</span> 的自由传播空间可以看作一个冲激响应为 <span class="math display">\[
+h \left( x _ { 0 } , y _ { 0 } \right) = \frac {  e ^ { - j k z } } { j \lambda z } e ^ { - \frac { j k } { 2 z } \left[ x _ { 0 } ^ { 2 } + y _ { 0 } ^ { 2 } \right] }
+\]</span> 的系统，其系统函数为 <span class="math display">\[
+\begin{aligned} H \left( u , v \right) &amp; = F _ { 2 D } \left\{ h \left( x _ { 0 } , y _ { 0 } \right) \right\} \\ &amp; =  \frac { e ^ { - j k z } } { j \lambda z } F _ { x } \left\{ e ^ { - \frac { j k } { 2 z } x _ { 0 } ^ { 2 } } \right\} F _ { y } \left\{ e ^ { - \frac { j k } { 2 z } y _ { 0 } ^ { 2 } } \right\} \end{aligned}
+\]</span> 利用 <span class="math display">\[
+F \left\{ e ^ { j \alpha t ^ { 2 } } \right\} = \sqrt { \frac { \pi } { \alpha } } e ^ { j \frac { \pi } { 4 } } e ^ { - j \frac { ( 2 \pi f ) ^ { 2 } } { 4 \alpha } }
+\]</span> 带入可得： <span class="math display">\[
+\begin{aligned} H \left( u, v \right) = e ^ { - j k z } e ^ { j \pi \lambda z \left( u ^ { 2 } + v ^ { 2 } \right) } \end{aligned}
+\]</span> 其中 $ux/f,vy/f. $</p>
+<h2 id="偏振光">偏振光</h2>
+<h3 id="偏振光的测定">偏振光的测定</h3>
+<ol type="1">
 <li>入射光：</li>
 </ol>
 <ul>
@@ -803,15 +832,14 @@ F \left\{ e ^ { j \alpha t ^ { 2 } } \right\} = \sqrt { \frac { \pi } { \alpha }
 <li>b 自然光、圆偏振光、部分圆偏振光</li>
 <li>c 椭圆偏振光、部分椭圆偏振光、部分线偏振光</li>
 </ul>
-<ol>
+<ol start="2" type="1">
 <li><p>放入线偏振片（检偏器），转一圈</p>
 <ul>
 <li>存在两个消光位置：a</li>
 <li>光强无变化：b</li>
 <li>光强有亮暗变化但是不能消光：c</li>
-</ul>
-</li>
-<li><p>放入 $\lambda/4$ 波片，旋转使快轴与光强最大处（偏振椭圆长轴）重合，再放一个检偏器，转动观察</p>
+</ul></li>
+<li><p>放入 <span class="math inline">\(\lambda/4\)</span> 波片，旋转使快轴与光强最大处（偏振椭圆长轴）重合，再放一个检偏器，转动观察</p>
 <p>（1）对b：</p>
 <ul>
 <li>光强无变化：自然光</li>
@@ -821,25 +849,20 @@ F \left\{ e ^ { j \alpha t ^ { 2 } } \right\} = \sqrt { \frac { \pi } { \alpha }
 <p>（2）对c：</p>
 <ul>
 <li>两次消光：椭圆偏振 （部分线偏振光不能完全消光）</li>
-<li>将 $\lambda/4$ 波片转 $45^\circ$，检偏器转动观察：<ul>
+<li>将 <span class="math inline">\(\lambda/4\)</span> 波片转 <span class="math inline">\(45^\circ\)</span>，检偏器转动观察：
+<ul>
 <li>光强无变化：部分线偏振光（因为过了波片变成了部分圆偏振）</li>
 <li>光强有变化：部分椭圆偏振</li>
-</ul>
-</li>
-</ul>
-</li>
+</ul></li>
+</ul></li>
 </ol>
-<h1 id="复习"><a href="#复习" class="headerlink" title="复习"></a>复习</h1><ul>
+<h1 id="复习">复习</h1>
+<ul>
 <li><p>电磁理论</p>
 <ul>
-<li><p>菲涅尔公式</p>
-</li>
-<li><p>全反射、布鲁斯特角、倏逝波</p>
-</li>
-</ul>
-</li>
-</ul>
-<ul>
+<li><p>菲涅尔公式</p></li>
+<li><p>全反射、布鲁斯特角、倏逝波</p></li>
+</ul></li>
 <li><p>干涉</p>
 <ul>
 <li>杨氏双缝干涉</li>
@@ -847,31 +870,26 @@ F \left\{ e ^ { j \alpha t ^ { 2 } } \right\} = \sqrt { \frac { \pi } { \alpha }
 <li>多光束干涉</li>
 <li>干涉系统：F-P，M-Z，迈克尔逊，裴索</li>
 <li>干涉滤光片</li>
-</ul>
-</li>
+</ul></li>
 <li><p>衍射</p>
 <ul>
 <li>夫琅和费衍射</li>
-<li>菲涅尔衍射<ul>
+<li>菲涅尔衍射
+<ul>
 <li>菲涅尔波带法</li>
-</ul>
-</li>
+</ul></li>
 <li>单缝衍射、多缝衍射</li>
 <li>闪耀光栅</li>
 <li>分辨率</li>
 <li>衍射效率、衍射系统？</li>
-</ul>
-</li>
-</ul>
-<ul>
+</ul></li>
 <li><p>傅立叶光学</p>
 <ul>
 <li>矩孔、圆孔傅立叶变换</li>
 <li>阿贝成像理论</li>
 <li>相干传递函数、光学传递函数</li>
 <li>应用？</li>
-</ul>
-</li>
+</ul></li>
 <li><p>偏振</p>
 <ul>
 <li>偏振态</li>
@@ -880,8 +898,7 @@ F \left\{ e ^ { j \alpha t ^ { 2 } } \right\} = \sqrt { \frac { \pi } { \alpha }
 <li>琼斯矩阵、琼斯矢量方法</li>
 <li>入射面、光线面、法线面、折射率曲面、波矢面等</li>
 <li>偏振光干涉：平行偏振光的干涉、会聚偏振光的干涉</li>
-</ul>
-</li>
+</ul></li>
 </ul>
 
       
@@ -946,7 +963,8 @@ F \left\{ e ^ { j \alpha t ^ { 2 } } \right\} = \sqrt { \frac { \pi } { \alpha }
       
 
       
-      <h1 id="Quantum-Mechanics-Notes"><a href="#Quantum-Mechanics-Notes" class="headerlink" title="Quantum-Mechanics-Notes"></a>Quantum-Mechanics-Notes</h1><p>Notes for quantum mechanics of MIT-OCW 8.04.</p>
+      <h1 id="quantum-mechanics-notes">Quantum-Mechanics-Notes</h1>
+<p>Notes for quantum mechanics of MIT-OCW 8.04.</p>
 <p><em>’This is the goal of 8.04: we will step beyond the scale of daily experiences to develop an intuition for electrons, atoms, and superposition.’</em></p>
       
       <a class="article-more-link" href="../../2020/09/15/Physics/Quantum-Mechanics/">阅读更多...</a>
@@ -1013,9 +1031,12 @@ F \left\{ e ^ { j \alpha t ^ { 2 } } \right\} = \sqrt { \frac { \pi } { \alpha }
       
 
       
-      <h1 id="Note-for-Data-Structure"><a href="#Note-for-Data-Structure" class="headerlink" title="Note for Data Structure"></a>Note for Data Structure</h1><h3 id="维护最大堆"><a href="#维护最大堆" class="headerlink" title="维护最大堆"></a>维护最大堆</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">// MAP-HEAPIFY</span><br><span class="line">MAX_HEAPIFY(A,i)</span><br><span class="line">	l = LEFT(i)</span><br><span class="line">    r = RIGHT(i)</span><br><span class="line">    <span class="keyword">if</span> l &lt;= A.size <span class="keyword">and</span> A[l]&gt;A[i]</span><br><span class="line">        largest = l</span><br><span class="line">    <span class="keyword">else</span> </span><br><span class="line">    	largest = i</span><br><span class="line">    <span class="keyword">if</span> r &lt;= A.size <span class="keyword">and</span> A[r]&gt;A[largest]</span><br><span class="line">    	largest = r</span><br><span class="line">    <span class="keyword">if</span> largest != i</span><br><span class="line">    	exchange(A[i],A[largest]) // 交换了 i 和 largest 位置的元素</span><br><span class="line">    	MAX_HEAPIFY(A,largest)</span><br></pre></td></tr></table></figure>
-<p>维护最大/小堆的时间复杂度为 $\log(n)$，常用在连续取出最大值或最小值。</p>
-<h4 id="优先队列"><a href="#优先队列" class="headerlink" title="优先队列"></a>优先队列</h4><p>普通的队列是先进先出，而在优先队列中，元素被赋予优先级。当访问元素时，具有最高优先级的元素最先删除。优先队列具有最高级先出 （first in, largest out）的行为特征。</p>
+      <h1 id="note-for-data-structure">Note for Data Structure</h1>
+<h3 id="维护最大堆">维护最大堆</h3>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">// MAP-HEAPIFY</span><br><span class="line">MAX_HEAPIFY(A,i)</span><br><span class="line">	l = LEFT(i)</span><br><span class="line">    r = RIGHT(i)</span><br><span class="line">    <span class="keyword">if</span> l &lt;= A.size <span class="keyword">and</span> A[l]&gt;A[i]</span><br><span class="line">        largest = l</span><br><span class="line">    <span class="keyword">else</span> </span><br><span class="line">    	largest = i</span><br><span class="line">    <span class="keyword">if</span> r &lt;= A.size <span class="keyword">and</span> A[r]&gt;A[largest]</span><br><span class="line">    	largest = r</span><br><span class="line">    <span class="keyword">if</span> largest != i</span><br><span class="line">    	exchange(A[i],A[largest]) // 交换了 i 和 largest 位置的元素</span><br><span class="line">    	MAX_HEAPIFY(A,largest)</span><br></pre></td></tr></table></figure>
+<p>维护最大/小堆的时间复杂度为 <span class="math inline">\(\log(n)\)</span>，常用在连续取出最大值或最小值。</p>
+<h4 id="优先队列">优先队列</h4>
+<p>普通的队列是先进先出，而在优先队列中，元素被赋予优先级。当访问元素时，具有最高优先级的元素最先删除。优先队列具有最高级先出 （first in, largest out）的行为特征。</p>
 <p>优先队列在队列基础上添加了内部的一个排序，它本质是一个堆实现的。因而维护堆的时候可以直接用STL的 <code>priority_queue</code>.</p>
 <p>less是从大到小，greater是从小到大？</p>
 <ul>
@@ -1084,20 +1105,27 @@ F \left\{ e ^ { j \alpha t ^ { 2 } } \right\} = \sqrt { \frac { \pi } { \alpha }
       
 
       
-      <h1 id="PyTorch-Note"><a href="#PyTorch-Note" class="headerlink" title="PyTorch Note"></a>PyTorch Note</h1><p>This is a note for using Torch with Python.</p>
-<h2 id="Basic"><a href="#Basic" class="headerlink" title="Basic"></a>Basic</h2><p>To get the variable’s name, use <code>var.name</code></p>
+      <h1 id="pytorch-note">PyTorch Note</h1>
+<p>This is a note for using Torch with Python.</p>
+<h2 id="basic">Basic</h2>
+<p>To get the variable’s name, use <code>var.name</code></p>
 <p>To get the variable’s value, use <code>var.data</code></p>
-<h2 id="Cuda"><a href="#Cuda" class="headerlink" title="Cuda"></a>Cuda</h2><p>To use cuda, we need to use <code>.cuda()</code> to move the model, loss function and training data to cuda.</p>
-<h2 id="Linear-Regression"><a href="#Linear-Regression" class="headerlink" title="Linear Regression"></a>Linear Regression</h2><p><code>nn.Linear(in_features,out_features)</code></p>
-<p>​    Inside is a matrix with shape $ \text{in_features}\times \text{out_features}$</p>
-<h2 id="Practice"><a href="#Practice" class="headerlink" title="Practice"></a>Practice</h2><p>Stage 1: easy linear regression ✅</p>
+<h2 id="cuda">Cuda</h2>
+<p>To use cuda, we need to use <code>.cuda()</code> to move the model, loss function and training data to cuda.</p>
+<h2 id="linear-regression">Linear Regression</h2>
+<p><code>nn.Linear(in_features,out_features)</code></p>
+<p>​ Inside is a matrix with shape $ $</p>
+<h2 id="practice">Practice</h2>
+<p>Stage 1: easy linear regression ✅</p>
 <p>Stage 2: linear regression with hidden layer</p>
 <p>Stage 3: more complex : data preprocessing with pandas, using batch to train</p>
-<h2 id="Ideas"><a href="#Ideas" class="headerlink" title="Ideas"></a>Ideas</h2><p>I suddenly thought that training a network is a procedure to traverse the state space efficiently.</p>
+<h2 id="ideas">Ideas</h2>
+<p>I suddenly thought that training a network is a procedure to traverse the state space efficiently.</p>
 <p>Intermediate layers is first set to solve the problem of cannot detecting symmetry.</p>
 <p>Recurnt networks</p>
 <p>How to prove that the network can more offen find a global minimum and rarely get stuck in local minima? Adding a few more connections can creater new paths.</p>
-<h4 id="BatchNorm2d"><a href="#BatchNorm2d" class="headerlink" title="BatchNorm2d"></a>BatchNorm2d</h4><p>输入是一个四维矩阵NCHW，$\gamma$ 和 $\beta$ 为一维数组，是对每一批N[i]里<code>input[0][0],...,input[0][C]</code> 这C个HxW的二维矩阵分别进行处理标准化，标准化参数是学出来的。</p>
+<h4 id="batchnorm2d">BatchNorm2d</h4>
+<p>输入是一个四维矩阵NCHW，<span class="math inline">\(\gamma\)</span> 和 <span class="math inline">\(\beta\)</span> 为一维数组，是对每一批N[i]里<code>input[0][0],...,input[0][C]</code> 这C个HxW的二维矩阵分别进行处理标准化，标准化参数是学出来的。</p>
 
       
       <!-- reward -->
@@ -1161,105 +1189,114 @@ F \left\{ e ^ { j \alpha t ^ { 2 } } \right\} = \sqrt { \frac { \pi } { \alpha }
       
 
       
-      <h1 id="随机过程复习总结"><a href="#随机过程复习总结" class="headerlink" title="随机过程复习总结"></a>随机过程复习总结</h1><p><em>Peter_H</em></p>
-<h2 id="1-Markov-过程"><a href="#1-Markov-过程" class="headerlink" title="1. Markov 过程"></a>1. Markov 过程</h2><h3 id="状态转移矩阵"><a href="#状态转移矩阵" class="headerlink" title="状态转移矩阵"></a>状态转移矩阵</h3><p> $p_{ij}^n=P(X_{t_0+n}=j\mid X_{t_0}=i)$</p>
-<p>CK方程： $\vec\mu^{(n)}=\vec\mu^{0}P^n$</p>
-<h3 id="常返和暂留"><a href="#常返和暂留" class="headerlink" title="常返和暂留"></a>常返和暂留</h3><p>常返：状态 $i$ 出发有限次可回</p>
+      <h1 id="随机过程复习总结">随机过程复习总结</h1>
+<p><em>Peter_H</em></p>
+<h2 id="markov-过程">1. Markov 过程</h2>
+<h3 id="状态转移矩阵">状态转移矩阵</h3>
+<p><span class="math inline">\(p_{ij}^n=P(X_{t_0+n}=j\mid X_{t_0}=i)\)</span></p>
+<p>CK方程： <span class="math inline">\(\vec\mu^{(n)}=\vec\mu^{0}P^n\)</span></p>
+<h3 id="常返和暂留">常返和暂留</h3>
+<p>常返：状态 <span class="math inline">\(i\)</span> 出发有限次可回</p>
 <p><em>常见考点</em>：求出所有互达等价类，各状态的周期和常返性，计算所有正常返态的平均回转时，计算极限概率</p>
 <p><strong>是否常返</strong>：</p>
 <ul>
-<li>有限马尔可夫链可以利用闭互达等价类直接判断：如果状态空间 $I$ 有限，则状态 $i$ 常返当且仅当 $i$ 的互达等价类是闭的，且这时 $i$ 一定是正常返</li>
-<li><p>利用互达等价类减少计算：若状态 $i$ 和 $j$ 互达，则 $d(i)=d(j)$ （周期相等），$i$ 常返/正常返当且仅当 $j$ 常返/正常返</p>
-</li>
-<li><p>通过计算来判断：计算 $f_{ii}=\sum\limits_{n}f_{ii}^{(n)}$, $f_{ii}=1$ 常返，$f_{ii}&lt;1$ 暂留。其中 $f_{ij}^{(n)}$ 是 $i$ 出发在第 $n$ 步首次击中 $j$ 的概率。对于非封闭的互达等价类，通过计算 $f_{ii}$ 说明暂留性。</p>
-</li>
-<li><p>是否正常返：计算平均回转时 $\mu_i=\sum\limits_n nf_{ii}^{(n)}$, 看是否有限, 若无限则为零常返</p>
-</li>
+<li><p>有限马尔可夫链可以利用闭互达等价类直接判断：如果状态空间 <span class="math inline">\(I\)</span> 有限，则状态 <span class="math inline">\(i\)</span> 常返当且仅当 <span class="math inline">\(i\)</span> 的互达等价类是闭的，且这时 <span class="math inline">\(i\)</span> 一定是正常返</p></li>
+<li><p>利用互达等价类减少计算：若状态 <span class="math inline">\(i\)</span> 和 <span class="math inline">\(j\)</span> 互达，则 <span class="math inline">\(d(i)=d(j)\)</span> （周期相等），<span class="math inline">\(i\)</span> 常返/正常返当且仅当 <span class="math inline">\(j\)</span> 常返/正常返</p></li>
+<li><p>通过计算来判断：计算 <span class="math inline">\(f_{ii}=\sum\limits_{n}f_{ii}^{(n)}\)</span>, <span class="math inline">\(f_{ii}=1\)</span> 常返，<span class="math inline">\(f_{ii}&lt;1\)</span> 暂留。其中 <span class="math inline">\(f_{ij}^{(n)}\)</span> 是 <span class="math inline">\(i\)</span> 出发在第 <span class="math inline">\(n\)</span> 步首次击中 <span class="math inline">\(j\)</span> 的概率。对于非封闭的互达等价类，通过计算 <span class="math inline">\(f_{ii}\)</span> 说明暂留性。</p></li>
+<li><p>是否正常返：计算平均回转时 <span class="math inline">\(\mu_i=\sum\limits_n nf_{ii}^{(n)}\)</span>, 看是否有限, 若无限则为零常返</p></li>
 </ul>
 <p><strong>极限概率：</strong></p>
 <ul>
 <li>利用平稳分布</li>
-<li>若状态 $j$ 为暂留或零常返，则对所有 $i$, $\lim_\limits{n\to\infty} p_{ij}^{(n)}=0$</li>
+<li>若状态 <span class="math inline">\(j\)</span> 为暂留或零常返，则对所有 <span class="math inline">\(i\)</span>, <span class="math inline">\(\lim_\limits{n\to\infty} p_{ij}^{(n)}=0\)</span></li>
 </ul>
-<h3 id="平稳分布"><a href="#平稳分布" class="headerlink" title="平稳分布"></a>平稳分布</h3><p>初始分布与一步分布相同：$\pi P=\pi$。</p>
-<p>比如：$\pi_1=\frac 1 2 \pi_1+\frac 1 3\pi_2$ , 是指从初始状态 $\pi_1$ 一步后到 $\pi_1$ 再从 $\pi_1$ 以 $\frac 1 2$ 概率回到 $\pi_1$， 一步后到 $\pi_2$ 再从 $\pi_2$ 以 $\frac 1 3$ 概率回到 $\pi_1$。</p>
+<h3 id="平稳分布">平稳分布</h3>
+<p>初始分布与一步分布相同：<span class="math inline">\(\pi P=\pi\)</span>。</p>
+<p>比如：<span class="math inline">\(\pi_1=\frac 1 2 \pi_1+\frac 1 3\pi_2\)</span> , 是指从初始状态 <span class="math inline">\(\pi_1\)</span> 一步后到 <span class="math inline">\(\pi_1\)</span> 再从 <span class="math inline">\(\pi_1\)</span> 以 <span class="math inline">\(\frac 1 2\)</span> 概率回到 <span class="math inline">\(\pi_1\)</span>， 一步后到 <span class="math inline">\(\pi_2\)</span> 再从 <span class="math inline">\(\pi_2\)</span> 以 <span class="math inline">\(\frac 1 3\)</span> 概率回到 <span class="math inline">\(\pi_1\)</span>。</p>
 <p>对互达等价类（不可约状态集）的计算：</p>
 <ul>
-<li>闭的 $\implies$ 正常返 $\implies$ 平稳分布存在且唯一， $\pi_i=\frac 1 {\mu_i}$</li>
-<li>若为非周期正常返，则任何状态 $i,j,\lim_\limits{n\to\infty}p_{ij}^{(n)}=\pi_j$</li>
+<li>闭的 <span class="math inline">\(\implies\)</span> 正常返 <span class="math inline">\(\implies\)</span> 平稳分布存在且唯一， <span class="math inline">\(\pi_i=\frac 1 {\mu_i}\)</span></li>
+<li>若为非周期正常返，则任何状态 <span class="math inline">\(i,j,\lim_\limits{n\to\infty}p_{ij}^{(n)}=\pi_j\)</span></li>
 </ul>
-<h3 id="吸收概率和平均吸收时间"><a href="#吸收概率和平均吸收时间" class="headerlink" title="吸收概率和平均吸收时间"></a>吸收概率和平均吸收时间</h3><p>用递推的思想。</p>
-<p>设 $h_i=P(T_a&lt;\infty\mid X_0=i)$ 表示从状态 $i$ 出发在有限时间内能访问状态 $a$ 的概率，其中 $T_a$ 为首次访问状态 $a$ 的时间，有 $h_i=\sum_\limits{j}p_{ij}h_j$.</p>
-<p>设 $a_i=E(T_a\mid X_0=i)$ 表示从 $i$ 出发首次访问 $a$ 的平均步数，有 $a_i=1+\sum_\limits{j}p_{ij}a_j$.</p>
-<h2 id="2-独立增量过程"><a href="#2-独立增量过程" class="headerlink" title="2. 独立增量过程"></a>2. 独立增量过程</h2><h3 id="泊松过程"><a href="#泊松过程" class="headerlink" title="泊松过程"></a>泊松过程</h3><h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><ul>
-<li><p>独立增量过程</p>
-</li>
-<li><p>$N(0)=0$</p>
-</li>
-<li>$N(t)-N(s)\sim \pi(\lambda(t-s))$</li>
-<li>$\displaystyle P(N(t)-N(s)=k)=\frac{[\lambda (t-s)]^ke^{-\lambda(t-s)}}{k!}$</li>
-</ul>
-<h4 id="数字特征"><a href="#数字特征" class="headerlink" title="数字特征"></a>数字特征</h4><ul>
-<li>均值 $\mu_N(t)=E(N(t))=\lambda t$</li>
-<li>方差 $D_N(t)=\lambda t$</li>
-<li>自协方差函数 $C_N(s,t)=\lambda \min\{s,t\}$</li>
-<li>自相关函数 $R_N(s,t)=E(N(s)N(t))=\lambda \min\{s,t\}+\lambda^2 st$</li>
-</ul>
-<h4 id="推广"><a href="#推广" class="headerlink" title="推广"></a>推广</h4><ul>
-<li>合成、分解后依旧是泊松过程</li>
-<li><p>非齐次：$\lambda=\lambda(t)$</p>
-</li>
-<li><p>$\{N(t)\}$ 为强度 $\lambda$ 的泊松过程 $\iff$ 时间间隔 $T_1,T_2,\cdots$ 相互独立，且服从均值为 $1/\lambda$ 的指数分布</p>
-</li>
-</ul>
-<h3 id="布朗运动"><a href="#布朗运动" class="headerlink" title="布朗运动"></a>布朗运动</h3><p>特殊的正态过程</p>
-<h4 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h4><ul>
-<li><p>独立增量过程</p>
-</li>
-<li><p>$X(0)=0$</p>
-</li>
-<li>$X(t)-X(s)\sim N(0,\sigma^2(t-s))$</li>
-</ul>
-<h4 id="数字特征-1"><a href="#数字特征-1" class="headerlink" title="数字特征"></a>数字特征</h4><p>对标准布朗运动 $B(t)=\{X(t)/\sigma\}$</p>
+<h3 id="吸收概率和平均吸收时间">吸收概率和平均吸收时间</h3>
+<p>用递推的思想。</p>
+<p>设 <span class="math inline">\(h_i=P(T_a&lt;\infty\mid X_0=i)\)</span> 表示从状态 <span class="math inline">\(i\)</span> 出发在有限时间内能访问状态 <span class="math inline">\(a\)</span> 的概率，其中 <span class="math inline">\(T_a\)</span> 为首次访问状态 <span class="math inline">\(a\)</span> 的时间，有 <span class="math inline">\(h_i=\sum_\limits{j}p_{ij}h_j\)</span>.</p>
+<p>设 <span class="math inline">\(a_i=E(T_a\mid X_0=i)\)</span> 表示从 <span class="math inline">\(i\)</span> 出发首次访问 <span class="math inline">\(a\)</span> 的平均步数，有 <span class="math inline">\(a_i=1+\sum_\limits{j}p_{ij}a_j\)</span>.</p>
+<h2 id="独立增量过程">2. 独立增量过程</h2>
+<h3 id="泊松过程">泊松过程</h3>
+<h4 id="定义">定义</h4>
 <ul>
-<li>$\mu_B(t)=0$</li>
-<li>$D_B(t)=t$</li>
-<li>$C_B(s,t)=\min\{s,t\}$</li>
-<li>$R_B(s,t)=\min\{s,t\}$</li>
+<li><p>独立增量过程</p></li>
+<li><p><span class="math inline">\(N(0)=0\)</span></p></li>
+<li><p><span class="math inline">\(N(t)-N(s)\sim \pi(\lambda(t-s))\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle P(N(t)-N(s)=k)=\frac{[\lambda (t-s)]^ke^{-\lambda(t-s)}}{k!}\)</span></p></li>
 </ul>
-<h4 id="推广-1"><a href="#推广-1" class="headerlink" title="推广"></a>推广</h4><p>$\{B(t);t\geq 0\}$ 是标准布朗运动，则：</p>
+<h4 id="数字特征">数字特征</h4>
 <ul>
-<li>$\{B(t+\tau)-B(\tau)\}$ 也是</li>
-<li>$\{\displaystyle \frac 1 c B(c^2t)\}$ 也是</li>
-<li>$\widetilde B(t)=t\displaystyle B(\frac 1 t) $ 也是 （定义 $0$ 处为 $0$）</li>
+<li>均值 <span class="math inline">\(\mu_N(t)=E(N(t))=\lambda t\)</span></li>
+<li>方差 <span class="math inline">\(D_N(t)=\lambda t\)</span></li>
+<li>自协方差函数 <span class="math inline">\(C_N(s,t)=\lambda \min\{s,t\}\)</span></li>
+<li>自相关函数 <span class="math inline">\(R_N(s,t)=E(N(s)N(t))=\lambda \min\{s,t\}+\lambda^2 st\)</span></li>
+</ul>
+<h4 id="推广">推广</h4>
+<ul>
+<li><p>合成、分解后依旧是泊松过程</p></li>
+<li><p>非齐次：<span class="math inline">\(\lambda=\lambda(t)\)</span></p></li>
+<li><p><span class="math inline">\(\{N(t)\}\)</span> 为强度 <span class="math inline">\(\lambda\)</span> 的泊松过程 <span class="math inline">\(\iff\)</span> 时间间隔 <span class="math inline">\(T_1,T_2,\cdots\)</span> 相互独立，且服从均值为 <span class="math inline">\(1/\lambda\)</span> 的指数分布</p></li>
+</ul>
+<h3 id="布朗运动">布朗运动</h3>
+<p>特殊的正态过程</p>
+<h4 id="定义-1">定义</h4>
+<ul>
+<li><p>独立增量过程</p></li>
+<li><p><span class="math inline">\(X(0)=0\)</span></p></li>
+<li><p><span class="math inline">\(X(t)-X(s)\sim N(0,\sigma^2(t-s))\)</span></p></li>
+</ul>
+<h4 id="数字特征-1">数字特征</h4>
+<p>对标准布朗运动 <span class="math inline">\(B(t)=\{X(t)/\sigma\}\)</span></p>
+<ul>
+<li><span class="math inline">\(\mu_B(t)=0\)</span></li>
+<li><span class="math inline">\(D_B(t)=t\)</span></li>
+<li><span class="math inline">\(C_B(s,t)=\min\{s,t\}\)</span></li>
+<li><span class="math inline">\(R_B(s,t)=\min\{s,t\}\)</span></li>
+</ul>
+<h4 id="推广-1">推广</h4>
+<p><span class="math inline">\(\{B(t);t\geq 0\}\)</span> 是标准布朗运动，则：</p>
+<ul>
+<li><span class="math inline">\(\{B(t+\tau)-B(\tau)\}\)</span> 也是</li>
+<li><span class="math inline">\(\{\displaystyle \frac 1 c B(c^2t)\}\)</span> 也是</li>
+<li>$B(t)=tB( t) $ 也是 （定义 <span class="math inline">\(0\)</span> 处为 <span class="math inline">\(0\)</span>）</li>
 </ul>
 <p>布朗桥过程：</p>
 <ul>
-<li>$\{B(t);0\leq t\leq 1\mid B(1)=0\}$</li>
-<li>$\mu=0$</li>
-<li>$\sigma^2=t(1-t)$</li>
-<li>对 $0\leq s\leq t\leq 1, \operatorname{Cov}(B(s),B(t)\mid B(1)=0)=s(1-t)$</li>
+<li><span class="math inline">\(\{B(t);0\leq t\leq 1\mid B(1)=0\}\)</span></li>
+<li><span class="math inline">\(\mu=0\)</span></li>
+<li><span class="math inline">\(\sigma^2=t(1-t)\)</span></li>
+<li>对 <span class="math inline">\(0\leq s\leq t\leq 1, \operatorname{Cov}(B(s),B(t)\mid B(1)=0)=s(1-t)\)</span></li>
 </ul>
-<h4 id="首中时间相关"><a href="#首中时间相关" class="headerlink" title="首中时间相关"></a>首中时间相关</h4><p>$P(\max\limits_{0\leq s\leq t}B(s)\geq y)=P(T_y\leq t)=2P(B(t)\geq y)$</p>
-<h2 id="3-平稳过程"><a href="#3-平稳过程" class="headerlink" title="3. 平稳过程"></a>3. 平稳过程</h2><h4 id="宽平稳过程"><a href="#宽平稳过程" class="headerlink" title="宽平稳过程"></a>宽平稳过程</h4><ul>
+<h4 id="首中时间相关">首中时间相关</h4>
+<p><span class="math inline">\(P(\max\limits_{0\leq s\leq t}B(s)\geq y)=P(T_y\leq t)=2P(B(t)\geq y)\)</span></p>
+<h2 id="平稳过程">3. 平稳过程</h2>
+<h4 id="宽平稳过程">宽平稳过程</h4>
+<ul>
 <li>均值为常数</li>
 <li>自相关函数只和时间差有关</li>
 </ul>
-<h4 id="各态历经性"><a href="#各态历经性" class="headerlink" title="各态历经性"></a>各态历经性</h4><p>记 $\langle X(t)\rangle=\displaystyle\lim_\limits{T\to \infty} \frac{1}{2T}\int_{-T}^{T}X(t)dt$</p>
+<h4 id="各态历经性">各态历经性</h4>
+<p>记 <span class="math inline">\(\langle X(t)\rangle=\displaystyle\lim_\limits{T\to \infty} \frac{1}{2T}\int_{-T}^{T}X(t)dt\)</span></p>
 <ul>
-<li>均值各态历经性： $\langle X(t)\rangle=\mu_X$</li>
-<li>自相关函数各态历经性：$\langle X(t)X(t+\tau)\rangle=E[X(t)X(t+\tau)]=R_X(\tau)$</li>
+<li>均值各态历经性： <span class="math inline">\(\langle X(t)\rangle=\mu_X\)</span></li>
+<li>自相关函数各态历经性：<span class="math inline">\(\langle X(t)X(t+\tau)\rangle=E[X(t)X(t+\tau)]=R_X(\tau)\)</span></li>
 <li>（宽）各态历经过程：均值函数和自相关函数都有各态历经性</li>
 </ul>
 <p>重要推论：</p>
-<p>若 $\lim\limits_{\tau\to\infty} R_X(\tau) $ 存在，则 $\{X(t)\}$ 对均值具有各态历经性当且仅当 $\lim_\limits{\tau\to \infty} R_X(\tau)=\mu_X^2$</p>
-<h4 id="频率域表述"><a href="#频率域表述" class="headerlink" title="频率域表述"></a>频率域表述</h4><ul>
-<li><p>平均功率 $= R_X(0)=\displaystyle \frac 1 {2\pi}\int_{-\infty}^{\infty} S_X(\omega) \operatorname{d} \omega$</p>
-</li>
-<li><p>维纳-辛钦公式：$S_X(\omega)$ 和 $R_X(t)$ 互为傅立叶变换对</p>
-</li>
+<p>若 $_{} R_X() $ 存在，则 <span class="math inline">\(\{X(t)\}\)</span> 对均值具有各态历经性当且仅当 <span class="math inline">\(\lim_\limits{\tau\to \infty} R_X(\tau)=\mu_X^2\)</span></p>
+<h4 id="频率域表述">频率域表述</h4>
+<ul>
+<li><p>平均功率 <span class="math inline">\(= R_X(0)=\displaystyle \frac 1 {2\pi}\int_{-\infty}^{\infty} S_X(\omega) \operatorname{d} \omega\)</span></p></li>
+<li><p>维纳-辛钦公式：<span class="math inline">\(S_X(\omega)\)</span> 和 <span class="math inline">\(R_X(t)\)</span> 互为傅立叶变换对</p></li>
 </ul>
-<p>常用变换：$\displaystyle e^{-a|\tau|}\leftrightarrow \frac{2a}{a^2+\omega^w}$</p>
+<p>常用变换：<span class="math inline">\(\displaystyle e^{-a|\tau|}\leftrightarrow \frac{2a}{a^2+\omega^w}\)</span></p>
 
       
       <!-- reward -->

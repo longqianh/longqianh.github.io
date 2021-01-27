@@ -69,7 +69,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">206</span>
+            <span class="post-count">208</span>
         </span>
     </span>
 
@@ -103,20 +103,27 @@
       
 
       
-      <h1 id="PyTorch-Note"><a href="#PyTorch-Note" class="headerlink" title="PyTorch Note"></a>PyTorch Note</h1><p>This is a note for using Torch with Python.</p>
-<h2 id="Basic"><a href="#Basic" class="headerlink" title="Basic"></a>Basic</h2><p>To get the variable’s name, use <code>var.name</code></p>
+      <h1 id="pytorch-note">PyTorch Note</h1>
+<p>This is a note for using Torch with Python.</p>
+<h2 id="basic">Basic</h2>
+<p>To get the variable’s name, use <code>var.name</code></p>
 <p>To get the variable’s value, use <code>var.data</code></p>
-<h2 id="Cuda"><a href="#Cuda" class="headerlink" title="Cuda"></a>Cuda</h2><p>To use cuda, we need to use <code>.cuda()</code> to move the model, loss function and training data to cuda.</p>
-<h2 id="Linear-Regression"><a href="#Linear-Regression" class="headerlink" title="Linear Regression"></a>Linear Regression</h2><p><code>nn.Linear(in_features,out_features)</code></p>
-<p>​    Inside is a matrix with shape $ \text{in_features}\times \text{out_features}$</p>
-<h2 id="Practice"><a href="#Practice" class="headerlink" title="Practice"></a>Practice</h2><p>Stage 1: easy linear regression ✅</p>
+<h2 id="cuda">Cuda</h2>
+<p>To use cuda, we need to use <code>.cuda()</code> to move the model, loss function and training data to cuda.</p>
+<h2 id="linear-regression">Linear Regression</h2>
+<p><code>nn.Linear(in_features,out_features)</code></p>
+<p>​ Inside is a matrix with shape $ $</p>
+<h2 id="practice">Practice</h2>
+<p>Stage 1: easy linear regression ✅</p>
 <p>Stage 2: linear regression with hidden layer</p>
 <p>Stage 3: more complex : data preprocessing with pandas, using batch to train</p>
-<h2 id="Ideas"><a href="#Ideas" class="headerlink" title="Ideas"></a>Ideas</h2><p>I suddenly thought that training a network is a procedure to traverse the state space efficiently.</p>
+<h2 id="ideas">Ideas</h2>
+<p>I suddenly thought that training a network is a procedure to traverse the state space efficiently.</p>
 <p>Intermediate layers is first set to solve the problem of cannot detecting symmetry.</p>
 <p>Recurnt networks</p>
 <p>How to prove that the network can more offen find a global minimum and rarely get stuck in local minima? Adding a few more connections can creater new paths.</p>
-<h4 id="BatchNorm2d"><a href="#BatchNorm2d" class="headerlink" title="BatchNorm2d"></a>BatchNorm2d</h4><p>输入是一个四维矩阵NCHW，$\gamma$ 和 $\beta$ 为一维数组，是对每一批N[i]里<code>input[0][0],...,input[0][C]</code> 这C个HxW的二维矩阵分别进行处理标准化，标准化参数是学出来的。</p>
+<h4 id="batchnorm2d">BatchNorm2d</h4>
+<p>输入是一个四维矩阵NCHW，<span class="math inline">\(\gamma\)</span> 和 <span class="math inline">\(\beta\)</span> 为一维数组，是对每一批N[i]里<code>input[0][0],...,input[0][C]</code> 这C个HxW的二维矩阵分别进行处理标准化，标准化参数是学出来的。</p>
 
       
       <!-- reward -->

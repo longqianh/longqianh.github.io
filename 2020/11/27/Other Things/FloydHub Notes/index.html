@@ -69,7 +69,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">106</span>
+            <span class="post-count">104</span>
         </span>
     </span>
 
@@ -106,29 +106,30 @@
       <p>FloydHub is a nice place to train and practice deep learning models.</p>
 <p>There are some notes of some command line operation.</p>
 <a id="more"></a>
-<h2 id="First"><a href="#First" class="headerlink" title="First"></a>First</h2><ul>
+<h2 id="first">First</h2>
+<ul>
 <li>Log in: <code>floyd login</code></li>
 <li>Create a new project with name <code>proj-name</code></li>
-<li>Initialize: <code>floyd init proj-name</code> <ul>
-<li>this will start a CLI (command line interface)  job </li>
+<li>Initialize: <code>floyd init proj-name</code>
+<ul>
+<li>this will start a CLI (command line interface) job</li>
+</ul></li>
+<li>Run: <code>floyd run "python run.py"</code>
+<ul>
+<li>by default, run on cpu ; to specify, use <code>--gpu</code></li>
+</ul></li>
 </ul>
-</li>
-<li>Run: <code>floyd run &quot;python run.py&quot;</code> <ul>
-<li>by default, run on cpu ; to specify, use <code>--gpu</code> </li>
+<h2 id="second">Second</h2>
+<ul>
+<li><p>Employ: <code>--mode serve</code> NEED TO DEEP IN LATER</p></li>
+<li><p>Immediately display logs: add command <code>-f</code> or <code>--follow</code></p></li>
 </ul>
-</li>
-</ul>
-<h2 id="Second"><a href="#Second" class="headerlink" title="Second"></a>Second</h2><ul>
-<li><p>Employ: <code>--mode serve</code> NEED TO DEEP IN LATER</p>
-</li>
-<li><p>Immediately display logs: add command <code>-f</code> or <code>--follow</code></p>
-</li>
-</ul>
-<h2 id="Third"><a href="#Third" class="headerlink" title="Third"></a>Third</h2><ul>
-<li>View output: <code>floyd output</code><ul>
-<li>this command will execute a web page of Floyd </li>
-</ul>
-</li>
+<h2 id="third">Third</h2>
+<ul>
+<li>View output: <code>floyd output</code>
+<ul>
+<li>this command will execute a web page of Floyd</li>
+</ul></li>
 <li>Info of job: <code>floyd info</code></li>
 <li>Status of jobs: <code>floyd status</code></li>
 </ul>

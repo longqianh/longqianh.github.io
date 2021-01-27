@@ -103,21 +103,26 @@
       
 
       
-      <h1 id="搭建此博客过程中的心得"><a href="#搭建此博客过程中的心得" class="headerlink" title="搭建此博客过程中的心得"></a>搭建此博客过程中的心得</h1><h2 id="1-Hexo框架"><a href="#1-Hexo框架" class="headerlink" title="1. Hexo框架"></a>1. <a href="https://zhuanlan.zhihu.com/p/26625249" target="_blank" rel="noopener">Hexo框架</a></h2><p>看到“绑定域名”之前就可以了。</p>
+      <h1 id="搭建此博客过程中的心得">搭建此博客过程中的心得</h1>
+<h2 id="hexo框架">1. <a href="https://zhuanlan.zhihu.com/p/26625249" target="_blank" rel="noopener">Hexo框架</a></h2>
+<p>看到“绑定域名”之前就可以了。</p>
 <p>理解以下：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean % 清除当前缓存</span><br><span class="line">hexo g -d % generate 生成博客</span><br><span class="line">hexo d % deploy 将博客部署到GitHub</span><br><span class="line">hexo s % hexo server的简写 之后可以在localhost上访问</span><br><span class="line">hexo new &quot;bulabula&quot; %生成名为bulabula的md文件（一篇新文章）</span><br></pre></td></tr></table></figure>
-<h2 id="2-购买域名"><a href="#2-购买域名" class="headerlink" title="2. 购买域名"></a>2. 购买域名</h2><p>选择了阿里云，发现域名买起来也挺方便的。</p>
- <a id="more"></a>
-<h2 id="3-域名与GitHub-Page-绑定"><a href="#3-域名与GitHub-Page-绑定" class="headerlink" title="3. 域名与GitHub Page 绑定"></a>3. 域名与GitHub Page 绑定</h2><p>这里踩了不少坑。有的文章跟着走下来却没有效果。最后是跟着<a href="https://cloud.tencent.com/developer/article/1037114" target="_blank" rel="noopener">这篇文章</a>的域名解析和GitHub解析部分完成的。还是要用SSH。只需要做一个A类型和一个CNAME类型两个域名解析。</p>
+<h2 id="购买域名">2. 购买域名</h2>
+<p>选择了阿里云，发现域名买起来也挺方便的。</p>
+<p><a id="more"></a></p>
+<h2 id="域名与github-page-绑定">3. 域名与GitHub Page 绑定</h2>
+<p>这里踩了不少坑。有的文章跟着走下来却没有效果。最后是跟着<a href="https://cloud.tencent.com/developer/article/1037114" target="_blank" rel="noopener">这篇文章</a>的域名解析和GitHub解析部分完成的。还是要用SSH。只需要做一个A类型和一个CNAME类型两个域名解析。</p>
 <p>需要域名和GitHub Page双向绑定。</p>
 <p>（1）输入longqianh.github.io。由于在setting里的设置，GitHub Page会帮我重定向到我购买的longqianh.com，然后DNS服务器解析域名，将 longqianh.com 解析为我GitHub Page 的IP地址，然后得以访问。<a href="https://blog.csdn.net/gui951753/article/details/83070180" target="_blank" rel="noopener">但是可能是一个IP可能对应多个web地址，直接访问IP地址是不行的</a>。</p>
 <p>（2）输入longqianh.com。DNS服务器解析到GitHub Page的IP地址进行访问。</p>
 <p>我似乎还没有理解在域名解析那里设置CNAME所起的作用。</p>
-<h2 id="4-主题设置"><a href="#4-主题设置" class="headerlink" title="4. 主题设置"></a>4. 主题设置</h2><p>我从<a href="https://hexo.io/themes/" target="_blank" rel="noopener">各种hexo的主题</a>里选择了 Ayer 主题， 然后修改.yml文件、一些.ejs文件，然后更换了一些图片。从Google的主题上拿下来了一个钢铁侠的超好看背景图片，然后从一些icon网站下了一些钢铁侠的图标，用PS反相操作一下，把黑色反转成白色以突出，就成了现在的模样。</p>
-<h2 id="5-一些常见问题"><a href="#5-一些常见问题" class="headerlink" title="5. 一些常见问题"></a>5. 一些常见问题</h2><ul>
+<h2 id="主题设置">4. 主题设置</h2>
+<p>我从<a href="https://hexo.io/themes/" target="_blank" rel="noopener">各种hexo的主题</a>里选择了 Ayer 主题， 然后修改.yml文件、一些.ejs文件，然后更换了一些图片。从Google的主题上拿下来了一个钢铁侠的超好看背景图片，然后从一些icon网站下了一些钢铁侠的图标，用PS反相操作一下，把黑色反转成白色以突出，就成了现在的模样。</p>
+<h2 id="一些常见问题">5. 一些常见问题</h2>
+<ul>
 <li><p>hexo g 失败</p>
-<p>‘YAMLException: can not read a block mapping entry; a multiline key may not be an implicit key at line 6, column 1’</p>
-</li>
+<p>‘YAMLException: can not read a block mapping entry; a multiline key may not be an implicit key at line 6, column 1’</p></li>
 </ul>
 <p>解决：</p>
 <p>title: hexo 注意冒号后面要加空格</p>
@@ -132,34 +137,28 @@
 <p>可以测试一下：</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
 <p>应该是可以得到回应的。</p>
-<p>接下来 <code>hexo g -d</code> 就可以部署啦！</p>
-</li>
-</ul>
-<ul>
+<p>接下来 <code>hexo g -d</code> 就可以部署啦！</p></li>
 <li><p>404</p>
-<p>GitHub中在Enforce https上打个勾 ✅</p>
-</li>
+<p>GitHub中在Enforce https上打个勾 ✅</p></li>
 </ul>
-<h2 id="6-日志"><a href="#6-日志" class="headerlink" title="6. 日志"></a>6. 日志</h2><p><strong>2020.5.4</strong></p>
+<h2 id="日志">6. 日志</h2>
+<p><strong>2020.5.4</strong></p>
 <ul>
 <li>尝试改善一下mathjax渲染，行内公式有些问题。莫得成功。<a href="https://abelsu7.top/2018/10/29/hexo-mathjax/#%E6%9B%BF%E6%8D%A2%E9%BB%98%E8%AE%A4%E6%B8%B2%E6%9F%93%E5%BC%95%E6%93%8E" target="_blank" rel="noopener">替换默认渲染引擎</a></li>
-<li>给目录添加超链接  <a href="http://xianbai.me/learn-md/article/syntax/links.html" target="_blank" rel="noopener">markdown学习</a> 默认的初始路径为/public 应该从public文件中找html。</li>
-<li>具体一些，比如2020-ICM添加的超链接路径是这样的：/2020/05/02/Projects/2020-ICM/index.html </li>
+<li>给目录添加超链接 <a href="http://xianbai.me/learn-md/article/syntax/links.html" target="_blank" rel="noopener">markdown学习</a> 默认的初始路径为/public 应该从public文件中找html。</li>
+<li>具体一些，比如2020-ICM添加的超链接路径是这样的：/2020/05/02/Projects/2020-ICM/index.html</li>
 </ul>
-<h3 id="待办"><a href="#待办" class="headerlink" title="待办"></a>待办</h3><ul>
-<li>添加文章置顶 <a href="https://www.jianshu.com/p/bdd1239863de" target="_blank" rel="noopener">https://www.jianshu.com/p/bdd1239863de</a> 学习这个</li>
-<li>调整html文章行间距和字体大小 现在行间距有点小 字体也有点小</li>
-<li>添加GitHub Forkme</li>
-<li>添加个人简介 about</li>
-<li>把分类一栏做的漂亮些 现在各级目录都有 但是大小不一</li>
-<li><p>修改超链接hover颜色 弄的好看一点 蓝色太尴尬了</p>
-</li>
-<li><p>了解RSS并配置</p>
-</li>
-<li><p>制作像“简悦”里那样的目录样式：鼠标移到左边显示目录 移开目录隐藏</p>
-</li>
-<li><p>配置页面文字和代码样式：借助 Typora 的主题文件夹中的主题代码</p>
-</li>
+<h3 id="待办">待办</h3>
+<ul>
+<li><p>添加文章置顶 https://www.jianshu.com/p/bdd1239863de 学习这个</p></li>
+<li><p>调整html文章行间距和字体大小 现在行间距有点小 字体也有点小</p></li>
+<li><p>添加GitHub Forkme</p></li>
+<li><p>添加个人简介 about</p></li>
+<li><p>把分类一栏做的漂亮些 现在各级目录都有 但是大小不一</p></li>
+<li><p>修改超链接hover颜色 弄的好看一点 蓝色太尴尬了</p></li>
+<li><p>了解RSS并配置</p></li>
+<li><p>制作像“简悦”里那样的目录样式：鼠标移到左边显示目录 移开目录隐藏</p></li>
+<li><p>配置页面文字和代码样式：借助 Typora 的主题文件夹中的主题代码</p></li>
 </ul>
 
       
