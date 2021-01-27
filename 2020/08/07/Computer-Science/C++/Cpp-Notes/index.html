@@ -69,7 +69,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">760</span>
+            <span class="post-count">759</span>
         </span>
     </span>
 
@@ -103,24 +103,18 @@
       
 
       
-      <h2 id="c-notes">C++ Notes</h2>
-<p><a href="https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/contents/" target="_blank" rel="noopener">代码风格</a></p>
-<h3 id="头文件保护">头文件保护</h3>
-<p>为防止被多重包含，添加预处理指令。</p>
+      <h2 id="C-Notes"><a href="#C-Notes" class="headerlink" title="C++ Notes"></a>C++ Notes</h2><p><a href="https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/contents/" target="_blank" rel="noopener">代码风格</a></p>
+<h3 id="头文件保护"><a href="#头文件保护" class="headerlink" title="头文件保护"></a>头文件保护</h3><p>为防止被多重包含，添加预处理指令。</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> _HPP_H_</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> _HPP_H_</span></span><br><span class="line"><span class="comment">/*头文件的一系列声明*/</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br></pre></td></tr></table></figure>
-<h3 id="宏"><a href="https://docs.microsoft.com/en-us/cpp/preprocessor/token-pasting-operator-hash-hash?view=vs-2019" target="_blank" rel="noopener">宏</a></h3>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> CAT(N) X ## N <span class="comment">//## 在宏定义中将两个字符连接起来，构成一个新的标识符</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> PRINTF_XN(n) printf(<span class="meta-string">"X"</span> # n <span class="meta-string">"=%d\n"</span>,X ## n); <span class="comment">//# 将对应变量字符串化</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">CAT</span><span class="params">(<span class="number">1</span>)</span> </span>= <span class="number">2</span>;</span><br><span class="line">    PRINTF_XN(<span class="number">1</span>); <span class="comment">//打印出X1=2</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"当前源代码函数名：__FUNCTION__==%s\n"</span>,__FUNCTION__);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"当前源代码行号：__LINE__==%d\n"</span>,__LINE__);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"当前源代码文件名：__FILE__==%s\n"</span>,__FILE__);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"当前编译日期〔注意和当前系统日期区别开来〕:__DATE__==%s\n"</span>,__DATE__);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"当前编译时间〔注意和当前系统日期区别开来〕:__TIME__==%s\n"</span>,__TIME__);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"当前系统时间戳：__TIMESTAMP__==%s\n"</span>,__TIMESTAMP__);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"当要求程序严格遵循ANSIC标准时该标识符被赋值为1:__STDC__==%d\n"</span>,__STDC__);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"当用C++编译程序编译时，标识符__cplusplus就会被定义:__cplusplus==%ld\n"</span>,__cplusplus);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// copy from https://blog.csdn.net/wyg1065395142/article/details/50930395</span></span><br></pre></td></tr></table></figure>
-<h1 id="类继承">类继承</h1>
-<p>如果要在派生类中重新定义基类的方法，通常应将基类的方法声明为虚的 <code>virtual</code>。这样，程序将根据对象类型而不是引用或指针类型来选择方法版本。</p>
+<h3 id="宏"><a href="#宏" class="headerlink" title="宏"></a><a href="https://docs.microsoft.com/en-us/cpp/preprocessor/token-pasting-operator-hash-hash?view=vs-2019" target="_blank" rel="noopener">宏</a></h3><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> CAT(N) X ## N <span class="comment">//## 在宏定义中将两个字符连接起来，构成一个新的标识符</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> PRINTF_XN(n) printf(<span class="meta-string">"X"</span> # n <span class="meta-string">"=%d\n"</span>,X ## n); <span class="comment">//# 将对应变量字符串化</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">CAT</span><span class="params">(<span class="number">1</span>)</span> </span>= <span class="number">2</span>;</span><br><span class="line">    PRINTF_XN(<span class="number">1</span>); <span class="comment">//打印出X1=2</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"当前源代码函数名：__FUNCTION__==%s\n"</span>,__FUNCTION__);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"当前源代码行号：__LINE__==%d\n"</span>,__LINE__);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"当前源代码文件名：__FILE__==%s\n"</span>,__FILE__);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"当前编译日期〔注意和当前系统日期区别开来〕:__DATE__==%s\n"</span>,__DATE__);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"当前编译时间〔注意和当前系统日期区别开来〕:__TIME__==%s\n"</span>,__TIME__);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"当前系统时间戳：__TIMESTAMP__==%s\n"</span>,__TIMESTAMP__);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"当要求程序严格遵循ANSIC标准时该标识符被赋值为1:__STDC__==%d\n"</span>,__STDC__);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"当用C++编译程序编译时，标识符__cplusplus就会被定义:__cplusplus==%ld\n"</span>,__cplusplus);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// copy from https://blog.csdn.net/wyg1065395142/article/details/50930395</span></span><br></pre></td></tr></table></figure>
+ <a id="more"></a>
+<h1 id="类继承"><a href="#类继承" class="headerlink" title="类继承"></a>类继承</h1><p>如果要在派生类中重新定义基类的方法，通常应将基类的方法声明为虚的 <code>virtual</code>。这样，程序将根据对象类型而不是引用或指针类型来选择方法版本。</p>
 <p>为基类声明一个虚析构函数 <code>virtual ~Base() {}</code> 也是一种惯例。确保释放派生对象时，按正确的顺序调用析构函数。</p>
-<h2 id="指针">指针</h2>
-<p>指针的类型不过是解释数据的方式不同罢了，这样的道理也可用于很多场合的强制类型转换，例如将int类型指针转换为char型指针，并不会改变内存的实际内容，只是<strong>修改了解释方式</strong>而已。而 <code>void *</code> 是一种无类型指针，任何类型指针都可以转为<code>void*</code>，它无条件接受各种类型。而既然是无类型指针，那么就不要尝试 <em>解引用</em> 和进行 <em>算数运算</em>。</p>
+<h2 id="指针"><a href="#指针" class="headerlink" title="指针"></a>指针</h2><p>指针的类型不过是解释数据的方式不同罢了，这样的道理也可用于很多场合的强制类型转换，例如将int类型指针转换为char型指针，并不会改变内存的实际内容，只是<strong>修改了解释方式</strong>而已。而 <code>void *</code> 是一种无类型指针，任何类型指针都可以转为<code>void*</code>，它无条件接受各种类型。而既然是无类型指针，那么就不要尝试 <em>解引用</em> 和进行 <em>算数运算</em>。</p>
 <p><code>void*</code>能包容地接受各种类型的指针。也就是说，如果你期望接口能够接受任何类型的参数，你可以使用 <code>void*</code> 类型。但是在具体使用的时候，必须转换为具体的指针类型。</p>
-<h2 id="模版">模版</h2>
-<p>模板只是其定义实现的指令，算不上真正的代码，只有在模板实例化时才会生成真正的代码。因此，如果将.h和.cpp分开实现，编译器并不会编译.cpp生成单独的代码。而在实例化模板时，根据.h找到声明，但没有相应的实现指令，所以会报错:unresolved error... 因此，一般将定义和声明放在一起，在实例化时才能找到定义。</p>
+<h2 id="模版"><a href="#模版" class="headerlink" title="模版"></a>模版</h2><p>模板只是其定义实现的指令，算不上真正的代码，只有在模板实例化时才会生成真正的代码。因此，如果将.h和.cpp分开实现，编译器并不会编译.cpp生成单独的代码。而在实例化模板时，根据.h找到声明，但没有相应的实现指令，所以会报错:unresolved error…<br>因此，一般将定义和声明放在一起，在实例化时才能找到定义。 </p>
 <p><code>main.cpp,tree.cpp,tree.h</code> 模版在 .h声明，在.cpp实现。而编译时模版的实例化在main中，在tree中（tree.cpp—&gt;tree.o）没有将模版实例化，因此会报错。</p>
-<h2 id="gcc编译">gcc编译</h2>
-<p>https://www.cnblogs.com/battlescars/p/cpp_linux_gcc.html</p>
+<h2 id="gcc编译"><a href="#gcc编译" class="headerlink" title="gcc编译"></a>gcc编译</h2><p><a href="https://www.cnblogs.com/battlescars/p/cpp_linux_gcc.html" target="_blank" rel="noopener">https://www.cnblogs.com/battlescars/p/cpp_linux_gcc.html</a></p>
 
       
       <!-- reward -->
@@ -630,7 +624,42 @@
 
 
     
-  </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            displayMath: [ ['$','$'], ["\\[","\\]"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js"></script>
+
+
+<!-- <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['
+
+</html>,'
+
+</html>], ["\\(","\\)"] ],
+      displayMath: [ ['$','$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js"></script> --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 
 </html>

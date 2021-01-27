@@ -130,9 +130,7 @@
 
 
 <p>Final grade ：</p>
-<figure>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ggiob5huksj318e04ojrm.jpg" alt="grade" /><figcaption aria-hidden="true">grade</figcaption>
-</figure>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ggiob5huksj318e04ojrm.jpg" alt="grade"></p>
 
       
       <!-- reward -->
@@ -203,102 +201,76 @@
       <p>This is my notes for TensorFlow.</p>
 <p>推荐网站：</p>
 <ul>
-<li><a href="tf.wiki">简单粗暴 TensorFlow 2</a></li>
+<li><a href="tf.wiki">简单粗暴 TensorFlow 2</a> </li>
 <li><a href="https://keras.io/zh/" target="_blank" rel="noopener">Keras 中文文档</a></li>
 </ul>
-<h1 id="tensorflow-学习笔记">TensorFlow 学习笔记</h1>
-<h2 id="数学基础部分">1. 数学基础部分</h2>
-<h3 id="损失函数交叉熵">损失函数：交叉熵</h3>
-<p><a href="https://blog.csdn.net/tsyccnh/article/details/79163834" target="_blank" rel="noopener">参考文章：深入理解交叉熵</a></p>
-<ol type="1">
-<li><p>来源 ：信息论</p></li>
-<li><p>信息量:</p></li>
+<h1 id="TensorFlow-学习笔记"><a href="#TensorFlow-学习笔记" class="headerlink" title="TensorFlow 学习笔记"></a>TensorFlow 学习笔记</h1><h2 id="1-数学基础部分"><a href="#1-数学基础部分" class="headerlink" title="1. 数学基础部分"></a>1. 数学基础部分</h2><h3 id="损失函数：交叉熵"><a href="#损失函数：交叉熵" class="headerlink" title="损失函数：交叉熵"></a>损失函数：交叉熵</h3><p><a href="https://blog.csdn.net/tsyccnh/article/details/79163834" target="_blank" rel="noopener">参考文章：深入理解交叉熵</a></p>
+<ol>
+<li><p>来源 ：信息论</p>
+</li>
+<li><p>信息量:  </p>
+</li>
 </ol>
-<p><span class="math display">\[
-I(x)=-\ln \left[p(x)\right]
-\]</span></p>
-<p>衡量事件 <span class="math inline">\(X=x\)</span> 包含信息的多少，发生概率越小，信息量越大。</p>
-<ol start="3" type="1">
+<script type="math/tex; mode=display">
+I(x)=-\ln \left[p(x)\right]</script><p>衡量事件 $X=x$ 包含信息的多少，发生概率越小，信息量越大。</p>
+<ol>
 <li>信息熵：</li>
 </ol>
-<p><span class="math display">\[
-H(X)=E\left[I(X)\right]=-\sum_{i=1}^n p(x_i)\ln\left[p(x_i)\right]
-\]</span></p>
-<p>事件包含的信息量的期望。</p>
-<ol start="4" type="1">
-<li>相对熵：KL divergence <span class="math display">\[
-D_{KL}(A\| B)=-\sum_{i=1}^n p_A(x_i)\ln\left[\frac{p_A(x_i)}{p_B(x_i)}\right]
-\]</span></li>
+<script type="math/tex; mode=display">
+H(X)=E\left[I(X)\right]=-\sum_{i=1}^n p(x_i)\ln\left[p(x_i)\right]</script><p>事件包含的信息量的期望。</p>
+<ol>
+<li>相对熵：KL divergence<script type="math/tex; mode=display">
+D_{KL}(A\| B)=-\sum_{i=1}^n p_A(x_i)\ln\left[\frac{p_A(x_i)}{p_B(x_i)}\right]</script></li>
 </ol>
-<p><span class="math inline">\(A\)</span> 与 <span class="math inline">\(B\)</span> 之间的对数差（即是信息量的差）在 <span class="math inline">\(A\)</span> 上的期望值。</p>
-<p>理解：相对熵在数学上为 <span class="math inline">\(A\)</span> 和<span class="math inline">\(B\)</span> 对数差的期望，进一步可以看成是 <strong><span class="math inline">\(B\)</span> 对<span class="math inline">\(A\)</span> 的信息量的差的期望</strong>。非常符合直觉。</p>
-<ol start="5" type="1">
-<li>交叉熵 <span class="math display">\[
+<p>$A$ 与 $B$ 之间的对数差（即是信息量的差）在 $A$ 上的期望值。</p>
+<p>理解：相对熵在数学上为 $A$ 和$B$ 对数差的期望，进一步可以看成是 <strong>$B$ 对$A$ 的信息量的差的期望</strong>。非常符合直觉。</p>
+<ol>
+<li>交叉熵<script type="math/tex; mode=display">
 \begin{align}
-D_{KL}(A\|B)&amp;=-\sum_{i=1}^n p_A(x_i)\ln\left[p_A(x_i)\right]+\sum_{i=1}^n p_A(x_i)\ln\left[ p_B(x_i)\right]\\
-&amp;=H(A)+H(A,B)
-\end{align}
-\]</span></li>
+D_{KL}(A\|B)&=-\sum_{i=1}^n p_A(x_i)\ln\left[p_A(x_i)\right]+\sum_{i=1}^n p_A(x_i)\ln\left[ p_B(x_i)\right]\\
+&=H(A)+H(A,B)
+\end{align}</script></li>
 </ol>
-<p>后一项 <span class="math inline">\(H(A,B)\)</span> 就是交叉熵： <span class="math display">\[
-H(A,B)=\sum_{i=1}^np_A(x_i)\ln\left[p_B(x_i)\right]
-\]</span></p>
-<ol start="6" type="1">
+<p>后一项 $H(A,B)$ 就是交叉熵：</p>
+<script type="math/tex; mode=display">
+H(A,B)=\sum_{i=1}^np_A(x_i)\ln\left[p_B(x_i)\right]</script><ol>
 <li>应用</li>
 </ol>
-<p>机器学习中，<span class="math inline">\(A\)</span> 为真实分布，<span class="math inline">\(B\)</span> 为预测分布。由于 <span class="math inline">\(A\)</span> 的信息量是不变的，相对熵中可以只关注交叉熵。交叉熵作为损失函数很好地衡量信息量的差。</p>
-<p>线性回归问题中均方误差 <span class="math inline">\(MSE\)</span> 比较好用，在<strong>逻辑分类问题</strong>中交叉熵更加符合直觉。</p>
-<h2 id="算法基础部分">2. 算法基础部分</h2>
-<h3 id="adam">Adam</h3>
-<p>待办：研究论文的数学部分</p>
+<p>机器学习中，$A$ 为真实分布，$B$ 为预测分布。由于 $A$ 的信息量是不变的，相对熵中可以只关注交叉熵。交叉熵作为损失函数很好地衡量信息量的差。</p>
+<p>线性回归问题中均方误差 $MSE$ 比较好用，在<strong>逻辑分类问题</strong>中交叉熵更加符合直觉。</p>
+<h2 id="2-算法基础部分"><a href="#2-算法基础部分" class="headerlink" title="2. 算法基础部分"></a>2. 算法基础部分</h2><h3 id="Adam"><a href="#Adam" class="headerlink" title="Adam"></a>Adam</h3><p>待办：研究论文的数学部分</p>
 <p><a href="https://blog.csdn.net/willduan1/article/details/78070086" target="_blank" rel="noopener">参考网站</a></p>
 <p>理解：更好地更新权重参数</p>
-<p>应用：Well suited for problems that are large in terms of data and/or parameters. The method is also appropriate for non-stationary objectives and problems with very noisy and/or sparse gradients.</p>
-<h3 id="cross-validation">Cross Validation</h3>
-<p>交叉验证。将数据集打乱分成 <span class="math inline">\(k\)</span> 份不相交的集合，循环训练 <span class="math inline">\(k\)</span> 次，第 <span class="math inline">\(i\)</span> 次用除了第 <span class="math inline">\(i\)</span> 集合的部分训练，用第 <span class="math inline">\(i\)</span> 集合计算损失函数，最后的损失函数为所有损失的平均。</p>
+<p>应用：Well suited for problems that are large in terms of data and/or parameters. The method is also appropriate for non-stationary objectives and problems with<br>very noisy and/or sparse gradients.</p>
+<h3 id="Cross-Validation"><a href="#Cross-Validation" class="headerlink" title="Cross Validation"></a>Cross Validation</h3><p>交叉验证。将数据集打乱分成 $k$ 份不相交的集合，循环训练 $k$  次，第 $i$ 次用除了第 $i$ 集合的部分训练，用第 $i$  集合计算损失函数，最后的损失函数为所有损失的平均。</p>
 <p>待办：这种做法的合理性和优越性</p>
 <p>K-fold cross-validation procedure</p>
 <figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 算法伪代码</span></span><br><span class="line">Define KFoldXV(D,A,L,k)<span class="symbol">:</span></span><br><span class="line"><span class="symbol">Require:</span> D the given dataset</span><br><span class="line"><span class="symbol">Require:</span> A the learning algorithm, seen as a function that takes a dataset as input <span class="keyword">and</span> outputs a learned function</span><br><span class="line"><span class="symbol">Require:</span> L the loss function, map the chosen test example to a scalar</span><br><span class="line"><span class="symbol">Require:</span> k the number of folds</span><br><span class="line">	</span><br><span class="line">	Split D into k mutually exclusive subsets D_i, whose union is D</span><br><span class="line">	<span class="keyword">for</span> i from <span class="number">1</span> to k <span class="keyword">do</span></span><br><span class="line">    f_i = A(D\D_i) <span class="comment"># 用第i个集合之外的训练</span></span><br><span class="line">    <span class="keyword">for</span> z_j <span class="keyword">in</span> D_i <span class="keyword">do</span></span><br><span class="line">      e_j = L(f_i,z_j) <span class="comment"># 用第i个集合计算损失</span></span><br><span class="line">    <span class="keyword">end</span> <span class="keyword">for</span></span><br><span class="line">  <span class="keyword">end</span> <span class="keyword">for</span></span><br><span class="line">	Return e</span><br></pre></td></tr></table></figure>
-<h3 id="lstm">LSTM</h3>
-<p><a href="https://zhuanlan.zhihu.com/p/32085405" target="_blank" rel="noopener">参考</a></p>
+<h3 id="LSTM"><a href="#LSTM" class="headerlink" title="LSTM"></a>LSTM</h3><p><a href="https://zhuanlan.zhihu.com/p/32085405" target="_blank" rel="noopener">参考</a></p>
 <p>长短期记忆（Long short-term memory, LSTM）是一种特殊的RNN，主要是为了解决长序列训练过程中的梯度消失和梯度爆炸问题。</p>
-<p>待办：关于激活函数 <span class="math inline">\(\tanh\)</span></p>
-<h2 id="代码基础部分">3. 代码基础部分</h2>
-<p>慢慢填。</p>
-<h3 id="变量与常量">变量与常量</h3>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x = tf.constant([[<span class="number">1.0</span>]])</span><br></pre></td></tr></table></figure>
+<p>待办：关于激活函数 $\tanh$</p>
+<h2 id="3-代码基础部分"><a href="#3-代码基础部分" class="headerlink" title="3. 代码基础部分"></a>3. 代码基础部分</h2><p>慢慢填。</p>
+<h3 id="变量与常量"><a href="#变量与常量" class="headerlink" title="变量与常量"></a>变量与常量</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x = tf.constant([[<span class="number">1.0</span>]])</span><br></pre></td></tr></table></figure>
 <p>注意需转化为张量（or：矩阵），外面多套一层括号。</p>
-<h3 id="tf中的函数">TF中的函数</h3>
-<h4 id="tf.one_hot">tf.one_hot</h4>
-<p><code>tf.one_hot</code> 将输入数组转化为”one-hot“型的输出。和单分类问题有这非常密切的联系（待挖掘）。</p>
+<h3 id="TF中的函数"><a href="#TF中的函数" class="headerlink" title="TF中的函数"></a>TF中的函数</h3><h4 id="tf-one-hot"><a href="#tf-one-hot" class="headerlink" title="tf.one_hot"></a>tf.one_hot</h4><p><code>tf.one_hot</code> 将输入数组转化为”one-hot“型的输出。和单分类问题有这非常密切的联系（待挖掘）。</p>
 <p>比如：</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">-- 输入 --</span><br><span class="line">x=[<span class="number">0</span>,<span class="number">1</span>,<span class="number">-1</span>,<span class="number">2</span>] <span class="comment"># 根据输出 -1 表示不属于任何一类</span></span><br><span class="line">print(tf.one_hot(x,depth=<span class="number">6</span>)) <span class="comment"># depth 应该是总分类数</span></span><br><span class="line"></span><br><span class="line">-- 输出 --</span><br><span class="line">tf.Tensor(</span><br><span class="line">[[<span class="number">1.</span> <span class="number">0.</span> <span class="number">0.</span> <span class="number">0.</span> <span class="number">0.</span> <span class="number">0.</span>]</span><br><span class="line"> [<span class="number">0.</span> <span class="number">1.</span> <span class="number">0.</span> <span class="number">0.</span> <span class="number">0.</span> <span class="number">0.</span>]</span><br><span class="line"> [<span class="number">0.</span> <span class="number">0.</span> <span class="number">0.</span> <span class="number">0.</span> <span class="number">0.</span> <span class="number">0.</span>]</span><br><span class="line"> [<span class="number">0.</span> <span class="number">0.</span> <span class="number">1.</span> <span class="number">0.</span> <span class="number">0.</span> <span class="number">0.</span>]], shape=(<span class="number">4</span>, <span class="number">6</span>), dtype=float32)</span><br></pre></td></tr></table></figure>
-<h4 id="tf.image">tf.image</h4>
-<p>用于图像处理，可以用这个扩充数据集。</p>
-<p><a href="%5Bhttps://medium.com/@lufor129/tensorflow-%E5%9C%96%E7%89%87%E6%95%B8%E6%93%9A%E5%A2%9E%E5%BC%B7-%E4%BA%8C-%E5%9C%96%E7%89%87%E8%99%95%E7%90%86%E5%87%BD%E6%95%B8-1083fb176f9%5D(https://medium.com/@lufor129/tensorflow-圖片數據增強-二-圖片處理函數-1083fb176f9)">推荐/待继续研究</a></p>
-<h4 id="tfds.load">tfds.load</h4>
-<p>载入数据。<code>split</code> <a href="https://www.tensorflow.org/datasets/splits" target="_blank" rel="noopener">有很多玩法</a>。</p>
+<h4 id="tf-image"><a href="#tf-image" class="headerlink" title="tf.image"></a>tf.image</h4><p>用于图像处理，可以用这个扩充数据集。</p>
+<p><a href="[https://medium.com/@lufor129/tensorflow-%E5%9C%96%E7%89%87%E6%95%B8%E6%93%9A%E5%A2%9E%E5%BC%B7-%E4%BA%8C-%E5%9C%96%E7%89%87%E8%99%95%E7%90%86%E5%87%BD%E6%95%B8-1083fb176f9](https://medium.com/@lufor129/tensorflow-圖片數據增強-二-圖片處理函數-1083fb176f9">推荐/待继续研究</a>)</p>
+<h4 id="tfds-load"><a href="#tfds-load" class="headerlink" title="tfds.load"></a>tfds.load</h4><p>载入数据。<code>split</code> <a href="https://www.tensorflow.org/datasets/splits" target="_blank" rel="noopener">有很多玩法</a>。</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> tensorflow_datasets <span class="keyword">as</span> tfds</span><br><span class="line">mnist_dataset, mnist_info = tfda.load(<span class="string">'mnist'</span>,split=<span class="string">'train'</span>,\</span><br><span class="line">               with_info=<span class="literal">True</span>,batch_size=<span class="literal">None</span>,\</span><br><span class="line">               shuffle_files=<span class="literal">True</span>, as_supvised=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 重要参数</span></span><br><span class="line"><span class="comment"># split :  Which split of the data to load (e.g. 'train', 'test' ['train', 'test'], 'train[80%:]')</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># shuffle_files </span></span><br><span class="line"></span><br><span class="line"><span class="comment"># as_supvised : bool, if True, the returned tf.data.Dataset will have a 2-tuple structure (input, label)</span></span><br><span class="line"><span class="comment"># batch_size : add a batch dimension to examples</span></span><br><span class="line"></span><br><span class="line">mnist_train = mnist_dataset[<span class="string">'train'</span>]</span><br><span class="line"><span class="comment"># 返回迭代器(generator ) mnist_train</span></span><br><span class="line"></span><br><span class="line">print(mnist_info)</span><br><span class="line"><span class="comment"># 数据集信息</span></span><br><span class="line"></span><br><span class="line">-- result --</span><br><span class="line"></span><br><span class="line">tfds.core.DatasetInfo(</span><br><span class="line">    name=<span class="string">'mnist'</span>,</span><br><span class="line">    version=<span class="number">3.0</span><span class="number">.1</span>,</span><br><span class="line">    description=<span class="string">'The MNIST database of handwritten digits.'</span>,</span><br><span class="line">    homepage=<span class="string">'http://yann.lecun.com/exdb/mnist/'</span>,</span><br><span class="line">    features=FeaturesDict(&#123;</span><br><span class="line">        <span class="string">'image'</span>: Image(shape=(<span class="number">28</span>, <span class="number">28</span>, <span class="number">1</span>), dtype=tf.uint8),</span><br><span class="line">        <span class="string">'label'</span>: ClassLabel(shape=(), dtype=tf.int64, num_classes=<span class="number">10</span>),</span><br><span class="line">    &#125;),</span><br><span class="line">    total_num_examples=<span class="number">70000</span>,</span><br><span class="line">    splits=&#123;</span><br><span class="line">        <span class="string">'test'</span>: <span class="number">10000</span>,</span><br><span class="line">        <span class="string">'train'</span>: <span class="number">60000</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">    supervised_keys=(<span class="string">'image'</span>, <span class="string">'label'</span>),</span><br><span class="line">    citation=<span class="string">"""@article&#123;lecun2010mnist,</span></span><br><span class="line"><span class="string">      title=&#123;MNIST handwritten digit database&#125;,</span></span><br><span class="line"><span class="string">      author=&#123;LeCun, Yann and Cortes, Corinna and Burges, CJ&#125;,</span></span><br><span class="line"><span class="string">      journal=&#123;ATT Labs [Online]. Available: http://yann. lecun. com/exdb/mnist&#125;,</span></span><br><span class="line"><span class="string">      volume=&#123;2&#125;,</span></span><br><span class="line"><span class="string">      year=&#123;2010&#125;</span></span><br><span class="line"><span class="string">    &#125;"""</span>,</span><br><span class="line">    redistribution_info=,</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
-<h4 id="tf.constant_initializer">tf.constant_initializer</h4>
-<p>用于初始化权重矩阵。</p>
+<h4 id="tf-constant-initializer"><a href="#tf-constant-initializer" class="headerlink" title="tf.constant_initializer"></a>tf.constant_initializer</h4><p>用于初始化权重矩阵。</p>
 <p>待解决：如何查看初始化的矩阵的内容</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">W = np.array([[</span><br><span class="line">    [<span class="number">0</span>, <span class="number">0</span>, <span class="number">-1</span>],</span><br><span class="line">    [<span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>],</span><br><span class="line">    [<span class="number">-2</span>, <span class="number">0</span>, <span class="number">2</span>]</span><br><span class="line">]], dtype=np.float32)</span><br><span class="line">kernel_initializer = tf.constant_initializer(W)</span><br><span class="line"></span><br><span class="line">print(kernel_initializer)</span><br><span class="line"></span><br><span class="line">-- result --</span><br><span class="line">&lt;tensorflow.python.ops.init_ops_v2.Constant object at <span class="number">0x135f09810</span>&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="模型搭建与训练">4. 模型搭建与训练</h2>
-<h3 id="线性回归">线性回归</h3>
-<h4 id="搭模型">搭模型</h4>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 模版</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyModel</span><span class="params">(tf.keras.Model)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        super().__init__()     <span class="comment"># Python 2 下使用 super(MyModel, self).__init__()</span></span><br><span class="line">        <span class="comment"># 此处添加初始化代码（包含 call 方法中会用到的层），例如</span></span><br><span class="line">        <span class="comment"># layer1 = tf.keras.layers.BuiltInLayer(...)</span></span><br><span class="line">        <span class="comment"># layer2 = MyCustomLayer(...)</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">call</span><span class="params">(self, input)</span>:</span></span><br><span class="line">        <span class="comment"># 此处添加模型调用的代码（处理输入并返回输出），例如</span></span><br><span class="line">        <span class="comment"># x = layer1(input)</span></span><br><span class="line">        <span class="comment"># output = layer2(x)</span></span><br><span class="line">        <span class="keyword">return</span> output</span><br><span class="line"></span><br><span class="line"><span class="comment"># 线性模型</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Linear</span><span class="params">(tf.keras.Model)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        super().__init__() <span class="comment"># Python 3 直接 super(). 就可以了</span></span><br><span class="line">        <span class="comment"># 全连接层 训练的参数为矩阵A和b : y = AX+b</span></span><br><span class="line">        self.dense = tf.keras.layers.Dense(</span><br><span class="line">            units=<span class="number">1</span>, <span class="comment"># 输出的最后一维 feature的层数</span></span><br><span class="line">            activation=<span class="literal">None</span>,</span><br><span class="line">	          <span class="comment"># 设置 Keras 各层权重随机初始值</span></span><br><span class="line">            kernel_initializer=tf.zeros_initializer(),</span><br><span class="line">            bias_initializer=tf.zeros_initializer()</span><br><span class="line">        )</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">call</span><span class="params">(self, input)</span>:</span></span><br><span class="line">        output = self.dense(input)</span><br><span class="line">        <span class="keyword">return</span> output</span><br></pre></td></tr></table></figure>
-<h4 id="训练模型">训练模型</h4>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 手动预处理</span></span><br><span class="line">X_raw = np.array([<span class="number">2013</span>, <span class="number">2014</span>, <span class="number">2015</span>, <span class="number">2016</span>, <span class="number">2017</span>], dtype=np.float32)</span><br><span class="line">y_raw = np.array([<span class="number">12000</span>, <span class="number">14000</span>, <span class="number">15000</span>, <span class="number">16500</span>, <span class="number">17500</span>], dtype=np.float32)</span><br><span class="line"></span><br><span class="line">X = (X_raw - X_raw.min()) / (X_raw.max() - X_raw.min())</span><br><span class="line">y = (y_raw - y_raw.min()) / (y_raw.max() - y_raw.min())</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 训练</span></span><br><span class="line">num_epoch = <span class="number">10000</span></span><br><span class="line">model = Linear()</span><br><span class="line">optimizer = tf.keras.optimizers.SGD(learning_rate=<span class="number">0.01</span>)</span><br><span class="line">X = tf.constant([X])  <span class="comment"># X 是向量, [X] 是矩阵,可以转为张量</span></span><br><span class="line">y = tf.constant([y])</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(num_epoch):</span><br><span class="line">    <span class="keyword">with</span> tf.GradientTape() <span class="keyword">as</span> tape: <span class="comment"># 开始记录梯度</span></span><br><span class="line">        y_pred = model(X)</span><br><span class="line">        loss = tf.reduce_mean(tf.square(y_pred - y)) </span><br><span class="line">        <span class="comment"># 均方误差 reduce_mean 对所有tensor所有元素求平均</span></span><br><span class="line"></span><br><span class="line">    grads = tape.gradient(loss, model.variables) <span class="comment"># 对损失函数的每一个变量求偏导</span></span><br><span class="line">    optimizer.apply_gradients(grads_and_vars=zip(grads, model.variables))</span><br><span class="line">    <span class="comment">#  apply_gradient 根据得到的梯度更新参数 传入一个list : [(grad_1,var_1),</span></span><br><span class="line">    <span class="comment"># (grad_2,var_2),...,(grad_n,var_n)]</span></span><br><span class="line">print(y_pred)</span><br></pre></td></tr></table></figure>
-<h4 id="评估模型">评估模型</h4>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">sparse_categorical_accuracy = tf.keras.metrics.SparseCategoricalAccuracy()</span><br><span class="line">num_batches = int(data_loader.num_test_data // batch_size)</span><br><span class="line"><span class="keyword">for</span> batch_index <span class="keyword">in</span> range(num_batches):</span><br><span class="line">    start_index, end_index = batch_index * \</span><br><span class="line">        batch_size, (batch_index + <span class="number">1</span>) * batch_size</span><br><span class="line">    y_pred = model.predict(data_loader.test_data[start_index: end_index])</span><br><span class="line">    sparse_categorical_accuracy.update_state(</span><br><span class="line">        y_true=data_loader.test_label[start_index: end_index], y_pred=y_pred)</span><br><span class="line">print(<span class="string">"test accuracy: %f"</span> % sparse_categorical_accuracy.result())</span><br></pre></td></tr></table></figure>
-<h3 id="卷积神经网络">卷积神经网络</h3>
-<p><code>tfwiki</code> 讲的特别好。理解卷积核<span class="math inline">\((filter)\)</span>减少参数的作用，通过滑动（卷积）扫描整个图像，过程中的权重参数是同一个核的，就是所谓的共享权重。</p>
+<h2 id="4-模型搭建与训练"><a href="#4-模型搭建与训练" class="headerlink" title="4. 模型搭建与训练"></a>4. 模型搭建与训练</h2><h3 id="线性回归"><a href="#线性回归" class="headerlink" title="线性回归"></a>线性回归</h3><h4 id="搭模型"><a href="#搭模型" class="headerlink" title="搭模型"></a>搭模型</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 模版</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyModel</span><span class="params">(tf.keras.Model)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        super().__init__()     <span class="comment"># Python 2 下使用 super(MyModel, self).__init__()</span></span><br><span class="line">        <span class="comment"># 此处添加初始化代码（包含 call 方法中会用到的层），例如</span></span><br><span class="line">        <span class="comment"># layer1 = tf.keras.layers.BuiltInLayer(...)</span></span><br><span class="line">        <span class="comment"># layer2 = MyCustomLayer(...)</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">call</span><span class="params">(self, input)</span>:</span></span><br><span class="line">        <span class="comment"># 此处添加模型调用的代码（处理输入并返回输出），例如</span></span><br><span class="line">        <span class="comment"># x = layer1(input)</span></span><br><span class="line">        <span class="comment"># output = layer2(x)</span></span><br><span class="line">        <span class="keyword">return</span> output</span><br><span class="line"></span><br><span class="line"><span class="comment"># 线性模型</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Linear</span><span class="params">(tf.keras.Model)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        super().__init__() <span class="comment"># Python 3 直接 super(). 就可以了</span></span><br><span class="line">        <span class="comment"># 全连接层 训练的参数为矩阵A和b : y = AX+b</span></span><br><span class="line">        self.dense = tf.keras.layers.Dense(</span><br><span class="line">            units=<span class="number">1</span>, <span class="comment"># 输出的最后一维 feature的层数</span></span><br><span class="line">            activation=<span class="literal">None</span>,</span><br><span class="line">	          <span class="comment"># 设置 Keras 各层权重随机初始值</span></span><br><span class="line">            kernel_initializer=tf.zeros_initializer(),</span><br><span class="line">            bias_initializer=tf.zeros_initializer()</span><br><span class="line">        )</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">call</span><span class="params">(self, input)</span>:</span></span><br><span class="line">        output = self.dense(input)</span><br><span class="line">        <span class="keyword">return</span> output</span><br></pre></td></tr></table></figure>
+<h4 id="训练模型"><a href="#训练模型" class="headerlink" title="训练模型"></a>训练模型</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 手动预处理</span></span><br><span class="line">X_raw = np.array([<span class="number">2013</span>, <span class="number">2014</span>, <span class="number">2015</span>, <span class="number">2016</span>, <span class="number">2017</span>], dtype=np.float32)</span><br><span class="line">y_raw = np.array([<span class="number">12000</span>, <span class="number">14000</span>, <span class="number">15000</span>, <span class="number">16500</span>, <span class="number">17500</span>], dtype=np.float32)</span><br><span class="line"></span><br><span class="line">X = (X_raw - X_raw.min()) / (X_raw.max() - X_raw.min())</span><br><span class="line">y = (y_raw - y_raw.min()) / (y_raw.max() - y_raw.min())</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 训练</span></span><br><span class="line">num_epoch = <span class="number">10000</span></span><br><span class="line">model = Linear()</span><br><span class="line">optimizer = tf.keras.optimizers.SGD(learning_rate=<span class="number">0.01</span>)</span><br><span class="line">X = tf.constant([X])  <span class="comment"># X 是向量, [X] 是矩阵,可以转为张量</span></span><br><span class="line">y = tf.constant([y])</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(num_epoch):</span><br><span class="line">    <span class="keyword">with</span> tf.GradientTape() <span class="keyword">as</span> tape: <span class="comment"># 开始记录梯度</span></span><br><span class="line">        y_pred = model(X)</span><br><span class="line">        loss = tf.reduce_mean(tf.square(y_pred - y)) </span><br><span class="line">        <span class="comment"># 均方误差 reduce_mean 对所有tensor所有元素求平均</span></span><br><span class="line"></span><br><span class="line">    grads = tape.gradient(loss, model.variables) <span class="comment"># 对损失函数的每一个变量求偏导</span></span><br><span class="line">    optimizer.apply_gradients(grads_and_vars=zip(grads, model.variables))</span><br><span class="line">    <span class="comment">#  apply_gradient 根据得到的梯度更新参数 传入一个list : [(grad_1,var_1),</span></span><br><span class="line">    <span class="comment"># (grad_2,var_2),...,(grad_n,var_n)]</span></span><br><span class="line">print(y_pred)</span><br></pre></td></tr></table></figure>
+<h4 id="评估模型"><a href="#评估模型" class="headerlink" title="评估模型"></a>评估模型</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">sparse_categorical_accuracy = tf.keras.metrics.SparseCategoricalAccuracy()</span><br><span class="line">num_batches = int(data_loader.num_test_data // batch_size)</span><br><span class="line"><span class="keyword">for</span> batch_index <span class="keyword">in</span> range(num_batches):</span><br><span class="line">    start_index, end_index = batch_index * \</span><br><span class="line">        batch_size, (batch_index + <span class="number">1</span>) * batch_size</span><br><span class="line">    y_pred = model.predict(data_loader.test_data[start_index: end_index])</span><br><span class="line">    sparse_categorical_accuracy.update_state(</span><br><span class="line">        y_true=data_loader.test_label[start_index: end_index], y_pred=y_pred)</span><br><span class="line">print(<span class="string">"test accuracy: %f"</span> % sparse_categorical_accuracy.result())</span><br></pre></td></tr></table></figure>
+<h3 id="卷积神经网络"><a href="#卷积神经网络" class="headerlink" title="卷积神经网络"></a>卷积神经网络</h3><p><code>tfwiki</code> 讲的特别好。理解卷积核$(filter)$减少参数的作用，通过滑动（卷积）扫描整个图像，过程中的权重参数是同一个核的，就是所谓的共享权重。</p>
 <p>有关卷积的动态示例可以到<a href="https://github.com/vdumoulin/conv_arithmetic" target="_blank" rel="noopener">这里</a>。有时间学一下他的<code>tex</code>代码。</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CNN</span><span class="params">(tf.keras.Model)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        super().__init__()</span><br><span class="line">        self.conv1 = tf.keras.layers.Conv2D(</span><br><span class="line">            filters=<span class="number">32</span>,             <span class="comment"># 卷积层神经元（卷积核）数目 </span></span><br><span class="line">            kernel_size=[<span class="number">5</span>, <span class="number">5</span>],     <span class="comment"># 感受野大小</span></span><br><span class="line">            padding=<span class="string">'same'</span>,         <span class="comment"># padding策略（vaild 或 same）</span></span><br><span class="line">            activation=tf.nn.relu   <span class="comment"># 激活函数</span></span><br><span class="line">        )</span><br><span class="line">        self.pool1 = tf.keras.layers.MaxPool2D(pool_size=[<span class="number">2</span>, <span class="number">2</span>], strides=<span class="number">2</span>)</span><br><span class="line">        <span class="comment"># 横向和纵向都是每两个取一个最大的，因此大小变化像这样：28,28 -&gt; 14,14</span></span><br><span class="line">        self.conv2 = tf.keras.layers.Conv2D(</span><br><span class="line">            filters=<span class="number">64</span>,</span><br><span class="line">            kernel_size=[<span class="number">5</span>, <span class="number">5</span>],</span><br><span class="line">            padding=<span class="string">'same'</span>, <span class="comment"># 'same' 策略保证卷积前后大小相同</span></span><br><span class="line">            activation=tf.nn.relu</span><br><span class="line">        )</span><br><span class="line">        self.pool2 = tf.keras.layers.MaxPool2D(pool_size=[<span class="number">2</span>, <span class="number">2</span>], strides=<span class="number">2</span>)</span><br><span class="line">        self.flatten = tf.keras.layers.Reshape(target_shape=(<span class="number">7</span> * <span class="number">7</span> * <span class="number">64</span>,))</span><br><span class="line">        self.dense1 = tf.keras.layers.Dense(units=<span class="number">1024</span>, activation=tf.nn.relu)</span><br><span class="line">        self.dense2 = tf.keras.layers.Dense(units=<span class="number">10</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">call</span><span class="params">(self, inputs)</span>:</span></span><br><span class="line">        x = self.conv1(inputs)                  <span class="comment"># [batch_size, 28, 28, 32]</span></span><br><span class="line">        x = self.pool1(x)                       <span class="comment"># [batch_size, 14, 14, 32]</span></span><br><span class="line">        x = self.conv2(x)                       <span class="comment"># [batch_size, 14, 14, 64]</span></span><br><span class="line">        x = self.pool2(x)                       <span class="comment"># [batch_size, 7, 7, 64]</span></span><br><span class="line">        x = self.flatten(x)                     <span class="comment"># [batch_size, 7 * 7 * 64]</span></span><br><span class="line">        x = self.dense1(x)                      <span class="comment"># [batch_size, 1024]</span></span><br><span class="line">        x = self.dense2(x)                      <span class="comment"># [batch_size, 10]</span></span><br><span class="line">        output = tf.nn.softmax(x)</span><br><span class="line">        <span class="keyword">return</span> output</span><br></pre></td></tr></table></figure>
 <p>待看：</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">kernel_initializer=tf.constant_initializer(W),</span><br><span class="line">bias_initializer=tf.constant_initializer(b)</span><br><span class="line">      </span><br><span class="line"></span><br><span class="line">dataset = dataset.map(<span class="keyword">lambda</span> img, label: (tf.image.resize(img, [<span class="number">224</span>, <span class="number">224</span>]) / <span class="number">255.0</span>, label)).shuffle(<span class="number">1024</span>).batch(<span class="number">32</span>)</span><br><span class="line">model = tf.keras.applications.MobileNetV2(weights=<span class="literal">None</span>, classes=<span class="number">5</span>)</span><br></pre></td></tr></table></figure>
-<h2 id="tf.data">tf.data</h2>
-
+<h2 id="tf-data"><a href="#tf-data" class="headerlink" title="tf.data"></a>tf.data</h2>
       
       <!-- reward -->
       
@@ -368,7 +340,7 @@ H(A,B)=\sum_{i=1}^np_A(x_i)\ln\left[p_B(x_i)\right]
 
       
       <p>This is the my final report for Semiconductor Laser Holography experiement in physics experiment course.</p>
-<p>I did the experiment with my dear roommates Yiheng Mao and Weiming Zhou, under the guidance of teacher Xing Chen.</p>
+<p>I did the experiment with my dear roommates Yiheng Mao and Weiming Zhou, under the guidance of teacher Xing Chen. </p>
 
 
 	<div class="row">
@@ -444,10 +416,9 @@ H(A,B)=\sum_{i=1}^np_A(x_i)\ln\left[p_B(x_i)\right]
       
 
       
-      <p>This is the major assignment for our optomechanical structural design course. Thanks a lot for Xiaowen Wang, Longxun Cao and Hanmo Mei. That week we all had little time for sleep and we finally made a really big guy! Although that period was very hard , I really cherish it.</p>
+      <p>This is the major assignment for our optomechanical structural design course. Thanks a lot for Xiaowen Wang, Longxun Cao and Hanmo Mei. That  week we all had little time for sleep and we finally made a really big guy! Although that period was very hard , I really cherish it.</p>
 <p>I will make it more detailed when I have time.</p>
-<h3 id="工程图汇总">工程图汇总</h3>
-
+<h3 id="工程图汇总"><a href="#工程图汇总" class="headerlink" title="工程图汇总"></a>工程图汇总</h3>
 
 	<div class="row">
     <embed src="/pdf_files/钢铁侠手臂台灯-工程图汇总.pdf" width="100%" height="550" type="application/pdf">
@@ -455,8 +426,7 @@ H(A,B)=\sum_{i=1}^np_A(x_i)\ln\left[p_B(x_i)\right]
 
 
 
-<h3 id="设计文件">设计文件</h3>
-
+<h3 id="设计文件"><a href="#设计文件" class="headerlink" title="设计文件"></a>设计文件</h3>
 
 	<div class="row">
     <embed src="/pdf_files/钢铁侠手臂台灯项目设计文件.pdf" width="100%" height="550" type="application/pdf">
@@ -830,7 +800,7 @@ H(A,B)=\sum_{i=1}^np_A(x_i)\ln\left[p_B(x_i)\right]
       
 
       
-      <p>This work is mainly about the football game team strategy based on big data and is our final paper for the D problem of 2020 Interdisciplinary Contest in Modelling (ICM 2020), contributed collaboratively and equally by R.C. Luo, Y.Z. Zhang and me.</p>
+      <p>This work is mainly about the football game team strategy based on big data and is our final paper for the D problem of 2020 Interdisciplinary Contest in Modelling (ICM 2020), contributed collaboratively and equally by R.C. Luo, Y.Z. Zhang and me. </p>
 <p>Thanks cordially to the combined efforts of whole group, we fortunately won an M-prize. Due to privacy and copyright, the control number in our paper is erased.</p>
 
 
@@ -907,56 +877,68 @@ H(A,B)=\sum_{i=1}^np_A(x_i)\ln\left[p_B(x_i)\right]
       
 
       
-      <h1 id="matlab-学习笔记">Matlab 学习笔记</h1>
-<h2 id="有关信号与系统">有关信号与系统</h2>
-<h3 id="连续系统构建">连续系统构建</h3>
-<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">tf(b,a);  <span class="comment">%传递函数模型</span></span><br><span class="line">s = tf(<span class="string">'s'</span>); sys = b(s)/a(s) <span class="comment">%（具体的为多项式形式）</span></span><br><span class="line"><span class="comment">% ss 状态空间模型 （了解不多）</span></span><br><span class="line"><span class="comment">% zpk 零点-极点-增益模型 （了解不多）</span></span><br></pre></td></tr></table></figure>
-<h3 id="连续系统性质研究">连续系统性质研究</h3>
-<p>在用上面的方法构建好系统sys后，才可以进行下面的操作。</p>
+      <h1 id="Matlab-学习笔记"><a href="#Matlab-学习笔记" class="headerlink" title="Matlab 学习笔记"></a>Matlab 学习笔记</h1><h2 id="有关信号与系统"><a href="#有关信号与系统" class="headerlink" title="有关信号与系统"></a>有关信号与系统</h2><h3 id="连续系统构建"><a href="#连续系统构建" class="headerlink" title="连续系统构建"></a>连续系统构建</h3><figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">tf(b,a);  <span class="comment">%传递函数模型</span></span><br><span class="line">s = tf(<span class="string">'s'</span>); sys = b(s)/a(s) <span class="comment">%（具体的为多项式形式）</span></span><br><span class="line"><span class="comment">% ss 状态空间模型 （了解不多）</span></span><br><span class="line"><span class="comment">% zpk 零点-极点-增益模型 （了解不多）</span></span><br></pre></td></tr></table></figure>
+<h3 id="连续系统性质研究"><a href="#连续系统性质研究" class="headerlink" title="连续系统性质研究"></a>连续系统性质研究</h3><p>在用上面的方法构建好系统sys后，才可以进行下面的操作。</p>
 <figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line"><span class="comment">% 零极点图</span></span><br><span class="line">p = pole(sys); <span class="comment">%求出零点</span></span><br><span class="line">z = zero(sys); <span class="comment">%求出极点</span></span><br><span class="line">pzmap(sys); <span class="comment">%画零极点图 可以设置axis使之更好看</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% 响应</span></span><br><span class="line">lsim(sys,u,t,x0) <span class="comment">%全响应</span></span><br><span class="line">impulse(sys); <span class="comment">%单位冲激响应</span></span><br><span class="line">step(sys); <span class="comment">%单位阶跃响应</span></span><br></pre></td></tr></table></figure>
-<h2 id="有关符号表达式">有关符号表达式</h2>
-<h3 id="符号声明">符号声明</h3>
-<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">syms x y; <span class="comment">%声明变量</span></span><br><span class="line">syms f(t) g(x,y); <span class="comment">%声明函数, 里面的变量可以作为符号直接使用</span></span><br><span class="line">syms A [m,n]; <span class="comment">%声明向量或矩阵 m*n维</span></span><br></pre></td></tr></table></figure>
-<h3 id="符号运算">符号运算</h3>
-<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">simplify(expr); <span class="comment">%化简符号表达式</span></span><br><span class="line">root(p,x); <span class="comment">%得到符号多项式p关于x的根</span></span><br><span class="line">solve(equ,var); <span class="comment">%计算方程的解</span></span><br><span class="line">equs=[equ1 equ2]; vars=[var1 var2];</span><br><span class="line">solve(equs,vars); <span class="comment">%计算方程组equs关于变量vars的解</span></span><br><span class="line">diff(f,x,n); <span class="comment">%求符号函数f关于x的n阶导数</span></span><br><span class="line">dsolve(equ,cond); <span class="comment">%求解带diff的常微分方程 cond为初始条件</span></span><br><span class="line">dsolve(equs); <span class="comment">%求解常微分方程组 得到一组解S 用S.var 查看关于var的的解</span></span><br><span class="line">laplace(f); <span class="comment">%求关于f的拉普拉斯变换 （积分下限为0）</span></span><br><span class="line">ilaplace(F); <span class="comment">%求F的拉普拉斯逆变换</span></span><br></pre></td></tr></table></figure>
-<h3 id="符号变现赋值等">符号变现（赋值等）</h3>
-<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">g = matlabFunction(f); <span class="comment">%生成一个虚拟函数句柄 将符号表达式转化为可以用句柄调用求具体值等函数</span></span><br><span class="line"></span><br><span class="line">subs(s,old,new); <span class="comment">%返回s中old全部用new代替的新的表达式, 可用于符号替换（如自变量替换）和赋值</span></span><br></pre></td></tr></table></figure>
-<h2 id="其他">其他</h2>
+<h2 id="有关符号表达式"><a href="#有关符号表达式" class="headerlink" title="有关符号表达式"></a>有关符号表达式</h2><h3 id="符号声明"><a href="#符号声明" class="headerlink" title="符号声明"></a>符号声明</h3><figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">syms x y; <span class="comment">%声明变量</span></span><br><span class="line">syms f(t) g(x,y); <span class="comment">%声明函数, 里面的变量可以作为符号直接使用</span></span><br><span class="line">syms A [m,n]; <span class="comment">%声明向量或矩阵 m*n维</span></span><br></pre></td></tr></table></figure>
+<h3 id="符号运算"><a href="#符号运算" class="headerlink" title="符号运算"></a>符号运算</h3><figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">simplify(expr); <span class="comment">%化简符号表达式</span></span><br><span class="line">root(p,x); <span class="comment">%得到符号多项式p关于x的根</span></span><br><span class="line">solve(equ,var); <span class="comment">%计算方程的解</span></span><br><span class="line">equs=[equ1 equ2]; vars=[var1 var2];</span><br><span class="line">solve(equs,vars); <span class="comment">%计算方程组equs关于变量vars的解</span></span><br><span class="line">diff(f,x,n); <span class="comment">%求符号函数f关于x的n阶导数</span></span><br><span class="line">dsolve(equ,cond); <span class="comment">%求解带diff的常微分方程 cond为初始条件</span></span><br><span class="line">dsolve(equs); <span class="comment">%求解常微分方程组 得到一组解S 用S.var 查看关于var的的解</span></span><br><span class="line">laplace(f); <span class="comment">%求关于f的拉普拉斯变换 （积分下限为0）</span></span><br><span class="line">ilaplace(F); <span class="comment">%求F的拉普拉斯逆变换</span></span><br></pre></td></tr></table></figure>
+<h3 id="符号变现（赋值等）"><a href="#符号变现（赋值等）" class="headerlink" title="符号变现（赋值等）"></a>符号变现（赋值等）</h3><figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">g = matlabFunction(f); <span class="comment">%生成一个虚拟函数句柄 将符号表达式转化为可以用句柄调用求具体值等函数</span></span><br><span class="line"></span><br><span class="line">subs(s,old,new); <span class="comment">%返回s中old全部用new代替的新的表达式, 可用于符号替换（如自变量替换）和赋值</span></span><br></pre></td></tr></table></figure>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><ul>
+<li>函数必须以end结尾。将其保存为.m 文件，即可在其他程 序中以文件名（注意不是函数名，文件名和函数名可以不同）调用该函数。</li>
+</ul>
 <ul>
-<li><p>函数必须以end结尾。将其保存为.m 文件，即可在其他程 序中以文件名（注意不是函数名，文件名和函数名可以不同）调用该函数。</p></li>
 <li><p>关系运算</p>
-<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">a~=b<span class="comment">%不等于</span></span><br><span class="line">a&gt;=b<span class="comment">%大于等于</span></span><br><span class="line">a&lt;=b<span class="comment">%小于等于</span></span><br></pre></td></tr></table></figure></li>
+<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">a~=b<span class="comment">%不等于</span></span><br><span class="line">a&gt;=b<span class="comment">%大于等于</span></span><br><span class="line">a&lt;=b<span class="comment">%小于等于</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
 <li><p>复数</p>
-<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">a=<span class="number">1</span>+<span class="number">2</span><span class="built_in">i</span></span><br><span class="line">z=<span class="built_in">real</span>(a)<span class="comment">%实部</span></span><br><span class="line">z=<span class="built_in">imag</span>(a)<span class="comment">%虚部</span></span><br><span class="line">z=<span class="built_in">angle</span>(a)<span class="comment">%辐角</span></span><br><span class="line">z=<span class="built_in">abs</span>(a)<span class="comment">%模</span></span><br><span class="line">z=<span class="built_in">conj</span>(a)<span class="comment">%共轭</span></span><br></pre></td></tr></table></figure></li>
+<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">a=<span class="number">1</span>+<span class="number">2</span><span class="built_in">i</span></span><br><span class="line">z=<span class="built_in">real</span>(a)<span class="comment">%实部</span></span><br><span class="line">z=<span class="built_in">imag</span>(a)<span class="comment">%虚部</span></span><br><span class="line">z=<span class="built_in">angle</span>(a)<span class="comment">%辐角</span></span><br><span class="line">z=<span class="built_in">abs</span>(a)<span class="comment">%模</span></span><br><span class="line">z=<span class="built_in">conj</span>(a)<span class="comment">%共轭</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
 <li><p>向量操作</p>
-<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">a=<span class="built_in">rand</span>(<span class="number">1</span>,<span class="number">3</span>)</span><br><span class="line">b=<span class="built_in">rand</span>(<span class="number">1</span>,<span class="number">3</span>)</span><br><span class="line">c=<span class="built_in">dot</span>(a,b)<span class="comment">%内积</span></span><br><span class="line">d=<span class="built_in">cross</span>(a,b)<span class="comment">%叉乘</span></span><br><span class="line">l=<span class="built_in">length</span>(a)<span class="comment">%向量长度</span></span><br><span class="line">median(a)<span class="comment">%中位数</span></span><br><span class="line">std(a)<span class="comment">%标准差</span></span><br><span class="line">s=<span class="built_in">sort</span>(a)<span class="comment">%排序</span></span><br><span class="line"><span class="comment">%还有 min max 等</span></span><br></pre></td></tr></table></figure></li>
-<li><p>矩阵操作</p></li>
+<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">a=<span class="built_in">rand</span>(<span class="number">1</span>,<span class="number">3</span>)</span><br><span class="line">b=<span class="built_in">rand</span>(<span class="number">1</span>,<span class="number">3</span>)</span><br><span class="line">c=<span class="built_in">dot</span>(a,b)<span class="comment">%内积</span></span><br><span class="line">d=<span class="built_in">cross</span>(a,b)<span class="comment">%叉乘</span></span><br><span class="line">l=<span class="built_in">length</span>(a)<span class="comment">%向量长度</span></span><br><span class="line">median(a)<span class="comment">%中位数</span></span><br><span class="line">std(a)<span class="comment">%标准差</span></span><br><span class="line">s=<span class="built_in">sort</span>(a)<span class="comment">%排序</span></span><br><span class="line"><span class="comment">%还有 min max 等</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li>矩阵操作</li>
 </ul>
 <figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">a=<span class="built_in">rand</span>(<span class="number">5</span>,<span class="number">3</span>)</span><br><span class="line">b=<span class="built_in">rand</span>(<span class="number">5</span>,<span class="number">3</span>)</span><br><span class="line">b=b'<span class="comment">%转置</span></span><br><span class="line">c=a*b<span class="comment">%矩阵乘法</span></span><br><span class="line">d=a.*b<span class="comment">%逐元素相乘</span></span><br><span class="line">m=b^<span class="number">3</span><span class="comment">%幂</span></span><br><span class="line">m=b.^<span class="number">3</span><span class="comment">%点幂</span></span><br><span class="line"><span class="built_in">size</span>(b)<span class="comment">%矩阵大小</span></span><br><span class="line">b=<span class="built_in">reshape</span>(<span class="number">1</span>,<span class="number">15</span>)</span><br><span class="line">b=<span class="built_in">flipud</span>(b)<span class="comment">%上下翻转 up and down</span></span><br><span class="line">b=<span class="built_in">fliplr</span>(b)<span class="comment">%左右翻转 left and right</span></span><br><span class="line">e=<span class="built_in">diag</span>(b)<span class="comment">%取出b的对角元素</span></span><br><span class="line"></span><br><span class="line">left_division=a/b<span class="comment">% b*inv(a)</span></span><br><span class="line">right_division=a\b<span class="comment">% inv(a)*b</span></span><br><span class="line"><span class="comment">%X=A\B是方程A*X=B的解，X=A\B是方程X*A=B的解 </span></span><br><span class="line"><span class="comment">%记忆：朝向哪 逆在哪</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li><p>绘图</p>
-<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">x=<span class="built_in">linspace</span>(<span class="number">1</span>,<span class="number">10</span>,<span class="number">100</span>)</span><br><span class="line">y1=<span class="built_in">sin</span>(x)</span><br><span class="line">y2=<span class="built_in">cos</span>(x)</span><br><span class="line">y3=<span class="built_in">tan</span>(x)</span><br><span class="line"><span class="built_in">plot</span>(x,y1,<span class="string">'blue'</span>,x,y2,<span class="string">'LineWidth'</span>,<span class="number">2</span>,<span class="string">'color'</span>,<span class="string">'red'</span>)</span><br><span class="line"><span class="comment">%要在同一图中画出多条曲线，只需将坐标依次放入plot函数即可</span></span><br><span class="line">axis([<span class="number">0</span> <span class="number">4</span>*<span class="built_in">pi</span> <span class="number">-1.2</span> <span class="number">1.2</span>])<span class="comment">%设置坐标轴范围</span></span><br><span class="line">xlim([<span class="number">1</span> <span class="number">2</span>])<span class="comment">%单独控制</span></span><br><span class="line">xlabel(<span class="string">'x'</span>); ylabel(<span class="string">'y'</span>);</span><br><span class="line"><span class="built_in">legend</span>(<span class="string">'sin(x)'</span>,<span class="string">'cos(x)'</span>);</span><br><span class="line">title(<span class="string">'Sine and Cosine Functions'</span>);</span><br><span class="line"><span class="comment">%title里可以使用latex语法</span></span><br><span class="line"><span class="comment">%如 ：title('$y_1=\sin(4\pi t+\pi /3)$','interpreter','latex')</span></span><br><span class="line"><span class="comment">% 注明解释器为latex即可</span></span><br><span class="line"></span><br><span class="line"><span class="comment">%绘制子图</span></span><br><span class="line">subplot(<span class="number">2</span>,<span class="number">2</span>,<span class="number">1</span>); <span class="built_in">plot</span>(x,y1);</span><br><span class="line">subplot(<span class="number">2</span>,<span class="number">2</span>,<span class="number">2</span>); <span class="built_in">plot</span>(x,y2);</span><br><span class="line">subplot(<span class="number">2</span>,<span class="number">2</span>,<span class="number">3</span>); <span class="built_in">plot</span>(x,y3);</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">x=<span class="built_in">linspace</span>(<span class="number">1</span>,<span class="number">10</span>,<span class="number">100</span>)</span><br><span class="line">y1=<span class="built_in">sin</span>(x)</span><br><span class="line">y2=<span class="built_in">cos</span>(x)</span><br><span class="line">y3=<span class="built_in">tan</span>(x)</span><br><span class="line"><span class="built_in">plot</span>(x,y1,<span class="string">'blue'</span>,x,y2,<span class="string">'LineWidth'</span>,<span class="number">2</span>,<span class="string">'color'</span>,<span class="string">'red'</span>)</span><br><span class="line"><span class="comment">%要在同一图中画出多条曲线，只需将坐标依次放入plot函数即可</span></span><br><span class="line">axis([<span class="number">0</span> <span class="number">4</span>*<span class="built_in">pi</span> <span class="number">-1.2</span> <span class="number">1.2</span>])<span class="comment">%设置坐标轴范围</span></span><br><span class="line">xlim([<span class="number">1</span> <span class="number">2</span>])<span class="comment">%单独控制</span></span><br><span class="line">xlabel(<span class="string">'x'</span>); ylabel(<span class="string">'y'</span>);</span><br><span class="line"><span class="built_in">legend</span>(<span class="string">'sin(x)'</span>,<span class="string">'cos(x)'</span>);</span><br><span class="line">title(<span class="string">'Sine and Cosine Functions'</span>);</span><br><span class="line"><span class="comment">%title里可以使用latex语法</span></span><br><span class="line"><span class="comment">%如 ：title('$y_1=\sin(4\pi t+\pi /3)$','interpreter','latex')</span></span><br><span class="line"><span class="comment">% 注明解释器为latex即可</span></span><br><span class="line"></span><br><span class="line"><span class="comment">%绘制子图</span></span><br><span class="line">subplot(<span class="number">2</span>,<span class="number">2</span>,<span class="number">1</span>); <span class="built_in">plot</span>(x,y1);</span><br><span class="line">subplot(<span class="number">2</span>,<span class="number">2</span>,<span class="number">2</span>); <span class="built_in">plot</span>(x,y2);</span><br><span class="line">subplot(<span class="number">2</span>,<span class="number">2</span>,<span class="number">3</span>); <span class="built_in">plot</span>(x,y3);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
 <li><p>信号处理</p>
-<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line"><span class="comment">%噪声</span></span><br><span class="line">snr=<span class="number">10</span>; <span class="comment">%Signal‐to‐noise ratio in dB.</span></span><br><span class="line">yn=awgn(y,snr,<span class="string">'measured'</span>); <span class="comment">% Add white Gaussian noise. 白噪声</span></span><br><span class="line"></span><br><span class="line"><span class="comment">%函数</span></span><br><span class="line">k1=<span class="number">-3</span>; k2=<span class="number">3</span>; k=k1:k2; n=<span class="number">0</span>;</span><br><span class="line">step=stepfun(t,t0)<span class="comment">%t是向量形式的变量,t0表示延迟 阶跃函数</span></span><br><span class="line">delta=+(k==n) <span class="comment">% 冲激函数</span></span><br><span class="line">stem(k,delta,<span class="string">'filled'</span>)<span class="comment">% 离散函数绘制 stem为绘制杆状图</span></span><br><span class="line"></span><br><span class="line"><span class="comment">%rectpuls和tripuls函数产生指定宽度和高度的矩形和三角脉冲。</span></span><br></pre></td></tr></table></figure></li>
+<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line"><span class="comment">%噪声</span></span><br><span class="line">snr=<span class="number">10</span>; <span class="comment">%Signal‐to‐noise ratio in dB.</span></span><br><span class="line">yn=awgn(y,snr,<span class="string">'measured'</span>); <span class="comment">% Add white Gaussian noise. 白噪声</span></span><br><span class="line"></span><br><span class="line"><span class="comment">%函数</span></span><br><span class="line">k1=<span class="number">-3</span>; k2=<span class="number">3</span>; k=k1:k2; n=<span class="number">0</span>;</span><br><span class="line">step=stepfun(t,t0)<span class="comment">%t是向量形式的变量,t0表示延迟 阶跃函数</span></span><br><span class="line">delta=+(k==n) <span class="comment">% 冲激函数</span></span><br><span class="line">stem(k,delta,<span class="string">'filled'</span>)<span class="comment">% 离散函数绘制 stem为绘制杆状图</span></span><br><span class="line"></span><br><span class="line"><span class="comment">%rectpuls和tripuls函数产生指定宽度和高度的矩形和三角脉冲。</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
 <li><p>其他技巧</p>
 <ul>
-<li>nargin, nargout 的使用</li>
-</ul></li>
+<li>nargin, nargout 的使用 </li>
 </ul>
-<h2 id="关于频率">关于频率</h2>
-<p>采样频率 <span class="math inline">\(f_s\)</span>：每秒取 <span class="math inline">\(f_s\)</span> 个点，计算中应该取和物理采样硬件（如示波器）的采样频率一致</p>
-<p>频率域分析中，若采样频率是 <span class="math inline">\(f_s\)</span>, 那么分析的范围是 <span class="math inline">\([0,f_s)\)</span>, 这是因为更高频率的波我们采样不到了。</p>
-<p>又由于 <span class="math inline">\([0,f_s/2),[f_s/2,f_s)\)</span> 是对称的，事实上有用的信息或者说我们需要分析的范围是 <span class="math inline">\([0,f_s/2]\)</span> 。</p>
-<p>在用 Matlab 进行频率域分析时，首先应该设置采样频率。根据物理硬件可以确定采样频率，如果是离散信号，那么采样频率就是 <span class="math inline">\(1\)</span> 。</p>
-<p>第二步应该确定采样的点数 <span class="math inline">\(N\)</span> 或者采样的持续时间 <span class="math inline">\(T\)</span>, 知道一个我们就可以确定另一个：<span class="math inline">\(N\implies T=N/f_s,\quad T\implies N=T\cdot f_s\)</span></p>
+</li>
+</ul>
+<h2 id="关于频率"><a href="#关于频率" class="headerlink" title="关于频率"></a>关于频率</h2><p>采样频率 $f_s$：每秒取 $f_s$ 个点，计算中应该取和物理采样硬件（如示波器）的采样频率一致</p>
+<p>频率域分析中，若采样频率是 $f_s$, 那么分析的范围是 $[0,f_s)$, 这是因为更高频率的波我们采样不到了。</p>
+<p>又由于 $[0,f_s/2),[f_s/2,f_s)$ 是对称的，事实上有用的信息或者说我们需要分析的范围是 $[0,f_s/2]$ 。</p>
+<p>在用 Matlab 进行频率域分析时，首先应该设置采样频率。根据物理硬件可以确定采样频率，如果是离散信号，那么采样频率就是 $1$ 。</p>
+<p>第二步应该确定采样的点数 $N$ 或者采样的持续时间 $T$, 知道一个我们就可以确定另一个：$N\implies T=N/f_s,\quad T\implies N=T\cdot f_s$</p>
 <p>在使用 Matlab 的 fft 函数时，有几个需要注意的地方：</p>
 <ul>
-<li><p>真实信号的振幅应该是 <span class="math inline">\(A\cdot2/N\)</span> ，这个我不是很明白，查到的是这样说的，<span class="math inline">\(A\)</span> 是 fft 变换后的振幅</p></li>
-<li><p>如果采样频率是 <span class="math inline">\(f_s\)</span>, 那么 fft 时要乘一下 <span class="math inline">\(dt=1/f_s\)</span> (每秒 <span class="math inline">\(f_s\)</span> 个点，那么一个点就是 <span class="math inline">\(1/f_s\)</span> 秒) ，这是由于 Matlab 的 fft 是离散傅立叶变换，相当于 <span class="math inline">\(dt=1\)</span> ，需要补乘 <span class="math inline">\(dt\)</span></p></li>
-<li><p>频率域对应的频谱范围是 <span class="math inline">\(0\sim f_s\)</span>, 有用的信息是在 <span class="math inline">\(0~f_s/2\)</span>, Matlab 代码实现是</p>
+<li><p>真实信号的振幅应该是 $A\cdot2/N$ ，这个我不是很明白，查到的是这样说的，$A$ 是 fft 变换后的振幅</p>
+</li>
+<li><p>如果采样频率是 $f_s$, 那么 fft 时要乘一下 $dt=1/f_s$ (每秒 $f_s$ 个点，那么一个点就是 $1/f_s$ 秒) ，这是由于 Matlab 的 fft 是离散傅立叶变换，相当于 $dt=1$ ，需要补乘 $dt$</p>
+</li>
+<li><p>频率域对应的频谱范围是 $0\sim f_s$, 有用的信息是在 $0~f_s/2$, Matlab 代码实现是 </p>
 <figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line"><span class="number">0</span>:(N<span class="number">-1</span>)/N*fs</span><br></pre></td></tr></table></figure>
-<p>可以用 fftshift 将 <span class="math inline">\([0,f_s)\)</span> 移为 <span class="math inline">\((-f_s/2,f_s/2]\)</span>, 然后取 <span class="math inline">\([o,f_s/2]\)</span> 的有用信息进行分析</p></li>
-<li><p>反变换 ifft 时要乘回来之前多乘的 <span class="math inline">\(1/f_s\)</span>, 即乘 <span class="math inline">\(f_s\)</span></p></li>
+<p>可以用 fftshift 将 $[0,f_s)$ 移为 $(-f_s/2,f_s/2]$, 然后取 $[o,f_s/2]$ 的有用信息进行分析</p>
+</li>
+<li><p>反变换 ifft 时要乘回来之前多乘的 $1/f_s$, 即乘 $f_s$</p>
+</li>
 </ul>
 
       
@@ -1379,7 +1361,42 @@ H(A,B)=\sum_{i=1}^np_A(x_i)\ln\left[p_B(x_i)\right]
 
 
     
-  </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            displayMath: [ ['$','$'], ["\\[","\\]"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js"></script>
+
+
+<!-- <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['
+
+</html>,'
+
+</html>], ["\\(","\\)"] ],
+      displayMath: [ ['$','$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js"></script> --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 
 </html>

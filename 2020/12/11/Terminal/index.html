@@ -69,7 +69,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">78</span>
+            <span class="post-count">77</span>
         </span>
     </span>
 
@@ -103,13 +103,16 @@
       
 
       
-      <h1 id="terminal-use">Terminal Use</h1>
-<h2 id="train-deep-learning-models-on-remote-host">Train deep learning models on remote host</h2>
+      <h1 id="Terminal-Use"><a href="#Terminal-Use" class="headerlink" title="Terminal Use"></a>Terminal Use</h1><h2 id="Train-deep-learning-models-on-remote-host"><a href="#Train-deep-learning-models-on-remote-host" class="headerlink" title="Train deep learning models on remote host"></a>Train deep learning models on remote host</h2><ul>
+<li><p>tmux</p>
+</li>
+<li><p>conda virtual env</p>
+</li>
+<li><p>visdom to monitor remotely</p>
+</li>
+</ul>
 <ul>
-<li><p>tmux</p></li>
-<li><p>conda virtual env</p></li>
-<li><p>visdom to monitor remotely</p></li>
-<li><pre class="shell"><code>ssh username@ip
+<li><pre><code class="lang-shell">ssh username@ip
 visdom -p port
 # then detach it
 
@@ -122,7 +125,8 @@ tmux new -s session-to-run-visdom-without-broken-pipe
 ssh -L port:127.0.0.1:port username@ip
 # then detach it 
 # then monitor the loss etc. in host machine at 127.0.0.1:port
-</code></pre></li>
+</code></pre>
+</li>
 </ul>
 
       
@@ -633,7 +637,42 @@ ssh -L port:127.0.0.1:port username@ip
 
 
     
-  </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            displayMath: [ ['$','$'], ["\\[","\\]"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js"></script>
+
+
+<!-- <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['
+
+</html>,'
+
+</html>], ["\\(","\\)"] ],
+      displayMath: [ ['$','$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js"></script> --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 
 </html>

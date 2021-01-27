@@ -107,56 +107,68 @@
       
 
       
-      <h1 id="matlab-学习笔记">Matlab 学习笔记</h1>
-<h2 id="有关信号与系统">有关信号与系统</h2>
-<h3 id="连续系统构建">连续系统构建</h3>
-<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">tf(b,a);  <span class="comment">%传递函数模型</span></span><br><span class="line">s = tf(<span class="string">'s'</span>); sys = b(s)/a(s) <span class="comment">%（具体的为多项式形式）</span></span><br><span class="line"><span class="comment">% ss 状态空间模型 （了解不多）</span></span><br><span class="line"><span class="comment">% zpk 零点-极点-增益模型 （了解不多）</span></span><br></pre></td></tr></table></figure>
-<h3 id="连续系统性质研究">连续系统性质研究</h3>
-<p>在用上面的方法构建好系统sys后，才可以进行下面的操作。</p>
+      <h1 id="Matlab-学习笔记"><a href="#Matlab-学习笔记" class="headerlink" title="Matlab 学习笔记"></a>Matlab 学习笔记</h1><h2 id="有关信号与系统"><a href="#有关信号与系统" class="headerlink" title="有关信号与系统"></a>有关信号与系统</h2><h3 id="连续系统构建"><a href="#连续系统构建" class="headerlink" title="连续系统构建"></a>连续系统构建</h3><figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">tf(b,a);  <span class="comment">%传递函数模型</span></span><br><span class="line">s = tf(<span class="string">'s'</span>); sys = b(s)/a(s) <span class="comment">%（具体的为多项式形式）</span></span><br><span class="line"><span class="comment">% ss 状态空间模型 （了解不多）</span></span><br><span class="line"><span class="comment">% zpk 零点-极点-增益模型 （了解不多）</span></span><br></pre></td></tr></table></figure>
+<h3 id="连续系统性质研究"><a href="#连续系统性质研究" class="headerlink" title="连续系统性质研究"></a>连续系统性质研究</h3><p>在用上面的方法构建好系统sys后，才可以进行下面的操作。</p>
 <figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line"><span class="comment">% 零极点图</span></span><br><span class="line">p = pole(sys); <span class="comment">%求出零点</span></span><br><span class="line">z = zero(sys); <span class="comment">%求出极点</span></span><br><span class="line">pzmap(sys); <span class="comment">%画零极点图 可以设置axis使之更好看</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% 响应</span></span><br><span class="line">lsim(sys,u,t,x0) <span class="comment">%全响应</span></span><br><span class="line">impulse(sys); <span class="comment">%单位冲激响应</span></span><br><span class="line">step(sys); <span class="comment">%单位阶跃响应</span></span><br></pre></td></tr></table></figure>
-<h2 id="有关符号表达式">有关符号表达式</h2>
-<h3 id="符号声明">符号声明</h3>
-<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">syms x y; <span class="comment">%声明变量</span></span><br><span class="line">syms f(t) g(x,y); <span class="comment">%声明函数, 里面的变量可以作为符号直接使用</span></span><br><span class="line">syms A [m,n]; <span class="comment">%声明向量或矩阵 m*n维</span></span><br></pre></td></tr></table></figure>
-<h3 id="符号运算">符号运算</h3>
-<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">simplify(expr); <span class="comment">%化简符号表达式</span></span><br><span class="line">root(p,x); <span class="comment">%得到符号多项式p关于x的根</span></span><br><span class="line">solve(equ,var); <span class="comment">%计算方程的解</span></span><br><span class="line">equs=[equ1 equ2]; vars=[var1 var2];</span><br><span class="line">solve(equs,vars); <span class="comment">%计算方程组equs关于变量vars的解</span></span><br><span class="line">diff(f,x,n); <span class="comment">%求符号函数f关于x的n阶导数</span></span><br><span class="line">dsolve(equ,cond); <span class="comment">%求解带diff的常微分方程 cond为初始条件</span></span><br><span class="line">dsolve(equs); <span class="comment">%求解常微分方程组 得到一组解S 用S.var 查看关于var的的解</span></span><br><span class="line">laplace(f); <span class="comment">%求关于f的拉普拉斯变换 （积分下限为0）</span></span><br><span class="line">ilaplace(F); <span class="comment">%求F的拉普拉斯逆变换</span></span><br></pre></td></tr></table></figure>
-<h3 id="符号变现赋值等">符号变现（赋值等）</h3>
-<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">g = matlabFunction(f); <span class="comment">%生成一个虚拟函数句柄 将符号表达式转化为可以用句柄调用求具体值等函数</span></span><br><span class="line"></span><br><span class="line">subs(s,old,new); <span class="comment">%返回s中old全部用new代替的新的表达式, 可用于符号替换（如自变量替换）和赋值</span></span><br></pre></td></tr></table></figure>
-<h2 id="其他">其他</h2>
+<h2 id="有关符号表达式"><a href="#有关符号表达式" class="headerlink" title="有关符号表达式"></a>有关符号表达式</h2><h3 id="符号声明"><a href="#符号声明" class="headerlink" title="符号声明"></a>符号声明</h3><figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">syms x y; <span class="comment">%声明变量</span></span><br><span class="line">syms f(t) g(x,y); <span class="comment">%声明函数, 里面的变量可以作为符号直接使用</span></span><br><span class="line">syms A [m,n]; <span class="comment">%声明向量或矩阵 m*n维</span></span><br></pre></td></tr></table></figure>
+<h3 id="符号运算"><a href="#符号运算" class="headerlink" title="符号运算"></a>符号运算</h3><figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">simplify(expr); <span class="comment">%化简符号表达式</span></span><br><span class="line">root(p,x); <span class="comment">%得到符号多项式p关于x的根</span></span><br><span class="line">solve(equ,var); <span class="comment">%计算方程的解</span></span><br><span class="line">equs=[equ1 equ2]; vars=[var1 var2];</span><br><span class="line">solve(equs,vars); <span class="comment">%计算方程组equs关于变量vars的解</span></span><br><span class="line">diff(f,x,n); <span class="comment">%求符号函数f关于x的n阶导数</span></span><br><span class="line">dsolve(equ,cond); <span class="comment">%求解带diff的常微分方程 cond为初始条件</span></span><br><span class="line">dsolve(equs); <span class="comment">%求解常微分方程组 得到一组解S 用S.var 查看关于var的的解</span></span><br><span class="line">laplace(f); <span class="comment">%求关于f的拉普拉斯变换 （积分下限为0）</span></span><br><span class="line">ilaplace(F); <span class="comment">%求F的拉普拉斯逆变换</span></span><br></pre></td></tr></table></figure>
+<h3 id="符号变现（赋值等）"><a href="#符号变现（赋值等）" class="headerlink" title="符号变现（赋值等）"></a>符号变现（赋值等）</h3><figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">g = matlabFunction(f); <span class="comment">%生成一个虚拟函数句柄 将符号表达式转化为可以用句柄调用求具体值等函数</span></span><br><span class="line"></span><br><span class="line">subs(s,old,new); <span class="comment">%返回s中old全部用new代替的新的表达式, 可用于符号替换（如自变量替换）和赋值</span></span><br></pre></td></tr></table></figure>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><ul>
+<li>函数必须以end结尾。将其保存为.m 文件，即可在其他程 序中以文件名（注意不是函数名，文件名和函数名可以不同）调用该函数。</li>
+</ul>
 <ul>
-<li><p>函数必须以end结尾。将其保存为.m 文件，即可在其他程 序中以文件名（注意不是函数名，文件名和函数名可以不同）调用该函数。</p></li>
 <li><p>关系运算</p>
-<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">a~=b<span class="comment">%不等于</span></span><br><span class="line">a&gt;=b<span class="comment">%大于等于</span></span><br><span class="line">a&lt;=b<span class="comment">%小于等于</span></span><br></pre></td></tr></table></figure></li>
+<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">a~=b<span class="comment">%不等于</span></span><br><span class="line">a&gt;=b<span class="comment">%大于等于</span></span><br><span class="line">a&lt;=b<span class="comment">%小于等于</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
 <li><p>复数</p>
-<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">a=<span class="number">1</span>+<span class="number">2</span><span class="built_in">i</span></span><br><span class="line">z=<span class="built_in">real</span>(a)<span class="comment">%实部</span></span><br><span class="line">z=<span class="built_in">imag</span>(a)<span class="comment">%虚部</span></span><br><span class="line">z=<span class="built_in">angle</span>(a)<span class="comment">%辐角</span></span><br><span class="line">z=<span class="built_in">abs</span>(a)<span class="comment">%模</span></span><br><span class="line">z=<span class="built_in">conj</span>(a)<span class="comment">%共轭</span></span><br></pre></td></tr></table></figure></li>
+<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">a=<span class="number">1</span>+<span class="number">2</span><span class="built_in">i</span></span><br><span class="line">z=<span class="built_in">real</span>(a)<span class="comment">%实部</span></span><br><span class="line">z=<span class="built_in">imag</span>(a)<span class="comment">%虚部</span></span><br><span class="line">z=<span class="built_in">angle</span>(a)<span class="comment">%辐角</span></span><br><span class="line">z=<span class="built_in">abs</span>(a)<span class="comment">%模</span></span><br><span class="line">z=<span class="built_in">conj</span>(a)<span class="comment">%共轭</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
 <li><p>向量操作</p>
-<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">a=<span class="built_in">rand</span>(<span class="number">1</span>,<span class="number">3</span>)</span><br><span class="line">b=<span class="built_in">rand</span>(<span class="number">1</span>,<span class="number">3</span>)</span><br><span class="line">c=<span class="built_in">dot</span>(a,b)<span class="comment">%内积</span></span><br><span class="line">d=<span class="built_in">cross</span>(a,b)<span class="comment">%叉乘</span></span><br><span class="line">l=<span class="built_in">length</span>(a)<span class="comment">%向量长度</span></span><br><span class="line">median(a)<span class="comment">%中位数</span></span><br><span class="line">std(a)<span class="comment">%标准差</span></span><br><span class="line">s=<span class="built_in">sort</span>(a)<span class="comment">%排序</span></span><br><span class="line"><span class="comment">%还有 min max 等</span></span><br></pre></td></tr></table></figure></li>
-<li><p>矩阵操作</p></li>
+<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">a=<span class="built_in">rand</span>(<span class="number">1</span>,<span class="number">3</span>)</span><br><span class="line">b=<span class="built_in">rand</span>(<span class="number">1</span>,<span class="number">3</span>)</span><br><span class="line">c=<span class="built_in">dot</span>(a,b)<span class="comment">%内积</span></span><br><span class="line">d=<span class="built_in">cross</span>(a,b)<span class="comment">%叉乘</span></span><br><span class="line">l=<span class="built_in">length</span>(a)<span class="comment">%向量长度</span></span><br><span class="line">median(a)<span class="comment">%中位数</span></span><br><span class="line">std(a)<span class="comment">%标准差</span></span><br><span class="line">s=<span class="built_in">sort</span>(a)<span class="comment">%排序</span></span><br><span class="line"><span class="comment">%还有 min max 等</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li>矩阵操作</li>
 </ul>
 <figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">a=<span class="built_in">rand</span>(<span class="number">5</span>,<span class="number">3</span>)</span><br><span class="line">b=<span class="built_in">rand</span>(<span class="number">5</span>,<span class="number">3</span>)</span><br><span class="line">b=b'<span class="comment">%转置</span></span><br><span class="line">c=a*b<span class="comment">%矩阵乘法</span></span><br><span class="line">d=a.*b<span class="comment">%逐元素相乘</span></span><br><span class="line">m=b^<span class="number">3</span><span class="comment">%幂</span></span><br><span class="line">m=b.^<span class="number">3</span><span class="comment">%点幂</span></span><br><span class="line"><span class="built_in">size</span>(b)<span class="comment">%矩阵大小</span></span><br><span class="line">b=<span class="built_in">reshape</span>(<span class="number">1</span>,<span class="number">15</span>)</span><br><span class="line">b=<span class="built_in">flipud</span>(b)<span class="comment">%上下翻转 up and down</span></span><br><span class="line">b=<span class="built_in">fliplr</span>(b)<span class="comment">%左右翻转 left and right</span></span><br><span class="line">e=<span class="built_in">diag</span>(b)<span class="comment">%取出b的对角元素</span></span><br><span class="line"></span><br><span class="line">left_division=a/b<span class="comment">% b*inv(a)</span></span><br><span class="line">right_division=a\b<span class="comment">% inv(a)*b</span></span><br><span class="line"><span class="comment">%X=A\B是方程A*X=B的解，X=A\B是方程X*A=B的解 </span></span><br><span class="line"><span class="comment">%记忆：朝向哪 逆在哪</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li><p>绘图</p>
-<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">x=<span class="built_in">linspace</span>(<span class="number">1</span>,<span class="number">10</span>,<span class="number">100</span>)</span><br><span class="line">y1=<span class="built_in">sin</span>(x)</span><br><span class="line">y2=<span class="built_in">cos</span>(x)</span><br><span class="line">y3=<span class="built_in">tan</span>(x)</span><br><span class="line"><span class="built_in">plot</span>(x,y1,<span class="string">'blue'</span>,x,y2,<span class="string">'LineWidth'</span>,<span class="number">2</span>,<span class="string">'color'</span>,<span class="string">'red'</span>)</span><br><span class="line"><span class="comment">%要在同一图中画出多条曲线，只需将坐标依次放入plot函数即可</span></span><br><span class="line">axis([<span class="number">0</span> <span class="number">4</span>*<span class="built_in">pi</span> <span class="number">-1.2</span> <span class="number">1.2</span>])<span class="comment">%设置坐标轴范围</span></span><br><span class="line">xlim([<span class="number">1</span> <span class="number">2</span>])<span class="comment">%单独控制</span></span><br><span class="line">xlabel(<span class="string">'x'</span>); ylabel(<span class="string">'y'</span>);</span><br><span class="line"><span class="built_in">legend</span>(<span class="string">'sin(x)'</span>,<span class="string">'cos(x)'</span>);</span><br><span class="line">title(<span class="string">'Sine and Cosine Functions'</span>);</span><br><span class="line"><span class="comment">%title里可以使用latex语法</span></span><br><span class="line"><span class="comment">%如 ：title('$y_1=\sin(4\pi t+\pi /3)$','interpreter','latex')</span></span><br><span class="line"><span class="comment">% 注明解释器为latex即可</span></span><br><span class="line"></span><br><span class="line"><span class="comment">%绘制子图</span></span><br><span class="line">subplot(<span class="number">2</span>,<span class="number">2</span>,<span class="number">1</span>); <span class="built_in">plot</span>(x,y1);</span><br><span class="line">subplot(<span class="number">2</span>,<span class="number">2</span>,<span class="number">2</span>); <span class="built_in">plot</span>(x,y2);</span><br><span class="line">subplot(<span class="number">2</span>,<span class="number">2</span>,<span class="number">3</span>); <span class="built_in">plot</span>(x,y3);</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">x=<span class="built_in">linspace</span>(<span class="number">1</span>,<span class="number">10</span>,<span class="number">100</span>)</span><br><span class="line">y1=<span class="built_in">sin</span>(x)</span><br><span class="line">y2=<span class="built_in">cos</span>(x)</span><br><span class="line">y3=<span class="built_in">tan</span>(x)</span><br><span class="line"><span class="built_in">plot</span>(x,y1,<span class="string">'blue'</span>,x,y2,<span class="string">'LineWidth'</span>,<span class="number">2</span>,<span class="string">'color'</span>,<span class="string">'red'</span>)</span><br><span class="line"><span class="comment">%要在同一图中画出多条曲线，只需将坐标依次放入plot函数即可</span></span><br><span class="line">axis([<span class="number">0</span> <span class="number">4</span>*<span class="built_in">pi</span> <span class="number">-1.2</span> <span class="number">1.2</span>])<span class="comment">%设置坐标轴范围</span></span><br><span class="line">xlim([<span class="number">1</span> <span class="number">2</span>])<span class="comment">%单独控制</span></span><br><span class="line">xlabel(<span class="string">'x'</span>); ylabel(<span class="string">'y'</span>);</span><br><span class="line"><span class="built_in">legend</span>(<span class="string">'sin(x)'</span>,<span class="string">'cos(x)'</span>);</span><br><span class="line">title(<span class="string">'Sine and Cosine Functions'</span>);</span><br><span class="line"><span class="comment">%title里可以使用latex语法</span></span><br><span class="line"><span class="comment">%如 ：title('$y_1=\sin(4\pi t+\pi /3)$','interpreter','latex')</span></span><br><span class="line"><span class="comment">% 注明解释器为latex即可</span></span><br><span class="line"></span><br><span class="line"><span class="comment">%绘制子图</span></span><br><span class="line">subplot(<span class="number">2</span>,<span class="number">2</span>,<span class="number">1</span>); <span class="built_in">plot</span>(x,y1);</span><br><span class="line">subplot(<span class="number">2</span>,<span class="number">2</span>,<span class="number">2</span>); <span class="built_in">plot</span>(x,y2);</span><br><span class="line">subplot(<span class="number">2</span>,<span class="number">2</span>,<span class="number">3</span>); <span class="built_in">plot</span>(x,y3);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
 <li><p>信号处理</p>
-<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line"><span class="comment">%噪声</span></span><br><span class="line">snr=<span class="number">10</span>; <span class="comment">%Signal‐to‐noise ratio in dB.</span></span><br><span class="line">yn=awgn(y,snr,<span class="string">'measured'</span>); <span class="comment">% Add white Gaussian noise. 白噪声</span></span><br><span class="line"></span><br><span class="line"><span class="comment">%函数</span></span><br><span class="line">k1=<span class="number">-3</span>; k2=<span class="number">3</span>; k=k1:k2; n=<span class="number">0</span>;</span><br><span class="line">step=stepfun(t,t0)<span class="comment">%t是向量形式的变量,t0表示延迟 阶跃函数</span></span><br><span class="line">delta=+(k==n) <span class="comment">% 冲激函数</span></span><br><span class="line">stem(k,delta,<span class="string">'filled'</span>)<span class="comment">% 离散函数绘制 stem为绘制杆状图</span></span><br><span class="line"></span><br><span class="line"><span class="comment">%rectpuls和tripuls函数产生指定宽度和高度的矩形和三角脉冲。</span></span><br></pre></td></tr></table></figure></li>
+<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line"><span class="comment">%噪声</span></span><br><span class="line">snr=<span class="number">10</span>; <span class="comment">%Signal‐to‐noise ratio in dB.</span></span><br><span class="line">yn=awgn(y,snr,<span class="string">'measured'</span>); <span class="comment">% Add white Gaussian noise. 白噪声</span></span><br><span class="line"></span><br><span class="line"><span class="comment">%函数</span></span><br><span class="line">k1=<span class="number">-3</span>; k2=<span class="number">3</span>; k=k1:k2; n=<span class="number">0</span>;</span><br><span class="line">step=stepfun(t,t0)<span class="comment">%t是向量形式的变量,t0表示延迟 阶跃函数</span></span><br><span class="line">delta=+(k==n) <span class="comment">% 冲激函数</span></span><br><span class="line">stem(k,delta,<span class="string">'filled'</span>)<span class="comment">% 离散函数绘制 stem为绘制杆状图</span></span><br><span class="line"></span><br><span class="line"><span class="comment">%rectpuls和tripuls函数产生指定宽度和高度的矩形和三角脉冲。</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
 <li><p>其他技巧</p>
 <ul>
-<li>nargin, nargout 的使用</li>
-</ul></li>
+<li>nargin, nargout 的使用 </li>
 </ul>
-<h2 id="关于频率">关于频率</h2>
-<p>采样频率 <span class="math inline">\(f_s\)</span>：每秒取 <span class="math inline">\(f_s\)</span> 个点，计算中应该取和物理采样硬件（如示波器）的采样频率一致</p>
-<p>频率域分析中，若采样频率是 <span class="math inline">\(f_s\)</span>, 那么分析的范围是 <span class="math inline">\([0,f_s)\)</span>, 这是因为更高频率的波我们采样不到了。</p>
-<p>又由于 <span class="math inline">\([0,f_s/2),[f_s/2,f_s)\)</span> 是对称的，事实上有用的信息或者说我们需要分析的范围是 <span class="math inline">\([0,f_s/2]\)</span> 。</p>
-<p>在用 Matlab 进行频率域分析时，首先应该设置采样频率。根据物理硬件可以确定采样频率，如果是离散信号，那么采样频率就是 <span class="math inline">\(1\)</span> 。</p>
-<p>第二步应该确定采样的点数 <span class="math inline">\(N\)</span> 或者采样的持续时间 <span class="math inline">\(T\)</span>, 知道一个我们就可以确定另一个：<span class="math inline">\(N\implies T=N/f_s,\quad T\implies N=T\cdot f_s\)</span></p>
+</li>
+</ul>
+<h2 id="关于频率"><a href="#关于频率" class="headerlink" title="关于频率"></a>关于频率</h2><p>采样频率 $f_s$：每秒取 $f_s$ 个点，计算中应该取和物理采样硬件（如示波器）的采样频率一致</p>
+<p>频率域分析中，若采样频率是 $f_s$, 那么分析的范围是 $[0,f_s)$, 这是因为更高频率的波我们采样不到了。</p>
+<p>又由于 $[0,f_s/2),[f_s/2,f_s)$ 是对称的，事实上有用的信息或者说我们需要分析的范围是 $[0,f_s/2]$ 。</p>
+<p>在用 Matlab 进行频率域分析时，首先应该设置采样频率。根据物理硬件可以确定采样频率，如果是离散信号，那么采样频率就是 $1$ 。</p>
+<p>第二步应该确定采样的点数 $N$ 或者采样的持续时间 $T$, 知道一个我们就可以确定另一个：$N\implies T=N/f_s,\quad T\implies N=T\cdot f_s$</p>
 <p>在使用 Matlab 的 fft 函数时，有几个需要注意的地方：</p>
 <ul>
-<li><p>真实信号的振幅应该是 <span class="math inline">\(A\cdot2/N\)</span> ，这个我不是很明白，查到的是这样说的，<span class="math inline">\(A\)</span> 是 fft 变换后的振幅</p></li>
-<li><p>如果采样频率是 <span class="math inline">\(f_s\)</span>, 那么 fft 时要乘一下 <span class="math inline">\(dt=1/f_s\)</span> (每秒 <span class="math inline">\(f_s\)</span> 个点，那么一个点就是 <span class="math inline">\(1/f_s\)</span> 秒) ，这是由于 Matlab 的 fft 是离散傅立叶变换，相当于 <span class="math inline">\(dt=1\)</span> ，需要补乘 <span class="math inline">\(dt\)</span></p></li>
-<li><p>频率域对应的频谱范围是 <span class="math inline">\(0\sim f_s\)</span>, 有用的信息是在 <span class="math inline">\(0~f_s/2\)</span>, Matlab 代码实现是</p>
+<li><p>真实信号的振幅应该是 $A\cdot2/N$ ，这个我不是很明白，查到的是这样说的，$A$ 是 fft 变换后的振幅</p>
+</li>
+<li><p>如果采样频率是 $f_s$, 那么 fft 时要乘一下 $dt=1/f_s$ (每秒 $f_s$ 个点，那么一个点就是 $1/f_s$ 秒) ，这是由于 Matlab 的 fft 是离散傅立叶变换，相当于 $dt=1$ ，需要补乘 $dt$</p>
+</li>
+<li><p>频率域对应的频谱范围是 $0\sim f_s$, 有用的信息是在 $0~f_s/2$, Matlab 代码实现是 </p>
 <figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line"><span class="number">0</span>:(N<span class="number">-1</span>)/N*fs</span><br></pre></td></tr></table></figure>
-<p>可以用 fftshift 将 <span class="math inline">\([0,f_s)\)</span> 移为 <span class="math inline">\((-f_s/2,f_s/2]\)</span>, 然后取 <span class="math inline">\([o,f_s/2]\)</span> 的有用信息进行分析</p></li>
-<li><p>反变换 ifft 时要乘回来之前多乘的 <span class="math inline">\(1/f_s\)</span>, 即乘 <span class="math inline">\(f_s\)</span></p></li>
+<p>可以用 fftshift 将 $[0,f_s)$ 移为 $(-f_s/2,f_s/2]$, 然后取 $[o,f_s/2]$ 的有用信息进行分析</p>
+</li>
+<li><p>反变换 ifft 时要乘回来之前多乘的 $1/f_s$, 即乘 $f_s$</p>
+</li>
 </ul>
 
       
@@ -667,7 +679,42 @@
 
 
     
-  </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            displayMath: [ ['$','$'], ["\\[","\\]"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js"></script>
+
+
+<!-- <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['
+
+</html>,'
+
+</html>], ["\\(","\\)"] ],
+      displayMath: [ ['$','$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js"></script> --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 
 </html>

@@ -103,12 +103,9 @@
       
 
       
-      <h1 id="note-for-data-structure">Note for Data Structure</h1>
-<h3 id="维护最大堆">维护最大堆</h3>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">// MAP-HEAPIFY</span><br><span class="line">MAX_HEAPIFY(A,i)</span><br><span class="line">	l = LEFT(i)</span><br><span class="line">    r = RIGHT(i)</span><br><span class="line">    <span class="keyword">if</span> l &lt;= A.size <span class="keyword">and</span> A[l]&gt;A[i]</span><br><span class="line">        largest = l</span><br><span class="line">    <span class="keyword">else</span> </span><br><span class="line">    	largest = i</span><br><span class="line">    <span class="keyword">if</span> r &lt;= A.size <span class="keyword">and</span> A[r]&gt;A[largest]</span><br><span class="line">    	largest = r</span><br><span class="line">    <span class="keyword">if</span> largest != i</span><br><span class="line">    	exchange(A[i],A[largest]) // 交换了 i 和 largest 位置的元素</span><br><span class="line">    	MAX_HEAPIFY(A,largest)</span><br></pre></td></tr></table></figure>
-<p>维护最大/小堆的时间复杂度为 <span class="math inline">\(\log(n)\)</span>，常用在连续取出最大值或最小值。</p>
-<h4 id="优先队列">优先队列</h4>
-<p>普通的队列是先进先出，而在优先队列中，元素被赋予优先级。当访问元素时，具有最高优先级的元素最先删除。优先队列具有最高级先出 （first in, largest out）的行为特征。</p>
+      <h1 id="Note-for-Data-Structure"><a href="#Note-for-Data-Structure" class="headerlink" title="Note for Data Structure"></a>Note for Data Structure</h1><h3 id="维护最大堆"><a href="#维护最大堆" class="headerlink" title="维护最大堆"></a>维护最大堆</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">// MAP-HEAPIFY</span><br><span class="line">MAX_HEAPIFY(A,i)</span><br><span class="line">	l = LEFT(i)</span><br><span class="line">    r = RIGHT(i)</span><br><span class="line">    <span class="keyword">if</span> l &lt;= A.size <span class="keyword">and</span> A[l]&gt;A[i]</span><br><span class="line">        largest = l</span><br><span class="line">    <span class="keyword">else</span> </span><br><span class="line">    	largest = i</span><br><span class="line">    <span class="keyword">if</span> r &lt;= A.size <span class="keyword">and</span> A[r]&gt;A[largest]</span><br><span class="line">    	largest = r</span><br><span class="line">    <span class="keyword">if</span> largest != i</span><br><span class="line">    	exchange(A[i],A[largest]) // 交换了 i 和 largest 位置的元素</span><br><span class="line">    	MAX_HEAPIFY(A,largest)</span><br></pre></td></tr></table></figure>
+<p>维护最大/小堆的时间复杂度为 $\log(n)$，常用在连续取出最大值或最小值。</p>
+<h4 id="优先队列"><a href="#优先队列" class="headerlink" title="优先队列"></a>优先队列</h4><p>普通的队列是先进先出，而在优先队列中，元素被赋予优先级。当访问元素时，具有最高优先级的元素最先删除。优先队列具有最高级先出 （first in, largest out）的行为特征。</p>
 <p>优先队列在队列基础上添加了内部的一个排序，它本质是一个堆实现的。因而维护堆的时候可以直接用STL的 <code>priority_queue</code>.</p>
 <p>less是从大到小，greater是从小到大？</p>
 <ul>
@@ -623,7 +620,42 @@
 
 
     
-  </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            displayMath: [ ['$','$'], ["\\[","\\]"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js"></script>
+
+
+<!-- <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['
+
+</html>,'
+
+</html>], ["\\(","\\)"] ],
+      displayMath: [ ['$','$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js"></script> --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 
 </html>

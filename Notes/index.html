@@ -66,28 +66,41 @@
       
 
       
-      <h1 id="notes-toc">Notes Toc</h1>
-<p>Here I will list some of my notes.</p>
-<h2 id="physics">Physics</h2>
-<ul>
-<li><a href="/2020/02/18/Physics-Electrodynamics/index.html">Electrodynamics</a> (digital)</li>
-<li><a href="/2020/03/02/Physics-应用光学/index.html">Applied Optics</a> (digital)</li>
-<li><a href="/2020/02/18/Physics-Theoretical-Mechanics/index.html">Theoretical Mechanics</a> (digital)</li>
-<li><a href="/2020/09/15/Physics-Quantum-Mechanics-Notes/index.html">Quantum Mechanics</a> (digital, MIT-OCW, continuing update)</li>
-<li>Physical Optics (waiting)</li>
-<li>Optical Matrial (waiting)</li>
+      <h1 id="Notes-Toc"><a href="#Notes-Toc" class="headerlink" title="Notes Toc"></a>Notes Toc</h1><p>Here I will list some of my notes.</p>
+<h2 id="Physics"><a href="#Physics" class="headerlink" title="Physics"></a>Physics</h2><ul>
+<li><a href="/2020/02/18/Physics/Electrodynamics/index.html">Electrodynamics</a> (digital)</li>
+<li><a href="/2020/02/18/Physics/Theoretical-Mechanics/index.html">Theoretical Mechanics</a> (digital)</li>
+<li><a href="/2020/09/15/Physics/Quantum-Mechanics/index.html">Quantum Mechanics</a> (digital, MIT-OCW, continuing update)</li>
 </ul>
-<h2 id="mathemetics">Mathemetics</h2>
-<ul>
-<li><p><a href="/2020/05/03/Notes-byhand-NA-notes/index.html">Numerical Analysis (NA)</a> (by hand)</p></li>
-<li><p><a href="/2020/01/20/Mathematics-Abstract-Algebra/index.html">Abstract Algebra</a> (digital)</p></li>
-<li><p><a href="/2020/02/28/Mathematics-Linear-Algebra/index.html">Linear Algebra</a> (digital)</p></li>
-<li><p><a href="/2020/02/07/Mathematics-Mathematical-Modeling/index.html">Mathematical Modeling</a> (digital)</p></li>
-<li><p><a href="/2020/05/03/Notes-byhand-pde-notes/index.html">Partial Differential Equations (PDE)</a> (by hand)</p></li>
-<li><p><a href="/2020/09/07/Mathematics-随机过程复习总结/index.html">Stochastic Process</a> (digital, brief)</p></li>
+<h2 id="Optics"><a href="#Optics" class="headerlink" title="Optics"></a>Optics</h2><ul>
+<li><p><a href="/2020/10/23/Optics/光电子学笔记/index.html">Opto-electronics</a> (digital)</p>
+</li>
+<li><p><a href="/2021/01/25/Optics/Quantum-Optics/index.html">Quantum Optics</a> (digital)</p>
+</li>
+<li><p><a href="/2020/09/16/Optics/光学材料笔记/index.html">Optical Materials</a> (digital)</p>
+</li>
+<li><p><a href="/2020/09/16/Optics/物理光学笔记/index.html">Physical Optics</a> (digital)</p>
+</li>
+<li><p><a href="//2020/03/02/Optics/应用光学/index.html" target="_blank" rel="noopener">Applied Optics</a> (digital)</p>
+</li>
 </ul>
-<h2 id="computer-science">Computer Science</h2>
-<ul>
+<h2 id="Electronics"><a href="#Electronics" class="headerlink" title="Electronics"></a>Electronics</h2><ul>
+<li><a href="/2020/12/11/Electronics/Electronics/index.html">Electronics</a> (digital, continuing)</li>
+</ul>
+<h2 id="Mathemetics"><a href="#Mathemetics" class="headerlink" title="Mathemetics"></a>Mathemetics</h2><ul>
+<li><p><a href="/2020/05/03/Notes-byhand/NA-notes/index.html">Numerical Analysis (NA)</a> (by hand)</p>
+</li>
+<li><p><a href="/2020/01/20/Mathematics/Abstract-Algebra/index.html">Abstract Algebra</a> (digital)</p>
+</li>
+<li><p><a href="/2020/02/28/Mathematics/Linear-Algebra/index.html">Linear Algebra</a> (digital)</p>
+</li>
+<li><p><a href="/2020/02/07/Mathematics/Mathematical-Modeling/index.html">Mathematical Modeling</a> (digital)</p>
+</li>
+<li><p><a href="/2020/05/03/Notes-byhand/pde-notes/index.html">Partial Differential Equations (PDE)</a> (by hand)</p>
+</li>
+<li><a href="/2020/09/07/Mathematics/随机过程复习总结/index.html">Stochastic Process</a> (digital, brief)</li>
+</ul>
+<h2 id="Computer-Science"><a href="#Computer-Science" class="headerlink" title="Computer Science"></a>Computer Science</h2><ul>
 <li>Machine Learning (waiting)</li>
 <li>Deep Learning (waiting)</li>
 </ul>
@@ -562,7 +575,42 @@
 
 
     
-  </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            displayMath: [ ['$','$'], ["\\[","\\]"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js"></script>
+
+
+<!-- <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['
+
+</html>,'
+
+</html>], ["\\(","\\)"] ],
+      displayMath: [ ['$','$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js"></script> --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 
 </html>

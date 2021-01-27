@@ -120,31 +120,33 @@
       
 
       
-      <h1 id="应用光学-整理">应用光学 整理</h1>
-<h2 id="几何光学基础">1. 几何光学基础</h2>
-<ul>
-<li><p>全反射 <span class="math display">\[
-I=\arcsin{\frac{n_2}{n_1}}
-\]</span></p></li>
-<li><p>矢量形式的折射定律 <span class="math display">\[
-\vec A&#39;=\vec A+P\vec N\\
-\]</span> 其中： <span class="math display">\[
+      <h1 id="应用光学-整理"><a href="#应用光学-整理" class="headerlink" title="应用光学 整理"></a>应用光学 整理</h1><h2 id="1-几何光学基础"><a href="#1-几何光学基础" class="headerlink" title="1. 几何光学基础"></a>1. 几何光学基础</h2><ul>
+<li><p>全反射</p>
+<script type="math/tex; mode=display">
+I=\arcsin{\frac{n_2}{n_1}}</script></li>
+<li><p>矢量形式的折射定律</p>
+<script type="math/tex; mode=display">
+\vec A'=\vec A+P\vec N\\</script><p>其中：</p>
+<script type="math/tex; mode=display">
 \begin{aligned}
-P&amp;=(\vec A&#39;-\vec A)\cdot \vec N\\
-&amp;=n&#39;\cos I&#39;-n\cos I\\
-&amp;=\sqrt{n&#39;^2-n^2\sin ^2 I}-n\cos I
-\end{aligned}
-\]</span> 且 <span class="math inline">\(\vec A,\vec A’\)</span> 均为单位向量</p></li>
-<li><p>矢量形式的反射定律 <span class="math display">\[
-\vec A&#39;=\vec A-2(\vec N\cdot \vec A)\vec N
-\]</span></p></li>
+P&=(\vec A'-\vec A)\cdot \vec N\\
+&=n'\cos I'-n\cos I\\
+&=\sqrt{n'^2-n^2\sin ^2 I}-n\cos I
+\end{aligned}</script><p>且 $\vec A,\vec A’$ 均为单位向量</p>
+</li>
+<li><p>矢量形式的反射定律</p>
+<script type="math/tex; mode=display">
+\vec A'=\vec A-2(\vec N\cdot \vec A)\vec N</script></li>
+</ul>
+<ul>
 <li><p>光程</p>
-<p>​ 光在介质中所经过的几何路径与该介质折射率的乘积。相当于光在介质中走过路程的时间内，在真空中所走的几何路程。 <span class="math display">\[
+<p>​    光在介质中所经过的几何路径与该介质折射率的乘积。相当于光在介质中走过路程的时间内，在真空中所走的几何路程。</p>
+<script type="math/tex; mode=display">
 \notag
- s=nl=ct
-\]</span></p></li>
+ s=nl=ct</script></li>
 <li><p>完善成像</p>
-<p>​ 等光程上完善成像的物理条件。</p></li>
+<p>​    等光程上完善成像的物理条件。</p>
+</li>
 </ul>
       
       <a class="article-more-link" href="../../2020/03/02/Optics/%E5%BA%94%E7%94%A8%E5%85%89%E5%AD%A6/">阅读更多...</a>
@@ -215,31 +217,22 @@ P&amp;=(\vec A&#39;-\vec A)\cdot \vec N\\
       
 
       
-      <h1 id="leecode-题目整理">Leecode 题目整理</h1>
-<h3 id="三数之和">三数之和</h3>
-<p>排序+<strong>双指针</strong></p>
+      <h1 id="Leecode-题目整理"><a href="#Leecode-题目整理" class="headerlink" title="Leecode 题目整理"></a>Leecode 题目整理</h1><h3 id="三数之和"><a href="#三数之和" class="headerlink" title="三数之和"></a>三数之和</h3><p>排序+<strong>双指针</strong></p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">nums.sort()</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(n):</span><br><span class="line">  <span class="keyword">if</span> i&gt;<span class="number">0</span> <span class="keyword">and</span> nums[i] == nums[i - <span class="number">1</span>]:	<span class="keyword">continue</span></span><br><span class="line">  l = i + <span class="number">1</span></span><br><span class="line">  r = n - <span class="number">1</span></span><br><span class="line">  <span class="keyword">while</span>(l &lt; r):</span><br><span class="line">    <span class="keyword">if</span> nums[i] + nums[l] + nums[r] == <span class="number">0</span>:</span><br><span class="line">      ans.append([nums[i], nums[l], nums[r]])</span><br><span class="line">      <span class="keyword">while</span> l&lt;r <span class="keyword">and</span> nums[r]==nums[r<span class="number">-1</span>]:	r=r<span class="number">-1</span></span><br><span class="line">      <span class="keyword">while</span> l&lt;r <span class="keyword">and</span> nums[l]==nums[l+<span class="number">1</span>]:	l=l+<span class="number">1</span></span><br><span class="line">      r=r<span class="number">-1</span></span><br><span class="line">      l=l+<span class="number">1</span></span><br><span class="line">    <span class="keyword">elif</span> nums[i] + nums[l] + nums[r] &gt; <span class="number">0</span>:	r = r - <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>: l = l + <span class="number">1</span></span><br></pre></td></tr></table></figure>
-<h3 id="两数之和">两数之和</h3>
-<p><strong>carry</strong> 用得很妙, 模拟进位</p>
+<h3 id="两数之和"><a href="#两数之和" class="headerlink" title="两数之和"></a>两数之和</h3><p><strong>carry</strong> 用得很妙, 模拟进位</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">addTwoNumbers</span><span class="params">(self, l1: ListNode, l2: ListNode)</span> -&gt; ListNode:</span></span><br><span class="line">  ans=ListNode(<span class="number">0</span>)</span><br><span class="line">  head=ans</span><br><span class="line">  carry=<span class="number">0</span></span><br><span class="line">  <span class="keyword">while</span> l1 <span class="keyword">or</span> l2:</span><br><span class="line">  	x=l1.val <span class="keyword">if</span> l1 <span class="keyword">else</span> <span class="number">0</span></span><br><span class="line">  	y=l2.val <span class="keyword">if</span> l2 <span class="keyword">else</span> <span class="number">0</span></span><br><span class="line">  	s=x+y+carry</span><br><span class="line">  	carry=s//<span class="number">10</span></span><br><span class="line">  	ans.next=ListNode(s%<span class="number">10</span>)</span><br><span class="line">  	ans=ans.next</span><br><span class="line">  	<span class="keyword">if</span> l1:</span><br><span class="line">  		l1=l1.next</span><br><span class="line">  	<span class="keyword">if</span> l2:</span><br><span class="line">  		l2=l2.next</span><br><span class="line">  	<span class="keyword">if</span> carry:</span><br><span class="line">  		ans.next=ListNode(carry)</span><br><span class="line">  <span class="keyword">return</span> head.next</span><br></pre></td></tr></table></figure>
-<h2 id="队列">队列</h2>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#简易版本</span></span><br><span class="line">queue=[]</span><br><span class="line">queue.append(data) <span class="comment">#入队</span></span><br><span class="line">queue.pop(<span class="number">0</span>)	<span class="comment">#出队</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#双向队列</span></span><br><span class="line"><span class="keyword">import</span> collections</span><br><span class="line">que=collectione.deque()</span><br><span class="line">que.append() </span><br><span class="line">que.appendleft()</span><br><span class="line">que.insert(i,x)<span class="comment">#在第i个位置插入x</span></span><br><span class="line">que.popleft()</span><br><span class="line">que.pop()</span><br><span class="line">que.remove(val)<span class="comment">#移除查找到的第一个val</span></span><br><span class="line">que.count(x)<span class="comment">#计算que中元素等于x的个数</span></span><br><span class="line">que.rotate(n)<span class="comment">#向右循环移动n步 </span></span><br><span class="line">que.clear()</span><br></pre></td></tr></table></figure>
-<h3 id="墙与门">墙与门</h3>
-<p>BFS</p>
+<h2 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#简易版本</span></span><br><span class="line">queue=[]</span><br><span class="line">queue.append(data) <span class="comment">#入队</span></span><br><span class="line">queue.pop(<span class="number">0</span>)	<span class="comment">#出队</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#双向队列</span></span><br><span class="line"><span class="keyword">import</span> collections</span><br><span class="line">que=collectione.deque()</span><br><span class="line">que.append() </span><br><span class="line">que.appendleft()</span><br><span class="line">que.insert(i,x)<span class="comment">#在第i个位置插入x</span></span><br><span class="line">que.popleft()</span><br><span class="line">que.pop()</span><br><span class="line">que.remove(val)<span class="comment">#移除查找到的第一个val</span></span><br><span class="line">que.count(x)<span class="comment">#计算que中元素等于x的个数</span></span><br><span class="line">que.rotate(n)<span class="comment">#向右循环移动n步 </span></span><br><span class="line">que.clear()</span><br></pre></td></tr></table></figure>
+<h3 id="墙与门"><a href="#墙与门" class="headerlink" title="墙与门"></a>墙与门</h3><p>BFS</p>
 <p>满足条件=&gt;处理=&gt;放入队列</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">used=[]<span class="comment">#走过的标记不再走</span></span><br><span class="line">rooms[tmpk][tmpt] = rooms[i][j] + <span class="number">1</span> <span class="comment">#step是上一个的加1</span></span><br></pre></td></tr></table></figure>
-<h3 id="岛屿数量">岛屿数量</h3>
-<p>BFS ：</p>
+<h3 id="岛屿数量"><a href="#岛屿数量" class="headerlink" title="岛屿数量"></a>岛屿数量</h3><p>BFS ：</p>
 <p>写个bfs函数，注意每到一个点要mark。</p>
 <p>对所有可遍历点bfs（同步更新可遍历点）, 每使用一次就找到了一个模块, cnt++。</p>
 <p><strong>并查集（未）</strong></p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">bfs</span><span class="params">(i, j)</span>:</span></span><br><span class="line"> queue = deque()</span><br><span class="line"> queue.appendleft((i, j))</span><br><span class="line"> grid[i][j] = <span class="string">"0"</span></span><br><span class="line"> <span class="keyword">while</span> queue:</span><br><span class="line">   i, j = queue.pop()</span><br><span class="line">   <span class="keyword">for</span> x, y <span class="keyword">in</span> [[<span class="number">-1</span>, <span class="number">0</span>], [<span class="number">1</span>, <span class="number">0</span>], [<span class="number">0</span>, <span class="number">-1</span>], [<span class="number">0</span>, <span class="number">1</span>]]:</span><br><span class="line">    tmp_i = i + x</span><br><span class="line">    tmp_j = j + y</span><br><span class="line">   <span class="keyword">if</span> <span class="number">0</span> &lt;= tmp_i &lt; row <span class="keyword">and</span> <span class="number">0</span> &lt;= tmp_j &lt; col <span class="keyword">and</span> grid[tmp_i][tmp_j] == <span class="string">"1"</span>:</span><br><span class="line">   	grid[tmp_i][tmp_j] = <span class="string">"0"</span></span><br><span class="line">    queue.appendleft((tmp_i, tmp_j))</span><br><span class="line"></span><br><span class="line"> <span class="keyword">for</span> i <span class="keyword">in</span> range(row):</span><br><span class="line">   <span class="keyword">for</span> j <span class="keyword">in</span> range(col):</span><br><span class="line">     <span class="keyword">if</span> grid[i][j] == <span class="string">"1"</span>:</span><br><span class="line">       bfs(i, j)</span><br><span class="line">       cnt += <span class="number">1</span></span><br></pre></td></tr></table></figure>
-<h3 id="打开转盘锁">打开转盘锁</h3>
-<p>yield 的使用</p>
-<h2 id="栈">栈</h2>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">stack=[]</span><br><span class="line">stack.append()</span><br><span class="line">stack.pop()</span><br><span class="line">stack[<span class="number">-1</span>]<span class="comment">#取出栈顶元素</span></span><br></pre></td></tr></table></figure>
-<h3 id="最小栈">最小栈</h3>
-<p>使用两个栈，一个作为<strong>辅助栈</strong>。</p>
+<h3 id="打开转盘锁"><a href="#打开转盘锁" class="headerlink" title="打开转盘锁"></a>打开转盘锁</h3><p>yield 的使用</p>
+<h2 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">stack=[]</span><br><span class="line">stack.append()</span><br><span class="line">stack.pop()</span><br><span class="line">stack[<span class="number">-1</span>]<span class="comment">#取出栈顶元素</span></span><br></pre></td></tr></table></figure>
+<h3 id="最小栈"><a href="#最小栈" class="headerlink" title="最小栈"></a>最小栈</h3><p>使用两个栈，一个作为<strong>辅助栈</strong>。</p>
 
       
       <!-- reward -->
@@ -307,36 +300,29 @@ P&amp;=(\vec A&#39;-\vec A)\cdot \vec N\\
       
 
       
-      <h1 id="线性代数学习笔记">线性代数学习笔记</h1>
-<p>后面留了一些坑</p>
+      <h1 id="线性代数学习笔记"><a href="#线性代数学习笔记" class="headerlink" title="线性代数学习笔记"></a>线性代数学习笔记</h1><p>后面留了一些坑</p>
 <p>主要是例题中用到的基本性质和定理的证明</p>
 <p>推荐网站：<a href="https://ccjou.wordpress.com/" target="_blank" rel="noopener">线代启示录</a></p>
-<h2 id="线性空间">1. 线性空间</h2>
-<h3 id="基的可扩充性">基的可扩充性</h3>
-<p><span class="math inline">\(V^n\)</span> 的任意一组线性无关的向量都可扩充为一组基。</p>
+<h2 id="1-线性空间"><a href="#1-线性空间" class="headerlink" title="1. 线性空间"></a>1. 线性空间</h2><h3 id="基的可扩充性"><a href="#基的可扩充性" class="headerlink" title="基的可扩充性"></a>基的可扩充性</h3><p>$V^n$ 的任意一组线性无关的向量都可扩充为一组基。</p>
 <p>证明：</p>
-<p>​ 对于一个有 <span class="math inline">\(m\)</span> 个向量的线性无关组，若 <span class="math inline">\(m&lt;n\)</span> ，则 <span class="math inline">\(V\)</span> 中肯定<strong>存在向量 <span class="math inline">\(x\)</span> 不能被他们表示</strong>。</p>
-<p>​ 可以证明 <span class="math inline">\(x\)</span> 与他们线性无关，把 <span class="math inline">\(x\)</span> 添进去，构成新的线性无关组。</p>
-<p>​ 这样一直添，最后可以扩充为一组基。</p>
-<h3 id="维数公式">维数公式</h3>
-<p><span class="math display">\[
+<p>​        对于一个有 $m$ 个向量的线性无关组，若 $m&lt;n$ ，则 $V$ 中肯定<strong>存在向量 $x$ 不能被他们表示</strong>。</p>
+<p>​        可以证明 $x$ 与他们线性无关，把 $x$ 添进去，构成新的线性无关组。</p>
+<p>​        这样一直添，最后可以扩充为一组基。</p>
+<h3 id="维数公式"><a href="#维数公式" class="headerlink" title="维数公式"></a>维数公式</h3><script type="math/tex; mode=display">
 \dim\ W_1+\dim\ W_2=\dim(W_1+W_2)+\dim(W_1\cap W_2)
-\notag
-\]</span></p>
-<p>证明：</p>
-<p>​ 取 <span class="math inline">\(W_1\cap W_2\)</span> 的一组基，分别扩充为 <span class="math inline">\(W_1\)</span> 和 <span class="math inline">\(W_2\)</span> 的基，</p>
-<p>​ 则它们组合起来组成的向量组可以张成 <span class="math inline">\(W_1+W_2\)</span> 。</p>
-<p>​ 接下来只需证明它们线性无关。 <span class="math display">\[
+\notag</script><p>证明：</p>
+<p>​        取 $W_1\cap W_2$ 的一组基，分别扩充为 $W_1$ 和 $W_2$ 的基，</p>
+<p>​        则它们组合起来组成的向量组可以张成 $W_1+W_2$ 。</p>
+<p>​        接下来只需证明它们线性无关。</p>
+<script type="math/tex; mode=display">
 \begin{aligned}
-W_1\cap W_2&amp;=\mathcal{L}(\alpha_1,\cdots,\alpha_r)\\
-W_1&amp;=\mathcal{L}(\alpha_1,\cdots,\alpha_r,\beta_1,\cdots,\beta_s)\\
-W_2&amp;=\mathcal{L}(\alpha_1,\cdots,\alpha_r,\gamma_1,\cdots,\gamma_t)\\
-\implies W_1+W_2&amp;=\mathcal{L}(\alpha_1,\cdots,\alpha_r,\beta_1,\cdots,\beta_s,\gamma_1,\cdots,\gamma_t)
-\end{aligned}
-\]</span></p>
-<p>​ 按线性无关定义写出式子，把 <span class="math inline">\(\gamma\)</span> 项移到等式右边，</p>
-<p>​ 利用 <span class="math inline">\(W_1\cap W_2\)</span> 可以把两边都表示成 <span class="math inline">\(\alpha\)</span> 项的线性组合，</p>
-<p>​ 依次利用移项后是 <span class="math inline">\(W_2\)</span> 和 $ W_1 $ 的基，最后得到全是 <span class="math inline">\(0\)</span>。</p>
+W_1\cap W_2&=\mathcal{L}(\alpha_1,\cdots,\alpha_r)\\
+W_1&=\mathcal{L}(\alpha_1,\cdots,\alpha_r,\beta_1,\cdots,\beta_s)\\
+W_2&=\mathcal{L}(\alpha_1,\cdots,\alpha_r,\gamma_1,\cdots,\gamma_t)\\
+\implies W_1+W_2&=\mathcal{L}(\alpha_1,\cdots,\alpha_r,\beta_1,\cdots,\beta_s,\gamma_1,\cdots,\gamma_t)
+\end{aligned}</script><p>​        按线性无关定义写出式子，把 $\gamma$ 项移到等式右边，</p>
+<p>​        利用 $W_1\cap W_2$ 可以把两边都表示成 $\alpha$ 项的线性组合，</p>
+<p>​        依次利用移项后是 $W_2$ 和 $ W_1 $ 的基，最后得到全是 $0$。</p>
       
       <a class="article-more-link" href="../../2020/02/28/Mathematics/Linear-Algebra/">阅读更多...</a>
       
@@ -351,86 +337,6 @@ W_2&amp;=\mathcal{L}(\alpha_1,\cdots,\alpha_r,\gamma_1,\cdots,\gamma_t)\\
     <footer class="article-footer">
       
       
-
-    </footer>
-
-  </div>
-
-  
-
-  
-
-  
-  
-  
-
-</article>
-    
-    <article id="post-Computer-Science/Machine Learning/Deep learning/论文笔记-SOS-Net" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="../../2020/02/23/Computer-Science/Machine%20Learning/Deep%20learning/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0-SOS-Net/"
-    >SOS-Net</a> 
-</h2>
- 
-
-    </header>
-    
-
-    
-    <div class="article-meta">
-      <a href="../../2020/02/23/Computer-Science/Machine%20Learning/Deep%20learning/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0-SOS-Net/" class="article-date">
-  <time datetime="2020-02-23T08:42:04.000Z" itemprop="datePublished">2020-02-23</time>
-</a>
-      
-  <div class="article-category">
-    <a class="article-category-link" href="../../categories/Computer-Science/">Computer Science</a> / <a class="article-category-link" href="../../categories/Computer-Science/Deep-Learning/">Deep Learning</a> / <a class="article-category-link" href="../../categories/Computer-Science/Deep-Learning/Paper-Notes/">Paper Notes</a>
-  </div>
-
-      
-      
-      
-    </div>
-    
-
-    
-
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-
-      
-      <p>代码链接：https://github.com/scape-research/SOSNet</p>
-<p>研读次数：1</p>
-<p>对 L2-Net 和超越L2的 Hard-Net 的超越。</p>
-<h2 id="待学的东西">待学的东西</h2>
-<ul>
-<li>Von Mises-Fisher distribution</li>
-<li>BOLD</li>
-<li>Hard-Net</li>
-<li>First Order Similarity (FOS)</li>
-<li><span class="math inline">\(K\)</span> Nearest Neighbors (KNN)</li>
-</ul>
-
-      
-      <!-- reward -->
-      
-    </div>
-    
-    
-      <!-- copyright -->
-      
-    <footer class="article-footer">
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/notes/" rel="tag">notes</a></li></ul>
-
 
     </footer>
 
@@ -486,29 +392,108 @@ W_2&amp;=\mathcal{L}(\alpha_1,\cdots,\alpha_r,\gamma_1,\cdots,\gamma_t)\\
       
 
       
-      <p>论文链接：http://www.nlpr.ia.ac.cn/fanbin/pub/L2-Net_CVPR17.pdf</p>
-<p>代码链接：https://github.com/yuruntian/L2-Net</p>
+      <p>论文链接：<a href="http://www.nlpr.ia.ac.cn/fanbin/pub/L2-Net_CVPR17.pdf" target="_blank" rel="noopener">http://www.nlpr.ia.ac.cn/fanbin/pub/L2-Net_CVPR17.pdf</a></p>
+<p>代码链接：<a href="https://github.com/yuruntian/L2-Net" target="_blank" rel="noopener">https://github.com/yuruntian/L2-Net</a></p>
 <p>研读次数：1</p>
-<h2 id="提出的好方法">提出的好方法</h2>
-<ul>
-<li><p>a progressive sampling strategy 渐进采样策略，可使网络在有限次数内获得大量样本</p></li>
-<li><p>Discriminative Intermediate Feature map (DIF) 在中间的特征层施加了额外的监督</p></li>
+<h2 id="提出的好方法"><a href="#提出的好方法" class="headerlink" title="提出的好方法"></a>提出的好方法</h2><ul>
+<li><p>a progressive sampling strategy 渐进采样策略，可使网络在有限次数内获得大量样本</p>
+</li>
+<li><p>Discriminative Intermediate Feature map (DIF)  在中间的特征层施加了额外的监督</p>
+</li>
 <li><p>Loss function that takes three important error aspects into account:</p>
 <ul>
 <li>descriptor similarity 未完全理解</li>
-<li>descriptor compactness : ‘An interesting finding is that the degree of overfitting is directly related to the degree of correlation among descriptor dimensions’</li>
+<li>descriptor compactness :  ‘An interesting finding is that the degree of overfitting is directly related to the degree of correlation among descriptor dimensions’ </li>
 <li>intermediate feature maps 未完全理解</li>
-</ul></li>
 </ul>
-<h3 id="须了解的相关知识">须了解的相关知识</h3>
-<ul>
+</li>
+</ul>
+<h3 id="须了解的相关知识"><a href="#须了解的相关知识" class="headerlink" title="须了解的相关知识"></a>须了解的相关知识</h3><ul>
 <li>SIFT descriptor</li>
 <li>NNS (nearest neighbor search)</li>
 <li>MatchNet (a typical Siamese network)</li>
 </ul>
-<h3 id="应用">应用</h3>
-<ul>
+<h3 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h3><ul>
 <li>实现 <em>特征匹配</em> 的神经网络的训练</li>
+</ul>
+
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/notes/" rel="tag">notes</a></li></ul>
+
+
+    </footer>
+
+  </div>
+
+  
+
+  
+
+  
+  
+  
+
+</article>
+    
+    <article id="post-Computer-Science/Machine Learning/Deep learning/论文笔记-SOS-Net" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="../../2020/02/23/Computer-Science/Machine%20Learning/Deep%20learning/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0-SOS-Net/"
+    >SOS-Net</a> 
+</h2>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="../../2020/02/23/Computer-Science/Machine%20Learning/Deep%20learning/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0-SOS-Net/" class="article-date">
+  <time datetime="2020-02-23T08:42:04.000Z" itemprop="datePublished">2020-02-23</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="../../categories/Computer-Science/">Computer Science</a> / <a class="article-category-link" href="../../categories/Computer-Science/Deep-Learning/">Deep Learning</a> / <a class="article-category-link" href="../../categories/Computer-Science/Deep-Learning/Paper-Notes/">Paper Notes</a>
+  </div>
+
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <p>代码链接：<a href="https://github.com/scape-research/SOSNet" target="_blank" rel="noopener">https://github.com/scape-research/SOSNet</a></p>
+<p>研读次数：1</p>
+<p>对 L2-Net 和超越L2的 Hard-Net 的超越。</p>
+<h2 id="待学的东西"><a href="#待学的东西" class="headerlink" title="待学的东西"></a>待学的东西</h2><ul>
+<li>Von Mises-Fisher distribution</li>
+<li>BOLD</li>
+<li>Hard-Net</li>
+<li>First Order Similarity (FOS)</li>
+<li>$K$ Nearest Neighbors (KNN)</li>
 </ul>
 
       
@@ -579,23 +564,16 @@ W_2&amp;=\mathcal{L}(\alpha_1,\cdots,\alpha_r,\gamma_1,\cdots,\gamma_t)\\
       
 
       
-      <h1 id="数理方法整理">数理方法整理</h1>
-<center>
-Peter_H
-</center>
-<h2 id="一-数学物理定解问题">一 数学物理定解问题</h2>
-<h3 id="定解问题的导出">1.1 定解问题的导出</h3>
-<h4 id="振动方程">（1）振动方程</h4>
-<p><span class="math display">\[
+      <h1 id="数理方法整理"><a href="#数理方法整理" class="headerlink" title="数理方法整理"></a>数理方法整理</h1><center> Peter_H </center>
+
+<h2 id="一-数学物理定解问题"><a href="#一-数学物理定解问题" class="headerlink" title="一 数学物理定解问题"></a>一 数学物理定解问题</h2><h3 id="1-1-定解问题的导出"><a href="#1-1-定解问题的导出" class="headerlink" title="1.1 定解问题的导出"></a>1.1 定解问题的导出</h3><h4 id="（1）振动方程"><a href="#（1）振动方程" class="headerlink" title="（1）振动方程"></a>（1）振动方程</h4><script type="math/tex; mode=display">
 u_{tt}-a^2u_{xx}=f\left(x,t\right)
 \\
-u_{tt}-a^2\Delta u =f\left(\mathbf{x},t\right) \qquad \left(high\ dim\right)
-\]</span></p>
-<ul>
-<li><p>弦的横振动</p>
-<p><img src="https://tva1.sinaimg.cn/large/0082zybply1gc1rytn6i6j313l0lcabz.jpg" style="zoom:50%;" /></p></li>
+u_{tt}-a^2\Delta u =f\left(\mathbf{x},t\right) \qquad \left(high\ dim\right)</script><ul>
+<li>弦的横振动</li>
 </ul>
-<p>$ \ $
+<p>  <img src="https://tva1.sinaimg.cn/large/0082zybply1gc1rytn6i6j313l0lcabz.jpg" style="zoom:50%;" /></p>
+<p>$ \\ $
       
       <a class="article-more-link" href="../../2020/02/19/Physics/%E6%95%B0%E7%90%86%E6%96%B9%E6%B3%95/">阅读更多...</a>
       
@@ -665,8 +643,7 @@ u_{tt}-a^2\Delta u =f\left(\mathbf{x},t\right) \qquad \left(high\ dim\right)
       
 
       
-      <h1 id="理论力学笔记">理论力学笔记</h1>
-<p>朗道的《力学》是我心目中第一本几乎完美的书。简洁、让我信服。</p>
+      <h1 id="理论力学笔记"><a href="#理论力学笔记" class="headerlink" title="理论力学笔记"></a>理论力学笔记</h1><p>朗道的《力学》是我心目中第一本几乎完美的书。简洁、让我信服。</p>
       
       <a class="article-more-link" href="../../2020/02/18/Physics/Theoretical-Mechanics/">阅读更多...</a>
       
@@ -736,29 +713,28 @@ u_{tt}-a^2\Delta u =f\left(\mathbf{x},t\right) \qquad \left(high\ dim\right)
       
 
       
-      <h1 id="电动力学笔记">电动力学笔记</h1>
-<p>作者: Peter_H</p>
-<h2 id="麦克斯韦方程和规范理论概述起源杨振宁">0 麦克斯韦方程和规范理论概述起源（杨振宁）</h2>
-<ul>
-<li><p>Electrotonic state, Faraday<br />
-<span class="math display">\[
-H=\nabla \times A
-\]</span></p></li>
-<li><p>Maxwell <span class="math display">\[
-Light=EM\ waves
-\]</span></p></li>
-<li><p>Maxwell : A Dynamical Theory of the Electromagnetic Field <span class="math display">\[
-energy\;\ density=\frac{1}{8\pi ^2}(E^2+H^2)
-\]</span></p></li>
-<li><p>Dirac‘s sea</p></li>
-<li><p>Renormalization <span class="math display">\[
-\alpha=(g-2)/2
-\]</span></p></li>
-<li><p>gauge theory 规范理论, non-Abelian gauge theory, 重整化群</p></li>
-<li><p>Symmetry breaking, Standard Mode</p></li>
+      <h1 id="电动力学笔记"><a href="#电动力学笔记" class="headerlink" title="电动力学笔记"></a>电动力学笔记</h1><p>作者: Peter_H</p>
+<h2 id="0-麦克斯韦方程和规范理论概述起源（杨振宁）"><a href="#0-麦克斯韦方程和规范理论概述起源（杨振宁）" class="headerlink" title="0 麦克斯韦方程和规范理论概述起源（杨振宁）"></a>0 麦克斯韦方程和规范理论概述起源（杨振宁）</h2><ul>
+<li><p>Electrotonic state, Faraday    </p>
+<script type="math/tex; mode=display">
+H=\nabla \times A</script></li>
+<li><p>Maxwell</p>
+<script type="math/tex; mode=display">
+Light=EM\ waves</script></li>
+<li><p>Maxwell : A Dynamical Theory of the Electromagnetic Field</p>
+<script type="math/tex; mode=display">
+energy\;\ density=\frac{1}{8\pi ^2}(E^2+H^2)</script></li>
+<li><p>Dirac‘s sea</p>
+</li>
+<li><p>Renormalization</p>
+<script type="math/tex; mode=display">
+\alpha=(g-2)/2</script></li>
+<li><p>gauge theory 规范理论, non-Abelian gauge theory, 重整化群</p>
+</li>
+<li>Symmetry breaking, Standard Mode </li>
 </ul>
 <p><strong>“妙的地方”</strong></p>
-<p>$ \ $
+<p>$ \\ $
       
       <a class="article-more-link" href="../../2020/02/18/Physics/Electrodynamics/">阅读更多...</a>
       
@@ -828,12 +804,13 @@ energy\;\ density=\frac{1}{8\pi ^2}(E^2+H^2)
       
 
       
-      <h2 id="section">2020</h2>
-<ul>
-<li><p>大二冬学期期末 1.1～1.17</p></li>
-<li><p>搞博客，研究hexo 1.17～1.20</p></li>
-<li><p><a href="%5Bhttps://github.com/Pratitya/wuhan2020-timeline/blob/master/%E6%97%B6%E9%97%B4%E7%BA%BFTIMELINE.md%5D(https://github.com/Pratitya/wuhan2020-timeline/blob/master/时间线TIMELINE.md)">新冠病毒</a></p>
-<p>$ \ $
+      <h2 id="2020"><a href="#2020" class="headerlink" title="2020"></a>2020</h2><ul>
+<li><p>大二冬学期期末 1.1～1.17</p>
+</li>
+<li><p>搞博客，研究hexo 1.17～1.20</p>
+</li>
+<li><p><a href="[https://github.com/Pratitya/wuhan2020-timeline/blob/master/%E6%97%B6%E9%97%B4%E7%BA%BFTIMELINE.md](https://github.com/Pratitya/wuhan2020-timeline/blob/master/时间线TIMELINE.md">新冠病毒</a>) </p>
+<p>$ \\ $
       
       <a class="article-more-link" href="../../2020/02/11/Other%20Things/2020/">阅读更多...</a>
       
@@ -903,49 +880,41 @@ energy\;\ density=\frac{1}{8\pi ^2}(E^2+H^2)
       
 
       
-      <h1 id="mathematic-modeling-notes">Mathematic Modeling Notes</h1>
-<h2 id="理解数学建模">理解数学建模</h2>
-<p>建模是为了<strong>预测</strong></p>
-<h1 id="数学模型学习">数学模型学习</h1>
-<h2 id="确定性连续模型">1 确定性连续模型</h2>
-<h3 id="静态优化模型微分法建模">静态优化模型/微分法建模</h3>
-<h4 id="不允许缺货的存贮模型">不允许缺货的存贮模型</h4>
-<ol type="1">
+      <h1 id="Mathematic-Modeling-Notes"><a href="#Mathematic-Modeling-Notes" class="headerlink" title="Mathematic Modeling Notes"></a>Mathematic Modeling Notes</h1><h2 id="理解数学建模"><a href="#理解数学建模" class="headerlink" title="理解数学建模"></a>理解数学建模</h2><p>建模是为了<strong>预测</strong></p>
+<h1 id="数学模型学习"><a href="#数学模型学习" class="headerlink" title="数学模型学习"></a>数学模型学习</h1><h2 id="1-确定性连续模型"><a href="#1-确定性连续模型" class="headerlink" title="1 确定性连续模型"></a>1 确定性连续模型</h2><h3 id="静态优化模型-微分法建模"><a href="#静态优化模型-微分法建模" class="headerlink" title="静态优化模型/微分法建模"></a>静态优化模型/微分法建模</h3><h4 id="不允许缺货的存贮模型"><a href="#不允许缺货的存贮模型" class="headerlink" title="不允许缺货的存贮模型"></a>不允许缺货的存贮模型</h4><ol>
 <li><p>模型假设：</p>
 <ul>
-<li>每天存货费用：<span class="math inline">\(c_1\)</span> 元/吨</li>
-<li>每次订货费用：<span class="math inline">\(c_2\)</span> 元</li>
-<li>每天货物需求量：<span class="math inline">\(r\)</span> 吨/天</li>
-<li>任意时刻 <span class="math inline">\(t\)</span> 的货物贮存量：<span class="math inline">\(q(t)\)</span></li>
-<li>订货周期：<span class="math inline">\(T\)</span> 天</li>
-<li>每次订货数量：<span class="math inline">\(Q\)</span> 吨</li>
-</ul></li>
+<li>每天存货费用：$c_1$  元/吨</li>
+<li>每次订货费用：$c_2$  元</li>
+<li>每天货物需求量：$r$ 吨/天</li>
+<li>任意时刻 $t$ 的货物贮存量：$q(t)$</li>
+<li>订货周期：$T$  天</li>
+<li>每次订货数量：$Q$  吨</li>
+</ul>
+</li>
 <li><p>模型假设：</p>
-<p>每次订货后库存量均匀下降： <span class="math display">\[
+<p>每次订货后库存量均匀下降：</p>
+<script type="math/tex; mode=display">
 \frac{dq}{dt}=-r,\qquad q(0)=Q \\
-q(t)=-r\cdot t+Q
-\]</span></p></li>
+q(t)=-r\cdot t+Q</script></li>
 <li><p>模型建立：</p>
 <ul>
 <li>订货数量、订货周期、每日货物需求的关系：</li>
 </ul>
-<p><span class="math display">\[
-Q=r\cdot T
-\]</span></p>
-<ul>
-<li>每日平均花费：</li>
-</ul>
-<p><span class="math display">\[
-Cost(T)=\frac{1}{T}\cdot(c_2+c_1\int_0^Tq(t)dt)=\frac{c_2}{T}+\frac{1}{2}c_1 rT
-\]</span></p>
-<ul>
-<li>目标：<span class="math inline">\(min[Cost]\)</span></li>
-</ul>
-<p><span class="math display">\[
-\frac{dCost}{dT}=0\\=&gt; T=\sqrt{\frac{2c_2}{c_1r}},\quad Q=\sqrt{\frac{2c_2r}{c_1}}
-\]</span></p></li>
+<script type="math/tex; mode=display">
+Q=r\cdot T</script></li>
 </ol>
-<p>$ \ $
+<ul>
+<li><p>每日平均花费：</p>
+<script type="math/tex; mode=display">
+Cost(T)=\frac{1}{T}\cdot(c_2+c_1\int_0^Tq(t)dt)=\frac{c_2}{T}+\frac{1}{2}c_1 rT</script></li>
+</ul>
+<ul>
+<li><p>目标：$min[Cost]$</p>
+<script type="math/tex; mode=display">
+\frac{dCost}{dT}=0\\=> T=\sqrt{\frac{2c_2}{c_1r}},\quad Q=\sqrt{\frac{2c_2r}{c_1}}</script></li>
+</ul>
+<p>$ \\ $
       
       <a class="article-more-link" href="../../2020/02/07/Mathematics/Mathematical-Modeling/">阅读更多...</a>
       
@@ -1369,7 +1338,42 @@ Cost(T)=\frac{1}{T}\cdot(c_2+c_1\int_0^Tq(t)dt)=\frac{c_2}{T}+\frac{1}{2}c_1 rT
 
 
     
-  </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            displayMath: [ ['$','$'], ["\\[","\\]"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js"></script>
+
+
+<!-- <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['
+
+</html>,'
+
+</html>], ["\\(","\\)"] ],
+      displayMath: [ ['$','$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js"></script> --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 
 </html>

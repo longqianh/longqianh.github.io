@@ -69,7 +69,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">996</span>
+            <span class="post-count">986</span>
         </span>
     </span>
 
@@ -103,48 +103,49 @@
       
 
       
-      <h1 id="深度学习项目总结">深度学习项目总结</h1>
-<p>持续总结一下应用深度学习的项目，寻找他们之间的联系，以期「融会贯通」。</p>
-<h2 id="全息项目">1 全息项目</h2>
-<p>pass</p>
-<h2 id="光谱成像">2 光谱成像</h2>
-<p>1D CNN：一维维度上的短数据相关性</p>
-<h2 id="薄膜的光学常数反演">3 薄膜的光学常数反演</h2>
-<p>这是光电材料课程的大作业，一般是用传统方法做，我想尝试一些自己的想法。</p>
-<h3 id="a-传统方法">3.A 传统方法</h3>
-<p>输入：波长 <span class="math inline">\(\lambda\)</span></p>
-<p>物理模型：Lorentz + Drude 复合模型 <span class="math display">\[
-\begin{align} \varepsilon _ { 1 } ( \omega ) &amp;= \varepsilon _ { 0 s } - \frac { N _ { e f } e ^ { 2 } } { \varepsilon _ { 0 } m \left( \omega ^ { 2 } + \gamma _ { f } ^ { 2 } \right) } + \frac { e ^ { 2 } } { \varepsilon _ { 0 } m } \sum _ { n } \frac { N _ { e b , n } \left( \omega _ { n } ^ { 2 } - \omega ^ { 2 } \right) } { \left( \omega _ { n } ^ { 2 } - \omega ^ { 2 } \right) ^ { 2 } + \gamma _ { n } ^ { 2 } \omega ^ { 2 } } \\ \varepsilon _ { 2 } ( \omega ) &amp;= \frac { N _ { e f } e ^ { 2 } \gamma _ { f } } { \varepsilon _ { 0 } m \omega \left( \omega ^ { 2 } + \gamma _ { f } ^ { 2 } \right) } + \frac { e ^ { 2 } } { \varepsilon _ { 0 } m } \sum _ { n } \frac { N _ { e b , n } \gamma _ { n } \omega } { \left( \omega _ { n } ^ { 2 } - \omega ^ { 2 } \right) ^ { 2 } + \gamma _ { n } ^ { 2 } \omega ^ { 2 } } \end{align}
-\]</span> 通常设 <span class="math inline">\(n=1\)</span> ，换算后需要拟合的模型为： <span class="math display">\[
+      <h1 id="深度学习项目总结"><a href="#深度学习项目总结" class="headerlink" title="深度学习项目总结"></a>深度学习项目总结</h1><p>持续总结一下应用深度学习的项目，寻找他们之间的联系，以期「融会贯通」。</p>
+<h2 id="1-全息项目"><a href="#1-全息项目" class="headerlink" title="1 全息项目"></a>1 全息项目</h2><p>pass</p>
+<h2 id="2-光谱成像"><a href="#2-光谱成像" class="headerlink" title="2 光谱成像"></a>2 光谱成像</h2><p>1D CNN：一维维度上的短数据相关性</p>
+<h2 id="3-薄膜的光学常数反演"><a href="#3-薄膜的光学常数反演" class="headerlink" title="3 薄膜的光学常数反演"></a>3 薄膜的光学常数反演</h2><p>这是光电材料课程的大作业，一般是用传统方法做，我想尝试一些自己的想法。</p>
+<h3 id="3-A-传统方法"><a href="#3-A-传统方法" class="headerlink" title="3.A 传统方法"></a>3.A 传统方法</h3><p>输入：波长 $\lambda$</p>
+<p>物理模型：Lorentz + Drude 复合模型</p>
+<script type="math/tex; mode=display">
+\begin{align} \varepsilon _ { 1 } ( \omega ) &= \varepsilon _ { 0 s } - \frac { N _ { e f } e ^ { 2 } } { \varepsilon _ { 0 } m \left( \omega ^ { 2 } + \gamma _ { f } ^ { 2 } \right) } + \frac { e ^ { 2 } } { \varepsilon _ { 0 } m } \sum _ { n } \frac { N _ { e b , n } \left( \omega _ { n } ^ { 2 } - \omega ^ { 2 } \right) } { \left( \omega _ { n } ^ { 2 } - \omega ^ { 2 } \right) ^ { 2 } + \gamma _ { n } ^ { 2 } \omega ^ { 2 } } \\ \varepsilon _ { 2 } ( \omega ) &= \frac { N _ { e f } e ^ { 2 } \gamma _ { f } } { \varepsilon _ { 0 } m \omega \left( \omega ^ { 2 } + \gamma _ { f } ^ { 2 } \right) } + \frac { e ^ { 2 } } { \varepsilon _ { 0 } m } \sum _ { n } \frac { N _ { e b , n } \gamma _ { n } \omega } { \left( \omega _ { n } ^ { 2 } - \omega ^ { 2 } \right) ^ { 2 } + \gamma _ { n } ^ { 2 } \omega ^ { 2 } } \end{align}</script><p>通常设 $n=1$ ，换算后需要拟合的模型为：</p>
+<script type="math/tex; mode=display">
 \begin{align}
-\epsilon_1(\lambda)&amp;=1+\frac{A_1\lambda^2}{B_1+\lambda^2}+\frac{C_1\lambda^4+D_1\lambda^2}{E_1\lambda^4+F_1\lambda^2+H_1}\\
-\epsilon_2(\lambda)&amp;=\frac{A_2}{\lambda^3+B_2}+\frac{C_2\lambda^3}{D_2\lambda^4+E_2\lambda^2+F_2}
-\end{align}
-\]</span> 输出：复折射率曲线 <span class="math inline">\(\widetilde n(\lambda)=n(\lambda)+i\kappa(\lambda)\)</span> ： <span class="math display">\[
-\begin{aligned} n &amp; = \sqrt { \frac { \sqrt { \varepsilon _ { 1 } ^ { 2 } + \varepsilon _ { 2 } ^ { 2 } } + \varepsilon _ { 1 } } { 2 } } \\ \kappa &amp; = \sqrt { \frac { \sqrt { \varepsilon _ { 1 } ^ { 2 } + \varepsilon _ { 2 } ^ { 2 } } - \varepsilon _ { 1 } } { 2 } } \end{aligned}
-\]</span></p>
-<p>对于光学薄膜，还需要拟合其厚度 <span class="math inline">\(d\)</span>, 利用薄膜传输矩阵可以计算透射率或反射率： $$ <span class="math display">\[\begin{align}
-\left[ \begin{array} { l } B \\ C \end{array} \right] &amp;= \left[ \begin{array} { c c } \cos \delta &amp; i \sin \delta / ( n - i k ) \\ i ( n - i k ) \sin \delta &amp; \cos \delta \end{array} \right] \times \left[ \begin{array} { c } 1 \\ n _ { s } - i k _ { s } \end{array} \right]\\
+\epsilon_1(\lambda)&=1+\frac{A_1\lambda^2}{B_1+\lambda^2}+\frac{C_1\lambda^4+D_1\lambda^2}{E_1\lambda^4+F_1\lambda^2+H_1}\\
+\epsilon_2(\lambda)&=\frac{A_2}{\lambda^3+B_2}+\frac{C_2\lambda^3}{D_2\lambda^4+E_2\lambda^2+F_2}
+\end{align}</script><p>输出：复折射率曲线 $\widetilde n(\lambda)=n(\lambda)+i\kappa(\lambda)$ ：</p>
+<script type="math/tex; mode=display">
+\begin{aligned} n & = \sqrt { \frac { \sqrt { \varepsilon _ { 1 } ^ { 2 } + \varepsilon _ { 2 } ^ { 2 } } + \varepsilon _ { 1 } } { 2 } } \\ \kappa & = \sqrt { \frac { \sqrt { \varepsilon _ { 1 } ^ { 2 } + \varepsilon _ { 2 } ^ { 2 } } - \varepsilon _ { 1 } } { 2 } } \end{aligned}</script><p>对于光学薄膜，还需要拟合其厚度 $d$, 利用薄膜传输矩阵可以计算透射率或反射率：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+\left[ \begin{array} { l } B \\ C \end{array} \right] &= \left[ \begin{array} { c c } \cos \delta & i \sin \delta / ( n - i k ) \\ i ( n - i k ) \sin \delta & \cos \delta \end{array} \right] \times \left[ \begin{array} { c } 1 \\ n _ { s } - i k _ { s } \end{array} \right]\\
 
-T &amp;= \frac { 4 n _ { s } } { | B + C | ^ { 2 } } ,\ R = \left| \frac { B - C } { B + C  } \right| ^ { 2 }
-\end{align}\]</span> $$ 其中 <span class="math inline">\(n_s\)</span> 为衬底折射率，大作业中由于衬底是玻璃 <span class="math inline">\(SiO_2\)</span>, 有 <span class="math inline">\(\kappa_s=0\)</span>; <span class="math inline">\(\delta\)</span> 为相位差，<span class="math inline">\(\delta=k\widetilde n d\)</span>.</p>
-<p>由此整理可得评价函数，评价函数计算： <span class="math display">\[
-Loss=|T-T(B,C)|^2\ or \ |R-R(B,C)|^2
-\]</span> 然后使用传统的优化算法（遗传算法等）去拟合模型中的参数。</p>
-<h3 id="b-深度学习">3.B 深度学习</h3>
-<p>一些尝试：</p>
+T &= \frac { 4 n _ { s } } { | B + C | ^ { 2 } } ,\ R = \left| \frac { B - C } { B + C  } \right| ^ { 2 }
+\end{align}</script><p>其中 $n_s$ 为衬底折射率，大作业中由于衬底是玻璃 $SiO_2$, 有 $\kappa_s=0$; $\delta$ 为相位差，$\delta=k\widetilde n d$.</p>
+<p>由此整理可得评价函数，评价函数计算：</p>
+<script type="math/tex; mode=display">
+Loss=|T-T(B,C)|^2\ or \ |R-R(B,C)|^2</script><p>然后使用传统的优化算法（遗传算法等）去拟合模型中的参数。</p>
+<h3 id="3-B-深度学习"><a href="#3-B-深度学习" class="headerlink" title="3.B 深度学习"></a>3.B 深度学习</h3><p>一些尝试：</p>
 <ul>
-<li><p>我想用神经网络直接去学习一个表达物质的复折射率与其透射/反射率曲线的模型，但是无法决定厚度 <span class="math inline">\(d\)</span></p></li>
-<li><p>用神经网络去拟合A部分的模型参数，开始感觉不大对口，去拟合曲线有些大材小用，但是梯度下降的稳定性等还是较遗传算法之类高，可以继续尝试；另外用神经网络可以做传统方法物理模型中 <span class="math inline">\(n&gt;1\)</span> 的情况</p></li>
-<li><p>用神经网络做一般可以拟合线性模型，而不太好写这样的复杂模型，而且还有复数，用Keras写了一下，但效果不太好</p></li>
-<li><p>拟合非线性模型也是可以的，这时需要大量到数据，用线性层和激活层去逼近非线性模型。但是要注意这个项目从非线性模型（物理模型）到结果（T/R）还有一个复数相乘相加的东西</p></li>
-<li><p>直接去拟合波长-透过率曲线，反推复折射率曲线（反推困难）</p></li>
+<li><p>我想用神经网络直接去学习一个表达物质的复折射率与其透射/反射率曲线的模型，但是无法决定厚度 $d$</p>
+</li>
+<li><p>用神经网络去拟合A部分的模型参数，开始感觉不大对口，去拟合曲线有些大材小用，但是梯度下降的稳定性等还是较遗传算法之类高，可以继续尝试；另外用神经网络可以做传统方法物理模型中 $n&gt;1$ 的情况</p>
+</li>
+<li><p>用神经网络做一般可以拟合线性模型，而不太好写这样的复杂模型，而且还有复数，用Keras写了一下，但效果不太好</p>
+</li>
+<li><p>拟合非线性模型也是可以的，这时需要大量到数据，用线性层和激活层去逼近非线性模型。但是要注意这个项目从非线性模型（物理模型）到结果（T/R）还有一个复数相乘相加的东西</p>
+</li>
+<li><p>直接去拟合波长-透过率曲线，反推复折射率曲线（反推困难）</p>
+</li>
 <li><p>在没有介电常数数据集的情况下，用波长-透射率曲线去拟合A中的非线性物理模型：</p>
-<p><span class="math inline">\(\lambda\)</span> —&gt; Physical Model —&gt; Complex Forward —&gt; Output T/R —&gt; Back Prop.</p></li>
+<p>$\lambda$ —&gt; Physical Model —&gt; Complex Forward —&gt; Output T/R —&gt; Back Prop.</p>
+</li>
 </ul>
 <p>TODO：</p>
 <ul>
-<li>获得同类别物质的介电常数数据集，训练/拟合出A中的非线性物理模型</li>
+<li>获得同类别物质的介电常数数据集，训练/拟合出A中的非线性物理模型 </li>
 </ul>
 <p>一些收获：</p>
 <ul>
@@ -661,7 +662,42 @@ Loss=|T-T(B,C)|^2\ or \ |R-R(B,C)|^2
 
 
     
-  </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            displayMath: [ ['$','$'], ["\\[","\\]"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js"></script>
+
+
+<!-- <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['
+
+</html>,'
+
+</html>], ["\\(","\\)"] ],
+      displayMath: [ ['$','$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js"></script> --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 
 </html>

@@ -116,8 +116,7 @@
       
 
       
-      <h2 id="tp-link电子设计竞赛校赛总结">TP-LINK电子设计竞赛校赛总结</h2>
-<h3 id="日记">日记</h3>
+      <h2 id="TP-LINK电子设计竞赛校赛总结"><a href="#TP-LINK电子设计竞赛校赛总结" class="headerlink" title="TP-LINK电子设计竞赛校赛总结"></a>TP-LINK电子设计竞赛校赛总结</h2><h3 id="日记"><a href="#日记" class="headerlink" title="日记"></a>日记</h3>
       
       <a class="article-more-link" href="../../2020/08/26/Life/TP-LINK%E7%94%B5%E5%AD%90%E8%AE%BE%E8%AE%A1%E7%AB%9E%E8%B5%9B/">阅读更多...</a>
       
@@ -257,25 +256,13 @@
       
 
       
-      <h2 id="c-notes">C++ Notes</h2>
-<p><a href="https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/contents/" target="_blank" rel="noopener">代码风格</a></p>
-<h3 id="头文件保护">头文件保护</h3>
-<p>为防止被多重包含，添加预处理指令。</p>
+      <h2 id="C-Notes"><a href="#C-Notes" class="headerlink" title="C++ Notes"></a>C++ Notes</h2><p><a href="https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/contents/" target="_blank" rel="noopener">代码风格</a></p>
+<h3 id="头文件保护"><a href="#头文件保护" class="headerlink" title="头文件保护"></a>头文件保护</h3><p>为防止被多重包含，添加预处理指令。</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> _HPP_H_</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> _HPP_H_</span></span><br><span class="line"><span class="comment">/*头文件的一系列声明*/</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br></pre></td></tr></table></figure>
-<h3 id="宏"><a href="https://docs.microsoft.com/en-us/cpp/preprocessor/token-pasting-operator-hash-hash?view=vs-2019" target="_blank" rel="noopener">宏</a></h3>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> CAT(N) X ## N <span class="comment">//## 在宏定义中将两个字符连接起来，构成一个新的标识符</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> PRINTF_XN(n) printf(<span class="meta-string">"X"</span> # n <span class="meta-string">"=%d\n"</span>,X ## n); <span class="comment">//# 将对应变量字符串化</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">CAT</span><span class="params">(<span class="number">1</span>)</span> </span>= <span class="number">2</span>;</span><br><span class="line">    PRINTF_XN(<span class="number">1</span>); <span class="comment">//打印出X1=2</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"当前源代码函数名：__FUNCTION__==%s\n"</span>,__FUNCTION__);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"当前源代码行号：__LINE__==%d\n"</span>,__LINE__);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"当前源代码文件名：__FILE__==%s\n"</span>,__FILE__);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"当前编译日期〔注意和当前系统日期区别开来〕:__DATE__==%s\n"</span>,__DATE__);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"当前编译时间〔注意和当前系统日期区别开来〕:__TIME__==%s\n"</span>,__TIME__);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"当前系统时间戳：__TIMESTAMP__==%s\n"</span>,__TIMESTAMP__);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"当要求程序严格遵循ANSIC标准时该标识符被赋值为1:__STDC__==%d\n"</span>,__STDC__);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"当用C++编译程序编译时，标识符__cplusplus就会被定义:__cplusplus==%ld\n"</span>,__cplusplus);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// copy from https://blog.csdn.net/wyg1065395142/article/details/50930395</span></span><br></pre></td></tr></table></figure>
-<h1 id="类继承">类继承</h1>
-<p>如果要在派生类中重新定义基类的方法，通常应将基类的方法声明为虚的 <code>virtual</code>。这样，程序将根据对象类型而不是引用或指针类型来选择方法版本。</p>
-<p>为基类声明一个虚析构函数 <code>virtual ~Base() {}</code> 也是一种惯例。确保释放派生对象时，按正确的顺序调用析构函数。</p>
-<h2 id="指针">指针</h2>
-<p>指针的类型不过是解释数据的方式不同罢了，这样的道理也可用于很多场合的强制类型转换，例如将int类型指针转换为char型指针，并不会改变内存的实际内容，只是<strong>修改了解释方式</strong>而已。而 <code>void *</code> 是一种无类型指针，任何类型指针都可以转为<code>void*</code>，它无条件接受各种类型。而既然是无类型指针，那么就不要尝试 <em>解引用</em> 和进行 <em>算数运算</em>。</p>
-<p><code>void*</code>能包容地接受各种类型的指针。也就是说，如果你期望接口能够接受任何类型的参数，你可以使用 <code>void*</code> 类型。但是在具体使用的时候，必须转换为具体的指针类型。</p>
-<h2 id="模版">模版</h2>
-<p>模板只是其定义实现的指令，算不上真正的代码，只有在模板实例化时才会生成真正的代码。因此，如果将.h和.cpp分开实现，编译器并不会编译.cpp生成单独的代码。而在实例化模板时，根据.h找到声明，但没有相应的实现指令，所以会报错:unresolved error... 因此，一般将定义和声明放在一起，在实例化时才能找到定义。</p>
-<p><code>main.cpp,tree.cpp,tree.h</code> 模版在 .h声明，在.cpp实现。而编译时模版的实例化在main中，在tree中（tree.cpp—&gt;tree.o）没有将模版实例化，因此会报错。</p>
-<h2 id="gcc编译">gcc编译</h2>
-<p>https://www.cnblogs.com/battlescars/p/cpp_linux_gcc.html</p>
-
+<h3 id="宏"><a href="#宏" class="headerlink" title="宏"></a><a href="https://docs.microsoft.com/en-us/cpp/preprocessor/token-pasting-operator-hash-hash?view=vs-2019" target="_blank" rel="noopener">宏</a></h3><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> CAT(N) X ## N <span class="comment">//## 在宏定义中将两个字符连接起来，构成一个新的标识符</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> PRINTF_XN(n) printf(<span class="meta-string">"X"</span> # n <span class="meta-string">"=%d\n"</span>,X ## n); <span class="comment">//# 将对应变量字符串化</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">CAT</span><span class="params">(<span class="number">1</span>)</span> </span>= <span class="number">2</span>;</span><br><span class="line">    PRINTF_XN(<span class="number">1</span>); <span class="comment">//打印出X1=2</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"当前源代码函数名：__FUNCTION__==%s\n"</span>,__FUNCTION__);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"当前源代码行号：__LINE__==%d\n"</span>,__LINE__);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"当前源代码文件名：__FILE__==%s\n"</span>,__FILE__);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"当前编译日期〔注意和当前系统日期区别开来〕:__DATE__==%s\n"</span>,__DATE__);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"当前编译时间〔注意和当前系统日期区别开来〕:__TIME__==%s\n"</span>,__TIME__);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"当前系统时间戳：__TIMESTAMP__==%s\n"</span>,__TIMESTAMP__);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"当要求程序严格遵循ANSIC标准时该标识符被赋值为1:__STDC__==%d\n"</span>,__STDC__);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"当用C++编译程序编译时，标识符__cplusplus就会被定义:__cplusplus==%ld\n"</span>,__cplusplus);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// copy from https://blog.csdn.net/wyg1065395142/article/details/50930395</span></span><br></pre></td></tr></table></figure>
+      
+      <a class="article-more-link" href="../../2020/08/07/Computer-Science/C++/Cpp-Notes/">阅读更多...</a>
+      
       
       <!-- reward -->
       
@@ -338,13 +325,11 @@
       
 
       
-      <p>This is a notes for my works in holography field.</p>
-<h1 id="全息">全息</h1>
-<p>什么是全息？</p>
+      <p>This is a notes for my works in holography field. </p>
+<h1 id="全息"><a href="#全息" class="headerlink" title="全息"></a>全息</h1><p>什么是全息？</p>
 <p>一种信息的记录方式罢了。</p>
 <p>1971年拿了诺奖。</p>
-<h2 id="laser-holography">Laser Holography</h2>
-<p>I started doing semi-conductor holography with my roommates and Jiahao Jiang who has graduated now in our Sophomore year.</p>
+<h2 id="Laser-Holography"><a href="#Laser-Holography" class="headerlink" title="Laser Holography"></a>Laser Holography</h2><p>I started doing semi-conductor holography with my roommates and Jiahao Jiang who has graduated now in our Sophomore year.</p>
 <p>Here is the <a href="/2020/05/03/Projects-Laser-holography/index.html">link</a> to that project.</p>
 <p>I have to say that I forget most of the details, but configuring my own fixer and developer (显影液和定影液) and building the optic path and finally seeing the results is a procedure that has no technical content but somehow a sense of accomplishment.</p>
 <p>全息的路艰难而漫长，但是充满有趣与理想。我想，还是不写蹩脚的英文了，用中文回顾一下我的所思所想。</p>
@@ -413,15 +398,13 @@
       
 
       
-      <p>This is a notes for action recognition things in deep learning field. Started this in 2020’s summer in a Huawei’s Ascend project with Hongyu Chen, Yifan Yu and Longzhong Lin.</p>
-<h2 id="pose-estimation">Pose Estimation</h2>
-<ul>
+      <p>This is a notes for action recognition things in deep learning field. Started this in 2020’s summer in a Huawei’s Ascend project with Hongyu Chen, Yifan Yu and Longzhong Lin. </p>
+<h2 id="Pose-Estimation"><a href="#Pose-Estimation" class="headerlink" title="Pose Estimation"></a>Pose Estimation</h2><ul>
 <li>OpenPose</li>
 <li>Tf-pose</li>
 <li>AlphaPose</li>
 </ul>
-<h2 id="action-recognition">Action Recognition</h2>
-<ul>
+<h2 id="Action-Recognition"><a href="#Action-Recognition" class="headerlink" title="Action Recognition"></a>Action Recognition</h2><ul>
 <li>ST-GCN</li>
 <li>MS-G3D</li>
 </ul>
@@ -488,18 +471,15 @@
       
 
       
-      <p>This is a notes for image imatching things in deep learning field.</p>
+      <p>This is a notes for image imatching things in deep learning field. </p>
 <p>Started this in 2020’s summer and it is a part of a SRTP project regarding an AR app, with Haojie He and Lingming Zhang.</p>
-<h2 id="superpoint-superglue">SuperPoint &amp; SuperGlue</h2>
-<h3 id="overview">Overview</h3>
-<p>SuperPoint is a great feature extractor.</p>
+<h2 id="SuperPoint-amp-SuperGlue"><a href="#SuperPoint-amp-SuperGlue" class="headerlink" title="SuperPoint &amp; SuperGlue"></a>SuperPoint &amp; SuperGlue</h2><h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><p>SuperPoint is a great feature extractor.</p>
 <p>SuperGlue is a good image matching network based on features extracted from image.</p>
-<p>It is a really nice project by Magic Leap.</p>
+<p>It is a really nice project by Magic Leap. </p>
 <p>I did a little simplification and put the code <a href="https://github.com/longqianh/Image-Matching.git" target="_blank" rel="noopener">here</a>.</p>
-<h3 id="experience-and-thoughts">Experience and thoughts</h3>
-<p>For SuperPoint, I think it is a mature network and can be used as a helpful feature extracting tool. (And there are some wonderful tricks in the code! )</p>
+<h3 id="Experience-and-thoughts"><a href="#Experience-and-thoughts" class="headerlink" title="Experience and thoughts"></a>Experience and thoughts</h3><p>For SuperPoint, I think it is a mature network and can be used as a helpful feature extracting tool. (And there are some wonderful tricks in the code! )</p>
 <p>For SuperGlue, I didn’t quite get the key of it, such as the Attention Network, the Encoding Method.</p>
-<p>In addition, it is quite hard to transfer models from SuperGlue. I have already transferred SuperPoint into Libtorch code and it can be used in C++. It is also easy to be transfered to ONNX or other frameworks. However, I suffered a lot to transfer SuperGlue into libtorch code or ONNX. Hence the SuperGlue can work fine on Python but has some difficulty ( for me ) to be deployed.</p>
+<p> In addition, it is quite hard to transfer models from SuperGlue. I have already transferred SuperPoint into Libtorch code and it can be used in C++. It is also easy to be transfered to ONNX or other frameworks. However, I suffered a lot to transfer SuperGlue into libtorch code or ONNX. Hence the SuperGlue can work fine on Python but has some difficulty ( for me ) to be deployed.</p>
 <p>So I think later on I will find a more simple ( hopefully, also more powerful ) matching network so that it can be easily deployed. Or maybe I can create my own networks and do some trainings.</p>
 
       
@@ -564,28 +544,23 @@
       
 
       
-      <h2 id="notes-for-cmake-commands">Notes for cmake commands</h2>
-<p><code>add_executable(executable_name main.cpp)</code></p>
+      <h2 id="Notes-for-cmake-commands"><a href="#Notes-for-cmake-commands" class="headerlink" title="Notes for cmake commands"></a>Notes for cmake commands</h2><p><code>add_executable(executable_name main.cpp)</code></p>
 <p>使用给定的源文件，为工程引入一个可执行文件。</p>
-<h3 id="add-libraries">add libraries</h3>
-<p>添加静态库。</p>
+<h3 id="add-libraries"><a href="#add-libraries" class="headerlink" title="add libraries"></a>add libraries</h3><p>添加静态库。</p>
 <ul>
 <li>internal library</li>
 </ul>
 <figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line"><span class="keyword">add_library</span>(say-hello hello.hpp hello.cpp)</span><br><span class="line"><span class="comment"># will generate static library *.a</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">add_executable</span>(a main.cpp)</span><br><span class="line"><span class="keyword">target_link_libraries</span>(a PRIVATE say-hello)</span><br></pre></td></tr></table></figure>
 <ul>
-<li><p>external library : take <strong>opencv</strong> as an example</p>
-<figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line"><span class="keyword">set</span>(OpenCV_DIR /usr/local/Cellar/opencv/<span class="number">4.4</span>.<span class="number">0</span>/lib/cmake/opencv4) <span class="comment"># path to opencv where there is .cmake file</span></span><br><span class="line"><span class="keyword">find_package</span>(OpenCV REQUIRED)</span><br><span class="line"><span class="keyword">target_link_libraries</span>(a <span class="variable">$&#123;OpenCV_LIBS&#125;</span>)</span><br></pre></td></tr></table></figure></li>
+<li><p>external library : take <strong>opencv</strong> as an example</p>
+<figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line"><span class="keyword">set</span>(OpenCV_DIR /usr/local/Cellar/opencv/<span class="number">4.4</span>.<span class="number">0</span>/lib/cmake/opencv4) <span class="comment"># path to opencv where there is .cmake file</span></span><br><span class="line"><span class="keyword">find_package</span>(OpenCV REQUIRED)</span><br><span class="line"><span class="keyword">target_link_libraries</span>(a <span class="variable">$&#123;OpenCV_LIBS&#125;</span>)</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
-<h3 id="add_link_libraries">add_link_libraries</h3>
-<p>添加动态链接库。</p>
-<h4 id="internal">internal</h4>
-<figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line"><span class="keyword">link_directories</span>(<span class="variable">$&#123;PROJECT_SOURCE_DIR&#125;</span>/lib) <span class="comment"># path to the dylib</span></span><br><span class="line"><span class="keyword">add_executable</span>(a main.cpp)</span><br><span class="line"><span class="keyword">target_link_libraries</span>(<span class="variable">$&#123;PROJECT_NAME&#125;</span> dylibpath)</span><br></pre></td></tr></table></figure>
-<h4 id="external">external</h4>
-<p>Take <strong>libtorch</strong> as an example.</p>
+<h3 id="add-link-libraries"><a href="#add-link-libraries" class="headerlink" title="add_link_libraries"></a>add_link_libraries</h3><p>添加动态链接库。</p>
+<h4 id="internal"><a href="#internal" class="headerlink" title="internal"></a>internal</h4><figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line"><span class="keyword">link_directories</span>(<span class="variable">$&#123;PROJECT_SOURCE_DIR&#125;</span>/lib) <span class="comment"># path to the dylib</span></span><br><span class="line"><span class="keyword">add_executable</span>(a main.cpp)</span><br><span class="line"><span class="keyword">target_link_libraries</span>(<span class="variable">$&#123;PROJECT_NAME&#125;</span> dylibpath)</span><br></pre></td></tr></table></figure>
+<h4 id="external"><a href="#external" class="headerlink" title="external"></a>external</h4><p>Take <strong>libtorch</strong> as an example.</p>
 <figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line"><span class="keyword">find_package</span>(Torch REAUIRED) <span class="comment"># find an external project, and load its settings</span></span><br><span class="line"><span class="keyword">message</span>(STATUS <span class="string">"find libtorch in: $&#123;TORCH_LIBRARIES&#125;"</span>) <span class="comment"># print message</span></span><br><span class="line"><span class="keyword">add_executable</span>(a main.cpp)</span><br><span class="line"><span class="keyword">target_link_libraries</span>(a <span class="variable">$&#123;TORCH_LIBRARIES&#125;</span>) </span><br><span class="line"><span class="keyword">set_property</span>(<span class="keyword">TARGET</span> a PROPERTY CXX_STANDARD <span class="number">14</span>) <span class="comment"># You need C++14 to compile PyTorch</span></span><br></pre></td></tr></table></figure>
-<h3 id="how-to-build">how to build</h3>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">mkdir build</span><br><span class="line">cd build</span><br><span class="line">cmake .. # CMakeLists.txt in ..</span><br><span class="line">make</span><br></pre></td></tr></table></figure>
+<h3 id="how-to-build"><a href="#how-to-build" class="headerlink" title="how to build"></a>how to build</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">mkdir build</span><br><span class="line">cd build</span><br><span class="line">cmake .. # CMakeLists.txt in ..</span><br><span class="line">make</span><br></pre></td></tr></table></figure>
 
       
       <!-- reward -->
@@ -650,7 +625,7 @@
 
       
       <p>This is the project I have done in 2020 UIUC’s OPTIC summer program.</p>
-<p>Thank you all , my teammates!</p>
+<p>Thank you all , my teammates! </p>
 <ul>
 <li>Group Number : 3</li>
 <li>Group Leader : Longqian Huang</li>
@@ -667,192 +642,152 @@
 
 
 <p>Next is our output article :)</p>
-<h1 id="free-space-optical-communication-system">Free Space Optical Communication System</h1>
-<h2 id="what-is-fso-communication-system">1. What is FSO Communication System</h2>
-<p>We read the review and searched the Wikipedia to get a overview of FSO Communication System.</p>
+<h1 id="Free-Space-Optical-Communication-System"><a href="#Free-Space-Optical-Communication-System" class="headerlink" title="Free Space Optical  Communication System"></a>Free Space Optical  Communication System</h1><h2 id="1-What-is-FSO-Communication-System"><a href="#1-What-is-FSO-Communication-System" class="headerlink" title="1. What is FSO Communication System"></a>1. What is FSO Communication System</h2><p>We read the review and searched the Wikipedia to get a overview of FSO Communication System. </p>
 <p>FSO Communication is an idea of wireless communication using light based on the theory of light propagation in free space.</p>
 <p>Devices using technology of FSO communication make up a system. It is a outdoor system of <em>wireless optical communication system</em> (WOCS) and has some branches. Below is a classification tree of WOCS [1] :</p>
-<figure>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djubq55j30oo0ewq49.jpg" alt="WOCS classifications" /><figcaption aria-hidden="true">WOCS classifications</figcaption>
-</figure>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djubq55j30oo0ewq49.jpg" alt="WOCS classifications"></p>
 <p>From that we know that we have choices of terrestrial links and space links. We considered both and think that terrestrial links is practical but space links is as well interesting and maybe a future-hot point.</p>
 <p>Below is a diagram of FSO communication link [1] (which maybe what we will construct in the next few days):</p>
-<figure>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djwkyeuj30nu0eimyd.jpg" alt="System composition" /><figcaption aria-hidden="true">System composition</figcaption>
-</figure>
-<h2 id="system-design">2. System Design</h2>
-<h3 id="type-of-the-system">2.1 Type of the system</h3>
-<p>We will construct <em>Ground-to-Satellite Link</em> as the type of the FSO communication system. Below is a concept figure of the system.</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djwkyeuj30nu0eimyd.jpg" alt="System composition"></p>
+<h2 id="2-System-Design"><a href="#2-System-Design" class="headerlink" title="2. System Design"></a>2. System Design</h2><h3 id="2-1-Type-of-the-system"><a href="#2-1-Type-of-the-system" class="headerlink" title="2.1 Type of the system"></a>2.1 Type of the system</h3><p> We will construct <em>Ground-to-Satellite Link</em> as the type of the FSO communication system. Below is a concept figure of the system.</p>
 <p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh6v9igawcj30of0dhabh.jpg" alt="qeyssat-satellite-879x485"  /></p>
-<h3 id="wavelength-to-use">2.2 Wavelength to use</h3>
-<p>The main consideration is attenuation after propagating long distance. From [2] we know to make attenuation less, infrared band is a good choice. Then we have two choices:</p>
+<h3 id="2-2-Wavelength-to-use"><a href="#2-2-Wavelength-to-use" class="headerlink" title="2.2 Wavelength to use"></a>2.2 Wavelength to use</h3><p>The main consideration is attenuation after propagating long distance. From [2] we know to make attenuation less, infrared band is a good choice. Then we have two choices:</p>
 <ul>
 <li>850 nm</li>
-<li>1550 nm</li>
+<li>1550 nm </li>
 </ul>
-<p>We digged further and found that 1550 nm lasers are considered "eye safe" at much higher power levels than traditionally used 850nm lasers.</p>
+<p>We digged further and found that 1550 nm lasers are considered “eye safe” at much higher power levels than traditionally used 850nm lasers. </p>
 <p>So our choice for wavelength is 1550 nm. And the benefits are as follows [1] :</p>
 <ul>
 <li>reduce background noise and Rayleigh scattering</li>
 <li>high transmitter power</li>
 <li>Eye-save wavelength ( the maximum permissible exposure for eye is much higher at 1550 nm wavelength )</li>
 </ul>
-<h3 id="laser-type">2.3 Laser Type</h3>
-<h4 id="led-or-cw">2.3.1 LED or CW</h4>
-<p>To be clear:</p>
+<h3 id="2-3-Laser-Type"><a href="#2-3-Laser-Type" class="headerlink" title="2.3 Laser Type"></a>2.3 Laser Type</h3><h4 id="2-3-1-LED-or-CW"><a href="#2-3-1-LED-or-CW" class="headerlink" title="2.3.1 LED or CW"></a>2.3.1 LED or CW</h4><p>To be clear: </p>
 <ul>
-<li><p>A light-emitting diode (<em>LED</em>) is a semiconductor light source that emits light when current flows through it.</p></li>
-<li><p>A continuous wave (CW) laser is a laser that emits a continuous laser beam with a controlled heat output, as beam duration and intensity.</p></li>
+<li><p>A light-emitting diode (<em>LED</em>) is a semiconductor light source that emits light when current flows through it. </p>
+</li>
+<li><p>A continuous wave (CW)  laser is a laser that emits a continuous laser beam with a controlled heat output, as beam duration and intensity.</p>
+</li>
 </ul>
 <p>For ground-to-satellite links, we don’t think a light of LED can surrive after passing the atmosphere. So we definitely choose CW laser.</p>
-<h4 id="comparasion">2.3.2 Comparasion</h4>
-<p>We have four choices and they all have own advantages and disadvantages:</p>
-<h5 id="gas-laser">Gas laser</h5>
-<figure>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk4mvtij30xc0iugos.jpg" alt="Carbon dioxide laser - Wikipedia" /><figcaption aria-hidden="true">Carbon dioxide laser - Wikipedia</figcaption>
-</figure>
+<h4 id="2-3-2-Comparasion"><a href="#2-3-2-Comparasion" class="headerlink" title="2.3.2 Comparasion"></a>2.3.2 Comparasion</h4><p>We have four choices and they all have own advantages and disadvantages:</p>
+<h5 id="Gas-laser"><a href="#Gas-laser" class="headerlink" title="Gas laser"></a>Gas laser</h5><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk4mvtij30xc0iugos.jpg" alt="Carbon dioxide laser - Wikipedia"></p>
 <ul>
 <li>Carbon dioxide laser are stable and less sensitive to atomospheric effects</li>
 <li>Large volume and unreliability</li>
 </ul>
-<h5 id="solid-state-laser">Solid-state laser</h5>
-<ul>
+<h5 id="Solid-state-laser"><a href="#Solid-state-laser" class="headerlink" title="Solid-state laser"></a>Solid-state laser</h5><ul>
 <li>Stable and narrow spectral linewidth</li>
 <li>Very high peak power</li>
 </ul>
-<h5 id="semiconductor-laser">Semiconductor laser</h5>
-<ul>
+<h5 id="Semiconductor-laser"><a href="#Semiconductor-laser" class="headerlink" title="Semiconductor laser"></a>Semiconductor laser</h5><ul>
 <li>Compact in size, light weight, easy to operate</li>
 <li>Quite low output power hence <strong>require additional amplifier</strong> for long distance communication</li>
 <li>Diodes require great care</li>
 </ul>
-<h5 id="fiber-laser-4">Fiber laser [4]</h5>
-<figure>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk51ei3j30zk0k075c.jpg" alt="Fiber laser cutting machine FOL-3015AJ" /><figcaption aria-hidden="true">Fiber laser cutting machine FOL-3015AJ</figcaption>
-</figure>
+<h5 id="Fiber-laser-4"><a href="#Fiber-laser-4" class="headerlink" title="Fiber laser [4]"></a>Fiber laser [4]</h5><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk51ei3j30zk0k075c.jpg" alt="Fiber laser cutting machine FOL-3015AJ"></p>
 <ul>
 <li>The laser light is both generated and delivered by an inherently flexible medium, which allows easier delivery to the focusing location and target.</li>
-<li>Fiber lasers can have active regions several kilometers long, and so can provide very high optical gain.</li>
+<li>Fiber lasers can have active regions several kilometers long, and so can provide very high optical gain. </li>
 <li>Fiber lasers are compact compared to solid-state or gas lasers of comparable power ( because the fiber can be bent and coiled)</li>
 <li>The additional power and better beam quality provide cleaner cut edges and faster cutting speeds</li>
 </ul>
-<h4 id="choice-of-laser-device-type">2.3.3 Choice of laser device type</h4>
-<p>It seems that fiber laser is great in comparison with others. We first considered solid state laser but fiber laser seems to be better and it has many applications in telecommunications. So we choose <strong>fiber laser</strong> as our type of laser device.</p>
-<h3 id="modulator">2.4 Modulator</h3>
-<p>We have two consideration of the modulator, to be clear:</p>
+<h4 id="2-3-3-Choice-of-laser-device-type"><a href="#2-3-3-Choice-of-laser-device-type" class="headerlink" title="2.3.3 Choice of laser device type"></a>2.3.3 Choice of laser device type</h4><p>It seems that fiber laser is great in comparison with others. We first considered solid state laser but fiber laser seems to be better and it has many applications in telecommunications. So we choose <strong>fiber laser</strong> as our type of laser device.</p>
+<h3 id="2-4-Modulator"><a href="#2-4-Modulator" class="headerlink" title="2.4 Modulator"></a>2.4 Modulator</h3><p>We have two consideration of the modulator, to be clear:</p>
 <ul>
 <li><p>Electro-optic modulator [6]</p>
-<p>An electro-optic modulator (EOM) is an optical device in which a signal-controlled element exhibiting an electro-optic effect is used to modulate a beam of light.</p></li>
+<p>An electro-optic modulator (EOM) is an optical device in which a signal-controlled element exhibiting an electro-optic effect is used to modulate a beam of light.</p>
+</li>
 <li><p>Acoustic-optic modulator [5]</p>
-<p>An acousto-optic modulator (AOM), uses the acousto-optic effect to and shift the frequency of light using sound waves.</p></li>
+<p>An acousto-optic modulator (AOM), uses the acousto-optic effect to and shift the frequency of light using sound waves.</p>
+</li>
 </ul>
-<p>We found little applications in telecommunications about acoustic-optic modulator and it seems electro-optic modulator has a more mature technology. We found that <span class="math inline">\(LiNbO_3\)</span> has nice performance in the application of long distance communication and there are a lot of type we could choose as provided in [7]. So we choose electro-optic modulator for our ground-to-satellite FOS communication system goal.</p>
-<p>To be more specific, we will use <em><span class="math inline">\(LiNbO_3\)</span> Mach-Zehnder Modulator</em> for its good performance.</p>
-<h2 id="simulation">3. Simulation</h2>
-<h3 id="demo-fso-communication-system">3.1 Demo: FSO communication system</h3>
-<p>We considered the composition of the system and drew a structure graph as below:</p>
-<figure>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djy58q7j31t00u0q79.jpg" alt="FSOCS" /><figcaption aria-hidden="true">FSOCS</figcaption>
-</figure>
+<p>We found little applications in telecommunications about acoustic-optic modulator and it seems electro-optic modulator has a more mature technology. We found that $LiNbO_3$ has nice performance in the application of long distance communication and there are a lot of type we could choose as provided in [7]. So we choose electro-optic modulator for our ground-to-satellite FOS communication system goal. </p>
+<p>To be more specific, we will use <em>$LiNbO_3$ Mach-Zehnder Modulator</em> for its good performance.</p>
+<h2 id="3-Simulation"><a href="#3-Simulation" class="headerlink" title="3. Simulation"></a>3. Simulation</h2><h3 id="3-1-Demo-FSO-communication-system"><a href="#3-1-Demo-FSO-communication-system" class="headerlink" title="3.1 Demo: FSO communication system"></a>3.1 Demo: FSO communication system</h3><p>We considered the composition of the system and drew a structure graph as below:</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djy58q7j31t00u0q79.jpg" alt="FSOCS"></p>
 <p>We put our emphasis on the <em>Transmitter</em> part and the following sections are our simulation work.</p>
-<h4 id="layout">3.1.1 Layout</h4>
-<p>Below is the layout of our communication system. We used OptiSystem software to do the simulation.</p>
+<h4 id="3-1-1-Layout"><a href="#3-1-1-Layout" class="headerlink" title="3.1.1 Layout"></a>3.1.1 Layout</h4><p>Below is the layout of our communication system. We used OptiSystem software to do the simulation.</p>
 <p>The transmitter part is in the left and we will dig into it later.</p>
-<p>In the middle is the FSO Channel. Since Ground-to-Satellite system has at least 90 km (see <em>regions of atmosphere</em> diagram below) , we set the range of the FSO channel 100 km. On the left and right of the FSO channel are two opticla amplifiers, from simulation result we can found their role in the system.</p>
-<figure>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk5x5ydj318t0rswih.jpg" alt="Regions of atmosphere" /><figcaption aria-hidden="true">Regions of atmosphere</figcaption>
-</figure>
-<p>On the right is the Receiver part. It consists of PIN Photodiode (which transfer optic wave into electric signal), Law Pass Bessel Filter (which is used to filter out noise) and Data Recovery Module (which do the demodulation and get the recovered signal).</p>
+<p> In the middle is the FSO Channel. Since Ground-to-Satellite system has at least 90 km (see <em>regions of atmosphere</em> diagram below) , we set the range of the FSO channel 100 km. On the left and right of the FSO channel are two opticla amplifiers, from simulation result we can found their role in the system. </p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk5x5ydj318t0rswih.jpg" alt="Regions of atmosphere"></p>
+<p>On the right is the Receiver part. It consists of PIN Photodiode (which transfer optic wave into electric signal),  Law Pass Bessel Filter (which is used to filter out noise) and Data Recovery Module (which do the demodulation and get the recovered signal). </p>
 <p>We use BER Analyter to analyse the bit error rate of the system.</p>
-<figure>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djvig9aj31720cb7aq.jpg" alt="FSO demo layout" /><figcaption aria-hidden="true">FSO demo layout</figcaption>
-</figure>
-<h4 id="simulation-result">3.1.2 Simulation result</h4>
-<figure>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djzynsxj318n0md140.jpg" alt="simulation result" /><figcaption aria-hidden="true">simulation result</figcaption>
-</figure>
-<p>Above is our simulation result from which we can found that loss is huge. The reason is FSO channel is too long.</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djvig9aj31720cb7aq.jpg" alt="FSO demo layout"></p>
+<h4 id="3-1-2-Simulation-result"><a href="#3-1-2-Simulation-result" class="headerlink" title="3.1.2 Simulation result"></a>3.1.2 Simulation result</h4><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djzynsxj318n0md140.jpg" alt="simulation result"></p>
+<p>Above is our simulation result from which we can found that loss is huge. The reason is FSO channel is too long. </p>
 <p>Because of the time and technology limitation, we didn’t get a good simulation result. Below is something we considered:</p>
 <ul>
-<li><p>how to overcome the problem of very big loss</p></li>
-<li><p>how to choose the laser power</p></li>
+<li><p>how to overcome the problem of very big loss</p>
+</li>
+<li><p>how to choose the laser power</p>
+</li>
 <li><p>how to choose photodetector</p>
 <ul>
 <li>photodiode</li>
 <li>optical power detector</li>
 <li>optical phase detector</li>
-</ul></li>
+</ul>
+</li>
 <li><p>how to choose filters</p>
 <ul>
-<li>low pass
-<ul>
+<li>low pass<ul>
 <li>Gaussian filter</li>
 <li>Bessel filter</li>
 <li>etc.</li>
-</ul></li>
+</ul>
+</li>
 <li>height pass</li>
 <li>band pass</li>
-</ul></li>
+</ul>
+</li>
 <li><p>how to set parameters of optical amplifier</p>
 <ul>
 <li>gain</li>
 <li>noise figure</li>
-</ul></li>
 </ul>
-<h3 id="optical-transmitter">3.2 Optical transmitter</h3>
-<p>From COSMOL, we get the some insight of the modulator. But it is not that clear.</p>
+</li>
+</ul>
+<h3 id="3-2-Optical-transmitter"><a href="#3-2-Optical-transmitter" class="headerlink" title="3.2 Optical transmitter"></a>3.2 Optical transmitter</h3><p>From COSMOL, we get the some insight of the modulator. But it is not that clear.</p>
 <p>We use OptiSystem to construct our <em>optical transmitter</em> and further more, we digged a little deeper and build a demo of the whole <em>FSO communication system.</em></p>
 <p>Below are the layout of our system.</p>
-<figure>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk0rwezj30sm0cladg.jpg" alt="FSO-transmitter-layout" /><figcaption aria-hidden="true">FSO-transmitter-layout</figcaption>
-</figure>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk0rwezj30sm0cladg.jpg" alt="FSO-transmitter-layout"></p>
 <p>From the figure we can see the structure of the transmitter clearly.</p>
 <ul>
-<li><p>We use simple <em>Bit Sequence Generator</em> to generate electric signal and use <em>NRZ Pulse Generator</em> to generate electric pulse.</p></li>
-<li><p>We use <em>Fiber Laser</em> as our laser device. As there isn’t Fiber Laser device in the software, we put a CW Laser and add a description. CW Laser can generate 1550 nm optical wave.</p></li>
-<li><p>We use <span class="math inline">\(LiNbO_3\)</span> Mach-Zehnder Modulator in our transmitter. The reasons have been stated in section 2.</p></li>
-<li><p>Put the optic signal and electric pulse into the MZ Modulator, we can get the modulated optical signal.</p></li>
+<li><p>We use simple <em>Bit Sequence Generator</em> to generate electric signal and use <em>NRZ Pulse Generator</em> to generate electric pulse.</p>
+</li>
+<li><p>We use <em>Fiber Laser</em> as our laser device. As there isn’t Fiber Laser device in the software, we put a CW Laser and add a description. CW Laser can generate 1550 nm optical wave.</p>
+</li>
+<li>We use $LiNbO_3$ Mach-Zehnder Modulator in our transmitter. The reasons have been stated in section 2.</li>
+<li>Put the optic signal and electric pulse into the MZ Modulator, we can get the modulated optical signal. </li>
 </ul>
 <p>Above are the details of our transmitter, we then use Optical Power Meter and Optical Spectrum Analyzer to do the simulation.</p>
 <p>Results are as follows :</p>
-<figure>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk1s5hnj312r0jtwln.jpg" alt="FSO-transmitter-simulation-result" /><figcaption aria-hidden="true">FSO-transmitter-simulation-result</figcaption>
-</figure>
-<p>We can see from the figure that the transmitter has <span class="math inline">\(2.485\)</span> dBm los and the output power is <span class="math inline">\(56.432\times 10^{-3} W\)</span>. We need optical amplifiers to make it larger.</p>
-<h3 id="electro-optic-modulation-process">3.3 Electro-optic Modulation Process</h3>
-<p>In order to give a more specific model, we use COMSOL to simulate the <em>Electro-optic modulation process</em>. Below are what we have done.</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk1s5hnj312r0jtwln.jpg" alt="FSO-transmitter-simulation-result"></p>
+<p>We can see from the figure that the transmitter has $2.485$ dBm los and the output power is $56.432\times 10^{-3} W$. We need optical amplifiers to make it larger.</p>
+<h3 id="3-3-Electro-optic-Modulation-Process"><a href="#3-3-Electro-optic-Modulation-Process" class="headerlink" title="3.3 Electro-optic Modulation Process"></a>3.3 Electro-optic Modulation Process</h3><p>In order to give a more specific model, we use COMSOL to simulate the <em>Electro-optic modulation process</em>. Below are what we have done.</p>
 <p>We choose the <strong>wave optics module</strong>.</p>
 <p>Then we perform the 2D geometrical modeling since the system is symmetric.</p>
 <p>We can find that the structure has core and cladding:</p>
-<figure>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk3n0tdj30xo0hnaab.jpg" alt="structure of core and cladding" /><figcaption aria-hidden="true">structure of core and cladding</figcaption>
-</figure>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk3n0tdj30xo0hnaab.jpg" alt="structure of core and cladding"></p>
 <p>Next we set the boundary conditions so that the COSMOL can do the calculation. We set the applied voltage boundary of the light or rather the boundary of the wave:</p>
-<figure>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djz4eraj309n09pmx5.jpg" alt="step1" /><figcaption aria-hidden="true">step1</figcaption>
-</figure>
-<p>Before calculation, we set some configurations:</p>
-<figure>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk2mm1hj309h05pa9y.jpg" alt="step2" /><figcaption aria-hidden="true">step2</figcaption>
-</figure>
-<p>(To be clear: “步骤 <span class="math inline">\(k\)</span> ” &lt;—&gt; “ Step <span class="math inline">\(k\)</span> ” , “求解器配置” &lt;—&gt; “Solver Configuration” and “作业配置” &lt;—&gt; “ Work Configuration” )</p>
-<p>Finally, we get the simulation result. In the figure it is the distribution of the electric field in the waveguide. We also get the loss, transmittance and reflectance of the system.</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djz4eraj309n09pmx5.jpg" alt="step1"></p>
+<p> Before calculation, we set some configurations:</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk2mm1hj309h05pa9y.jpg" alt="step2"></p>
+<p>(To be clear: “步骤 $k$ ” &lt;—&gt; “ Step $k$ ” , “求解器配置” &lt;—&gt; “Solver Configuration” and “作业配置” &lt;—&gt; “ Work Configuration” )</p>
+<p>Finally, we get the simulation result. In the figure it is the distribution of the electric field in the waveguide. We also get the loss, transmittance and reflectance of the system. </p>
 <p>(The first line of the figure “表面：电场模” &lt;—&gt; “Surface: Electric field mode” )</p>
-<figure>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk362bij30xd0h9wer.jpg" alt="EF distribution" /><figcaption aria-hidden="true">EF distribution</figcaption>
-</figure>
-<figure>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk16evoj30xe0grq39.jpg" alt="Property inside" /><figcaption aria-hidden="true">Property inside</figcaption>
-</figure>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk362bij30xd0h9wer.jpg" alt="EF distribution"></p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk16evoj30xe0grq39.jpg" alt="Property inside"></p>
 <p>However, we cannot get the change of the phase. It seems that the software has some limitation. And we didn’t consider the electric signals. These are something that can be improved.</p>
-<h2 id="reference">Reference</h2>
-<p>[1] Kaushal H, Jain V K, Kar S. Free space optical communication[M]. Gurgaon, Haryana: Springer, 2017.</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>[1] Kaushal H, Jain V K, Kar S. Free space optical communication[M]. Gurgaon, Haryana: Springer, 2017.</p>
 <p>[2] 高瞻, 丁铁骑, 吕辉. 光无线通信系统通信波长的选择[J]. 通讯世界, 2002, 8(12): 70-71.</p>
-<p>[3] https://seminex.com/1550nm-lasers.aspx/</p>
-<p>[4] https://www.wikiwand.com/en/Fiber_laser</p>
-<p>[5] https://www.wikiwand.com/en/Acousto-optic_modulator</p>
-<p>[6] https://www.wikiwand.com/en/Electro-optic_modulator</p>
-<p>[7] https://www.newport.com/medias/sys_master/images/images/h31/hfb/8797089398814/Electro-Optic-Modulator-Brochure.pdf</p>
+<p>[3] <a href="https://seminex.com/1550nm-lasers.aspx/" target="_blank" rel="noopener">https://seminex.com/1550nm-lasers.aspx/</a></p>
+<p>[4] <a href="https://www.wikiwand.com/en/Fiber_laser" target="_blank" rel="noopener">https://www.wikiwand.com/en/Fiber_laser</a></p>
+<p>[5] <a href="https://www.wikiwand.com/en/Acousto-optic_modulator" target="_blank" rel="noopener">https://www.wikiwand.com/en/Acousto-optic_modulator</a></p>
+<p>[6] <a href="https://www.wikiwand.com/en/Electro-optic_modulator" target="_blank" rel="noopener">https://www.wikiwand.com/en/Electro-optic_modulator</a></p>
+<p>[7] <a href="https://www.newport.com/medias/sys_master/images/images/h31/hfb/8797089398814/Electro-Optic-Modulator-Brochure.pdf" target="_blank" rel="noopener">https://www.newport.com/medias/sys_master/images/images/h31/hfb/8797089398814/Electro-Optic-Modulator-Brochure.pdf</a></p>
 
       
       <!-- reward -->
@@ -918,20 +853,24 @@
       
 
       
-      <h2 id="sublime-text-配-python3.7-macos">Sublime Text 配 Python3.7 （macOS）</h2>
-<p>Browse Packages —&gt; User —&gt;新建 Python3.7.sublime-build</p>
+      <h2 id="Sublime-Text-配-Python3-7-（macOS）"><a href="#Sublime-Text-配-Python3-7-（macOS）" class="headerlink" title="Sublime Text 配 Python3.7 （macOS）"></a>Sublime Text 配 Python3.7 （macOS）</h2><p>Browse Packages —&gt; User —&gt;新建 Python3.7.sublime-build</p>
 <p>写入：</p>
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"cmd"</span>: [<span class="string">"/usr/local/bin/python3"</span>, <span class="string">"-u"</span>, <span class="string">"<span class="variable">$file</span>"</span>],</span><br><span class="line">    <span class="string">"file_regex"</span>: <span class="string">"^[ ]*File \"(...*?)\", line ([0-9]*)"</span>,</span><br><span class="line">    <span class="string">"selector"</span>: <span class="string">"source.python"</span>,</span><br><span class="line">    <span class="string">"env"</span>:&#123;  <span class="string">"PYTHONPATH"</span>:<span class="string">"/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages:/Users/huanglongqian/anaconda3/lib/python3.7/site-packages"</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
-<li><p>cmd的确定：相当于在terminal使用python3运行当前py文件，终端中使输入<code>which python3.7</code> 即可获得路径</p></li>
-<li><p>env的重要：添加环境变量，一番摸索后发现这个就相当于</p>
+<li><p>cmd的确定：相当于在terminal使用python3运行当前py文件，终端中使输入<code>which python3.7</code> 即可获得路径</p>
+</li>
+<li><p>env的重要：添加环境变量，一番摸索后发现这个就相当于 </p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line">sys.append(<span class="string">'python_path'</span>)</span><br></pre></td></tr></table></figure>
-<p>往env中添加好后，就不需要每次都这样写了！</p></li>
+<p>往env中添加好后，就不需要每次都这样写了！</p>
+</li>
 <li><p>我添加的这个，主要是<code>import cv2</code> 一直报错，但是终端中import却没问题，于是心生一计：</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">python3</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> cv2</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>cv2.__file__</span><br></pre></td></tr></table></figure>
-<p>把得到的路径放到环境变量里就好了。</p></li>
-<li><p>发现 <code>import slidingwindow</code>也出了问题，一看原来放到了python3.8的里面，于是故伎重演，PYTHONPATH再加一个，注意中间是用冒号隔开</p></li>
-<li><p>太混乱了，<code>import tensorflow</code>居然也出了问题，找了一下目前改成annoconda的目录里面的tensorflow，pip3 install的不知道放到了哪里去了orz</p></li>
+<p>把得到的路径放到环境变量里就好了。</p>
+</li>
+<li><p>发现 <code>import slidingwindow</code>也出了问题，一看原来放到了python3.8的里面，于是故伎重演，PYTHONPATH再加一个，注意中间是用冒号隔开</p>
+</li>
+<li><p>太混乱了，<code>import tensorflow</code>居然也出了问题，找了一下目前改成annoconda的目录里面的tensorflow，pip3 install的不知道放到了哪里去了orz</p>
+</li>
 </ul>
 
       
@@ -996,25 +935,20 @@
       
 
       
-      <h1 id="光学系统设计-project">光学系统设计 Project</h1>
-<h2 id="光路计算部分">光路计算部分</h2>
-<p>这是光学系统设计的光路计算 Project，具体的程序和发行版我已经放到了<a href="https://github.com/longqianh/simple-ray-tracing.git" target="_blank" rel="noopener">GitHub上</a>。</p>
+      <h1 id="光学系统设计-Project"><a href="#光学系统设计-Project" class="headerlink" title="光学系统设计 Project"></a>光学系统设计 Project</h1><h2 id="光路计算部分"><a href="#光路计算部分" class="headerlink" title="光路计算部分"></a>光路计算部分</h2><p>这是光学系统设计的光路计算 Project，具体的程序和发行版我已经放到了<a href="https://github.com/longqianh/simple-ray-tracing.git" target="_blank" rel="noopener">GitHub上</a>。</p>
 <p>这是一个非专业协作的非专业项目，一开始头文件和cpp没有分开，GitHub提交也比较混乱，文件、代码、GitHub 更加专业是我努力学习完善的方向。</p>
 <p>但是这是我较为满意的一次项目，至少我不认为这是学术垃圾。光线的计算程序写了三、四十个小时，在类的设计上花了不少功夫，我认为程序具有可拓展性、易理解性，比如要进行光路追迹，只需要声明光线，便可利用<code>ray_tracing(ray,ku,kw)</code> 函数得到输出光线。</p>
 <p>真的感谢吴恩宗做出一个无比美丽和强大的GUI，而且提供了非常细致的帮助文档。</p>
 <p>真的感谢孙昊天在我debug到绝望的时候陪着我一起de，让我看到了希望的光。</p>
-<h2 id="光学系统设计部分">光学系统设计部分</h2>
-<p>应该说，这一部分全靠两位队友带。</p>
+<h2 id="光学系统设计部分"><a href="#光学系统设计部分" class="headerlink" title="光学系统设计部分"></a>光学系统设计部分</h2><p>应该说，这一部分全靠两位队友带。</p>
 <p>我是直接奔着3个透镜去做的，因为都在紫金港，我可以直接去队友们的寝室里。中间遇到了很多困难，都是队友们在我旁边指导着克服的。因为同时有四个项目进行，我做完以后就算做完了，不再继续优化。</p>
 <p>吴恩宗设计了一个四透镜的，可以说，优化到了极致。孙昊天三四五都做了，而且都做得很棒，三透镜做到了F2.8，所以最后就用他的三透镜系统啦！</p>
 <p>项目报告就放到第三部分了。By the way，最后的答辩孙昊天非常认真地准备，我看着时间真的把握地很好，PPT也很妙，赞啊啊!</p>
-<h2 id="项目报告">项目报告</h2>
-
+<h2 id="项目报告"><a href="#项目报告" class="headerlink" title="项目报告"></a>项目报告</h2>
 
 	<div class="row">
     <embed src="/pdf_files/光学系统设计-项目报告.pdf" width="100%" height="550" type="application/pdf">
 	</div>
-
 
 
 
@@ -1440,7 +1374,42 @@
 
 
     
-  </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            displayMath: [ ['$','$'], ["\\[","\\]"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js"></script>
+
+
+<!-- <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['
+
+</html>,'
+
+</html>], ["\\(","\\)"] ],
+      displayMath: [ ['$','$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js"></script> --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 
 </html>
