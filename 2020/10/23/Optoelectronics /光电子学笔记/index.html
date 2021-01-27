@@ -73,7 +73,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">4.2k</span>
+            <span class="post-count">4.5k</span>
         </span>
     </span>
 
@@ -82,7 +82,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">18 min</span>
+            <span class="post-count">19 min</span>
         </span>
     </span>
 </div>
@@ -254,7 +254,7 @@ p(n)=\frac{1}{\bar n+1}\left(\frac{\bar n}{\bar n+1}\right)^n.
 <p>设单位时间内自发辐射概率密度为 <span class="math inline">\(\operatorname P_{sp}\)</span>，即 <span class="math inline">\(1s\)</span> 辐射 <span class="math inline">\(\operatorname{P}_{sp}\)</span> 个光子，因此光子的自发辐射寿命 <span class="math display">\[
 t_{sp}=\frac{1}{\operatorname{P}_{sp}}
 \]</span> 即每个光子辐射出来“平均”需要多少 <span class="math inline">\(s\)</span>。</p>
-<p>事实上，<span class="math inline">\(\text dN/\text dt=-Np_{sp}\implies N=e^{-p_{sp}t}\)</span>, <span class="math inline">\(t_{sp}\)</span> 为粒子数减小为原来 <span class="math inline">\(1/e\)</span> 时的时间间隔。</p>
+<p>事实上: <span class="math inline">\(\text dN/\text dt=-Np_{sp}\implies N=e^{-p_{sp}t}\)</span>, <span class="math inline">\(t_{sp}\)</span> 为粒子数减小为原来 <span class="math inline">\(1/e\)</span> 时的时间间隔。</p>
 <ul>
 <li>跃迁截面</li>
 </ul>
@@ -272,6 +272,7 @@ t_{sp}=\frac{1}{\operatorname{P}_{sp}}
 \operatorname P_{st}&amp;=\bar n\frac{c}{V}\sigma(\nu)
 \end{align}
 \]</span> 其中 <span class="math inline">\(\bar n\)</span> 为相互作用过程中的(平均)光子数。</p>
+<p>注意三个 <span class="math inline">\(\sigma\)</span> 其实有所不同，自发辐射要对 <span class="math inline">\(\theta\)</span> 取平均，受激辐射则是特定的角度 <span class="math inline">\(\theta_0\)</span>.</p>
 <p>一般光子自发辐射寿命可测，由此可去算 <span class="math inline">\(S\)</span>： $$ <span class="math display">\[\begin{align}
 \operatorname P_{sp}&amp;=\int_0^\infty \left[\frac{c}{V}\sigma(\nu)\right]\left[VM(\nu)\right]\text d \nu\approx M(\nu_0)cS\\
 \implies &amp; S=\frac{\lambda^2}{8\pi t_{sp}}
@@ -287,7 +288,7 @@ W_i=\operatorname P_{st}=P_{ab}=\phi \cdot \sigma(\nu)
 W_i&amp;=\int_0^\infty n(\nu)\operatorname P_{st}(\nu)\text d\nu=\int_0^\infty \left[\rho(\nu)V\text d \nu\right/h\nu]\left[\frac{c}{V}\sigma(nu)\right]\\
 &amp;\approx \frac{\bar n}{t_{sp}}
 \end{align}
-\]</span> 其中 <span class="math inline">\(\bar n=\displaystyle\frac{\lambda_0^3}{8\pi h}\rho(\nu_0)=\frac{cS\operatorname P_{sp}\rho(\nu_0)}{h\nu_0}\)</span> 代表每个模式的平均光子数。</p></li>
+\]</span> 其中 <span class="math inline">\(\bar n=\displaystyle\frac{\lambda_0^3}{8\pi h}\rho(\nu_0)=\frac{cS\operatorname P_{sp}\rho(\nu_0)}{h\nu_0}\)</span> 代表<strong>每个模式的平均光子数</strong>。</p></li>
 <li><p>爱因斯坦系数</p>
 <p><span class="math display">\[
 \begin{align}
@@ -481,9 +482,12 @@ T_F=\frac{2d}{c},
 I_p&amp;=M^2|A|^2=M\bar I.
 \end{align}
 \]</span></p>
-<p>班级毅行</p>
-<p>光强～透射率 看到的光越强，透射率越大嘛！</p>
-<p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gkhvtpltboj316m06u10e.jpg" alt="image-20201108171454948" style="zoom:33%;" /></p>
+<h3 id="烧孔">8. 烧孔</h3>
+<h4 id="空间烧孔">空间烧孔</h4>
+<p>考虑在谐振腔中以中心频率振荡的驻波模式。在峰值处光强最大，<span class="math inline">\(N=N_0/[1+\phi/\phi_s]\)</span> 最小, 而在中心模式的波节处光强最小，<span class="math inline">\(N\)</span> 很大。</p>
+<p>波节处的 <span class="math inline">\(N\)</span> 还可以再维持一个模式的振荡，从而形成多摸振荡，造成 <span class="math inline">\(\gamma-\nu\)</span> 图上的烧孔，这便是空间烧孔。</p>
+<h4 id="光谱烧孔">光谱烧孔</h4>
+<p>增益介质含有多原子时，存在不同模式的振荡，在增益饱和处增益最小，形成 <span class="math inline">\(\gamma-\nu\)</span> 图上的烧孔，这是光谱烧孔。</p>
 <h2 id="discussionquestions">discussion&amp;questions</h2>
 <ul>
 <li>烧孔？</li>
@@ -493,6 +497,16 @@ I_p&amp;=M^2|A|^2=M\bar I.
 \]</span></p>
 <ul>
 <li>5.7 如果激光被泵浦了，但是泵浦强度不足以产生激光振荡</li>
+</ul>
+<h2 id="acousto-optics">Acousto Optics</h2>
+<p>布拉格方程 (Bragg Condication) ： <span class="math display">\[
+\sin\theta_{\mathcal{B}}=\frac{\lambda}{2\Lambda}
+\]</span> 其中：</p>
+<ul>
+<li><p><span class="math inline">\(\Lambda\)</span> 为声波在介质中的波长，由声波在介质中的速度 <span class="math inline">\(v_s\)</span> 计算：<span class="math inline">\(\Lambda=v_s/f\)</span></p></li>
+<li><p><span class="math inline">\(\lambda\)</span> 为光波在介质中的波长，<span class="math inline">\(\lambda=\lambda_0/n\)</span></p></li>
+<li><p><span class="math inline">\(\theta_{\mathcal{B}}\)</span> 为介质内部的反射角 (this angle is internal), 出射角还要再进行一次折射：<span class="math inline">\(\theta_{\mathcal{B}}’\approx n\theta_{\mathcal{B}}\)</span> ; 入射角也应该由 <span class="math inline">\(\theta_{\mathcal{B}}\)</span> 计算得到</p></li>
+<li><p><span class="math inline">\(\theta_{\mathcal{B}}\)</span> 是很小的，因此为掠入射，一般从晶体两侧出光，而不是上下</p></li>
 </ul>
 
       
@@ -609,7 +623,7 @@ I_p&amp;=M^2|A|^2=M\bar I.
     <ul>
       <li>
         Copyrights &copy;
-        2020
+        2020-2021
         <i class="ri-heart-fill heart_icon"></i> Longqian Huang
       </li>
     </ul>
@@ -1003,7 +1017,42 @@ I_p&amp;=M^2|A|^2=M\bar I.
 
 
     
-  </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            displayMath: [ ['$','$'], ["\\[","\\]"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js"></script>
+
+
+<!-- <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['
+
+</html>,'
+
+</html>], ["\\(","\\)"] ],
+      displayMath: [ ['$','$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js"></script> --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 
 </html>

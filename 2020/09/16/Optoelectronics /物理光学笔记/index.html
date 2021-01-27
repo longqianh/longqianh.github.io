@@ -69,7 +69,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">1.6k</span>
+            <span class="post-count">2.2k</span>
         </span>
     </span>
 
@@ -78,7 +78,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">6 min</span>
+            <span class="post-count">9 min</span>
         </span>
     </span>
 </div>
@@ -129,6 +129,11 @@
 <p>有效空间频率范围 <span class="math inline">\(\Delta k=\pi/L\)</span></p>
 <p>有效波长范围 <span class="math inline">\(\Delta \lambda=\lambda^2/2L\)</span></p>
 <p>时间频率范围 <span class="math inline">\(\Delta \nu=\Delta \left(c/\lambda\right)=c/2L\)</span></p>
+<h2 id="光的干涉">光的干涉</h2>
+<p>光的干涉，原理上是相干光波的叠加，内容上是求干涉场的分布。</p>
+<p>光的干涉、衍射和偏振，构成了波动光学的核心内容，干涉场和衍射场讨论的是标量场的光强分布。</p>
+<p>一般地说，干涉场是分立光波的叠加，衍射场是连续元光波的叠加，此时加法变成了积分；偏振场因其振动特点表示出的矢量光波属性，更加注重加法本身，矢量加法在物理上表示不同振动状态合成后振动状态的变化。</p>
+<h2 id="光的衍射">光的衍射</h2>
 <h2 id="傅立叶光学">傅立叶光学</h2>
 <h3 id="菲涅尔衍射">菲涅尔衍射</h3>
 <p>菲涅尔傍轴近似下： <span class="math display">\[
@@ -170,11 +175,22 @@
 \end{align}\]</span> $$ 注意透镜的透射系数刚刚好消掉了菲涅尔衍射的那个系数，使最终结果成为了一个干净的傅立叶变换。</p>
 <p>因此整个夫琅和费衍射系统本来是夫琅和费衍射，做个傅立叶变换就好了，但是要在很远处才能观察。为了在近处观察加了透镜，要改为菲涅尔衍射去计算，结果兜兜转转算完得到和夫琅和费衍射一样的形式。</p>
 <p>另一方面可以看到，从衍射平面到透镜再到透镜后焦面，整合后等价于做一个傅立叶变换，这就是透镜的傅立叶变换性质：透镜前的场知道了，加个透镜则后焦面的场就是做一个傅立叶变换。这是透镜的透射系数和菲涅尔衍射美妙的结合。</p>
-<p>相位因子？</p>
-<p>如果透镜和衍射平面有一定距离 <span class="math inline">\(d_0\)</span>, 那么这时候夫琅和费衍射的东西就显现出来了，这相当于夫琅和费衍射多传播了 <span class="math inline">\(d_0\)</span>, 透镜前的光场 <span class="math display">\[
-\widetilde E(x_2,y_2)=\widetilde E(x_1,y_1)\cdot e^{ik(d_0+)}
-\]</span></p>
-<p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glmiswqeu2j30u0140hdw.jpg" alt="image-20201213205208266" style="zoom:67%;" /></p>
+<h3 id="与透镜有一定距离">与透镜有一定距离</h3>
+<p>算了一个难忘的下午...</p>
+<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gmxse8szhnj31to0rb1kx.jpg" alt="image-20210123180601121" style="zoom: 33%;" /></p>
+<p>将菲涅尔衍射积分写成系统函数的形式： <span class="math display">\[
+U \left( x _ { 0 } , y _ { 0 } \right) = \iint _ { S } h \left( x _ { 0 } - x _ { 1 } , y _ { 0 } - y _ { 1 } \right) U \left( x _ { 1 } , y _ { 1 } \right) d x _ { 1 } d y _ { 1 }
+\]</span> 其中： <span class="math display">\[
+h \left( x _ { 0 } - x _ { 1 } , y _ { 0 } - y _ { 1 } \right) \cong \frac {  e ^ { - j k z } } { j \lambda z } e ^ { - \frac { j k } { 2 z } \left[ \left( x _ { 1 } - x _ { 0 } \right) ^ { 2 } + \left( y _ { 1 } - y _ { 0 } \right) ^ { 2 } \right] }
+\]</span> 因此菲涅尔衍射中在距离 <span class="math inline">\(z\)</span> 的自由传播空间可以看作一个冲激响应为 <span class="math display">\[
+h \left( x _ { 0 } , y _ { 0 } \right) = \frac {  e ^ { - j k z } } { j \lambda z } e ^ { - \frac { j k } { 2 z } \left[ x _ { 0 } ^ { 2 } + y _ { 0 } ^ { 2 } \right] }
+\]</span> 的系统，其系统函数为 <span class="math display">\[
+\begin{aligned} H \left( u , v \right) &amp; = F _ { 2 D } \left\{ h \left( x _ { 0 } , y _ { 0 } \right) \right\} \\ &amp; =  \frac { e ^ { - j k z } } { j \lambda z } F _ { x } \left\{ e ^ { - \frac { j k } { 2 z } x _ { 0 } ^ { 2 } } \right\} F _ { y } \left\{ e ^ { - \frac { j k } { 2 z } y _ { 0 } ^ { 2 } } \right\} \end{aligned}
+\]</span> 利用 <span class="math display">\[
+F \left\{ e ^ { j \alpha t ^ { 2 } } \right\} = \sqrt { \frac { \pi } { \alpha } } e ^ { j \frac { \pi } { 4 } } e ^ { - j \frac { ( 2 \pi f ) ^ { 2 } } { 4 \alpha } }
+\]</span> 带入可得： <span class="math display">\[
+\begin{aligned} H \left( u, v \right) = e ^ { - j k z } e ^ { j \pi \lambda z \left( u ^ { 2 } + v ^ { 2 } \right) } \end{aligned}
+\]</span> 其中 $ux/f,vy/f. $</p>
 <h2 id="偏振光">偏振光</h2>
 <h3 id="偏振光的测定">偏振光的测定</h3>
 <ol type="1">
@@ -201,7 +217,7 @@
 </ul>
 <p>（2）对c：</p>
 <ul>
-<li>两次消光：椭圆偏振</li>
+<li>两次消光：椭圆偏振 （部分线偏振光不能完全消光）</li>
 <li>将 <span class="math inline">\(\lambda/4\)</span> 波片转 <span class="math inline">\(45^\circ\)</span>，检偏器转动观察：
 <ul>
 <li>光强无变化：部分线偏振光（因为过了波片变成了部分圆偏振）</li>
@@ -209,6 +225,50 @@
 </ul></li>
 </ul></li>
 </ol>
+<h1 id="复习">复习</h1>
+<ul>
+<li><p>电磁理论</p>
+<ul>
+<li><p>菲涅尔公式</p></li>
+<li><p>全反射、布鲁斯特角、倏逝波</p></li>
+</ul></li>
+<li><p>干涉</p>
+<ul>
+<li>杨氏双缝干涉</li>
+<li>等倾干涉、等厚干涉</li>
+<li>多光束干涉</li>
+<li>干涉系统：F-P，M-Z，迈克尔逊，裴索</li>
+<li>干涉滤光片</li>
+</ul></li>
+<li><p>衍射</p>
+<ul>
+<li>夫琅和费衍射</li>
+<li>菲涅尔衍射
+<ul>
+<li>菲涅尔波带法</li>
+</ul></li>
+<li>单缝衍射、多缝衍射</li>
+<li>闪耀光栅</li>
+<li>分辨率</li>
+<li>衍射效率、衍射系统？</li>
+</ul></li>
+<li><p>傅立叶光学</p>
+<ul>
+<li>矩孔、圆孔傅立叶变换</li>
+<li>阿贝成像理论</li>
+<li>相干传递函数、光学传递函数</li>
+<li>应用？</li>
+</ul></li>
+<li><p>偏振</p>
+<ul>
+<li>偏振态</li>
+<li>斯涅尔作图法、惠更斯作图法</li>
+<li>偏振光等折射反射：折射率公式与相关计算</li>
+<li>琼斯矩阵、琼斯矢量方法</li>
+<li>入射面、光线面、法线面、折射率曲面、波矢面等</li>
+<li>偏振光干涉：平行偏振光的干涉、会聚偏振光的干涉</li>
+</ul></li>
+</ul>
 
       
       <!-- reward -->
@@ -293,7 +353,7 @@
         <strong class="article-nav-caption">上一篇</strong>
         <div class="article-nav-title">
           
-            光学材料笔记
+            光电材料笔记
           
         </div>
       </a>
@@ -324,7 +384,7 @@
     <ul>
       <li>
         Copyrights &copy;
-        2020
+        2020-2021
         <i class="ri-heart-fill heart_icon"></i> Longqian Huang
       </li>
     </ul>
@@ -718,7 +778,42 @@
 
 
     
-  </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            displayMath: [ ['$','$'], ["\\[","\\]"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js"></script>
+
+
+<!-- <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['
+
+</html>,'
+
+</html>], ["\\(","\\)"] ],
+      displayMath: [ ['$','$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js"></script> --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 
 </html>
