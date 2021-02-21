@@ -80,6 +80,600 @@
     
     
     
+    <article id="post-Computer-Science/Deep Learning/Image-Matching-Road" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="../../2020/08/06/Computer-Science/Deep%20Learning/Image-Matching-Road/"
+    >Image-Matching Road</a> 
+</h2>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="../../2020/08/06/Computer-Science/Deep%20Learning/Image-Matching-Road/" class="article-date">
+  <time datetime="2020-08-06T11:25:01.000Z" itemprop="datePublished">2020-08-06</time>
+</a>
+      
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <p>This is a notes for image imatching things in deep learning field.</p>
+<p>Started this in 2020’s summer and it is a part of a SRTP project regarding an AR app, with Haojie He and Lingming Zhang.</p>
+<h2 id="superpoint-superglue">SuperPoint &amp; SuperGlue</h2>
+<h3 id="overview">Overview</h3>
+<p>SuperPoint is a great feature extractor.</p>
+<p>SuperGlue is a good image matching network based on features extracted from image.</p>
+<p>It is a really nice project by Magic Leap.</p>
+<p>I did a little simplification and put the code <a href="https://github.com/longqianh/Image-Matching.git" target="_blank" rel="noopener">here</a>.</p>
+<h3 id="experience-and-thoughts">Experience and thoughts</h3>
+<p>For SuperPoint, I think it is a mature network and can be used as a helpful feature extracting tool. (And there are some wonderful tricks in the code! )</p>
+<p>For SuperGlue, I didn’t quite get the key of it, such as the Attention Network, the Encoding Method.</p>
+<p>In addition, it is quite hard to transfer models from SuperGlue. I have already transferred SuperPoint into Libtorch code and it can be used in C++. It is also easy to be transfered to ONNX or other frameworks. However, I suffered a lot to transfer SuperGlue into libtorch code or ONNX. Hence the SuperGlue can work fine on Python but has some difficulty ( for me ) to be deployed.</p>
+<p>So I think later on I will find a more simple ( hopefully, also more powerful ) matching network so that it can be easily deployed. Or maybe I can create my own networks and do some trainings.</p>
+
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+
+    </footer>
+
+  </div>
+
+  
+
+  
+
+  
+  
+  
+
+</article>
+    
+    <article id="post-Computer-Science/C++/CMake-Notes" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="../../2020/08/04/Computer-Science/C++/CMake-Notes/"
+    >Cmake Notes</a> 
+</h2>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="../../2020/08/04/Computer-Science/C++/CMake-Notes/" class="article-date">
+  <time datetime="2020-08-04T12:05:05.000Z" itemprop="datePublished">2020-08-04</time>
+</a>
+      
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <h2 id="notes-for-cmake-commands">Notes for cmake commands</h2>
+<p><code>add_executable(executable_name main.cpp)</code></p>
+<p>使用给定的源文件，为工程引入一个可执行文件。</p>
+<h3 id="add-libraries">add libraries</h3>
+<p>添加静态库。</p>
+<ul>
+<li>internal library</li>
+</ul>
+<figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line"><span class="keyword">add_library</span>(say-hello hello.hpp hello.cpp)</span><br><span class="line"><span class="comment"># will generate static library *.a</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">add_executable</span>(a main.cpp)</span><br><span class="line"><span class="keyword">target_link_libraries</span>(a PRIVATE say-hello)</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>external library : take <strong>opencv</strong> as an example</p>
+<figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line"><span class="keyword">set</span>(OpenCV_DIR /usr/local/Cellar/opencv/<span class="number">4.4</span>.<span class="number">0</span>/lib/cmake/opencv4) <span class="comment"># path to opencv where there is .cmake file</span></span><br><span class="line"><span class="keyword">find_package</span>(OpenCV REQUIRED)</span><br><span class="line"><span class="keyword">target_link_libraries</span>(a <span class="variable">$&#123;OpenCV_LIBS&#125;</span>)</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="add_link_libraries">add_link_libraries</h3>
+<p>添加动态链接库。</p>
+<h4 id="internal">internal</h4>
+<figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line"><span class="keyword">link_directories</span>(<span class="variable">$&#123;PROJECT_SOURCE_DIR&#125;</span>/lib) <span class="comment"># path to the dylib</span></span><br><span class="line"><span class="keyword">add_executable</span>(a main.cpp)</span><br><span class="line"><span class="keyword">target_link_libraries</span>(<span class="variable">$&#123;PROJECT_NAME&#125;</span> dylibpath)</span><br></pre></td></tr></table></figure>
+<h4 id="external">external</h4>
+<p>Take <strong>libtorch</strong> as an example.</p>
+<figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line"><span class="keyword">find_package</span>(Torch REAUIRED) <span class="comment"># find an external project, and load its settings</span></span><br><span class="line"><span class="keyword">message</span>(STATUS <span class="string">"find libtorch in: $&#123;TORCH_LIBRARIES&#125;"</span>) <span class="comment"># print message</span></span><br><span class="line"><span class="keyword">add_executable</span>(a main.cpp)</span><br><span class="line"><span class="keyword">target_link_libraries</span>(a <span class="variable">$&#123;TORCH_LIBRARIES&#125;</span>) </span><br><span class="line"><span class="keyword">set_property</span>(<span class="keyword">TARGET</span> a PROPERTY CXX_STANDARD <span class="number">14</span>) <span class="comment"># You need C++14 to compile PyTorch</span></span><br></pre></td></tr></table></figure>
+<h3 id="how-to-build">how to build</h3>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">mkdir build</span><br><span class="line">cd build</span><br><span class="line">cmake .. # CMakeLists.txt in ..</span><br><span class="line">make</span><br></pre></td></tr></table></figure>
+
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+
+    </footer>
+
+  </div>
+
+  
+
+  
+
+  
+  
+  
+
+</article>
+    
+    <article id="post-Projects/FSO communication system" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="../../2020/07/30/Projects/FSO%20communication%20system/"
+    >FSO Communication System</a> 
+</h2>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="../../2020/07/30/Projects/FSO%20communication%20system/" class="article-date">
+  <time datetime="2020-07-30T14:33:15.000Z" itemprop="datePublished">2020-07-30</time>
+</a>
+      
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <p>This is the project I have done in 2020 UIUC’s OPTIC summer program.</p>
+<p>Thank you all , my teammates!</p>
+<ul>
+<li>Group Number : 3</li>
+<li>Group Leader : Longqian Huang</li>
+<li>Group members : Liang Sun, Yuxuan Liu, Junchi Feng, Yuhao Ma, Jinquan Shi, Zhuo Cheng, Yiru Pan, Dongao Cui, Muxi Zhao</li>
+</ul>
+<p>By the way, I think I did a great job in the presentation. The recording of our presentation is here. The powerpoint (Keynote) can be accessed <a href="https://mega.nz/folder/NcYTxASI#RFHN-JpP7UUpRwfXU4NIxw" target="_blank" rel="noopener">here</a>.</p>
+<p>Or you can get I quick view of the presentation below: (without the video)</p>
+
+
+	<div class="row">
+    <embed src="/pdf_files/FSOCS.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+<p>Next is our output article :)</p>
+<h1 id="free-space-optical-communication-system">Free Space Optical Communication System</h1>
+<h2 id="what-is-fso-communication-system">1. What is FSO Communication System</h2>
+<p>We read the review and searched the Wikipedia to get a overview of FSO Communication System.</p>
+<p>FSO Communication is an idea of wireless communication using light based on the theory of light propagation in free space.</p>
+<p>Devices using technology of FSO communication make up a system. It is a outdoor system of <em>wireless optical communication system</em> (WOCS) and has some branches. Below is a classification tree of WOCS [1] :</p>
+<figure>
+<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djubq55j30oo0ewq49.jpg" alt="WOCS classifications" /><figcaption aria-hidden="true">WOCS classifications</figcaption>
+</figure>
+<p>From that we know that we have choices of terrestrial links and space links. We considered both and think that terrestrial links is practical but space links is as well interesting and maybe a future-hot point.</p>
+<p>Below is a diagram of FSO communication link [1] (which maybe what we will construct in the next few days):</p>
+<figure>
+<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djwkyeuj30nu0eimyd.jpg" alt="System composition" /><figcaption aria-hidden="true">System composition</figcaption>
+</figure>
+<h2 id="system-design">2. System Design</h2>
+<h3 id="type-of-the-system">2.1 Type of the system</h3>
+<p>We will construct <em>Ground-to-Satellite Link</em> as the type of the FSO communication system. Below is a concept figure of the system.</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh6v9igawcj30of0dhabh.jpg" alt="qeyssat-satellite-879x485"  /></p>
+<h3 id="wavelength-to-use">2.2 Wavelength to use</h3>
+<p>The main consideration is attenuation after propagating long distance. From [2] we know to make attenuation less, infrared band is a good choice. Then we have two choices:</p>
+<ul>
+<li>850 nm</li>
+<li>1550 nm</li>
+</ul>
+<p>We digged further and found that 1550 nm lasers are considered "eye safe" at much higher power levels than traditionally used 850nm lasers.</p>
+<p>So our choice for wavelength is 1550 nm. And the benefits are as follows [1] :</p>
+<ul>
+<li>reduce background noise and Rayleigh scattering</li>
+<li>high transmitter power</li>
+<li>Eye-save wavelength ( the maximum permissible exposure for eye is much higher at 1550 nm wavelength )</li>
+</ul>
+<h3 id="laser-type">2.3 Laser Type</h3>
+<h4 id="led-or-cw">2.3.1 LED or CW</h4>
+<p>To be clear:</p>
+<ul>
+<li><p>A light-emitting diode (<em>LED</em>) is a semiconductor light source that emits light when current flows through it.</p></li>
+<li><p>A continuous wave (CW) laser is a laser that emits a continuous laser beam with a controlled heat output, as beam duration and intensity.</p></li>
+</ul>
+<p>For ground-to-satellite links, we don’t think a light of LED can surrive after passing the atmosphere. So we definitely choose CW laser.</p>
+<h4 id="comparasion">2.3.2 Comparasion</h4>
+<p>We have four choices and they all have own advantages and disadvantages:</p>
+<h5 id="gas-laser">Gas laser</h5>
+<figure>
+<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk4mvtij30xc0iugos.jpg" alt="Carbon dioxide laser - Wikipedia" /><figcaption aria-hidden="true">Carbon dioxide laser - Wikipedia</figcaption>
+</figure>
+<ul>
+<li>Carbon dioxide laser are stable and less sensitive to atomospheric effects</li>
+<li>Large volume and unreliability</li>
+</ul>
+<h5 id="solid-state-laser">Solid-state laser</h5>
+<ul>
+<li>Stable and narrow spectral linewidth</li>
+<li>Very high peak power</li>
+</ul>
+<h5 id="semiconductor-laser">Semiconductor laser</h5>
+<ul>
+<li>Compact in size, light weight, easy to operate</li>
+<li>Quite low output power hence <strong>require additional amplifier</strong> for long distance communication</li>
+<li>Diodes require great care</li>
+</ul>
+<h5 id="fiber-laser-4">Fiber laser [4]</h5>
+<figure>
+<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk51ei3j30zk0k075c.jpg" alt="Fiber laser cutting machine FOL-3015AJ" /><figcaption aria-hidden="true">Fiber laser cutting machine FOL-3015AJ</figcaption>
+</figure>
+<ul>
+<li>The laser light is both generated and delivered by an inherently flexible medium, which allows easier delivery to the focusing location and target.</li>
+<li>Fiber lasers can have active regions several kilometers long, and so can provide very high optical gain.</li>
+<li>Fiber lasers are compact compared to solid-state or gas lasers of comparable power ( because the fiber can be bent and coiled)</li>
+<li>The additional power and better beam quality provide cleaner cut edges and faster cutting speeds</li>
+</ul>
+<h4 id="choice-of-laser-device-type">2.3.3 Choice of laser device type</h4>
+<p>It seems that fiber laser is great in comparison with others. We first considered solid state laser but fiber laser seems to be better and it has many applications in telecommunications. So we choose <strong>fiber laser</strong> as our type of laser device.</p>
+<h3 id="modulator">2.4 Modulator</h3>
+<p>We have two consideration of the modulator, to be clear:</p>
+<ul>
+<li><p>Electro-optic modulator [6]</p>
+<p>An electro-optic modulator (EOM) is an optical device in which a signal-controlled element exhibiting an electro-optic effect is used to modulate a beam of light.</p></li>
+<li><p>Acoustic-optic modulator [5]</p>
+<p>An acousto-optic modulator (AOM), uses the acousto-optic effect to and shift the frequency of light using sound waves.</p></li>
+</ul>
+<p>We found little applications in telecommunications about acoustic-optic modulator and it seems electro-optic modulator has a more mature technology. We found that <span class="math inline">\(LiNbO_3\)</span> has nice performance in the application of long distance communication and there are a lot of type we could choose as provided in [7]. So we choose electro-optic modulator for our ground-to-satellite FOS communication system goal.</p>
+<p>To be more specific, we will use <em><span class="math inline">\(LiNbO_3\)</span> Mach-Zehnder Modulator</em> for its good performance.</p>
+<h2 id="simulation">3. Simulation</h2>
+<h3 id="demo-fso-communication-system">3.1 Demo: FSO communication system</h3>
+<p>We considered the composition of the system and drew a structure graph as below:</p>
+<figure>
+<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djy58q7j31t00u0q79.jpg" alt="FSOCS" /><figcaption aria-hidden="true">FSOCS</figcaption>
+</figure>
+<p>We put our emphasis on the <em>Transmitter</em> part and the following sections are our simulation work.</p>
+<h4 id="layout">3.1.1 Layout</h4>
+<p>Below is the layout of our communication system. We used OptiSystem software to do the simulation.</p>
+<p>The transmitter part is in the left and we will dig into it later.</p>
+<p>In the middle is the FSO Channel. Since Ground-to-Satellite system has at least 90 km (see <em>regions of atmosphere</em> diagram below) , we set the range of the FSO channel 100 km. On the left and right of the FSO channel are two opticla amplifiers, from simulation result we can found their role in the system.</p>
+<figure>
+<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk5x5ydj318t0rswih.jpg" alt="Regions of atmosphere" /><figcaption aria-hidden="true">Regions of atmosphere</figcaption>
+</figure>
+<p>On the right is the Receiver part. It consists of PIN Photodiode (which transfer optic wave into electric signal), Law Pass Bessel Filter (which is used to filter out noise) and Data Recovery Module (which do the demodulation and get the recovered signal).</p>
+<p>We use BER Analyter to analyse the bit error rate of the system.</p>
+<figure>
+<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djvig9aj31720cb7aq.jpg" alt="FSO demo layout" /><figcaption aria-hidden="true">FSO demo layout</figcaption>
+</figure>
+<h4 id="simulation-result">3.1.2 Simulation result</h4>
+<figure>
+<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djzynsxj318n0md140.jpg" alt="simulation result" /><figcaption aria-hidden="true">simulation result</figcaption>
+</figure>
+<p>Above is our simulation result from which we can found that loss is huge. The reason is FSO channel is too long.</p>
+<p>Because of the time and technology limitation, we didn’t get a good simulation result. Below is something we considered:</p>
+<ul>
+<li><p>how to overcome the problem of very big loss</p></li>
+<li><p>how to choose the laser power</p></li>
+<li><p>how to choose photodetector</p>
+<ul>
+<li>photodiode</li>
+<li>optical power detector</li>
+<li>optical phase detector</li>
+</ul></li>
+<li><p>how to choose filters</p>
+<ul>
+<li>low pass
+<ul>
+<li>Gaussian filter</li>
+<li>Bessel filter</li>
+<li>etc.</li>
+</ul></li>
+<li>height pass</li>
+<li>band pass</li>
+</ul></li>
+<li><p>how to set parameters of optical amplifier</p>
+<ul>
+<li>gain</li>
+<li>noise figure</li>
+</ul></li>
+</ul>
+<h3 id="optical-transmitter">3.2 Optical transmitter</h3>
+<p>From COSMOL, we get the some insight of the modulator. But it is not that clear.</p>
+<p>We use OptiSystem to construct our <em>optical transmitter</em> and further more, we digged a little deeper and build a demo of the whole <em>FSO communication system.</em></p>
+<p>Below are the layout of our system.</p>
+<figure>
+<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk0rwezj30sm0cladg.jpg" alt="FSO-transmitter-layout" /><figcaption aria-hidden="true">FSO-transmitter-layout</figcaption>
+</figure>
+<p>From the figure we can see the structure of the transmitter clearly.</p>
+<ul>
+<li><p>We use simple <em>Bit Sequence Generator</em> to generate electric signal and use <em>NRZ Pulse Generator</em> to generate electric pulse.</p></li>
+<li><p>We use <em>Fiber Laser</em> as our laser device. As there isn’t Fiber Laser device in the software, we put a CW Laser and add a description. CW Laser can generate 1550 nm optical wave.</p></li>
+<li><p>We use <span class="math inline">\(LiNbO_3\)</span> Mach-Zehnder Modulator in our transmitter. The reasons have been stated in section 2.</p></li>
+<li><p>Put the optic signal and electric pulse into the MZ Modulator, we can get the modulated optical signal.</p></li>
+</ul>
+<p>Above are the details of our transmitter, we then use Optical Power Meter and Optical Spectrum Analyzer to do the simulation.</p>
+<p>Results are as follows :</p>
+<figure>
+<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk1s5hnj312r0jtwln.jpg" alt="FSO-transmitter-simulation-result" /><figcaption aria-hidden="true">FSO-transmitter-simulation-result</figcaption>
+</figure>
+<p>We can see from the figure that the transmitter has <span class="math inline">\(2.485\)</span> dBm los and the output power is <span class="math inline">\(56.432\times 10^{-3} W\)</span>. We need optical amplifiers to make it larger.</p>
+<h3 id="electro-optic-modulation-process">3.3 Electro-optic Modulation Process</h3>
+<p>In order to give a more specific model, we use COMSOL to simulate the <em>Electro-optic modulation process</em>. Below are what we have done.</p>
+<p>We choose the <strong>wave optics module</strong>.</p>
+<p>Then we perform the 2D geometrical modeling since the system is symmetric.</p>
+<p>We can find that the structure has core and cladding:</p>
+<figure>
+<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk3n0tdj30xo0hnaab.jpg" alt="structure of core and cladding" /><figcaption aria-hidden="true">structure of core and cladding</figcaption>
+</figure>
+<p>Next we set the boundary conditions so that the COSMOL can do the calculation. We set the applied voltage boundary of the light or rather the boundary of the wave:</p>
+<figure>
+<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djz4eraj309n09pmx5.jpg" alt="step1" /><figcaption aria-hidden="true">step1</figcaption>
+</figure>
+<p>Before calculation, we set some configurations:</p>
+<figure>
+<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk2mm1hj309h05pa9y.jpg" alt="step2" /><figcaption aria-hidden="true">step2</figcaption>
+</figure>
+<p>(To be clear: “步骤 <span class="math inline">\(k\)</span> ” &lt;—&gt; “ Step <span class="math inline">\(k\)</span> ” , “求解器配置” &lt;—&gt; “Solver Configuration” and “作业配置” &lt;—&gt; “ Work Configuration” )</p>
+<p>Finally, we get the simulation result. In the figure it is the distribution of the electric field in the waveguide. We also get the loss, transmittance and reflectance of the system.</p>
+<p>(The first line of the figure “表面：电场模” &lt;—&gt; “Surface: Electric field mode” )</p>
+<figure>
+<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk362bij30xd0h9wer.jpg" alt="EF distribution" /><figcaption aria-hidden="true">EF distribution</figcaption>
+</figure>
+<figure>
+<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk16evoj30xe0grq39.jpg" alt="Property inside" /><figcaption aria-hidden="true">Property inside</figcaption>
+</figure>
+<p>However, we cannot get the change of the phase. It seems that the software has some limitation. And we didn’t consider the electric signals. These are something that can be improved.</p>
+<h2 id="reference">Reference</h2>
+<p>[1] Kaushal H, Jain V K, Kar S. Free space optical communication[M]. Gurgaon, Haryana: Springer, 2017.</p>
+<p>[2] 高瞻, 丁铁骑, 吕辉. 光无线通信系统通信波长的选择[J]. 通讯世界, 2002, 8(12): 70-71.</p>
+<p>[3] https://seminex.com/1550nm-lasers.aspx/</p>
+<p>[4] https://www.wikiwand.com/en/Fiber_laser</p>
+<p>[5] https://www.wikiwand.com/en/Acousto-optic_modulator</p>
+<p>[6] https://www.wikiwand.com/en/Electro-optic_modulator</p>
+<p>[7] https://www.newport.com/medias/sys_master/images/images/h31/hfb/8797089398814/Electro-Optic-Modulator-Brochure.pdf</p>
+
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Projects/" rel="tag">Projects</a></li></ul>
+
+
+    </footer>
+
+  </div>
+
+  
+
+  
+
+  
+  
+  
+
+</article>
+    
+    <article id="post-Computer-Science/艰难配环境" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="../../2020/07/24/Computer-Science/%E8%89%B0%E9%9A%BE%E9%85%8D%E7%8E%AF%E5%A2%83/"
+    >艰难配环境</a> 
+</h2>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="../../2020/07/24/Computer-Science/%E8%89%B0%E9%9A%BE%E9%85%8D%E7%8E%AF%E5%A2%83/" class="article-date">
+  <time datetime="2020-07-24T06:46:47.000Z" itemprop="datePublished">2020-07-24</time>
+</a>
+      
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <h2 id="sublime-text-配-python3.7-macos">Sublime Text 配 Python3.7 （macOS）</h2>
+<p>Browse Packages —&gt; User —&gt;新建 Python3.7.sublime-build</p>
+<p>写入：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"cmd"</span>: [<span class="string">"/usr/local/bin/python3"</span>, <span class="string">"-u"</span>, <span class="string">"<span class="variable">$file</span>"</span>],</span><br><span class="line">    <span class="string">"file_regex"</span>: <span class="string">"^[ ]*File \"(...*?)\", line ([0-9]*)"</span>,</span><br><span class="line">    <span class="string">"selector"</span>: <span class="string">"source.python"</span>,</span><br><span class="line">    <span class="string">"env"</span>:&#123;  <span class="string">"PYTHONPATH"</span>:<span class="string">"/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages:/Users/huanglongqian/anaconda3/lib/python3.7/site-packages"</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>cmd的确定：相当于在terminal使用python3运行当前py文件，终端中使输入<code>which python3.7</code> 即可获得路径</p></li>
+<li><p>env的重要：添加环境变量，一番摸索后发现这个就相当于</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line">sys.append(<span class="string">'python_path'</span>)</span><br></pre></td></tr></table></figure>
+<p>往env中添加好后，就不需要每次都这样写了！</p></li>
+<li><p>我添加的这个，主要是<code>import cv2</code> 一直报错，但是终端中import却没问题，于是心生一计：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">python3</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> cv2</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>cv2.__file__</span><br></pre></td></tr></table></figure>
+<p>把得到的路径放到环境变量里就好了。</p></li>
+<li><p>发现 <code>import slidingwindow</code>也出了问题，一看原来放到了python3.8的里面，于是故伎重演，PYTHONPATH再加一个，注意中间是用冒号隔开</p></li>
+<li><p>太混乱了，<code>import tensorflow</code>居然也出了问题，找了一下目前改成annoconda的目录里面的tensorflow，pip3 install的不知道放到了哪里去了orz</p></li>
+</ul>
+
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+
+    </footer>
+
+  </div>
+
+  
+
+  
+
+  
+  
+  
+
+</article>
+    
+    <article id="post-Projects/Optical system design" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="../../2020/07/07/Projects/Optical%20system%20design/"
+    >Optical System Design</a> 
+</h2>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="../../2020/07/07/Projects/Optical%20system%20design/" class="article-date">
+  <time datetime="2020-07-07T04:15:21.000Z" itemprop="datePublished">2020-07-07</time>
+</a>
+      
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <h1 id="光学系统设计-project">光学系统设计 Project</h1>
+<h2 id="光路计算部分">光路计算部分</h2>
+<p>这是光学系统设计的光路计算 Project，具体的程序和发行版我已经放到了<a href="https://github.com/longqianh/simple-ray-tracing.git" target="_blank" rel="noopener">GitHub上</a>。</p>
+<p>这是一个非专业协作的非专业项目，一开始头文件和cpp没有分开，GitHub提交也比较混乱，文件、代码、GitHub 更加专业是我努力学习完善的方向。</p>
+<p>但是这是我较为满意的一次项目，至少我不认为这是学术垃圾。光线的计算程序写了三、四十个小时，在类的设计上花了不少功夫，我认为程序具有可拓展性、易理解性，比如要进行光路追迹，只需要声明光线，便可利用<code>ray_tracing(ray,ku,kw)</code> 函数得到输出光线。</p>
+<p>真的感谢吴恩宗做出一个无比美丽和强大的GUI，而且提供了非常细致的帮助文档。</p>
+<p>真的感谢孙昊天在我debug到绝望的时候陪着我一起de，让我看到了希望的光。</p>
+<h2 id="光学系统设计部分">光学系统设计部分</h2>
+<p>应该说，这一部分全靠两位队友带。</p>
+<p>我是直接奔着3个透镜去做的，因为都在紫金港，我可以直接去队友们的寝室里。中间遇到了很多困难，都是队友们在我旁边指导着克服的。因为同时有四个项目进行，我做完以后就算做完了，不再继续优化。</p>
+<p>吴恩宗设计了一个四透镜的，可以说，优化到了极致。孙昊天三四五都做了，而且都做得很棒，三透镜做到了F2.8，所以最后就用他的三透镜系统啦！</p>
+<p>项目报告就放到第三部分了。By the way，最后的答辩孙昊天非常认真地准备，我看着时间真的把握地很好，PPT也很妙，赞啊啊!</p>
+<h2 id="项目报告">项目报告</h2>
+
+
+	<div class="row">
+    <embed src="/pdf_files/光学系统设计-项目报告.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Projects/" rel="tag">Projects</a></li></ul>
+
+
+    </footer>
+
+  </div>
+
+  
+
+  
+
+  
+  
+  
+
+</article>
+    
     <article id="post-Projects/Audio-Analysis" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
@@ -567,431 +1161,13 @@ H(A,B)=\sum_{i=1}^np_A(x_i)\ln\left[p_B(x_i)\right]
 
 </article>
     
-    <article id="post-Notes-byhand/pde-notes" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="../../2020/05/03/Notes-byhand/pde-notes/"
-    >PDE-Notes</a> 
-</h2>
- 
-
-    </header>
-    
-
-    
-    <div class="article-meta">
-      <a href="../../2020/05/03/Notes-byhand/pde-notes/" class="article-date">
-  <time datetime="2020-05-02T18:04:58.000Z" itemprop="datePublished">2020-05-03</time>
-</a>
-      
-  <div class="article-category">
-    <a class="article-category-link" href="../../categories/notes/">notes</a>
-  </div>
-
-      
-      
-      
-    </div>
-    
-
-    
-
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-
-      
-      <p>This is my class notes for PDE (partial differential equations ) course.</p>
-<p>Due to the capacity limit, I cannot upload it (200+MB), but I found an alternative way. I uploaded it to MEGA and you can get access to the note by the following url.</p>
-<p><a href="https://mega.nz/file/cdoVkDiJ#qT23xZ6WbVRNxoJ8iNsJOmXdWt_pfr5fzG3UyVoem8Q" target="_blank" rel="noopener">PDE-Note-by-Peter :)</a></p>
-<p>By the way, the file seems too large so you need to wait for a moment or just download it, please execuse me.</p>
-
-      
-      <!-- reward -->
-      
-    </div>
-    
-    
-      <!-- copyright -->
-      
-    <footer class="article-footer">
-      
-      
-
-    </footer>
-
-  </div>
-
-  
-
-  
-
-  
-  
-  
-
-</article>
-    
-    <article id="post-Projects/Optical-combination-experiment" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="../../2020/05/03/Projects/Optical-combination-experiment/"
-    >Optical Combination Experiment</a> 
-</h2>
- 
-
-    </header>
-    
-
-    
-    <div class="article-meta">
-      <a href="../../2020/05/03/Projects/Optical-combination-experiment/" class="article-date">
-  <time datetime="2020-05-02T18:00:59.000Z" itemprop="datePublished">2020-05-03</time>
-</a>
-      
-  <div class="article-category">
-    <a class="article-category-link" href="../../categories/Projects/">Projects</a> / <a class="article-category-link" href="../../categories/Projects/Optics/">Optics</a>
-  </div>
-
-      
-      
-      
-    </div>
-    
-
-    
-
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-
-      
-      <p>This is the optical combination experiment report I’ve done in the Aplied Optical Experiment course.</p>
-
-
-	<div class="row">
-    <embed src="/pdf_files/光学组合实验实验报告.pdf" width="100%" height="550" type="application/pdf">
-	</div>
-
-
-
-
-      
-      <!-- reward -->
-      
-    </div>
-    
-    
-      <!-- copyright -->
-      
-    <footer class="article-footer">
-      
-      
-
-    </footer>
-
-  </div>
-
-  
-
-  
-
-  
-  
-  
-
-</article>
-    
-    <article id="post-Projects/iPhone-focal-length-measurement" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="../../2020/05/03/Projects/iPhone-focal-length-measurement/"
-    >iPhone Focal Length Measurement</a> 
-</h2>
- 
-
-    </header>
-    
-
-    
-    <div class="article-meta">
-      <a href="../../2020/05/03/Projects/iPhone-focal-length-measurement/" class="article-date">
-  <time datetime="2020-05-02T17:55:17.000Z" itemprop="datePublished">2020-05-03</time>
-</a>
-      
-  <div class="article-category">
-    <a class="article-category-link" href="../../categories/Projects/">Projects</a> / <a class="article-category-link" href="../../categories/Projects/Optics/">Optics</a>
-  </div>
-
-      
-      
-      
-    </div>
-    
-
-    
-
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-
-      
-      <p>This is the mobile phone focal length measurement experiment report I’ve done in the Aplied Optical Experiment course.</p>
-
-
-	<div class="row">
-    <embed src="/pdf_files/手机焦距测量实验报告.pdf" width="100%" height="550" type="application/pdf">
-	</div>
-
-
-
-
-      
-      <!-- reward -->
-      
-    </div>
-    
-    
-      <!-- copyright -->
-      
-    <footer class="article-footer">
-      
-      
-
-    </footer>
-
-  </div>
-
-  
-
-  
-
-  
-  
-  
-
-</article>
-    
-    <article id="post-Projects/2020-ICM" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="../../2020/05/02/Projects/2020-ICM/"
-    >2020-ICM</a> 
-</h2>
- 
-
-    </header>
-    
-
-    
-    <div class="article-meta">
-      <a href="../../2020/05/02/Projects/2020-ICM/" class="article-date">
-  <time datetime="2020-05-02T15:22:18.365Z" itemprop="datePublished">2020-05-02</time>
-</a>
-      
-  <div class="article-category">
-    <a class="article-category-link" href="../../categories/Projects/">Projects</a>
-  </div>
-
-      
-      
-      
-    </div>
-    
-
-    
-
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-
-      
-      <p>This work is mainly about the football game team strategy based on big data and is our final paper for the D problem of 2020 Interdisciplinary Contest in Modelling (ICM 2020), contributed collaboratively and equally by R.C. Luo, Y.Z. Zhang and me.</p>
-<p>Thanks cordially to the combined efforts of whole group, we fortunately won an M-prize. Due to privacy and copyright, the control number in our paper is erased.</p>
-
-
-	<div class="row">
-    <embed src="/pdf_files/2020_ICM.pdf" width="100%" height="550" type="application/pdf">
-	</div>
-
-
-
-
-      
-      <!-- reward -->
-      
-    </div>
-    
-    
-      <!-- copyright -->
-      
-    <footer class="article-footer">
-      
-      
-
-    </footer>
-
-  </div>
-
-  
-
-  
-
-  
-  
-  
-
-</article>
-    
-    <article id="post-Computer-Science/Matlab学习" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="../../2020/03/03/Computer-Science/Matlab%E5%AD%A6%E4%B9%A0/"
-    >Matlab学习</a> 
-</h2>
- 
-
-    </header>
-    
-
-    
-    <div class="article-meta">
-      <a href="../../2020/03/03/Computer-Science/Matlab%E5%AD%A6%E4%B9%A0/" class="article-date">
-  <time datetime="2020-03-03T08:40:36.000Z" itemprop="datePublished">2020-03-03</time>
-</a>
-      
-  <div class="article-category">
-    <a class="article-category-link" href="../../categories/Computer-Science/">Computer Science</a> / <a class="article-category-link" href="../../categories/Computer-Science/Language-Learning/">Language Learning</a> / <a class="article-category-link" href="../../categories/Computer-Science/Language-Learning/Matlab/">Matlab</a>
-  </div>
-
-      
-      
-      
-    </div>
-    
-
-    
-
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-
-      
-      <h1 id="matlab-学习笔记">Matlab 学习笔记</h1>
-<h2 id="有关信号与系统">有关信号与系统</h2>
-<h3 id="连续系统构建">连续系统构建</h3>
-<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">tf(b,a);  <span class="comment">%传递函数模型</span></span><br><span class="line">s = tf(<span class="string">'s'</span>); sys = b(s)/a(s) <span class="comment">%（具体的为多项式形式）</span></span><br><span class="line"><span class="comment">% ss 状态空间模型 （了解不多）</span></span><br><span class="line"><span class="comment">% zpk 零点-极点-增益模型 （了解不多）</span></span><br></pre></td></tr></table></figure>
-<h3 id="连续系统性质研究">连续系统性质研究</h3>
-<p>在用上面的方法构建好系统sys后，才可以进行下面的操作。</p>
-<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line"><span class="comment">% 零极点图</span></span><br><span class="line">p = pole(sys); <span class="comment">%求出零点</span></span><br><span class="line">z = zero(sys); <span class="comment">%求出极点</span></span><br><span class="line">pzmap(sys); <span class="comment">%画零极点图 可以设置axis使之更好看</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% 响应</span></span><br><span class="line">lsim(sys,u,t,x0) <span class="comment">%全响应</span></span><br><span class="line">impulse(sys); <span class="comment">%单位冲激响应</span></span><br><span class="line">step(sys); <span class="comment">%单位阶跃响应</span></span><br></pre></td></tr></table></figure>
-<h2 id="有关符号表达式">有关符号表达式</h2>
-<h3 id="符号声明">符号声明</h3>
-<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">syms x y; <span class="comment">%声明变量</span></span><br><span class="line">syms f(t) g(x,y); <span class="comment">%声明函数, 里面的变量可以作为符号直接使用</span></span><br><span class="line">syms A [m,n]; <span class="comment">%声明向量或矩阵 m*n维</span></span><br></pre></td></tr></table></figure>
-<h3 id="符号运算">符号运算</h3>
-<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">simplify(expr); <span class="comment">%化简符号表达式</span></span><br><span class="line">root(p,x); <span class="comment">%得到符号多项式p关于x的根</span></span><br><span class="line">solve(equ,var); <span class="comment">%计算方程的解</span></span><br><span class="line">equs=[equ1 equ2]; vars=[var1 var2];</span><br><span class="line">solve(equs,vars); <span class="comment">%计算方程组equs关于变量vars的解</span></span><br><span class="line">diff(f,x,n); <span class="comment">%求符号函数f关于x的n阶导数</span></span><br><span class="line">dsolve(equ,cond); <span class="comment">%求解带diff的常微分方程 cond为初始条件</span></span><br><span class="line">dsolve(equs); <span class="comment">%求解常微分方程组 得到一组解S 用S.var 查看关于var的的解</span></span><br><span class="line">laplace(f); <span class="comment">%求关于f的拉普拉斯变换 （积分下限为0）</span></span><br><span class="line">ilaplace(F); <span class="comment">%求F的拉普拉斯逆变换</span></span><br></pre></td></tr></table></figure>
-<h3 id="符号变现赋值等">符号变现（赋值等）</h3>
-<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">g = matlabFunction(f); <span class="comment">%生成一个虚拟函数句柄 将符号表达式转化为可以用句柄调用求具体值等函数</span></span><br><span class="line"></span><br><span class="line">subs(s,old,new); <span class="comment">%返回s中old全部用new代替的新的表达式, 可用于符号替换（如自变量替换）和赋值</span></span><br></pre></td></tr></table></figure>
-<h2 id="其他">其他</h2>
-<ul>
-<li><p>函数必须以end结尾。将其保存为.m 文件，即可在其他程 序中以文件名（注意不是函数名，文件名和函数名可以不同）调用该函数。</p></li>
-<li><p>关系运算</p>
-<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">a~=b<span class="comment">%不等于</span></span><br><span class="line">a&gt;=b<span class="comment">%大于等于</span></span><br><span class="line">a&lt;=b<span class="comment">%小于等于</span></span><br></pre></td></tr></table></figure></li>
-<li><p>复数</p>
-<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">a=<span class="number">1</span>+<span class="number">2</span><span class="built_in">i</span></span><br><span class="line">z=<span class="built_in">real</span>(a)<span class="comment">%实部</span></span><br><span class="line">z=<span class="built_in">imag</span>(a)<span class="comment">%虚部</span></span><br><span class="line">z=<span class="built_in">angle</span>(a)<span class="comment">%辐角</span></span><br><span class="line">z=<span class="built_in">abs</span>(a)<span class="comment">%模</span></span><br><span class="line">z=<span class="built_in">conj</span>(a)<span class="comment">%共轭</span></span><br></pre></td></tr></table></figure></li>
-<li><p>向量操作</p>
-<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">a=<span class="built_in">rand</span>(<span class="number">1</span>,<span class="number">3</span>)</span><br><span class="line">b=<span class="built_in">rand</span>(<span class="number">1</span>,<span class="number">3</span>)</span><br><span class="line">c=<span class="built_in">dot</span>(a,b)<span class="comment">%内积</span></span><br><span class="line">d=<span class="built_in">cross</span>(a,b)<span class="comment">%叉乘</span></span><br><span class="line">l=<span class="built_in">length</span>(a)<span class="comment">%向量长度</span></span><br><span class="line">median(a)<span class="comment">%中位数</span></span><br><span class="line">std(a)<span class="comment">%标准差</span></span><br><span class="line">s=<span class="built_in">sort</span>(a)<span class="comment">%排序</span></span><br><span class="line"><span class="comment">%还有 min max 等</span></span><br></pre></td></tr></table></figure></li>
-<li><p>矩阵操作</p></li>
-</ul>
-<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">a=<span class="built_in">rand</span>(<span class="number">5</span>,<span class="number">3</span>)</span><br><span class="line">b=<span class="built_in">rand</span>(<span class="number">5</span>,<span class="number">3</span>)</span><br><span class="line">b=b'<span class="comment">%转置</span></span><br><span class="line">c=a*b<span class="comment">%矩阵乘法</span></span><br><span class="line">d=a.*b<span class="comment">%逐元素相乘</span></span><br><span class="line">m=b^<span class="number">3</span><span class="comment">%幂</span></span><br><span class="line">m=b.^<span class="number">3</span><span class="comment">%点幂</span></span><br><span class="line"><span class="built_in">size</span>(b)<span class="comment">%矩阵大小</span></span><br><span class="line">b=<span class="built_in">reshape</span>(<span class="number">1</span>,<span class="number">15</span>)</span><br><span class="line">b=<span class="built_in">flipud</span>(b)<span class="comment">%上下翻转 up and down</span></span><br><span class="line">b=<span class="built_in">fliplr</span>(b)<span class="comment">%左右翻转 left and right</span></span><br><span class="line">e=<span class="built_in">diag</span>(b)<span class="comment">%取出b的对角元素</span></span><br><span class="line"></span><br><span class="line">left_division=a/b<span class="comment">% b*inv(a)</span></span><br><span class="line">right_division=a\b<span class="comment">% inv(a)*b</span></span><br><span class="line"><span class="comment">%X=A\B是方程A*X=B的解，X=A\B是方程X*A=B的解 </span></span><br><span class="line"><span class="comment">%记忆：朝向哪 逆在哪</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li><p>绘图</p>
-<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">x=<span class="built_in">linspace</span>(<span class="number">1</span>,<span class="number">10</span>,<span class="number">100</span>)</span><br><span class="line">y1=<span class="built_in">sin</span>(x)</span><br><span class="line">y2=<span class="built_in">cos</span>(x)</span><br><span class="line">y3=<span class="built_in">tan</span>(x)</span><br><span class="line"><span class="built_in">plot</span>(x,y1,<span class="string">'blue'</span>,x,y2,<span class="string">'LineWidth'</span>,<span class="number">2</span>,<span class="string">'color'</span>,<span class="string">'red'</span>)</span><br><span class="line"><span class="comment">%要在同一图中画出多条曲线，只需将坐标依次放入plot函数即可</span></span><br><span class="line">axis([<span class="number">0</span> <span class="number">4</span>*<span class="built_in">pi</span> <span class="number">-1.2</span> <span class="number">1.2</span>])<span class="comment">%设置坐标轴范围</span></span><br><span class="line">xlim([<span class="number">1</span> <span class="number">2</span>])<span class="comment">%单独控制</span></span><br><span class="line">xlabel(<span class="string">'x'</span>); ylabel(<span class="string">'y'</span>);</span><br><span class="line"><span class="built_in">legend</span>(<span class="string">'sin(x)'</span>,<span class="string">'cos(x)'</span>);</span><br><span class="line">title(<span class="string">'Sine and Cosine Functions'</span>);</span><br><span class="line"><span class="comment">%title里可以使用latex语法</span></span><br><span class="line"><span class="comment">%如 ：title('$y_1=\sin(4\pi t+\pi /3)$','interpreter','latex')</span></span><br><span class="line"><span class="comment">% 注明解释器为latex即可</span></span><br><span class="line"></span><br><span class="line"><span class="comment">%绘制子图</span></span><br><span class="line">subplot(<span class="number">2</span>,<span class="number">2</span>,<span class="number">1</span>); <span class="built_in">plot</span>(x,y1);</span><br><span class="line">subplot(<span class="number">2</span>,<span class="number">2</span>,<span class="number">2</span>); <span class="built_in">plot</span>(x,y2);</span><br><span class="line">subplot(<span class="number">2</span>,<span class="number">2</span>,<span class="number">3</span>); <span class="built_in">plot</span>(x,y3);</span><br></pre></td></tr></table></figure></li>
-<li><p>信号处理</p>
-<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line"><span class="comment">%噪声</span></span><br><span class="line">snr=<span class="number">10</span>; <span class="comment">%Signal‐to‐noise ratio in dB.</span></span><br><span class="line">yn=awgn(y,snr,<span class="string">'measured'</span>); <span class="comment">% Add white Gaussian noise. 白噪声</span></span><br><span class="line"></span><br><span class="line"><span class="comment">%函数</span></span><br><span class="line">k1=<span class="number">-3</span>; k2=<span class="number">3</span>; k=k1:k2; n=<span class="number">0</span>;</span><br><span class="line">step=stepfun(t,t0)<span class="comment">%t是向量形式的变量,t0表示延迟 阶跃函数</span></span><br><span class="line">delta=+(k==n) <span class="comment">% 冲激函数</span></span><br><span class="line">stem(k,delta,<span class="string">'filled'</span>)<span class="comment">% 离散函数绘制 stem为绘制杆状图</span></span><br><span class="line"></span><br><span class="line"><span class="comment">%rectpuls和tripuls函数产生指定宽度和高度的矩形和三角脉冲。</span></span><br></pre></td></tr></table></figure></li>
-<li><p>其他技巧</p>
-<ul>
-<li>nargin, nargout 的使用</li>
-</ul></li>
-</ul>
-<h2 id="关于频率">关于频率</h2>
-<p>采样频率 <span class="math inline">\(f_s\)</span>：每秒取 <span class="math inline">\(f_s\)</span> 个点，计算中应该取和物理采样硬件（如示波器）的采样频率一致</p>
-<p>频率域分析中，若采样频率是 <span class="math inline">\(f_s\)</span>, 那么分析的范围是 <span class="math inline">\([0,f_s)\)</span>, 这是因为更高频率的波我们采样不到了。</p>
-<p>又由于 <span class="math inline">\([0,f_s/2),[f_s/2,f_s)\)</span> 是对称的，事实上有用的信息或者说我们需要分析的范围是 <span class="math inline">\([0,f_s/2]\)</span> 。</p>
-<p>在用 Matlab 进行频率域分析时，首先应该设置采样频率。根据物理硬件可以确定采样频率，如果是离散信号，那么采样频率就是 <span class="math inline">\(1\)</span> 。</p>
-<p>第二步应该确定采样的点数 <span class="math inline">\(N\)</span> 或者采样的持续时间 <span class="math inline">\(T\)</span>, 知道一个我们就可以确定另一个：<span class="math inline">\(N\implies T=N/f_s,\quad T\implies N=T\cdot f_s\)</span></p>
-<p>在使用 Matlab 的 fft 函数时，有几个需要注意的地方：</p>
-<ul>
-<li><p>真实信号的振幅应该是 <span class="math inline">\(A\cdot2/N\)</span> ，这个我不是很明白，查到的是这样说的，<span class="math inline">\(A\)</span> 是 fft 变换后的振幅</p></li>
-<li><p>如果采样频率是 <span class="math inline">\(f_s\)</span>, 那么 fft 时要乘一下 <span class="math inline">\(dt=1/f_s\)</span> (每秒 <span class="math inline">\(f_s\)</span> 个点，那么一个点就是 <span class="math inline">\(1/f_s\)</span> 秒) ，这是由于 Matlab 的 fft 是离散傅立叶变换，相当于 <span class="math inline">\(dt=1\)</span> ，需要补乘 <span class="math inline">\(dt\)</span></p></li>
-<li><p>频率域对应的频谱范围是 <span class="math inline">\(0\sim f_s\)</span>, 有用的信息是在 <span class="math inline">\(0~f_s/2\)</span>, Matlab 代码实现是</p>
-<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line"><span class="number">0</span>:(N<span class="number">-1</span>)/N*fs</span><br></pre></td></tr></table></figure>
-<p>可以用 fftshift 将 <span class="math inline">\([0,f_s)\)</span> 移为 <span class="math inline">\((-f_s/2,f_s/2]\)</span>, 然后取 <span class="math inline">\([o,f_s/2]\)</span> 的有用信息进行分析</p></li>
-<li><p>反变换 ifft 时要乘回来之前多乘的 <span class="math inline">\(1/f_s\)</span>, 即乘 <span class="math inline">\(f_s\)</span></p></li>
-</ul>
-
-      
-      <!-- reward -->
-      
-    </div>
-    
-    
-      <!-- copyright -->
-      
-    <footer class="article-footer">
-      
-      
-
-    </footer>
-
-  </div>
-
-  
-
-  
-
-  
-  
-  
-
-</article>
-    
   </article>
   
 
   
   <nav class="page-nav">
     
-    <a class="extend prev" rel="prev" href="../3/">上一页</a><a class="page-number" href="../../">1</a><a class="page-number" href="../2/">2</a><a class="page-number" href="../3/">3</a><span class="page-number current">4</span><a class="page-number" href="../5/">5</a><a class="page-number" href="../6/">6</a><a class="extend next" rel="next" href="../5/">下一页</a>
+    <a class="extend prev" rel="prev" href="../3/">上一页</a><a class="page-number" href="../../">1</a><a class="page-number" href="../2/">2</a><a class="page-number" href="../3/">3</a><span class="page-number current">4</span><a class="page-number" href="../5/">5</a><a class="page-number" href="../6/">6</a><a class="page-number" href="../7/">7</a><a class="extend next" rel="next" href="../5/">下一页</a>
   </nav>
   
 </section>
@@ -1082,6 +1258,10 @@ H(A,B)=\sum_{i=1}^np_A(x_i)\ln\left[p_B(x_i)\right]
     
     <li class="nav-item">
       <a class="nav-item-link" href="../../Notes">Notes</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="../../About">About</a>
     </li>
     
     <li class="nav-item">

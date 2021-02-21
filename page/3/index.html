@@ -80,6 +80,632 @@
     
     
     
+    <article id="post-Optics/物理光学笔记" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="../../2020/09/16/Optics/%E7%89%A9%E7%90%86%E5%85%89%E5%AD%A6%E7%AC%94%E8%AE%B0/"
+    >物理光学笔记</a> 
+</h2>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="../../2020/09/16/Optics/%E7%89%A9%E7%90%86%E5%85%89%E5%AD%A6%E7%AC%94%E8%AE%B0/" class="article-date">
+  <time datetime="2020-09-16T01:42:00.000Z" itemprop="datePublished">2020-09-16</time>
+</a>
+      
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <h1 id="物理光学笔记">物理光学笔记</h1>
+<p>记录一下自己在学习物理光学过程中的思考和总结。</p>
+<h2 id="光的电磁理论基础">光的电磁理论基础</h2>
+<h3 id="菲涅尔公式">菲涅尔公式</h3>
+<ul>
+<li><p><span class="math inline">\(r_p,r_s,t_p,t_s\)</span></p></li>
+<li><p>布儒斯特角：全偏振临界角，<span class="math inline">\(r_p=0,\theta_1+\theta_2=90^\circ\)</span></p></li>
+</ul>
+<h3 id="全反射探究">全反射探究</h3>
+<ul>
+<li>存在倏逝波</li>
+<li>有相位变化 <span class="math inline">\(\delta=\delta_s-\delta_p\)</span></li>
+<li>无能量损失</li>
+</ul>
+<h3 id="偏振">偏振</h3>
+<p>关键是 <span class="math inline">\(p\)</span> 光和 <span class="math inline">\(s\)</span> 光的相位差（可看作振动方向垂直的光波的叠加）</p>
+<ul>
+<li>线偏振：<span class="math inline">\(\delta=0\)</span> 或 <span class="math inline">\(\pi\)</span></li>
+<li><span class="math inline">\(\sin\delta&lt;0\)</span> 右旋偏振，<span class="math inline">\(\sin\delta&gt;0\)</span> 左旋偏振</li>
+<li>偏振椭圆的相关量</li>
+</ul>
+<h3 id="光波的傅立叶分析">光波的傅立叶分析</h3>
+<p>实际光波是一个<em>波列</em>。波的单色性和波列长度有关。</p>
+<p>有效空间频率范围 <span class="math inline">\(\Delta k=\pi/L\)</span></p>
+<p>有效波长范围 <span class="math inline">\(\Delta \lambda=\lambda^2/2L\)</span></p>
+<p>时间频率范围 <span class="math inline">\(\Delta \nu=\Delta \left(c/\lambda\right)=c/2L\)</span></p>
+<h2 id="光的干涉">光的干涉</h2>
+<p>光的干涉，原理上是相干光波的叠加，内容上是求干涉场的分布。</p>
+<p>光的干涉、衍射和偏振，构成了波动光学的核心内容，干涉场和衍射场讨论的是标量场的光强分布。</p>
+<p>一般地说，干涉场是分立光波的叠加，衍射场是连续元光波的叠加，此时加法变成了积分；偏振场因其振动特点表示出的矢量光波属性，更加注重加法本身，矢量加法在物理上表示不同振动状态合成后振动状态的变化。</p>
+<h2 id="光的衍射">光的衍射</h2>
+<h2 id="傅立叶光学">傅立叶光学</h2>
+<h3 id="菲涅尔衍射">菲涅尔衍射</h3>
+<p>菲涅尔傍轴近似下： <span class="math display">\[
+\begin{align}
+\widetilde E(u,v)&amp;=\widetilde E(x,y)=\frac{1}{i\lambda z_1}\exp\left[ik\left(z_1+\frac{x^2+y^2}{2z_1}\right)\right]\iint_{-\infty}^\infty \widetilde E(x_1,y_1)\exp\left[\frac{ik}{2z_1}(x_1^2+y_1^2)\right]\exp\left[-ik(\frac{x}{z_1}x_1+\frac{y}{z_1}y_1)\right]\operatorname{dx_1dy_1}\\
+&amp;=\widetilde A\cdot\mathcal{F}\left(\widetilde E(x_1,y_1)\cdot \exp\left[\frac{ik}{2z_1}(x_1^2+y_1^2)\right]\right)
+\end{align}
+\]</span> 注意前面含 <span class="math inline">\((x,y)\)</span> 的相位因子在光强不显现，但可以利用干涉证明其存在。</p>
+<p>突然理解了3dgray的代码：<strong>傅立叶变换之后是uv（频率域），但实际是xy，只是有个线性对应关系，因此要换算回去：乘 lambda z</strong></p>
+<h3 id="夫琅和费衍射">夫琅和费衍射</h3>
+<p>在夫琅和费远场近似下： <span class="math display">\[
+\begin{align}
+\widetilde E(u,v)&amp;=\widetilde E(x,y)=\frac{1}{i\lambda z_1}\exp\left[ik\left(z_1+\frac{x^2+y^2}{2z_1}\right)\right]\iint_{-\infty}^\infty \widetilde E(x_1,y_1)\exp\left[-ik(\frac{x}{z_1}x_1+\frac{y}{z_1}y_1)\right]\operatorname{dx_1dy_1}\\
+&amp;=\widetilde A\cdot\iint_{-\infty}^\infty \widetilde E(x_1,y_1)\exp\left[-i2\pi(ux_1+vy_1)\right]\operatorname{dx_1dy_1}\\
+&amp;=\widetilde A\cdot\mathcal{F}\left[\widetilde E(x_1,y_1)\right]
+\end{align}
+\]</span> 其中，<span class="math inline">\((u,v)=\displaystyle (\frac{x}{\lambda z_1},\frac{y}{\lambda z_1})=(\frac{\cos\alpha}{\lambda},\frac{\cos\beta}{\lambda})\)</span> 为空间频率 <span class="math inline">\(1/\lambda\)</span> 在 <span class="math inline">\(x,y\)</span> 方向的分解。</p>
+<p>一张复杂的图片有许多不同的空间频率的单频信息组成，当单色波正入射在待分析的图像上时，通过夫琅和费衍射，一定空间频率的单频信息就被向特定方向衍射的平面波输送出来，所有衍射波最终会聚在焦面上的不同位置而形象地展示出原图片的频谱。这一过程的“运算速度”显然远高于计算机，一照就出来了。</p>
+<p>理想的夫琅和费衍射系统是一个傅立叶频谱分析器。</p>
+<p><strong>太近效果不好的原因可能是远场近似不再适用</strong></p>
+<h3 id="透镜">透镜</h3>
+<p>进入透镜的发散球面波，出去时变成了会聚的： <span class="math display">\[
+\widetilde E(x_1,y_1)=A\exp(ikd_0)\exp\left[\frac{ik}{2d_0}(x_1^2+y_1^2)\right]\to \widetilde E&#39;(x_1,y_1)=A\exp(-ikd)\exp\left[-\frac{ik}{2d}(x_1^2+y_1^2)\right]
+\]</span></p>
+<p>透镜的透射系数： $$ <span class="math display">\[\begin{align}
+\widetilde t(x_1,y_1)&amp;=\frac{\widetilde E}{\widetilde E&#39;}=\exp\left[-ik\frac{(x_1^2+y_1^2)}{2}\left(\frac 1 d+\frac 1 {d_0}\right)\right]\\
+&amp;=\exp\left(-ik\frac{x_1^2+y_1^2}{2f}\right)
+
+\end{align}\]</span> $$ 其中 <span class="math inline">\(f\)</span> 满足：<span class="math inline">\(\displaystyle\frac{1}{d_0}+\frac{1}{d}=\frac{1}{f}\)</span> .</p>
+<h3 id="深入理解透镜的傅立叶变换性质">深入理解透镜的傅立叶变换性质</h3>
+<p>光经过有限大物体后的传播过程就是衍射的过程，根据传播距离可以用夫琅和费衍射或者菲涅尔衍射计算传播到像面后的光场分布。可以说，衍射无处不在，传播就有衍射。</p>
+<p>假设有这么一个夫琅和费衍射系统：光源—狭缝（衍射平面）-透镜--成像平面</p>
+<p>设光透过衍射平面后的场分布为 <span class="math inline">\(\widetilde E(x_1,y_1)\)</span>, 透过透镜后的场分布为： <span class="math display">\[
+\widetilde E&#39;(x_1,y_1)=\widetilde E(x_1,y_1)\cdot \widetilde t(x_1,y_1)
+\]</span> 然后衍射到透镜后焦面，由于是有限距离，应该用菲涅尔衍射去计算： $$ <span class="math display">\[\begin{align}
+\widetilde E(u,v)&amp;=\widetilde E(x,y)=\frac{e^{ikf}}{i\lambda f}e^{ik\frac{x^2+y^2}{2f}}\mathcal{F}\left[\widetilde E&#39;(x_1,y_1)\exp\left(ik\frac{x_1^2+y_1^2}{2f}\right)\right]\\
+&amp;=\widetilde A\cdot\mathcal{F}\left[\widetilde E(x_1,y_1)\right]\mid_{u=\frac{x}{\lambda f},v=\frac{y}{\lambda f}}
+
+\end{align}\]</span> $$ 注意透镜的透射系数刚刚好消掉了菲涅尔衍射的那个系数，使最终结果成为了一个干净的傅立叶变换。</p>
+<p>因此整个夫琅和费衍射系统本来是夫琅和费衍射，做个傅立叶变换就好了，但是要在很远处才能观察。为了在近处观察加了透镜，要改为菲涅尔衍射去计算，结果兜兜转转算完得到和夫琅和费衍射一样的形式。</p>
+<p>另一方面可以看到，从衍射平面到透镜再到透镜后焦面，整合后等价于做一个傅立叶变换，这就是透镜的傅立叶变换性质：透镜前的场知道了，加个透镜则后焦面的场就是做一个傅立叶变换。这是透镜的透射系数和菲涅尔衍射美妙的结合。</p>
+<h3 id="与透镜有一定距离">与透镜有一定距离</h3>
+<p>算了一个难忘的下午...</p>
+<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gmxse8szhnj31to0rb1kx.jpg" alt="image-20210123180601121" style="zoom: 33%;" /></p>
+<p>将菲涅尔衍射积分写成系统函数的形式： <span class="math display">\[
+U \left( x _ { 0 } , y _ { 0 } \right) = \iint _ { S } h \left( x _ { 0 } - x _ { 1 } , y _ { 0 } - y _ { 1 } \right) U \left( x _ { 1 } , y _ { 1 } \right) d x _ { 1 } d y _ { 1 }
+\]</span> 其中： <span class="math display">\[
+h \left( x _ { 0 } - x _ { 1 } , y _ { 0 } - y _ { 1 } \right) \cong \frac {  e ^ { - j k z } } { j \lambda z } e ^ { - \frac { j k } { 2 z } \left[ \left( x _ { 1 } - x _ { 0 } \right) ^ { 2 } + \left( y _ { 1 } - y _ { 0 } \right) ^ { 2 } \right] }
+\]</span> 因此菲涅尔衍射中在距离 <span class="math inline">\(z\)</span> 的自由传播空间可以看作一个冲激响应为 <span class="math display">\[
+h \left( x _ { 0 } , y _ { 0 } \right) = \frac {  e ^ { - j k z } } { j \lambda z } e ^ { - \frac { j k } { 2 z } \left[ x _ { 0 } ^ { 2 } + y _ { 0 } ^ { 2 } \right] }
+\]</span> 的系统，其系统函数为 <span class="math display">\[
+\begin{aligned} H \left( u , v \right) &amp; = F _ { 2 D } \left\{ h \left( x _ { 0 } , y _ { 0 } \right) \right\} \\ &amp; =  \frac { e ^ { - j k z } } { j \lambda z } F _ { x } \left\{ e ^ { - \frac { j k } { 2 z } x _ { 0 } ^ { 2 } } \right\} F _ { y } \left\{ e ^ { - \frac { j k } { 2 z } y _ { 0 } ^ { 2 } } \right\} \end{aligned}
+\]</span> 利用 <span class="math display">\[
+F \left\{ e ^ { j \alpha t ^ { 2 } } \right\} = \sqrt { \frac { \pi } { \alpha } } e ^ { j \frac { \pi } { 4 } } e ^ { - j \frac { ( 2 \pi f ) ^ { 2 } } { 4 \alpha } }
+\]</span> 带入可得： <span class="math display">\[
+\begin{aligned} H \left( u, v \right) = e ^ { - j k z } e ^ { j \pi \lambda z \left( u ^ { 2 } + v ^ { 2 } \right) } \end{aligned}
+\]</span> 其中 $ux/f,vy/f. $</p>
+<h2 id="偏振光">偏振光</h2>
+<h3 id="偏振光的测定">偏振光的测定</h3>
+<ol type="1">
+<li>入射光：</li>
+</ol>
+<ul>
+<li>a 线偏振光</li>
+<li>b 自然光、圆偏振光、部分圆偏振光</li>
+<li>c 椭圆偏振光、部分椭圆偏振光、部分线偏振光</li>
+</ul>
+<ol start="2" type="1">
+<li><p>放入线偏振片（检偏器），转一圈</p>
+<ul>
+<li>存在两个消光位置：a</li>
+<li>光强无变化：b</li>
+<li>光强有亮暗变化但是不能消光：c</li>
+</ul></li>
+<li><p>放入 <span class="math inline">\(\lambda/4\)</span> 波片，旋转使快轴与光强最大处（偏振椭圆长轴）重合，再放一个检偏器，转动观察</p>
+<p>（1）对b：</p>
+<ul>
+<li>光强无变化：自然光</li>
+<li>两次消光：圆偏振</li>
+<li>不能完全消光：部分圆偏振</li>
+</ul>
+<p>（2）对c：</p>
+<ul>
+<li>两次消光：椭圆偏振 （部分线偏振光不能完全消光）</li>
+<li>将 <span class="math inline">\(\lambda/4\)</span> 波片转 <span class="math inline">\(45^\circ\)</span>，检偏器转动观察：
+<ul>
+<li>光强无变化：部分线偏振光（因为过了波片变成了部分圆偏振）</li>
+<li>光强有变化：部分椭圆偏振</li>
+</ul></li>
+</ul></li>
+</ol>
+<h1 id="复习">复习</h1>
+<ul>
+<li><p>电磁理论</p>
+<ul>
+<li><p>菲涅尔公式</p></li>
+<li><p>全反射、布鲁斯特角、倏逝波</p></li>
+</ul></li>
+<li><p>干涉</p>
+<ul>
+<li>杨氏双缝干涉</li>
+<li>等倾干涉、等厚干涉</li>
+<li>多光束干涉</li>
+<li>干涉系统：F-P，M-Z，迈克尔逊，裴索</li>
+<li>干涉滤光片</li>
+</ul></li>
+<li><p>衍射</p>
+<ul>
+<li>夫琅和费衍射</li>
+<li>菲涅尔衍射
+<ul>
+<li>菲涅尔波带法</li>
+</ul></li>
+<li>单缝衍射、多缝衍射</li>
+<li>闪耀光栅</li>
+<li>分辨率</li>
+<li>衍射效率、衍射系统？</li>
+</ul></li>
+<li><p>傅立叶光学</p>
+<ul>
+<li>矩孔、圆孔傅立叶变换</li>
+<li>阿贝成像理论</li>
+<li>相干传递函数、光学传递函数</li>
+<li>应用？</li>
+</ul></li>
+<li><p>偏振</p>
+<ul>
+<li>偏振态</li>
+<li>斯涅尔作图法、惠更斯作图法</li>
+<li>偏振光等折射反射：折射率公式与相关计算</li>
+<li>琼斯矩阵、琼斯矢量方法</li>
+<li>入射面、光线面、法线面、折射率曲面、波矢面等</li>
+<li>偏振光干涉：平行偏振光的干涉、会聚偏振光的干涉</li>
+</ul></li>
+</ul>
+
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+
+    </footer>
+
+  </div>
+
+  
+
+  
+
+  
+  
+  
+
+</article>
+    
+    <article id="post-Physics/Quantum-Mechanics" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="../../2020/09/15/Physics/Quantum-Mechanics/"
+    >Quantum-Mechanics</a> 
+</h2>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="../../2020/09/15/Physics/Quantum-Mechanics/" class="article-date">
+  <time datetime="2020-09-15T10:41:11.000Z" itemprop="datePublished">2020-09-15</time>
+</a>
+      
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <h1 id="quantum-mechanics-notes">Quantum-Mechanics-Notes</h1>
+<p>Notes for quantum mechanics of MIT-OCW 8.04.</p>
+<p><em>’This is the goal of 8.04: we will step beyond the scale of daily experiences to develop an intuition for electrons, atoms, and superposition.’</em></p>
+      
+      <a class="article-more-link" href="../../2020/09/15/Physics/Quantum-Mechanics/">阅读更多...</a>
+      
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+
+    </footer>
+
+  </div>
+
+  
+
+  
+
+  
+  
+  
+
+</article>
+    
+    <article id="post-Computer-Science/Data-Structure-notes" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="../../2020/09/15/Computer-Science/Data-Structure-notes/"
+    >Data-Structure-Notes</a> 
+</h2>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="../../2020/09/15/Computer-Science/Data-Structure-notes/" class="article-date">
+  <time datetime="2020-09-15T04:19:48.000Z" itemprop="datePublished">2020-09-15</time>
+</a>
+      
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <h1 id="note-for-data-structure">Note for Data Structure</h1>
+<h3 id="维护最大堆">维护最大堆</h3>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">// MAP-HEAPIFY</span><br><span class="line">MAX_HEAPIFY(A,i)</span><br><span class="line">	l = LEFT(i)</span><br><span class="line">    r = RIGHT(i)</span><br><span class="line">    <span class="keyword">if</span> l &lt;= A.size <span class="keyword">and</span> A[l]&gt;A[i]</span><br><span class="line">        largest = l</span><br><span class="line">    <span class="keyword">else</span> </span><br><span class="line">    	largest = i</span><br><span class="line">    <span class="keyword">if</span> r &lt;= A.size <span class="keyword">and</span> A[r]&gt;A[largest]</span><br><span class="line">    	largest = r</span><br><span class="line">    <span class="keyword">if</span> largest != i</span><br><span class="line">    	exchange(A[i],A[largest]) // 交换了 i 和 largest 位置的元素</span><br><span class="line">    	MAX_HEAPIFY(A,largest)</span><br></pre></td></tr></table></figure>
+<p>维护最大/小堆的时间复杂度为 <span class="math inline">\(\log(n)\)</span>，常用在连续取出最大值或最小值。</p>
+<h4 id="优先队列">优先队列</h4>
+<p>普通的队列是先进先出，而在优先队列中，元素被赋予优先级。当访问元素时，具有最高优先级的元素最先删除。优先队列具有最高级先出 （first in, largest out）的行为特征。</p>
+<p>优先队列在队列基础上添加了内部的一个排序，它本质是一个堆实现的。因而维护堆的时候可以直接用STL的 <code>priority_queue</code>.</p>
+<p>less是从大到小，greater是从小到大？</p>
+<ul>
+<li><a href="https://blog.csdn.net/qq_24279775/article/details/102560671" target="_blank" rel="noopener">重载</a></li>
+</ul>
+
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+
+    </footer>
+
+  </div>
+
+  
+
+  
+
+  
+  
+  
+
+</article>
+    
+    <article id="post-Computer-Science/Machine Learning/PyTorch-Notes" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="../../2020/09/14/Computer-Science/Machine%20Learning/PyTorch-Notes/"
+    >PyTorch Notes</a> 
+</h2>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="../../2020/09/14/Computer-Science/Machine%20Learning/PyTorch-Notes/" class="article-date">
+  <time datetime="2020-09-14T13:44:31.000Z" itemprop="datePublished">2020-09-14</time>
+</a>
+      
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <h1 id="pytorch-note">PyTorch Note</h1>
+<p>This is a note for using Torch with Python.</p>
+<h2 id="basic">Basic</h2>
+<p>To get the variable’s name, use <code>var.name</code></p>
+<p>To get the variable’s value, use <code>var.data</code></p>
+<h2 id="cuda">Cuda</h2>
+<p>To use cuda, we need to use <code>.cuda()</code> to move the model, loss function and training data to cuda.</p>
+<h2 id="linear-regression">Linear Regression</h2>
+<p><code>nn.Linear(in_features,out_features)</code></p>
+<p>​ Inside is a matrix with shape $ $</p>
+<h2 id="practice">Practice</h2>
+<p>Stage 1: easy linear regression ✅</p>
+<p>Stage 2: linear regression with hidden layer</p>
+<p>Stage 3: more complex : data preprocessing with pandas, using batch to train</p>
+<h2 id="ideas">Ideas</h2>
+<p>I suddenly thought that training a network is a procedure to traverse the state space efficiently.</p>
+<p>Intermediate layers is first set to solve the problem of cannot detecting symmetry.</p>
+<p>Recurnt networks</p>
+<p>How to prove that the network can more offen find a global minimum and rarely get stuck in local minima? Adding a few more connections can creater new paths.</p>
+<h4 id="batchnorm2d">BatchNorm2d</h4>
+<p>输入是一个四维矩阵NCHW，<span class="math inline">\(\gamma\)</span> 和 <span class="math inline">\(\beta\)</span> 为一维数组，是对每一批N[i]里<code>input[0][0],...,input[0][C]</code> 这C个HxW的二维矩阵分别进行处理标准化，标准化参数是学出来的。</p>
+
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+
+    </footer>
+
+  </div>
+
+  
+
+  
+
+  
+  
+  
+
+</article>
+    
+    <article id="post-Mathematics/随机过程复习总结" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="../../2020/09/07/Mathematics/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93/"
+    >随机过程复习总结</a> 
+</h2>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="../../2020/09/07/Mathematics/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93/" class="article-date">
+  <time datetime="2020-09-06T18:36:57.000Z" itemprop="datePublished">2020-09-07</time>
+</a>
+      
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <h1 id="随机过程复习总结">随机过程复习总结</h1>
+<p><em>Peter_H</em></p>
+<h2 id="markov-过程">1. Markov 过程</h2>
+<h3 id="状态转移矩阵">状态转移矩阵</h3>
+<p><span class="math inline">\(p_{ij}^n=P(X_{t_0+n}=j\mid X_{t_0}=i)\)</span></p>
+<p>CK方程： <span class="math inline">\(\vec\mu^{(n)}=\vec\mu^{0}P^n\)</span></p>
+<h3 id="常返和暂留">常返和暂留</h3>
+<p>常返：状态 <span class="math inline">\(i\)</span> 出发有限次可回</p>
+<p><em>常见考点</em>：求出所有互达等价类，各状态的周期和常返性，计算所有正常返态的平均回转时，计算极限概率</p>
+<p><strong>是否常返</strong>：</p>
+<ul>
+<li><p>有限马尔可夫链可以利用闭互达等价类直接判断：如果状态空间 <span class="math inline">\(I\)</span> 有限，则状态 <span class="math inline">\(i\)</span> 常返当且仅当 <span class="math inline">\(i\)</span> 的互达等价类是闭的，且这时 <span class="math inline">\(i\)</span> 一定是正常返</p></li>
+<li><p>利用互达等价类减少计算：若状态 <span class="math inline">\(i\)</span> 和 <span class="math inline">\(j\)</span> 互达，则 <span class="math inline">\(d(i)=d(j)\)</span> （周期相等），<span class="math inline">\(i\)</span> 常返/正常返当且仅当 <span class="math inline">\(j\)</span> 常返/正常返</p></li>
+<li><p>通过计算来判断：计算 <span class="math inline">\(f_{ii}=\sum\limits_{n}f_{ii}^{(n)}\)</span>, <span class="math inline">\(f_{ii}=1\)</span> 常返，<span class="math inline">\(f_{ii}&lt;1\)</span> 暂留。其中 <span class="math inline">\(f_{ij}^{(n)}\)</span> 是 <span class="math inline">\(i\)</span> 出发在第 <span class="math inline">\(n\)</span> 步首次击中 <span class="math inline">\(j\)</span> 的概率。对于非封闭的互达等价类，通过计算 <span class="math inline">\(f_{ii}\)</span> 说明暂留性。</p></li>
+<li><p>是否正常返：计算平均回转时 <span class="math inline">\(\mu_i=\sum\limits_n nf_{ii}^{(n)}\)</span>, 看是否有限, 若无限则为零常返</p></li>
+</ul>
+<p><strong>极限概率：</strong></p>
+<ul>
+<li>利用平稳分布</li>
+<li>若状态 <span class="math inline">\(j\)</span> 为暂留或零常返，则对所有 <span class="math inline">\(i\)</span>, <span class="math inline">\(\lim_\limits{n\to\infty} p_{ij}^{(n)}=0\)</span></li>
+</ul>
+<h3 id="平稳分布">平稳分布</h3>
+<p>初始分布与一步分布相同：<span class="math inline">\(\pi P=\pi\)</span>。</p>
+<p>比如：<span class="math inline">\(\pi_1=\frac 1 2 \pi_1+\frac 1 3\pi_2\)</span> , 是指从初始状态 <span class="math inline">\(\pi_1\)</span> 一步后到 <span class="math inline">\(\pi_1\)</span> 再从 <span class="math inline">\(\pi_1\)</span> 以 <span class="math inline">\(\frac 1 2\)</span> 概率回到 <span class="math inline">\(\pi_1\)</span>， 一步后到 <span class="math inline">\(\pi_2\)</span> 再从 <span class="math inline">\(\pi_2\)</span> 以 <span class="math inline">\(\frac 1 3\)</span> 概率回到 <span class="math inline">\(\pi_1\)</span>。</p>
+<p>对互达等价类（不可约状态集）的计算：</p>
+<ul>
+<li>闭的 <span class="math inline">\(\implies\)</span> 正常返 <span class="math inline">\(\implies\)</span> 平稳分布存在且唯一， <span class="math inline">\(\pi_i=\frac 1 {\mu_i}\)</span></li>
+<li>若为非周期正常返，则任何状态 <span class="math inline">\(i,j,\lim_\limits{n\to\infty}p_{ij}^{(n)}=\pi_j\)</span></li>
+</ul>
+<h3 id="吸收概率和平均吸收时间">吸收概率和平均吸收时间</h3>
+<p>用递推的思想。</p>
+<p>设 <span class="math inline">\(h_i=P(T_a&lt;\infty\mid X_0=i)\)</span> 表示从状态 <span class="math inline">\(i\)</span> 出发在有限时间内能访问状态 <span class="math inline">\(a\)</span> 的概率，其中 <span class="math inline">\(T_a\)</span> 为首次访问状态 <span class="math inline">\(a\)</span> 的时间，有 <span class="math inline">\(h_i=\sum_\limits{j}p_{ij}h_j\)</span>.</p>
+<p>设 <span class="math inline">\(a_i=E(T_a\mid X_0=i)\)</span> 表示从 <span class="math inline">\(i\)</span> 出发首次访问 <span class="math inline">\(a\)</span> 的平均步数，有 <span class="math inline">\(a_i=1+\sum_\limits{j}p_{ij}a_j\)</span>.</p>
+<h2 id="独立增量过程">2. 独立增量过程</h2>
+<h3 id="泊松过程">泊松过程</h3>
+<h4 id="定义">定义</h4>
+<ul>
+<li><p>独立增量过程</p></li>
+<li><p><span class="math inline">\(N(0)=0\)</span></p></li>
+<li><p><span class="math inline">\(N(t)-N(s)\sim \pi(\lambda(t-s))\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle P(N(t)-N(s)=k)=\frac{[\lambda (t-s)]^ke^{-\lambda(t-s)}}{k!}\)</span></p></li>
+</ul>
+<h4 id="数字特征">数字特征</h4>
+<ul>
+<li>均值 <span class="math inline">\(\mu_N(t)=E(N(t))=\lambda t\)</span></li>
+<li>方差 <span class="math inline">\(D_N(t)=\lambda t\)</span></li>
+<li>自协方差函数 <span class="math inline">\(C_N(s,t)=\lambda \min\{s,t\}\)</span></li>
+<li>自相关函数 <span class="math inline">\(R_N(s,t)=E(N(s)N(t))=\lambda \min\{s,t\}+\lambda^2 st\)</span></li>
+</ul>
+<h4 id="推广">推广</h4>
+<ul>
+<li><p>合成、分解后依旧是泊松过程</p></li>
+<li><p>非齐次：<span class="math inline">\(\lambda=\lambda(t)\)</span></p></li>
+<li><p><span class="math inline">\(\{N(t)\}\)</span> 为强度 <span class="math inline">\(\lambda\)</span> 的泊松过程 <span class="math inline">\(\iff\)</span> 时间间隔 <span class="math inline">\(T_1,T_2,\cdots\)</span> 相互独立，且服从均值为 <span class="math inline">\(1/\lambda\)</span> 的指数分布</p></li>
+</ul>
+<h3 id="布朗运动">布朗运动</h3>
+<p>特殊的正态过程</p>
+<h4 id="定义-1">定义</h4>
+<ul>
+<li><p>独立增量过程</p></li>
+<li><p><span class="math inline">\(X(0)=0\)</span></p></li>
+<li><p><span class="math inline">\(X(t)-X(s)\sim N(0,\sigma^2(t-s))\)</span></p></li>
+</ul>
+<h4 id="数字特征-1">数字特征</h4>
+<p>对标准布朗运动 <span class="math inline">\(B(t)=\{X(t)/\sigma\}\)</span></p>
+<ul>
+<li><span class="math inline">\(\mu_B(t)=0\)</span></li>
+<li><span class="math inline">\(D_B(t)=t\)</span></li>
+<li><span class="math inline">\(C_B(s,t)=\min\{s,t\}\)</span></li>
+<li><span class="math inline">\(R_B(s,t)=\min\{s,t\}\)</span></li>
+</ul>
+<h4 id="推广-1">推广</h4>
+<p><span class="math inline">\(\{B(t);t\geq 0\}\)</span> 是标准布朗运动，则：</p>
+<ul>
+<li><span class="math inline">\(\{B(t+\tau)-B(\tau)\}\)</span> 也是</li>
+<li><span class="math inline">\(\{\displaystyle \frac 1 c B(c^2t)\}\)</span> 也是</li>
+<li>$B(t)=tB( t) $ 也是 （定义 <span class="math inline">\(0\)</span> 处为 <span class="math inline">\(0\)</span>）</li>
+</ul>
+<p>布朗桥过程：</p>
+<ul>
+<li><span class="math inline">\(\{B(t);0\leq t\leq 1\mid B(1)=0\}\)</span></li>
+<li><span class="math inline">\(\mu=0\)</span></li>
+<li><span class="math inline">\(\sigma^2=t(1-t)\)</span></li>
+<li>对 <span class="math inline">\(0\leq s\leq t\leq 1, \operatorname{Cov}(B(s),B(t)\mid B(1)=0)=s(1-t)\)</span></li>
+</ul>
+<h4 id="首中时间相关">首中时间相关</h4>
+<p><span class="math inline">\(P(\max\limits_{0\leq s\leq t}B(s)\geq y)=P(T_y\leq t)=2P(B(t)\geq y)\)</span></p>
+<h2 id="平稳过程">3. 平稳过程</h2>
+<h4 id="宽平稳过程">宽平稳过程</h4>
+<ul>
+<li>均值为常数</li>
+<li>自相关函数只和时间差有关</li>
+</ul>
+<h4 id="各态历经性">各态历经性</h4>
+<p>记 <span class="math inline">\(\langle X(t)\rangle=\displaystyle\lim_\limits{T\to \infty} \frac{1}{2T}\int_{-T}^{T}X(t)dt\)</span></p>
+<ul>
+<li>均值各态历经性： <span class="math inline">\(\langle X(t)\rangle=\mu_X\)</span></li>
+<li>自相关函数各态历经性：<span class="math inline">\(\langle X(t)X(t+\tau)\rangle=E[X(t)X(t+\tau)]=R_X(\tau)\)</span></li>
+<li>（宽）各态历经过程：均值函数和自相关函数都有各态历经性</li>
+</ul>
+<p>重要推论：</p>
+<p>若 $_{} R_X() $ 存在，则 <span class="math inline">\(\{X(t)\}\)</span> 对均值具有各态历经性当且仅当 <span class="math inline">\(\lim_\limits{\tau\to \infty} R_X(\tau)=\mu_X^2\)</span></p>
+<h4 id="频率域表述">频率域表述</h4>
+<ul>
+<li><p>平均功率 <span class="math inline">\(= R_X(0)=\displaystyle \frac 1 {2\pi}\int_{-\infty}^{\infty} S_X(\omega) \operatorname{d} \omega\)</span></p></li>
+<li><p>维纳-辛钦公式：<span class="math inline">\(S_X(\omega)\)</span> 和 <span class="math inline">\(R_X(t)\)</span> 互为傅立叶变换对</p></li>
+</ul>
+<p>常用变换：<span class="math inline">\(\displaystyle e^{-a|\tau|}\leftrightarrow \frac{2a}{a^2+\omega^w}\)</span></p>
+
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+
+    </footer>
+
+  </div>
+
+  
+
+  
+
+  
+  
+  
+
+</article>
+    
     <article id="post-Life/TP-LINK电子设计竞赛" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
@@ -444,607 +1070,13 @@
 
 </article>
     
-    <article id="post-Computer-Science/Deep Learning/Image-Matching-Road" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="../../2020/08/06/Computer-Science/Deep%20Learning/Image-Matching-Road/"
-    >Image-Matching Road</a> 
-</h2>
- 
-
-    </header>
-    
-
-    
-    <div class="article-meta">
-      <a href="../../2020/08/06/Computer-Science/Deep%20Learning/Image-Matching-Road/" class="article-date">
-  <time datetime="2020-08-06T11:25:01.000Z" itemprop="datePublished">2020-08-06</time>
-</a>
-      
-      
-      
-      
-    </div>
-    
-
-    
-
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-
-      
-      <p>This is a notes for image imatching things in deep learning field.</p>
-<p>Started this in 2020’s summer and it is a part of a SRTP project regarding an AR app, with Haojie He and Lingming Zhang.</p>
-<h2 id="superpoint-superglue">SuperPoint &amp; SuperGlue</h2>
-<h3 id="overview">Overview</h3>
-<p>SuperPoint is a great feature extractor.</p>
-<p>SuperGlue is a good image matching network based on features extracted from image.</p>
-<p>It is a really nice project by Magic Leap.</p>
-<p>I did a little simplification and put the code <a href="https://github.com/longqianh/Image-Matching.git" target="_blank" rel="noopener">here</a>.</p>
-<h3 id="experience-and-thoughts">Experience and thoughts</h3>
-<p>For SuperPoint, I think it is a mature network and can be used as a helpful feature extracting tool. (And there are some wonderful tricks in the code! )</p>
-<p>For SuperGlue, I didn’t quite get the key of it, such as the Attention Network, the Encoding Method.</p>
-<p>In addition, it is quite hard to transfer models from SuperGlue. I have already transferred SuperPoint into Libtorch code and it can be used in C++. It is also easy to be transfered to ONNX or other frameworks. However, I suffered a lot to transfer SuperGlue into libtorch code or ONNX. Hence the SuperGlue can work fine on Python but has some difficulty ( for me ) to be deployed.</p>
-<p>So I think later on I will find a more simple ( hopefully, also more powerful ) matching network so that it can be easily deployed. Or maybe I can create my own networks and do some trainings.</p>
-
-      
-      <!-- reward -->
-      
-    </div>
-    
-    
-      <!-- copyright -->
-      
-    <footer class="article-footer">
-      
-      
-
-    </footer>
-
-  </div>
-
-  
-
-  
-
-  
-  
-  
-
-</article>
-    
-    <article id="post-Computer-Science/C++/CMake-Notes" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="../../2020/08/04/Computer-Science/C++/CMake-Notes/"
-    >Cmake Notes</a> 
-</h2>
- 
-
-    </header>
-    
-
-    
-    <div class="article-meta">
-      <a href="../../2020/08/04/Computer-Science/C++/CMake-Notes/" class="article-date">
-  <time datetime="2020-08-04T12:05:05.000Z" itemprop="datePublished">2020-08-04</time>
-</a>
-      
-      
-      
-      
-    </div>
-    
-
-    
-
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-
-      
-      <h2 id="notes-for-cmake-commands">Notes for cmake commands</h2>
-<p><code>add_executable(executable_name main.cpp)</code></p>
-<p>使用给定的源文件，为工程引入一个可执行文件。</p>
-<h3 id="add-libraries">add libraries</h3>
-<p>添加静态库。</p>
-<ul>
-<li>internal library</li>
-</ul>
-<figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line"><span class="keyword">add_library</span>(say-hello hello.hpp hello.cpp)</span><br><span class="line"><span class="comment"># will generate static library *.a</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">add_executable</span>(a main.cpp)</span><br><span class="line"><span class="keyword">target_link_libraries</span>(a PRIVATE say-hello)</span><br></pre></td></tr></table></figure>
-<ul>
-<li><p>external library : take <strong>opencv</strong> as an example</p>
-<figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line"><span class="keyword">set</span>(OpenCV_DIR /usr/local/Cellar/opencv/<span class="number">4.4</span>.<span class="number">0</span>/lib/cmake/opencv4) <span class="comment"># path to opencv where there is .cmake file</span></span><br><span class="line"><span class="keyword">find_package</span>(OpenCV REQUIRED)</span><br><span class="line"><span class="keyword">target_link_libraries</span>(a <span class="variable">$&#123;OpenCV_LIBS&#125;</span>)</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h3 id="add_link_libraries">add_link_libraries</h3>
-<p>添加动态链接库。</p>
-<h4 id="internal">internal</h4>
-<figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line"><span class="keyword">link_directories</span>(<span class="variable">$&#123;PROJECT_SOURCE_DIR&#125;</span>/lib) <span class="comment"># path to the dylib</span></span><br><span class="line"><span class="keyword">add_executable</span>(a main.cpp)</span><br><span class="line"><span class="keyword">target_link_libraries</span>(<span class="variable">$&#123;PROJECT_NAME&#125;</span> dylibpath)</span><br></pre></td></tr></table></figure>
-<h4 id="external">external</h4>
-<p>Take <strong>libtorch</strong> as an example.</p>
-<figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line"><span class="keyword">find_package</span>(Torch REAUIRED) <span class="comment"># find an external project, and load its settings</span></span><br><span class="line"><span class="keyword">message</span>(STATUS <span class="string">"find libtorch in: $&#123;TORCH_LIBRARIES&#125;"</span>) <span class="comment"># print message</span></span><br><span class="line"><span class="keyword">add_executable</span>(a main.cpp)</span><br><span class="line"><span class="keyword">target_link_libraries</span>(a <span class="variable">$&#123;TORCH_LIBRARIES&#125;</span>) </span><br><span class="line"><span class="keyword">set_property</span>(<span class="keyword">TARGET</span> a PROPERTY CXX_STANDARD <span class="number">14</span>) <span class="comment"># You need C++14 to compile PyTorch</span></span><br></pre></td></tr></table></figure>
-<h3 id="how-to-build">how to build</h3>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">mkdir build</span><br><span class="line">cd build</span><br><span class="line">cmake .. # CMakeLists.txt in ..</span><br><span class="line">make</span><br></pre></td></tr></table></figure>
-
-      
-      <!-- reward -->
-      
-    </div>
-    
-    
-      <!-- copyright -->
-      
-    <footer class="article-footer">
-      
-      
-
-    </footer>
-
-  </div>
-
-  
-
-  
-
-  
-  
-  
-
-</article>
-    
-    <article id="post-Projects/FSO communication system" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="../../2020/07/30/Projects/FSO%20communication%20system/"
-    >FSO Communication System</a> 
-</h2>
- 
-
-    </header>
-    
-
-    
-    <div class="article-meta">
-      <a href="../../2020/07/30/Projects/FSO%20communication%20system/" class="article-date">
-  <time datetime="2020-07-30T14:33:15.000Z" itemprop="datePublished">2020-07-30</time>
-</a>
-      
-      
-      
-      
-    </div>
-    
-
-    
-
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-
-      
-      <p>This is the project I have done in 2020 UIUC’s OPTIC summer program.</p>
-<p>Thank you all , my teammates!</p>
-<ul>
-<li>Group Number : 3</li>
-<li>Group Leader : Longqian Huang</li>
-<li>Group members : Liang Sun, Yuxuan Liu, Junchi Feng, Yuhao Ma, Jinquan Shi, Zhuo Cheng, Yiru Pan, Dongao Cui, Muxi Zhao</li>
-</ul>
-<p>By the way, I think I did a great job in the presentation. The recording of our presentation is here. The powerpoint (Keynote) can be accessed <a href="https://mega.nz/folder/NcYTxASI#RFHN-JpP7UUpRwfXU4NIxw" target="_blank" rel="noopener">here</a>.</p>
-<p>Or you can get I quick view of the presentation below: (without the video)</p>
-
-
-	<div class="row">
-    <embed src="/pdf_files/FSOCS.pdf" width="100%" height="550" type="application/pdf">
-	</div>
-
-
-
-<p>Next is our output article :)</p>
-<h1 id="free-space-optical-communication-system">Free Space Optical Communication System</h1>
-<h2 id="what-is-fso-communication-system">1. What is FSO Communication System</h2>
-<p>We read the review and searched the Wikipedia to get a overview of FSO Communication System.</p>
-<p>FSO Communication is an idea of wireless communication using light based on the theory of light propagation in free space.</p>
-<p>Devices using technology of FSO communication make up a system. It is a outdoor system of <em>wireless optical communication system</em> (WOCS) and has some branches. Below is a classification tree of WOCS [1] :</p>
-<figure>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djubq55j30oo0ewq49.jpg" alt="WOCS classifications" /><figcaption aria-hidden="true">WOCS classifications</figcaption>
-</figure>
-<p>From that we know that we have choices of terrestrial links and space links. We considered both and think that terrestrial links is practical but space links is as well interesting and maybe a future-hot point.</p>
-<p>Below is a diagram of FSO communication link [1] (which maybe what we will construct in the next few days):</p>
-<figure>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djwkyeuj30nu0eimyd.jpg" alt="System composition" /><figcaption aria-hidden="true">System composition</figcaption>
-</figure>
-<h2 id="system-design">2. System Design</h2>
-<h3 id="type-of-the-system">2.1 Type of the system</h3>
-<p>We will construct <em>Ground-to-Satellite Link</em> as the type of the FSO communication system. Below is a concept figure of the system.</p>
-<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh6v9igawcj30of0dhabh.jpg" alt="qeyssat-satellite-879x485"  /></p>
-<h3 id="wavelength-to-use">2.2 Wavelength to use</h3>
-<p>The main consideration is attenuation after propagating long distance. From [2] we know to make attenuation less, infrared band is a good choice. Then we have two choices:</p>
-<ul>
-<li>850 nm</li>
-<li>1550 nm</li>
-</ul>
-<p>We digged further and found that 1550 nm lasers are considered "eye safe" at much higher power levels than traditionally used 850nm lasers.</p>
-<p>So our choice for wavelength is 1550 nm. And the benefits are as follows [1] :</p>
-<ul>
-<li>reduce background noise and Rayleigh scattering</li>
-<li>high transmitter power</li>
-<li>Eye-save wavelength ( the maximum permissible exposure for eye is much higher at 1550 nm wavelength )</li>
-</ul>
-<h3 id="laser-type">2.3 Laser Type</h3>
-<h4 id="led-or-cw">2.3.1 LED or CW</h4>
-<p>To be clear:</p>
-<ul>
-<li><p>A light-emitting diode (<em>LED</em>) is a semiconductor light source that emits light when current flows through it.</p></li>
-<li><p>A continuous wave (CW) laser is a laser that emits a continuous laser beam with a controlled heat output, as beam duration and intensity.</p></li>
-</ul>
-<p>For ground-to-satellite links, we don’t think a light of LED can surrive after passing the atmosphere. So we definitely choose CW laser.</p>
-<h4 id="comparasion">2.3.2 Comparasion</h4>
-<p>We have four choices and they all have own advantages and disadvantages:</p>
-<h5 id="gas-laser">Gas laser</h5>
-<figure>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk4mvtij30xc0iugos.jpg" alt="Carbon dioxide laser - Wikipedia" /><figcaption aria-hidden="true">Carbon dioxide laser - Wikipedia</figcaption>
-</figure>
-<ul>
-<li>Carbon dioxide laser are stable and less sensitive to atomospheric effects</li>
-<li>Large volume and unreliability</li>
-</ul>
-<h5 id="solid-state-laser">Solid-state laser</h5>
-<ul>
-<li>Stable and narrow spectral linewidth</li>
-<li>Very high peak power</li>
-</ul>
-<h5 id="semiconductor-laser">Semiconductor laser</h5>
-<ul>
-<li>Compact in size, light weight, easy to operate</li>
-<li>Quite low output power hence <strong>require additional amplifier</strong> for long distance communication</li>
-<li>Diodes require great care</li>
-</ul>
-<h5 id="fiber-laser-4">Fiber laser [4]</h5>
-<figure>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk51ei3j30zk0k075c.jpg" alt="Fiber laser cutting machine FOL-3015AJ" /><figcaption aria-hidden="true">Fiber laser cutting machine FOL-3015AJ</figcaption>
-</figure>
-<ul>
-<li>The laser light is both generated and delivered by an inherently flexible medium, which allows easier delivery to the focusing location and target.</li>
-<li>Fiber lasers can have active regions several kilometers long, and so can provide very high optical gain.</li>
-<li>Fiber lasers are compact compared to solid-state or gas lasers of comparable power ( because the fiber can be bent and coiled)</li>
-<li>The additional power and better beam quality provide cleaner cut edges and faster cutting speeds</li>
-</ul>
-<h4 id="choice-of-laser-device-type">2.3.3 Choice of laser device type</h4>
-<p>It seems that fiber laser is great in comparison with others. We first considered solid state laser but fiber laser seems to be better and it has many applications in telecommunications. So we choose <strong>fiber laser</strong> as our type of laser device.</p>
-<h3 id="modulator">2.4 Modulator</h3>
-<p>We have two consideration of the modulator, to be clear:</p>
-<ul>
-<li><p>Electro-optic modulator [6]</p>
-<p>An electro-optic modulator (EOM) is an optical device in which a signal-controlled element exhibiting an electro-optic effect is used to modulate a beam of light.</p></li>
-<li><p>Acoustic-optic modulator [5]</p>
-<p>An acousto-optic modulator (AOM), uses the acousto-optic effect to and shift the frequency of light using sound waves.</p></li>
-</ul>
-<p>We found little applications in telecommunications about acoustic-optic modulator and it seems electro-optic modulator has a more mature technology. We found that <span class="math inline">\(LiNbO_3\)</span> has nice performance in the application of long distance communication and there are a lot of type we could choose as provided in [7]. So we choose electro-optic modulator for our ground-to-satellite FOS communication system goal.</p>
-<p>To be more specific, we will use <em><span class="math inline">\(LiNbO_3\)</span> Mach-Zehnder Modulator</em> for its good performance.</p>
-<h2 id="simulation">3. Simulation</h2>
-<h3 id="demo-fso-communication-system">3.1 Demo: FSO communication system</h3>
-<p>We considered the composition of the system and drew a structure graph as below:</p>
-<figure>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djy58q7j31t00u0q79.jpg" alt="FSOCS" /><figcaption aria-hidden="true">FSOCS</figcaption>
-</figure>
-<p>We put our emphasis on the <em>Transmitter</em> part and the following sections are our simulation work.</p>
-<h4 id="layout">3.1.1 Layout</h4>
-<p>Below is the layout of our communication system. We used OptiSystem software to do the simulation.</p>
-<p>The transmitter part is in the left and we will dig into it later.</p>
-<p>In the middle is the FSO Channel. Since Ground-to-Satellite system has at least 90 km (see <em>regions of atmosphere</em> diagram below) , we set the range of the FSO channel 100 km. On the left and right of the FSO channel are two opticla amplifiers, from simulation result we can found their role in the system.</p>
-<figure>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk5x5ydj318t0rswih.jpg" alt="Regions of atmosphere" /><figcaption aria-hidden="true">Regions of atmosphere</figcaption>
-</figure>
-<p>On the right is the Receiver part. It consists of PIN Photodiode (which transfer optic wave into electric signal), Law Pass Bessel Filter (which is used to filter out noise) and Data Recovery Module (which do the demodulation and get the recovered signal).</p>
-<p>We use BER Analyter to analyse the bit error rate of the system.</p>
-<figure>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djvig9aj31720cb7aq.jpg" alt="FSO demo layout" /><figcaption aria-hidden="true">FSO demo layout</figcaption>
-</figure>
-<h4 id="simulation-result">3.1.2 Simulation result</h4>
-<figure>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djzynsxj318n0md140.jpg" alt="simulation result" /><figcaption aria-hidden="true">simulation result</figcaption>
-</figure>
-<p>Above is our simulation result from which we can found that loss is huge. The reason is FSO channel is too long.</p>
-<p>Because of the time and technology limitation, we didn’t get a good simulation result. Below is something we considered:</p>
-<ul>
-<li><p>how to overcome the problem of very big loss</p></li>
-<li><p>how to choose the laser power</p></li>
-<li><p>how to choose photodetector</p>
-<ul>
-<li>photodiode</li>
-<li>optical power detector</li>
-<li>optical phase detector</li>
-</ul></li>
-<li><p>how to choose filters</p>
-<ul>
-<li>low pass
-<ul>
-<li>Gaussian filter</li>
-<li>Bessel filter</li>
-<li>etc.</li>
-</ul></li>
-<li>height pass</li>
-<li>band pass</li>
-</ul></li>
-<li><p>how to set parameters of optical amplifier</p>
-<ul>
-<li>gain</li>
-<li>noise figure</li>
-</ul></li>
-</ul>
-<h3 id="optical-transmitter">3.2 Optical transmitter</h3>
-<p>From COSMOL, we get the some insight of the modulator. But it is not that clear.</p>
-<p>We use OptiSystem to construct our <em>optical transmitter</em> and further more, we digged a little deeper and build a demo of the whole <em>FSO communication system.</em></p>
-<p>Below are the layout of our system.</p>
-<figure>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk0rwezj30sm0cladg.jpg" alt="FSO-transmitter-layout" /><figcaption aria-hidden="true">FSO-transmitter-layout</figcaption>
-</figure>
-<p>From the figure we can see the structure of the transmitter clearly.</p>
-<ul>
-<li><p>We use simple <em>Bit Sequence Generator</em> to generate electric signal and use <em>NRZ Pulse Generator</em> to generate electric pulse.</p></li>
-<li><p>We use <em>Fiber Laser</em> as our laser device. As there isn’t Fiber Laser device in the software, we put a CW Laser and add a description. CW Laser can generate 1550 nm optical wave.</p></li>
-<li><p>We use <span class="math inline">\(LiNbO_3\)</span> Mach-Zehnder Modulator in our transmitter. The reasons have been stated in section 2.</p></li>
-<li><p>Put the optic signal and electric pulse into the MZ Modulator, we can get the modulated optical signal.</p></li>
-</ul>
-<p>Above are the details of our transmitter, we then use Optical Power Meter and Optical Spectrum Analyzer to do the simulation.</p>
-<p>Results are as follows :</p>
-<figure>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk1s5hnj312r0jtwln.jpg" alt="FSO-transmitter-simulation-result" /><figcaption aria-hidden="true">FSO-transmitter-simulation-result</figcaption>
-</figure>
-<p>We can see from the figure that the transmitter has <span class="math inline">\(2.485\)</span> dBm los and the output power is <span class="math inline">\(56.432\times 10^{-3} W\)</span>. We need optical amplifiers to make it larger.</p>
-<h3 id="electro-optic-modulation-process">3.3 Electro-optic Modulation Process</h3>
-<p>In order to give a more specific model, we use COMSOL to simulate the <em>Electro-optic modulation process</em>. Below are what we have done.</p>
-<p>We choose the <strong>wave optics module</strong>.</p>
-<p>Then we perform the 2D geometrical modeling since the system is symmetric.</p>
-<p>We can find that the structure has core and cladding:</p>
-<figure>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk3n0tdj30xo0hnaab.jpg" alt="structure of core and cladding" /><figcaption aria-hidden="true">structure of core and cladding</figcaption>
-</figure>
-<p>Next we set the boundary conditions so that the COSMOL can do the calculation. We set the applied voltage boundary of the light or rather the boundary of the wave:</p>
-<figure>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djz4eraj309n09pmx5.jpg" alt="step1" /><figcaption aria-hidden="true">step1</figcaption>
-</figure>
-<p>Before calculation, we set some configurations:</p>
-<figure>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk2mm1hj309h05pa9y.jpg" alt="step2" /><figcaption aria-hidden="true">step2</figcaption>
-</figure>
-<p>(To be clear: “步骤 <span class="math inline">\(k\)</span> ” &lt;—&gt; “ Step <span class="math inline">\(k\)</span> ” , “求解器配置” &lt;—&gt; “Solver Configuration” and “作业配置” &lt;—&gt; “ Work Configuration” )</p>
-<p>Finally, we get the simulation result. In the figure it is the distribution of the electric field in the waveguide. We also get the loss, transmittance and reflectance of the system.</p>
-<p>(The first line of the figure “表面：电场模” &lt;—&gt; “Surface: Electric field mode” )</p>
-<figure>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk362bij30xd0h9wer.jpg" alt="EF distribution" /><figcaption aria-hidden="true">EF distribution</figcaption>
-</figure>
-<figure>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk16evoj30xe0grq39.jpg" alt="Property inside" /><figcaption aria-hidden="true">Property inside</figcaption>
-</figure>
-<p>However, we cannot get the change of the phase. It seems that the software has some limitation. And we didn’t consider the electric signals. These are something that can be improved.</p>
-<h2 id="reference">Reference</h2>
-<p>[1] Kaushal H, Jain V K, Kar S. Free space optical communication[M]. Gurgaon, Haryana: Springer, 2017.</p>
-<p>[2] 高瞻, 丁铁骑, 吕辉. 光无线通信系统通信波长的选择[J]. 通讯世界, 2002, 8(12): 70-71.</p>
-<p>[3] https://seminex.com/1550nm-lasers.aspx/</p>
-<p>[4] https://www.wikiwand.com/en/Fiber_laser</p>
-<p>[5] https://www.wikiwand.com/en/Acousto-optic_modulator</p>
-<p>[6] https://www.wikiwand.com/en/Electro-optic_modulator</p>
-<p>[7] https://www.newport.com/medias/sys_master/images/images/h31/hfb/8797089398814/Electro-Optic-Modulator-Brochure.pdf</p>
-
-      
-      <!-- reward -->
-      
-    </div>
-    
-    
-      <!-- copyright -->
-      
-    <footer class="article-footer">
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Projects/" rel="tag">Projects</a></li></ul>
-
-
-    </footer>
-
-  </div>
-
-  
-
-  
-
-  
-  
-  
-
-</article>
-    
-    <article id="post-Computer-Science/艰难配环境" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="../../2020/07/24/Computer-Science/%E8%89%B0%E9%9A%BE%E9%85%8D%E7%8E%AF%E5%A2%83/"
-    >艰难配环境</a> 
-</h2>
- 
-
-    </header>
-    
-
-    
-    <div class="article-meta">
-      <a href="../../2020/07/24/Computer-Science/%E8%89%B0%E9%9A%BE%E9%85%8D%E7%8E%AF%E5%A2%83/" class="article-date">
-  <time datetime="2020-07-24T06:46:47.000Z" itemprop="datePublished">2020-07-24</time>
-</a>
-      
-      
-      
-      
-    </div>
-    
-
-    
-
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-
-      
-      <h2 id="sublime-text-配-python3.7-macos">Sublime Text 配 Python3.7 （macOS）</h2>
-<p>Browse Packages —&gt; User —&gt;新建 Python3.7.sublime-build</p>
-<p>写入：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"cmd"</span>: [<span class="string">"/usr/local/bin/python3"</span>, <span class="string">"-u"</span>, <span class="string">"<span class="variable">$file</span>"</span>],</span><br><span class="line">    <span class="string">"file_regex"</span>: <span class="string">"^[ ]*File \"(...*?)\", line ([0-9]*)"</span>,</span><br><span class="line">    <span class="string">"selector"</span>: <span class="string">"source.python"</span>,</span><br><span class="line">    <span class="string">"env"</span>:&#123;  <span class="string">"PYTHONPATH"</span>:<span class="string">"/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages:/Users/huanglongqian/anaconda3/lib/python3.7/site-packages"</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li><p>cmd的确定：相当于在terminal使用python3运行当前py文件，终端中使输入<code>which python3.7</code> 即可获得路径</p></li>
-<li><p>env的重要：添加环境变量，一番摸索后发现这个就相当于</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line">sys.append(<span class="string">'python_path'</span>)</span><br></pre></td></tr></table></figure>
-<p>往env中添加好后，就不需要每次都这样写了！</p></li>
-<li><p>我添加的这个，主要是<code>import cv2</code> 一直报错，但是终端中import却没问题，于是心生一计：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">python3</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> cv2</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>cv2.__file__</span><br></pre></td></tr></table></figure>
-<p>把得到的路径放到环境变量里就好了。</p></li>
-<li><p>发现 <code>import slidingwindow</code>也出了问题，一看原来放到了python3.8的里面，于是故伎重演，PYTHONPATH再加一个，注意中间是用冒号隔开</p></li>
-<li><p>太混乱了，<code>import tensorflow</code>居然也出了问题，找了一下目前改成annoconda的目录里面的tensorflow，pip3 install的不知道放到了哪里去了orz</p></li>
-</ul>
-
-      
-      <!-- reward -->
-      
-    </div>
-    
-    
-      <!-- copyright -->
-      
-    <footer class="article-footer">
-      
-      
-
-    </footer>
-
-  </div>
-
-  
-
-  
-
-  
-  
-  
-
-</article>
-    
-    <article id="post-Projects/Optical system design" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="../../2020/07/07/Projects/Optical%20system%20design/"
-    >Optical System Design</a> 
-</h2>
- 
-
-    </header>
-    
-
-    
-    <div class="article-meta">
-      <a href="../../2020/07/07/Projects/Optical%20system%20design/" class="article-date">
-  <time datetime="2020-07-07T04:15:21.000Z" itemprop="datePublished">2020-07-07</time>
-</a>
-      
-      
-      
-      
-    </div>
-    
-
-    
-
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-
-      
-      <h1 id="光学系统设计-project">光学系统设计 Project</h1>
-<h2 id="光路计算部分">光路计算部分</h2>
-<p>这是光学系统设计的光路计算 Project，具体的程序和发行版我已经放到了<a href="https://github.com/longqianh/simple-ray-tracing.git" target="_blank" rel="noopener">GitHub上</a>。</p>
-<p>这是一个非专业协作的非专业项目，一开始头文件和cpp没有分开，GitHub提交也比较混乱，文件、代码、GitHub 更加专业是我努力学习完善的方向。</p>
-<p>但是这是我较为满意的一次项目，至少我不认为这是学术垃圾。光线的计算程序写了三、四十个小时，在类的设计上花了不少功夫，我认为程序具有可拓展性、易理解性，比如要进行光路追迹，只需要声明光线，便可利用<code>ray_tracing(ray,ku,kw)</code> 函数得到输出光线。</p>
-<p>真的感谢吴恩宗做出一个无比美丽和强大的GUI，而且提供了非常细致的帮助文档。</p>
-<p>真的感谢孙昊天在我debug到绝望的时候陪着我一起de，让我看到了希望的光。</p>
-<h2 id="光学系统设计部分">光学系统设计部分</h2>
-<p>应该说，这一部分全靠两位队友带。</p>
-<p>我是直接奔着3个透镜去做的，因为都在紫金港，我可以直接去队友们的寝室里。中间遇到了很多困难，都是队友们在我旁边指导着克服的。因为同时有四个项目进行，我做完以后就算做完了，不再继续优化。</p>
-<p>吴恩宗设计了一个四透镜的，可以说，优化到了极致。孙昊天三四五都做了，而且都做得很棒，三透镜做到了F2.8，所以最后就用他的三透镜系统啦！</p>
-<p>项目报告就放到第三部分了。By the way，最后的答辩孙昊天非常认真地准备，我看着时间真的把握地很好，PPT也很妙，赞啊啊!</p>
-<h2 id="项目报告">项目报告</h2>
-
-
-	<div class="row">
-    <embed src="/pdf_files/光学系统设计-项目报告.pdf" width="100%" height="550" type="application/pdf">
-	</div>
-
-
-
-
-      
-      <!-- reward -->
-      
-    </div>
-    
-    
-      <!-- copyright -->
-      
-    <footer class="article-footer">
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Projects/" rel="tag">Projects</a></li></ul>
-
-
-    </footer>
-
-  </div>
-
-  
-
-  
-
-  
-  
-  
-
-</article>
-    
   </article>
   
 
   
   <nav class="page-nav">
     
-    <a class="extend prev" rel="prev" href="../2/">上一页</a><a class="page-number" href="../../">1</a><a class="page-number" href="../2/">2</a><span class="page-number current">3</span><a class="page-number" href="../4/">4</a><a class="page-number" href="../5/">5</a><a class="page-number" href="../6/">6</a><a class="extend next" rel="next" href="../4/">下一页</a>
+    <a class="extend prev" rel="prev" href="../2/">上一页</a><a class="page-number" href="../../">1</a><a class="page-number" href="../2/">2</a><span class="page-number current">3</span><a class="page-number" href="../4/">4</a><a class="page-number" href="../5/">5</a><span class="space">&hellip;</span><a class="page-number" href="../7/">7</a><a class="extend next" rel="next" href="../4/">下一页</a>
   </nav>
   
 </section>
@@ -1135,6 +1167,10 @@
     
     <li class="nav-item">
       <a class="nav-item-link" href="../../Notes">Notes</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="../../About">About</a>
     </li>
     
     <li class="nav-item">
