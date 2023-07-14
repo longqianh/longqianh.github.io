@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+
+
+<html lang="en,zh-CN,default">
+  
+
+    <head>
+      <meta charset="utf-8" />
+        
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>物理光学笔记 |  Peter&#39;s Blog</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/images/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    <!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><link rel="alternate" href="/rss2.xml" title="Peter's Blog" type="application/atom+xml">
+</head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-Optics/Physical-Optics"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  物理光学笔记
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/Optics/Physical-Optics/" class="article-date">
+  <time datetime="2020-09-16T01:42:00.000Z" itemprop="datePublished">2020-09-16</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Notes/">Notes</a> / <a class="article-category-link" href="/categories/Notes/Optics/">Optics</a>
+  </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">2.3k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">9 min</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="物理光学笔记"><a href="#物理光学笔记" class="headerlink" title="物理光学笔记"></a>物理光学笔记</h1><p>记录一下自己在学习物理光学过程中的思考和总结。</p>
+<h2 id="光的电磁理论基础"><a href="#光的电磁理论基础" class="headerlink" title="光的电磁理论基础"></a>光的电磁理论基础</h2><h3 id="光波的傅立叶分析"><a href="#光波的傅立叶分析" class="headerlink" title="光波的傅立叶分析"></a>光波的傅立叶分析</h3><p>实际光波是一个<em>波列</em>。波的单色性和波列长度有关。</p>
+<p>有效空间频率范围 $\Delta k&#x3D;\pi&#x2F;L$</p>
+<p>有效波长范围 $\Delta \lambda&#x3D;\lambda^2&#x2F;2L$</p>
+<p>时间频率范围 $\Delta \nu&#x3D;\Delta \left(c&#x2F;\lambda\right)&#x3D;c&#x2F;2L$</p>
+<span id="more"></span>
+
+
+
+<h3 id="菲涅尔公式"><a href="#菲涅尔公式" class="headerlink" title="菲涅尔公式"></a>菲涅尔公式</h3><ul>
+<li><p>$r_p,r_s,t_p,t_s$</p>
+</li>
+<li><p>布儒斯特角：全偏振临界角，$r_p&#x3D;0,\theta_1+\theta_2&#x3D;90^\circ$</p>
+</li>
+</ul>
+<h3 id="全反射探究"><a href="#全反射探究" class="headerlink" title="全反射探究"></a>全反射探究</h3><ul>
+<li>存在倏逝波</li>
+<li>有相位变化 $\delta&#x3D;\delta_s-\delta_p$ </li>
+<li>无能量损失</li>
+</ul>
+<h3 id="偏振"><a href="#偏振" class="headerlink" title="偏振"></a>偏振</h3><p>关键是 $p$ 光和 $s$ 光的相位差（可看作振动方向垂直的光波的叠加）</p>
+<ul>
+<li>线偏振：$\delta&#x3D;0$ 或 $\pi$</li>
+<li>$\sin\delta&lt;0$ 右旋偏振，$\sin\delta&gt;0$ 左旋偏振</li>
+<li>偏振椭圆的相关量</li>
+</ul>
+<h2 id="光的干涉"><a href="#光的干涉" class="headerlink" title="光的干涉"></a>光的干涉</h2><p>光的干涉，原理上是相干光波的叠加，内容上是求干涉场的分布。</p>
+<p>光的干涉、衍射和偏振，构成了波动光学的核心内容，干涉场和衍射场讨论的是标量场的光强分布。</p>
+<p>一般地说，干涉场是分立光波的叠加，衍射场是连续元光波的叠加，此时加法变成了积分；偏振场因其振动特点表示出的矢量光波属性，更加注重加法本身，矢量加法在物理上表示不同振动状态合成后振动状态的变化。</p>
+<h2 id="光的衍射"><a href="#光的衍射" class="headerlink" title="光的衍射"></a>光的衍射</h2><h2 id="傅立叶光学"><a href="#傅立叶光学" class="headerlink" title="傅立叶光学"></a>傅立叶光学</h2><h3 id="菲涅尔衍射"><a href="#菲涅尔衍射" class="headerlink" title="菲涅尔衍射"></a>菲涅尔衍射</h3><p>菲涅尔傍轴近似下：<br>$$<br>\begin{align}<br>\widetilde E(u,v)&amp;&#x3D;\widetilde E(x,y)&#x3D;\frac{1}{i\lambda z_1}\exp\left[ik\left(z_1+\frac{x^2+y^2}{2z_1}\right)\right]\iint_{-\infty}^\infty \widetilde E(x_1,y_1)\exp\left[\frac{ik}{2z_1}(x_1^2+y_1^2)\right]\exp\left[-ik(\frac{x}{z_1}x_1+\frac{y}{z_1}y_1)\right]\operatorname{dx_1dy_1}\<br>&amp;&#x3D;\widetilde A\cdot\mathcal{F}\left(\widetilde E(x_1,y_1)\cdot \exp\left[\frac{ik}{2z_1}(x_1^2+y_1^2)\right]\right)<br>\end{align}<br>$$<br>注意前面含 $(x,y)$ 的相位因子在光强不显现，但可以利用干涉证明其存在。</p>
+<p>突然理解了3dgray的代码：<strong>傅立叶变换之后是uv（频率域），但实际是xy，只是有个线性对应关系，因此要换算回去：乘 lambda z</strong></p>
+<h3 id="夫琅和费衍射"><a href="#夫琅和费衍射" class="headerlink" title="夫琅和费衍射"></a>夫琅和费衍射</h3><p>在夫琅和费远场近似下：<br>$$<br>\begin{align}<br>\widetilde E(u,v)&amp;&#x3D;\widetilde E(x,y)&#x3D;\frac{1}{i\lambda z_1}\exp\left[ik\left(z_1+\frac{x^2+y^2}{2z_1}\right)\right]\iint_{-\infty}^\infty \widetilde E(x_1,y_1)\exp\left[-ik(\frac{x}{z_1}x_1+\frac{y}{z_1}y_1)\right]\operatorname{dx_1dy_1}\<br>&amp;&#x3D;\widetilde A\cdot\iint_{-\infty}^\infty \widetilde E(x_1,y_1)\exp\left[-i2\pi(ux_1+vy_1)\right]\operatorname{dx_1dy_1}\<br>&amp;&#x3D;\widetilde A\cdot\mathcal{F}\left[\widetilde E(x_1,y_1)\right]<br>\end{align}<br>$$<br>其中，$(u,v)&#x3D;\displaystyle (\frac{x}{\lambda z_1},\frac{y}{\lambda z_1})&#x3D;(\frac{\cos\alpha}{\lambda},\frac{\cos\beta}{\lambda})$ 为空间频率 $1&#x2F;\lambda$ 在 $x,y$ 方向的分解。</p>
+<p>一张复杂的图片有许多不同的空间频率的单频信息组成，当单色波正入射在待分析的图像上时，通过夫琅和费衍射，一定空间频率的单频信息就被向特定方向衍射的平面波输送出来，所有衍射波最终会聚在焦面上的不同位置而形象地展示出原图片的频谱。这一过程的“运算速度”显然远高于计算机，一照就出来了。</p>
+<p>理想的夫琅和费衍射系统是一个傅立叶频谱分析器。</p>
+<p><strong>太近效果不好的原因可能是远场近似不再适用</strong></p>
+<h3 id="透镜"><a href="#透镜" class="headerlink" title="透镜"></a>透镜</h3><p>进入透镜的发散球面波，出去时变成了会聚的：<br>$$<br>\widetilde E(x_1,y_1)&#x3D;A\exp(ikd_0)\exp\left[\frac{ik}{2d_0}(x_1^2+y_1^2)\right]\to \widetilde E’(x_1,y_1)&#x3D;A\exp(-ikd)\exp\left[-\frac{ik}{2d}(x_1^2+y_1^2)\right]<br>$$</p>
+<p>透镜的透射系数：<br>$$<br>\begin{align}<br>\widetilde t(x_1,y_1)&amp;&#x3D;\frac{\widetilde E}{\widetilde E’}&#x3D;\exp\left[-ik\frac{(x_1^2+y_1^2)}{2}\left(\frac 1 d+\frac 1 {d_0}\right)\right]\<br>&amp;&#x3D;\exp\left(-ik\frac{x_1^2+y_1^2}{2f}\right)</p>
+<p>\end{align}<br>$$<br>其中 $f$ 满足：$\displaystyle\frac{1}{d_0}+\frac{1}{d}&#x3D;\frac{1}{f}$ .</p>
+<h3 id="深入理解透镜的傅立叶变换性质"><a href="#深入理解透镜的傅立叶变换性质" class="headerlink" title="深入理解透镜的傅立叶变换性质"></a>深入理解透镜的傅立叶变换性质</h3><p>光经过有限大物体后的传播过程就是衍射的过程，根据传播距离可以用夫琅和费衍射或者菲涅尔衍射计算传播到像面后的光场分布。可以说，衍射无处不在，传播就有衍射。</p>
+<p>假设有这么一个夫琅和费衍射系统：光源—狭缝（衍射平面）-透镜–成像平面</p>
+<p>设光透过衍射平面后的场分布为 $\widetilde E(x_1,y_1)$, 透过透镜后的场分布为：<br>$$<br>\widetilde E’(x_1,y_1)&#x3D;\widetilde E(x_1,y_1)\cdot \widetilde t(x_1,y_1)<br>$$<br>然后衍射到透镜后焦面，由于是有限距离，应该用菲涅尔衍射去计算：<br>$$<br>\begin{align}<br>\widetilde E(u,v)&amp;&#x3D;\widetilde E(x,y)&#x3D;\frac{e^{ikf}}{i\lambda f}e^{ik\frac{x^2+y^2}{2f}}\mathcal{F}\left[\widetilde E’(x_1,y_1)\exp\left(ik\frac{x_1^2+y_1^2}{2f}\right)\right]\<br>&amp;&#x3D;\widetilde A\cdot\mathcal{F}\left[\widetilde E(x_1,y_1)\right]\mid_{u&#x3D;\frac{x}{\lambda f},v&#x3D;\frac{y}{\lambda f}}</p>
+<p>\end{align}<br>$$<br>注意透镜的透射系数刚刚好消掉了菲涅尔衍射的那个系数，使最终结果成为了一个干净的傅立叶变换。</p>
+<p>因此整个夫琅和费衍射系统本来是夫琅和费衍射，做个傅立叶变换就好了，但是要在很远处才能观察。为了在近处观察加了透镜，要改为菲涅尔衍射去计算，结果兜兜转转算完得到和夫琅和费衍射一样的形式。</p>
+<p>另一方面可以看到，从衍射平面到透镜再到透镜后焦面，整合后等价于做一个傅立叶变换，这就是透镜的傅立叶变换性质：透镜前的场知道了，加个透镜则后焦面的场就是做一个傅立叶变换。这是透镜的透射系数和菲涅尔衍射美妙的结合。</p>
+<h3 id="与透镜有一定距离"><a href="#与透镜有一定距离" class="headerlink" title="与透镜有一定距离"></a>与透镜有一定距离</h3><p>算了一个难忘的下午…</p>
+<a target="_blank" rel="noopener" href="https://tva1.sinaimg.cn/large/008eGmZEly1gmxse8szhnj31to0rb1kx.jpg" title="image-20210123180601121" class="gallery-item"><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gmxse8szhnj31to0rb1kx.jpg" alt="image-20210123180601121" style="zoom: 33%;" /></a>
+
+<p>将菲涅尔衍射积分写成系统函数的形式：<br>$$<br>U \left( x _ { 0 } , y _ { 0 } \right) &#x3D; \iint _ { S } h \left( x _ { 0 } - x _ { 1 } , y _ { 0 } - y _ { 1 } \right) U \left( x _ { 1 } , y _ { 1 } \right) d x _ { 1 } d y _ { 1 }<br>$$<br>其中：<br>$$<br>h \left( x _ { 0 } - x _ { 1 } , y _ { 0 } - y _ { 1 } \right) \cong \frac {  e ^ { - j k z } } { j \lambda z } e ^ { - \frac { j k } { 2 z } \left[ \left( x _ { 1 } - x _ { 0 } \right) ^ { 2 } + \left( y _ { 1 } - y _ { 0 } \right) ^ { 2 } \right] }<br>$$<br>因此菲涅尔衍射中在距离 $z$ 的自由传播空间可以看作一个冲激响应为<br>$$<br>h \left( x _ { 0 } , y _ { 0 } \right) &#x3D; \frac {  e ^ { - j k z } } { j \lambda z } e ^ { - \frac { j k } { 2 z } \left[ x _ { 0 } ^ { 2 } + y _ { 0 } ^ { 2 } \right] }<br>$$<br>的系统，其系统函数为<br>$$<br>\begin{aligned} H \left( u , v \right) &amp; &#x3D; F _ { 2 D } \left{ h \left( x _ { 0 } , y _ { 0 } \right) \right} \ &amp; &#x3D;  \frac { e ^ { - j k z } } { j \lambda z } F _ { x } \left{ e ^ { - \frac { j k } { 2 z } x _ { 0 } ^ { 2 } } \right} F _ { y } \left{ e ^ { - \frac { j k } { 2 z } y _ { 0 } ^ { 2 } } \right} \end{aligned}<br>$$<br>利用<br>$$<br>F \left{ e ^ { j \alpha t ^ { 2 } } \right} &#x3D; \sqrt { \frac { \pi } { \alpha } } e ^ { j \frac { \pi } { 4 } } e ^ { - j \frac { ( 2 \pi f ) ^ { 2 } } { 4 \alpha } }<br>$$<br>带入可得：<br>$$<br>\begin{aligned} H \left( u, v \right) &#x3D; e ^ { - j k z } e ^ { j \pi \lambda z \left( u ^ { 2 } + v ^ { 2 } \right) } \end{aligned}<br>$$<br> 其中 $u\cong x&#x2F;\lambda f,v\cong y&#x2F;\lambda f. $</p>
+<h2 id="偏振光"><a href="#偏振光" class="headerlink" title="偏振光"></a>偏振光</h2><h3 id="偏振光的测定"><a href="#偏振光的测定" class="headerlink" title="偏振光的测定"></a>偏振光的测定</h3><ol>
+<li>入射光：</li>
+</ol>
+<ul>
+<li>a 线偏振光</li>
+<li>b 自然光、圆偏振光、部分圆偏振光</li>
+<li>c 椭圆偏振光、部分椭圆偏振光、部分线偏振光</li>
+</ul>
+<ol start="2">
+<li><p>放入线偏振片（检偏器），转一圈</p>
+<ul>
+<li>存在两个消光位置：a</li>
+<li>光强无变化：b</li>
+<li>光强有亮暗变化但是不能消光：c</li>
+</ul>
+</li>
+<li><p>放入 $\lambda&#x2F;4$ 波片，旋转使快轴与光强最大处（偏振椭圆长轴）重合，再放一个检偏器，转动观察</p>
+<p>（1）对b：</p>
+<ul>
+<li>光强无变化：自然光</li>
+<li>两次消光：圆偏振</li>
+<li>不能完全消光：部分圆偏振</li>
+</ul>
+<p>（2）对c：</p>
+<ul>
+<li>两次消光：椭圆偏振 （部分线偏振光不能完全消光）</li>
+<li>将 $\lambda&#x2F;4$ 波片转 $45^\circ$，检偏器转动观察：<ul>
+<li>光强无变化：部分线偏振光（因为过了波片变成了部分圆偏振）</li>
+<li>光强有变化：部分椭圆偏振</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h1 id="复习"><a href="#复习" class="headerlink" title="复习"></a>复习</h1><ul>
+<li><p>电磁理论</p>
+<ul>
+<li><p>菲涅尔公式</p>
+</li>
+<li><p>全反射、布鲁斯特角、倏逝波</p>
+</li>
+</ul>
+</li>
+<li><p>干涉</p>
+<ul>
+<li>杨氏双缝干涉</li>
+<li>等倾干涉、等厚干涉</li>
+<li>多光束干涉</li>
+<li>干涉系统：F-P，M-Z，迈克尔逊，裴索</li>
+<li>干涉滤光片</li>
+</ul>
+</li>
+<li><p>衍射</p>
+<ul>
+<li>夫琅和费衍射</li>
+<li>菲涅尔衍射<ul>
+<li>菲涅尔波带法</li>
+</ul>
+</li>
+<li>单缝衍射、多缝衍射</li>
+<li>闪耀光栅</li>
+<li>分辨率</li>
+<li>衍射效率、衍射系统？</li>
+</ul>
+</li>
+<li><p>傅立叶光学</p>
+<ul>
+<li>矩孔、圆孔傅立叶变换</li>
+<li>阿贝成像理论</li>
+<li>相干传递函数、光学传递函数</li>
+<li>应用？</li>
+</ul>
+</li>
+<li><p>偏振</p>
+<ul>
+<li>偏振态</li>
+<li>斯涅尔作图法、惠更斯作图法</li>
+<li>偏振光等折射反射：折射率公式与相关计算</li>
+<li>琼斯矩阵、琼斯矢量方法</li>
+<li>入射面、光线面、法线面、折射率曲面、波矢面等</li>
+<li>偏振光干涉：平行偏振光的干涉、会聚偏振光的干涉</li>
+</ul>
+</li>
+</ul>
+</div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script> 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>Copyright： </strong>
+          
+          Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/optics/" rel="tag">optics</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/Optics/Optical-Material/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            光电材料笔记
+          
+        </div>
+      </a>
+    
+    
+      <a href="/Physics/Quantum-Mechanics/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">Quantum-Mechanics Notes</div>
+      </a>
+    
+  </nav>
+
+  
+   
+     
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2020-2023
+        <i class="ri-heart-fill heart_icon"></i> Longqian Huang
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>Visitors:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>Views:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/cat.png" alt="Peter&#39;s Blog"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about">关于</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/news">近闻</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/publications">发表</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/projects">项目</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/notes">笔记</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/gallery">画廊</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>来，请俺喝杯咖啡！</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+ <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+  });
+
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/mathjax/2.7.7/MathJax.js"></script>
+<script src="https://cdn.staticfile.org/mathjax/2.7.7/config/TeX-AMS-MML_HTMLorMML-full.js"></script>
+<script>
+  var ayerConfig = {
+    mathjax: true,
+  };
+</script>
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+ 
+<script src="/js/dz.js"></script>
+ 
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    
+
+  </div>
+</body>
+
+</html>

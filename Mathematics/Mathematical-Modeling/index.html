@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+
+
+<html lang="en,zh-CN,default">
+  
+
+    <head>
+      <meta charset="utf-8" />
+        
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>Mathematic Modeling Notes |  Peter&#39;s Blog</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/images/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    <!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><link rel="alternate" href="/rss2.xml" title="Peter's Blog" type="application/atom+xml">
+</head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-Mathematics/Mathematical-Modeling"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  Mathematic Modeling Notes
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/Mathematics/Mathematical-Modeling/" class="article-date">
+  <time datetime="2020-02-07T08:37:29.000Z" itemprop="datePublished">2020-02-07</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Notes/">Notes</a> / <a class="article-category-link" href="/categories/Notes/Mathematics/">Mathematics</a>
+  </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">4.6k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">17 min</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="Mathematic-Modeling-Notes"><a href="#Mathematic-Modeling-Notes" class="headerlink" title="Mathematic Modeling Notes"></a>Mathematic Modeling Notes</h1><h2 id="理解数学建模"><a href="#理解数学建模" class="headerlink" title="理解数学建模"></a>理解数学建模</h2><p>建模是为了<strong>预测</strong></p>
+<h1 id="数学模型学习"><a href="#数学模型学习" class="headerlink" title="数学模型学习"></a>数学模型学习</h1><h2 id="1-确定性连续模型"><a href="#1-确定性连续模型" class="headerlink" title="1 确定性连续模型"></a>1 确定性连续模型</h2><h3 id="静态优化模型-x2F-微分法建模"><a href="#静态优化模型-x2F-微分法建模" class="headerlink" title="静态优化模型&#x2F;微分法建模"></a>静态优化模型&#x2F;微分法建模</h3><h4 id="不允许缺货的存贮模型"><a href="#不允许缺货的存贮模型" class="headerlink" title="不允许缺货的存贮模型"></a>不允许缺货的存贮模型</h4><ol>
+<li><p>模型假设：</p>
+<ul>
+<li>每天存货费用：$c_1$  元&#x2F;吨</li>
+<li>每次订货费用：$c_2$  元</li>
+<li>每天货物需求量：$r$ 吨&#x2F;天</li>
+<li>任意时刻 $t$ 的货物贮存量：$q(t)$</li>
+<li>订货周期：$T$  天</li>
+<li>每次订货数量：$Q$  吨</li>
+</ul>
+</li>
+<li><p>模型假设：</p>
+<p>每次订货后库存量均匀下降：<br>$$<br>\frac{dq}{dt}&#x3D;-r,\qquad q(0)&#x3D;Q \<br>q(t)&#x3D;-r\cdot t+Q<br>$$</p>
+</li>
+<li><p>模型建立：</p>
+<ul>
+<li>订货数量、订货周期、每日货物需求的关系：</li>
+</ul>
+<p>$$<br>Q&#x3D;r\cdot T<br>$$</p>
+<ul>
+<li>每日平均花费：</li>
+</ul>
+<p>$$<br>Cost(T)&#x3D;\frac{1}{T}\cdot(c_2+c_1\int_0^Tq(t)dt)&#x3D;\frac{c_2}{T}+\frac{1}{2}c_1 rT<br>$$</p>
+<ul>
+<li>目标：$min[Cost]$</li>
+</ul>
+<p>$$<br>\frac{dCost}{dT}&#x3D;0\&#x3D;&gt; T&#x3D;\sqrt{\frac{2c_2}{c_1r}},\quad Q&#x3D;\sqrt{\frac{2c_2r}{c_1}}<br>$$</p>
+</li>
+</ol>
+<p>$ \ $ <span id="more"></span></p>
+<h2 id="2-遗传算法-GA"><a href="#2-遗传算法-GA" class="headerlink" title="2 遗传算法 GA"></a>2 遗传算法 GA</h2><h3 id="2-1-算法流程"><a href="#2-1-算法流程" class="headerlink" title="2.1 算法流程"></a>2.1 算法流程</h3><ul>
+<li><p>适应度函数</p>
+<p>目标函数，函数的最优值便是适应度最高（最适合生存）的种群的适应度</p>
+</li>
+<li><p>变异</p>
+<p>产生跳出局部最优解的可能</p>
+</li>
+</ul>
+<h3 id="2-2-单目标优化"><a href="#2-2-单目标优化" class="headerlink" title="2.2 单目标优化"></a>2.2 单目标优化</h3><p>pass</p>
+<h2 id="3-综合评价方法"><a href="#3-综合评价方法" class="headerlink" title="3 综合评价方法"></a>3 综合评价方法</h2><h3 id="3-1-层次分析法-AHP"><a href="#3-1-层次分析法-AHP" class="headerlink" title="3.1 层次分析法 AHP"></a>3.1 层次分析法 AHP</h3><p>Analytic Hierarchy Process.</p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/38207837">算法流程</a>：</p>
+<ul>
+<li><p>建模，确定各层次因素</p>
+</li>
+<li><p>进行单层次排序（从上往下）</p>
+<ul>
+<li>对于每一个上一层对元素，挨个分析每一层因素的相对重要性，构建成对比较矩阵（使用<strong>1-9标度法</strong>）</li>
+<li>进行一致性检验（传递性），不通过则需要调整相对重要性</li>
+<li>获得归一化的最大特征向量，最为当前层对上一层对权重向量</li>
+</ul>
+</li>
+<li><p>进行层次总排序，获得最下层每个元素对最终目标的归一化权重向量（从下往上）</p>
+</li>
+<li><p>得到决策结果</p>
+</li>
+</ul>
+<p>为什么特征向量可以作为权重？</p>
+<p>可证充分性。$AX$的列向量的第 $i$ 个元素可以作为第 $i$ 个指标的综合评价（&#x3D;$\sum_j$第 $i$ 个元素对第 $j$ 个元素的重要程度$\times$ 第 $j$ 个元素的最终权重），正比于第 $i$ 个元素的最终权重（$AX&#x3D;\lambda X $）</p>
+<h3 id="3-2-主成分分析-PCA"><a href="#3-2-主成分分析-PCA" class="headerlink" title="3.2 主成分分析 PCA"></a>3.2 主成分分析 PCA</h3><p>Principle Component Analysis.</p>
+<p>应用：</p>
+<ul>
+<li><p>变量较多，需要从数据中挖掘出主要成分。通过正交变换，消除变量之间的相关影响。</p>
+</li>
+<li><p>对多变量的截面数据表进行最佳综合简化。</p>
+</li>
+<li><p>对指标进行客观赋权。（从相关系数矩阵的特征值引出的信息贡献率可作为”新变量“的权重）</p>
+</li>
+</ul>
+<p>算法流程：</p>
+<ul>
+<li>设指标变量为 $\mathbf{x}&#x3D;[x_1,\cdots,x_n]$</li>
+<li>将变量标准化、去除量纲：$\mathbf{\widetilde x}&#x3D;\displaystyle\frac{\mathbf{x}-\mu}{\sigma}$</li>
+<li>获得 $\mathbf{\widetilde x}$ 的相关系数矩阵 $R&#x3D;(r_{ij})_{n\times n }$</li>
+<li>计算 $R$ 的特征值 $\lambda_1\geq\cdots \geq\lambda_n$ 和对应的特征(列)向量 $\mathbf{\mu_1,\cdots\mu_n}$</li>
+<li>设 $\mathbf{\mu_i}&#x3D;[\mu_{1i},\cdots,\mu_{ni}]^T$, 得到新的变量：$\mathbf{y_i}&#x3D;\sum_j \mu_{ji}\cdot\widetilde x_i$</li>
+<li>特征值 $\lambda_i$ 的信息贡献率 $b_i&#x3D;\lambda_i\big&#x2F;(\sum_i \lambda_i)$, 累计贡献率 $\alpha_p&#x3D;(\sum_{j&#x3D;1}^p \lambda_j)\big&#x2F;(\sum_i\lambda_i)$</li>
+<li>根据累计贡献率挑选出主成分</li>
+<li>根据信息贡献率得到基于主成分的综合评价得分：$Z&#x3D;\sum_{j&#x3D;1}^p b_j y_j$</li>
+</ul>
+<h3 id="3-3-模糊综合评价"><a href="#3-3-模糊综合评价" class="headerlink" title="3.3 模糊综合评价"></a>3.3 模糊综合评价</h3><p>Fuzzy Comprehension Evaluation.</p>
+<p>应用：评价的人多的时候比较好，比如人事考核，军训打分。</p>
+<h4 id="（1）一级模糊综合评判"><a href="#（1）一级模糊综合评判" class="headerlink" title="（1）一级模糊综合评判"></a>（1）一级模糊综合评判</h4><ul>
+<li><p>确定因素集 $U&#x3D;{u_1,\cdots,u_n}$</p>
+</li>
+<li><p>确定各因素权重  $A&#x3D;[a_1,\cdots,a_n]$</p>
+<ul>
+<li>主成分分析</li>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/28067337">熵权法</a>（基于多个样本在指标下的离散程度赋权）</li>
+<li>专家评估</li>
+<li>众人打分</li>
+</ul>
+</li>
+<li><p>确定评语集 $V&#x3D;{v_1,\cdots,v_m}$</p>
+</li>
+<li><p>对每个因素 $u_i$ 获得一个对应评语集的评价向量 $R_i&#x3D;[r_{i1},\cdots,r_{im}]$, 得到模糊综合判断矩阵 $R&#x3D;(r_{ij})<em>{n\times m}$ （$r</em>{ij}%$ 的人认为第 $i$ 个因素可以达到评语 $v_j$ ）</p>
+</li>
+<li><p>综合评判 $B&#x3D;A\cdot R&#x3D;[b_1,\cdots, b_m]$, 可取数值最大的评语作为最终结果（最大隶属度原则）</p>
+</li>
+</ul>
+<h4 id="（2）多级模糊综合评判"><a href="#（2）多级模糊综合评判" class="headerlink" title="（2）多级模糊综合评判"></a>（2）多级模糊综合评判</h4><p><a target="_blank" rel="noopener" href="http://html.rhhz.net/ZGJCYJ/html/2007-03-30.htm">例子</a></p>
+<h3 id="3-4-灰色关联评估"><a href="#3-4-灰色关联评估" class="headerlink" title="3.4 灰色关联评估"></a>3.4 灰色关联评估</h3><p>灰色系统理论的一个分支，应用于受多种相互关联因素影响的事物和现象的综合评价问题。</p>
+<h3 id="3-5-可作为综合题练习"><a href="#3-5-可作为综合题练习" class="headerlink" title="3.5 可作为综合题练习"></a>3.5 可作为综合题练习</h3><p>第1辑第3章医疗保健系统评估问题。</p>
+<h2 id="4-模拟-x2F-仿真方法"><a href="#4-模拟-x2F-仿真方法" class="headerlink" title="4 模拟&#x2F;仿真方法"></a>4 模拟&#x2F;仿真方法</h2><h3 id="元胞自动机"><a href="#元胞自动机" class="headerlink" title="元胞自动机"></a>元胞自动机</h3><p>制定规则，模拟。</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/Harrytsz/article/details/85094334">模拟交通流</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_39590507/article/details/86760958">模拟游客疏散</a> </li>
+<li><a target="_blank" rel="noopener" href="https://github.com/chen622/Louvre">比较全面地模拟游客疏散</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/your_answer/article/details/79287367">模拟流言传播</a></li>
+</ul>
+<h2 id="5-其他模型"><a href="#5-其他模型" class="headerlink" title="5 其他模型"></a>5 其他模型</h2><ul>
+<li><p>贝叶斯信念网络 （概率图）</p>
+</li>
+<li><p>小世界模型</p>
+</li>
+<li><p>Lotka–Volterra方程（捕食者-被捕食者方程） 可发挥创造性推广至多捕食者多被捕食者的动态网络。</p>
+</li>
+<li><p>扩散模型</p>
+<ul>
+<li>扩散方程</li>
+<li>高斯烟流模式：大气污染预测</li>
+<li>技术扩散模型：Bass Diffusion Model</li>
+<li>创新扩散模型：Diffusion of Innovations Theory</li>
+</ul>
+</li>
+<li><p>拓扑网络</p>
+<ul>
+<li>局部中心</li>
+<li>影响度</li>
+<li>Pagerank 佩奇排名算法度量网络节中心性</li>
+</ul>
+</li>
+<li><p>普林斯顿海洋模型（POM） 47、48</p>
+</li>
+<li><p>Forrester 世界模型 51</p>
+</li>
+</ul>
+<h1 id="美赛历年题目学习"><a href="#美赛历年题目学习" class="headerlink" title="美赛历年题目学习"></a>美赛历年题目学习</h1><h2 id="English"><a href="#English" class="headerlink" title="English"></a>English</h2><ul>
+<li>a schematic diagram</li>
+<li>Attributes 属性</li>
+</ul>
+<h2 id="2016-ICM-D"><a href="#2016-ICM-D" class="headerlink" title="2016 ICM D"></a>2016 ICM D</h2><h3 id="1-关键词"><a href="#1-关键词" class="headerlink" title="1. 关键词"></a>1. 关键词</h3><p>信息.</p>
+<h3 id="2-有用的理论"><a href="#2-有用的理论" class="headerlink" title="2. 有用的理论"></a>2. 有用的理论</h3><ul>
+<li><p>图论</p>
+<ul>
+<li>Nodes <ul>
+<li>Type : media &#x2F; person node</li>
+<li>Degree </li>
+<li>State : unknown, known, tired</li>
+</ul>
+</li>
+<li>Edges<ul>
+<li>Start node</li>
+<li>End node</li>
+<li>Time ( ～ communication tools )</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Pareto Principle</p>
+<ul>
+<li>帕雷托法则指出，约仅有20%的变因操纵着80%的局面。也就是说：所有变量中，最重要的仅有20%，虽然剩余的80%占了多数，控制的范围却远低于“关键的少数”。</li>
+<li>应用： If the news value meets the Pareto principle, then 20% of the news contains 80% of the total value of all the news in real world.</li>
+</ul>
+</li>
+</ul>
+<p>$ \ $ <!--more--></p>
+<ul>
+<li><p>Indifference Curve 无差异曲线</p>
+<ul>
+<li><p>一条表示当消费者获得同样的效用时的消费组合曲线，其斜率一般为负值，这在经济学中表明在收入与价格既定的条件下，消费者为了获得同样的效用，增加一种商品的消费就必须减少或放弃另一种商品的消费，两种商品在消费者偏好不变的条件下，不能同时减少或增加。</p>
+</li>
+<li><p>应用：构造方程。“This function meets all the typical properties of an Indifference Curve. Thus it can be used to measure information’s inherent value based on its attributes.”</p>
+</li>
+</ul>
+</li>
+<li><p>Product life-cycle theory ( 产品生命周期理论， PLC )</p>
+<ul>
+<li>产品生命是指市上的营销生命，产品和人的生命一样，要经历形成，成长，成熟，衰退这样的周期。就产品而言，也就是要经历一个开发，转移，成长，成熟，衰退的阶段。而这个周期在不同的技术水平的国家里，发生的时间和过程是不一样的，期间存在一个相互矛盾的差异和时差，正是这一时差，表现为不同国家在技术上的差距，它反映了同一产品在不同国家市场上的竞争层次的差异，从而决定了国际贸易和国际投资的变化。</li>
+<li>应用：利用产品生命周期理论模拟新通讯网络的诞生和旧通讯网络的衰落</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-O奖论文结构"><a href="#3-O奖论文结构" class="headerlink" title="3. O奖论文结构"></a>3. O奖论文结构</h3><ul>
+<li><p>引言、问题重述、假设、符号规定</p>
+</li>
+<li><p>利用图论建立通讯网络的拓扑图，微观（个人-个人）&#x2F; 宏观（媒体-个人）</p>
+</li>
+<li><p>建立信息价值模型 ，定义了信息的三个属性&#x2F;类别 （极端、娱乐、新闻），利用无差异曲线和二八定律（帕雷托法则）构造出信息价值的方程，给出了评判信息是否为新闻的标准</p>
+</li>
+<li><p>建立信息流动的动态模型 ，主要给出了信息流动的过程（绘制了简易流程图）</p>
+</li>
+<li><p>利用BBC新闻的信息流动来作为模型检验和应用的例子，进行了信息的流动模拟仿真</p>
+</li>
+<li><p>利用产品生命周期理论建立信息网络更新换代的模型，用以预测2050年的信息网络变化。给网络容量下了公式定义，并给出了不同的网络性能量化指标。提出未来的三十年将出现三种新的信息网络，并给出了网络的强度（人们使用的频繁程度），然后用线性函数简化模型，给出了新的信息网络生命周期的线性函数表达式。</p>
+</li>
+<li><p>模型进一步扩展，加入了人的选择因素，引入“门槛效应”建立新的信息流动机制</p>
+</li>
+<li><p>灵敏性分析（不知道图是怎么做出来的）、模型优缺点分析</p>
+</li>
+</ul>
+<h3 id="4-总结"><a href="#4-总结" class="headerlink" title="4. 总结"></a>4. 总结</h3><ul>
+<li>他们的论文解释的很多很详细，但是就是不知道图是怎么出来的，数据怎么得到的。有的地方给出了公式或者文字说了好多就过去了，似乎不用计算。</li>
+<li>灵活地应用了各种经济学的模型</li>
+<li>查阅了详尽资料论文，信息网络有前人的论文可借鉴</li>
+<li>我们的想法：可以引入香农的信息论内容进行分析</li>
+</ul>
+<h2 id="2017-ICM-E"><a href="#2017-ICM-E" class="headerlink" title="2017 ICM E"></a>2017 ICM E</h2><h3 id="1-关键词-1"><a href="#1-关键词-1" class="headerlink" title="1. 关键词"></a>1. 关键词</h3><p>smart growth</p>
+<p>模糊综合评价、层次分析法</p>
+<h3 id="2-我们的想法"><a href="#2-我们的想法" class="headerlink" title="2. 我们的想法"></a>2. 我们的想法</h3><h4 id="2-1-smart-growth-的10个原则（一级指标）"><a href="#2-1-smart-growth-的10个原则（一级指标）" class="headerlink" title="2.1 smart growth 的10个原则（一级指标）"></a>2.1 smart growth 的10个原则（一级指标）</h4><p>$U&#x3D;{U_i\mid i&#x3D;1,\cdots,10}$</p>
+<p>给出一级指标集对应的权重向量 $A&#x3D;[a_1,\cdots,a_{10}]$</p>
+<h4 id="2-2-衡量一座城市的10大指标"><a href="#2-2-衡量一座城市的10大指标" class="headerlink" title="2.2 衡量一座城市的10大指标"></a>2.2 衡量一座城市的10大指标</h4><p>$V&#x3D;{v_i\mid i&#x3D;1,\cdots10}$</p>
+<p>对每个 $U_i$ , 取其中不同的 $s$ 个指标作为评判不同 $U_i$ 的二级指标。</p>
+<p>可以给出 $U_i$ 的指标集对应的权重向量 $A_i&#x3D;[a_1,\cdots,a_{s}]$</p>
+<h4 id="2-3-定义评语集：成功度"><a href="#2-3-定义评语集：成功度" class="headerlink" title="2.3 定义评语集：成功度"></a>2.3 定义评语集：成功度</h4><p>$S&#x3D;{s_i\mid i&#x3D;1,\cdots,m}$</p>
+<h4 id="2-4-综合评价"><a href="#2-4-综合评价" class="headerlink" title="2.4 综合评价"></a>2.4 综合评价</h4><ul>
+<li><p>根据成功度对不同的二级指标作出评判，得到 10 个二级指标的 $s\times m$ 评判向量 $R_i$ ,  $ i&#x3D;1,\cdots,10$ </p>
+</li>
+<li><p>第 $i$ 个一级指标的评判结果：$B_i&#x3D;A_i\cdot R_i$， 组成综合评判矩阵 $R&#x3D;[B_1;\cdots;B_{10}]$</p>
+</li>
+<li><p>最终综合评判结果 $B&#x3D;A\cdot R$ , 根据最大隶属度原则，取 $B$ 中最大值对应的成功度作为城市 smart growth 的成功度</p>
+</li>
+</ul>
+<h2 id="3-O奖论文学习"><a href="#3-O奖论文学习" class="headerlink" title="3 O奖论文学习"></a>3 O奖论文学习</h2><h3 id="3-1-English"><a href="#3-1-English" class="headerlink" title="3.1 English"></a>3.1 English</h3><p>propose feasible plan</p>
+<p>To ameliorate this situation</p>
+<p>According to the optimization model aforementioned</p>
+<h3 id="3-2-有用的东西-x2F-可学习的东西"><a href="#3-2-有用的东西-x2F-可学习的东西" class="headerlink" title="3.2 有用的东西&#x2F;可学习的东西"></a>3.2 有用的东西&#x2F;可学习的东西</h3><ul>
+<li><p>flow chart</p>
+</li>
+<li><p>表格里添加不同浅色背景</p>
+</li>
+<li><p>数据归一化处理方法</p>
+</li>
+<li><p>AHP：层次分析法</p>
+</li>
+<li><p>友好的Latex注记方式：<a target="_blank" rel="noopener" href="https://www.latexstudio.net/archives/51620.html">添加脚注</a></p>
+</li>
+<li><p>Entropy Weight Method 熵权法：确定综合评价的权重</p>
+<p>客观赋权法，仅依赖于数据本身的离散性</p>
+</li>
+<li><p>K-means clustering Algorithm ：K-均值聚类</p>
+<ul>
+<li>把 n 个点（可以是样本的一次观察或一个实例）划分到 k 个聚类中，使得每个点都属于离他最近的均值（此即聚类中心）对应的聚类，以之作为聚类的标准。</li>
+<li>应用：（甚妙）文中利用K均值聚类方法，通过求解非线性规划问题，得到衡量城市“smart growth”不同方面程度的量化值（类似“成功度”）</li>
+</ul>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/33692660">SVM 和 SVR</a> </p>
+</li>
+<li><p>“ grid search algorithm ” 调整模型参数的算法（其实就是穷举）</p>
+</li>
+<li><p>Time Series Forecasting</p>
+<p>时间序列预测,机器学习的一个重要领域</p>
+</li>
+<li><p>创新地结合SVM和时间序列预测方法（加权移动平均法），提出对未来的预测模型</p>
+</li>
+<li><p>radar diagram 雷达图</p>
+</li>
+</ul>
+<h3 id="3-3-O奖论文结构"><a href="#3-3-O奖论文结构" class="headerlink" title="3.3 O奖论文结构"></a>3.3 O奖论文结构</h3><ul>
+<li><p>引言、模型假设、符号说明</p>
+</li>
+<li><p>二级模糊综合评价，完成任务一。权重矩阵由层次分析法、“专家”评估法、熵权法获得；使用K-均值聚类方法获得城市“成功度”的量化值</p>
+</li>
+<li><p>使用雷达图、条形图介绍和对比两城市的现有发展规划，完成任务二</p>
+</li>
+<li><p>提出基于smart growth的城市发展规划，使用时间序列分析方法和支持向量机给出预测模型，完成任务三</p>
+</li>
+<li><p>根据不同城市的水平，提出不同的人口增长模型，在此基础上通过雷达图表现预测结果</p>
+</li>
+<li><p>用Matlab画了个三维图（参数1，参数2，误差）作为灵敏度分析</p>
+</li>
+<li><p>优缺点分析</p>
+</li>
+</ul>
+<h2 id="2018-ICM-D"><a href="#2018-ICM-D" class="headerlink" title="2018 ICM D"></a>2018 ICM D</h2><h3 id="关键词"><a href="#关键词" class="headerlink" title="关键词"></a>关键词</h3><p>充电汽车，充电网络</p>
+<h3 id="建模解题"><a href="#建模解题" class="headerlink" title="建模解题"></a>建模解题</h3><h3 id="Task-1"><a href="#Task-1" class="headerlink" title="Task 1"></a>Task 1</h3><p>Is Tesla on track to allow a complete switch to all-electric in the US? If everyone switched to all-electric personal passenger vehicles in the US, how many charging stations would be needed, and how should they be distributed between urban, suburban, and rural areas?</p>
+<h4 id="符号说明"><a href="#符号说明" class="headerlink" title="符号说明"></a>符号说明</h4><ul>
+<li><p>充电桩数量：$N_c$</p>
+</li>
+<li><p>汽车拥有量: $N$</p>
+</li>
+<li><p>充电汽车占有率：$\alpha$</p>
+</li>
+<li><p>在用电动汽车总数 ：$N_{EV}&#x3D;\alpha\cdot N $</p>
+</li>
+<li><p>每天汽车总加油量 : $G$</p>
+</li>
+<li><p>每天内汽车总里程 $S&#x3D;S(G)$</p>
+</li>
+<li><p>$N_c&#x3D;f(P,s,\cdots)$</p>
+</li>
+</ul>
+<h4 id="确定充电桩数量"><a href="#确定充电桩数量" class="headerlink" title="确定充电桩数量"></a>确定充电桩数量</h4><ol>
+<li>一段时间内总的充电电动汽车数量：</li>
+</ol>
+<ul>
+<li><p>电动汽车蓄电池的充电时间是一个受使用者偏好等随机因素影响的随机变量，根据中心极限定理，可认为电动汽车的平均充电时间服从正态分布 $N(\mu,\sigma)$，即不同的充电时间 $t$ 发生的概率为 $\phi(t)$.</p>
+</li>
+<li><p>$\mu,\sigma$ 和电动汽车的普及程度 、电动汽车各类型比例、不同类型电动汽车的充电时间有关，可以按两种类型的充电桩分别讨论</p>
+</li>
+<li><p>时间段 $T$ 内，在充电汽车数量：<br>$$<br>N_{charging}&#x3D;N_{EV}\int_{T_0}^{T_0+T} \phi(t)dt<br>$$</p>
+</li>
+</ul>
+<ol start="2">
+<li><p>设置充电桩以不改变客户的出行方式为目的，就是假设确保不改变总里程 $S$, 每天充电总需求时间 $T_R&#x3D;T_R(S)$</p>
+</li>
+<li><p>设每天每辆汽车平均充电 $m$ 次，每天充电总供给时间 $T_S&#x3D;N_{charing}\cdot \Delta t \cdot m $</p>
+</li>
+<li><p>确定 $\mu$: 推荐加油时常</p>
+</li>
+<li><p>确定 $\sigma$</p>
+</li>
+<li><p>想法二：获得美国充电站数量的历年数据，使用预测方法推出需要的充电站数量。这也可以对上面的模型进行检验。</p>
+</li>
+<li><p>想法三：根据加油站数量等的历史数据，拟合出加油站数量在成长阶段的增长曲线。然后进行常数变异，拟合充电站的增长曲线。同样可以对上面的模型进行检验。</p>
+</li>
+</ol>
+<h4 id="设置充电桩位置"><a href="#设置充电桩位置" class="headerlink" title="设置充电桩位置"></a>设置充电桩位置</h4><ol>
+<li><p>要求：距离每个充电桩最近的充电桩在充电后可跑历程范围内 ；同时使用的充电桩消耗的功率不会使电网崩溃</p>
+</li>
+<li><p>具体化：白天任意时段内确保 $k$ km附近有空闲的目的地充电桩；乡镇需要：乡镇内每天有空闲的目的地充电桩；公路需要：沿途在一次充电里程的后半段内有空闲的加压充电桩</p>
+</li>
+<li><p>考虑因素：</p>
+<ul>
+<li>地域<ul>
+<li>城市</li>
+<li>乡村</li>
+<li>城市–乡村过渡带</li>
+</ul>
+</li>
+<li>电动汽车分布</li>
+</ul>
+</li>
+<li><p>想法：</p>
+<ul>
+<li><p>利用层次分析法获得每个州的交通运输度综合评价得分，根据得分（看作权重）分配充电站数量。$N_i&#x3D;N\times w_i$</p>
+</li>
+<li><p>根据各州的电动汽车保有量和交通运输量，在每个充电站里细分提供的充电桩种类和数量</p>
+</li>
+<li><p>先广覆盖，满足基本需求，再有针对性地根据地域和需求逐步增加数量</p>
+</li>
+<li><p>借鉴加油站的分布</p>
+</li>
+<li><p>由于智能充电引导系统的应用，可以假设驾驶员都可以选择最优的充电桩</p>
+</li>
+<li><p>若有美国电动汽车充电桩的数据，可使用K-means聚类方法确定充电站的位置：“如果我们定位了50个公共充电站，则将应用K-means方法将充电时间窗的位置划分为50个簇，然后将充电站定位在每个集群的质心处。”</p>
+</li>
+<li><p>电动汽车拥有率～所需充电里程数</p>
+</li>
+</ul>
+</li>
+<li><p>The electrification rate, defined as the ratio of miles PHEVs travel in all electric mode over the total driving miles, is adopted to evaluate different location plans。</p>
+</li>
+<li><p>Time series Simulation Model</p>
+</li>
+</ol>
+<h3 id="电动汽车拥有量预测"><a href="#电动汽车拥有量预测" class="headerlink" title="电动汽车拥有量预测"></a>电动汽车拥有量预测</h3><ul>
+<li>Bass 扩散模型</li>
+</ul>
+<h3 id="O奖论文学习"><a href="#O奖论文学习" class="headerlink" title="O奖论文学习"></a>O奖论文学习</h3><h4 id="D82504"><a href="#D82504" class="headerlink" title="D82504"></a>D82504</h4><h3 id="1-English"><a href="#1-English" class="headerlink" title="1. English"></a>1. English</h3><p>quantify the key factors’ influences</p>
+<p>Redefine the concept of urban, suburban and rural areas</p>
+<p>establish a functional relationship between the charger density and out chosen factors</p>
+<p>in practice</p>
+<p>Empirically 以经验为依据地</p>
+<p>visualized simulation results</p>
+<p>conduct further discussions</p>
+<h3 id="2-有用的东西"><a href="#2-有用的东西" class="headerlink" title="2. 有用的东西"></a>2. 有用的东西</h3><ul>
+<li><p>Markov method</p>
+</li>
+<li><p>Gini coefficient 基尼系数</p>
+<p>判断年收入分配公平程度的指标。在0～1之间。基尼系数越小，年收入分配越平均；基尼系数越大，年收入分配越不平均。</p>
+</li>
+</ul>
+<h3 id="3-Learn"><a href="#3-Learn" class="headerlink" title="3. Learn"></a>3. Learn</h3><ul>
+<li><p>‘Related Work’ Section</p>
+</li>
+<li><p>写得好：“3.1 Tesla’s Objective”</p>
+</li>
+<li><p>use the completed charging network in Manhattan to estimate $c_u$</p>
+</li>
+<li><p>divide the urban area to several squares, and consider the distribution of stations in each square.</p>
+</li>
+<li><p>考虑实际情况，在用K-means聚类方法时使用曼哈顿距离（$L_1$）代替传统的欧式距离</p>
+</li>
+<li><p>在对电动汽车市场占有份额建模时，采用逻辑回归模型 Logistic Model</p>
+</li>
+</ul>
+<h4 id="D82794"><a href="#D82794" class="headerlink" title="D82794"></a>D82794</h4><h3 id="English-1"><a href="#English-1" class="headerlink" title="English"></a>English</h3><p>from a macro perspective</p>
+<p>Here we list the symbols and notations used in this paper, as shown in Table 1. </p>
+<p>folk customs 民俗</p>
+<h3 id="D81402"><a href="#D81402" class="headerlink" title="D81402"></a>D81402</h3><h4 id="1-English-1"><a href="#1-English-1" class="headerlink" title="1. English"></a>1. English</h4><h4 id="2-有用的东西-1"><a href="#2-有用的东西-1" class="headerlink" title="2. 有用的东西"></a>2. 有用的东西</h4><ul>
+<li><p>决策策略：Nash Equilibrium</p>
+</li>
+<li><p>经济学概念：帕累托最优</p>
+</li>
+<li><p>传播理论：Bass diffusion model</p>
+<p>适用于耐用消费品的分析预测。</p>
+</li>
+</ul>
+<h2 id="论文写作"><a href="#论文写作" class="headerlink" title="论文写作"></a>论文写作</h2><h3 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h3><p>优秀的内容提要：对建模方法良好组织的精确的描述、获得的基本结果、你的建议。</p>
+<h3 id="数学模型"><a href="#数学模型" class="headerlink" title="数学模型"></a>数学模型</h3><ul>
+<li>明确了关键假设，说明详实合理，在建模过程中起到了作用</li>
+<li>从数学和文字方面对建模动机和理由进行阐述</li>
+<li>估算和解释模型中的参数值</li>
+<li>重点分析了题目关键点</li>
+<li>用到的结果和数据的调查，以及对用到的相关科学术语很好的解释</li>
+<li>是否利用真是数据验证模型，是否测试了模型的精度和鲁棒性</li>
+<li>如何利用模型来告知决策者并指导他未来的决策</li>
+<li>你是否真正了解你的模型。应讨论模型的优缺点：局限性、假设条件的约束及所用方法的局限性。改善模型的方法。</li>
+</ul>
+<h3 id="信息、视觉、图表"><a href="#信息、视觉、图表" class="headerlink" title="信息、视觉、图表"></a>信息、视觉、图表</h3><p>写作规范、明了、适当使用图表。</p>
+<h3 id="灵敏性分析"><a href="#灵敏性分析" class="headerlink" title="灵敏性分析"></a>灵敏性分析</h3><ul>
+<li><p>对参数添加呈正态分布的随机变量干扰</p>
+</li>
+<li><p>添加高斯噪声</p>
+</li>
+<li><p>交叉验证</p>
+</li>
+</ul>
+<h1 id="国赛历年题目学习"><a href="#国赛历年题目学习" class="headerlink" title="国赛历年题目学习"></a>国赛历年题目学习</h1><p>略</p>
+</div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script> 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>Copyright： </strong>
+          
+          Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/competition/" rel="tag">competition</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/math/" rel="tag">math</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/Other%20Things/2020%E5%A4%A7%E4%BA%8B%E8%AE%B0/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            魔幻2020
+          
+        </div>
+      </a>
+    
+    
+      <a href="/Computer-Science/Deep%20Learning/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">神经网络学习</div>
+      </a>
+    
+  </nav>
+
+  
+   
+     
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2020-2023
+        <i class="ri-heart-fill heart_icon"></i> Longqian Huang
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>Visitors:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>Views:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/cat.png" alt="Peter&#39;s Blog"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about">关于</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/news">近闻</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/publications">发表</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/projects">项目</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/notes">笔记</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/gallery">画廊</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>来，请俺喝杯咖啡！</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+ <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+  });
+
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/mathjax/2.7.7/MathJax.js"></script>
+<script src="https://cdn.staticfile.org/mathjax/2.7.7/config/TeX-AMS-MML_HTMLorMML-full.js"></script>
+<script>
+  var ayerConfig = {
+    mathjax: true,
+  };
+</script>
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+ 
+<script src="/js/dz.js"></script>
+ 
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    
+
+  </div>
+</body>
+
+</html>

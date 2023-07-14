@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+
+
+<html lang="en,zh-CN,default">
+  
+
+    <head>
+      <meta charset="utf-8" />
+        
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>随机过程复习总结 |  Peter&#39;s Blog</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/images/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    <!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><link rel="alternate" href="/rss2.xml" title="Peter's Blog" type="application/atom+xml">
+</head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-Mathematics/随机过程复习总结"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  随机过程复习总结
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/Mathematics/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93/" class="article-date">
+  <time datetime="2020-09-06T18:36:57.000Z" itemprop="datePublished">2020-09-07</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Notes/">Notes</a> / <a class="article-category-link" href="/categories/Notes/Mathematics/">Mathematics</a>
+  </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">1.2k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">5 min</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="随机过程复习总结"><a href="#随机过程复习总结" class="headerlink" title="随机过程复习总结"></a>随机过程复习总结</h1><p>随机过程课程的复习总结笔记。</p>
+<h2 id="1-Markov-过程"><a href="#1-Markov-过程" class="headerlink" title="1. Markov 过程"></a>1. Markov 过程</h2><h3 id="状态转移矩阵"><a href="#状态转移矩阵" class="headerlink" title="状态转移矩阵"></a>状态转移矩阵</h3><p> $p_{ij}^n&#x3D;P(X_{t_0+n}&#x3D;j\mid X_{t_0}&#x3D;i)$</p>
+<p>CK方程： $\vec\mu^{(n)}&#x3D;\vec\mu^{0}P^n$</p>
+<h3 id="常返和暂留"><a href="#常返和暂留" class="headerlink" title="常返和暂留"></a>常返和暂留</h3><p>常返：状态 $i$ 出发有限次可回</p>
+<p><em>常见考点</em>：求出所有互达等价类，各状态的周期和常返性，计算所有正常返态的平均回转时，计算极限概率</p>
+<p><strong>是否常返</strong>：</p>
+<ul>
+<li><p>有限马尔可夫链可以利用闭互达等价类直接判断：如果状态空间 $I$ 有限，则状态 $i$ 常返当且仅当 $i$ 的互达等价类是闭的，且这时 $i$ 一定是正常返</p>
+</li>
+<li><p>利用互达等价类减少计算：若状态 $i$ 和 $j$ 互达，则 $d(i)&#x3D;d(j)$ （周期相等），$i$ 常返&#x2F;正常返当且仅当 $j$ 常返&#x2F;正常返</p>
+</li>
+<li><p>通过计算来判断：计算 $f_{ii}&#x3D;\sum\limits_{n}f_{ii}^{(n)}$, $f_{ii}&#x3D;1$ 常返，$f_{ii}&lt;1$ 暂留。其中 $f_{ij}^{(n)}$ 是 $i$ 出发在第 $n$ 步首次击中 $j$ 的概率。对于非封闭的互达等价类，通过计算 $f_{ii}$ 说明暂留性。</p>
+</li>
+<li><p>是否正常返：计算平均回转时 $\mu_i&#x3D;\sum\limits_n nf_{ii}^{(n)}$, 看是否有限, 若无限则为零常返</p>
+</li>
+</ul>
+<p><strong>极限概率：</strong></p>
+<ul>
+<li>利用平稳分布</li>
+<li>若状态 $j$ 为暂留或零常返，则对所有 $i$, $\lim_\limits{n\to\infty} p_{ij}^{(n)}&#x3D;0$</li>
+</ul>
+<h3 id="平稳分布"><a href="#平稳分布" class="headerlink" title="平稳分布"></a>平稳分布</h3><p>初始分布与一步分布相同：$\pi P&#x3D;\pi$。</p>
+<p>比如：$\pi_1&#x3D;\frac 1 2 \pi_1+\frac 1 3\pi_2$ , 是指从初始状态 $\pi_1$ 一步后到 $\pi_1$ 再从 $\pi_1$ 以 $\frac 1 2$ 概率回到 $\pi_1$， 一步后到 $\pi_2$ 再从 $\pi_2$ 以 $\frac 1 3$ 概率回到 $\pi_1$。</p>
+<p>对互达等价类（不可约状态集）的计算：</p>
+<ul>
+<li>闭的 $\implies$ 正常返 $\implies$ 平稳分布存在且唯一， $\pi_i&#x3D;\frac 1 {\mu_i}$</li>
+<li>若为非周期正常返，则任何状态 $i,j,\lim_\limits{n\to\infty}p_{ij}^{(n)}&#x3D;\pi_j$</li>
+</ul>
+<h3 id="吸收概率和平均吸收时间"><a href="#吸收概率和平均吸收时间" class="headerlink" title="吸收概率和平均吸收时间"></a>吸收概率和平均吸收时间</h3><p>用递推的思想。</p>
+<p>设 $h_i&#x3D;P(T_a&lt;\infty\mid X_0&#x3D;i)$ 表示从状态 $i$ 出发在有限时间内能访问状态 $a$ 的概率，其中 $T_a$ 为首次访问状态 $a$ 的时间，有 $h_i&#x3D;\sum_\limits{j}p_{ij}h_j$.</p>
+<p>设 $a_i&#x3D;E(T_a\mid X_0&#x3D;i)$ 表示从 $i$ 出发首次访问 $a$ 的平均步数，有 $a_i&#x3D;1+\sum_\limits{j}p_{ij}a_j$.</p>
+<h2 id="2-独立增量过程"><a href="#2-独立增量过程" class="headerlink" title="2. 独立增量过程"></a>2. 独立增量过程</h2><h3 id="泊松过程"><a href="#泊松过程" class="headerlink" title="泊松过程"></a>泊松过程</h3><h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><ul>
+<li><p>独立增量过程</p>
+</li>
+<li><p>$N(0)&#x3D;0$</p>
+</li>
+<li><p>$N(t)-N(s)\sim \pi(\lambda(t-s))$</p>
+</li>
+<li><p>$\displaystyle P(N(t)-N(s)&#x3D;k)&#x3D;\frac{[\lambda (t-s)]^ke^{-\lambda(t-s)}}{k!}$</p>
+</li>
+</ul>
+<h4 id="数字特征"><a href="#数字特征" class="headerlink" title="数字特征"></a>数字特征</h4><ul>
+<li>均值 $\mu_N(t)&#x3D;E(N(t))&#x3D;\lambda t$</li>
+<li>方差 $D_N(t)&#x3D;\lambda t$</li>
+<li>自协方差函数 $C_N(s,t)&#x3D;\lambda \min{s,t}$</li>
+<li>自相关函数 $R_N(s,t)&#x3D;E(N(s)N(t))&#x3D;\lambda \min{s,t}+\lambda^2 st$</li>
+</ul>
+<h4 id="推广"><a href="#推广" class="headerlink" title="推广"></a>推广</h4><ul>
+<li><p>合成、分解后依旧是泊松过程</p>
+</li>
+<li><p>非齐次：$\lambda&#x3D;\lambda(t)$</p>
+</li>
+<li><p>${N(t)}$ 为强度 $\lambda$ 的泊松过程 $\iff$ 时间间隔 $T_1,T_2,\cdots$ 相互独立，且服从均值为 $1&#x2F;\lambda$ 的指数分布</p>
+</li>
+</ul>
+<h3 id="布朗运动"><a href="#布朗运动" class="headerlink" title="布朗运动"></a>布朗运动</h3><p>特殊的正态过程</p>
+<h4 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h4><ul>
+<li><p>独立增量过程</p>
+</li>
+<li><p>$X(0)&#x3D;0$</p>
+</li>
+<li><p>$X(t)-X(s)\sim N(0,\sigma^2(t-s))$</p>
+</li>
+</ul>
+<h4 id="数字特征-1"><a href="#数字特征-1" class="headerlink" title="数字特征"></a>数字特征</h4><p>对标准布朗运动 $B(t)&#x3D;{X(t)&#x2F;\sigma}$</p>
+<ul>
+<li>$\mu_B(t)&#x3D;0$</li>
+<li>$D_B(t)&#x3D;t$</li>
+<li>$C_B(s,t)&#x3D;\min{s,t}$</li>
+<li>$R_B(s,t)&#x3D;\min{s,t}$</li>
+</ul>
+<h4 id="推广-1"><a href="#推广-1" class="headerlink" title="推广"></a>推广</h4><p>${B(t);t\geq 0}$ 是标准布朗运动，则：</p>
+<ul>
+<li>${B(t+\tau)-B(\tau)}$ 也是</li>
+<li>${\displaystyle \frac 1 c B(c^2t)}$ 也是</li>
+<li>$\widetilde B(t)&#x3D;t\displaystyle B(\frac 1 t) $ 也是 （定义 $0$ 处为 $0$）</li>
+</ul>
+<p>布朗桥过程：</p>
+<ul>
+<li>${B(t);0\leq t\leq 1\mid B(1)&#x3D;0}$</li>
+<li>$\mu&#x3D;0$</li>
+<li>$\sigma^2&#x3D;t(1-t)$</li>
+<li>对 $0\leq s\leq t\leq 1, \operatorname{Cov}(B(s),B(t)\mid B(1)&#x3D;0)&#x3D;s(1-t)$</li>
+</ul>
+<h4 id="首中时间相关"><a href="#首中时间相关" class="headerlink" title="首中时间相关"></a>首中时间相关</h4><p>$P(\max\limits_{0\leq s\leq t}B(s)\geq y)&#x3D;P(T_y\leq t)&#x3D;2P(B(t)\geq y)$</p>
+<h2 id="3-平稳过程"><a href="#3-平稳过程" class="headerlink" title="3. 平稳过程"></a>3. 平稳过程</h2><h4 id="宽平稳过程"><a href="#宽平稳过程" class="headerlink" title="宽平稳过程"></a>宽平稳过程</h4><ul>
+<li>均值为常数</li>
+<li>自相关函数只和时间差有关</li>
+</ul>
+<h4 id="各态历经性"><a href="#各态历经性" class="headerlink" title="各态历经性"></a>各态历经性</h4><p>记 $\langle X(t)\rangle&#x3D;\displaystyle\lim_\limits{T\to \infty} \frac{1}{2T}\int_{-T}^{T}X(t)dt$</p>
+<ul>
+<li>均值各态历经性： $\langle X(t)\rangle&#x3D;\mu_X$</li>
+<li>自相关函数各态历经性：$\langle X(t)X(t+\tau)\rangle&#x3D;E[X(t)X(t+\tau)]&#x3D;R_X(\tau)$</li>
+<li>（宽）各态历经过程：均值函数和自相关函数都有各态历经性</li>
+</ul>
+<p>重要推论：</p>
+<p>若 $\lim\limits_{\tau\to\infty} R_X(\tau) $ 存在，则 ${X(t)}$ 对均值具有各态历经性当且仅当 $\lim_\limits{\tau\to \infty} R_X(\tau)&#x3D;\mu_X^2$</p>
+<h4 id="频率域表述"><a href="#频率域表述" class="headerlink" title="频率域表述"></a>频率域表述</h4><ul>
+<li><p>平均功率 $&#x3D; R_X(0)&#x3D;\displaystyle \frac 1 {2\pi}\int_{-\infty}^{\infty} S_X(\omega) \operatorname{d} \omega$</p>
+</li>
+<li><p>维纳-辛钦公式：$S_X(\omega)$ 和 $R_X(t)$ 互为傅立叶变换对</p>
+</li>
+</ul>
+<p>常用变换：$\displaystyle e^{-a|\tau|}\leftrightarrow \frac{2a}{a^2+\omega^w}$</p>
+</div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script> 
+      <!-- reward -->
+      
+      <div id="reword-out">
+        <div id="reward-btn">
+          Donate
+        </div>
+      </div>
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>Copyright： </strong>
+          
+          Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/math/" rel="tag">math</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/Physics/Quantum-Mechanics/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            Quantum-Mechanics Notes
+          
+        </div>
+      </a>
+    
+    
+      <a href="/Electronics/TP-LINK%E7%94%B5%E5%AD%90%E8%AE%BE%E8%AE%A1%E7%AB%9E%E8%B5%9B/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">电子设计竞赛校赛总结</div>
+      </a>
+    
+  </nav>
+
+  
+   
+     
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2020-2023
+        <i class="ri-heart-fill heart_icon"></i> Longqian Huang
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>Visitors:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>Views:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/cat.png" alt="Peter&#39;s Blog"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about">关于</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/news">近闻</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/publications">发表</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/projects">项目</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/notes">笔记</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/gallery">画廊</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>来，请俺喝杯咖啡！</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+ <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+  });
+
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/mathjax/2.7.7/MathJax.js"></script>
+<script src="https://cdn.staticfile.org/mathjax/2.7.7/config/TeX-AMS-MML_HTMLorMML-full.js"></script>
+<script>
+  var ayerConfig = {
+    mathjax: true,
+  };
+</script>
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+ 
+<script src="/js/dz.js"></script>
+ 
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    
+
+  </div>
+</body>
+
+</html>

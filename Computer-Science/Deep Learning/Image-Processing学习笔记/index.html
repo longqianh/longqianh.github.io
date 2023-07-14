@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+
+
+<html lang="en,zh-CN,default">
+  
+
+    <head>
+      <meta charset="utf-8" />
+        
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>Image Processing 学习笔记 |  Peter&#39;s Blog</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/images/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    <!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><link rel="alternate" href="/rss2.xml" title="Peter's Blog" type="application/atom+xml">
+</head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-Computer-Science/Deep Learning/Image-Processing学习笔记"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  Image Processing 学习笔记
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/Computer-Science/Deep%20Learning/Image-Processing%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="article-date">
+  <time datetime="2020-01-24T15:34:36.000Z" itemprop="datePublished">2020-01-24</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Notes/">Notes</a> / <a class="article-category-link" href="/categories/Notes/Computer-Science/">Computer Science</a>
+  </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">3.5k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">18 min</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="图像信息处理"><a href="#图像信息处理" class="headerlink" title="图像信息处理"></a>图像信息处理</h1><p>2020年寒假自学的图像信息处理，这是笔记。</p>
+<h2 id="1-灰度变换与空间滤波"><a href="#1-灰度变换与空间滤波" class="headerlink" title="1  灰度变换与空间滤波"></a>1  灰度变换与空间滤波</h2><h3 id="1-1-灰度变换：-s-x3D-T-r"><a href="#1-1-灰度变换：-s-x3D-T-r" class="headerlink" title="1.1 灰度变换：$s&#x3D;T(r)$"></a>1.1 灰度变换：$s&#x3D;T(r)$</h3><ul>
+<li>图像反转：$s&#x3D;L-1-r$</li>
+<li>对数变换：$s&#x3D;c\log(1+r)$</li>
+<li>伽马变换：$s&#x3D;cr^\gamma$</li>
+<li>分段分式线性变换：对比度拉伸、灰度级分层、比特平面分层</li>
+</ul>
+<p>$ \ $ <span id="more"></span></p>
+<h3 id="1-2-直方图处理"><a href="#1-2-直方图处理" class="headerlink" title="1.2 直方图处理"></a>1.2 直方图处理</h3><p>$ h(r_k)&#x3D;n_k$ ，$r_k$ 是第 $k$ 级灰度值，$n_k$ 为图像中灰度为 $r_k$ 的像素个数。不妨从 $0$ 开始，令 $r_k&#x3D;k$</p>
+<p>归一化： $p(r_k)&#x3D;n_k&#x2F;MN$</p>
+<h4 id="1-2-1-直方图均衡化"><a href="#1-2-1-直方图均衡化" class="headerlink" title="1.2.1 直方图均衡化"></a>1.2.1 直方图均衡化</h4><ol>
+<li>$p_s(s)&#x3D;p_r(r)\cdot |\displaystyle\frac{dr}{ds}|&#x3D;p_r(r) &#x2F; |T^{‘}(r)|$</li>
+<li>选取变换函数  $s&#x3D;T(r)&#x3D;(L-1) \displaystyle\int_0 ^r p_r(w)dw$</li>
+<li>$&#x3D;&gt; \quad p_s(s)&#x3D;\displaystyle\frac{1}{L-1}$</li>
+<li>离散形式：$ s_k&#x3D;T(r_k)&#x3D;(L-1)\displaystyle\sum\limits_{j&#x3D;0}^k p_r (r _ j)&#x3D;\displaystyle\frac{L-1}{MN}\sum\limits_{j&#x3D;0}^k n_j $，最后取值四舍五入</li>
+</ol>
+<h4 id="1-2-2-直方图规定化"><a href="#1-2-2-直方图规定化" class="headerlink" title="1.2.2 直方图规定化"></a>1.2.2 直方图规定化</h4><h4 id="1-2-3-局部直方图处理"><a href="#1-2-3-局部直方图处理" class="headerlink" title="1.2.3 局部直方图处理"></a>1.2.3 局部直方图处理</h4><p>略～</p>
+<p>$ \ $</p>
+<h2 id="1-2-空间滤波"><a href="#1-2-空间滤波" class="headerlink" title="1.2 空间滤波"></a>1.2 空间滤波</h2><p>空间滤波器由一个邻域和预定义操作组成。</p>
+<p>$g(x,y)&#x3D;\displaystyle\sum\limits_{s&#x3D;-a}^b\sum\limits_{t&#x3D;-b}^b w(s,t)f(x+s,y+t)$</p>
+<h3 id="1-2-1-空间相关与卷积"><a href="#1-2-1-空间相关与卷积" class="headerlink" title="1.2.1 空间相关与卷积"></a>1.2.1 空间相关与卷积</h3><p>相关上滤波器模版移过图像并计算每个位置乘积之和的处理，卷积的机理类似，但滤波器首先要旋转$180^o$</p>
+<h4 id="1-2-1-1-平滑空间滤波器"><a href="#1-2-1-1-平滑空间滤波器" class="headerlink" title="1.2.1.1 平滑空间滤波器"></a>1.2.1.1 平滑空间滤波器</h4><ul>
+<li>均值滤波器：$g(x,y)&#x3D;\displaystyle\frac{\sum\limits_{s&#x3D;-a}^a\sum\limits_{s&#x3D;-b}^b w(s,t)f(x+s,y+t)}{\sum\limits_{s&#x3D;-a}^a\sum\limits_{s&#x3D;-b}^b w(s,t)}$</li>
+<li>统计排序滤波器   $e.g. $ 中值滤波器：去除椒盐噪声</li>
+</ul>
+<p>$ \ $</p>
+<h4 id="1-2-1-2-锐化空间滤波器"><a href="#1-2-1-2-锐化空间滤波器" class="headerlink" title="1.2.1.2 锐化空间滤波器"></a>1.2.1.2 锐化空间滤波器</h4><p>定义: $\displaystyle\frac{\partial f}{\partial x}&#x3D;f(x+1)-f(x)$ , $\displaystyle\frac{\partial ^2f}{\partial^2 x}&#x3D;f(x+1)+f(x-1)-2f(x)$</p>
+<p>(1) 使用拉普拉斯算子</p>
+<p>$\nabla^2 f(x,y)&#x3D;f(x+1,y)+f(x-1,y)+f(x,y+1)+f(x,y-1)-4f(x,y)$</p>
+<p>$g(x,y)&#x3D;f(x,y)+c[\nabla^2 f(x,y)]$</p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/polly333/p/7269843.html">比较清楚的介绍</a></p>
+<p>(2) 非锐化掩蔽</p>
+<ol>
+<li>模糊原图像 $\overline f (x,y)$</li>
+<li>从原图像中减去模糊图像（产生差值图像，即模版）$g_{mask}(x,y)&#x3D;f(x,y)-\overline f(x,y)$</li>
+<li>将模版加到原图像上 $g(x,y)&#x3D;f(x,y)+k\cdot g_{mask}(x,y)$</li>
+</ol>
+<p>(3) 使用梯度算子</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_29540745/article/details/51918004">Soble算子</a>：$M(x,y)&#x3D;|(z_7+2z_8+z_9)-(z_1+2z_2+z_3)|+|(z_3+2z_6+z_9)-(z_1+2z_4+z_7)$</p>
+<p>$ \ $</p>
+<h3 id="1-2-2-使用模糊技术进行灰度变换和空间滤波"><a href="#1-2-2-使用模糊技术进行灰度变换和空间滤波" class="headerlink" title="1.2.2 使用模糊技术进行灰度变换和空间滤波"></a>1.2.2 使用模糊技术进行灰度变换和空间滤波</h3><h4 id="1-2-2-1-模糊集合论"><a href="#1-2-2-1-模糊集合论" class="headerlink" title="1.2.2.1 模糊集合论"></a>1.2.2.1 模糊集合论</h4><ul>
+<li><p>模糊集合：${(z,\mu(z))}$  有元素和它的隶属度函数组成的数对组成，$\mu(z)\in[0,1]$</p>
+</li>
+<li><p>模糊逻辑：</p>
+<p> $ A\ AND\ B\iff\min(\mu_A(z),\mu_B(z)),\quad \forall z\in Z $ ,</p>
+<p> $A\ OR\ B\iff \max(\mu_A(z),\mu_B(z)),\quad \forall z\in Z$ ,</p>
+<p> $A&#x3D;B\iff\mu_A (z)&#x3D;\mu_B (z),\quad \forall z\in Z $ , </p>
+<p>$A\subseteq B\iff \mu_A(z)\leq\mu_B(z),\quad \forall z\in Z $ ,</p>
+<p>$A\supseteq B\iff \mu_A(z)\geq\mu_B(z),\quad \forall z\in Z $ .</p>
+</li>
+<li><p>应用步骤：</p>
+<ul>
+<li>$IF-THEN$ 形式化</li>
+<li>输入输出模糊化：$\mu_i(z),\mu_o(z)$ </li>
+<li>既满足 $IF$ 又满足 $THEN$ $&#x3D;&gt; INPUT&amp;OUTPUT$ $&#x3D;&gt; \mu_3(z,v)&#x3D;\min{\mu_i(z),\mu_o(v)}$</li>
+<li>对每一个 $z_0$ ，最终模糊输出 $Q(v)&#x3D;\mu_3(z_0,v)$  , 对于多个 $Q_i(v)$ ，全部模糊响应应为单个模糊响应的并集，取 $\max\limits_i (Q_i (v))$ </li>
+<li>去模糊：计算集合重心：$v_0&#x3D;\displaystyle\frac{\sum\limits_{v&#x3D;1}^K vQ(v)}{\sum\limits_{v&#x3D;1}^K Q(v)}$</li>
+</ul>
+</li>
+</ul>
+<h4 id="1-2-2-2-利用模糊集合论进行灰度变换"><a href="#1-2-2-2-利用模糊集合论进行灰度变换" class="headerlink" title="1.2.2.2 利用模糊集合论进行灰度变换"></a>1.2.2.2 利用模糊集合论进行灰度变换</h4><ul>
+<li><p>目的：增强对比度。黑的更黑，白的更白，灰的仍灰</p>
+</li>
+<li><p>$IF-THEN$ 形式化：</p>
+<ul>
+<li><p>$IF\quad dark,\quad THEN \quad darker $</p>
+</li>
+<li><p>$IF\quad gray ,\quad THEN \quad gray$</p>
+</li>
+<li><p>$IF\quad white,\quad THEN \quad whiter$</p>
+</li>
+</ul>
+</li>
+<li><p>输入模糊化：$dark-\mu_{id}(z),\quad gray-\mu_{ig}(z),\quad white-\mu_{iw}(z)$</p>
+<ul>
+<li>$$\mu_{id}(z)&#x3D;\begin{equation}<br>\left{<br>\begin{aligned}<br>1 &amp;, &amp;  0\leq z&lt; 80, \<br> \displaystyle\frac{1}{47}(127-z)&amp; , &amp; 80\leq z\leq 127,\ 0&amp;,&amp; 127&lt;z\leq 255\end{aligned}<br>\right.<br>\end{equation} $$</li>
+<li>$$\mu_{ig}(z)&#x3D;\begin{equation}<br>\left{<br>\begin{aligned}<br>0 &amp;, &amp;  0\leq z&lt; 80, \<br> \displaystyle\frac{1}{47}(z-80)&amp; , &amp; 80\leq z\leq 127,\ \displaystyle\frac{1}{47}(174-z)&amp; , &amp; 127&lt;z\leq 174,\ 0&amp;,&amp; 174&lt;z\leq 255\end{aligned}<br>\right.<br>\end{equation} $$</li>
+<li>$$\mu_{iw}(z)&#x3D;\begin{equation}<br>\left{<br>\begin{aligned}<br>0 &amp;, &amp;  0\leq z&lt; 127, \<br> \displaystyle\frac{1}{47}(z-127)&amp; , &amp; 127\leq z\leq 174,\ 1&amp;,&amp; 174&lt;z\leq 255\end{aligned}<br>\right.<br>\end{equation} $$</li>
+</ul>
+</li>
+<li><p>输出模糊化：$datker-\mu_{od}(v),\quad gray-\mu_{og}(v),\quad whiter-\mu_{ow}(v)$</p>
+<ul>
+<li>$$\mu_{od}(v)&#x3D;\begin{equation}\left {\begin{aligned}\infty,&amp;\quad v&#x3D;v_d\ 0,&amp;\quad otherwise \end{aligned}\right.\end{equation}$$</li>
+<li>$$\mu_{og}(v)&#x3D;\begin{equation}\left {\begin{aligned}\infty,&amp;\quad v&#x3D;v_g\ 0,&amp;\quad otherwise \end{aligned}\right.\end{equation}$$</li>
+<li>$$\mu_{ow}(v)&#x3D;\begin{equation}\left {\begin{aligned}\infty,&amp;\quad v&#x3D;v_w\ 0,&amp;\quad otherwise \end{aligned}\right.\end{equation}$$</li>
+</ul>
+</li>
+<li><p>输出最终模糊响应：$Q(v)&#x3D;\max{Q_d,Q_g,Q_w}&#x3D;\max{\min\limits_{v\in Z}{\mu_{ik}(z_0),\mu_{ok}(v)}}$</p>
+</li>
+<li><p>去模糊：$v_0&#x3D;\displaystyle\frac{\mu_{id}(z_0)\cdot v_d+\mu_{ig}(z_0)\cdot v_g+\mu_{iw}(z_0)\cdot v_w}{\mu_{id}(z_0)+\mu_{ig}(z_0)+\mu_{iw}(z_0)}$</p>
+</li>
+</ul>
+<p>**Code : ** </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 基于模糊集合论的灰度变换 </span></span><br><span class="line"><span class="comment"># 增加对比度</span></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">f_id</span>(<span class="params">z</span>):</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> z &lt; <span class="number">80</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">elif</span> z &gt;= <span class="number">80</span> <span class="keyword">and</span> z &lt;= <span class="number">127</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span> / <span class="number">47</span> * (<span class="number">127</span> - z)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">f_ig</span>(<span class="params">z</span>):</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> z &gt;= <span class="number">80</span> <span class="keyword">and</span> z &lt;= <span class="number">127</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span> / <span class="number">47</span> * (z - <span class="number">80</span>)</span><br><span class="line">    <span class="keyword">elif</span> z &gt; <span class="number">127</span> <span class="keyword">and</span> z &lt;= <span class="number">174</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span> / <span class="number">47</span> * (<span class="number">174</span> - z)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">f_iw</span>(<span class="params">z</span>):</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> z &gt;= <span class="number">127</span> <span class="keyword">and</span> z &lt;= <span class="number">174</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span> / <span class="number">47</span> * (z - <span class="number">127</span>)</span><br><span class="line">    <span class="keyword">elif</span> z &gt; <span class="number">174</span> <span class="keyword">and</span> z &lt;= <span class="number">255</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">gray_trans</span>(<span class="params">img</span>):</span><br><span class="line">    vd = <span class="number">0</span></span><br><span class="line">    vg = <span class="number">127</span></span><br><span class="line">    vw = <span class="number">255</span></span><br><span class="line">    output_img = np.copy(img)</span><br><span class="line">    m, n = img.shape</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, m):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, n):</span><br><span class="line">            tmp1 = f_id(img[i][j]) * vd + f_ig(img[i][j]) * \</span><br><span class="line">                vg + f_iw(img[i][j]) * vw</span><br><span class="line">            tmp2 = f_id(img[i][j]) + f_ig(img[i][j]) + f_iw(img[i][j])</span><br><span class="line">            output_img[i][j] = tmp1 / tmp2</span><br><span class="line">    <span class="keyword">return</span> output_img</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">img = cv2.imread(<span class="string">&#x27;test.jpg&#x27;</span>, <span class="number">0</span>)</span><br><span class="line">img2 = gray_trans(img)</span><br><span class="line">cv2.imshow(<span class="string">&#x27;before&#x27;</span>, img)</span><br><span class="line">cv2.imshow(<span class="string">&#x27;after&#x27;</span>, img2)</span><br><span class="line">cv2.waitKey(<span class="number">0</span>)</span><br><span class="line">cv2.destroyAllWindows()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>效果：</strong>(before and after)</p>
+<p><a target="_blank" rel="noopener" href="https://tva1.sinaimg.cn/large/006tNbRwly1gbdwm7ycd7j30dm0go0w3.jpg" title="before" class="gallery-item"><img src="https://tva1.sinaimg.cn/large/006tNbRwly1gbdwm7ycd7j30dm0go0w3.jpg" alt="before"></a></p>
+<p><a target="_blank" rel="noopener" href="https://tva1.sinaimg.cn/large/006tNbRwly1gbdwm89b0zj30dm0goq6v.jpg" title="after" class="gallery-item"><img src="https://tva1.sinaimg.cn/large/006tNbRwly1gbdwm89b0zj30dm0goq6v.jpg" alt="after"></a></p>
+<h4 id="1-2-2-3-利用模糊集合进行空间滤波"><a href="#1-2-2-3-利用模糊集合进行空间滤波" class="headerlink" title="1.2.2.3 利用模糊集合进行空间滤波"></a>1.2.2.3 利用模糊集合进行空间滤波</h4><p>有一种基于模糊集合的边缘提取方法.</p>
+<p>$ \ $ </p>
+<h2 id="2-频率域滤波"><a href="#2-频率域滤波" class="headerlink" title="2 频率域滤波"></a>2 频率域滤波</h2><h3 id="2-1-傅立叶变换基础"><a href="#2-1-傅立叶变换基础" class="headerlink" title="2.1 傅立叶变换基础"></a>2.1 傅立叶变换基础</h3><h4 id="2-1-1-冲激函数相关"><a href="#2-1-1-冲激函数相关" class="headerlink" title="2.1.1 冲激函数相关"></a>2.1.1 冲激函数相关</h4><ol>
+<li><p>冲激函数 对连续函数取样和对离散函数取样定义有所不同</p>
+</li>
+<li><p>冲激串函数：$\displaystyle s_{\Delta T}(t)&#x3D;\sum\limits_{n&#x3D;-\infty}^{\infty}\delta(t-n\Delta T)$ , 以 $\Delta T$ 为间隔取样</p>
+</li>
+</ol>
+<h4 id="2-1-2-傅立叶变换相关"><a href="#2-1-2-傅立叶变换相关" class="headerlink" title="2.1.2 傅立叶变换相关"></a>2.1.2 傅立叶变换相关</h4><ol>
+<li><p>傅立叶级数：$\displaystyle f(t)&#x3D;\sum\limits_{n&#x3D;-\infty}^\infty c_ne^{j\frac{2\pi n}{T}t},\quad c_n&#x3D;\frac{1}{T}\int_{-\frac{T}{2}}^\frac{T}{2}f(t)e^{-j\frac{2\pi n}{T}t}$, 其中 $f(t)$ 以 $T$ 为周期</p>
+</li>
+<li><p>傅立叶变换：$\displaystyle\mathcal{F}[f(t)]&#x3D;\int_{-\infty}^\infty f(t)e^{-2\pi\mu t} dt $</p>
+</li>
+<li><p>关于原点对称的宽为 $W$ 、高为 $A$ 的带限函数 $W(t)$ 的傅立叶变换： $\mathcal{F}[W(t)]&#x3D;AWsinc(m)$, 其中在数字图像处理中，$sinc(x)&#x3D;\displaystyle\frac{sin(\pi x)}{\pi x}$</p>
+</li>
+<li><p>冲激函数的傅立叶变换：$\mathcal{F}[\delta(t-t_0)]&#x3D;e^{-j2\pi\mu t_0}&#x3D;&gt;\mathcal{F}^{-1}[e^{-j2\pi\mu t_0}]&#x3D;\delta(t-t_0)&#x3D;&gt;\mathcal{F}[e^{-j2\pi\mu_0 t}]&#x3D;\delta(-\mu-\mu_0)$</p>
+</li>
+<li><p>冲激串函数的傅立叶变换 ：</p>
+<ul>
+<li>将冲激串函数用傅立叶级数展开（不展开直接变换似乎不一致收敛，就不能交换求和号和积分号）：$\displaystyle s_{\Delta T}(t)&#x3D;\sum\limits_{n&#x3D;-\infty}^\infty c_ne^{j\frac{2\pi n}{\Delta T}t},\quad c_n&#x3D;\frac{1}{\Delta T}\int_{-\frac{\Delta T}{2}}^\frac{\Delta T}{2} s_{\Delta T}(t)e^{-j\frac{2\pi n}{\Delta T}t}&#x3D;\frac{1}{\Delta T}e^0&#x3D;\frac{1}{\Delta T}\&#x3D;&gt;\displaystyle  s_{\Delta T}(t)&#x3D;\frac{1}{\Delta T}\sum\limits_{n&#x3D;-\infty}^\infty e^{j\frac{2\pi n}{\Delta T}t}$</li>
+<li>$S(\mu)&#x3D;\displaystyle\mathcal{F}[ s_{\Delta T}(t)]&#x3D;\frac{1}{\Delta T}\sum\limits_{n&#x3D;-\infty}^\infty \delta(\mu-\frac{n}{\Delta T})$</li>
+</ul>
+</li>
+<li><p>卷积：</p>
+<p>$\begin{aligned} f(t)*g(t)&amp;\iff F(\mu)\cdot G(\mu)\F(\mu)*G(\mu)&amp;\iff f(t)\cdot g(t)\end{aligned}$</p>
+</li>
+</ol>
+<h4 id="2-1-3-取样"><a href="#2-1-3-取样" class="headerlink" title="2.1.3 取样"></a>2.1.3 取样</h4><ul>
+<li><p>取样后的函数 $\widetilde f(t)&#x3D;f(t)\cdot s_{\Delta T}(t)&#x3D;\displaystyle \sum\limits_{n&#x3D;-\infty}^{\infty}f(t)\delta(t-n\Delta T)$</p>
+</li>
+<li><p>每个取样值：由加权后的冲激强度给出。 $f_k&#x3D;\displaystyle\int_{-\infty}^{\infty}f(t)\delta(t-k\Delta T)&#x3D;f(k\Delta T)$</p>
+</li>
+<li><p>取样后的函数的傅立叶变换：$\displaystyle \widetilde F(\mu)&#x3D;F(\mu)*S(\mu)&#x3D;\frac{1}{\Delta T}\sum\limits_{n&#x3D;-\infty}^{\infty}\int_{-\infty}^{\infty}F(\tau)\delta(\mu-\frac{n}{\Delta T}-\tau)d\tau&#x3D;\frac{1}{\Delta T}\sum\limits_{n&#x3D;-\infty}^{\infty}F(\mu-\frac{n}{\Delta T})$</p>
+<p>这是取样前函数$F(\mu)$ 的一个拷贝的无限、周期序列，确切的说是周期为 $\displaystyle\frac{1}{\Delta T}$ 的无限延伸的连续函数。</p>
+</li>
+<li><p>另一方面，直接变换得：$\widetilde F(\mu)&#x3D;\displaystyle \sum_{n&#x3D;-\infty}^{\infty}\int_{-\infty}^{\infty}f(t)\delta (t-n\Delta T)e^{-j2\pi \mu t}dt&#x3D; \sum_{n&#x3D;-\infty}^{\infty}f(n\Delta T)e^{-j2\pi \mu n\Delta T}$ </p>
+</li>
+<li><p><strong>取样定理</strong>：如果一超过函数最高频率的两倍的取样率来获得样本，连续的带限函数可以完全地从它的样本集来恢复。 $\displaystyle\frac{1}{\Delta T}&gt;2\mu_{max}$</p>
+</li>
+<li><p>复原：令 $H(\mu)&#x3D;\begin{equation}\left{\begin{aligned} \Delta T,&amp;\quad -\mu_{max}\leqslant\mu\leqslant\mu_{max}\ 0.&amp;\quad otherwise\end{aligned}\right.\end{equation}$,  $F(\mu)&#x3D;H(\mu)\cdot \widetilde F(\mu)$，进而由傅立叶逆变换可复原 $f$</p>
+</li>
+<li><p>但是，在实践中我们通常要限制函数的持续时间，相当于要乘一个周期内为 $1$ 其他地方为 $0$ 的函数，而这在频率域内相当于用 $sinc(x)$ 作卷积，这就引入了频率域无限周期分量。这样，在频率域截取时总无法截取全部周期，混淆总会产生。</p>
+</li>
+</ul>
+<h3 id="2-2-离散傅立叶变换-DFT"><a href="#2-2-离散傅立叶变换-DFT" class="headerlink" title="2.2 离散傅立叶变换 DFT"></a>2.2 离散傅立叶变换 DFT</h3><h4 id="2-2-1-单变量-DFT"><a href="#2-2-1-单变量-DFT" class="headerlink" title="2.2.1 单变量$DFT$"></a>2.2.1 单变量$DFT$</h4><p>对 $\widetilde F(\mu)$ 的一个周期取样是 $DFT$  的基础。</p>
+<p>记 $f(n\Delta T)$ 为 $f_n$ ,  $\widetilde F(\mu)&#x3D;\displaystyle \sum_{n&#x3D;-\infty}^{\infty}f_ne^{-j2\pi \mu n\Delta T}$ </p>
+<p>想在周期 $\mu &#x3D; 0$ 和 $\mu&#x3D;\displaystyle\frac{1}{\Delta T}$ 之间得到 $M$ 个等间距的<em>样本</em> ，可令 $\mu&#x3D;\displaystyle\frac{m}{M\Delta T}$.</p>
+<p>离散傅立叶变换 $DFT$ 为：<br>$$<br>F_m&#x3D;\sum\limits_{n&#x3D;0}^{M-1}f_ne^{-j2\pi mn&#x2F;M}<br>$$<br>离散傅立叶逆变换 $IDFT$ 为：<br>$$<br>f_n&#x3D;\frac{1}{M}\sum\limits_{m&#x3D;0}^{M-1}F_m e^{j2\pi mn&#x2F;M}<br>$$<br>为了更方便表示，引入 $u$ 和 $x$ 代替 $m$ 和 $n$ ：</p>
+<p>$DFT$：<br>$$<br>F(u)&#x3D;\sum\limits_{x&#x3D;0}^{M-1}f(x)e^{-j2\pi ux&#x2F;M}<br>$$<br>$IDFT$：<br>$$<br>f(x)&#x3D;\frac{1}{M}\sum\limits_{u&#x3D;0}^{M-1}F(u)e^{j2\pi ux&#x2F;M}<br>$$</p>
+<p>（PS：有点小疑问：为什么是 $f(x)$ 而不是 $ f(x\Delta T)$ ？）</p>
+<p>傅立叶正变换和逆变换得到的函数都是无限周期的，周期为 $M$。</p>
+<h3 id="2-2-2-二维DFT"><a href="#2-2-2-二维DFT" class="headerlink" title="2.2.2 二维DFT"></a>2.2.2 二维DFT</h3><p>略</p>
+<h3 id="2-2-3-频率域滤波器"><a href="#2-2-3-频率域滤波器" class="headerlink" title="2.2.3 频率域滤波器"></a>2.2.3 频率域滤波器</h3><p>过程：空间域 $&#x3D;&gt;$ 傅立叶变换转到频率域 $&#x3D;&gt;$ 在频率域使用模版处理振幅或者相位 $&#x3D;&gt;$ 傅立叶逆变换回到空间域</p>
+<ul>
+<li>理想低&#x2F;高通滤波器</li>
+<li>k阶布特沃斯低&#x2F;高通滤波器</li>
+<li>高斯低&#x2F;高通滤波器</li>
+<li>频率域拉普拉斯算子（需归一化）</li>
+<li>同态滤波（未完全理解）</li>
+<li>选择性滤波器：带通滤波器、陷波滤波器（未实现）</li>
+</ul>
+<p><strong>代码实现：</strong></p>
+<p>（1）：低通&#x2F;高通滤波器</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">IPF</span>(<span class="params">img, d0, flag</span>):</span><br><span class="line">    <span class="comment">#  理想滤波器 ideal pass filter，d0 为滤波器半径</span></span><br><span class="line">    <span class="comment"># flag == 1 : low pass filter; flag == 0 : high pass filter</span></span><br><span class="line">    m, n = img.shape</span><br><span class="line">    ans = np.zeros(img.shape)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(m):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">            <span class="keyword">if</span> (i - m / <span class="number">2</span>)**<span class="number">2</span> + (j - n / <span class="number">2</span>)**<span class="number">2</span> &lt; d0**<span class="number">2</span>:</span><br><span class="line">                ans[i][j] = <span class="number">1</span></span><br><span class="line">    <span class="keyword">if</span> flag == <span class="number">0</span>:</span><br><span class="line">        ans = <span class="number">1</span> - ans</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> ans</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">GPF</span>(<span class="params">img, d0, flag</span>):</span><br><span class="line">    <span class="comment"># 高斯滤波器</span></span><br><span class="line">    m, n = img.shape</span><br><span class="line">    d0 = d0**<span class="number">2</span></span><br><span class="line">    ans = np.zeros(img.shape)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(m):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">            d = (i - m / <span class="number">2</span>)**<span class="number">2</span> + (j - n / <span class="number">2</span>)**<span class="number">2</span></span><br><span class="line">            <span class="keyword">if</span> d &lt; d0:</span><br><span class="line">                ans[i][j] = np.exp(-d / (<span class="number">2</span> * d0))</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> flag == <span class="number">0</span>:</span><br><span class="line">        ans = <span class="number">1</span> - ans</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> ans</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">BPF</span>(<span class="params">img, do, flag, k</span>):</span><br><span class="line">    <span class="comment"># k阶布特沃斯高通滤波器</span></span><br><span class="line">    m, n = img.shape</span><br><span class="line">    d0 = d0**<span class="number">2</span></span><br><span class="line">    ans = np.zeros(img.shape)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(m):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">            d = (i - m / <span class="number">2</span>)**<span class="number">2</span> + (j - n / <span class="number">2</span>)**<span class="number">2</span></span><br><span class="line">            <span class="keyword">if</span> d &lt; d0:</span><br><span class="line">                ans[i][j] = <span class="number">1</span> / (<span class="number">1</span> + (d / d0)**k)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> flag == <span class="number">0</span>:</span><br><span class="line">        ans = <span class="number">1</span> - ans</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> ans</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 高通滤波--提取轮廓</span></span><br><span class="line"><span class="comment"># 低通滤波--模糊化</span></span><br><span class="line">img_man = cv2.imread(<span class="string">&#x27;ch03_5.jpg&#x27;</span>, <span class="number">0</span>)  <span class="comment"># 直接读为灰度图像</span></span><br><span class="line">plt.subplot(<span class="number">131</span>), plt.imshow(img_man, <span class="string">&#x27;gray&#x27;</span>), plt.title(<span class="string">&#x27;before&#x27;</span>)</span><br><span class="line">plt.xticks([]), plt.yticks([])</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">rows, cols = img_man.shape</span><br><span class="line">mask1 = np.ones(img_man.shape, np.uint8)  <span class="comment"># 高通</span></span><br><span class="line">mask1[<span class="built_in">int</span>(rows / <span class="number">2</span>) - <span class="number">30</span>: <span class="built_in">int</span>(rows / <span class="number">2</span>) + <span class="number">30</span>,</span><br><span class="line">      <span class="built_in">int</span>(cols / <span class="number">2</span>) - <span class="number">30</span>:<span class="built_in">int</span>(cols / <span class="number">2</span>) + <span class="number">30</span>] = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">mask2 = np.zeros(img_man.shape, np.uint8)  <span class="comment"># 低通</span></span><br><span class="line">mask2[<span class="built_in">int</span>(rows / <span class="number">2</span>) - <span class="number">30</span>:<span class="built_in">int</span>(rows / <span class="number">2</span>) + <span class="number">30</span>,</span><br><span class="line">      <span class="built_in">int</span>(cols / <span class="number">2</span>) - <span class="number">30</span>:<span class="built_in">int</span>(cols / <span class="number">2</span>) + <span class="number">30</span>] = <span class="number">1</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">mask31 = np.ones(img_man.shape, np.uint8)</span><br><span class="line">mask31[<span class="built_in">int</span>(rows / <span class="number">2</span>) - <span class="number">10</span>:<span class="built_in">int</span>(rows / <span class="number">2</span>) + <span class="number">10</span>,</span><br><span class="line">       <span class="built_in">int</span>(cols / <span class="number">2</span>) - <span class="number">10</span>:<span class="built_in">int</span>(cols / <span class="number">2</span>) + <span class="number">10</span>] = <span class="number">0</span></span><br><span class="line">mask32 = np.zeros(img_man.shape, np.uint8)</span><br><span class="line">mask32[<span class="built_in">int</span>(rows / <span class="number">2</span>) - <span class="number">80</span>:<span class="built_in">int</span>(rows / <span class="number">2</span>) + <span class="number">80</span>,</span><br><span class="line">       <span class="built_in">int</span>(cols / <span class="number">2</span>) - <span class="number">80</span>:<span class="built_in">int</span>(cols / <span class="number">2</span>) + <span class="number">80</span>] = <span class="number">1</span></span><br><span class="line">mask3 = mask31 * mask32  <span class="comment"># 带通</span></span><br><span class="line"></span><br><span class="line">mask = IPF(img_man, <span class="number">30</span>, <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">f1 = np.fft.fft2(img_man)</span><br><span class="line">f1shift = np.fft.fftshift(f1)</span><br><span class="line">f1shift = f1shift * mask</span><br><span class="line">f2shift = np.fft.ifftshift(f1shift)</span><br><span class="line">img_new = np.fft.ifft2(f2shift)</span><br><span class="line">img_new = np.<span class="built_in">abs</span>(img_new)</span><br><span class="line"><span class="comment"># 调整大小范围便于显示</span></span><br><span class="line"><span class="comment"># img_new = (img_new - np.amin(img_new)) / (np.amax(img_new) - np.amin(img_new))</span></span><br><span class="line"></span><br><span class="line">plt.subplot(<span class="number">132</span>), plt.imshow(mask, <span class="string">&#x27;gray&#x27;</span>), plt.title(<span class="string">&#x27;mask&#x27;</span>)</span><br><span class="line">plt.xticks([]), plt.yticks([])</span><br><span class="line">plt.subplot(<span class="number">133</span>), plt.imshow(img_new, <span class="string">&#x27;gray&#x27;</span>), plt.title(<span class="string">&#x27;after&#x27;</span>)</span><br><span class="line">plt.xticks([]), plt.yticks([])</span><br><span class="line">plt.show()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p>（2）：频率域拉普拉斯滤波</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">Laplace</span>(<span class="params">shape</span>):</span><br><span class="line">    m, n = shape</span><br><span class="line">    ans = np.zeros(shape)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(m):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">            d = (i - m / <span class="number">2</span>)**<span class="number">2</span> + (j - n / <span class="number">2</span>)**<span class="number">2</span></span><br><span class="line">            ans[i][j] = <span class="number">1</span> + <span class="number">4</span> * (np.pi**<span class="number">2</span>) * d / (m * n)</span><br><span class="line">            <span class="comment"># 之前失败是由于没有处以mn</span></span><br><span class="line">    <span class="keyword">return</span> ans</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">stdimg</span>(<span class="params">img</span>):</span><br><span class="line">        <span class="comment"># 灰度值归一化</span></span><br><span class="line">    m, n = img.shape</span><br><span class="line">    min_img = np.amin(img)</span><br><span class="line">    max_img = np.amax(img)</span><br><span class="line">    img = np.float64(img)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(m):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">            img[i][j] = (img[i][j] - min_img) / (max_img - min_img)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> img</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">img = cv2.imread(<span class="string">&#x27;ch03_3.jpg&#x27;</span>, <span class="number">0</span>)</span><br><span class="line">img = stdimg(img)</span><br><span class="line">f = np.fft.fft2(img)</span><br><span class="line">f = np.fft.fftshift(f)</span><br><span class="line">mask = Laplace(img.shape)</span><br><span class="line">f *= mask</span><br><span class="line">img_back = np.fft.ifftshift(f)</span><br><span class="line">img_back = np.fft.ifft2(img_back)</span><br><span class="line">img_back = np.<span class="built_in">abs</span>(img_back)</span><br><span class="line">plt.subplot(<span class="number">131</span>), plt.imshow(img, <span class="string">&#x27;gray&#x27;</span>), plt.title(<span class="string">&#x27;before&#x27;</span>)</span><br><span class="line">plt.xticks([]), plt.yticks([])</span><br><span class="line">plt.subplot(<span class="number">132</span>), plt.imshow(mask, <span class="string">&#x27;gray&#x27;</span>), plt.title(<span class="string">&#x27;mask&#x27;</span>)</span><br><span class="line">plt.xticks([]), plt.yticks([])</span><br><span class="line">plt.subplot(<span class="number">133</span>), plt.imshow(img_back, <span class="string">&#x27;gray&#x27;</span>), plt.title(<span class="string">&#x27;after&#x27;</span>)</span><br><span class="line">plt.xticks([]), plt.yticks([])</span><br><span class="line"></span><br><span class="line">plt.show()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="3-图像复原与重建"><a href="#3-图像复原与重建" class="headerlink" title="3 图像复原与重建"></a>3 图像复原与重建</h2><h2 id="4-彩色图像处理"><a href="#4-彩色图像处理" class="headerlink" title="4 彩色图像处理"></a>4 彩色图像处理</h2></div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script> 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>Copyright： </strong>
+          
+          Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/image-processing/" rel="tag">image processing</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/Writing/Latex-Tricks/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            LaTex Tricks
+          
+        </div>
+      </a>
+    
+    
+      <a href="/Computer-Science/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">Git Notes</div>
+      </a>
+    
+  </nav>
+
+  
+   
+     
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2020-2023
+        <i class="ri-heart-fill heart_icon"></i> Longqian Huang
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>Visitors:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>Views:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/cat.png" alt="Peter&#39;s Blog"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about">关于</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/news">近闻</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/publications">发表</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/projects">项目</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/notes">笔记</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/gallery">画廊</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>来，请俺喝杯咖啡！</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+ <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+  });
+
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/mathjax/2.7.7/MathJax.js"></script>
+<script src="https://cdn.staticfile.org/mathjax/2.7.7/config/TeX-AMS-MML_HTMLorMML-full.js"></script>
+<script>
+  var ayerConfig = {
+    mathjax: true,
+  };
+</script>
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+ 
+<script src="/js/dz.js"></script>
+ 
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    
+
+  </div>
+</body>
+
+</html>

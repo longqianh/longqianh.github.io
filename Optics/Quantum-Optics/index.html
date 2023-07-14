@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+
+
+<html lang="en,zh-CN,default">
+  
+
+    <head>
+      <meta charset="utf-8" />
+        
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>Quantum Optics Notes |  Peter&#39;s Blog</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/images/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    <!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><link rel="alternate" href="/rss2.xml" title="Peter's Blog" type="application/atom+xml">
+</head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-Optics/Quantum-Optics"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  Quantum Optics Notes
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/Optics/Quantum-Optics/" class="article-date">
+  <time datetime="2021-01-25T03:01:43.000Z" itemprop="datePublished">2021-01-25</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Notes/">Notes</a> / <a class="article-category-link" href="/categories/Notes/Optics/">Optics</a>
+  </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">3k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">12 min</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="量子光学笔记"><a href="#量子光学笔记" class="headerlink" title="量子光学笔记"></a>量子光学笔记</h1><p>这种讲座类的课，应该每节课课前看好论文，课后做好总结，及时与老师交流问题。</p>
+<p>Author：Peter_H</p>
+<p>致谢：屠老师，汤圆老师，海威同志，梓儿</p>
+<h2 id="Photon"><a href="#Photon" class="headerlink" title="Photon"></a>Photon</h2><ul>
+<li><p>光子的大小：以相互作用范围来衡量</p>
+</li>
+<li><p>单光子干涉</p>
+<ul>
+<li>Dirac：光子只与自身发生作用，光子的波通过两个狭缝时自身产生了干涉</li>
+</ul>
+</li>
+<li><p>引力波探测：略</p>
+</li>
+</ul>
+<h2 id="Photon-Statistics"><a href="#Photon-Statistics" class="headerlink" title="Photon Statistics"></a>Photon Statistics</h2><ul>
+<li><p>Uncertainty principle<br>$$<br>\begin{aligned}<br>\Delta x\cdot\Delta p&amp;\ge \hbar&#x2F;2 \<br>\Delta E\cdot\Delta t&amp;\ge\hbar&#x2F;2 \quad \text{能量,时间（波列长度）}\<br>\Delta n\cdot\Delta \phi&amp;\ge \hbar&#x2F;2 \quad \text{光子数，相位}</p>
+<p>\end{aligned}<br>$$</p>
+</li>
+<li><p>微波辐射先于激光产生：产生微波波段需要的跃迁能量较低，可以来自分子的振动与转动；微波波段的光对谐振腔的要求也小，对于同样的频率展宽，谐振腔的长度改变容易得到允许。</p>
+<p>（原子发光—&gt;在展宽范围内满足谐振条件的可以进行谐振）</p>
+</li>
+<li><p>如何分辨激光与F-P干涉仪产生的单色光？</p>
+<p>利用二阶相干函数 $g^{(2)}$。激光是处于相干态的光，光子数分布为泊松分布，$g^{(2)}(0)&#x3D;1$ ；F-P干涉仪产生的单色光是热光中选频选出来的单频光，属于热光场，$g^{(2)}&gt;1$。</p>
+</li>
+</ul>
+ <span id="more"></span>
+
+<ul>
+<li><p>小孔衍射：小孔小到多少光会通不过</p>
+<ul>
+<li>入射  $\vec E&#x3D;\vec E_0 e^{ik_zz}$, 出射 $\vec E’&#x3D;\vec E_0e^{i\vec k’\cdot \vec r}$</li>
+<li>动量守恒：$k_z^2&#x3D;|k’|^2&#x3D;k_x’^2+k_y’^2+k_z’^2$</li>
+<li>$\hbar k_x\cdot D\ge \hbar&#x2F;2 \implies k_x\ge 1&#x2F;2D$</li>
+<li>$\vec E’&#x3D;\vec E_0 e^{ik_z’z}$, 当$k_z$ 为虚数时，光场会衰减，将无法通过很大距离</li>
+<li>因此当 $D&#x3D;D^*$ 使得 $k_x’^2+k_y’^2&gt;k_0^2$ 时，光将会很快衰减，无法通过小孔</li>
+<li>临界时 $k_z’&#x3D;0,k_x’&#x3D;k_y’&#x3D;1&#x2F;2D^<em>\implies D^</em>&#x3D;\displaystyle\frac{1}{\sqrt 2 k_z}$</li>
+</ul>
+</li>
+<li><p>超快激光</p>
+<ul>
+<li>为了减小发光时间，增大所发光谱宽度</li>
+</ul>
+</li>
+<li><p>理解光子数与相位之间的不确定度</p>
+<ul>
+<li>考虑 1mW光纤，传递 【1THz带宽】的信息: i.e. 每秒$10^{12}$ 个脉冲 </li>
+<li>单个脉冲能量为 $\Delta E&#x3D;10^{-3}&#x2F;10^{12}&#x3D;10^{-15} \ J$</li>
+<li>估计：$h\nu\approx 6\times 10^{-34}\times 3\times 10^8&#x2F;(400\times 10^{-9})\approx 5\times 10^{-19}$</li>
+<li>对应 $\bar n&#x3D;\Delta E&#x2F;h\nu\approx 10^{-15}&#x2F;10^{-20}\approx 10^5$ 个光子，注意这是一个脉冲的平均光子数, 由于是泊松分布，方差 $V(n)&#x3D;\bar n$, 进而标准差为 $\Delta n&#x3D;\sqrt{V(n)}&#x3D;\sqrt{\bar n}$</li>
+<li>量子噪声：$SNR&#x3D;\Delta n&#x2F;n$ ,$ n&#x3D;E&#x2F;h\nu&#x3D;10^{-3}&#x2F;10^{-20}\approx 10^{17}$</li>
+<li>传递更多信息需要减少单个脉冲能量，光子数会减小，量子噪声会不断增加，因此存在信息的传递极限</li>
+</ul>
+</li>
+<li><p>Photon statistic s of different light sources</p>
+<ul>
+<li>量子二阶相干函数<br>$$<br>g^{(2)}(\tau)&#x3D;\frac{\langle I(t)I(t+\tau)\rangle}{\langle I(t)\rangle^2}<br>$$</li>
+</ul>
+</li>
+<li><p>相干态的光子数分布为泊松分布，对应 $g^{(2)}(0)&#x3D;1$<br>  $$<br>  P(m)&#x3D;\frac{\langle n\rangle^m}{m!}e^{-\langle n\rangle}<br>  $$</p>
+<ul>
+<li><p>光子群聚态（bunching）的 $g^{(2)}&gt;1$, 光子倾向于成群地到达探测器. e.g. 热光场 </p>
+<p>服从玻色-爱因斯坦分布：</p>
+</li>
+</ul>
+<p>$$<br>  P_{th}(m)&#x3D;\frac{\langle n\rangle^m}{(1+\langle n\rangle)^{m+1}}<br>$$</p>
+<ul>
+<li>光子反群聚态（anti-bunching）的 $g^{(2)}&lt;1$, 光子倾向于以均匀的时间间隔到达探测器. e.g. 光子数态</li>
+</ul>
+</li>
+<li><p>经典二阶相干函数有 $1&lt;g^{(2)}&lt;\infty$, 光子反群聚效应是非经典效应，对应着亚泊松分布（subpoission distribution)</p>
+</li>
+<li><p>单光子源</p>
+<ul>
+<li><p>$\langle n\rangle&#x3D;1$</p>
+</li>
+<li><p>由自发辐射产生，受激辐射产生的光子是 $\ge 2$</p>
+</li>
+<li><p>“提纯”：</p>
+<ul>
+<li>抽真空：增加气体原子之间的间距</li>
+<li>激发频率不能过高，重复间隔应该大于光子寿命：光子寿命 $3\sim 8 \ ns$, 如果重复频率过高，第一个激发光子还未湮灭，下一个光子又被激发，相当于实际上无法得到单光子</li>
+<li>激发时间应该小于光子寿命：一次脉冲只跃迁一次 。否则一次会激发多个光子，也不再是单光子</li>
+</ul>
+</li>
+<li><p>性能评估</p>
+<ul>
+<li><p>单光子纯度：二阶相干度 $g^{(2)}(\tau&#x3D;0)$</p>
+</li>
+<li><p>全同性：双光子 Hong-Ou-Mandel 干涉测量，全同光子会有量子干涉相消</p>
+<a target="_blank" rel="noopener" href="https://tva1.sinaimg.cn/large/008eGmZEly1gn09rgq6cxj315v0rsncu.jpg" title="image-20210125213802478" class="gallery-item"><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gn09rgq6cxj315v0rsncu.jpg" alt="image-20210125213802478" style="zoom:33%;" /></a>
+</li>
+<li><p>提取效率：光子数测量</p>
+</li>
+<li><p>亮度</p>
+</li>
+<li><p>可集成性</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>其他</p>
+<ul>
+<li><p>有机分子的漂白：强光照射下光子将有机分子的键打断，其显色性会消失，呈现白色</p>
+</li>
+<li><p>量子点：“人工原子”，耐漂白</p>
+</li>
+<li><p>谐振腔+量子点，可以诱导量子点往腔的模式上发光，因而可以选择波长</p>
+</li>
+<li><p>谐振腔的Q值不能过大：否则腔寿命 $\kappa\propto 1&#x2F;\mathcal{F}$ 很大，光子的相干长度 $L&#x3D;c\kappa$ 很长，导致前后光子态重叠严重</p>
+</li>
+<li><p>为什么不用积分球控制单光子的出射角度</p>
+<ul>
+<li>积分球不是全反的，多次反射后光亮度会有较大损失</li>
+<li>多次反射使得光子路径重叠严重，单光子纯度受损，可能有多光子态出射</li>
+</ul>
+</li>
+<li><p>Purcell 效应：使自发辐射寿命变短</p>
+</li>
+<li><p>光子探测：</p>
+<ul>
+<li><p>压缩态不能连续测量，探测器响应变慢</p>
+<p>不能连续测量的”感性理解“：到压缩态的“顶部和底部”是周期的，要等待</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="Cavity-Quantum-Electrodynamics"><a href="#Cavity-Quantum-Electrodynamics" class="headerlink" title="Cavity Quantum Electrodynamics"></a>Cavity Quantum Electrodynamics</h2><ul>
+<li><p>「那个天平」</p>
+<ul>
+<li>强耦合下，光场会把腔壁极化，光子的能量部分以光场形式保存在了腔壁中，腔的总能量增加，根据质能方程 $E&#x3D;mc^2$, 天平右边质量会增加</li>
+<li>强耦合：$g_0\ge k\ &amp;\  g_0\ge \nu$</li>
+</ul>
+</li>
+<li><p>Coupling strength<br>$$<br>g_0\propto \sqrt{\frac{1}{L W_0^2}}<br>$$<br>$L$ 为腔长，$W_0$ 为光束束腰直径</p>
+</li>
+<li><p>Decay of the cavity field （腔内光子寿命）<br>$$<br>\kappa&#x3D;\frac{\pi c}{2L\mathcal{F}}<br>$$<br>$\mathcal{F}$ 是腔的细度。</p>
+</li>
+<li><p>Single-atom Laser</p>
+<ul>
+<li><p>一个原子实现粒子数反转：一个原子处于激发态，上能态1个，下能态0</p>
+</li>
+<li><p>利用外界光将腔内单原子激发到激发态，来接受光子的激发</p>
+</li>
+<li><p>需要克服光子寿命短的问题，保证光子湮灭前把原子激发到激发态： 利用一排处于激发态的单原子，不断将原子推进腔内，一个原子受激发后接着推进下一个原子</p>
+<p>“单原子”：每次激发腔内只有一个原子，激发完送进去下一个</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="Laser-Cooling"><a href="#Laser-Cooling" class="headerlink" title="Laser Cooling"></a>Laser Cooling</h2><ul>
+<li><p>利用激光与原子的相互作用降低原子的热运动速率</p>
+</li>
+<li><p>限制因素：激光谱线有一定的自然宽度: 能量不是 $\infty$<br>$$<br>\Delta E\cdot \Delta t\ge \frac {\hbar}{2}<br>$$</p>
+</li>
+<li><p>Laser cooling is achieved by using the Doppler effect to reduce $v_{rms}$ </p>
+<ul>
+<li>对面打光，原子吸收光子后处于激发态，速度下降，然后自发辐射光子（方向不确定）</li>
+</ul>
+</li>
+<li><p>The effect of reducing $v_{rms}$ on the temperature of the sample may be calculated using the equipartition theorem:<br>$$<br>\frac 1 2 m v_{rms}^2&#x3D;\frac 3 2 kT<br>$$</p>
+</li>
+<li><p>Applications</p>
+<ul>
+<li>使原子发出宽度近乎极限的光谱线 ( $p\to 0\implies \lambda\to \infty\implies \nu \to 0$ )</li>
+<li>极高分辨率的光谱分析</li>
+<li>高精度原子钟：原子钟是利用原子吸收或释放能量时发出的电磁波来计时的。由于这种电磁波非常稳定，再加上利用一系列精密的仪器进行控制，原子钟的计时就可以非常准确了。频率越高，每秒的脉冲越多，显然越精确。</li>
+<li>玻色-爱因斯坦凝聚</li>
+</ul>
+</li>
+<li><p>Evaporative Cooling</p>
+<ul>
+<li>将势阱做低，高能量原子可隧穿出，留下低能量的原子</li>
+</ul>
+</li>
+<li><p>Notes. </p>
+<ul>
+<li>冷原子在太阳照射下温度不会升高很多：物体吸收光的波长与其主动辐射光的波长相同，冷原子谱线数少且线宽有限</li>
+<li>需要预冷：处于室温的原子难以进行冷却，因为初始热运动速度太快，激光难以对准；线宽太大，难以利用多普勒效应进行冷却</li>
+</ul>
+</li>
+</ul>
+<h2 id="Bose-Einstein-Condensation"><a href="#Bose-Einstein-Condensation" class="headerlink" title="Bose-Einstein Condensation"></a>Bose-Einstein Condensation</h2><ul>
+<li><p>Bosons (sym wavefunctions) and Fermions (antonym wavefunctions) </p>
+</li>
+<li><p>Identical fermions cannot occupy the same space —&gt; hard to collapse</p>
+</li>
+<li><p>BEC is a <em>phase transition</em> occurs in an ideal gas, for which interatomic forces are neglligible</p>
+</li>
+<li><p>BEC atoms:each in the save wave function, and  de Broglie wavelength  $\lambda_{dB}&#x3D;h&#x2F;p&#x3D;h&#x2F;(2\pi m kT)^{1&#x2F;2}$ increases as $T$ is lowered, and a phase transition to a BEC state occurs when $\lambda_{dB}$ reaches the atomic separation  ( maybe hence gas atoms will have interaction ) （实现条件是粒子的德布罗意波长大于粒子的间距） </p>
+<p>抽真空：不抽会变成液态&#x2F;固态</p>
+</li>
+<li><p>是一种宏观量子现象，指宏观数目的玻色子处于同一个量子基态</p>
+</li>
+<li><p>BEC waves show interference phenomena, but unlike laser beams (which are in non-equilibrium states), a <em>BEC wave is an equilibrium state</em></p>
+<p>（激光中原子处于非稳态，激发态）</p>
+</li>
+</ul>
+<h2 id="Quantum-Nanophotonics"><a href="#Quantum-Nanophotonics" class="headerlink" title="Quantum Nanophotonics"></a>Quantum Nanophotonics</h2><ul>
+<li><p>Quantum Dot</p>
+<p>A quantum dot is a nanocrystal made of semiconductor materials that are small enough to exhibit quantum mechanical properties. Its excitons are confined in all three spatial dimensions.</p>
+<ul>
+<li><p>In fluorescent dye applications the frequency of the emitted light increases as the size of the quantum dot decreases.  量子点尺寸不同，发出的光波长也不同</p>
+</li>
+<li><p>应用：高纯度单光子源 $g^{(2)}&lt;0.05$</p>
+</li>
+<li><p>跃迁能量小于带宽 </p>
+<a target="_blank" rel="noopener" href="https://tva1.sinaimg.cn/large/008eGmZEly1gn0dqph3plj30ha0ik0zd.jpg" title="image-20210125235543904" class="gallery-item"><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gn0dqph3plj30ha0ik0zd.jpg" alt="image-20210125235543904" style="zoom:33%;" /></a></li>
+</ul>
+</li>
+<li><p>Superlattices</p>
+<p>Periodic array of quantum structures. </p>
+<ul>
+<li><p>e.g. Multiple Quantum Well</p>
+</li>
+<li><p>Quantum Cascade Lasers 量子级联激光器</p>
+<ul>
+<li><p>Broad spectral range $4\sim 24 \ \mu m$</p>
+</li>
+<li><p>Simultaneous lasing at multiple wavelength</p>
+</li>
+<li><p>Only use electrons in the conduction band (unipolar lasers)  *</p>
+</li>
+</ul>
+</li>
+<li><p>Intra band transition between various subbands of conduction band</p>
+<ul>
+<li><p>One electron can emit many photons when it <em>cascades down in a series of energy steps</em></p>
+</li>
+<li><p>通常的半导体激光器是发光的机制是导带和价带中的电子空穴对在复合过程中发出光子，而量子级联激光器的原理则是，在多层半导体形成的周期性量子阱超晶格结构中，利用其子能带之间的电子跃迁发光</p>
+</li>
+<li><p>详细原理：「利用声子共振输运」在外场作用下，有源区三个量子阱组成最低三个能级 n1， n2， n3。n3 和 n2 能 级为电子受激跃迁的上激发态能级和下激发态能 级，通过设计各阱的宽度和间隔，使 n3 和 n2 能级的 能量差 E3 -E2 对应于所需激光器的激射波长，并使 n2 和 n1 能级的能量差 E2 -E1 为一个光学声子的能 量;设计注入区中各阱的宽度和间隔，使在外场作用 下注入区形成微带和微带隙，使微带与同一周期有源区中的 n2 和 n1 能级对齐并与下一个周期有源区 的 n3 能级对齐，使微带隙与同一周期有源区 n3 能 级对齐。在有源区 n3 能级上的电子受激跃迁到 n2 能级并发射光子，n2 能级上的电子释放一个光学声 子，通过共振输运快速弛豫到 n1 能级，在声子辅助下隧穿经过注入区的微带注入到下一个周期有源区 的上激发态。重复上一周期的输运物理过程，一级一级传递下去，通过级联过程实现一个电子可发射和级数 N相等的 N个光子</p>
+<a target="_blank" rel="noopener" href="https://tva1.sinaimg.cn/large/008eGmZEly1gn0ve40p80j30pk0iygqd.jpg" title="image-20210126100624863" class="gallery-item"><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gn0ve40p80j30pk0iygqd.jpg" alt="image-20210126100624863" style="zoom:33%;" /></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Quantum Line</p>
+<ul>
+<li>Drude-Lorentz model: neglects any long-range interaction between the electrons</li>
+<li>Fermi-Landau liquid theory: quasiparticles</li>
+<li>Luttinger liquid theory: strongly correlated electronic systems in 1-D system</li>
+</ul>
+</li>
+<li><p>Others</p>
+<ul>
+<li><p>冷原子+纳米光纤：可以远距离耦合两个原子态，两个原子态通过光纤交换光子</p>
+</li>
+<li><p>量子阱激光器：量子阱激光器是有源层非常薄，而产生量子尺寸效应的异质结半导体激光器。</p>
+<p>在量子阱激光器中，由于势阱宽度通常小于电子和空穴的扩散长度，电子和空穴还未来得及扩散就被势垒限制在势阱之中产生很高的注入效率 ，比双异质结更易于实现粒子数反转，其增益大为提高 ，甚至可高达两个数量级</p>
+</li>
+</ul>
+</li>
+</ul>
+</div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script> 
+      <!-- reward -->
+      
+      <div id="reword-out">
+        <div id="reward-btn">
+          Donate
+        </div>
+      </div>
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>Copyright： </strong>
+          
+          Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/optics/" rel="tag">optics</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/Writing/Writing-Review/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            How to Write Review
+          
+        </div>
+      </a>
+    
+    
+      <a href="/Computer-Science/%E8%BD%AF%E4%BB%B6%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">Software Technical Foundation Notes</div>
+      </a>
+    
+  </nav>
+
+  
+   
+     
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2020-2023
+        <i class="ri-heart-fill heart_icon"></i> Longqian Huang
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>Visitors:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>Views:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/cat.png" alt="Peter&#39;s Blog"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about">关于</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/news">近闻</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/publications">发表</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/projects">项目</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/notes">笔记</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/gallery">画廊</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>来，请俺喝杯咖啡！</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+ <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+  });
+
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/mathjax/2.7.7/MathJax.js"></script>
+<script src="https://cdn.staticfile.org/mathjax/2.7.7/config/TeX-AMS-MML_HTMLorMML-full.js"></script>
+<script>
+  var ayerConfig = {
+    mathjax: true,
+  };
+</script>
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+ 
+<script src="/js/dz.js"></script>
+ 
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    
+
+  </div>
+</body>
+
+</html>

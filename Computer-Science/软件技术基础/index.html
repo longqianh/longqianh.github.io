@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+
+
+<html lang="en,zh-CN,default">
+  
+
+    <head>
+      <meta charset="utf-8" />
+        
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>Software Technical Foundation Notes |  Peter&#39;s Blog</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/images/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    <!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><link rel="alternate" href="/rss2.xml" title="Peter's Blog" type="application/atom+xml">
+</head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-Computer-Science/软件技术基础"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  Software Technical Foundation Notes
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/Computer-Science/%E8%BD%AF%E4%BB%B6%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80/" class="article-date">
+  <time datetime="2021-01-11T16:00:00.000Z" itemprop="datePublished">2021-01-12</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Notes/">Notes</a> / <a class="article-category-link" href="/categories/Notes/Computer-Science/">Computer Science</a>
+  </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">4.2k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">17 min</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="软件技术基础—光电"><a href="#软件技术基础—光电" class="headerlink" title="软件技术基础—光电"></a>软件技术基础—光电</h1><p>光电的软件技术基础课程，授课教师是白剑老师，这是一篇关于这门课的复习笔记。</p>
+ <span id="more"></span>
+
+<h1 id="复习"><a href="#复习" class="headerlink" title="复习"></a>复习</h1><h2 id="1-算法"><a href="#1-算法" class="headerlink" title="1 算法"></a>1 算法</h2><ul>
+<li><p>特征：能行性、确定性、有穷性、完备性</p>
+</li>
+<li><p>基本要素：数据和对数据的运算、控制结构</p>
+</li>
+<li><p>算法设计：列举、归纳、递推、递归、回溯</p>
+</li>
+<li><p>递归：边界条件、递归前进段、递归返回段</p>
+</li>
+<li><p>评价：正确性、可读性、健壮性（异常处理）、效率</p>
+</li>
+<li><p>时间复杂度：所需基本运算的执行次数</p>
+</li>
+</ul>
+<h2 id="2-数据结构"><a href="#2-数据结构" class="headerlink" title="2 数据结构"></a>2 数据结构</h2><ul>
+<li><p>概念：相互关联的数据元素的集合</p>
+</li>
+<li><p>存储结构：顺序存储、链式存储、索引存储、散列存储</p>
+</li>
+<li><p>线性表：具有线性结构的有序序列</p>
+<ul>
+<li>结构特征：有且只有一个根结点；有且只有一个终端结点；其它结点有且只有一个前件和一个后件</li>
+<li>栈、队列：限定在一端进行插入与删除的线性表</li>
+</ul>
+</li>
+<li><p>顺序存储结构</p>
+<ul>
+<li>特点<ul>
+<li>存储空间连续</li>
+<li>逻辑上相邻则物理位置上相邻</li>
+<li>可随机存取</li>
+</ul>
+</li>
+<li>顺序栈：<code>s[0]~s[m-1]</code>,  <code>*top</code> 指向栈顶，<code>*top=0</code>栈空，<code>*top=m</code>栈满</li>
+<li><strong>顺序队列</strong>：<code>q[0]~q[m-1]</code>, <code>*front</code>指向队头，<code>*rear</code>指向队尾，<code>*front=*rear</code>则队空，存在假溢出的问题</li>
+<li>循环队列</li>
+</ul>
+</li>
+<li><p>链式存储结构</p>
+<ul>
+<li>线性链表</li>
+<li>栈、队列的链式结构</li>
+<li>双向链表、循环链表</li>
+</ul>
+</li>
+<li><p>树</p>
+<ul>
+<li><p>具有分支和层次关系的非线性数据结构</p>
+</li>
+<li><p>度</p>
+<ul>
+<li>结点的度：该结点拥有的子树数目</li>
+<li>树的度：最大的结点的度</li>
+</ul>
+</li>
+<li><p>二叉树</p>
+<ul>
+<li><p>第 $i$ 层最多 $2^{i-1}$ 个结点</p>
+</li>
+<li><p>深度为 $h$ 的二叉树最多 $2^{h}-1$ 个结点</p>
+</li>
+<li><p>满二叉树：全填满，深度为 $h$ 且有 $2^h-1$ 个结点的树</p>
+</li>
+<li><p>完全二叉树：深度为 $h$ 的完全二叉树满足，前 $h-1$ 层为满二叉树，第 $h$ 层结点依次占据最左边的位置</p>
+<ul>
+<li><p>有有孩子必有左孩子</p>
+</li>
+<li><p>度为1的结点数为0或1</p>
+</li>
+<li><p>叶子结点只可能出现在最大和次大层上</p>
+</li>
+</ul>
+</li>
+<li><p><strong>求叶子结点</strong>：设二叉树叶子结点数为 $n_0$, 度为 $2$ 的结点数为 $n_2$, 则 $n_0&#x3D;n_2+1$</p>
+<ul>
+<li>证明：$n&#x3D;n_0+n_1+n_2&#x3D;link+1&#x3D;n_1+2n_2+1\implies n_0&#x3D;n_2+1$</li>
+<li>$k$ 叉树：$n&#x3D;\sum_i^k n_i&#x3D;\sum_i^k i\cdot n_i+1\implies n_0&#x3D;\sum_i (i-1)n_i+1$</li>
+</ul>
+</li>
+<li><p>具有 $n$ 个结点的二叉树深度至少为 $\lfloor\log_2 n\rfloor+1$，具有 $n$ 个结点的完全二叉树深度为 $\lfloor\log_2 n\rfloor+1$</p>
+<ul>
+<li>证明：$n\le 2^h-1&lt;2^h\implies h&gt; \log_2 n$ 又 $h\in \mathbb{Z}\implies h\ge \lfloor \log_2 n\rfloor +1$</li>
+</ul>
+</li>
+<li><p>遍历</p>
+<ul>
+<li>先序：访问根节点，<em>遍历</em> 左子树，<em>遍历</em> 右子树</li>
+<li>中序：<em>遍历</em> 左子树，访问根节点，<em>遍历</em> 右子树</li>
+<li>后序：<em>遍历</em> 左子树，<em>遍历</em> 右子树，访问根节点</li>
+<li>层序：广度优先搜索，利用队列</li>
+<li>由遍历序列确定二叉树<ul>
+<li>在先序&#x2F;后序序列中确定根结点，注意根在先序中是最先遍历，在后序中最后遍历</li>
+<li>在中序序列中搜索根结点，拆分为左右两个子树的中序序列</li>
+<li>递归前两步</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>递归求二叉树高度：非空时高度为左右子树最大高度加1</p>
+</li>
+</ul>
+</li>
+<li><p>哈夫曼树</p>
+<ul>
+<li><p>树的带权路径最小的二叉树，注意带权路径是叶子的权 $w_i$ 与路径 $l_i$ 的积 $WPL&#x3D;\sum w_il_i$</p>
+</li>
+<li><p>无度为1的结点：可直接去掉，叶子上提</p>
+</li>
+<li><p>若有 $n$ 个权值，则形成的哈夫曼树有 $2n-1$ 个结点</p>
+<ul>
+<li>证明：$n_1&#x3D;0,n_0&#x3D;n&#x3D;n_2+1\implies N&#x3D;n_0+n_1+n_2&#x3D;2n-1$</li>
+</ul>
+</li>
+<li><p>若高度为 $h$，则最多有 $2^h-1$ 个结点（满二叉树），最少有 $2h-1$ 个结点</p>
+</li>
+<li><p>构造：哈夫曼算法，从森林中取两个最小权值合并成新树，递归构造</p>
+</li>
+<li><p>哈夫曼树的不唯一性：结点权值相等时，就会出现不同的哈夫曼树</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>​		</p>
+<ul>
+<li><p>图</p>
+<ul>
+<li>$G&#x3D;(V,E)$</li>
+<li>子图：$G&#x3D;(V,E),G_1&#x3D;(V_1,E_1),G_1\sub G\impliedby V_1\sub V &amp; E_1\sub E$</li>
+<li>连通图：任意两个顶点 $v$ 和 $u$ 均存在从 $v$ 到 $u$ 的路径</li>
+<li>网：边具有权值的图</li>
+<li>生成树：包含无向图 $G$ 所有顶点的极小连通子图</li>
+</ul>
+</li>
+<li><p>设有 $n$ 个顶点，完全图有 $n(n-1) $ 条边，稀疏图有 $&lt;n\log n$ 条边，稠密图有 $&gt;n\log n$ 条边</p>
+<ul>
+<li>度：与顶点关联的边的数目，等于入度+出度，所有顶点的度为 $2e$, 若图 $G$ 有 $e$ 条边</li>
+<li>遍历：DFS，BFS</li>
+<li>最小生成树：无向带权图权值之和最小的生成树<ul>
+<li>算法：Prim算法是以点为对象，挑选与点相连的最短边来构成最小生成树。而Kruskal算法是以边为对象，不断地加入新的不构成环路的最短边来构成最小生成树。</li>
+<li>Prim算法<ul>
+<li>初始最小生成树 $U&#x3D;{u_0}$, 边 $ TE&#x3D;{}$</li>
+<li>在所有 $u\in U,v\in V-U$ 的边 $(u,v)\in E$ 中，找出一条权值最小的边 $(u’,v_0)$</li>
+<li>将 $v_0$ 加入 $U$, $(u’,v_0)$ 加入 $TE$</li>
+<li>重复上述步骤，直到 $U&#x3D;V$</li>
+<li>对邻接矩阵，复杂度 $O(n^2)$，对邻接表 $O[(n+e)\log_2 (n)]$,适用于稠密图</li>
+</ul>
+</li>
+<li>Krustal算法<ul>
+<li>复杂度 $O(e\log_2(e))$ 适用于稀疏图</li>
+<li>由 $n$ 个顶点生成 $n$ 个连通分量</li>
+<li>选一条权值最小的边 $(u’,v’)$，连接两连通分量</li>
+<li>重复上述步骤</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="维护最大堆"><a href="#维护最大堆" class="headerlink" title="维护最大堆"></a>维护最大堆</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">// MAP-HEAPIFY</span><br><span class="line">MAX_HEAPIFY(A,i)</span><br><span class="line">	l = LEFT(i)</span><br><span class="line">    r = RIGHT(i)</span><br><span class="line">    <span class="keyword">if</span> l &lt;= A.size <span class="keyword">and</span> A[l]&gt;A[i]</span><br><span class="line">        largest = l</span><br><span class="line">    <span class="keyword">else</span> </span><br><span class="line">    	largest = i</span><br><span class="line">    <span class="keyword">if</span> r &lt;= A.size <span class="keyword">and</span> A[r]&gt;A[largest]</span><br><span class="line">    	largest = r</span><br><span class="line">    <span class="keyword">if</span> largest != i</span><br><span class="line">    	exchange(A[i],A[largest]) // 交换了 i 和 largest 位置的元素</span><br><span class="line">    	MAX_HEAPIFY(A,largest)</span><br></pre></td></tr></table></figure>
+
+<p>维护最大&#x2F;小堆的时间复杂度为 $\log(n)$，常用在连续取出最大值或最小值。</p>
+<h4 id="优先队列"><a href="#优先队列" class="headerlink" title="优先队列"></a>优先队列</h4><p>普通的队列是先进先出，而在优先队列中，元素被赋予优先级。当访问元素时，具有最高优先级的元素最先删除。优先队列具有最高级先出 （first in, largest out）的行为特征。</p>
+<p>优先队列在队列基础上添加了内部的一个排序，它本质是一个堆实现的。因而维护堆的时候可以直接用STL的 <code>priority_queue</code>.</p>
+<p>less是从大到小，greater是从小到大？</p>
+<h2 id="3-查找与排序"><a href="#3-查找与排序" class="headerlink" title="3 查找与排序"></a>3 查找与排序</h2><h3 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h3><ul>
+<li><p>平均查找长度 $ASL&#x3D;\sum p_iC_i$</p>
+</li>
+<li><p>二分查找：利用判定树分析<br>$$<br>ASL_{bs}&#x3D;\frac{1}{n}\sum_{i&#x3D;1}^h i\cdot 2^{i-1}\approx \log_2 n<br>$$</p>
+</li>
+<li><p>散列表技术</p>
+<ul>
+<li><p>装填因子 $\alpha&#x3D;\text{填入散列表中的结点数}&#x2F;\text{基本区中的结点空间}$</p>
+</li>
+<li><p>散列函数</p>
+<ul>
+<li>除余法最好，折叠叠加法最差</li>
+</ul>
+</li>
+<li><p>解决冲突</p>
+<ul>
+<li><p>开放地址法：$h_i&#x3D;(h[key]+d_i)% m$</p>
+</li>
+<li><p>链地址法（拉链散列表）：设散列地址 $0\sim m-1$, 将 <em>关键码</em> 划分为 $m$ 个子集，具有相同地址的关键码归于一个子集，用单链表连接</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h3><ul>
+<li><p>互换排序</p>
+<ul>
+<li><p>冒泡排序</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">bub</span><span class="params">(T p[], <span class="type">int</span> n)</span>       <span class="comment">//冒泡排序</span></span></span><br><span class="line"><span class="function"></span>&#123;    <span class="type">int</span> i, j;</span><br><span class="line">      <span class="type">bool</span> noswap;           <span class="comment">//是否有交换</span></span><br><span class="line">      T  tmp;</span><br><span class="line">      <span class="keyword">for</span>(i=<span class="number">0</span>; i&lt;n<span class="number">-1</span>; i++) <span class="comment">//n-1趟排序</span></span><br><span class="line">      &#123;   noswap = <span class="literal">true</span>;   <span class="comment">//置没有交换</span></span><br><span class="line">           <span class="keyword">for</span>(j=n<span class="number">-1</span>; j&gt;=i+<span class="number">1</span>; j--) <span class="comment">//由下至上比较</span></span><br><span class="line">                <span class="keyword">if</span>(p[j]&lt;p[j<span class="number">-1</span>])        <span class="comment">//逆序则交换</span></span><br><span class="line">                &#123;  tmp=p[j<span class="number">-1</span>];</span><br><span class="line">                   p[j<span class="number">-1</span>]=p[j];</span><br><span class="line">                   p[j]=tmp;</span><br><span class="line">                   noswap=<span class="literal">false</span>;</span><br><span class="line">                 &#125;</span><br><span class="line">           <span class="keyword">if</span>(noswap) <span class="keyword">break</span>;       <span class="comment">//没有交换则终止</span></span><br><span class="line">       &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>快速排序</p>
+<p>一趟快速排序后，“小”记录被移至key前，“大”的记录被移至key后。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> <span class="title class_">T</span>&gt;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">split</span><span class="params">(T p[], <span class="type">int</span> n)</span>        <span class="comment">//返回分割位置,一趟快速排序</span></span></span><br><span class="line"><span class="function"></span>&#123;  T t;</span><br><span class="line">    <span class="type">int</span> i=<span class="number">0</span>,  j=n<span class="number">-1</span>, k=(i+j)/<span class="number">2</span>, m;</span><br><span class="line">    <span class="keyword">if</span>(p[i]&gt;=p[j]) &amp;&amp; (p[j]&gt;=p[k]))  m=j;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> ((p[i]&gt;=p[k]) &amp;&amp; (p[k]&gt;=p[j])) m=k;</span><br><span class="line">    <span class="keyword">else</span> m=i;                            <span class="comment">//初始选择1个中间值作为比较元素</span></span><br><span class="line">    t=p[m];  p[m]=p[i];             <span class="comment">//比较元素保存在变量t中</span></span><br><span class="line">    <span class="keyword">while</span>(i!=j)                           <span class="comment">//i, j相遇排序结束</span></span><br><span class="line">    &#123; <span class="keyword">while</span>((i&lt;j) &amp;&amp; (p[j]&gt;=t))  j=j<span class="number">-1</span>;     <span class="comment">//减小j，直到发现小于t的元素</span></span><br><span class="line">       <span class="keyword">if</span>(i&lt;j)</span><br><span class="line">       &#123; p[i]=p[j];i=i+<span class="number">1</span>;</span><br><span class="line">          <span class="keyword">while</span>((i&lt;j) &amp;&amp; (p[i]&lt;=t))  i=i+<span class="number">1</span>; <span class="comment">//增加i，直到发现大于t的元素</span></span><br><span class="line">          <span class="keyword">if</span>(i&lt;j)  &#123;  p[j]=p[i]; j=j<span class="number">-1</span>;&#125;</span><br><span class="line">        &#125;</span><br><span class="line">     &#125;</span><br><span class="line">     p[i]=t;</span><br><span class="line">     <span class="keyword">return</span> i;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> <span class="title class_">T</span>&gt;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">qck</span><span class="params">(T p[], <span class="type">int</span> n)</span>  <span class="comment">//快速排序递归算法</span></span></span><br><span class="line"><span class="function"></span>&#123;  <span class="type">int</span> m, i;</span><br><span class="line">   T *s;</span><br><span class="line">   <span class="keyword">if</span>(n&lt;=<span class="number">1</span>) <span class="keyword">return</span>;     <span class="comment">//排序序列长度为1时终止</span></span><br><span class="line">   i=<span class="built_in">split</span>(p, n);          <span class="comment">//对表分割，i为分割位置</span></span><br><span class="line">   <span class="built_in">qck</span>(p, i);               <span class="comment">//对前面字表进行快速排序</span></span><br><span class="line">   s=p+(i+<span class="number">1</span>);</span><br><span class="line">   m=n-(i+<span class="number">1</span>);</span><br><span class="line">   <span class="built_in">qck</span>(s, m);             <span class="comment">//对后面字表进行快速排序</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>插入排序</p>
+<ul>
+<li><p>直接插入排序</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//直接插入排序</span></span><br><span class="line"><span class="function"><span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">insort</span><span class="params">(T p[],<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123; <span class="type">int</span> j, k;  </span><br><span class="line">   T t;                     <span class="comment">// t为哨兵</span></span><br><span class="line">   <span class="keyword">for</span>(j=<span class="number">1</span>;j&lt;n;j++)  <span class="comment">// n-1次排序</span></span><br><span class="line">   &#123;  t=p[j];             <span class="comment">// 复制哨兵</span></span><br><span class="line">      k=j<span class="number">-1</span>;</span><br><span class="line">      <span class="keyword">while</span>((k&gt;=<span class="number">0</span>) &amp;&amp; (p[k]&gt;t))  <span class="comment">// 扫描已排序列</span></span><br><span class="line">      &#123;  p[k+<span class="number">1</span>]=p[k];  k=k<span class="number">-1</span>; &#125;    <span class="comment">// 如果比哨兵大则交换</span></span><br><span class="line">       p[k+<span class="number">1</span>]=t;         <span class="comment">// 将哨兵元素插回到排序序列中</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>希尔排序</p>
+<ul>
+<li>插入排序越有序效率越高，因此想办法逐渐提升序列的有序性。</li>
+<li>将待排序记录(线性表)以小于n的跨越增量$d_1$分为$d_1$个组，距离为$d_1$倍数的记录在同一组内,在各组内分别进行直接插入(或交换)排序;取第二个跨越增量 $d_2&lt;d_1$,重复,直至$d_t&#x3D;1$ 为止 ($d_t&lt;d_{t-1}&lt;\dots&lt;d_2&lt;d_1$)</li>
+<li>时间复杂度 $O(n^{1.3\sim 1.5})$</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//希尔排序</span></span><br><span class="line"><span class="function"><span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">shel</span><span class="params">(T p[],<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;  <span class="type">int</span> j, k, i;   T t;               <span class="comment">// t 哨兵</span></span><br><span class="line">    k=n/<span class="number">2</span>;                          <span class="comment">// 跨越增量</span></span><br><span class="line">    <span class="keyword">while</span>(k&gt;<span class="number">0</span>)                    <span class="comment">// 跨越增量小于1时终止排序</span></span><br><span class="line">    &#123;  <span class="keyword">for</span>(j=k; j&lt;=n<span class="number">-1</span>; j++) <span class="comment">// 简单插入排序</span></span><br><span class="line">       &#123;   t=p[j];  i=j-k;</span><br><span class="line">           <span class="keyword">while</span>((i&gt;=<span class="number">0</span>) &amp;&amp; (p[i]&gt;t))</span><br><span class="line">           &#123; p[i+k]=p[i];  i=i-k;&#125;</span><br><span class="line">           p[i+k]=t;</span><br><span class="line">        &#125;</span><br><span class="line">       k=k/<span class="number">2</span>;                        <span class="comment">// 跨越增量减半</span></span><br><span class="line">   &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>选择排序</p>
+<ul>
+<li><p>选择排序</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//直接选择排序</span></span><br><span class="line"><span class="function"><span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">select</span><span class="params">(T p[], <span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123; <span class="type">int</span> i, j, k;</span><br><span class="line">   T d;                                <span class="comment">// 临时变量，用于交换</span></span><br><span class="line">   <span class="keyword">for</span>(i=<span class="number">0</span>; i&lt;n<span class="number">-1</span>; i++)         <span class="comment">// n-1趟排序</span></span><br><span class="line">   &#123;  k=i;                            <span class="comment">// 记录未排序序列的头</span></span><br><span class="line">      <span class="keyword">for</span>(j=i+<span class="number">1</span>; j&lt;n; j++)     <span class="comment">// 找出未排序序列的最小值，用k记录</span></span><br><span class="line">            <span class="keyword">if</span>(p[j]&lt;p[k])  k=j;</span><br><span class="line">      <span class="keyword">if</span>(k!=i)                        <span class="comment">// 将最小值排在已排序序列尾部</span></span><br><span class="line">      &#123;d=p[i];  p[i]=p[k]; p[k]=d;&#125;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>堆排序</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//堆调整算法</span></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> <span class="title class_">T</span>&gt;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">sift</span><span class="params">(T p[], <span class="type">int</span> i,  <span class="type">int</span> n)</span>       <span class="comment">//i: 待处理节点  n: 记录个数</span></span></span><br><span class="line"><span class="function"></span>&#123;   <span class="type">int</span>  j;</span><br><span class="line">    T t;</span><br><span class="line">	t=p[i];  j=<span class="number">2</span>*(i+<span class="number">1</span>)<span class="number">-1</span>;          <span class="comment">//p[j]是p[i]的左孩子</span></span><br><span class="line">	<span class="keyword">while</span> (j&lt;=n)    	       </span><br><span class="line">	&#123;   <span class="comment">//若右孩子较大，则把 j 改为右孩子的下标</span></span><br><span class="line">         <span class="keyword">if</span> ((j&lt;n) &amp;&amp; (p[ j ]&lt; p[ j+<span class="number">1</span>]))   j=j+<span class="number">1</span>;</span><br><span class="line">	     <span class="keyword">if</span> (t&lt;p[ j ])    </span><br><span class="line">	     &#123;	   p[ i ]=p[ j ]; 	         <span class="comment">//将p[j]调到父结点位置上</span></span><br><span class="line">		   i=j;  j=<span class="number">2</span>*(i+<span class="number">1</span>)<span class="number">-1</span>;    <span class="comment">//修改 i 和 j 的值，以便继续向下筛选</span></span><br><span class="line">          &#125;</span><br><span class="line">         <span class="keyword">else</span>  </span><br><span class="line">	    	   j=n+<span class="number">1</span>;	         <span class="comment">//筛选完成，令j=n+1，以便终止循环</span></span><br><span class="line">	 &#125;</span><br><span class="line">	 p[ i ]=t;                           <span class="comment">//被筛选结点的值放入最终位置</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//堆排序算法</span></span><br><span class="line"><span class="keyword">template</span> &lt; <span class="keyword">class</span> <span class="title class_">T</span>&gt;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">hap</span><span class="params">(T p[], <span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;    <span class="type">int</span> i,mm;</span><br><span class="line">     T t;</span><br><span class="line">     mm=n/<span class="number">2</span>;</span><br><span class="line">      <span class="comment">//构建堆</span></span><br><span class="line">	 <span class="keyword">for</span>  ( i= mm<span class="number">-1</span>; i&gt;=<span class="number">0</span>; i-- )  <span class="built_in">sift</span>(p, i, n<span class="number">-1</span>); 	</span><br><span class="line">	 <span class="keyword">for</span>  ( i=n<span class="number">-1</span>; i&gt;=<span class="number">1</span>;  i-- )</span><br><span class="line">	 &#123;    	t=p[<span class="number">0</span>];                   <span class="comment">//根与叶子互换</span></span><br><span class="line">            p[<span class="number">0</span>]=p[i]; </span><br><span class="line">            p[i]=t;  	</span><br><span class="line">            <span class="built_in">sift</span>(p, <span class="number">0</span>, i<span class="number">-1</span>);         <span class="comment">//重构除最后一个叶子外的堆</span></span><br><span class="line">  	 &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>归并排序</p>
+</li>
+<li><p>基数排序</p>
+</li>
+<li><p>稳定性分析：</p>
+<ul>
+<li>堆排序、快速排序、希尔排序、直接选择排序不是稳定的排序算法；</li>
+<li>基数排序、冒泡排序、直接插入排序、归并排序是稳定的排序算法。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>二叉排序树</p>
+</li>
+</ul>
+<h2 id="4-操作系统"><a href="#4-操作系统" class="headerlink" title="4 操作系统"></a>4 操作系统</h2><ul>
+<li><p>作用：管理和控制系统资源、提供用户与计算机硬件系统之间的接口</p>
+</li>
+<li><p>任务：CPU管理、内存管理、设备管理、文件管理、（作业管理，对服务器）</p>
+</li>
+<li><p>多道程序系统：计算机内存中同时存放多道相互独立的程序，它们在操作系统的控制下，共享系统的硬件和软件资源</p>
+<ul>
+<li>特点：多程序并发执行</li>
+</ul>
+</li>
+<li><p>分类：多道批处理操作系统、分时操作系统（典型：UNIX系统）、实时操作系统</p>
+</li>
+<li><p>进程：一个具有独立功能的程序关于某个数据集合的一次运行活动，是控制程序管理下基本的多道程序单位。</p>
+<ul>
+<li>进程是程序的执行过程，进程&#x3D;程序+数据+进程控制块（记录进程状态信息）</li>
+<li>状态：分为 <em>运行状态、就绪状态、等待状态</em></li>
+<li>进程状态的转化<ul>
+<li>就绪—&gt;分配到CPU—&gt;运行</li>
+<li>运行—&gt;需要等待某事件—&gt;等待</li>
+<li>运行—&gt;分配的时间片用完—&gt;就绪</li>
+<li>等待—&gt;等待事件已发生—&gt;就绪</li>
+</ul>
+</li>
+<li>进程控制块 (PCB) ：描述进程执行情况、反映进程与其它进程及系统资源关系、刻画进程在不同时期状态的数据块</li>
+<li>死锁：产生原因有–资源的独占使用、资源的非抢占使用、资源的部分分配、对资源的循环等待</li>
+<li>进程同步通信：P&#x2F;V操作<ul>
+<li><p>低级通信原语，用一个信号量 $S$ 来实现进程间通信</p>
+</li>
+<li><p>$P(S)$：(1)  $S&#x3D;S-1$；(2) $S\ge 0$，当前进程继续；否则，进程等待并加入到等待队列中</p>
+</li>
+<li><p>$V(S)$：(1) $S&#x3D;S+1$；(2) $S&gt;0$，当前进程继续；否则，将等待队列中的队头进程就绪，当前进程继续</p>
+</li>
+<li><p>互斥模型：<a target="_blank" rel="noopener" href="https://tva1.sinaimg.cn/large/008eGmZEly1gn0260e4ldj31680f80u1.jpg" title="image-20210125171515443" class="gallery-item"><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gn0260e4ldj31680f80u1.jpg" alt="image-20210125171515443" style="zoom: 33%;" /></a></p>
+</li>
+<li><p>同步模型：</p>
+<a target="_blank" rel="noopener" href="https://tva1.sinaimg.cn/large/008eGmZEly1gn029fx4f2j30we0s2taz.jpg" title="image-20210125171833245" class="gallery-item"><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gn029fx4f2j30we0s2taz.jpg" alt="image-20210125171833245" style="zoom:33%;" /></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>内存管理</p>
+</li>
+</ul>
+<h2 id="5-数据库技术"><a href="#5-数据库技术" class="headerlink" title="5 数据库技术"></a>5 数据库技术</h2><ul>
+<li><p>DBMS：数据库管理系统，在操作系统的支持下工作，负责数据库中数据的存储、检索、修改</p>
+<ul>
+<li>语言处理模块：SQL语言，包括DDL数据描述语言、DML数据操作语言等</li>
+</ul>
+</li>
+<li><p>关系代数：并、差、交、笛卡尔积、选择、投影、连接、自然连接</p>
+<ul>
+<li>自然连接：选出公共属性相等的元组，并去掉重复属性的元组</li>
+</ul>
+</li>
+<li><p>数据库设计</p>
+<ul>
+<li><p>E-R图：实体联系图</p>
+<ul>
+<li>矩形框—实体，椭圆—实体属性，菱形框—实体间联系</li>
+</ul>
+</li>
+<li><p>SQL语言</p>
+<ul>
+<li>查询：<code>SELECT * + FROM * + WHERE *</code></li>
+<li>数据操作 (DML) ：<code>INSERT, UPDATE, DELETE</code></li>
+<li>数据定义(DDL) ： <code>CREATE TABLE, DROP TABLE</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="6-软件工程"><a href="#6-软件工程" class="headerlink" title="6 软件工程"></a>6 软件工程</h2><p>略</p>
+<h2 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h2><h5 id="完全二叉树的有关计算"><a href="#完全二叉树的有关计算" class="headerlink" title="完全二叉树的有关计算"></a>完全二叉树的有关计算</h5><p>已知一棵完全二叉树有1450个结点，求：</p>
+<p>(1) 度为1的结点个数为1</p>
+<p>(2) 度为2的结点个数为724</p>
+<p>(3) 叶子结点的个数为 725</p>
+<p>(4) 有左孩子的结点数为725</p>
+<p>(5) 有右孩子的结点数为724</p>
+<p>​       </p>
+<h5 id="哈夫曼编码"><a href="#哈夫曼编码" class="headerlink" title="哈夫曼编码"></a>哈夫曼编码</h5><p>假设某通讯系统仅使用 $a,b,c,d,e,f,g,h$ 共 8个 字符，它们的使用频率分别为 $0.05, 0.29, 0.07, 0.08, 0.14, 0.23, 0.03, 0.11$, 构造他们的哈夫曼编码。</p>
+<ul>
+<li>$a\sim h$ 作为叶子结点</li>
+<li>使用频率作为权值</li>
+<li>利用哈夫曼算法构造哈夫曼树</li>
+<li>从根到叶子的路径标记每个字符的二进制编码</li>
+</ul>
+<h5 id="图的相关计算"><a href="#图的相关计算" class="headerlink" title="图的相关计算"></a>图的相关计算</h5><p>一个无向图具有20条边，则：</p>
+<p>（1）如果该图为不连通图，则至少应具有多少个顶点？</p>
+<p>m个顶点构成连通子图，另1个顶点与连通子图不连通。连通子图的最大边数 $m(m-1)&#x2F;2\ge 20$，所以$m\ge 6.8$。m 取最小整数，所以该图至少具有$m+1&#x3D;8$个顶点。</p>
+<p>（2）如果该图为连通图，则至少应具有几个顶点？至多应具有几个顶点？</p>
+<p>m个顶点构成连通图，$m(m-1)&#x2F;2\ge 20$，$m\ge6.8$ ，至少有 $7$ 个顶点。 </p>
+<p>m个顶点构成最小生成树，至多有 $21$ 个顶点。</p>
+<h5 id="散列表相关计算"><a href="#散列表相关计算" class="headerlink" title="散列表相关计算"></a>散列表相关计算</h5><p>12个关键字 $19, 01, 23, 14, 55, 20, 84, 27, 68, 11, 10, 77$，Hash表空间 $0～18$(即19个地址)，Hash函数为$h (key)&#x3D;key%  13$</p>
+<p>(1) 求线性散列表、二次散列表、随机散列表（伪随机序列为 [1,6,7,0] ）的平均查找长度。</p>
+<p>例如：二次散列表（后移量 $d_i&#x3D;{1,-1,4,-4,\dots}$)</p>
+<a target="_blank" rel="noopener" href="https://tva1.sinaimg.cn/large/008eGmZEly1gn018x5p21j31cw08u49h.jpg" title="image-20210125164326763" class="gallery-item"><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gn018x5p21j31cw08u49h.jpg" alt="image-20210125164326763" style="zoom:33%;" /></a>
+
+<p>(2) 求拉链哈希表的平均查找长度。</p>
+<p>$ ASL&#x3D;(1\cdot 7+2\cdot 4+3\cdot 1)&#x2F;12&#x3D;1.5$</p>
+</div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script> 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>Copyright： </strong>
+          
+          Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/computer/" rel="tag">computer</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/Optics/Quantum-Optics/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            Quantum Optics Notes
+          
+        </div>
+      </a>
+    
+    
+      <a href="/Computer-Science/C++%E7%BC%96%E7%A8%8B%E8%A7%84%E8%8C%83/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">C++ Programming Specification</div>
+      </a>
+    
+  </nav>
+
+  
+   
+     
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2020-2023
+        <i class="ri-heart-fill heart_icon"></i> Longqian Huang
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>Visitors:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>Views:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/cat.png" alt="Peter&#39;s Blog"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about">关于</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/news">近闻</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/publications">发表</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/projects">项目</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/notes">笔记</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/gallery">画廊</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>来，请俺喝杯咖啡！</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+ <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+  });
+
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/mathjax/2.7.7/MathJax.js"></script>
+<script src="https://cdn.staticfile.org/mathjax/2.7.7/config/TeX-AMS-MML_HTMLorMML-full.js"></script>
+<script>
+  var ayerConfig = {
+    mathjax: true,
+  };
+</script>
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+ 
+<script src="/js/dz.js"></script>
+ 
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    
+
+  </div>
+</body>
+
+</html>

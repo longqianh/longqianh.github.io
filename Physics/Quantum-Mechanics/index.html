@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+
+
+<html lang="en,zh-CN,default">
+  
+
+    <head>
+      <meta charset="utf-8" />
+        
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>Quantum-Mechanics Notes |  Peter&#39;s Blog</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/images/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    <!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><link rel="alternate" href="/rss2.xml" title="Peter's Blog" type="application/atom+xml">
+</head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-Physics/Quantum-Mechanics"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  Quantum-Mechanics Notes
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/Physics/Quantum-Mechanics/" class="article-date">
+  <time datetime="2020-09-15T10:41:11.000Z" itemprop="datePublished">2020-09-15</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Notes/">Notes</a> / <a class="article-category-link" href="/categories/Notes/Physics/">Physics</a>
+  </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">2.2k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">13 min</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="Quantum-Mechanics-Notes"><a href="#Quantum-Mechanics-Notes" class="headerlink" title="Quantum-Mechanics-Notes"></a>Quantum-Mechanics-Notes</h1><p>Notes for quantum mechanics of MIT-OCW 8.04.</p>
+<p><em>’This is the goal of 8.04: we will step beyond the scale of daily experiences to develop an intuition for electrons, atoms, and superposition.’</em></p>
+<span id="more"></span>
+
+<h2 id="Uncertainty-Principle-and-Superposition"><a href="#Uncertainty-Principle-and-Superposition" class="headerlink" title="Uncertainty Principle and Superposition"></a>Uncertainty Principle and Superposition</h2><p>Think about a series of experiments.</p>
+<p>Electron has two propeties : <em>white&#x2F;black</em> and <em>hard&#x2F;soft</em> (Denote by W&#x2F;B &amp; H&#x2F;S). </p>
+<p>We made <em>boxes</em> that can <em>measure</em> such properties. For instance, white electron and black electron will exit the box from different directions. From the direction we know the white&#x2F;black property of the electron. Denote ‘C-Box’ (color box) for the boxes that can measure W&#x2F;B property and similarly, ‘H-Box’ (hardness box) for those can measure ‘H&#x2F;S’ property.</p>
+<p>We have mirrors and combinator that put the two directions together, so that we can continue more complicated experiments. Note that they only change the directions.</p>
+<p>Below are the experiments from physicists.</p>
+<p>First there are some basic and naive experiments.</p>
+<ol>
+<li>Electrons —&gt; C-Box —&gt; W and B —&gt; choose W —&gt; C-Box —&gt; W  (repeatability of color &#x2F; hardness)</li>
+<li>Electrons —&gt; H-Box —&gt; H and S —&gt; choose H —&gt;C-Box —&gt; W (50%) and B (50%) (lack of correlation of color with hardness)</li>
+</ol>
+<p>Then comes the weird experiment. </p>
+<ol start="3">
+<li>Electrons —&gt; C-Box —&gt; W and B —&gt; choose W —&gt; H-Box —&gt; H and S —&gt; choose H —&gt; C-Box —&gt; <strong>Not</strong> (100%) W, but $50%$ W and  $50%$ B</li>
+</ol>
+<p>Apparently, hardness box tampers with color. Therefore experiment 3 tells us color and hardness property cannot be measured simultaneously, which is the <strong>uncertainty principle</strong>. Though we know it is white at the begining, as long as we measure the hardness, the color property white is not repeatable anymore.</p>
+<p>Then we use combinator to dig deeper.</p>
+<ol start="4">
+<li><p>White electrons —&gt; H-Box —&gt; $50%$ H and $50%$ S  —&gt; combinator —&gt; H-Box —&gt; $50%$ H and $50%$ S</p>
+</li>
+<li><p>White electrons —&gt; H-Box —&gt; 50% H and 50% S —&gt; combinator —&gt; C-Box —&gt; (100%) W </p>
+</li>
+<li><p>White electrons —&gt; H-Box —&gt; 50% H and 50% S —&gt; put a wall in the Soft’s path —&gt; combinator —&gt; C-Box —&gt; $50%$ W and $50%$ B</p>
+</li>
+</ol>
+<p>Experiment 4 tells us combinator does not change the proberties of electrons. Experiment 5 got totally W because the added combination part act as if H&#x2F;S property doesn’t be measured, hence the W&#x2F;B property will not be disturbed. Experiment 6 shows a disturbing one from which we can see the uncertainty principle plays a role.</p>
+<p>After we understand the principle of the motion of electrons, we consider the <em>being</em> (or state) of it : what is the state of an electron inside the apparatus in the Experiment 5?</p>
+<p>We know it is white, so it cannot be hard or soft, otherwise we will get half-half result by the uncertainty principle. It cannot be both hard and soft since  different property will go in different direction.In one path the electron cannot have both properties. It cannot be neither since we can get some results. </p>
+<p>Therefore, the only condition is the electron has probability of being hard or soft (but we cannot know what exactly is) and such state is called <strong>superposition</strong>.</p>
+<p>Being in a definite state of position means that being in a superposition of having different values for momentum.</p>
+<h2 id="Bell’s-Inequality"><a href="#Bell’s-Inequality" class="headerlink" title="Bell’s Inequality"></a>Bell’s Inequality</h2><p>In lecture 2, the professor demonstrated some intersting experiments that are waiting to be explained using quantum language.</p>
+<ul>
+<li><p>Atom exist. But atomic orbits are unstable.</p>
+</li>
+<li><p>Atomic spectra are discrete. When excites&#x2F;sparks the simple gas like $ H_2$, we get light sent out by it. If we take the light and shine it on a prism, we would find distinct patterns : discrete spectra. Experimentalists found the wavelengths satisfy $1&#x2F;\lambda&#x3D;R\cdot(1&#x2F;n^2-1&#x2F;m^2)$.</p>
+</li>
+<li><p>Photoelectric effect. Stop voltage has no relation with intensity, but is linear to frequency. And it was found that the coefficient is just $h$, the Planck constant derived from Blackbody radiation.</p>
+</li>
+<li><p>Since photon has zero mass, we can develop the momentum equation $p&#x3D;h&#x2F;\lambda$ with $E&#x3D;pc$ and $E&#x3D;h\nu$. This means photon has the particle’s property–momentum. Note that $E&#x3D;h\nu$ is very unusual.</p>
+</li>
+<li><p>Double-slit experiment with electron. The electron comes one in one, and was found randomly positioned. But when the quantity is enough, the statistic told us the electrons were interfered. </p>
+<a href="../../../../Library/Application%20Support/typora-user-images/image-20201109153712555.png" title="image-20201109153712555" class="gallery-item"><img src="../../../../Library/Application%20Support/typora-user-images/image-20201109153712555.png" alt="image-20201109153712555" style="zoom:25%;" /></a>
+</li>
+<li><p>Bragg scattering. If we send in a beam of electrons to a crystal and watch out the scattering from different angles, we would find the interference effect. The intensity as a function of angle of the out beam satisfies the function as if the electron is a wave with the wavelength $\lambda&#x3D;2d\sin\theta&#x2F;n$. The <strong>electron diffracts</strong> off the crystal. </p>
+</li>
+<li><p>Send out $C_{60}$ one by one and make them go through a diffraction grating. [ ]</p>
+</li>
+</ul>
+<p>Next comes the <em>Bell’s inequality</em>.</p>
+<p>If the state of the stuff is definite, then we have:<br>$$<br>\operatorname{Num}(A,\bar B)+\operatorname{Num}(B,\bar C)\ge \operatorname{Num}(A,\bar C)<br>$$<br>The proof is the following:<br>$$<br>\begin{aligned}<br>\operatorname{LHS}&amp;&#x3D;\operatorname{Num}(A,\bar B,C)+\operatorname{Num}(A,\bar B,\bar C)+\operatorname{Num}(A,B,\bar C)+\operatorname{Num}(\bar A,B,\bar C)\<br>&amp;\ge \operatorname{Num}(A,B,\bar C)+\operatorname{Num}(A,\bar B,\bar C)\<br>&amp;&#x3D;\operatorname{Num}(A,\bar C)\<br>&amp;&#x3D;\operatorname{RHS}<br>\end{aligned}<br>$$<br>But Bell found by experiment that:<br>$$<br>\operatorname{Num}(\uparrow_0,\downarrow_\theta)+\operatorname{Num}(\uparrow_\theta,\downarrow_{2\theta})&lt;\operatorname{Num}(\uparrow_0,\downarrow_{2\theta})<br>\<br>$$<br>Where the up and down arrows indicate the spin angular momentum of the electron. I think this can be explained only if the three binary states can be superposed.</p>
+<h2 id="Wave-Function"><a href="#Wave-Function" class="headerlink" title="Wave Function"></a>Wave Function</h2><h3 id="Postulate-of-Wavefunction"><a href="#Postulate-of-Wavefunction" class="headerlink" title="Postulate of Wavefunction"></a>Postulate of Wavefunction</h3><p>An essential postulate: The configuration or <em>state</em> of a quantum object is completely specified by a wavefunction denoted as $\psi(x)$, $\psi\in\mathbb{C}$ . </p>
+<p>Classical: $(\vec p,\vec x)\to$ Quantum: $\psi(\vec x)$</p>
+<p>Furthermore, $p(x)&#x3D;|\psi(x)|^2$ determines the probability (density) that an object in the state $\psi(x)$ will be found at position $x$. Note that the <em>dimension</em> of $\psi$ is <strong>square root of length</strong> since $\displaystyle \int|\psi|^2 \text{d}x&#x3D;1$.</p>
+<h3 id="De-Broglie-Relations"><a href="#De-Broglie-Relations" class="headerlink" title="De Broglie Relations"></a>De Broglie Relations</h3><p>From de Broglie’s generalization of momentum-wavelength relation of photon, we have<br>$$<br>\begin{aligned}<br>E&amp;&#x3D;\hbar\omega\<br>\vec p&amp;&#x3D;\hbar \vec k<br>\end{aligned}<br>$$<br>where $\hbar:&#x3D;h&#x2F;2\pi$.</p>
+<h3 id="Mathematics-of-Superposition"><a href="#Mathematics-of-Superposition" class="headerlink" title="Mathematics of Superposition"></a>Mathematics of Superposition</h3><p>Given to two possible states of a quantum system corresponding to two wavelengths $\psi_a$ and $\psi_b$, the system could also be in a superposition $\psi&#x3D;\alpha\psi_a+\beta\psi_b$ with $\alpha$ and $\beta$ in $\mathbb{C}$ satisfying normalization.</p>
+<p>Hence for the superposition state, we have the probability density<br>$$<br>\begin{aligned}<br>\mathbb{p}(x)&amp;&#x3D;|\alpha\psi_a(x)+\beta\psi_b(x)|^2\<br>&amp;&#x3D;|\alpha\psi_a(x)|^2+|\beta\psi_b(x)|^2+\alpha^<em>\beta\psi_a^</em>(x)\psi_b(x)+\alpha\beta^<em>\psi_a(x)\psi_b^</em>(x)</p>
+<p>\end{aligned}<br>$$<br>which exhibits quantum interference aside from the usual addition probability. It’s the interference between the different momentum that leads to certainty in the position.</p>
+<p>By using the tool of Fourier Transformation, we see that any wavefunction $\psi(x)$ can be expressed as a superposition of states $e^{ikx}$ with definite momenta $p&#x3D;k$ as<br>$$<br>\begin{aligned}<br>\psi(x)&amp;&#x3D;\frac{1}{\sqrt{2\pi}}\int_{-\infty}^\infty \widetilde \psi(x)e^{ikx}\text{d}k\<br>\widetilde\psi(k)&amp;&#x3D;\frac{1}{\sqrt{2\pi}}\int_{-\infty}^\infty \psi(x)e^{-ikx}\text{d}x.<br>\end{aligned}<br>$$<br>I think that means when state is expressed in wavefunction, position and momentum are tightly correlated, one could indicate the other.</p>
+<h2 id="Expectations"><a href="#Expectations" class="headerlink" title="Expectations"></a>Expectations</h2><h3 id="Uncertainty-and-Expectation"><a href="#Uncertainty-and-Expectation" class="headerlink" title="Uncertainty and Expectation"></a>Uncertainty and Expectation</h3><p>To characterize the uncertainty, we use the standard deviation<br>$$<br>\Delta a&#x3D;\sqrt{\langle a^2\rangle-\langle a\rangle^2}<br>$$</p>
+<p>The expectation value of a function of position <strong>in a given quantum state</strong> $\psi(x)$ is<br>$$<br>\langle f(x)\rangle &#x3D;\int_{-\infty}^\infty \psi^\star(x) f(x)\psi(x);\text dx.<br>$$<br>However, when we consider the expectation of momentum $\langle p\rangle$, we get problem: $p$ and $x$ cannot be measured simultaneously.</p>
+<p>( In fact we replace $f$ with $\hat f$ when compute the expectation value of an operator )</p>
+<h3 id="Hints-to-the-operator"><a href="#Hints-to-the-operator" class="headerlink" title="Hints to the operator"></a>Hints to the operator</h3><p>Notice some hints that indicate us to <em>operator</em>:</p>
+<ul>
+<li><p>For wavefunction $\psi&#x3D;e^{ikx}$,<br>$$<br>\begin{aligned}<br>\partial_x \psi&#x3D;ik\psi\implies \frac{\hbar}{i}\partial_x \psi &#x3D;\hbar k\psi&#x3D;p\cdot\psi<br>\end{aligned}<br>$$</p>
+</li>
+<li><p>Noether’s theorem states that <em>to every symmetry is associated a conserved quantity</em> .</p>
+<table>
+<thead>
+<tr>
+<th align="center">Symmetry</th>
+<th align="center">Conservation</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Translation : $\vec x\to \vec x+\Delta \vec x$</td>
+<td align="center">Momentum : $\dot{\vec p}&#x3D;0$</td>
+</tr>
+<tr>
+<td align="center">Time : $t\to t+\Delta t$</td>
+<td align="center">Energy : $\dot E&#x3D;0$</td>
+</tr>
+<tr>
+<td align="center">Rotation : $\vec x \to \overleftrightarrow R\cdot \vec x$</td>
+<td align="center">Angular Momentum : $\dot{\vec L}&#x3D;0$</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>For translations behave for functions,<br>$$<br>\begin{align}<br>f(x)\to f(x+l)&amp;&#x3D;f(x)+l\partial_x f(x)+\frac{l^2}{2}\partial_x^2 f(x)+\dots\<br>&amp;&#x3D;\sum_{n&#x3D;0}^{\infty} \frac{(l\partial_x)^n}{n!}f(x)\<br>&amp;&#x3D;e^{l\partial_x}f(x)<br>\end{align}<br>$$<br>Translations are generated by spatial derivatives $\partial_x$ and it should be associated with $p$. </p>
+<p>Similarly, $E\sim \partial_t,; L_z\sim\partial_\varphi$.</p>
+</li>
+</ul>
+<p>Finally, momentum in quantum mechanics is realized by an operator:<br>$$<br>\hat p&#x3D;\frac{\hbar}{i}\frac{\partial}{\partial x}.<br>$$<br>And we use operator $\hat p $ to compute expectation values:<br>$$<br>\lang p\rang&#x3D;\int_{-\infty}^\infty \psi^\star(x)\hat p \psi(x);\text dx<br>$$</p>
+<p>I think operator $\hat p$ is introduced more intuitively than mathematically. The key is that we want to calculate expectation of $p$ in a state associated with position $x$, but from uncertainty principle there is no meaning when $p$ and $x$ occured in one expression. Since momentum is related to position, we come out with operator. Then the $\lang p\rang$ is the expectation of the momentum that can be observed. (Only the momentum that is able to be observed can be taken out from  the operator)</p>
+<p>The very interesting thing of momentum operator is it can get distribution of momentum when there is a superposition.</p>
+<h2 id="Operators-and-the-Schr-ddot-o-dinger-Equation"><a href="#Operators-and-the-Schr-ddot-o-dinger-Equation" class="headerlink" title="Operators and the $Schr\ddot{o}dinger ;Equation$"></a>Operators and the $Schr\ddot{o}dinger ;Equation$</h2><h3 id="Common-operator"><a href="#Common-operator" class="headerlink" title="Common operator"></a>Common operator</h3><p>For each observable quantity we have an associate operator.</p>
+<ul>
+<li>Momentum : $\hat p&#x3D;-i\hbar \partial_x$</li>
+<li>Position: $\hat x &#x3D;x$</li>
+<li>Energy: $\hat E&#x3D;\displaystyle \frac{\hat p^2}{2m}+V(\hat x)&#x3D;-\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2}+V(x)$</li>
+</ul>
+<h3 id="Commutator-and-a-deep-equation"><a href="#Commutator-and-a-deep-equation" class="headerlink" title="Commutator and a deep equation"></a>Commutator and a deep equation</h3><p>To measure the importance of operator (act) order, we define the <em>commutator</em> :<br>$$<br>[\hat A,\hat B]&#x3D;\hat A\hat B-\hat B\hat A.<br>$$<br>And one deep and profound result we get is:<br>$$<br>[\hat x,\hat p]&#x3D;i\hbar \hat 1, \label{xp}<br>$$<br>which indicates the uncertainty principle. Assume the first thing we measure is accurate, then think about it, we cannot measure $x$ and $p$ both accurately, for the simple reason that their commutator is not zero: we cannot get the same result after the second one that is measured. Further more, when expressed in matrix, ($\ref{xp}$) is a very hard matrix equation and only infinite dimension matrix is can solve.</p>
+<h3 id="The-Schr-ddot-o-dinger-Equation"><a href="#The-Schr-ddot-o-dinger-Equation" class="headerlink" title="The $Schr\ddot{o}dinger ;Equation$"></a>The $Schr\ddot{o}dinger ;Equation$</h3><p>Actually $e^{ikx}$ is an eigenfunction of operator $\hat p$ and every state $\psi(x)$ can be generated by it from Fourier’s Theorem. </p>
+<p>From de Broglie, we know that any object is a wave, and consider a plane wave<br>$$<br>\psi(x,t;k)&#x3D;e^{i(kx-\omega t)},<br>$$<br>which has momentum $p&#x3D;\hbar k$ and energy $E&#x3D;\hbar \omega$. </p>
+<p>Similarly to hint of momentum, we notice<br>$$<br>i\hbar \frac{\partial\psi(x,t)}{\partial t}&#x3D;\hbar\omega \psi(x,t)&#x3D;E\psi(x,t),<br>$$</p>
+<p>which depicts the time evolution of energy $E$. But maybe we do not know what is energy $E$. </p>
+<p>A little change $E\to \hat E$ complete the equation and that is the $Schr\ddot{o}dinger ;Equation$ :<br>$$<br>\begin{align}<br>i\hbar \frac{\partial}{\partial t}\psi(x,t)&amp;&#x3D;\hat E \psi(x,t)\<br>i.e.\qquad i\hbar\frac{\partial \psi(x,t)}{\partial t}&amp;&#x3D;-\frac{\hbar^2}{2m}\frac{\partial^2 \psi(x,t)}{\partial x^2}+V(x)\psi(x,t).<br>\end{align}<br>$$<br>The equation describing the time evolution of a quantum state.</p>
+<p>It is analogous to the equation of motion $\vec F&#x3D;\dot {\vec p} $ and $\hat E$ is not defined as the operator $i\hbar\partial_t$ any more than $\vec F$ is defined to be $\hat{\vec p}$ .</p>
+</div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script> 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>Copyright： </strong>
+          
+          Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/physics/" rel="tag">physics</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/Optics/Physical-Optics/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            物理光学笔记
+          
+        </div>
+      </a>
+    
+    
+      <a href="/Mathematics/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">随机过程复习总结</div>
+      </a>
+    
+  </nav>
+
+  
+   
+     
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2020-2023
+        <i class="ri-heart-fill heart_icon"></i> Longqian Huang
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>Visitors:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>Views:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/cat.png" alt="Peter&#39;s Blog"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about">关于</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/news">近闻</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/publications">发表</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/projects">项目</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/notes">笔记</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/gallery">画廊</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>来，请俺喝杯咖啡！</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+ <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+  });
+
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/mathjax/2.7.7/MathJax.js"></script>
+<script src="https://cdn.staticfile.org/mathjax/2.7.7/config/TeX-AMS-MML_HTMLorMML-full.js"></script>
+<script>
+  var ayerConfig = {
+    mathjax: true,
+  };
+</script>
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+ 
+<script src="/js/dz.js"></script>
+ 
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    
+
+  </div>
+</body>
+
+</html>

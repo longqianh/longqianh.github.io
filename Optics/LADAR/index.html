@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+
+
+<html lang="en,zh-CN,default">
+  
+
+    <head>
+      <meta charset="utf-8" />
+        
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>LADAR System Design「激光雷达系统设计」 |  Peter&#39;s Blog</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/images/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    <!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><link rel="alternate" href="/rss2.xml" title="Peter's Blog" type="application/atom+xml">
+</head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-Optics/LADAR"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  LADAR System Design「激光雷达系统设计」
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/Optics/LADAR/" class="article-date">
+  <time datetime="2020-11-06T11:31:14.000Z" itemprop="datePublished">2020-11-06</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Projects/">Projects</a> / <a class="article-category-link" href="/categories/Projects/Optics/">Optics</a>
+  </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">2.1k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">7 min</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><p>光电子学的一个大作业是设计探月三维成像激光雷达，开始毫无头绪，后来在玉泉图书馆找到一本哈工大的书「激光雷达系统设计」（王春晖，陈德应著）。想着以后要把书还回去，目前网上找到的资料大多是论文，而莫得这本宝书，就简要地「抄」一下这本书的部分章节。</p>
+<h1 id="激光雷达系统设计"><a href="#激光雷达系统设计" class="headerlink" title="激光雷达系统设计"></a>激光雷达系统设计</h1><p>激光雷达是指以激光作为载波、以光电探测器作为接收器件、以光学望远镜作为天线的光雷达。</p>
+<h3 id="发射光学系统"><a href="#发射光学系统" class="headerlink" title="发射光学系统"></a>发射光学系统</h3><p>在远距离激光雷达系统设计中，为了增加作用距离，常常需要压缩激光源地发散角，即采用望远镜系统对激光源进行扩束，这时该定向辐射源具有一定辐射面积，人们常常把这类光源成为空间受限定相光源。由于激光器发射光束具有高斯光束地特点，这时在受限空间内光强分布的不均匀性就凸显出来。一般假设这种光源的方向图函数是高斯型的，即<br>$$<br>f(\theta,\varphi)&#x3D;\exp\left[-\frac{r^2}{(z\alpha)^2}\right]&#x3D;\exp\left[-\frac{\theta^2}{\alpha^2}\right]<br>$$<br>注：方向图函数定义为任意方向 $\vec n$ 上的辐射强度 $I(\vec n)$ 与最大光强之比 $I(\vec n)&#x2F;I_{\max}&#x3D;I(\theta,\varphi)&#x2F;I_{\max}$。</p>
+<p>书中给了激光发射机的光度学模型和波动学模型，但是没有对激光器进行详细叙述。感觉这是对激光发射的结果进行了建模，而产生激光的过程还需要参考别的书籍。</p>
+<span id="more"></span>
+
+
+
+<h2 id="接收光学系统"><a href="#接收光学系统" class="headerlink" title="接收光学系统"></a>接收光学系统</h2><p>对于远距离探测，常采用望远镜加物镜的结构设计或远心成像光学系统。</p>
+<p>光电探测器是指能把光辐射能转换成一种便于测量（电压或电流）的物理量器件。光电流时光电探测器对入射光功率的响应，它的变化也就反映光信号的变化。</p>
+<p>接收光学系统应由入瞳直径为 $D$、焦距为 $f$ 到 成像物镜以及光敏面直径 $d$ 的光电探测器组成。</p>
+<h3 id="光学天线"><a href="#光学天线" class="headerlink" title="光学天线"></a>光学天线</h3><p>光学天线的基本功能，就是将激光发射机所发射的激光波束变成激光雷达所需要的照射波束，把激光能量发送到空间，并尽可能多地收集从目标返回地激光能量。光学天线按功能分为发射光学天线和接收光学天线。</p>
+<p>光学天线的设计思路：针对是相干探测还是直接探测激光雷达系统，同时考虑发射光束和接受光束的截面函数、波前相位、偏振态以及光学系统准直度等因素，合理选取、优化设计光学天线与探测器光敏面的几何参数。</p>
+<h3 id="光电探测器传递函数"><a href="#光电探测器传递函数" class="headerlink" title="光电探测器传递函数"></a>光电探测器传递函数</h3><p>常见的光电探测器往往是矩形的。假设一个单元探测器的 <em>线度</em> 为 $d$, 则这个矩形函数的傅立叶变换为 $sinc$ 函数，但愿探测器作为空间滤波器的传递函数为：<br>$$<br>H_{dl}&#x3D;\operatorname{sinc}(\pi d f).<br>$$<br>如果探测器是面阵的，即含有 $n\times m$ 个单元探测器，每个单元的线度为 $(d_x,d_y)$，单元之间的间距为 $(b_x,b_y)$，重复周期为 $(c_x&#x3D;d_x+b_x,c_y&#x3D;d_y+b_y)$,则根据傅立叶变换的位移定理，列阵探测器的传递函数为：<br>$$<br>H_{dnm}&#x3D;\left(\operatorname{sinc}(\pi d_x f_x)\frac{\sin(\pi c_x n f_x)}{\sin(\pi c_x f_x)}\right)\left(\operatorname{sinc}(\pi d_y f_y)\frac{\sin(\pi c_y m f_y)}{\sin(\pi c_y f_y)}\right).<br>$$</p>
+<h2 id="微弱光信号探测"><a href="#微弱光信号探测" class="headerlink" title="微弱光信号探测"></a>微弱光信号探测</h2><h3 id="A-直接探测"><a href="#A-直接探测" class="headerlink" title="A 直接探测"></a>A 直接探测</h3><p>信号光 $\to$ 光学天线（光学接收系统) $\to$ 光电探测器 $\to$ 放大器 $\to;\cdots$</p>
+<ul>
+<li>输出光电流</li>
+</ul>
+<p>$$<br>i&#x3D;\frac{e\eta}{h\nu}P&#x3D;\frac{e\eta}{2h\nu}\int_S|U(\vec r,t)|^2\text dS\propto |U|^2&#x3D;I(\vec r,t)<br>$$</p>
+<ul>
+<li><p>输出电功率</p>
+<p>设光探测器的负载电阻为 $R_L$.<br>$$<br>P_s&#x3D;i^2R_L&#x3D;\left(\frac{e\eta}{h\nu}\right)^2P^2R_L<br>$$</p>
+</li>
+<li><p>信噪比</p>
+<p>设入射到光电探测器的信号光功率为 $P_s$, 噪声功率为 $P_n$, 输出的信号电功率为 $S_p$, 噪声功率为 $N_p$, 则<br>$$<br>S_p+N_p&#x3D;\left(\frac{e\eta}{h\nu}\right)^2R_L(P_s+P_n)^2&#x3D;\left(\frac{e\eta}{h\nu}\right)^2R_L(P_s^2+2P_nP_s+P_n^2),<br>$$</p>
+<p>考虑到信号和噪声的独立性，有<br>$$<br>\begin{align}<br>S_p&amp;&#x3D;\left(\frac{e\eta}{h\nu}\right)^2R_LP_s^2\<br>N_p&amp;&#x3D;\left(\frac{e\eta}{h\nu}\right)^2R_L(2P_sP_n+P_n^2)\</p>
+<p>\end{align}<br>$$<br>因此输出信噪比<br>$$<br>SNR_D&#x3D;\frac{S_p}{N_n}&#x3D;\frac{P_s^2}{2P_sP_n+P_n^2},<br>$$</p>
+<p>直接探测的输出信噪比在 $P_s&#x2F;P_n\gg 1$ 时<br>$$<br>SNR_D\approx\frac{P_s}{2P_n}.<br>$$<br>这从理论上漂亮地证明了直接探测方法不能改善信噪比，且经过光电转换后信噪比损失了3dB。</p>
+</li>
+</ul>
+<h3 id="B-外差探测-x2F-相干探测"><a href="#B-外差探测-x2F-相干探测" class="headerlink" title="B 外差探测&#x2F;相干探测"></a>B 外差探测&#x2F;相干探测</h3><p>加入了本振激光器，光探测器输出的中频功率正比于信号光和本振光平均功率的乘积，因而只要本振光功率足够大，对极微弱光信号仍能得到可观的中频输出！</p>
+<p>外差探测引入了相干光，利用干涉获得有关光信号的全部信息，这也是一种全息吧！</p>
+<h4 id="本振光数学模型"><a href="#本振光数学模型" class="headerlink" title="本振光数学模型"></a>本振光数学模型</h4><p>本机振荡激光器输出的高斯光束由于是短距离传输，其波面有两种情况：一是高斯光束经过精心设计的成像物镜后，束腰落在探测器光敏面上，高斯光束束腰的波阵面表现为平面波的性质，且控制高斯光束束腰半径 $W_0\gg R_D$, 这时本振光截面函数相对于探测器光敏面而言可认为是均匀光束：<br>$$<br>U_{LOU}(\vec r)&#x3D;Ae^{-j\vec k\cdot\vec r}.<br>$$<br>二是高斯光束的束腰没有聚焦在光电探测器光敏面，这时本振光复振幅分布的数学模型为:<br>$$<br>U_{LOG}(\vec r)&#x3D;\frac{A}{W(z)}\exp\left[-\frac{\rho^2}{W^2(z)}\right]\exp\left[-jkz-jk\frac{\rho^2}{2R(z)}+\phi(z)\right].<br>$$</p>
+<h4 id="信号光数学模型"><a href="#信号光数学模型" class="headerlink" title="信号光数学模型"></a>信号光数学模型</h4><p>主振激光器发射的高斯光束，由于要经过长距离的传输，并被探测目标反射或后向散射形成信号光，信号光回波的光斑将变得非常大（达到几米的数量级），光学接受天线的有效孔径却很小，能被光学天线接受的部分信号光近似为平面波。因此，位于光学天线系统焦平面处探测器光敏面的信号光的复振幅分布对于圆对称光学系统用光束光学天线系统的艾里斑图样。信号光的复振幅数学模型为：<br>$$<br>U_{SA}(\vec r)&#x3D;A\frac{2J_1(\chi)}{\chi}e^{-j\vec k\cdot \vec r}<br>$$<br>其中，$\chi&#x3D;\pi r&#x2F;\lambda F$ 为探测器光学参数，F为接收光学天线系统的F数。（注意，根据菲涅尔衍射原理，还应存在一个二次位相因子，由于激光雷达的作用距离R远大于接收光学系统的孔径d，可将此忽略）</p>
+<h4 id="光学天线与探测器最佳匹配关系"><a href="#光学天线与探测器最佳匹配关系" class="headerlink" title="光学天线与探测器最佳匹配关系"></a>光学天线与探测器最佳匹配关系</h4><p>考虑空间失配角情况下使系统外差效率 $\eta_H$ 最大，得到高斯光束模场半径最佳值约为<br>$$<br>W\approx 0.77\frac{\lambda f}{d},<br>$$<br>上式为高斯光束艾里斑相干激光雷达光学天线与探测器最佳匹配关系。</p>
+<h2 id="激光雷达方程"><a href="#激光雷达方程" class="headerlink" title="激光雷达方程"></a>激光雷达方程</h2><p>激光雷达系统设计的一个基本问题是确定达到接收机孔径的光强总通量，进而确定入射到探测器光敏面元件上的总的光功率。激光雷达方程通常用来确定激光雷达在特定条件下对某个特殊目标的接收功率。</p>
+<p>书中只给了一些理论推导，莫得一个应用实例，感觉有道理但不太直观。就不抄了。</p>
+<h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h3><p>[1] 王春晖, 陈德应. 激光雷达系统设计[J].</p>
+</div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script> 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>Copyright： </strong>
+          
+          Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/optics/" rel="tag">optics</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/Project/Light-Sheet-Design/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            Light Sheet Design
+          
+        </div>
+      </a>
+    
+    
+      <a href="/Optics/Opto-Electronics/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">光电子学笔记</div>
+      </a>
+    
+  </nav>
+
+  
+   
+     
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2020-2023
+        <i class="ri-heart-fill heart_icon"></i> Longqian Huang
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>Visitors:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>Views:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/cat.png" alt="Peter&#39;s Blog"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about">关于</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/news">近闻</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/publications">发表</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/projects">项目</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/notes">笔记</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/gallery">画廊</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>来，请俺喝杯咖啡！</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+ <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+  });
+
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/mathjax/2.7.7/MathJax.js"></script>
+<script src="https://cdn.staticfile.org/mathjax/2.7.7/config/TeX-AMS-MML_HTMLorMML-full.js"></script>
+<script>
+  var ayerConfig = {
+    mathjax: true,
+  };
+</script>
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+ 
+<script src="/js/dz.js"></script>
+ 
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    
+
+  </div>
+</body>
+
+</html>

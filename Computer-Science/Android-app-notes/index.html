@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+
+
+<html lang="en,zh-CN,default">
+  
+
+    <head>
+      <meta charset="utf-8" />
+        
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>Android App Notes |  Peter&#39;s Blog</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/images/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    <!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><link rel="alternate" href="/rss2.xml" title="Peter's Blog" type="application/atom+xml">
+</head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-Computer-Science/Android-app-notes"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  Android App Notes
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/Computer-Science/Android-app-notes/" class="article-date">
+  <time datetime="2021-06-06T07:26:00.000Z" itemprop="datePublished">2021-06-06</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Notes/">Notes</a> / <a class="article-category-link" href="/categories/Notes/Coding/">Coding</a>
+  </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">1.1k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">5 min</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="Android-App-Development-Note"><a href="#Android-App-Development-Note" class="headerlink" title="Android App Development Note"></a>Android App Development Note</h1><p>这篇笔记是在2021年光电设计竞赛中，我独立负责开发安卓APP过程的自学笔记。可能学习链接较多，未仔细重新整理。</p>
+<p>开发使用的语言是Kotlin，最终成果见 <a target="_blank" rel="noopener" href="https://github.com/longqianh/AppleSugar.git">AppleSugar</a>.</p>
+<h2 id="Kotlin-Basics"><a href="#Kotlin-Basics" class="headerlink" title="Kotlin Basics"></a>Kotlin Basics</h2><ul>
+<li><p>nullable: <code>?</code></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/42646016/what-does-the-arrow-operator-do-in-kotlin"><code>-&gt;</code></a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://kotlinlang.org/docs/lambdas.html#it-implicit-name-of-a-single-parameter"><code>it</code></a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1719701">::</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://kotlinlang.org/docs/scope-functions.html#let">Scope functions</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/36262305/difference-between-list-and-array-types-in-kotlin">List v.s. Array</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://blog.autsoft.hu/top-10-kotlin-stack-overflow-questions/">10 top stackoverfloew</a> </p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/e2cb4c65d4ff">lazy</a></p>
+</li>
+</ul>
+<span id="more"></span>
+
+<h3 id="dataBinding"><a href="#dataBinding" class="headerlink" title="dataBinding"></a>dataBinding</h3><p><a target="_blank" rel="noopener" href="https://developer.android.com/codelabs/android-databinding">https://developer.android.com/codelabs/android-databinding</a></p>
+<h3 id="Activity"><a href="#Activity" class="headerlink" title="Activity"></a>Activity</h3><p><code>setContentView</code>:<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/9acdf27aae06">https://www.jianshu.com/p/9acdf27aae06</a></p>
+<p><code>requireActivity</code>: <a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/61045573/what-is-the-difference-between-requireactivity-and-onactivitycreated">https://stackoverflow.com/questions/61045573/what-is-the-difference-between-requireactivity-and-onactivitycreated</a></p>
+<h3 id="Layout"><a href="#Layout" class="headerlink" title="Layout"></a>Layout</h3><p>layout不需要id，fragment有id</p>
+<ul>
+<li><p><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/25679369/what-does-framelayout-do/50086743">FrameLayout</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://developer.android.google.cn/reference/android/support/constraint/ConstraintLayout">ConstraintLayout</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://twiserandom.com/android/graphics/what-is-a-bitmap-in-android/index.html#What_is_bitmap">Bitmap</a></p>
+</li>
+<li><p>good fontFamily: roboto</p>
+</li>
+</ul>
+<h3 id="Context"><a href="#Context" class="headerlink" title="Context"></a>Context</h3><p>带看：<a target="_blank" rel="noopener" href="https://blog.csdn.net/guolin_blog/article/details/47028975">https://blog.csdn.net/guolin_blog/article/details/47028975</a></p>
+<h3 id="Button"><a href="#Button" class="headerlink" title="Button"></a>Button</h3><p><code>onClickListener</code></p>
+<h3 id="CameraX"><a href="#CameraX" class="headerlink" title="CameraX"></a>CameraX</h3><p>底层成像原理：<a target="_blank" rel="noopener" href="https://blog.csdn.net/Windgs_YF/article/details/104262321">https://blog.csdn.net/Windgs_YF/article/details/104262321</a></p>
+<p>使用：<a target="_blank" rel="noopener" href="https://developer.android.com/codelabs/camerax-getting-started#4">https://developer.android.com/codelabs/camerax-getting-started#4</a></p>
+<p>Camera沉思录：<a target="_blank" rel="noopener" href="https://yeungeek.github.io/2020/01/14/AndroidCamera-Basic/">https://yeungeek.github.io/2020/01/14/AndroidCamera-Basic/</a></p>
+<h3 id="Fragment"><a href="#Fragment" class="headerlink" title="Fragment"></a>Fragment</h3><p><a target="_blank" rel="noopener" href="https://developer.android.com/guide/fragments/create">https://developer.android.com/guide/fragments/create</a></p>
+<p>A Fragment is a piece of an application’s user interface or behavior that can be placed in an <code>Activity</code>. Interaction with fragments is done through <code>FragmentManager</code>, which can be obtained via <code>Activity.getFragmentManager()</code> and <code>Fragment.getFragmentManager()</code>.</p>
+<p>You can add your fragment to the activity’s view hierarchy either by defining the fragment in your activity’s layout file or by defining a fragment container in your activity’s layout file and then programmatically adding the fragment from within your activity.In either case, you need to add a <code>FragmentContainerView</code> that defines the location where the fragment should be placed within the activity’s view hierarchy.</p>
+<ul>
+<li><p>静态添加fragment</p>
+</li>
+<li><p>动态添加fragment</p>
+</li>
+<li><p>FragmentTransaction</p>
+<ul>
+<li>同一个界面内的fragment操作</li>
+<li><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/18634207/difference-between-add-replace-and-addtobackstack">add vs replace</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="Navigation"><a href="#Navigation" class="headerlink" title="Navigation"></a>Navigation</h3><p>Navigation 组件旨在用于具有一个主 Activity 和多个 Fragment 目的地的应用。<strong>主 Activity 与导航图相关联</strong>，且包含一个负责根据需要交换目的地的 <code>NavHostFragment</code>。</p>
+<p><a target="_blank" rel="noopener" href="https://developer.android.com/guide/navigation/navigation-getting-started">https://developer.android.com/guide/navigation/navigation-getting-started</a></p>
+<p>导航到一个目的地会将该目的地推送到堆栈的顶部。</p>
+<p>Practice: <a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1759529">https://cloud.tencent.com/developer/article/1759529</a></p>
+<ul>
+<li><p>safeArgs: 带着变量一起导航过去</p>
+<p><a target="_blank" rel="noopener" href="https://www.raywenderlich.com/19327407-using-safe-args-with-the-android-navigation-component">https://www.raywenderlich.com/19327407-using-safe-args-with-the-android-navigation-component</a></p>
+</li>
+</ul>
+<h3 id="onCreated-v-s-onViewCreated"><a href="#onCreated-v-s-onViewCreated" class="headerlink" title="onCreated v.s onViewCreated"></a>onCreated v.s onViewCreated</h3><p><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/28929637/difference-and-uses-of-oncreate-oncreateview-and-onactivitycreated-in-fra">https://stackoverflow.com/questions/28929637/difference-and-uses-of-oncreate-oncreateview-and-onactivitycreated-in-fra</a></p>
+<h2 id="Data-Binding"><a href="#Data-Binding" class="headerlink" title="Data Binding"></a>Data Binding</h2><p>Fragment databinding：<a target="_blank" rel="noopener" href="https://developer.android.com/topic/libraries/view-binding#fragments">https://developer.android.com/topic/libraries/view-binding#fragments</a></p>
+<p>注意添加dependency后会自动生成 FragmentBinding的一个类，比如我的一个fragment叫inferFragment，那么类名就是 InferFragmentBinding</p>
+<p>Build遇到的问题：<a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/55909804/duplicate-class-android-support-v4-app-inotificationsidechannel-found-in-modules">https://stackoverflow.com/questions/55909804/duplicate-class-android-support-v4-app-inotificationsidechannel-found-in-modules</a></p>
+<h2 id="LifeCycyle"><a href="#LifeCycyle" class="headerlink" title="LifeCycyle"></a>LifeCycyle</h2><ul>
+<li><p>onStart: when the activity becomes visible , when navigate away and come back, onStart will be called</p>
+</li>
+<li><p>onStop: when the activity becomes out of the screen. Use this to persist (permanently save) data.</p>
+</li>
+<li><p>onResume: when the activity gains focus</p>
+</li>
+<li><p>onPause: when the activity losses focus. Should keep execution fast in onRause since the next activity is not shown until it completes.</p>
+</li>
+<li><p>onCreate: only called once when the activity is first launched. Initialize variables (that initialize only once) in onCreate.</p>
+</li>
+<li><p>onDestory: It is called once when the activity is fully destroyed. </p>
+<p><a target="_blank" rel="noopener" href="https://tva1.sinaimg.cn/large/008i3skNly1grehsmkkm5j61c30u0my502.jpg" title="img" class="gallery-item"><img src="https://tva1.sinaimg.cn/large/008i3skNly1grehsmkkm5j61c30u0my502.jpg" alt="img"></a></p>
+</li>
+</ul>
+<h3 id="Intent"><a href="#Intent" class="headerlink" title="Intent"></a>Intent</h3><p><a target="_blank" rel="noopener" href="https://jishuin.proginn.com/p/763bfbd30374">https://jishuin.proginn.com/p/763bfbd30374</a></p>
+<ul>
+<li>action</li>
+<li>data</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://developer.android.com/reference/android/content/Intent">https://developer.android.com/reference/android/content/Intent</a></p>
+<h4 id="pick-picture-intent"><a href="#pick-picture-intent" class="headerlink" title="pick picture intent:"></a>pick picture intent:</h4><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">lateinit</span> <span class="keyword">var</span> getContent: ActivityResultLauncher&lt;String&gt;</span><br><span class="line"></span><br><span class="line">getContent = registerForActivityResult(ActivityResultContracts.GetContent()) &#123; uri: Uri -&gt;</span><br><span class="line">            <span class="comment">// some calculation process                                                                  </span></span><br><span class="line">            CoroutineScope(Dispatchers.Main).launch &#123;</span><br><span class="line">                intensity = Utils.getIntensityFromUri(uri,contentResolver)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">getContent.launch(<span class="string">&quot;image/*&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="Activity-Result"><a href="#Activity-Result" class="headerlink" title="Activity Result"></a>Activity Result</h3><p><a target="_blank" rel="noopener" href="https://developer.android.com/training/basics/intents/result?hl=zh-cn">https://developer.android.com/training/basics/intents/result?hl=zh-cn</a></p>
+<ul>
+<li>Pull the photo URI into an image variable and create a writeable image of it?</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_38304672/article/details/110846682">https://blog.csdn.net/qq_38304672/article/details/110846682</a></p>
+<h2 id="Import-Modules"><a href="#Import-Modules" class="headerlink" title="Import Modules"></a>Import Modules</h2><p><a target="_blank" rel="noopener" href="https://medium.com/android-news/a-beginners-guide-to-setting-up-opencv-android-library-on-android-studio-19794e220f3c">opencv</a></p>
+<h3 id="Proxy"><a href="#Proxy" class="headerlink" title="Proxy"></a>Proxy</h3><ul>
+<li>setup <a target="_blank" rel="noopener" href="https://github.com/yanue/V2rayU/wiki/V2rayU%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E">v2ray</a></li>
+<li>setup android as below</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://tva1.sinaimg.cn/large/008i3skNly1grfkusmyr3j312c0u0dze.jpg" title="image-20210612164639566" class="gallery-item"><img src="https://tva1.sinaimg.cn/large/008i3skNly1grfkusmyr3j312c0u0dze.jpg" alt="image-20210612164639566"></a></p>
+<p><a target="_blank" rel="noopener" href="https://tva1.sinaimg.cn/large/008i3skNly1grfkujxyccj31c00u0wyu.jpg" title="image-20210612164622393" class="gallery-item"><img src="https://tva1.sinaimg.cn/large/008i3skNly1grfkujxyccj31c00u0wyu.jpg" alt="image-20210612164622393"></a></p>
+<h2 id="Opencv"><a href="#Opencv" class="headerlink" title="Opencv"></a>Opencv</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/25642532/opencv-pointx-y-represent-column-row-or-row-column">Point: {column,row}~(x,y) in graph</a></li>
+</ul>
+<h2 id="Assets"><a href="#Assets" class="headerlink" title="Assets"></a>Assets</h2><p>Use AssetManager: provides access to an application’s raw asset files.</p>
+<p><code>context.getAssets()</code> will return <code>AssetManager</code> object.</p>
+<ul>
+<li><p><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/54384425/how-to-get-a-listbitmap-from-asset-folder-in-kotlin">get a list of bitmap from assets folder</a></p>
+</li>
+<li><p>assetManager 操作的路径是 <code>assets</code> 下，所以打开图片的话路径就是 <code>image.jpg</code>, 而不是 <code>assets/image.jpg</code></p>
+</li>
+<li><p>打开并加载图片</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> am= requireContext().assets</span><br><span class="line"><span class="keyword">val</span> istm: InputStream = am.<span class="keyword">open</span>(<span class="string">&quot;test.jpg&quot;</span>)</span><br><span class="line"><span class="keyword">val</span> bitmap = BitmapFactory.decodeStream(istm)</span><br><span class="line">imageIs.setImageBitmap(bitmap)</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="TfLite"><a href="#TfLite" class="headerlink" title="TfLite"></a>TfLite</h3><p>See a good example <a target="_blank" rel="noopener" href="https://github.com/teresawu/random">here</a>.</p>
+<p><a target="_blank" rel="noopener" href="https://tva1.sinaimg.cn/large/008i3skNly1grhgl4bffqj31c00u0qv5.jpg" title="ae6b294b3d6ab85f4c689dffdd0c9102" class="gallery-item"><img src="https://tva1.sinaimg.cn/large/008i3skNly1grhgl4bffqj31c00u0qv5.jpg" alt="ae6b294b3d6ab85f4c689dffdd0c9102"></a></p>
+<h3 id="Listen-on-multiple-Buttons"><a href="#Listen-on-multiple-Buttons" class="headerlink" title="Listen on multiple Buttons"></a>Listen on multiple Buttons</h3><p><a target="_blank" rel="noopener" href="https://myandroid.site/multiple-onclicklistener-in-kotlin-android-studio-example/">https://myandroid.site/multiple-onclicklistener-in-kotlin-android-studio-example/</a></p>
+<h3 id="Load-TfLite-Model"><a href="#Load-TfLite-Model" class="headerlink" title="Load TfLite Model"></a>Load TfLite Model</h3><p><a target="_blank" rel="noopener" href="https://towardsdatascience.com/spam-classification-in-android-with-tensorflow-lite-cde417e81260">https://towardsdatascience.com/spam-classification-in-android-with-tensorflow-lite-cde417e81260</a></p>
+<p><a target="_blank" rel="noopener" href="https://heartbeat.fritz.ai/loading-and-running-a-quantized-tensorflow-lite-model-on-android-18aa7505076a">https://heartbeat.fritz.ai/loading-and-running-a-quantized-tensorflow-lite-model-on-android-18aa7505076a</a></p>
+<h2 id="Bluetooth"><a href="#Bluetooth" class="headerlink" title="Bluetooth"></a>Bluetooth</h2><p><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=eg-t_rhDSoM">https://www.youtube.com/watch?v=eg-t_rhDSoM</a></p>
+<ul>
+<li>标定</li>
+</ul>
+<h3 id="如何在Fragment之间共享数据"><a href="#如何在Fragment之间共享数据" class="headerlink" title="如何在Fragment之间共享数据?"></a>如何在Fragment之间共享数据?</h3><p><a target="_blank" rel="noopener" href="https://johnsonlee.io/2020/12/05/sharing-data-between-fragments/">https://johnsonlee.io/2020/12/05/sharing-data-between-fragments/</a></p>
+<h2 id="协程与挂起"><a href="#协程与挂起" class="headerlink" title="协程与挂起"></a>协程与挂起</h2><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1KJ41137E9/?spm_id_from=333.788.recommend_more_video.-1">https://www.bilibili.com/video/BV1KJ41137E9/?spm_id_from=333.788.recommend_more_video.-1</a></p>
+<h3 id="suspend"><a href="#suspend" class="headerlink" title="suspend"></a>suspend</h3><p>挂起。</p>
+<ul>
+<li>作用：函数的创建者对调用者的提醒，告诉调用者这是一个耗时函数，最好放到协程里在后台执行。会限制函数只能在协程里被调用。</li>
+<li>什么时候用？<ul>
+<li>耗时的时候：I&#x2F;O操作和计算工作。<ul>
+<li>文件读写、网络交互、图片处理等</li>
+<li>需要等待的函数</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>挂起后主线程就去不会执行当前代码块了，会往后走。这样主线程就不会卡。</li>
+</ul>
+<p><code>launch &#123;&#125;</code> &lt;-&gt; handler.post { task } +resume ( suspend挂起后回到主线程继续执行 )</p>
+<h3 id="async"><a href="#async" class="headerlink" title="async"></a>async</h3><p>同时挂起</p>
+<h2 id="一件拍摄"><a href="#一件拍摄" class="headerlink" title="一件拍摄"></a>一件拍摄</h2><p>通过delay</p>
+<h3 id="同步"><a href="#同步" class="headerlink" title="同步"></a>同步</h3><p>要加锁</p>
+<p><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/56480520/kotlin-coroutines-sequential-execution">https://stackoverflow.com/questions/56480520/kotlin-coroutines-sequential-execution</a></p>
+<h2 id="ViewModel"><a href="#ViewModel" class="headerlink" title="ViewModel"></a>ViewModel</h2><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">lateinit</span> <span class="keyword">var</span> viewModel: InferViewModel</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">var</span> _binding: InferFragmentBinding? = <span class="literal">null</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">val</span> binding <span class="keyword">get</span>() = _binding!!</span><br><span class="line"></span><br><span class="line"> <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onCreateView</span><span class="params">(</span></span></span><br><span class="line"><span class="params"><span class="function">        inflater: <span class="type">LayoutInflater</span>, container: <span class="type">ViewGroup</span>?,</span></span></span><br><span class="line"><span class="params"><span class="function">        savedInstanceState: <span class="type">Bundle</span>?</span></span></span><br><span class="line"><span class="params"><span class="function">    )</span></span>: View &#123;</span><br><span class="line">        viewModel = ViewModelProviders.of(<span class="keyword">this</span>).<span class="keyword">get</span>(InferViewModel::<span class="keyword">class</span>.java)</span><br><span class="line">        _binding = InferFragmentBinding.inflate(inflater, container, <span class="literal">false</span>)</span><br><span class="line">        <span class="keyword">return</span> binding.root</span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Build-apk"><a href="#Build-apk" class="headerlink" title="Build apk"></a>Build apk</h2><p>split分包：</p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/6844904006976798733">https://juejin.cn/post/6844904006976798733</a></p>
+</div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script> 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>Copyright： </strong>
+          
+          Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/app/" rel="tag">app</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/Biology/Molecular-Medicine/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            Molecular Medicine Notes
+          
+        </div>
+      </a>
+    
+    
+      <a href="/Optics/Modern-Optical-Testing-Technology/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">Modern Optical Testing Technology</div>
+      </a>
+    
+  </nav>
+
+  
+   
+     
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2020-2023
+        <i class="ri-heart-fill heart_icon"></i> Longqian Huang
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>Visitors:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>Views:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/cat.png" alt="Peter&#39;s Blog"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about">关于</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/news">近闻</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/publications">发表</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/projects">项目</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/notes">笔记</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/gallery">画廊</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>来，请俺喝杯咖啡！</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+ <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+  });
+
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/mathjax/2.7.7/MathJax.js"></script>
+<script src="https://cdn.staticfile.org/mathjax/2.7.7/config/TeX-AMS-MML_HTMLorMML-full.js"></script>
+<script>
+  var ayerConfig = {
+    mathjax: true,
+  };
+</script>
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+ 
+<script src="/js/dz.js"></script>
+ 
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    
+
+  </div>
+</body>
+
+</html>

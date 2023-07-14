@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+
+
+<html lang="en,zh-CN,default">
+  
+
+    <head>
+      <meta charset="utf-8" />
+        
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>C++ Programming Specification |  Peter&#39;s Blog</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/images/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    <!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><link rel="alternate" href="/rss2.xml" title="Peter's Blog" type="application/atom+xml">
+</head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-Computer-Science/C++编程规范"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  C++ Programming Specification
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/Computer-Science/C++%E7%BC%96%E7%A8%8B%E8%A7%84%E8%8C%83/" class="article-date">
+  <time datetime="2021-01-01T01:53:00.000Z" itemprop="datePublished">2021-01-01</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Notes/">Notes</a> / <a class="article-category-link" href="/categories/Notes/Coding/">Coding</a>
+  </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">1.9k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">11 min</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="Google-Code-Standard"><a href="#Google-Code-Standard" class="headerlink" title="Google Code Standard"></a>Google Code Standard</h1><p>华为海思的项目需要了解一下Google编程规范，就简单看了一下。</p>
+<h2 id="Header-Files"><a href="#Header-Files" class="headerlink" title="Header Files"></a>Header Files</h2><p>头文件自包含、最好将模板和内联函数的定义与其声明放置在同一文件中。</p>
+<ul>
+<li><p>All header files should be self-contained. Users and refactoring tools should not have to adhere to special conditions to include the header. Specifically, a header should have <a target="_blank" rel="noopener" href="https://google.github.io/styleguide/cppguide.html#The__define_Guard">header guards</a> and include all other headers it needs.</p>
+</li>
+<li><p>Prefer placing the definitions for template and inline functions in the same file as their declarations. The definitions of these constructs must be included into every <code>.cc</code> file that uses them, or the program may fail to link in some build configurations. If declarations and definitions are in different files, including the former should transitively include the latter. Do not move these definitions to separately included header files (<code>-inl.h</code>); this practice was common in the past, but is no longer allowed.</p>
+</li>
+<li><p>Avoid using forward declarations where possible. </p>
+</li>
+<li><p>Define functions inline only when they are small, say, 10 lines or fewer.  经常用的小函数写成内联函数提升效率。</p>
+</li>
+</ul>
+ <span id="more"></span>
+
+
+<ul>
+<li><p>Include headers in the following order: Related header, C system headers, C++ standard library headers, other libraries’ headers, your project’s headers.Separate each non-empty group with one blank line.</p>
+<p>e .g. </p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;foo/server/fooserver.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sys/types.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;unistd.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;base/basictypes.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;base/commandlineflags.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;foo/server/bar.h&quot;</span></span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="Namespace"><a href="#Namespace" class="headerlink" title="Namespace"></a>Namespace</h2><ul>
+<li><p>With few exceptions, place code in a namespace. Namespaces should have unique names based on the project name, and possibly its path. </p>
+</li>
+<li><p>Do not use <em>using-directives</em> (e.g., <code>using namespace foo</code>) which pollutes the namespace. . Do not use inline namespaces.</p>
+</li>
+<li><p>Terminate multi-line namespaces with comments as shown in the given examples (below).</p>
+</li>
+<li><p>Namespaces wrap the entire source file after includes, <a target="_blank" rel="noopener" href="https://gflags.github.io/gflags/">gflags</a> definitions&#x2F;declarations and forward declarations of classes from other namespaces.</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// In the .h file</span></span><br><span class="line"><span class="keyword">namespace</span> mynamespace &#123;</span><br><span class="line"></span><br><span class="line"><span class="comment">// All declarations are within the namespace scope.</span></span><br><span class="line"><span class="comment">// Notice the lack of indentation.</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MyClass</span> &#123;</span><br><span class="line"> <span class="keyword">public</span>:</span><br><span class="line">  ...</span><br><span class="line">  <span class="function"><span class="type">void</span> <span class="title">Foo</span><span class="params">()</span></span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">&#125;  <span class="comment">// namespace mynamespace</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>When definitions in a <code>.cc</code> file do not need to be referenced outside that file, place them in an unnamed namespace or declare them <code>static</code>. Do not use either of these constructs in <code>.h</code> files.</p>
+</li>
+<li><p>Do not use a class simply to group static members. Static methods of a class should generally be closely related to instances of the class or the class’s static data.</p>
+</li>
+</ul>
+<h2 id="Variables"><a href="#Variables" class="headerlink" title="Variables"></a>Variables</h2><ul>
+<li><p>Declare variables in as local a scope as possible, and as close to the first use as possible. </p>
+  <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> i;</span><br><span class="line">i = <span class="built_in">f</span>();      <span class="comment">// Bad -- initialization separate from declaration.</span></span><br><span class="line"><span class="type">int</span> j = <span class="built_in">g</span>();  <span class="comment">// Good -- declaration has initialization.</span></span><br><span class="line"></span><br><span class="line">std::vector&lt;<span class="type">int</span>&gt; v;</span><br><span class="line">v.<span class="built_in">push_back</span>(<span class="number">1</span>);  <span class="comment">// Prefer initializing using brace initialization.</span></span><br><span class="line">v.<span class="built_in">push_back</span>(<span class="number">2</span>);</span><br><span class="line">std::vector&lt;<span class="type">int</span>&gt; v = &#123;<span class="number">1</span>, <span class="number">2</span>&#125;;  <span class="comment">// Good -- v starts initialized.</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Variables needed for <code>if</code>, <code>while</code> and <code>for</code> statements should normally be declared within those statements, so that such variables are confined to those scopes. E.g.:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> (<span class="type">const</span> <span class="type">char</span>* p = <span class="built_in">strchr</span>(str, <span class="string">&#x27;/&#x27;</span>)) str = p + <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Caveat: if the variable is an <em>object</em>, its constructor is invoked every time it enters scope and is created, and its destructor is invoked every time it goes out of scope.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// Inefficient implementation:</span><br><span class="line">for (int i = 0; i &lt; 1000000; ++i) &#123;</span><br><span class="line">  Foo f;  // My ctor and dtor get called 1000000 times each.</span><br><span class="line">  f.DoSomething(i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>It may be more efficient to declare such a variable used in a loop outside that loop:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Foo f;  // My ctor and dtor get called once each.</span><br><span class="line">for (int i = 0; i &lt; 1000000; ++i) &#123;</span><br><span class="line">  f.DoSomething(i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>Objects with <a target="_blank" rel="noopener" href="http://en.cppreference.com/w/cpp/language/storage_duration#Storage_duration">static storage duration</a> are forbidden unless they are <a target="_blank" rel="noopener" href="http://en.cppreference.com/w/cpp/types/is_destructible">trivially destructible</a>.  Fundamental types (like pointers and <code>int</code>) are trivially destructible, as are arrays of trivially destructible types. Note that variables marked with <code>constexpr</code> are trivially destructible.</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">int</span> kNum = <span class="number">10</span>;  <span class="comment">// allowed</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">X</span> &#123; <span class="type">int</span> n; &#125;;</span><br><span class="line"><span class="type">const</span> X kX[] = &#123;&#123;<span class="number">1</span>&#125;, &#123;<span class="number">2</span>&#125;, &#123;<span class="number">3</span>&#125;&#125;;  <span class="comment">// allowed</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">foo</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="type">static</span> <span class="type">const</span> <span class="type">char</span>* <span class="type">const</span> kMessages[] = &#123;<span class="string">&quot;hello&quot;</span>, <span class="string">&quot;world&quot;</span>&#125;;  <span class="comment">// allowed</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// allowed: constexpr guarantees trivial destructor</span></span><br><span class="line"><span class="keyword">constexpr</span> std::array&lt;<span class="type">int</span>, 3&gt; kArray = &#123;&#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// bad: non-trivial destructor</span></span><br><span class="line"><span class="type">const</span> std::string kFoo = <span class="string">&quot;foo&quot;</span>;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="Initializing"><a href="#Initializing" class="headerlink" title="Initializing"></a>Initializing</h2><ul>
+<li><p><code>constexpr</code> : 编译时优化</p>
+</li>
+<li><p>the initializing expression is a constant expression, and if the object is initialized by a constructor call, then the constructor must be specified as <code>constexpr</code>, too:</p>
+</li>
+</ul>
+<p>	</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">Foo</span> &#123; <span class="function"><span class="keyword">constexpr</span> <span class="title">Foo</span><span class="params">(<span class="type">int</span>)</span> </span>&#123;&#125; &#125;;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n = <span class="number">5</span>;  <span class="comment">// fine, 5 is a constant expression</span></span><br><span class="line"><span class="function">Foo <span class="title">x</span><span class="params">(<span class="number">2</span>)</span></span>;   <span class="comment">// fine, 2 is a constant expression and the chosen constructor is constexpr</span></span><br><span class="line">Foo a[] = &#123; <span class="built_in">Foo</span>(<span class="number">1</span>), <span class="built_in">Foo</span>(<span class="number">2</span>), <span class="built_in">Foo</span>(<span class="number">3</span>) &#125;;  <span class="comment">// fine</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="Class"><a href="#Class" class="headerlink" title="Class"></a>Class</h2><h3 id="explicit"><a href="#explicit" class="headerlink" title="explicit"></a><code>explicit</code></h3><ul>
+<li><p>Do not define implicit conversions. Use the <code>explicit</code> keyword for conversion operators and single-argument constructors.</p>
+</li>
+<li><p>Implicit conversions allow an object of one type (called the source type) to be used where a different type (called the destination type) is expected, such as when passing an <code>int</code> argument to a function that takes a <code>double</code> parameter.</p>
+</li>
+<li><p>The <code>explicit</code> keyword can be applied to a constructor or (since C++11) a conversion operator, to ensure that it can only be used when the destination type is explicit at the point of use, e.g., with a cast. This applies not only to implicit conversions, but to C++11’s list initialization syntax:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Foo</span> &#123;</span><br><span class="line">  <span class="function"><span class="keyword">explicit</span> <span class="title">Foo</span><span class="params">(<span class="type">int</span> x, <span class="type">double</span> y)</span></span>;</span><br><span class="line">  ...</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Func</span><span class="params">(Foo f)</span></span>;</span><br><span class="line"><span class="built_in">Func</span>(&#123;<span class="number">42</span>, <span class="number">3.14</span>&#125;);  <span class="comment">// Error</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="struct-or-class"><a href="#struct-or-class" class="headerlink" title="struct or class"></a>struct or class</h3><p>Use a <code>struct</code> only for passive objects that carry data; everything else is a <code>class</code>.</p>
+<h3 id="Inheritance"><a href="#Inheritance" class="headerlink" title="Inheritance"></a>Inheritance</h3><ul>
+<li><p>Composition is often more appropriate than inheritance. When using inheritance, make it <code>public</code>.</p>
+</li>
+<li><p>Do not overuse implementation inheritance. Composition is often more appropriate. Try to restrict use of inheritance to the “is-a” case: <code>Bar</code> subclasses <code>Foo</code> if it can reasonably be said that <code>Bar</code> “is a kind of” <code>Foo</code>.</p>
+</li>
+</ul>
+<h3 id="Access-Control"><a href="#Access-Control" class="headerlink" title="Access Control"></a>Access Control</h3><ul>
+<li>Limit the use of <code>protected</code> to those member functions that might need to be accessed from subclasses. </li>
+<li>Make classes’ data members <code>private</code>, unless they are <a target="_blank" rel="noopener" href="https://google.github.io/styleguide/cppguide.html#Constant_Names">constants</a>.</li>
+</ul>
+<h3 id="Declaration-Order"><a href="#Declaration-Order" class="headerlink" title="Declaration Order"></a>Declaration Order</h3><p>Group similar declarations together, placing public parts earlier.</p>
+<p>A class definition should usually start with a <code>public:</code> section, followed by <code>protected:</code>, then <code>private:</code>. Omit sections that would be empty.</p>
+<p>Within each section, prefer grouping similar kinds of declarations together, and prefer the following order: types (including <code>typedef</code>, <code>using</code>, and nested structs and classes), constants, factory functions, constructors and assignment operators, destructor, all other methods, data members.</p>
+<h2 id="Functions"><a href="#Functions" class="headerlink" title="Functions"></a>Functions</h2><ul>
+<li><p>The output of a C++ function is naturally provided via a return value and sometimes via output parameters (or in&#x2F;out parameters).</p>
+</li>
+<li><p>Prefer using return values over output parameters: they improve readability, and often provide the same or better performance.</p>
+</li>
+<li><p>When ordering function parameters, put all input-only parameters before any output parameters. In particular, do not add new parameters to the end of the function just because they are new; place new input-only parameters before the output parameters. This is not a hard-and-fast rule. Parameters that are both input and output muddy the waters, and, as always, consistency with related functions may require you to bend the rule. Variadic functions may also require unusual parameter ordering.</p>
+</li>
+<li><p>Prefer small and focused functions.</p>
+</li>
+<li><p>Default arguments are allowed on non-virtual functions when the default is guaranteed to always have the same value.</p>
+</li>
+</ul>
+<h2 id="Naming"><a href="#Naming" class="headerlink" title="Naming"></a>Naming</h2><h3 id="General"><a href="#General" class="headerlink" title="General"></a>General</h3><ul>
+<li>Use names that describe the purpose or intent of the object. Do not worry about saving horizontal space as it is far more important to make your code immediately understandable by a new reader. Minimize the use of abbreviations that would likely be unknown to someone outside your project (especially acronyms and initialisms). </li>
+<li>Do not abbreviate by deleting letters within a word. As a rule of thumb, an abbreviation is probably OK if it’s listed in Wikipedia. Generally speaking, descriptiveness should be proportional to the name’s scope of visibility.</li>
+<li>Note that certain universally-known abbreviations are OK, such as <code>i</code> for an iteration variable and <code>T</code> for a template parameter.</li>
+<li>Namespace names are all lower-case, with words separated by underscores. Top-level namespace names are based on the project name .</li>
+<li>Enumerators (for both scoped and unscoped enums) should be named like <a target="_blank" rel="noopener" href="https://google.github.io/styleguide/cppguide.html#Constant_Names">constants</a>, not like <a target="_blank" rel="noopener" href="https://google.github.io/styleguide/cppguide.html#Macro_Names">macros</a>.</li>
+<li>In general macros should <em>not</em> be used. However, if they are absolutely needed, then they should be named with all capitals and underscores.</li>
+</ul>
+<h3 id="File-Names"><a href="#File-Names" class="headerlink" title="File Names"></a>File Names</h3><ul>
+<li>Filenames should be all lowercase and can include underscores (<code>_</code>) or dashes (<code>-</code>). </li>
+<li>In general, make your filenames very specific. For example, use <code>http_server_logs.h</code> rather than <code>logs.h</code>. A very common case is to have a pair of files called, e.g., <code>foo_bar.h</code> and <code>foo_bar.cc</code>, defining a class called <code>FooBar</code>.</li>
+</ul>
+<h3 id="Type-Names"><a href="#Type-Names" class="headerlink" title="Type Names"></a>Type Names</h3><p>The names of all types — classes, structs, type aliases, enums, and type template parameters — have the same naming convention. Type names should start with a capital letter and have a capital letter for each new word. No underscores. </p>
+<h3 id="Variable-Names"><a href="#Variable-Names" class="headerlink" title="Variable Names"></a>Variable Names</h3><p>The names of variables (including function parameters) and data members are all lowercase, with underscores between words. Data members of classes (but not structs) additionally have trailing underscores. For instance: <code>a_local_variable</code>, <code>a_struct_data_member</code>, <code>a_class_data_member_</code>.</p>
+<p>Variables declared constexpr or const, and whose value is fixed for the duration of the program, are named with a leading “k” followed by mixed case. Underscores can be used as separators in the rare cases where capitalization cannot be used for separation. For example:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">const int kDaysInAWeek = 7;</span><br><span class="line">const int kAndroid8_0_0 = 24;  // Android 8.0.0</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="Function-Names"><a href="#Function-Names" class="headerlink" title="Function Names"></a>Function Names</h3><p>Regular functions have mixed case; accessors and mutators may be named like variables.</p>
+<ul>
+<li><p>Ordinarily, functions should start with a capital letter and have a capital letter for each new word.</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">AddTableEntry</span>()</span><br><span class="line"><span class="built_in">DeleteUrl</span>()</span><br><span class="line"><span class="built_in">OpenFileOrDie</span>()</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Accessors and mutators (get and set functions) may be named like variables. These often correspond to actual member variables, but this is not required. For example, <code>int count()</code> and <code>void set_count(int count)</code>.</p>
+</li>
+</ul>
+<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><h3 id="Don’ts"><a href="#Don’ts" class="headerlink" title="Don’ts"></a>Don’ts</h3><p>Do not state the obvious. In particular, don’t literally describe what code does, unless the behavior is nonobvious to a reader who understands C++ well. Instead, provide higher level comments that describe <em>why</em> the code does what it does, or make the code self describing.</p>
+<h3 id="Spaces-vs-Tabs"><a href="#Spaces-vs-Tabs" class="headerlink" title="Spaces vs. Tabs"></a>Spaces vs. Tabs</h3><p>Use only spaces, and indent 2 spaces at a time.</p>
+<p>We use spaces for indentation. Do not use tabs in your code. You should set your editor to emit spaces when you hit the tab key.</p>
+<h3 id="Function-Declarations-and-Definitions"><a href="#Function-Declarations-and-Definitions" class="headerlink" title="Function Declarations and Definitions"></a>Function Declarations and Definitions</h3><p>Return type on the same line as function name, parameters on the same line if they fit. Wrap parameter lists which do not fit on a single line as you would wrap arguments in a <a target="_blank" rel="noopener" href="https://google.github.io/styleguide/cppguide.html#Function_Calls">function call</a>.</p>
+<p>Functions look like this:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ReturnType ClassName::FunctionName(Type par_name1, Type par_name2) &#123;</span><br><span class="line">  DoSomething();</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>If you have too much text to fit on one line:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ReturnType ClassName::ReallyLongFunctionName(Type par_name1, Type par_name2,</span><br><span class="line">                                             Type par_name3) &#123;</span><br><span class="line">  DoSomething();</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>or if you cannot fit even the first parameter:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ReturnType LongClassName::ReallyReallyReallyLongFunctionName(</span><br><span class="line">    Type par_name1,  // 4 space indent</span><br><span class="line">    Type par_name2,</span><br><span class="line">    Type par_name3) &#123;</span><br><span class="line">  DoSomething();  // 2 space indent</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script> 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>Copyright： </strong>
+          
+          Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cpp/" rel="tag">cpp</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/Computer-Science/%E8%BD%AF%E4%BB%B6%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            Software Technical Foundation Notes
+          
+        </div>
+      </a>
+    
+    
+      <a href="/Electronics/Electronics/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">Electronics</div>
+      </a>
+    
+  </nav>
+
+  
+   
+     
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2020-2023
+        <i class="ri-heart-fill heart_icon"></i> Longqian Huang
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>Visitors:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>Views:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/cat.png" alt="Peter&#39;s Blog"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about">关于</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/news">近闻</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/publications">发表</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/projects">项目</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/notes">笔记</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/gallery">画廊</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>来，请俺喝杯咖啡！</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+ <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+  });
+
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/mathjax/2.7.7/MathJax.js"></script>
+<script src="https://cdn.staticfile.org/mathjax/2.7.7/config/TeX-AMS-MML_HTMLorMML-full.js"></script>
+<script>
+  var ayerConfig = {
+    mathjax: true,
+  };
+</script>
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+ 
+<script src="/js/dz.js"></script>
+ 
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    
+
+  </div>
+</body>
+
+</html>
