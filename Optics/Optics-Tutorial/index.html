@@ -89,7 +89,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">2.3k</span>
+            <span class="post-count">2.4k</span>
         </span>
     </span>
 
@@ -98,7 +98,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">14 min</span>
+            <span class="post-count">15 min</span>
         </span>
     </span>
 </div>
@@ -150,13 +150,18 @@
 
 <p>Stokes parameter can also be written in the expression of polarization ellipse parameters:<br>$$<br>\begin{align}<br>s_1&amp;&#x3D;s_0\cos(2\chi)\cos(2\psi),\<br>s_2&amp;&#x3D;s_0\cos(2\chi)\sin(2\psi),\<br>s_3&amp;&#x3D;s_0\sin(2\chi).<br>\end{align}<br>$$<br>Here the angle $\psi\in[0,\pi]$ is the orientation of the polarization ellipse, $\chi\in[-\pi&#x2F;2,\pi&#x2F;2]$ characterizes ellipticity. Right-handed polarized light corresponds to the above-equator sphere, and linearly polarized light lies in the equator plane. </p>
 <p>We now conclude: the Stokes parameter describes the polarization state of light; it can mutually convert with the polarization matrix and polarization ellipse.</p>
-<h2 id="Holography"><a href="#Holography" class="headerlink" title="Holography"></a>Holography</h2><h3 id="Digital-blazed-grating"><a href="#Digital-blazed-grating" class="headerlink" title="Digital blazed grating"></a>Digital blazed grating</h3><p>Blazed grating is a very useful tool for removing zeroth order (unmodulated) output of the SLM. Now I derive its principle.</p>
+<h3 id="Waveplate"><a href="#Waveplate" class="headerlink" title="Waveplate"></a>Waveplate</h3><h2 id="Holography"><a href="#Holography" class="headerlink" title="Holography"></a>Holography</h2><h3 id="Digital-blazed-grating"><a href="#Digital-blazed-grating" class="headerlink" title="Digital blazed grating"></a>Digital blazed grating</h3><p>Blazed grating is a very useful tool for removing zeroth order (unmodulated) output of the SLM. Now I derive its principle.</p>
 <p>Let the period of the grating is $T$ pixels, the maximum modulation phase is $A\in(0,1)$, the complex amplitude of the one-period grating is<br>$$<br>t_0(x)&#x3D;\mathrm{rect}\left(\frac{x-T&#x2F;2}{T}\right)\cdot \exp\left(i\frac{2\pi A x}{T}\right)<br>$$<br>where $\mathrm{rect}$ is defined as<br>$$<br>\mathrm{rect}(x)&#x3D;\Pi(x)&#x3D;\left{\begin{array}{cc}<br>0 &amp; \text { if }|x|&gt;&#x3D;\frac{1}{2} \<br>1 &amp; \text { if }|x|&lt;\frac{1}{2}.<br>\end{array}\right.<br>$$<br>Let the whole grating displayed on SLM have $M$ periods ($M&#x3D;\lfloor W&#x2F;T\rfloor$), the whole-period grating is<br>$$<br>t(x)&#x3D;t_0(x)*\sum_{m&#x3D;-\lceil M&#x2F;2\rceil+1}^{\lfloor M&#x2F;2\rfloor}\delta(x-mT).<br>$$<br>Note that the sum<br>$$<br>\sum_{m&#x3D;M_1}^{M_2} e^{-i2\pi md}&#x3D;e^{-i2\pi M_1d}\frac{1-e^{-i2\pi(M_2-M_1+1)d}}{1-e^{-i2\pi d}},<br>$$<br>we have the focal plane complex amplitude:<br>$$<br>\begin{aligned}<br>\hat t(u)&amp;&#x3D;\mathcal{F}\left[t(x)\right]\<br>&amp;\approx\left[Te^{-i\pi Tu}\mathrm{sinc}\left(\frac{u}{T}\right)*\delta\left(u-\frac{A}{T}\right)\right]\cdot\sum_{m&#x3D;-\lceil M&#x2F;2\rceil+1}^{\lfloor M&#x2F;2\rfloor}e^{-i2\pi mTu}\<br>&amp;&#x3D;Te^{i\pi Tu}\mathrm{sinc}\left(\frac{u-A&#x2F;T}{T}\right)\cdot\frac{1-e^{-i2\pi MTu}}{1-e^{-i2\pi Tu}}e^{-i2\pi(-\lceil M&#x2F;2\rceil+1)Tu}\<br>&amp;&#x3D;Te^{i\pi(2\lceil M&#x2F;2\rceil-M) Tu}\mathrm{sinc}\left(\frac{u-A&#x2F;T}{T}\right)\cdot\frac{\sin\left(\pi MTu\right)}{\sin(\pi Tu)}<br>\end{aligned}<br>$$<br>where $\mathrm{sinc(x)}&#x3D;\sin(\pi x)&#x2F;(\pi x)$. </p>
 <p>Finally, the intensity profile is<br>$$<br>I(u)&#x3D;T^2\mathrm{sinc}^2\left(\frac{u-A&#x2F;T}{T}\right)\cdot\left(\frac{\sin\left(\pi MTu\right)}{\sin(\pi Tu)}\right)^2<br>$$<br>where $\sin^2$ term  determines the diffraction order profile, and $\mathrm{sinc}^2$ term dertermines the wrap profile related to the <em>blaze angle</em>. From the fomula we can see that $T$ controls the interval between different diffraction orders. Both $A$ and $T$ affects the diffraction efficiency of the 1st order.</p>
 <h3 id="Amplitude-modulation-with-blazed-grating"><a href="#Amplitude-modulation-with-blazed-grating" class="headerlink" title="Amplitude modulation with blazed grating"></a>Amplitude modulation with blazed grating</h3><p>Let $A&#x3D;A(x)$  and the target amplitude modulation pattern be $a(x)$.</p>
 <p>We need<br>$$<br>\min_A \left|\mathrm{sinc}\left(\frac{u-A&#x2F;T}{T}\right)-a\right|_2<br>$$</p>
 <h3 id="SLM-calibration"><a href="#SLM-calibration" class="headerlink" title="SLM calibration"></a>SLM calibration</h3><p>todo</p>
-<h2 id="Microscopy-Basics"><a href="#Microscopy-Basics" class="headerlink" title="Microscopy Basics"></a>Microscopy Basics</h2><h3 id="Illumination"><a href="#Illumination" class="headerlink" title="Illumination"></a>Illumination</h3><p>todo: Köhler illumination</p>
+<h2 id="Microscopy-Basics"><a href="#Microscopy-Basics" class="headerlink" title="Microscopy Basics"></a>Microscopy Basics</h2><h3 id="Objective-Lens"><a href="#Objective-Lens" class="headerlink" title="Objective Lens"></a>Objective Lens</h3><p><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/longqianh/longqianh.github.io/Optics/image-assets/image-20230720211806211.png" title="Nikon-obj" class="gallery-item"><img src="https://cdn.jsdelivr.net/gh/longqianh/longqianh.github.io/Optics/image-assets/image-20230720211806211.png" alt="Nikon-obj"></a></p>
+<p>The back pupil size of an objective lens can be calculated by its focal length and NA. Take a Nikon 40x NA 0.6 objective as an example: the back pupil diameter is<br>$$<br>D&#x3D;2f\cdot \mathrm{NA}&#x3D;2\cdot f_{tubelens}&#x2F;\mathrm{Mag}\cdot \mathrm{NA}&#x3D;6\text{ mm}<br>$$<br>which is exactly what we measured.</p>
+ <a href="./assets/image-20230720212242881.png" title="image-20230720212242881" class="gallery-item"><img src="./assets/image-20230720212242881.png" alt="image-20230720212242881" style="zoom:25%;" /></a>
+
+<p>Here we should know that the tube lens focal length  of Nikon objective and Olympus objective are 200 mm and 180 mm respectively.</p>
+<h3 id="Illumination"><a href="#Illumination" class="headerlink" title="Illumination"></a>Illumination</h3><p>todo: Köhler illumination</p>
 <h2 id="Seeing-through-Scattering-Media"><a href="#Seeing-through-Scattering-Media" class="headerlink" title="Seeing through Scattering Media"></a>Seeing through Scattering Media</h2><p>Let the input filed be $E_{in}\in\mathbb{C}^{N}$. It has $N$ modes, where $N&#x3D;h\times w$ is the input image number. The transmission matrix (TM) that describe the scattering media is $T\in\mathbb{C}^{M\times N}$, and the output field is $E_{out}\in\mathbb{C}^{M}$, $M&#x3D;H\times W$ is the output image pixels. They have relation:<br>$$<br>E_{out}&#x3D;TE_{in}.<br>$$<br>Assume we modulate the $N$ input modes, and $E_{in}&#x3D;[a_1e^{i\varphi_1},\dots,a_ne^{i\varphi_n}]^T.$ Without modulation, the output field mode $m$ is<br>$$<br>E_{m}&#x3D;\sum_{i&#x3D;1}^N t_{mn}a_ne^{i\varphi_n}<br>$$</p>
 <h3 id="Peak-Ratio-and-Enhancement"><a href="#Peak-Ratio-and-Enhancement" class="headerlink" title="Peak Ratio and Enhancement"></a>Peak Ratio and Enhancement</h3><p>We derive phase and amplitude modulation for focusing through a scattering media. Assume $t_{mn}\in\mathcal{CN}(0,1)$ (a Circular Gaussian), which means both the real and imag part of $t_{mn}$ obey a Gaussian distribution $\mathcal{N}(0,1)$. Let $\varphi_n&#x3D;0$, the focusing position be $m^*$, and the modulation term be $\mathbf{b}&#x3D;[b_1e^{i\phi_1},\dots,b_ne^{i\phi_n}]^T$. Then:<br>$$<br>E_{out,peak}&#x3D;\sum_{n&#x3D;1}^N|t_{m^<em>n}|a_nb_ne^{i[\arg(t_{m^</em>n})+\phi_n]}.<br>$$</p>
 <ul>
@@ -165,9 +170,11 @@
 <li>Binary amplitude modulation: $b_m\in{0,1},\phi_n&#x3D;0$</li>
 </ul>
 <p>Now we derive the peak ratio<br>$$<br>\mathrm{PR}&#x3D;I_{p}&#x2F;I_{in}&#x3D;|E_{out,peak}|^2<br>$$<br>and enhancement factor<br>$$<br>\eta&#x3D;\frac{\mathrm{PR}}{(1-\mathrm{PR})&#x2F;(N-1)}&#x3D;\frac{(N-1)\mathrm{PR}}{1-\mathrm}<br>$$<br>for phase and binary amplitude modulation.</p>
-<h4 id="Phase-modulation"><a href="#Phase-modulation" class="headerlink" title="Phase modulation"></a>Phase modulation</h4><p>$$<br>\mathrm{PR}&#x3D;\left|\frac{1}{\sqrt{N}}\sum_{i&#x3D;1}^n|t_{m^<em>n}|\right|^2&#x3D;N\cdot\mathbb{E}^2\left(|t_{m^</em>n}|\right).<br>$$</p>
+<h4 id="Phase-modulation"><a href="#Phase-modulation" class="headerlink" title="Phase modulation"></a>Phase modulation</h4><p>（有问题，需要重新推导）<br>$$<br>\mathrm{PR}&#x3D;\left|\frac{1}{\sqrt{N}}\sum_{i&#x3D;1}^n|t_{m^<em>n}|\right|^2&#x3D;N\cdot\mathbb{E}^2\left(|t_{m^</em>n}|\right).<br>$$</p>
 <p>Since $t_{mn}&#x3D;\frac{1}{\sqrt{2N}}(x+iy),\ x,y\in\mathcal{N}(0,1)$, where $1&#x2F;\sqrt{2N}$ is for energy conservation. We have<br>$$<br>p(x)&#x3D;\frac{1}{\sqrt{2\pi}}e^{-x^2&#x2F;2},\ p(y)&#x3D;\frac{1}{\sqrt{2\pi}}e^{-y^2&#x2F;2}.<br>$$</p>
-<p>$$<br>\begin{aligned}<br>t_{m^<em>n}&amp;&#x3D;|t_{m^</em>n}|e^{i\arg(t_{m^<em>n})},\<br>\mathbb{E}(|t_{m^</em>n}|)&amp;&#x3D;\iint_{-\infty}^\infty \sqrt{x^2+y^2}\frac{1}{2\pi}e^{-(x^2+y^2)&#x2F;2}\ \mathrm{d}x\mathrm{d}y\<br>&amp;&#x3D;\frac{1}{2\pi}\int_0^{2\pi}\int_{0}^{\infty}re^{-r^2&#x2F;2}r\ \mathrm{d}r\mathrm{d}\theta\<br>&amp;&#x3D;\sqrt{2}\cdot\Gamma\left(\frac{3}{2}\right)&#x3D;\sqrt{\frac{\pi}{2}}<br>\end{aligned}<br>$$<br>So the peak ratio is $N\pi&#x2F;2$ for phase modulation.</p>
+<p>$$<br>\begin{aligned}<br>t_{m^<em>n}&amp;&#x3D;|t_{m^</em>n}|e^{i\arg(t_{m^<em>n})},\<br>\mathbb{E}(|t_{m^</em>n}|)&amp;&#x3D;\iint_{-\infty}^\infty \sqrt{x^2+y^2}\frac{1}{2\pi}e^{-(x^2+y^2)&#x2F;2}\ \mathrm{d}x\mathrm{d}y\<br>&amp;&#x3D;\frac{1}{2\pi}\int_0^{2\pi}\int_{0}^{\infty}re^{-r^2&#x2F;2}r\ \mathrm{d}r\mathrm{d}\theta\<br>&amp;&#x3D;\sqrt{2}\cdot\Gamma\left(\frac{3}{2}\right)&#x3D;\sqrt{\frac{\pi}{2}}<br>\end{aligned}<br>$$</p>
+<p>…</p>
+<p>So the peak ratio is $\pi&#x2F;4$ for phase modulation.</p>
 <h4 id="Binary-amplitude-modulation"><a href="#Binary-amplitude-modulation" class="headerlink" title="Binary amplitude modulation"></a>Binary amplitude modulation</h4><h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><p>[1] Turtaev, S. <em>et al.</em> High-fidelity multimode fibre-based endoscopy for deep brain in vivo imaging. <em>Light Sci Appl</em> <strong>7</strong>, 92 (2018).</p>
 <p>[2] Saleh B E A, Teich M C. Fundamentals of photonics[M]. John Wiley &amp; sons, 2019.</p>
 <p>[3] Allen, L., Beijersbergen, M. W., Spreeuw, R. J. C. &amp; Woerdman, J. P. Orbital angular momentum of light and the transformation of Laguerre-Gaussian laser modes. <em>Phys. Rev. A</em> <strong>45</strong>, 8185–8189 (1992).</p>
@@ -215,15 +222,6 @@
 
    
   <nav class="article-nav">
-    
-      <a href="/Other%20Things/%E8%87%AA%E7%9C%81%E5%BD%95/" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            自省录
-          
-        </div>
-      </a>
     
     
       <a href="/Biology/Mordern-Neurobiology/" class="article-nav-link">
