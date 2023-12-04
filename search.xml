@@ -91,7 +91,7 @@
     <url>/Project/Fourier-Ptychography/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><p>This is a mini-review focused on the illumination strategy of Fourier ptychography. It is a course project in academic writing (credit: Prof. Pan Wang, Prof. Dawei Di). It is worth mentioning that the derived SBP-T is a valuable and effective classification metric of microscopy techniques.</p>
 <p>I have submitted it on <a href="https://arxiv.org/abs/2308.13933">arxiv</a>. By the way, it took me almost the entire week to finish reading and writing, and thanks to our teammates, especially Haibo Xu for the valuable discussion of the SBP-T derivation. Through this work, I have a better understanding of the numerical aperture (NA) of the optical system, though it is still slightly elusive.</p>
-<p>I would also like to thank Starbucks for supporting me the supporting coffee :)</p>
+<p>I would also like to thank Starbucks for supporting me the supportive coffee :)</p>
 
 
 	<div class="row">
@@ -114,6 +114,34 @@
       <tags>
         <tag>optics</tag>
         <tag>microscopy</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Deep Learning Applications in Augmented Reality (AR)</title>
+    <url>/Project/Augmented-Reality/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><p>This is a mini-review focused on the deep learning techiques in Augmented Reality (AR). It is a provincial-level Student Research Training Project (SRTP) at the College of Computer Science and Technology, Zhejiang University, with my peers Mr. Haojie He and Mr. Lingming Zhang.</p>
+
+
+	<div class="row">
+    <embed src="/projects/survey/AR_survey.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+
+</div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script>]]></content>
+      <categories>
+        <category>Projects</category>
+        <category>Deep Learning</category>
+      </categories>
+      <tags>
+        <tag>projects</tag>
+        <tag>ar</tag>
       </tags>
   </entry>
   <entry>
@@ -7755,8 +7783,8 @@ ssh -L port:127.0.0.1:port username@ip
         <category>Deep Learning</category>
       </categories>
       <tags>
-        <tag>deep learning</tag>
         <tag>image processing</tag>
+        <tag>deep learning</tag>
       </tags>
   </entry>
   <entry>
@@ -10234,9 +10262,9 @@ $$
 <p>rmdir dirname &#x2F;&#x2F; 删除空文件目录</p>
 <p>git rm filename &#x2F;&#x2F; 从版本库中删除文件</p>
 <p>git checkout – filename &#x2F;&#x2F; 误删文件的恢复</p>
-<h3 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h3><p>git remote add origin <a href="mailto:&#103;&#105;&#116;&#64;&#103;&#105;&#x74;&#x68;&#x75;&#98;&#x2e;&#x63;&#x6f;&#109;">&#103;&#105;&#116;&#64;&#103;&#105;&#x74;&#x68;&#x75;&#98;&#x2e;&#x63;&#x6f;&#109;</a>:longqianh&#x2F;learngit.git</p>
+<h3 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h3><p>git remote add origin <a href="mailto:&#103;&#105;&#x74;&#64;&#103;&#105;&#x74;&#104;&#x75;&#98;&#46;&#99;&#x6f;&#x6d;">&#103;&#105;&#x74;&#64;&#103;&#105;&#x74;&#104;&#x75;&#98;&#46;&#99;&#x6f;&#x6d;</a>:longqianh&#x2F;learngit.git</p>
 <p>git push -u origin master</p>
-<p>git clone <a href="mailto:&#103;&#x69;&#x74;&#x40;&#103;&#105;&#116;&#x68;&#x75;&#98;&#x2e;&#99;&#111;&#109;">&#103;&#x69;&#x74;&#x40;&#103;&#105;&#116;&#x68;&#x75;&#98;&#x2e;&#99;&#111;&#109;</a>:longqianh&#x2F;learngit.git</p>
+<p>git clone <a href="mailto:&#x67;&#105;&#116;&#x40;&#103;&#105;&#116;&#x68;&#x75;&#x62;&#x2e;&#99;&#x6f;&#109;">&#x67;&#105;&#116;&#x40;&#103;&#105;&#116;&#x68;&#x75;&#x62;&#x2e;&#99;&#x6f;&#109;</a>:longqianh&#x2F;learngit.git</p>
 <h3 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h3><p>git checkout </p>
 <p>git branch &#x2F;&#x2F; 查看分支</p>
 <p>git branch -d branchname &#x2F;&#x2F; 删除分支</p>
