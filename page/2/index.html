@@ -226,6 +226,80 @@
 
     
     <article
+  id="post-Project/2021-ICM"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/Project/2021-ICM/"
+    >2021-ICM</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/Project/2021-ICM/" class="article-date">
+  <time datetime="2021-05-02T15:22:00.000Z" itemprop="datePublished">2021-05-02</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Projects/">Projects</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><blockquote>
+<p>Music is the universal language of mankind.</p>
+</blockquote>
+<p>Below is our final paper for the D problem of the 2021 Interdisciplinary Contest in Modelling (ICM 2021), contributed collaboratively and equally by R.C. Luo, Y.Z. Zhang and me. </p>
+<p>This work is mainly about constructing&#x2F;modeling a network (graph) and related metrics to measure the <em>influence</em> of a piece of music work. Thanks cordially to the combined efforts of the whole group, we won an M-prize (as last year).</p>
+<p>I immensely enjoyed this problem because in the end, I felt pleasant listening to those classic pieces, and found the enjoyment matched our model’s ranking results :)</p>
+
+
+	<div class="row">
+    <embed src="/projects/2021_ICM.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+
+
+
+</div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script> 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/competition/" rel="tag">competition</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/projects/" rel="tag">projects</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
   id="post-Optics/Modern-Optical-Testing-Technology"
   class="article article-type-post"
   itemscope
@@ -748,73 +822,6 @@
     <footer class="article-footer">
        
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/computer/" rel="tag">computer</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-    
-</article>
-
-    
-    <article
-  id="post-Computer-Science/C++编程规范"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/Computer-Science/C++%E7%BC%96%E7%A8%8B%E8%A7%84%E8%8C%83/"
-    >C++ Programming Specification</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/Computer-Science/C++%E7%BC%96%E7%A8%8B%E8%A7%84%E8%8C%83/" class="article-date">
-  <time datetime="2021-01-01T01:53:00.000Z" itemprop="datePublished">2021-01-01</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Notes/">Notes</a> / <a class="article-category-link" href="/categories/Notes/Coding/">Coding</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="Google-Code-Standard"><a href="#Google-Code-Standard" class="headerlink" title="Google Code Standard"></a>Google Code Standard</h1><p>华为海思的项目需要了解一下Google编程规范，就简单看了一下。</p>
-<h2 id="Header-Files"><a href="#Header-Files" class="headerlink" title="Header Files"></a>Header Files</h2><p>头文件自包含、最好将模板和内联函数的定义与其声明放置在同一文件中。</p>
-<ul>
-<li><p>All header files should be self-contained. Users and refactoring tools should not have to adhere to special conditions to include the header. Specifically, a header should have <a target="_blank" rel="noopener" href="https://google.github.io/styleguide/cppguide.html#The__define_Guard">header guards</a> and include all other headers it needs.</p>
-</li>
-<li><p>Prefer placing the definitions for template and inline functions in the same file as their declarations. The definitions of these constructs must be included into every <code>.cc</code> file that uses them, or the program may fail to link in some build configurations. If declarations and definitions are in different files, including the former should transitively include the latter. Do not move these definitions to separately included header files (<code>-inl.h</code>); this practice was common in the past, but is no longer allowed.</p>
-</li>
-<li><p>Avoid using forward declarations where possible. </p>
-</li>
-<li><p>Define functions inline only when they are small, say, 10 lines or fewer.  经常用的小函数写成内联函数提升效率。</p>
-</li>
-</ul> 
-      <a class="article-more-link" href="/Computer-Science/C++%E7%BC%96%E7%A8%8B%E8%A7%84%E8%8C%83/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cpp/" rel="tag">cpp</a></li></ul>
 
     </footer>
   </div>
