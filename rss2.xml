@@ -6,7 +6,7 @@
   <link href="http://longqianh.com/rss2.xml" rel="self"/>
   
   <link href="http://longqianh.com/"/>
-  <updated>2023-12-05T19:30:41.723Z</updated>
+  <updated>2023-12-05T19:52:25.043Z</updated>
   <id>http://longqianh.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://longqianh.com/Optics/Optics-Tutorial/"/>
     <id>http://longqianh.com/Optics/Optics-Tutorial/</id>
     <published>2022-11-30T06:49:00.000Z</published>
-    <updated>2023-12-05T19:30:41.723Z</updated>
+    <updated>2023-12-05T19:52:25.043Z</updated>
     
     
     <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css&quot; /&gt;&lt;div class=&quot;.article-gallery&quot;&gt;&lt;blockquote&gt;
@@ -112,9 +112,9 @@
     <category term="Optics" scheme="http://longqianh.com/categories/Projects/Optics/"/>
     
     
-    <category term="optics" scheme="http://longqianh.com/tags/optics/"/>
-    
     <category term="projects" scheme="http://longqianh.com/tags/projects/"/>
+    
+    <category term="optics" scheme="http://longqianh.com/tags/optics/"/>
     
   </entry>
   
@@ -274,6 +274,38 @@
   </entry>
   
   <entry>
+    <title>Scientific Writing Notes</title>
+    <link href="http://longqianh.com/Writing/Scientific-Writing/"/>
+    <id>http://longqianh.com/Writing/Scientific-Writing/</id>
+    <published>2021-04-05T16:35:11.000Z</published>
+    <updated>2022-10-21T03:29:16.291Z</updated>
+    
+    
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css&quot; /&gt;&lt;div class=&quot;.article-gallery&quot;&gt;&lt;h1 id=&quot;科技写作（光电–狄大卫-x2F-王攀）&quot;&gt;&lt;a href=&quot;#科技写作（光电–狄大卫-x2F-王攀）&quot; class=&quot;headerlink&quot; title=&quot;科技写作（光电–狄大卫&amp;#x2F;王攀）&quot;&gt;&lt;/a&gt;科技写作（光电–狄大卫&amp;#x2F;王攀）&lt;/h1&gt;&lt;p&gt;好期刊不是科研的追求，成果才是。&lt;/p&gt;
+&lt;p&gt;科研的核心：总结，归纳，最终能把自己做的用少数几个词凝练出来。&lt;/p&gt;
+&lt;h2 id=&quot;1-基本概念与文献调研&quot;&gt;&lt;a href=&quot;#1-基本概念与文献调研&quot; class=&quot;headerlink&quot; title=&quot;1 基本概念与文献调研&quot;&gt;&lt;/a&gt;1 基本概念与文献调研&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;影响因子: 某期刊前两年（S, T）发表的论文在统计当年（U）的被引用总次数 X , 除以该期刊在前两年（S, T）内发表的论文总数 Y。公式为：&lt;br&gt;$$&lt;br&gt;&#92;mathrm{IF}_U &amp;#x3D; &#92;frac{X(S,T)}{Y(S,T)}&lt;br&gt;$$&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;本刊2009年的文章在2010年的被引次数：48；本刊2009年的发文量：187&lt;/p&gt;
+&lt;p&gt;本刊2008年的文章在2010年的被引次数：128；本刊2008年的发文量：154&lt;/p&gt;
+&lt;p&gt;本刊2010年的影响因子：IF &amp;#x3D; (48+128) &amp;#x2F; (187+154) &amp;#x3D; 0.5161&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="Notes" scheme="http://longqianh.com/categories/Notes/"/>
+    
+    <category term="Writing" scheme="http://longqianh.com/categories/Notes/Writing/"/>
+    
+    
+    <category term="writing" scheme="http://longqianh.com/tags/writing/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Modern Optical Testing Technology</title>
     <link href="http://longqianh.com/Optics/Modern-Optical-Testing-Technology/"/>
     <id>http://longqianh.com/Optics/Modern-Optical-Testing-Technology/</id>
@@ -318,38 +350,6 @@
     
     
     <category term="optics" scheme="http://longqianh.com/tags/optics/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Scientific Writing Notes</title>
-    <link href="http://longqianh.com/Writing/Scientific-Writing/"/>
-    <id>http://longqianh.com/Writing/Scientific-Writing/</id>
-    <published>2021-04-05T16:35:11.000Z</published>
-    <updated>2022-10-21T03:29:16.291Z</updated>
-    
-    
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css&quot; /&gt;&lt;div class=&quot;.article-gallery&quot;&gt;&lt;h1 id=&quot;科技写作（光电–狄大卫-x2F-王攀）&quot;&gt;&lt;a href=&quot;#科技写作（光电–狄大卫-x2F-王攀）&quot; class=&quot;headerlink&quot; title=&quot;科技写作（光电–狄大卫&amp;#x2F;王攀）&quot;&gt;&lt;/a&gt;科技写作（光电–狄大卫&amp;#x2F;王攀）&lt;/h1&gt;&lt;p&gt;好期刊不是科研的追求，成果才是。&lt;/p&gt;
-&lt;p&gt;科研的核心：总结，归纳，最终能把自己做的用少数几个词凝练出来。&lt;/p&gt;
-&lt;h2 id=&quot;1-基本概念与文献调研&quot;&gt;&lt;a href=&quot;#1-基本概念与文献调研&quot; class=&quot;headerlink&quot; title=&quot;1 基本概念与文献调研&quot;&gt;&lt;/a&gt;1 基本概念与文献调研&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;影响因子: 某期刊前两年（S, T）发表的论文在统计当年（U）的被引用总次数 X , 除以该期刊在前两年（S, T）内发表的论文总数 Y。公式为：&lt;br&gt;$$&lt;br&gt;&#92;mathrm{IF}_U &amp;#x3D; &#92;frac{X(S,T)}{Y(S,T)}&lt;br&gt;$$&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;本刊2009年的文章在2010年的被引次数：48；本刊2009年的发文量：187&lt;/p&gt;
-&lt;p&gt;本刊2008年的文章在2010年的被引次数：128；本刊2008年的发文量：154&lt;/p&gt;
-&lt;p&gt;本刊2010年的影响因子：IF &amp;#x3D; (48+128) &amp;#x2F; (187+154) &amp;#x3D; 0.5161&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;</summary>
-    
-    
-    
-    <category term="Notes" scheme="http://longqianh.com/categories/Notes/"/>
-    
-    <category term="Writing" scheme="http://longqianh.com/categories/Notes/Writing/"/>
-    
-    
-    <category term="writing" scheme="http://longqianh.com/tags/writing/"/>
     
   </entry>
   
@@ -640,9 +640,9 @@
     <category term="Optics" scheme="http://longqianh.com/categories/Projects/Optics/"/>
     
     
-    <category term="optics" scheme="http://longqianh.com/tags/optics/"/>
-    
     <category term="projects" scheme="http://longqianh.com/tags/projects/"/>
+    
+    <category term="optics" scheme="http://longqianh.com/tags/optics/"/>
     
   </entry>
   

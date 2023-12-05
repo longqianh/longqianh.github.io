@@ -33,38 +33,38 @@
 <p>to be added…</p>
 <h2 id="Orbital-Angular-Momentum"><a href="#Orbital-Angular-Momentum" class="headerlink" title="Orbital Angular Momentum"></a>Orbital Angular Momentum</h2><p>What orbital angular momentum (OAM) exactly is has plagued me for a long time. </p>
 <p>A mathematical expression: when light has an electric field<br>$$<br>\mathbf{E}\sim e^{-im\phi},<br>$$<br>then, the light beam has angular momentum $m\hbar$ per photon. </p>
-<p>Fundamentally, to understand OAM, we need to know how to derive it: the <em>momentum density</em> of light is $\mathbf{p}&#x3D;\vec{S}&#x2F;c^2&#x3D;\epsilon_0(\mathbf{E}\times\mathbf{B}),$ and hence, the angular momentum density of light is $\mathbf{M}&#x3D;\mathbf{r}\times\mathbf{p}&#x3D;\epsilon_0\mathbf{r}\times(\mathbf{E}\times\mathbf{B}).$ Next, when we substitute the expression of $\mathbf{E}$ and $\mathbf{B}$ and integrate, we would get a complete expression of angular momentum $\mathbf{J}$ [3].<br>$$<br>\begin{align}<br>\mathbf{J}&amp;&#x3D;\epsilon_0\int\mathbf{r}\times(\mathbf{E}\times\mathbf{B})\ \text{d}\mathbf{r}\<br>&amp;&#x3D;\mathbf{L}+\mathbf{S}.<br>\end{align}<br>$$<br>As can be seen, OAM $\mathbf{L}$ and spin angular momentum (SAM) $\mathbf{S}$ are components of the total angular momentum.</p>
+<p>Fundamentally, to understand OAM, we need to know how to derive it: the <em>momentum density</em> of light is $\mathbf{p}&#x3D;\vec{S}&#x2F;c^2&#x3D;\epsilon_0(\mathbf{E}\times\mathbf{B}),$ and hence, the angular momentum density of light is $\mathbf{M}&#x3D;\mathbf{r}\times\mathbf{p}&#x3D;\epsilon_0\mathbf{r}\times(\mathbf{E}\times\mathbf{B}).$ Next, when we substitute the expression of $\mathbf{E}$ and $\mathbf{B}$ and integrate, we would get a complete expression of angular momentum $\mathbf{J}$ [3].<br>$$<br>\begin{align}<br>\mathbf{J}&amp;&#x3D;\epsilon_0\int\mathbf{r}\times(\mathbf{E}\times\mathbf{B})\ \text{d}\mathbf{r}\\<br>&amp;&#x3D;\mathbf{L}+\mathbf{S}.<br>\end{align}<br>$$<br>As can be seen, OAM $\mathbf{L}$ and spin angular momentum (SAM) $\mathbf{S}$ are components of the total angular momentum.</p>
 <p>Though we understood how OAM is derived, it is still hard to catch the meaning visually. After some attempts, I suddenly found $\phi$ is not the general phase in the Cartesian coordinate system but a <em>polar angle</em> in the spherical polar coordinates:</p>
-<a href="./assets/Helix_oam.png" title="oam" class="gallery-item"><img src="./assets/Helix_oam.png" alt="oam" style="zoom:70%;" /></a>
+<a href="https://p.ipic.vip/t9vxbx.png" title="oam" class="gallery-item"><img src="https://p.ipic.vip/t9vxbx.png" alt="oam" style="zoom:70%;" /></a>
 
 <p> With this graph, I believe you could understand OAM a little deeper. When $m&#x3D;1$, it corresponds to one rotating phase, since $\phi$ is a polar angle that will grow from $0$ to $2\pi$. When $m&#x3D;2$ the phase will be <strong>wrapped</strong> as it grows helically over $2\pi.$</p>
 <h2 id="Stokes-Parameter"><a href="#Stokes-Parameter" class="headerlink" title="Stokes Parameter"></a>Stokes Parameter</h2><p>Here, I display some polarization optics concepts. I highly recommend reading Chapter 8 of the Book [5].</p>
-<p>Assume the light is quasi-monochromatic with frequency $\bar\omega$, consider the electric field $\mathbf{E}.$ We could factor it into<br>$$<br>E_x(t)&#x3D;a_1(t)e^{i(\phi_1(t)-\bar\omega t)},\<br>E_y(t)&#x3D;a_2(t)e^{i(\phi_2(t)-\bar\omega t)}，<br>$$<br>and let $\delta(t)&#x3D;\phi_1(t)-\phi_2(t).$ The trajectory of $(E_x(t),E_y(t))$ is an ellipse called the <em>polarization ellipse</em> [6]. And the <em>polarization matrix</em> is defined as<br>$$<br>\mathbf{J}&#x3D;<br>\begin{bmatrix}<br>\langle E_x^*(t)E_x(t)\rangle &amp; \langle E_x^*(t)E_y(t)\rangle\<br>\langle E_y^*(t)E_x(t)\rangle &amp; \langle E_y^*(t)E_y(t)\rangle<br>\end{bmatrix}&#x3D;<br>\begin{bmatrix}<br>J_{xx}&amp;J_{xy}\<br>J_{yx}&amp;J_{yy}<br>\end{bmatrix}.<br>$$<br>It is worth noting that the <em>correlation coefficient</em><br>$$<br>j_{xy}&#x3D;\frac{J_{xy}}{\sqrt{J_{xx}}\sqrt{J_{yy}}}<br>$$<br>determines whether the light is polarized ($|j_{xy}|&#x3D;1$) &#x2F; partially polarized &#x2F; unpolarized ($j_{xy}&#x3D;0$). Assume $\lambda_1,\lambda_2$ be the eigenvalue of $\mathbf{J}$, then the <em>degree of polarization</em> (DOP) is defined by<br>$$<br>\mathcal{P}&#x3D;\frac{I^{(P)}}{I}&#x3D;\frac{|\lambda_1-\lambda_2|}{\lambda_1+\lambda_2}.<br>$$<br>Now we introduce the <em>Stokes parameter</em> :<br>$$<br>\begin{align}<br>s_0&amp; &#x3D;\langle a_1^2(t)\rangle+\langle a_2^2(t)\rangle&#x3D;J_{xx}+J_{yy},\<br>s_1&amp;&#x3D;\langle a_1^2(t)\rangle-\langle a_2^2(t)\rangle&#x3D;J_{xx}-J_{yy},\<br>s_2&amp;&#x3D;2\langle a_1(t)a_2(t)\cos\delta(t)\rangle&#x3D;J_{xy}+J_{yx},\<br>s_3&amp;&#x3D;2\langle a_1(t)a_2(t)\sin\delta(t)\rangle&#x3D;i(J_{yx}-J_{xy}).<br>\end{align}<br>$$<br>We can see clearly that $s_0^2&#x3D;s_1^2+s_2^2+s_3^2,$ so point $P&#x3D;[s_1,s_2,s_3]$ is on a sphere which is called the <em>Poincaré sphere</em>. Every point on the sphere represents a state of polarization. </p>
-<a href="./assets/Poincare_sphere.png" title="Poincaré_sphere" class="gallery-item"><img src="./assets/Poincare_sphere.png" alt="Poincaré_sphere" style="zoom:40%;" /></a>
+<p>Assume the light is quasi-monochromatic with frequency $\bar\omega$, consider the electric field $\mathbf{E}.$ We could factor it into<br>$$<br>E_x(t)&#x3D;a_1(t)e^{i(\phi_1(t)-\bar\omega t)},\\<br>E_y(t)&#x3D;a_2(t)e^{i(\phi_2(t)-\bar\omega t)}，<br>$$<br>and let $\delta(t)&#x3D;\phi_1(t)-\phi_2(t).$ The trajectory of $(E_x(t),E_y(t))$ is an ellipse called the <em>polarization ellipse</em> [6]. And the <em>polarization matrix</em> is defined as<br>$$<br>\mathbf{J}&#x3D;<br>\begin{bmatrix}<br>\langle E_x^*(t)E_x(t)\rangle &amp; \langle E_x^*(t)E_y(t)\rangle\\<br>\langle E_y^*(t)E_x(t)\rangle &amp; \langle E_y^*(t)E_y(t)\rangle<br>\end{bmatrix}&#x3D;<br>\begin{bmatrix}<br>J_{xx}&amp;J_{xy}\\<br>J_{yx}&amp;J_{yy}<br>\end{bmatrix}.<br>$$<br>It is worth noting that the <em>correlation coefficient</em><br>$$<br>j_{xy}&#x3D;\frac{J_{xy}}{\sqrt{J_{xx}}\sqrt{J_{yy}}}<br>$$<br>determines whether the light is polarized ($|j_{xy}|&#x3D;1$) &#x2F; partially polarized &#x2F; unpolarized ($j_{xy}&#x3D;0$). Assume $\lambda_1,\lambda_2$ be the eigenvalue of $\mathbf{J}$, then the <em>degree of polarization</em> (DOP) is defined by<br>$$<br>\mathcal{P}&#x3D;\frac{I^{(P)}}{I}&#x3D;\frac{|\lambda_1-\lambda_2|}{\lambda_1+\lambda_2}.<br>$$<br>Now we introduce the <em>Stokes parameter</em> :<br>$$<br>\begin{align}<br>s_0&amp; &#x3D;\langle a_1^2(t)\rangle+\langle a_2^2(t)\rangle&#x3D;J_{xx}+J_{yy},\\<br>s_1&amp;&#x3D;\langle a_1^2(t)\rangle-\langle a_2^2(t)\rangle&#x3D;J_{xx}-J_{yy},\\<br>s_2&amp;&#x3D;2\langle a_1(t)a_2(t)\cos\delta(t)\rangle&#x3D;J_{xy}+J_{yx},\\<br>s_3&amp;&#x3D;2\langle a_1(t)a_2(t)\sin\delta(t)\rangle&#x3D;i(J_{yx}-J_{xy}).<br>\end{align}<br>$$<br>We can see clearly that $s_0^2&#x3D;s_1^2+s_2^2+s_3^2,$ so point $P&#x3D;[s_1,s_2,s_3]$ is on a sphere which is called the <em>Poincaré sphere</em>. Every point on the sphere represents a state of polarization. </p>
+<a href="https://p.ipic.vip/v93mzl.png" title="Poincaré_sphere" class="gallery-item"><img src="https://p.ipic.vip/v93mzl.png" alt="Poincaré_sphere" style="zoom:40%;" /></a>
 
-<p>Stokes parameter can also be written in the expression of polarization ellipse parameters:<br>$$<br>\begin{align}<br>s_1&amp;&#x3D;s_0\cos(2\chi)\cos(2\psi),\<br>s_2&amp;&#x3D;s_0\cos(2\chi)\sin(2\psi),\<br>s_3&amp;&#x3D;s_0\sin(2\chi).<br>\end{align}<br>$$<br>Here the angle $\psi\in[0,\pi]$ is the orientation of the polarization ellipse, $\chi\in[-\pi&#x2F;2,\pi&#x2F;2]$ characterizes ellipticity. Right-handed polarized light corresponds to the above-equator sphere, and linearly polarized light lies in the equator plane. </p>
+<p>Stokes parameter can also be written in the expression of polarization ellipse parameters:<br>$$<br>\begin{align}<br>s_1&amp;&#x3D;s_0\cos(2\chi)\cos(2\psi),\\<br>s_2&amp;&#x3D;s_0\cos(2\chi)\sin(2\psi),\\<br>s_3&amp;&#x3D;s_0\sin(2\chi).<br>\end{align}<br>$$<br>Here the angle $\psi\in[0,\pi]$ is the orientation of the polarization ellipse, $\chi\in[-\pi&#x2F;2,\pi&#x2F;2]$ characterizes ellipticity. Right-handed polarized light corresponds to the above-equator sphere, and linearly polarized light lies in the equator plane. </p>
 <p>We now conclude: the Stokes parameter describes the polarization state of light; it can mutually convert with the polarization matrix and polarization ellipse.</p>
 <h2 id="Holography"><a href="#Holography" class="headerlink" title="Holography"></a>Holography</h2><h3 id="Digital-blazed-grating"><a href="#Digital-blazed-grating" class="headerlink" title="Digital blazed grating"></a>Digital blazed grating</h3><p>Blazed grating is a very useful tool for removing zeroth order (unmodulated) output of the SLM. Now I derive its principle.</p>
-<p>Let the period of the grating is $T$ pixels, the maximum modulation phase is $A\in(0,1)$, the complex amplitude of the one-period grating is<br>$$<br>t_0(x)&#x3D;\mathrm{rect}\left(\frac{x-T&#x2F;2}{T}\right)\cdot \exp\left(i\frac{2\pi A x}{T}\right)<br>$$<br>where $\mathrm{rect}$ is defined as<br>$$<br>\mathrm{rect}(x)&#x3D;\Pi(x)&#x3D;\left{\begin{array}{cc}<br>0 &amp; \text { if }|x|&gt;&#x3D;\frac{1}{2} \<br>1 &amp; \text { if }|x|&lt;\frac{1}{2}.<br>\end{array}\right.<br>$$<br>Let the whole grating displayed on SLM have $M$ periods ($M&#x3D;\lfloor W&#x2F;T\rfloor$), the whole-period grating is<br>$$<br>t(x)&#x3D;t_0(x)*\sum_{m&#x3D;-\lceil M&#x2F;2\rceil+1}^{\lfloor M&#x2F;2\rfloor}\delta(x-mT).<br>$$<br>Note that the sum<br>$$<br>\sum_{m&#x3D;M_1}^{M_2} e^{-i2\pi md}&#x3D;e^{-i2\pi M_1d}\frac{1-e^{-i2\pi(M_2-M_1+1)d}}{1-e^{-i2\pi d}},<br>$$<br>we have the focal plane complex amplitude:<br>$$<br>\begin{aligned}<br>\hat t(u)&amp;&#x3D;\mathcal{F}\left[t(x)\right]\<br>&amp;\approx\left[Te^{-i\pi Tu}\mathrm{sinc}\left(\frac{u}{T}\right)*\delta\left(u-\frac{A}{T}\right)\right]\cdot\sum_{m&#x3D;-\lceil M&#x2F;2\rceil+1}^{\lfloor M&#x2F;2\rfloor}e^{-i2\pi mTu}\<br>&amp;&#x3D;Te^{i\pi Tu}\mathrm{sinc}\left(\frac{u-A&#x2F;T}{T}\right)\cdot\frac{1-e^{-i2\pi MTu}}{1-e^{-i2\pi Tu}}e^{-i2\pi(-\lceil M&#x2F;2\rceil+1)Tu}\<br>&amp;&#x3D;Te^{i\pi(2\lceil M&#x2F;2\rceil-M) Tu}\mathrm{sinc}\left(\frac{u-A&#x2F;T}{T}\right)\cdot\frac{\sin\left(\pi MTu\right)}{\sin(\pi Tu)}<br>\end{aligned}<br>$$<br>where $\mathrm{sinc(x)}&#x3D;\sin(\pi x)&#x2F;(\pi x)$. </p>
+<p>Let the period of the grating is $T$ pixels, the maximum modulation phase is $A\in(0,1)$, the complex amplitude of the one-period grating is<br>$$<br>t_0(x)&#x3D;\mathrm{rect}\left(\frac{x-T&#x2F;2}{T}\right)\cdot \exp\left(i\frac{2\pi A x}{T}\right)<br>$$<br>where $\mathrm{rect}$ is defined as<br>$$<br>\mathrm{rect}(x)&#x3D;\Pi(x)&#x3D;\begin{cases}<br>0 &amp; \text { if }|x|&gt;&#x3D;\frac{1}{2} \\<br>1 &amp; \text { if }|x|&lt;\frac{1}{2}.<br>\end{cases}<br>$$<br>Let the whole grating displayed on SLM have $M$ periods ($M&#x3D;\lfloor W&#x2F;T\rfloor$), the whole-period grating is<br>$$<br>t(x)&#x3D;t_0(x)*\sum_{m&#x3D;-\lceil M&#x2F;2\rceil+1}^{\lfloor M&#x2F;2\rfloor}\delta(x-mT).<br>$$<br>Note that the sum<br>$$<br>\sum_{m&#x3D;M_1}^{M_2} e^{-i2\pi md}&#x3D;e^{-i2\pi M_1d}\frac{1-e^{-i2\pi(M_2-M_1+1)d}}{1-e^{-i2\pi d}},<br>$$<br>we have the focal plane complex amplitude:<br>$$<br>\begin{aligned}<br>\hat t(u)&amp;&#x3D;\mathcal{F}\left[t(x)\right]\\<br>&amp;\approx\left[Te^{-i\pi Tu}\mathrm{sinc}\left(\frac{u}{T}\right)*\delta\left(u-\frac{A}{T}\right)\right]\cdot\sum_{m&#x3D;-\lceil M&#x2F;2\rceil+1}^{\lfloor M&#x2F;2\rfloor}e^{-i2\pi mTu}\\<br>&amp;&#x3D;Te^{i\pi Tu}\mathrm{sinc}\left(\frac{u-A&#x2F;T}{T}\right)\cdot\frac{1-e^{-i2\pi MTu}}{1-e^{-i2\pi Tu}}e^{-i2\pi(-\lceil M&#x2F;2\rceil+1)Tu}\\<br>&amp;&#x3D;Te^{i\pi(2\lceil M&#x2F;2\rceil-M) Tu}\mathrm{sinc}\left(\frac{u-A&#x2F;T}{T}\right)\cdot\frac{\sin\left(\pi MTu\right)}{\sin(\pi Tu)}<br>\end{aligned}<br>$$<br>where $\mathrm{sinc(x)}&#x3D;\sin(\pi x)&#x2F;(\pi x)$. </p>
 <p>Finally, the intensity profile is<br>$$<br>I(u)&#x3D;T^2\mathrm{sinc}^2\left(\frac{u-A&#x2F;T}{T}\right)\cdot\left(\frac{\sin\left(\pi MTu\right)}{\sin(\pi Tu)}\right)^2<br>$$<br>where $\sin^2$ term  determines the diffraction order profile, and $\mathrm{sinc}^2$ term dertermines the wrap profile related to the <em>blaze angle</em>. From the fomula we can see that $T$ controls the interval between different diffraction orders. Both $A$ and $T$ affects the diffraction efficiency of the 1st order.</p>
 <h3 id="Amplitude-modulation-with-blazed-grating"><a href="#Amplitude-modulation-with-blazed-grating" class="headerlink" title="Amplitude modulation with blazed grating"></a>Amplitude modulation with blazed grating</h3><p>Let $A&#x3D;A(x)$  and the target amplitude modulation pattern be $a(x)$.</p>
 <p>We need<br>$$<br>\min_A \left|\mathrm{sinc}\left(\frac{u-A&#x2F;T}{T}\right)-a\right|_2<br>$$</p>
-<h2 id="Microscopy-Basics"><a href="#Microscopy-Basics" class="headerlink" title="Microscopy Basics"></a>Microscopy Basics</h2><h3 id="Objective-Lens"><a href="#Objective-Lens" class="headerlink" title="Objective Lens"></a>Objective Lens</h3><p><a href="https://cdn.jsdelivr.net/gh/longqianh/longqianh.github.io/Optics/image-assets/image-20230720211806211.png" title="Nikon-obj" class="gallery-item"><img src="https://cdn.jsdelivr.net/gh/longqianh/longqianh.github.io/Optics/image-assets/image-20230720211806211.png" alt="Nikon-obj"></a></p>
+<h2 id="Microscopy-Basics"><a href="#Microscopy-Basics" class="headerlink" title="Microscopy Basics"></a>Microscopy Basics</h2><h3 id="Objective-Lens"><a href="#Objective-Lens" class="headerlink" title="Objective Lens"></a>Objective Lens</h3><p><a href="https://p.ipic.vip/zbbnp4.png" title="Nikon-obj" class="gallery-item"><img src="https://p.ipic.vip/zbbnp4.png" alt="Nikon-obj"></a></p>
 <p>The back pupil size of an objective lens can be calculated by its focal length and NA. The focal length $f$ can be calculated from the objective lens’ magnification:<br>$$<br>\mathrm{Mag}&#x3D;\frac{f_{tubelens}}{f}.<br>$$<br>Take a Nikon 40x NA 0.6 objective as an example: the back pupil diameter is<br>$$<br>D&#x3D;2f\cdot \mathrm{NA}&#x3D;2\cdot f_{tubelens}&#x2F;\mathrm{Mag}\cdot \mathrm{NA}&#x3D;6\text{ mm}<br>$$<br>which is precisely what we measured.</p>
- <a href="./assets/image-20230720212242881.png" title="image-20230720212242881" class="gallery-item"><img src="./assets/image-20230720212242881.png" alt="image-20230720212242881" style="zoom:25%;" /></a>
+ <a href="https://p.ipic.vip/gb8mpd.png" title="image-20230720212242881" class="gallery-item"><img src="https://p.ipic.vip/gb8mpd.png" alt="image-20230720212242881" style="zoom:25%;" /></a>
 
 <p>Here, we should know that the tube lens focal length of the Nikon and Olympus objectives are 200 mm and 180 mm, respectively.</p>
 <h3 id="Illumination"><a href="#Illumination" class="headerlink" title="Illumination"></a>Illumination</h3><p>todo: Köhler illumination, etc.</p>
 <h2 id="Seeing-through-Scattering-Media"><a href="#Seeing-through-Scattering-Media" class="headerlink" title="Seeing through Scattering Media"></a>Seeing through Scattering Media</h2><p>Let the input filed be $E_{in}\in\mathbb{C}^{N}$. It has $N$ modes, where $N&#x3D;h\times w$ is the input image number. The transmission matrix (TM) that describe the scattering media is $T\in\mathbb{C}^{M\times N}$, and the output field is $E_{out}\in\mathbb{C}^{M}$, $M&#x3D;H\times W$ is the output image pixels. They have relation:<br>$$<br>E_{out}&#x3D;TE_{in}.<br>$$<br>Assume we modulate the $N$ input modes, and $E_{in}&#x3D;[a_1e^{i\varphi_1},\dots,a_ne^{i\varphi_n}]^T.$ Without modulation, the output field mode $m$ is<br>$$<br>E_{m}&#x3D;\sum_{i&#x3D;1}^N t_{mn}a_ne^{i\varphi_n}<br>$$</p>
-<h3 id="Peak-Ratio-and-Enhancement"><a href="#Peak-Ratio-and-Enhancement" class="headerlink" title="Peak Ratio and Enhancement"></a>Peak Ratio and Enhancement</h3><p>We derive phase and amplitude modulation for focusing through a scattering media. Assume $t_{mn}\in\mathcal{CN}(0,1)$ (a Circular Gaussian), which means both the real and imag part of $t_{mn}$ obey a Gaussian distribution $\mathcal{N}(0,1)$. Let $\varphi_n&#x3D;0$, the focusing position be $m^*$, and the modulation term be $\mathbf{b}&#x3D;[b_1e^{i\phi_1},\dots,b_ne^{i\phi_n}]^T$. Then:<br>$$<br>E_{out,peak}&#x3D;\sum_{n&#x3D;1}^N|t_{m^<em>n}|a_nb_ne^{i[\arg(t_{m^</em>n})+\phi_n]}.<br>$$</p>
+<h3 id="Peak-Ratio-and-Enhancement"><a href="#Peak-Ratio-and-Enhancement" class="headerlink" title="Peak Ratio and Enhancement"></a>Peak Ratio and Enhancement</h3><p>We derive phase and amplitude modulation for focusing through a scattering media. Assume $t_{mn}\in\mathcal{CN}(0,1)$ (a Circular Gaussian), which means both the real and imag part of $t_{mn}$ obey a Gaussian distribution $\mathcal{N}(0,1)$. Let $\varphi_n&#x3D;0$, the focusing position be $m^*$, and the modulation term be $\mathbf{b}&#x3D;[b_1e^{i\phi_1},\dots,b_ne^{i\phi_n}]^T$. Then:<br>$$<br>E_{out,peak}&#x3D;\sum_{n&#x3D;1}^{N}\left|t_{m^\star n}\right|a_n b_n e^{i[\arg(t_{m^\star n})+\phi_n]}.<br>$$</p>
 <ul>
 <li>Uniform input, $I_{in}&#x3D;|\sum_{i&#x3D;1}^NE_{in,i}|^2&#x3D;1\implies a_n&#x3D;1&#x2F;\sqrt{N}$</li>
 <li>For phase modulation: $b_n&#x3D;1,\phi_n&#x3D;-\arg(t_{m^*n})$</li>
 <li>Binary amplitude modulation: $b_m\in{0,1},\phi_n&#x3D;0$</li>
 </ul>
-<p>Now we derive the peak ratio<br>$$<br>\mathrm{PR}&#x3D;I_{p}&#x2F;I_{in}&#x3D;|E_{out,peak}|^2<br>$$<br>and enhancement factor<br>$$<br>\eta&#x3D;\frac{\mathrm{PR}}{(1-\mathrm{PR})&#x2F;(N-1)}&#x3D;\frac{(N-1)\mathrm{PR}}{1-\mathrm}<br>$$<br>for phase and binary amplitude modulation.</p>
-<h4 id="Phase-modulation"><a href="#Phase-modulation" class="headerlink" title="Phase modulation"></a>Phase modulation</h4><p>$$<br>\mathrm{PR}&#x3D;\left|\frac{1}{\sqrt{N}}\sum_{i&#x3D;1}^N|t_{m^<em>n}|\right|^2&#x3D;N\cdot\mathbb{E}^2\left(|t_{m^</em>n}|\right)<br>$$</p>
-<p>Here $t_{mn}&#x3D;\frac{1}{\sqrt{2N}}(x+iy),\ x,y\in\mathcal{N}(0,1)$, where $1&#x2F;\sqrt{2N}$ is for energy conservation. Note<br>$$<br>p(x)&#x3D;\frac{1}{\sqrt{2\pi}}e^{-x^2&#x2F;2},\ p(y)&#x3D;\frac{1}{\sqrt{2\pi}}e^{-y^2&#x2F;2}.<br>$$<br>We have<br>$$<br>\begin{aligned}<br>\mathbb{E}(|t_{m^*n}|)&amp;&#x3D;\iint_{-\infty}^\infty \frac{1}{\sqrt{2N}}\sqrt{x^2+y^2}\cdot p(x)\cdot p(y)\ \mathrm{d}x\mathrm{d}y \<br>&amp;&#x3D;\frac{1}{2\pi\sqrt{2N}}\iint_{-\infty}^\infty \sqrt{x^2+y^2}e^{-(x^2+y^2)&#x2F;2}\ \mathrm{d}x\mathrm{d}y\<br>&amp;&#x3D;\frac{1}{2\pi\sqrt{2N}}\cdot 2\pi\sqrt{\frac{\pi}{2}}&#x3D;\frac{1}{2}\sqrt{\frac{\pi}{N}}.<br>\end{aligned}<br>$$<br>Therefore, the peak ratio of phase modulation, theoretically, is $\pi&#x2F;4.$</p>
+<p>Now we derive the peak ratio<br>$$<br>\mathrm{PR}&#x3D;I_{p}&#x2F;I_{in}&#x3D;|E_{out,peak}|^2<br>$$<br>and enhancement factor<br>$$<br>\eta&#x3D;\frac{\mathrm{PR}}{(1-\mathrm{PR})&#x2F;(N-1)}&#x3D;\frac{(N-1)\mathrm{PR}}{1-\mathrm{PR}}<br>$$<br>for phase and binary amplitude modulation.</p>
+<h4 id="Phase-modulation"><a href="#Phase-modulation" class="headerlink" title="Phase modulation"></a>Phase modulation</h4><p>$$<br>\mathrm{PR}&#x3D;\left|\frac{1}{\sqrt{N}}\sum_{i&#x3D;1}^N|t_{m^\star n}|\right|^2&#x3D;N\cdot\mathbb{E}^2\left(|t_{m^\star n}|\right)<br>$$</p>
+<p>Here $t_{mn}&#x3D;\frac{1}{\sqrt{2N}}(x+iy),\ x,y\in\mathcal{N}(0,1)$, where $1&#x2F;\sqrt{2N}$ is for energy conservation. Note<br>$$<br>p(x)&#x3D;\frac{1}{\sqrt{2\pi}}e^{-x^2&#x2F;2},\ p(y)&#x3D;\frac{1}{\sqrt{2\pi}}e^{-y^2&#x2F;2}.<br>$$<br>We have<br>$$<br>\begin{aligned}<br>\mathbb{E}(|t_{m^\star n}|)&amp;&#x3D;\iint_{-\infty}^\infty \frac{1}{\sqrt{2N}}\sqrt{x^2+y^2}\cdot p(x)\cdot p(y)\ \mathrm{d}x\mathrm{d}y \\<br>&amp;&#x3D;\frac{1}{2\pi\sqrt{2N}}\iint_{-\infty}^\infty \sqrt{x^2+y^2}e^{-(x^2+y^2)&#x2F;2}\ \mathrm{d}x\mathrm{d}y\\<br>&amp;&#x3D;\frac{1}{2\pi\sqrt{2N}}\cdot 2\pi\sqrt{\frac{\pi}{2}}&#x3D;\frac{1}{2}\sqrt{\frac{\pi}{N}}.<br>\end{aligned}<br>$$<br>Therefore, the peak ratio of phase modulation, theoretically, is $\pi&#x2F;4.$</p>
 <h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><p>[1] Turtaev, S. <em>et al.</em> High-fidelity multimode fibre-based endoscopy for deep brain in vivo imaging. <em>Light Sci Appl</em> <strong>7</strong>, 92 (2018).</p>
 <p>[2] Saleh B E A, Teich M C. Fundamentals of photonics[M]. John Wiley &amp; sons, 2019.</p>
 <p>[3] Allen, L., Beijersbergen, M. W., Spreeuw, R. J. C. &amp; Woerdman, J. P. Orbital angular momentum of light and the transformation of Laguerre-Gaussian laser modes. <em>Phys. Rev. A</em> <strong>45</strong>, 8185–8189 (1992).</p>
@@ -2419,8 +2419,8 @@
         <category>Optics</category>
       </categories>
       <tags>
-        <tag>optics</tag>
         <tag>projects</tag>
+        <tag>optics</tag>
       </tags>
   </entry>
   <entry>
@@ -3491,6 +3491,310 @@
       </tags>
   </entry>
   <entry>
+    <title>Scientific Writing Notes</title>
+    <url>/Writing/Scientific-Writing/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="科技写作（光电–狄大卫-x2F-王攀）"><a href="#科技写作（光电–狄大卫-x2F-王攀）" class="headerlink" title="科技写作（光电–狄大卫&#x2F;王攀）"></a>科技写作（光电–狄大卫&#x2F;王攀）</h1><p>好期刊不是科研的追求，成果才是。</p>
+<p>科研的核心：总结，归纳，最终能把自己做的用少数几个词凝练出来。</p>
+<h2 id="1-基本概念与文献调研"><a href="#1-基本概念与文献调研" class="headerlink" title="1 基本概念与文献调研"></a>1 基本概念与文献调研</h2><ul>
+<li><p>影响因子: 某期刊前两年（S, T）发表的论文在统计当年（U）的被引用总次数 X , 除以该期刊在前两年（S, T）内发表的论文总数 Y。公式为：<br>$$<br>\mathrm{IF}_U &#x3D; \frac{X(S,T)}{Y(S,T)}<br>$$</p>
+<ul>
+<li><p>本刊2009年的文章在2010年的被引次数：48；本刊2009年的发文量：187</p>
+<p>本刊2008年的文章在2010年的被引次数：128；本刊2008年的发文量：154</p>
+<p>本刊2010年的影响因子：IF &#x3D; (48+128) &#x2F; (187+154) &#x3D; 0.5161</p>
+</li>
+</ul>
+</li>
+</ul>
+ <span id="more"></span>
+
+<ul>
+<li><p>SCI 论文分区：中国科学院文献情报中心根据目前SCI核心库将所有期刊分为数学、物理、化学、生物、地学、天文、工程技术、医学、环境科学、农林科学、社会科学、管理科学及综合性期刊13大类。然后，将13大类期刊分各自为 4 个等级，即 4 个区。按照各类期刊影响因子划分，前5%为该类 1 区、6% ～ 20% 为 2 区、21% ～ 50% 为 3 区，其余的为 4 区。</p>
+</li>
+<li><p>H–index：h代表“高引用次数”（high citations），一名科研人员的h指数是指他 <em>至多有h篇论文分别被引用了至少h次。</em></p>
+</li>
+<li><p>Formality: </p>
+<ul>
+<li>Full words. e.g., can’t –&gt; cannot, won’t –&gt; will not</li>
+<li>a lot –&gt; many</li>
+<li>totally –&gt; completely</li>
+<li>at the same time –&gt; simulataneously</li>
+<li>Interesting –&gt; compelling</li>
+</ul>
+</li>
+</ul>
+<p>学位论文：不要追求写得长，要追求原创性和逻辑性；</p>
+<ul>
+<li>对课题组的同学、同一个学校的同学，是一个重要参考资料！</li>
+</ul>
+<h2 id="2-参考文献的管理与排版"><a href="#2-参考文献的管理与排版" class="headerlink" title="2 参考文献的管理与排版"></a>2 参考文献的管理与排版</h2><ul>
+<li>高效看文献<ul>
+<li>要  <em>get</em> 什么：<strong>带着问题和目的</strong>去找文献</li>
+<li><strong>不求甚解</strong>的精神（略读，扫文献）</li>
+<li>Critical thinking</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-描述研究成果"><a href="#3-描述研究成果" class="headerlink" title="3 描述研究成果"></a>3 描述研究成果</h2><ul>
+<li>Use adj. and adv. sparingly<ul>
+<li><strong>Both of the two</strong> samples had <strong>very similar</strong> concentrations –&gt; The two samples had similar concentrations</li>
+<li>Avoid ‘significantly’, unless have  statistic reference</li>
+</ul>
+</li>
+<li>Focus on science, not scientist </li>
+<li>Avoid empty transitional statements<ul>
+<li>e.g., actually</li>
+<li>Useful statements: conversely, consequently &#x2F; to this end, typically &#x2F; in general</li>
+</ul>
+</li>
+<li>Choose simple words over complex<ul>
+<li>In order to –&gt; to</li>
+<li>has the capacity to –&gt; can</li>
+<li>a number of –&gt; many &#x2F; several</li>
+<li>despite the fact that –&gt; although</li>
+</ul>
+</li>
+</ul>
+<h3 id="时态和语态"><a href="#时态和语态" class="headerlink" title="时态和语态"></a>时态和语态</h3><ul>
+<li>研究的实验工作：过去时</li>
+<li>描述事实结果：现在时</li>
+<li>引述别人工作：现在时或现在完成时</li>
+</ul>
+<h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><ul>
+<li>开门见山，不绕圈子，避免大篇幅讲述历史渊源</li>
+<li>回顾历史有重点，找有代表性的</li>
+</ul>
+<h3 id="Discussion-部分"><a href="#Discussion-部分" class="headerlink" title="Discussion 部分"></a>Discussion 部分</h3><ul>
+<li><p>创造性见解，精炼回答为什么出现这样的结果，以及出现这样的结果意味着什么，逻辑要清晰</p>
+</li>
+<li><p>主要的发现</p>
+</li>
+<li><p>结果的说明、阐释或论述、推论</p>
+</li>
+<li><p>与前人结果的比较</p>
+</li>
+<li><p>结果的意义和重要性、应用</p>
+</li>
+<li><p>研究的局限和不足之处，尚未回答的问题及局限性对研究的影响，建议进一步的研究方向</p>
+</li>
+</ul>
+<h3 id="Conclusion-部分"><a href="#Conclusion-部分" class="headerlink" title="Conclusion 部分"></a>Conclusion 部分</h3><ul>
+<li>一句话总结</li>
+<li>技术的优势和拓展应用</li>
+</ul>
+<h3 id="Supplementary-部分"><a href="#Supplementary-部分" class="headerlink" title="Supplementary 部分"></a>Supplementary 部分</h3><ul>
+<li>放不太重要、但有助于理解结果的实验和讨论</li>
+</ul>
+<h3 id="Figures-and-Tables"><a href="#Figures-and-Tables" class="headerlink" title="Figures and Tables"></a>Figures and Tables</h3><ul>
+<li>先总说</li>
+<li>再有逻辑、递进性地描述图表结果</li>
+<li>讨论</li>
+</ul>
+<h3 id="Title"><a href="#Title" class="headerlink" title="Title"></a>Title</h3><ul>
+<li><p>清楚性</p>
+<ul>
+<li>Highly efficient waveguide grating couplers using silicon-on-insulator (Emphasis: waveguide grating couplers)</li>
+<li>Silicon-on-insulator for high-output waveguide grating couplers (Emphasis: silicon-on-sinsulator)</li>
+</ul>
+</li>
+<li><p>主副题名</p>
+</li>
+<li><p>e.g.</p>
+<ul>
+<li>Low-loss 与 surface smoothness, diameter uniformity<ul>
+<li>Low-loss 在 high-level</li>
+<li>Subwavelength-diameter silica wire for low-loss optical wave guiding</li>
+</ul>
+</li>
+<li>包含凸显性能的关键信息</li>
+<li>要吸引人看<ul>
+<li><strong>Single-Nanowire Single-Mode Laser</strong></li>
+<li>Highly elastic ice microfiber –&gt; Elastic ice microfiber: Highly 太泛泛不准确</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="PPT-展示"><a href="#PPT-展示" class="headerlink" title="PPT 展示"></a>PPT 展示</h3><ul>
+<li><p>图片出处标注：无作者信息，杂志名采用缩写形式，随后是期号（黑体）、首页页码、发表年份</p>
+</li>
+<li><p>原则：让观众最快获取有用信息</p>
+</li>
+</ul>
+<h2 id="论文投稿"><a href="#论文投稿" class="headerlink" title="论文投稿"></a>论文投稿</h2><p>牵扯到人，在哪里都会有偏见或者倾向性的，那也没办法</p>
+<ul>
+<li><p>期刊选择</p>
+<ul>
+<li><p>原理、材料、结构等的重大创新，性能的显著提高：好一点的期刊</p>
+</li>
+<li><p>前人工作的改进优化：中下的期刊</p>
+</li>
+<li><p>期刊所规定的范围</p>
+</li>
+<li><p>期刊的论文平均水平</p>
+</li>
+</ul>
+</li>
+<li><p>投稿前的准备工作: 系统里要填很多东西，投个稿也是很累的</p>
+<ul>
+<li><p>Manuscript</p>
+</li>
+<li><p>Tables, Figures, Movies</p>
+</li>
+<li><p>Supplementary materials</p>
+</li>
+<li><p><strong>Cover Letter</strong></p>
+<ul>
+<li><p>an excellent opportunity to briefly discuss the importance of the submitted work and why it is appropriate for the journal </p>
+</li>
+<li><p>Spend time writing a convincing cover letter and share it with your coauthors for their input</p>
+</li>
+</ul>
+</li>
+<li><p>Email and address for each author</p>
+</li>
+<li><p>Suggested reviewers (name, affiliation, emails)</p>
+</li>
+</ul>
+</li>
+<li><p>申诉：审稿人误解&#x2F;没理解&#x2F;有很强偏见（好的工作，机会难得）</p>
+</li>
+<li><p><strong>发表过一篇文章后，可以申请当审稿人</strong></p>
+</li>
+</ul>
+<h1 id="科技写作（医学–邹炜-x2F-邹键）"><a href="#科技写作（医学–邹炜-x2F-邹键）" class="headerlink" title="科技写作（医学–邹炜&#x2F;邹键）"></a>科技写作（医学–邹炜&#x2F;邹键）</h1><h3 id="Writing-a-scientific-article"><a href="#Writing-a-scientific-article" class="headerlink" title="Writing a scientific article"></a>Writing a scientific article</h3><ul>
+<li>Read the author guideline!</li>
+<li>Figures: One figure, one question<ul>
+<li>figure的逻辑、框架可以提前思考准备</li>
+</ul>
+</li>
+<li>Discussion: <ul>
+<li>Indicate uses, extensions, and limitations </li>
+<li>suggest future experiments and point out those that are underway</li>
+</ul>
+</li>
+<li>Supplementary Material: 不是不重要放到了附录，而是由于篇幅限制才放到了附录</li>
+<li>Start writing<ul>
+<li>Paper: Introduction –&gt; Methods &amp; Materials –&gt; Results –&gt;Discussion –&gt; Figures &amp; Tables</li>
+<li>Write: Abstract –&gt; Results –&gt; Figures &amp; Tables –&gt; Methods &amp; Materials –&gt; Introduction –&gt; Discussion –&gt; Abstract (revision)</li>
+</ul>
+</li>
+</ul>
+<h3 id="Cover-Letter-投稿信"><a href="#Cover-Letter-投稿信" class="headerlink" title="Cover Letter (投稿信)"></a>Cover Letter (投稿信)</h3><ul>
+<li>Basic information</li>
+<li>Cover letter is your chance to speak to the editor directly</li>
+<li>Mention what makes the paper special to the journel</li>
+<li>Confine the length to 2&#x2F;3 page</li>
+</ul>
+<h3 id="Revision-and-response-to-reviewers"><a href="#Revision-and-response-to-reviewers" class="headerlink" title="Revision, and response to reviewers"></a>Revision, and response to reviewers</h3><ul>
+<li>Cherish the chance of discussion your work directly with other scientists in your community. Please prepare a detailed letter of response.</li>
+<li>Cut and paste each comment by the reviewer. Answer it directly below. State specifically what changes you have made to the manuscript. Identify the page and line number.</li>
+<li>Provide a scientific response to the comment you accept; or a convicing, solid and polite rebuttal to the point you think the reviewer is wrong.</li>
+</ul>
+<h3 id="Rejection"><a href="#Rejection" class="headerlink" title="Rejection"></a>Rejection</h3><ul>
+<li>Try to understand why the paper was rejected.</li>
+<li>Re-evaluate your work and decide whether it is appropriate to submit the paper elsewhere. If so, begin as if you are going to write a new article.</li>
+</ul>
+<h1 id="个人积累"><a href="#个人积累" class="headerlink" title="个人积累"></a>个人积累</h1><p>Some comments from the editor.</p>
+<ul>
+<li>Note that terms such as “notably,” “indeed,” and “surprisingly” are redundant in scientific writing and can be deleted as they add no relevance.</li>
+<li>The n-dash (–) could be used instead of “to” but not hyphen (-). For example, 15–25 mm implies 15 to 25 mm. <a href="https://www.grammarly.com/blog/hyphens-and-dashes/">here is a nice demonstration</a>, <a href="https://meta.stackexchange.com/questions/305172/how-to-type-a-dash-or-instead-of-a-hyphen-in-stack-exchange">here is how to type them</a></li>
+</ul>
+<p>deep-learning-empowered</p>
+<p>Expensive flower-filled vase</p>
+<p>Expensive-flower-filled vase</p>
+<ul>
+<li><p>The use of too many words to convey one idea can muddle the message and divert the reader’s attention. Therefore, in writing, especially academic writing, ideas need to be conveyed as concisely as possible. One way of doing this is to use concise alternatives to phrases. For example, the phrase “all over the world” can be replaced with the word “globally” or “worldwide.” </p>
+</li>
+<li><p>Where possible, a direct verb (action) should be used instead of using a noun and verb. For example, “segmentation of images was done” can be replaced with “images were segmented,” which is clearer and preferred in academic writing.</p>
+<!--more--></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><strong>Example</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Avoid:</strong> Spectral imaging is essentially beneficial for an ocean of applications that require both spectral and spatial information at high resolution. <strong>Better:</strong> Several applications requiring both spectral and spatial information at high resolution benefit from spectral imaging.</td>
+</tr>
+</tbody></table>
+<p>Some useful word revision from the editor.</p>
+<ul>
+<li><p>While —&gt; Although</p>
+</li>
+<li><p>Here —&gt; In this study</p>
+</li>
+<li><p>These improvements enable us —&gt; enabled us</p>
+</li>
+<li><p>whole —&gt; entire</p>
+</li>
+<li><p>inaccessible —&gt; unreachable</p>
+</li>
+<li><p>Defects —&gt; limitations</p>
+</li>
+<li><p>Unsurprisingly —&gt; Nevertheless</p>
+</li>
+<li><p>confining —&gt; limiting</p>
+</li>
+<li><p>may —&gt; might</p>
+</li>
+<li><p>Besides —&gt; In addition</p>
+</li>
+<li><p>Since —&gt; Because</p>
+</li>
+</ul>
+<p>Some classical mistakes.</p>
+<ul>
+<li><p>is —&gt; was</p>
+</li>
+<li><p>spectral and spatial detections are simultaneously expected —&gt; spectral and spatial detection is</p>
+</li>
+</ul>
+<p>Common phrases.</p>
+<ul>
+<li>because of, due to</li>
+</ul>
+<p>early methods –&gt; early endeavors</p>
+<p>later works developed more methods –&gt; later works involved more methods</p>
+<p>It therefore failed to –&gt; it thereby failing to</p>
+<p><strong>The key difference between thereby and therefore is that thereby means “by that means” or “as a result of that” whereas therefore means “for that reason” or consequently.</strong></p>
+<p>additionally–&gt;besides</p>
+<p><a href="https://home.soka.ac.jp/~alex/sokhome06b/ess/transwords.html">https://home.soka.ac.jp/~alex/sokhome06b/ess/transwords.html</a></p>
+<p>Sec. 1 –&gt; Section 1</p>
+<p>Additional –&gt; Extra</p>
+<p>deep learning is able to handle the complicated combination-architecture model. –&gt; deep learning <strong>allows</strong> to handle the complicated combination-architecture model.</p>
+<p>enough to –&gt;sufficient for</p>
+<p>which is –&gt; namely</p>
+<h3 id="美化篇"><a href="#美化篇" class="headerlink" title="美化篇"></a>美化篇</h3><p>Deep neural networks has been applied widely in reconstruction process of spectral imaging. –&gt; The past decade has witnessed a rapid expansion of deep neural networks applications in reconstruction of spectral imaging.</p>
+<p>We think reinforcement learning (RL) can be used to change this condition. –&gt; We barely believe that we have fully exploited the potential of neural networks. To maximize their performance, one may consider introducing reinforcement learning (RL) technique.</p>
+<h3 id="单词篇"><a href="#单词篇" class="headerlink" title="单词篇"></a>单词篇</h3><p>endure</p>
+<p>endeavor </p>
+<p>notable</p>
+<h3 id="语法篇"><a href="#语法篇" class="headerlink" title="语法篇"></a>语法篇</h3><p>The computational spectral imaging method has resorted to computation power <strong>for reduced system volume</strong>.</p>
+<p>根据强调的内容（后句），把后句的but改成前句的though</p>
+<h3 id="词义篇"><a href="#词义篇" class="headerlink" title="词义篇"></a>词义篇</h3><p>Hence and thus have the same basic meaning and are often interchangeable. However, there is a slight difference. Hence usually refers to the future. Thus usually refers to the past. It is often used to indicate a conclusion.</p>
+<ul>
+<li>Both sides played well, thus no winner was declared.</li>
+<li>The situation is getting more and more complicated. Hence we will have to proceed with caution. (NOT Thus we will have to proceed with caution.)</li>
+</ul>
+<h3 id="资源篇"><a href="#资源篇" class="headerlink" title="资源篇"></a>资源篇</h3><p><a href="https://twitter.com/jbhuang0604/status/1437931021706612736">https://twitter.com/jbhuang0604/status/1437931021706612736</a></p>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>A-xxed B 就是 B is xxed by A. | computer-assisted diagnosis</p>
+<p>A-xxing B 就是 B xx A. | privacy-enhancing techniques</p>
+</div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script>]]></content>
+      <categories>
+        <category>Notes</category>
+        <category>Writing</category>
+      </categories>
+      <tags>
+        <tag>writing</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Modern Optical Testing Technology</title>
     <url>/Optics/Modern-Optical-Testing-Technology/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><p>浙大光电研究生课程《近代光学测试技术》笔记。</p>
@@ -4077,310 +4381,6 @@
       </categories>
       <tags>
         <tag>optics</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Scientific Writing Notes</title>
-    <url>/Writing/Scientific-Writing/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="科技写作（光电–狄大卫-x2F-王攀）"><a href="#科技写作（光电–狄大卫-x2F-王攀）" class="headerlink" title="科技写作（光电–狄大卫&#x2F;王攀）"></a>科技写作（光电–狄大卫&#x2F;王攀）</h1><p>好期刊不是科研的追求，成果才是。</p>
-<p>科研的核心：总结，归纳，最终能把自己做的用少数几个词凝练出来。</p>
-<h2 id="1-基本概念与文献调研"><a href="#1-基本概念与文献调研" class="headerlink" title="1 基本概念与文献调研"></a>1 基本概念与文献调研</h2><ul>
-<li><p>影响因子: 某期刊前两年（S, T）发表的论文在统计当年（U）的被引用总次数 X , 除以该期刊在前两年（S, T）内发表的论文总数 Y。公式为：<br>$$<br>\mathrm{IF}_U &#x3D; \frac{X(S,T)}{Y(S,T)}<br>$$</p>
-<ul>
-<li><p>本刊2009年的文章在2010年的被引次数：48；本刊2009年的发文量：187</p>
-<p>本刊2008年的文章在2010年的被引次数：128；本刊2008年的发文量：154</p>
-<p>本刊2010年的影响因子：IF &#x3D; (48+128) &#x2F; (187+154) &#x3D; 0.5161</p>
-</li>
-</ul>
-</li>
-</ul>
- <span id="more"></span>
-
-<ul>
-<li><p>SCI 论文分区：中国科学院文献情报中心根据目前SCI核心库将所有期刊分为数学、物理、化学、生物、地学、天文、工程技术、医学、环境科学、农林科学、社会科学、管理科学及综合性期刊13大类。然后，将13大类期刊分各自为 4 个等级，即 4 个区。按照各类期刊影响因子划分，前5%为该类 1 区、6% ～ 20% 为 2 区、21% ～ 50% 为 3 区，其余的为 4 区。</p>
-</li>
-<li><p>H–index：h代表“高引用次数”（high citations），一名科研人员的h指数是指他 <em>至多有h篇论文分别被引用了至少h次。</em></p>
-</li>
-<li><p>Formality: </p>
-<ul>
-<li>Full words. e.g., can’t –&gt; cannot, won’t –&gt; will not</li>
-<li>a lot –&gt; many</li>
-<li>totally –&gt; completely</li>
-<li>at the same time –&gt; simulataneously</li>
-<li>Interesting –&gt; compelling</li>
-</ul>
-</li>
-</ul>
-<p>学位论文：不要追求写得长，要追求原创性和逻辑性；</p>
-<ul>
-<li>对课题组的同学、同一个学校的同学，是一个重要参考资料！</li>
-</ul>
-<h2 id="2-参考文献的管理与排版"><a href="#2-参考文献的管理与排版" class="headerlink" title="2 参考文献的管理与排版"></a>2 参考文献的管理与排版</h2><ul>
-<li>高效看文献<ul>
-<li>要  <em>get</em> 什么：<strong>带着问题和目的</strong>去找文献</li>
-<li><strong>不求甚解</strong>的精神（略读，扫文献）</li>
-<li>Critical thinking</li>
-</ul>
-</li>
-</ul>
-<h2 id="3-描述研究成果"><a href="#3-描述研究成果" class="headerlink" title="3 描述研究成果"></a>3 描述研究成果</h2><ul>
-<li>Use adj. and adv. sparingly<ul>
-<li><strong>Both of the two</strong> samples had <strong>very similar</strong> concentrations –&gt; The two samples had similar concentrations</li>
-<li>Avoid ‘significantly’, unless have  statistic reference</li>
-</ul>
-</li>
-<li>Focus on science, not scientist </li>
-<li>Avoid empty transitional statements<ul>
-<li>e.g., actually</li>
-<li>Useful statements: conversely, consequently &#x2F; to this end, typically &#x2F; in general</li>
-</ul>
-</li>
-<li>Choose simple words over complex<ul>
-<li>In order to –&gt; to</li>
-<li>has the capacity to –&gt; can</li>
-<li>a number of –&gt; many &#x2F; several</li>
-<li>despite the fact that –&gt; although</li>
-</ul>
-</li>
-</ul>
-<h3 id="时态和语态"><a href="#时态和语态" class="headerlink" title="时态和语态"></a>时态和语态</h3><ul>
-<li>研究的实验工作：过去时</li>
-<li>描述事实结果：现在时</li>
-<li>引述别人工作：现在时或现在完成时</li>
-</ul>
-<h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><ul>
-<li>开门见山，不绕圈子，避免大篇幅讲述历史渊源</li>
-<li>回顾历史有重点，找有代表性的</li>
-</ul>
-<h3 id="Discussion-部分"><a href="#Discussion-部分" class="headerlink" title="Discussion 部分"></a>Discussion 部分</h3><ul>
-<li><p>创造性见解，精炼回答为什么出现这样的结果，以及出现这样的结果意味着什么，逻辑要清晰</p>
-</li>
-<li><p>主要的发现</p>
-</li>
-<li><p>结果的说明、阐释或论述、推论</p>
-</li>
-<li><p>与前人结果的比较</p>
-</li>
-<li><p>结果的意义和重要性、应用</p>
-</li>
-<li><p>研究的局限和不足之处，尚未回答的问题及局限性对研究的影响，建议进一步的研究方向</p>
-</li>
-</ul>
-<h3 id="Conclusion-部分"><a href="#Conclusion-部分" class="headerlink" title="Conclusion 部分"></a>Conclusion 部分</h3><ul>
-<li>一句话总结</li>
-<li>技术的优势和拓展应用</li>
-</ul>
-<h3 id="Supplementary-部分"><a href="#Supplementary-部分" class="headerlink" title="Supplementary 部分"></a>Supplementary 部分</h3><ul>
-<li>放不太重要、但有助于理解结果的实验和讨论</li>
-</ul>
-<h3 id="Figures-and-Tables"><a href="#Figures-and-Tables" class="headerlink" title="Figures and Tables"></a>Figures and Tables</h3><ul>
-<li>先总说</li>
-<li>再有逻辑、递进性地描述图表结果</li>
-<li>讨论</li>
-</ul>
-<h3 id="Title"><a href="#Title" class="headerlink" title="Title"></a>Title</h3><ul>
-<li><p>清楚性</p>
-<ul>
-<li>Highly efficient waveguide grating couplers using silicon-on-insulator (Emphasis: waveguide grating couplers)</li>
-<li>Silicon-on-insulator for high-output waveguide grating couplers (Emphasis: silicon-on-sinsulator)</li>
-</ul>
-</li>
-<li><p>主副题名</p>
-</li>
-<li><p>e.g.</p>
-<ul>
-<li>Low-loss 与 surface smoothness, diameter uniformity<ul>
-<li>Low-loss 在 high-level</li>
-<li>Subwavelength-diameter silica wire for low-loss optical wave guiding</li>
-</ul>
-</li>
-<li>包含凸显性能的关键信息</li>
-<li>要吸引人看<ul>
-<li><strong>Single-Nanowire Single-Mode Laser</strong></li>
-<li>Highly elastic ice microfiber –&gt; Elastic ice microfiber: Highly 太泛泛不准确</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="PPT-展示"><a href="#PPT-展示" class="headerlink" title="PPT 展示"></a>PPT 展示</h3><ul>
-<li><p>图片出处标注：无作者信息，杂志名采用缩写形式，随后是期号（黑体）、首页页码、发表年份</p>
-</li>
-<li><p>原则：让观众最快获取有用信息</p>
-</li>
-</ul>
-<h2 id="论文投稿"><a href="#论文投稿" class="headerlink" title="论文投稿"></a>论文投稿</h2><p>牵扯到人，在哪里都会有偏见或者倾向性的，那也没办法</p>
-<ul>
-<li><p>期刊选择</p>
-<ul>
-<li><p>原理、材料、结构等的重大创新，性能的显著提高：好一点的期刊</p>
-</li>
-<li><p>前人工作的改进优化：中下的期刊</p>
-</li>
-<li><p>期刊所规定的范围</p>
-</li>
-<li><p>期刊的论文平均水平</p>
-</li>
-</ul>
-</li>
-<li><p>投稿前的准备工作: 系统里要填很多东西，投个稿也是很累的</p>
-<ul>
-<li><p>Manuscript</p>
-</li>
-<li><p>Tables, Figures, Movies</p>
-</li>
-<li><p>Supplementary materials</p>
-</li>
-<li><p><strong>Cover Letter</strong></p>
-<ul>
-<li><p>an excellent opportunity to briefly discuss the importance of the submitted work and why it is appropriate for the journal </p>
-</li>
-<li><p>Spend time writing a convincing cover letter and share it with your coauthors for their input</p>
-</li>
-</ul>
-</li>
-<li><p>Email and address for each author</p>
-</li>
-<li><p>Suggested reviewers (name, affiliation, emails)</p>
-</li>
-</ul>
-</li>
-<li><p>申诉：审稿人误解&#x2F;没理解&#x2F;有很强偏见（好的工作，机会难得）</p>
-</li>
-<li><p><strong>发表过一篇文章后，可以申请当审稿人</strong></p>
-</li>
-</ul>
-<h1 id="科技写作（医学–邹炜-x2F-邹键）"><a href="#科技写作（医学–邹炜-x2F-邹键）" class="headerlink" title="科技写作（医学–邹炜&#x2F;邹键）"></a>科技写作（医学–邹炜&#x2F;邹键）</h1><h3 id="Writing-a-scientific-article"><a href="#Writing-a-scientific-article" class="headerlink" title="Writing a scientific article"></a>Writing a scientific article</h3><ul>
-<li>Read the author guideline!</li>
-<li>Figures: One figure, one question<ul>
-<li>figure的逻辑、框架可以提前思考准备</li>
-</ul>
-</li>
-<li>Discussion: <ul>
-<li>Indicate uses, extensions, and limitations </li>
-<li>suggest future experiments and point out those that are underway</li>
-</ul>
-</li>
-<li>Supplementary Material: 不是不重要放到了附录，而是由于篇幅限制才放到了附录</li>
-<li>Start writing<ul>
-<li>Paper: Introduction –&gt; Methods &amp; Materials –&gt; Results –&gt;Discussion –&gt; Figures &amp; Tables</li>
-<li>Write: Abstract –&gt; Results –&gt; Figures &amp; Tables –&gt; Methods &amp; Materials –&gt; Introduction –&gt; Discussion –&gt; Abstract (revision)</li>
-</ul>
-</li>
-</ul>
-<h3 id="Cover-Letter-投稿信"><a href="#Cover-Letter-投稿信" class="headerlink" title="Cover Letter (投稿信)"></a>Cover Letter (投稿信)</h3><ul>
-<li>Basic information</li>
-<li>Cover letter is your chance to speak to the editor directly</li>
-<li>Mention what makes the paper special to the journel</li>
-<li>Confine the length to 2&#x2F;3 page</li>
-</ul>
-<h3 id="Revision-and-response-to-reviewers"><a href="#Revision-and-response-to-reviewers" class="headerlink" title="Revision, and response to reviewers"></a>Revision, and response to reviewers</h3><ul>
-<li>Cherish the chance of discussion your work directly with other scientists in your community. Please prepare a detailed letter of response.</li>
-<li>Cut and paste each comment by the reviewer. Answer it directly below. State specifically what changes you have made to the manuscript. Identify the page and line number.</li>
-<li>Provide a scientific response to the comment you accept; or a convicing, solid and polite rebuttal to the point you think the reviewer is wrong.</li>
-</ul>
-<h3 id="Rejection"><a href="#Rejection" class="headerlink" title="Rejection"></a>Rejection</h3><ul>
-<li>Try to understand why the paper was rejected.</li>
-<li>Re-evaluate your work and decide whether it is appropriate to submit the paper elsewhere. If so, begin as if you are going to write a new article.</li>
-</ul>
-<h1 id="个人积累"><a href="#个人积累" class="headerlink" title="个人积累"></a>个人积累</h1><p>Some comments from the editor.</p>
-<ul>
-<li>Note that terms such as “notably,” “indeed,” and “surprisingly” are redundant in scientific writing and can be deleted as they add no relevance.</li>
-<li>The n-dash (–) could be used instead of “to” but not hyphen (-). For example, 15–25 mm implies 15 to 25 mm. <a href="https://www.grammarly.com/blog/hyphens-and-dashes/">here is a nice demonstration</a>, <a href="https://meta.stackexchange.com/questions/305172/how-to-type-a-dash-or-instead-of-a-hyphen-in-stack-exchange">here is how to type them</a></li>
-</ul>
-<p>deep-learning-empowered</p>
-<p>Expensive flower-filled vase</p>
-<p>Expensive-flower-filled vase</p>
-<ul>
-<li><p>The use of too many words to convey one idea can muddle the message and divert the reader’s attention. Therefore, in writing, especially academic writing, ideas need to be conveyed as concisely as possible. One way of doing this is to use concise alternatives to phrases. For example, the phrase “all over the world” can be replaced with the word “globally” or “worldwide.” </p>
-</li>
-<li><p>Where possible, a direct verb (action) should be used instead of using a noun and verb. For example, “segmentation of images was done” can be replaced with “images were segmented,” which is clearer and preferred in academic writing.</p>
-<!--more--></li>
-</ul>
-<table>
-<thead>
-<tr>
-<th><strong>Example</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>Avoid:</strong> Spectral imaging is essentially beneficial for an ocean of applications that require both spectral and spatial information at high resolution. <strong>Better:</strong> Several applications requiring both spectral and spatial information at high resolution benefit from spectral imaging.</td>
-</tr>
-</tbody></table>
-<p>Some useful word revision from the editor.</p>
-<ul>
-<li><p>While —&gt; Although</p>
-</li>
-<li><p>Here —&gt; In this study</p>
-</li>
-<li><p>These improvements enable us —&gt; enabled us</p>
-</li>
-<li><p>whole —&gt; entire</p>
-</li>
-<li><p>inaccessible —&gt; unreachable</p>
-</li>
-<li><p>Defects —&gt; limitations</p>
-</li>
-<li><p>Unsurprisingly —&gt; Nevertheless</p>
-</li>
-<li><p>confining —&gt; limiting</p>
-</li>
-<li><p>may —&gt; might</p>
-</li>
-<li><p>Besides —&gt; In addition</p>
-</li>
-<li><p>Since —&gt; Because</p>
-</li>
-</ul>
-<p>Some classical mistakes.</p>
-<ul>
-<li><p>is —&gt; was</p>
-</li>
-<li><p>spectral and spatial detections are simultaneously expected —&gt; spectral and spatial detection is</p>
-</li>
-</ul>
-<p>Common phrases.</p>
-<ul>
-<li>because of, due to</li>
-</ul>
-<p>early methods –&gt; early endeavors</p>
-<p>later works developed more methods –&gt; later works involved more methods</p>
-<p>It therefore failed to –&gt; it thereby failing to</p>
-<p><strong>The key difference between thereby and therefore is that thereby means “by that means” or “as a result of that” whereas therefore means “for that reason” or consequently.</strong></p>
-<p>additionally–&gt;besides</p>
-<p><a href="https://home.soka.ac.jp/~alex/sokhome06b/ess/transwords.html">https://home.soka.ac.jp/~alex/sokhome06b/ess/transwords.html</a></p>
-<p>Sec. 1 –&gt; Section 1</p>
-<p>Additional –&gt; Extra</p>
-<p>deep learning is able to handle the complicated combination-architecture model. –&gt; deep learning <strong>allows</strong> to handle the complicated combination-architecture model.</p>
-<p>enough to –&gt;sufficient for</p>
-<p>which is –&gt; namely</p>
-<h3 id="美化篇"><a href="#美化篇" class="headerlink" title="美化篇"></a>美化篇</h3><p>Deep neural networks has been applied widely in reconstruction process of spectral imaging. –&gt; The past decade has witnessed a rapid expansion of deep neural networks applications in reconstruction of spectral imaging.</p>
-<p>We think reinforcement learning (RL) can be used to change this condition. –&gt; We barely believe that we have fully exploited the potential of neural networks. To maximize their performance, one may consider introducing reinforcement learning (RL) technique.</p>
-<h3 id="单词篇"><a href="#单词篇" class="headerlink" title="单词篇"></a>单词篇</h3><p>endure</p>
-<p>endeavor </p>
-<p>notable</p>
-<h3 id="语法篇"><a href="#语法篇" class="headerlink" title="语法篇"></a>语法篇</h3><p>The computational spectral imaging method has resorted to computation power <strong>for reduced system volume</strong>.</p>
-<p>根据强调的内容（后句），把后句的but改成前句的though</p>
-<h3 id="词义篇"><a href="#词义篇" class="headerlink" title="词义篇"></a>词义篇</h3><p>Hence and thus have the same basic meaning and are often interchangeable. However, there is a slight difference. Hence usually refers to the future. Thus usually refers to the past. It is often used to indicate a conclusion.</p>
-<ul>
-<li>Both sides played well, thus no winner was declared.</li>
-<li>The situation is getting more and more complicated. Hence we will have to proceed with caution. (NOT Thus we will have to proceed with caution.)</li>
-</ul>
-<h3 id="资源篇"><a href="#资源篇" class="headerlink" title="资源篇"></a>资源篇</h3><p><a href="https://twitter.com/jbhuang0604/status/1437931021706612736">https://twitter.com/jbhuang0604/status/1437931021706612736</a></p>
-<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>A-xxed B 就是 B is xxed by A. | computer-assisted diagnosis</p>
-<p>A-xxing B 就是 B xx A. | privacy-enhancing techniques</p>
-</div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
-        var options = {
-            selector: '.gallery-item'
-        };
-        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
-        }</script>]]></content>
-      <categories>
-        <category>Notes</category>
-        <category>Writing</category>
-      </categories>
-      <tags>
-        <tag>writing</tag>
       </tags>
   </entry>
   <entry>
@@ -6526,8 +6526,8 @@ ssh -L port:127.0.0.1:port username@ip
         <category>Optics</category>
       </categories>
       <tags>
-        <tag>optics</tag>
         <tag>projects</tag>
+        <tag>optics</tag>
       </tags>
   </entry>
   <entry>
@@ -6555,8 +6555,8 @@ ssh -L port:127.0.0.1:port username@ip
         <category>Optics</category>
       </categories>
       <tags>
-        <tag>optics</tag>
         <tag>projects</tag>
+        <tag>optics</tag>
       </tags>
   </entry>
   <entry>
@@ -6584,8 +6584,8 @@ ssh -L port:127.0.0.1:port username@ip
         <category>Optics</category>
       </categories>
       <tags>
-        <tag>optics</tag>
         <tag>projects</tag>
+        <tag>optics</tag>
       </tags>
   </entry>
   <entry>
@@ -6916,8 +6916,8 @@ ssh -L port:127.0.0.1:port username@ip
       </categories>
       <tags>
         <tag>competition</tag>
-        <tag>optics</tag>
         <tag>projects</tag>
+        <tag>optics</tag>
       </tags>
   </entry>
   <entry>
@@ -8009,8 +8009,8 @@ ssh -L port:127.0.0.1:port username@ip
         <category>Optics</category>
       </categories>
       <tags>
-        <tag>optics</tag>
         <tag>projects</tag>
+        <tag>optics</tag>
       </tags>
   </entry>
   <entry>
@@ -8043,8 +8043,8 @@ ssh -L port:127.0.0.1:port username@ip
         <category>Optics</category>
       </categories>
       <tags>
-        <tag>optics</tag>
         <tag>projects</tag>
+        <tag>optics</tag>
         <tag>coding</tag>
       </tags>
   </entry>
@@ -8097,8 +8097,8 @@ ssh -L port:127.0.0.1:port username@ip
         <category>Optics</category>
       </categories>
       <tags>
-        <tag>optics</tag>
         <tag>projects</tag>
+        <tag>optics</tag>
       </tags>
   </entry>
   <entry>
@@ -8137,8 +8137,8 @@ ssh -L port:127.0.0.1:port username@ip
         <category>Optics</category>
       </categories>
       <tags>
-        <tag>optics</tag>
         <tag>projects</tag>
+        <tag>optics</tag>
       </tags>
   </entry>
   <entry>
@@ -8213,8 +8213,8 @@ ssh -L port:127.0.0.1:port username@ip
         <category>Optics</category>
       </categories>
       <tags>
-        <tag>optics</tag>
         <tag>projects</tag>
+        <tag>optics</tag>
       </tags>
   </entry>
   <entry>
@@ -8241,8 +8241,8 @@ ssh -L port:127.0.0.1:port username@ip
         <category>Optics</category>
       </categories>
       <tags>
-        <tag>optics</tag>
         <tag>projects</tag>
+        <tag>optics</tag>
       </tags>
   </entry>
   <entry>
@@ -10296,9 +10296,9 @@ $$
 <p>rmdir dirname &#x2F;&#x2F; 删除空文件目录</p>
 <p>git rm filename &#x2F;&#x2F; 从版本库中删除文件</p>
 <p>git checkout – filename &#x2F;&#x2F; 误删文件的恢复</p>
-<h3 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h3><p>git remote add origin <a href="mailto:&#103;&#x69;&#116;&#x40;&#103;&#x69;&#x74;&#x68;&#x75;&#x62;&#46;&#x63;&#111;&#x6d;">&#103;&#x69;&#116;&#x40;&#103;&#x69;&#x74;&#x68;&#x75;&#x62;&#46;&#x63;&#111;&#x6d;</a>:longqianh&#x2F;learngit.git</p>
+<h3 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h3><p>git remote add origin <a href="mailto:&#x67;&#x69;&#x74;&#x40;&#103;&#105;&#116;&#104;&#x75;&#x62;&#46;&#x63;&#x6f;&#109;">&#x67;&#x69;&#x74;&#x40;&#103;&#105;&#116;&#104;&#x75;&#x62;&#46;&#x63;&#x6f;&#109;</a>:longqianh&#x2F;learngit.git</p>
 <p>git push -u origin master</p>
-<p>git clone <a href="mailto:&#x67;&#105;&#116;&#64;&#103;&#x69;&#x74;&#104;&#x75;&#x62;&#x2e;&#x63;&#x6f;&#109;">&#x67;&#105;&#116;&#64;&#103;&#x69;&#x74;&#104;&#x75;&#x62;&#x2e;&#x63;&#x6f;&#109;</a>:longqianh&#x2F;learngit.git</p>
+<p>git clone <a href="mailto:&#103;&#105;&#116;&#x40;&#103;&#105;&#x74;&#104;&#117;&#x62;&#x2e;&#99;&#x6f;&#x6d;">&#103;&#105;&#116;&#x40;&#103;&#105;&#x74;&#104;&#117;&#x62;&#x2e;&#99;&#x6f;&#x6d;</a>:longqianh&#x2F;learngit.git</p>
 <h3 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h3><p>git checkout </p>
 <p>git branch &#x2F;&#x2F; 查看分支</p>
 <p>git branch -d branchname &#x2F;&#x2F; 删除分支</p>
