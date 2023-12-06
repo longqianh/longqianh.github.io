@@ -243,7 +243,7 @@
 <li><p>latex-to-image-renderer：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm i hexo-renderer-markdown-it --save</span><br><span class="line">npm i markdown-it-latex2img --save</span><br></pre></td></tr></table></figure></li>
 </ul>
-<h3 id="2023-12-6"><a href="#2023-12-6" class="headerlink" title="2023.12.6"></a>2023.12.6</h3><ul>
+<h3 id="2023-12-5-7"><a href="#2023-12-5-7" class="headerlink" title="2023.12.5~7"></a>2023.12.5~7</h3><ul>
 <li>解决部分图片显示失败的问题<ul>
 <li>solution：图片存到 assets 文件夹作为备份，文件夹中的图片上传到图床</li>
 </ul>
@@ -251,7 +251,10 @@
 <li>解决部分数学公式显示失败的问题<ul>
 <li>换行的转译问题: 2个\会有一个被认作转译符，因此需要打4个\</li>
 <li>align 的换行问题：\end{align} 上面不要有空行</li>
-<li>*的显示问题：一行出现2个乘号就会出现转译问题，因此把乘号换成 \star 或者 \dagger</li>
+<li><code>*</code> 的显示问题：<code>**</code> 存在转译问题，因此把乘号换成 <code>\star</code> 或者 <code>\dagger</code> </li>
+<li><code>|</code> 的显示问题：使用 <code>\vert</code></li>
+<li><code>‘</code> 的显示问题：使用 <code>^\prime</code></li>
+<li><code>\left\&#123;</code> 改为 <code>\left[</code></li>
 </ul>
 </li>
 <li>添加整体资源文件夹 assets 用于更有条理地分类存放pdf</li>
@@ -290,6 +293,9 @@ Use <code>markdown-it-latex2img</code> to beautify the math</p>
 <li>按照 <a target="_blank" rel="noopener" href="https://github.com/MakerGYT/markdown-it-latex2img#Hexo%EF%BC%8C%E6%B3%A8%E6%84%8F%E8%BF%98%E8%A6%81%E5%AE%89%E8%A3%85%E4%B8%80%E4%B8%AArenderer">https://github.com/MakerGYT/markdown-it-latex2img#Hexo，注意还要安装一个renderer</a></li>
 <li>注意 label&#x2F;ref 不能用了（未改）</li>
 </ul>
+</li>
+<li><p><input checked="" disabled="" type="checkbox"> 
+公式渲染中的引用问题</p>
 </li>
 </ul>
 </div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
