@@ -145,6 +145,143 @@
       </tags>
   </entry>
   <entry>
+    <title>Quantum-Mechanics Notes</title>
+    <url>/Physics/Quantum-Mechanics/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="Quantum-Mechanics-Notes"><a href="#Quantum-Mechanics-Notes" class="headerlink" title="Quantum-Mechanics-Notes"></a>Quantum-Mechanics-Notes</h1><p>Notes for quantum mechanics of MIT-OCW 8.04.</p>
+<p><em>’This is the goal of 8.04: we will step beyond the scale of daily experiences to develop an intuition for electrons, atoms, and superposition.’</em></p>
+<span id="more"></span>
+
+<h2 id="Uncertainty-Principle-and-Superposition"><a href="#Uncertainty-Principle-and-Superposition" class="headerlink" title="Uncertainty Principle and Superposition"></a>Uncertainty Principle and Superposition</h2><p>Think about a series of experiments.</p>
+<p>The electron has two properties: white&#x2F;black and hard&#x2F;soft (Denoted by W&#x2F;B &amp; H&#x2F;S). </p>
+<p>We made <em>boxes</em> that can <em>measure</em> such properties. For instance, white electrons and black electrons will exit the box from different directions. From the direction, we know the white&#x2F;black property of the electron. Denote ‘C-Box’ (color box) for the boxes that can measure the W&#x2F;B property and, similarly, ‘H-Box’ (hardness box) for those that can measure the ‘H&#x2F;S’ property.</p>
+<p>We have mirrors and combinators that combine the two directions so we can continue more complicated experiments. Note that they only change the directions.</p>
+<p>Below are the experiments from physicists.</p>
+<p>First, there are some basic and naive experiments.</p>
+<ol>
+<li>Electrons —&gt; C-Box —&gt; W and B —&gt; choose W &#x3D;&gt; C-Box —&gt; W  (repeatability of color &#x2F; hardness)</li>
+<li>Electrons —&gt; H-Box —&gt; H and S —&gt; choose H &#x3D;&gt;C-Box —&gt; W (50%) and B (50%) (lack of correlation of color with hardness)</li>
+</ol>
+<p>Then comes the weird experiment. </p>
+<ol start="3">
+<li>Electrons —&gt; C-Box —&gt; W and B —&gt; choose W —&gt; H-Box —&gt; H and S —&gt; choose H &#x3D;&gt; C-Box —&gt; <strong>Not</strong> (100%) W, but $50%$ W and  $50%$ B</li>
+</ol>
+<p>Apparently, the hardness box tampers with color. Therefore, experiment 3 tells us color and hardness properties cannot be measured simultaneously, which is the <strong>uncertainty principle</strong>.</p>
+<blockquote>
+<p>Though we know it is white initially, as long as we measure the hardness, the white color property is not repeatable anymore.</p>
+</blockquote>
+<p>Then, we use the combinator to dig deeper.</p>
+<ol start="4">
+<li><p>White electrons —&gt; H-Box —&gt; $50%$ H and $50%$ S  —&gt; combinator &#x3D;&gt; H-Box —&gt; $50%$ H and $50%$ S</p>
+</li>
+<li><p>White electrons —&gt; H-Box —&gt; 50% H and 50% S —&gt; combinator &#x3D;&gt; C-Box —&gt; (100%) W </p>
+</li>
+<li><p>White electrons —&gt; H-Box —&gt; 50% H and 50% S —&gt; put a wall in the S path —&gt; combinator &#x3D;&gt; C-Box —&gt; $50%$ W and $50%$ B</p>
+</li>
+</ol>
+<p>Experiment 4 tells us combinator does not change the properties of electrons. Experiment 5 got a total W because the added combination part acts as if the H&#x2F;S property isn’t measured; the W&#x2F;B property will not be disturbed. Experiment 6 shows a disturbing one from which we can see the uncertainty principle plays a role.</p>
+<p>After we understand the principle of the motion of electrons, we consider its being (or state): what is the state of an electron inside the apparatus in Experiment 5?</p>
+<p>We know it is white, so it cannot be hard or soft. Otherwise, we will get the half-half result by the uncertainty principle. It cannot be both hard and soft since different properties will go in different directions. In one path, the electron cannot have both properties. It cannot be either since we can get some results. </p>
+<p>Therefore, the only condition is the electron has a probability of being hard or soft (but we cannot know what exactly it is), and such a state is called <strong>superposition</strong>.</p>
+<blockquote>
+<p>Being in a definite state of position means being in a superposition of having different values for momentum.</p>
+</blockquote>
+<h2 id="Bell’s-Inequality"><a href="#Bell’s-Inequality" class="headerlink" title="Bell’s Inequality"></a>Bell’s Inequality</h2><p>In lecture 2, the professor demonstrated some exciting experiments that are waiting to be explained using quantum language:</p>
+<ul>
+<li><p>Atom exists. But atomic orbits are unstable.</p>
+</li>
+<li><p>Atomic spectra are discrete. When excites&#x2F;sparks the simple gas like $ H_2$, we get light sent out by it. If we shine the emitted light on a prism, we will find distinct patterns that indicate discrete spectra. Experimentalists found the wavelengths satisfy $1&#x2F;\lambda&#x3D;R\cdot(1&#x2F;n^2-1&#x2F;m^2)$.</p>
+</li>
+<li><p>Photoelectric effect. Stop voltage has no relation with intensity but is linear to frequency. It was found that the coefficient was just $h$, the Planck constant derived from Blackbody radiation.</p>
+</li>
+<li><p>Since the photon has zero mass, we can develop the momentum equation $p&#x3D;h&#x2F;\lambda$ with $E&#x3D;pc$ and $E&#x3D;h\nu$. This means the photon has the property of particles—momentum. Note that $E&#x3D;h\nu$ is very unusual.</p>
+<ul>
+<li>By the way, I think a photon is massless because it is our world’s measurement datum.</li>
+</ul>
+</li>
+<li><p>Double-slit experiment with electron. The electrons came one in one and were found randomly positioned. But when the quantity is enough, the statistics tell us the electrons were <em>interfered</em> (with <em>themselves</em>).</p>
+</li>
+<li><p>Bragg scattering. We would find the interference if we send a beam of electrons to a crystal and watch out for the scattering from different angles. The intensity as a function of the angle of the out beam satisfies the function as if the electron is a wave with the wavelength $\lambda&#x3D;2d\sin\theta&#x2F;n$. The electron <strong>diffracts</strong> off the crystal. </p>
+</li>
+<li><p>Send out $C_{60}$ one by one through a diffraction grating, the result is also an interfered pattern, telling us that it <em>interferes with itself</em>.</p>
+</li>
+</ul>
+<p>Next comes the <em>Bell’s inequality</em>.</p>
+<p>If the state of the stuff is definite, let $A,B,C$ be the set of condition $1,2,3$, and a bar means its complementary set. We have:<br>$$<br>\operatorname{Num}(A,\bar B)+\operatorname{Num}(B,\bar C)\ge \operatorname{Num}(A,\bar C)<br>$$<br>The proof is the following:<br>$$<br>\begin{aligned}<br>\operatorname{LHS}&amp;&#x3D;\operatorname{Num}(A,\bar B,C)+\operatorname{Num}(A,\bar B,\bar C)+\operatorname{Num}(A,B,\bar C)+\operatorname{Num}(\bar A,B,\bar C)\\<br>&amp;\ge \operatorname{Num}(A,B,\bar C)+\operatorname{Num}(A,\bar B,\bar C)<br>&#x3D;\operatorname{Num}(A,\bar C)<br>&#x3D;\operatorname{RHS}<br>\end{aligned}<br>$$<br>However, Bell found by experiment that:<br>$$<br>\operatorname{Num}(\uparrow_0,\downarrow_\theta)+\operatorname{Num}(\uparrow_\theta,\downarrow_{2\theta})&lt;\operatorname{Num}(\uparrow_0,\downarrow_{2\theta}).<br>\<br>$$<br>The up and down arrows indicate the electron’s spin angular momentum.</p>
+<ul>
+<li>I think this can be explained only if the three binary states are superimposed.</li>
+</ul>
+<h2 id="Wave-Function"><a href="#Wave-Function" class="headerlink" title="Wave Function"></a>Wave Function</h2><h3 id="Postulate-of-Wavefunction"><a href="#Postulate-of-Wavefunction" class="headerlink" title="Postulate of Wavefunction"></a>Postulate of Wavefunction</h3><p>An essential postulate: The configuration or <em>state</em> of a quantum object is completely specified by a wavefunction denoted as $\psi(x)$, $\psi\in\mathbb{C}$ . </p>
+<p>Classical: $(\vec p,\vec x)\to$ Quantum: $\psi(\vec x)$</p>
+<p>Furthermore, $p(x)&#x3D;|\psi(x)|^2$ determines the probability (density) that an object in the state $\psi(x)$ will be found at position $x$. Note that the <em>dimension</em> of $\psi$ is <strong>square root of length</strong> since $\displaystyle \int|\psi|^2 \text{d}x&#x3D;1$.</p>
+<h3 id="De-Broglie-Relations"><a href="#De-Broglie-Relations" class="headerlink" title="De Broglie Relations"></a>De Broglie Relations</h3><p>From de Broglie’s generalization of the momentum-wavelength relation of photons, we have<br>$$<br>E&#x3D;\hbar\omega, \<br>\vec p&#x3D;\hbar \vec k<br>$$<br>where $\hbar:&#x3D;h&#x2F;2\pi$.</p>
+<h3 id="Mathematics-of-Superposition"><a href="#Mathematics-of-Superposition" class="headerlink" title="Mathematics of Superposition"></a>Mathematics of Superposition</h3><p>Given to two possible states of a quantum system corresponding to two wavelengths $\psi_a$ and $\psi_b$, the system could also be in a superposition $\psi&#x3D;\alpha\psi_a+\beta\psi_b$ with $\alpha$ and $\beta$ in $\mathbb{C}$ satisfying normalization.</p>
+<p>Hence for the superposition state, we have the probability density<br>$$<br>\begin{aligned}<br>\mathbb{p}(x)&amp;&#x3D;|\alpha\psi_a(x)+\beta\psi_b(x)|^2\\<br>&amp;&#x3D;|\alpha\psi_a(x)|^2+|\beta\psi_b(x)|^2+\alpha^<em>\beta\psi_a^</em>(x)\psi_b(x)+\alpha\beta^<em>\psi_a(x)\psi_b^</em>(x)</p>
+<p>\end{aligned}<br>$$<br>which exhibits quantum interference aside from the usual addition probability. It’s the interference between the different momentum that leads to certainty in the position.</p>
+<p>By using the tool of Fourier Transformation, we see that any wavefunction $\psi(x)$ can be expressed as a superposition of states $e^{ikx}$ with definite momenta $p&#x3D;k$ as<br>$$<br>\begin{aligned}<br>\psi(x)&amp;&#x3D;\frac{1}{\sqrt{2\pi}}\int_{-\infty}^\infty \widetilde \psi(x)e^{ikx}\text{d}k\\<br>\widetilde\psi(k)&amp;&#x3D;\frac{1}{\sqrt{2\pi}}\int_{-\infty}^\infty \psi(x)e^{-ikx}\text{d}x.<br>\end{aligned}<br>$$<br>I think that means when state is expressed in wavefunction, position and momentum are tightly correlated, one could indicate the other.</p>
+<h2 id="Expectations"><a href="#Expectations" class="headerlink" title="Expectations"></a>Expectations</h2><h3 id="Uncertainty-and-Expectation"><a href="#Uncertainty-and-Expectation" class="headerlink" title="Uncertainty and Expectation"></a>Uncertainty and Expectation</h3><p>To characterize the uncertainty, we use the standard deviation<br>$$<br>\Delta a&#x3D;\sqrt{\langle a^2\rangle-\langle a\rangle^2}<br>$$</p>
+<p>The expectation value of a function of position <strong>in a given quantum state</strong> $\psi(x)$ is<br>$$<br>\langle f(x)\rangle &#x3D;\int_{-\infty}^\infty \psi^\star(x) f(x)\psi(x);\text dx.<br>$$<br>However, when we consider the expectation of momentum $\langle p\rangle$, we get problem: $p$ and $x$ cannot be measured simultaneously.</p>
+<p>( In fact we replace $f$ with $\hat f$ when compute the expectation value of an operator )</p>
+<h3 id="Hints-to-the-operator"><a href="#Hints-to-the-operator" class="headerlink" title="Hints to the operator"></a>Hints to the operator</h3><p>Notice some hints that indicate us to <em>operator</em>:</p>
+<ul>
+<li><p>For wavefunction $\psi&#x3D;e^{ikx}$,<br>$$<br>\begin{aligned}<br>\partial_x \psi&#x3D;ik\psi\implies \frac{\hbar}{i}\partial_x \psi &#x3D;\hbar k\psi&#x3D;p\cdot\psi<br>\end{aligned}<br>$$</p>
+</li>
+<li><p>Noether’s theorem states that <em>to every symmetry is associated a conserved quantity</em> .</p>
+<table>
+<thead>
+<tr>
+<th align="center">Symmetry</th>
+<th align="center">Conservation</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Translation : $\vec x\to \vec x+\Delta \vec x$</td>
+<td align="center">Momentum : $\dot{\vec p}&#x3D;0$</td>
+</tr>
+<tr>
+<td align="center">Time : $t\to t+\Delta t$</td>
+<td align="center">Energy : $\dot E&#x3D;0$</td>
+</tr>
+<tr>
+<td align="center">Rotation : $\vec x \to \overleftrightarrow R\cdot \vec x$</td>
+<td align="center">Angular Momentum : $\dot{\vec L}&#x3D;0$</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>For translations behave for functions,<br>$$<br>\begin{align}<br>f(x)\to f(x+l)&amp;&#x3D;f(x)+l\partial_x f(x)+\frac{l^2}{2}\partial_x^2 f(x)+\dots\\<br>&amp;&#x3D;\sum_{n&#x3D;0}^{\infty} \frac{(l\partial_x)^n}{n!}f(x)\\<br>&amp;&#x3D;e^{l\partial_x}f(x)<br>\end{align}<br>$$<br>Translations are generated by spatial derivatives $\partial_x$ and it should be associated with $p$. </p>
+<p>Similarly, $E\sim \partial_t,; L_z\sim\partial_\varphi$.</p>
+</li>
+</ul>
+<p>Finally, momentum in quantum mechanics is realized by an operator:<br>$$<br>\hat p&#x3D;\frac{\hbar}{i}\frac{\partial}{\partial x}.<br>$$<br>And we use operator $\hat p $ to compute expectation values:<br>$$<br>\lang p\rang&#x3D;\int_{-\infty}^\infty \psi^\star(x)\hat p \psi(x);\text dx<br>$$</p>
+<p>I think operator $\hat p$ is introduced more intuitively than mathematically. The key is that we want to calculate expectation of $p$ in a state associated with position $x$, but from uncertainty principle there is no meaning when $p$ and $x$ occured in one expression. Since momentum is related to position, we come out with operator. Then the $\lang p\rang$ is the expectation of the momentum that can be observed. (Only the momentum that is able to be observed can be taken out from  the operator)</p>
+<p>The very interesting thing of momentum operator is it can get distribution of momentum when there is a superposition.</p>
+<h2 id="Operators-and-the-Schrodinger-Equation"><a href="#Operators-and-the-Schrodinger-Equation" class="headerlink" title="Operators and the Schrödinger Equation"></a>Operators and the Schrödinger Equation</h2><h3 id="Common-operator"><a href="#Common-operator" class="headerlink" title="Common operator"></a>Common operator</h3><p>For each observable quantity we have an associate operator.</p>
+<ul>
+<li>Momentum : $\hat p&#x3D;-i\hbar \partial_x$</li>
+<li>Position: $\hat x &#x3D;x$</li>
+<li>Energy: $\hat E&#x3D;\displaystyle \frac{\hat p^2}{2m}+V(\hat x)&#x3D;-\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2}+V(x)$</li>
+</ul>
+<h3 id="Commutator-and-a-deep-equation"><a href="#Commutator-and-a-deep-equation" class="headerlink" title="Commutator and a deep equation"></a>Commutator and a deep equation</h3><p>To measure the importance of operator (act) order, we define the <em>commutator</em> :<br>$$<br>[\hat A,\hat B]&#x3D;\hat A\hat B-\hat B\hat A.<br>$$<br>And one deep and profound result we get is:<br>$$<br>[\hat x,\hat p]&#x3D;i\hbar \hat 1, \label{xp}<br>$$<br>which indicates the uncertainty principle. Assume the first thing we measure is accurate, then think about it, we cannot measure $x$ and $p$ both accurately, for the simple reason that their commutator is not zero: we cannot get the same result after the second one that is measured. Further more, when expressed in matrix, ($\ref{xp}$) is a very hard matrix equation and only infinite dimension matrix is can solve.</p>
+<h3 id="The-Schrodinger-Equation"><a href="#The-Schrodinger-Equation" class="headerlink" title="The Schrödinger Equation"></a>The Schrödinger Equation</h3><p>Actually $e^{ikx}$ is an eigenfunction of operator $\hat p$ and every state $\psi(x)$ can be generated by it from Fourier’s Theorem. </p>
+<p>From de Broglie, we know that any object is a wave, and consider a plane wave<br>$$<br>\psi(x,t;k)&#x3D;e^{i(kx-\omega t)},<br>$$<br>which has momentum $p&#x3D;\hbar k$ and energy $E&#x3D;\hbar \omega$. </p>
+<p>Similarly to hint of momentum, we notice<br>$$<br>i\hbar \frac{\partial\psi(x,t)}{\partial t}&#x3D;\hbar\omega \psi(x,t)&#x3D;E\psi(x,t),<br>$$</p>
+<p>which depicts the time evolution of energy $E$. But maybe we do not know what is energy $E$. </p>
+<p>A little change $E\to \hat E$ complete the equation and that is the $Schr\ddot{o}dinger ;Equation$ :<br>$$<br>\begin{align}<br>i\hbar \frac{\partial}{\partial t}\psi(x,t)&amp;&#x3D;\hat E \psi(x,t)\\<br>i.e.\qquad i\hbar\frac{\partial \psi(x,t)}{\partial t}&amp;&#x3D;-\frac{\hbar^2}{2m}\frac{\partial^2 \psi(x,t)}{\partial x^2}+V(x)\psi(x,t).<br>\end{align}<br>$$<br>The equation describing the time evolution of a quantum state.</p>
+<p>It is analogous to the equation of motion $\vec F&#x3D;\dot {\vec p} $ and $\hat E$ is not defined as the operator $i\hbar\partial_t$ any more than $\vec F$ is defined to be $\hat{\vec p}$ .</p>
+</div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script>]]></content>
+      <categories>
+        <category>Notes</category>
+        <category>Physics</category>
+      </categories>
+      <tags>
+        <tag>physics</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Linear Algebra</title>
     <url>/Mathematics/Linear-Algebra/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="线性代数学习笔记"><a href="#线性代数学习笔记" class="headerlink" title="线性代数学习笔记"></a>线性代数学习笔记</h1><p>后面留了一些坑</p>
@@ -1044,355 +1181,6 @@
       </categories>
       <tags>
         <tag>physics</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>神经网络学习</title>
-    <url>/Computer-Science/Deep%20Learning/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="神经网络-学习笔记"><a href="#神经网络-学习笔记" class="headerlink" title="神经网络 学习笔记"></a>神经网络 学习笔记</h1><p>学习资源: <a href="">neuralnetworksanddeeplearning.com</a></p>
-<h2 id="Chapter-1、2"><a href="#Chapter-1、2" class="headerlink" title="Chapter 1、2"></a>Chapter 1、2</h2><h3 id="1-1-基本概念"><a href="#1-1-基本概念" class="headerlink" title="1.1 基本概念"></a>1.1 基本概念</h3><ul>
-<li><p>activation function 激活函数&#x2F;传递函数   定义了该节点在给定的输入或输入的集合下的输出，比如 sigmoid function</p>
-</li>
-<li><p>perceptron model 感知器：输入 $0,1$ 二值函数，输出 $0,1$ 二值函数</p>
-</li>
-<li><p>sigmoid neurons  S 神经元  </p>
-<p>​	中间部分更精细，$\displaystyle\sigma(z)&#x3D;\frac{1}{1+e^{-z}}$ 输入二值，输出为 $[0,1]$ 之间的数，极限性质和感知器一样</p>
-</li>
-<li><p>feedforward neural networks 前馈神经网络</p>
-<p>​	没有反馈的神经网络，由输入层(input layer)、隐藏层(hidden layer)、输出层(output layer)构成</p>
-</li>
-</ul>
-<p>$ \ $ <span id="more"></span></p>
-<h3 id="1-2-stochastic-gradient-descent-随机梯度下降"><a href="#1-2-stochastic-gradient-descent-随机梯度下降" class="headerlink" title="1.2 stochastic gradient descent 随机梯度下降"></a>1.2 stochastic gradient descent 随机梯度下降</h3><h4 id="1-2-1-参数"><a href="#1-2-1-参数" class="headerlink" title="1.2.1 参数"></a>1.2.1 参数</h4><ul>
-<li>$x$ ：输入的训练集（一个矩阵，每一列是一次单独的输入）,  $y$ ：最终输出，$y&#x3D;w\cdot x+b$</li>
-<li>$w$：weights，由矩阵组成的向量。$w_j$ 是一个 $m\times n$ 型矩阵，连接 $j-1$ 层和 $j$ 层，其中 $j-1$ 层有 $n$ 个神经元，$ j $ 层有 $m$ 个神经元</li>
-<li>$b$ ：biases，由 $ m\times 1$ 型矩阵组成的向量。 $b_k$ 是一个$m\times 1$ 型矩阵，连接 $j-1$ 层和 $j$ 层，其中第 $j$ 层有 $m$ 个神经元</li>
-<li>Cost function ： $ C(w,b)&#x3D;\displaystyle\frac{1}{2n}\sum_x |y(x)-a |^2&#x3D;\frac{1}{2n}\sum_{i&#x3D;1}^{n}[y(x^{(i)})-a^{(i)}]^2 $</li>
-</ul>
-<h4 id="1-2-2-方法"><a href="#1-2-2-方法" class="headerlink" title="1.2.2 方法"></a>1.2.2 方法</h4><ul>
-<li>对于整个训练集，用随机梯度下降法使损失函数尽可能小</li>
-<li>先将训练集打乱，再按给定的小批训练集大小等间隔取小批训练集（相当于随机取样），每次选择更优的 $w,b$ 使损失函数一步步减小</li>
-</ul>
-<h4 id="1-2-3-保证每次都获得更优的-w-b-："><a href="#1-2-3-保证每次都获得更优的-w-b-：" class="headerlink" title="1.2.3 保证每次都获得更优的 $w,b$："></a>1.2.3 保证每次都获得更优的 $w,b$：</h4><p>1. </p>
-<p>$$<br>\displaystyle \nabla C&#x3D;(\frac{\partial C}{\partial v_1},\frac{\partial C}{\partial v_2})^T , \quad \vec v_1\equiv v_1\equiv w,\vec v_2\equiv v_2\equiv b\ \displaystyle\Delta C\approx  \frac{\partial C}{\partial w}\Delta v_1+\frac{\partial C}{\partial b}\Delta v_2&#x3D;\Delta v\cdot \nabla C \<br>&#x3D;&gt; take\quad \Delta v&#x3D;(\Delta v_1,\Delta v_2)&#x3D;-\eta \nabla C,\quad \eta&gt;0\<br>\begin{aligned}<br>\therefore C&amp;:&#x3D;C+\Delta C&#x3D;C-\eta |\nabla C |^2\<br>v_1&amp; :&#x3D;v_1-\eta\cdot\frac{\partial C}{\partial v_1}\<br>v_2&amp;:&#x3D;v_2-\eta\cdot\frac{\partial C}{\partial v_2s}<br>\end{aligned}<br>$$</p>
-<ol start="2">
-<li>分量式：</li>
-</ol>
-<p>$$<br>\begin{aligned}<br>w_{jk}&amp;:&#x3D;w_{jk}-\eta\cdot \frac{\partial C}{\partial w_{jk}}&#x3D;w_{jk}-\eta\cdot \nabla C_{w_{jk}}\approx w_{jk}-\eta\cdot \frac{1}{m}\sum_{i&#x3D;1}^m \frac{\partial C}{\partial w_{jk}^{(i)}} \<br>b_{k}&amp;:&#x3D;b_{ k}-\eta\cdot \frac{\partial C}{\partial b_{k}}&#x3D;b_{k}-\eta\cdot \nabla C_{b_{k}}\approx b_{k}-\eta\cdot\frac{1}{m}\sum_{i&#x3D;1}^m \frac{\partial C}{\partial b_{k}^{(i)}}<br>\end{aligned}<br>$$</p>
-<h2 id="2-BP算法（反向传播-back-propagate-）"><a href="#2-BP算法（反向传播-back-propagate-）" class="headerlink" title="2 BP算法（反向传播 back propagate ）"></a>2 BP算法（反向传播 back propagate ）</h2><p>目的：快速计算 $\displaystyle \frac{\partial C}{\partial w},\frac{\partial C}{\partial b}$ .</p>
-<h3 id="2-1-原理："><a href="#2-1-原理：" class="headerlink" title="2.1 原理："></a>2.1 原理：</h3><p>最终结果产生的偏差是由于每个神经元产生的误差叠加起来造成的。通过前向反馈得到的结果若与正确结果有偏差，则从此偏差反向推导，可得到各层神经元产生的误差。</p>
-<h3 id="2-2-符号表示"><a href="#2-2-符号表示" class="headerlink" title="2.2 符号表示"></a>2.2 符号表示</h3><ul>
-<li><p>$w_{jk}^l$ ：连接第 $l-1$层第 $k$ 个神经元和第 $l$ 层第 $j$ 个神经元的权重</p>
-</li>
-<li><p>$w^l$ ：连接第 $l-1$ 和第 $l$ 层网络的权重矩阵</p>
-</li>
-<li><p>$b_j^l$ ：第 $l$ 层第 $j$ 个神经元的 bias</p>
-</li>
-<li><p>$z_j^l$ ：第 $l$ 层网络的带权输入  $z_j^l&#x3D;\displaystyle\sum_k w_{jk}^l a_k^{l-1}+b_j^l$，$z^l&#x3D;w^l a^{l-1}+b^l$</p>
-</li>
-<li><p>$\delta_j^l$ ：第 $l$ 层第 $j$ 个神经元产生的误差,，定义 $\displaystyle \delta^l_j \equiv \frac{\partial C}{\partial z^l_j}$</p>
-</li>
-<li><p>$a_j^l$ ：第 $l$ 层网络的第 $j$ 个神经元的激活量，$a_j^l&#x3D;\sigma(z_j^l)$</p>
-</li>
-<li><p>$C$ ：损失函数，用小批量输入的平均值近似。</p>
-</li>
-</ul>
-<h3 id="2-3-重要的关系公式"><a href="#2-3-重要的关系公式" class="headerlink" title="2.3 重要的关系公式"></a>2.3 重要的关系公式</h3><ol start="0">
-<li><p>注：推导中的除法 ‘’$\bigg &#x2F;$ ‘’、乘法 $\odot$ （ Hadamard Product）均为<strong>elementwise</strong> </p>
-</li>
-<li><p>$$<br>C&#x3D;\displaystyle \frac{1}{2n}\sum_x |y(x)-a^L(x)|^2&#x3D;\frac{1}{n}\sum_x ^n C(x)\approx\frac{1}{m}\sum_x^m C(x)<br>\ C(x)&#x3D;\frac{1}{2}|y-a^L(x)|^2&#x3D;\frac{1}{2}\sum_i \big(y_i-a_i^L(x)\big)^2<br>$$</p>
-</li>
-<li><p>$$<br>a_j^l&#x3D;\sigma\bigg(\sum_k w_{jk}^l a_k^{l-1}+b_j^l\bigg)<br>\ a^l&#x3D;\sigma\bigg(w^l a^{l-1}+b^l\bigg)<br>$$</p>
-</li>
-<li><p>$$<br>\delta^l&#x3D;\frac{\partial C}{\partial b^l}\bigg&#x2F; \frac{\partial z^l}{\partial b^l}&#x3D;\frac{\partial C}{\partial b^l},\qquad \frac{\partial C}{\partial b^l}\triangleq(\frac{\partial C}{\partial b_1^l},\cdots,\frac{\partial C}{\partial b_{N(l)}^l})^T \tag{1}<br>$$</p>
-</li>
-<li><p>$$<br>\delta_j^l&#x3D;\frac{\partial C}{\partial w_{jk}^l}\bigg &#x2F;\frac{\partial z^l}{\partial w_{jk}^l}&#x3D;\frac{\partial C}{\partial w_{jk}^l}\big&#x2F; a_k^{l-1}<br>$$</p>
-</li>
-</ol>
-<p>$$<br>i .e. \qquad \frac{\partial C}{\partial w_{jk}^l}&#x3D;a_{k}^{l-1}\cdot  \delta_j^l \qquad &#x3D;&gt;\nabla C_{w^l}&#x3D;\delta^l\cdot (a^{l-1})^T \tag{2}<br>$$</p>
-<p>5.<br>   $$<br>   \delta^L&#x3D;\frac{\partial C}{\partial a^L}\odot \frac{\partial a^L}{\partial z^L}&#x3D;\frac{\partial C}{\partial a^L}\odot\sigma’(z^L)&#x3D;(a^L-y) \odot \sigma’(z^L)\tag{3}<br>   $$</p>
-<ol start="6">
-<li><p><strong>Move error backward:</strong><br>$$<br>\begin{eqnarray}<br>z^{l+1}<em>k &#x3D; \sum_j w^{l+1}</em>{kj} a^l_j +b^{l+1}<em>k &#x3D; \sum_j w^{l+1}</em>{kj} \sigma(z^l_j) +b^{l+1}_k<br>&#x3D;&gt;\frac{\partial z^{l+1}<em>k}{\partial z^l_j} &#x3D; w^{l+1}</em>{kj} \sigma’(z^l_j)<br>\end{eqnarray}<br>$$</p>
-<p>$$<br>\delta_j^l&#x3D;\sum_k \frac{\partial C}{\partial z_k^{l+1}}\cdot \frac{\partial z_k^{l+1}}{\partial z_j^l}&#x3D;\sum_{k&#x3D;1}^{N(l)}\delta_k^{l+1}\cdot w_{kj}^{l+1}\cdot \sigma’(z_j^l)<br>$$</p>
-<p>$$<br>&#x3D;&gt; \delta^l&#x3D;\big((w^{l+1})^T\sigma’(z^l)\big)\odot \delta^{l+1}\tag{4}<br>$$</p>
-</li>
-</ol>
-<h3 id="2-4-实现步骤"><a href="#2-4-实现步骤" class="headerlink" title="2.4 实现步骤"></a>2.4 实现步骤</h3><ol>
-<li><p>feedforward :  得到 $z^L$ 和相应的 $a^L$<br>$$<br>a^{x,l} &#x3D; \sigma(z^{x,l})<br>$$</p>
-</li>
-<li><p>output error :<br>$$<br>\delta^{x,L} &#x3D; \nabla_a C_x \odot \sigma’(z^{x,L})<br>$$</p>
-</li>
-<li><p>error back propagate :<br>$$<br>\delta^{x,l} &#x3D; ((w^{l+1})^T \delta^{x,l+1})<br>  \odot \sigma’(z^{x,l})<br>$$</p>
-</li>
-<li><p>update weights and biases :<br>$$<br>\begin{aligned}<br>w_{jk}&amp;:&#x3D;w_{jk}-\eta\cdot \nabla C_{w_{jk}}\approx w_{jk}-\eta\cdot \frac{1}{m}\sum_{i&#x3D;1}^m \frac{\partial C}{\partial w_{jk}^{(x_i)}}&#x3D;w_{jk}-\eta\cdot\frac{1}{m}\sum_{i&#x3D;1}^m \big(a_k^{l-1}\delta_j^{l}\big)^{(x_i)}\<br>b_{k}&amp;:&#x3D;b_{k}-\eta\cdot \nabla C_{b_{k}}\approx b_{k}-\eta\cdot\frac{1}{m}\sum_{i&#x3D;1}^m \frac{\partial C}{\partial b_{k}^{(x_i)}}&#x3D;b_{k}-\eta\cdot\frac{1}{m}\sum_{i&#x3D;1}^m \big(\delta_k^{l}\big)^{(x_i)}<br>\end{aligned}<br>$$</p>
-<p>即：<br>$$<br>w^l \rightarrow<br>  w^l-\frac{\eta}{m} \sum_x \delta^{x,l} (a^{x,l-1})^T<br> \b^l \rightarrow b^l-\frac{\eta}{m}<br>  \sum_x \delta^{x,l}<br>$$</p>
-</li>
-</ol>
-<h3 id="2-5-代码实现"><a href="#2-5-代码实现" class="headerlink" title="2.5 代码实现"></a>2.5 代码实现</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Network</span>(<span class="title class_ inherited__">object</span>):</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, sizes</span>):</span><br><span class="line">        <span class="comment"># 生成神经网络 </span></span><br><span class="line">        self.num_layers = <span class="built_in">len</span>(sizes)</span><br><span class="line">        self.sizes = sizes</span><br><span class="line">        self.biases = [np.random.randn(y, <span class="number">1</span>) <span class="keyword">for</span> y <span class="keyword">in</span> sizes[<span class="number">1</span>:]]</span><br><span class="line">        self.weights = [np.random.randn(y, x)</span><br><span class="line">                        <span class="keyword">for</span> x, y <span class="keyword">in</span> <span class="built_in">zip</span>(sizes[:-<span class="number">1</span>], sizes[<span class="number">1</span>:])]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">feedforward</span>(<span class="params">self, a</span>):</span><br><span class="line">        <span class="comment"># 激活神经元，向后面的层产生反馈</span></span><br><span class="line">        <span class="keyword">for</span> b, w <span class="keyword">in</span> <span class="built_in">zip</span>(self.biases, self.weights):</span><br><span class="line">            a = sigmoid(np.dot(w, a) + b)</span><br><span class="line">        <span class="keyword">return</span> a</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">SGD</span>(<span class="params">self, training_data, epochs, mini_batch_size, eta,</span></span><br><span class="line"><span class="params">            test_data=<span class="literal">None</span></span>):</span><br><span class="line">        <span class="comment"># 随机梯度下降 Stochastic Gradient Descent</span></span><br><span class="line">        <span class="comment"># epochs 训练次数, mini_batch_size 每次选取的小训练集大小, eta 学习率 由自己设定</span></span><br><span class="line">        <span class="keyword">if</span> test_data:</span><br><span class="line">            test_data = <span class="built_in">list</span>(test_data)  </span><br><span class="line">            n_test = <span class="built_in">len</span>(test_data)</span><br><span class="line">        training_data = <span class="built_in">list</span>(training_data)</span><br><span class="line">        n = <span class="built_in">len</span>(training_data)</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(epochs):</span><br><span class="line">            random.shuffle(training_data)</span><br><span class="line">            mini_batches = [</span><br><span class="line">                training_data[k:k + mini_batch_size]</span><br><span class="line">                <span class="keyword">for</span> k <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, n, mini_batch_size)]  </span><br><span class="line">            <span class="keyword">for</span> mini_batch <span class="keyword">in</span> mini_batches:</span><br><span class="line">                self.update_mini_batch(mini_batch, eta)</span><br><span class="line">            <span class="keyword">if</span> test_data:</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">&quot;Epoch &#123;0&#125;: &#123;1&#125; / &#123;2&#125;&quot;</span>.<span class="built_in">format</span>(j,</span><br><span class="line">                                                    self.evaluate(test_data), n_test))</span><br><span class="line"></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">&quot;Epoch &#123;0&#125; complete&quot;</span>.<span class="built_in">format</span>(j))</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">update_mini_batch</span>(<span class="params">self, mini_batch, eta</span>):</span><br><span class="line">        <span class="comment"># 更新 w 和 b</span></span><br><span class="line">        nabla_b = [np.zeros(b.shape) <span class="keyword">for</span> b <span class="keyword">in</span> self.biases]</span><br><span class="line">        nabla_w = [np.zeros(w.shape) <span class="keyword">for</span> w <span class="keyword">in</span> self.weights]</span><br><span class="line">        <span class="keyword">for</span> x, y <span class="keyword">in</span> mini_batch:</span><br><span class="line">            delta_nabla_b, delta_nabla_w = self.backprop(x, y)</span><br><span class="line">            nabla_b = [nb + dnb <span class="keyword">for</span> nb, dnb <span class="keyword">in</span> <span class="built_in">zip</span>(nabla_b, delta_nabla_b)]</span><br><span class="line">            nabla_w = [nw + dnw <span class="keyword">for</span> nw, dnw <span class="keyword">in</span> <span class="built_in">zip</span>(nabla_w, delta_nabla_w)]</span><br><span class="line">        self.weights = [w - (eta / <span class="built_in">len</span>(mini_batch)) * nw</span><br><span class="line">                        <span class="keyword">for</span> w, nw <span class="keyword">in</span> <span class="built_in">zip</span>(self.weights, nabla_w)]</span><br><span class="line">        self.biases = [b - (eta / <span class="built_in">len</span>(mini_batch)) * nb</span><br><span class="line">                       <span class="keyword">for</span> b, nb <span class="keyword">in</span> <span class="built_in">zip</span>(self.biases, nabla_b)]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">backprop</span>(<span class="params">self, x, y</span>):</span><br><span class="line">        <span class="comment"># 反向传播算法</span></span><br><span class="line">        nabla_b = [np.zeros(b.shape) <span class="keyword">for</span> b <span class="keyword">in</span> self.biases]</span><br><span class="line">        nabla_w = [np.zeros(w.shape) <span class="keyword">for</span> w <span class="keyword">in</span> self.weights]</span><br><span class="line">        <span class="comment"># feedforward</span></span><br><span class="line">        activation = x</span><br><span class="line">        activations = [x]  <span class="comment"># list to store all the activations, layer by layer</span></span><br><span class="line">        zs = []  <span class="comment"># list to store all the z vectors, layer by layer</span></span><br><span class="line">        <span class="keyword">for</span> b, w <span class="keyword">in</span> <span class="built_in">zip</span>(self.biases, self.weights):</span><br><span class="line">            z = np.dot(w, activation) + b</span><br><span class="line">            zs.append(z)</span><br><span class="line">            activation = sigmoid(z)</span><br><span class="line">            activations.append(activation)</span><br><span class="line">        <span class="comment"># backward pass</span></span><br><span class="line">        delta = self.cost_derivative(activations[-<span class="number">1</span>], y) * \</span><br><span class="line">            sigmoid_prime(zs[-<span class="number">1</span>])<span class="comment"># \delta^L</span></span><br><span class="line">        nabla_b[-<span class="number">1</span>] = delta</span><br><span class="line">        nabla_w[-<span class="number">1</span>] = np.dot(delta, activations[-<span class="number">2</span>].transpose())</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> l <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>, self.num_layers):</span><br><span class="line">            z = zs[-l]</span><br><span class="line">            sp = sigmoid_prime(z)</span><br><span class="line">            delta = np.dot(self.weights[-l + <span class="number">1</span>].transpose(), delta) * sp</span><br><span class="line">            nabla_b[-l] = delta</span><br><span class="line">            nabla_w[-l] = np.dot(delta, activations[-l - <span class="number">1</span>].transpose())</span><br><span class="line">        <span class="keyword">return</span> (nabla_b, nabla_w)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">evaluate</span>(<span class="params">self, test_data</span>):</span><br><span class="line">       <span class="comment"># 返回输出结果和训练数据集的正确结果相同的个数</span></span><br><span class="line">        test_results = [(np.argmax(self.feedforward(x)), y)</span><br><span class="line">                        <span class="keyword">for</span> (x, y) <span class="keyword">in</span> test_data]</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">sum</span>(<span class="built_in">int</span>(x == y) <span class="keyword">for</span> (x, y) <span class="keyword">in</span> test_results) </span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">cost_derivative</span>(<span class="params">self, output_activations, y</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;Return the vector of partial derivatives \partial C_x /</span></span><br><span class="line"><span class="string">        \partial a for the output activations.&quot;&quot;&quot;</span></span><br><span class="line">        <span class="keyword">return</span> (output_activations - y)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Miscellaneous functions</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">sigmoid</span>(<span class="params">z</span>):</span><br><span class="line">    <span class="comment"># The sigmoid function.</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">1.0</span> / (<span class="number">1.0</span> + np.exp(-z))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">sigmoid_prime</span>(<span class="params">z</span>):</span><br><span class="line">    <span class="comment"># Derivative of the sigmoid function.</span></span><br><span class="line">    <span class="keyword">return</span> sigmoid(z) * (<span class="number">1</span> - sigmoid(z))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h2 id="Chapter-3"><a href="#Chapter-3" class="headerlink" title="Chapter 3"></a>Chapter 3</h2><h3 id="3-1-交叉熵"><a href="#3-1-交叉熵" class="headerlink" title="3.1 交叉熵"></a>3.1 交叉熵</h3><p>对错误的惩罚力度加大，学习速率更快</p>
-<h3 id="3-2-Softmax"><a href="#3-2-Softmax" class="headerlink" title="3.2 Softmax"></a>3.2 Softmax</h3><p>输出转化为概率分布</p>
-<h3 id="3-3-其他损失函数"><a href="#3-3-其他损失函数" class="headerlink" title="3.3 其他损失函数"></a>3.3 其他损失函数</h3><h3 id="3-4-调整超参数的方法"><a href="#3-4-调整超参数的方法" class="headerlink" title="3.4 调整超参数的方法"></a>3.4 调整超参数的方法</h3><ul>
-<li><p>正则化<br>$$<br>C&#x3D;C_0+\frac{\lambda}{n}|w|^2<br>$$<br>不能提升 $C_0$ ，权重 $w$ 会下降</p>
-</li>
-<li><p>初始化</p>
-<p>考虑 $z&#x3D;\sum_{j&#x3D;1}^n w_jz_j+b$, 初始化 $w\sim N(0,1&#x2F;n)$</p>
-</li>
-</ul>
-<h2 id="Chapter-4"><a href="#Chapter-4" class="headerlink" title="Chapter 4"></a>Chapter 4</h2><p>神经网络可以计算任何函数。</p>
-<h2 id="Chapter-5"><a href="#Chapter-5" class="headerlink" title="Chapter 5"></a>Chapter 5</h2><ul>
-<li><p>vanishing gradient</p>
-</li>
-<li><p>exploding gradient</p>
-</li>
-</ul>
-<h2 id="Chapter-6-CNN"><a href="#Chapter-6-CNN" class="headerlink" title="Chapter 6 CNN"></a>Chapter 6 CNN</h2><h3 id="6-1-架构"><a href="#6-1-架构" class="headerlink" title="6.1 架构"></a>6.1 架构</h3><ul>
-<li>卷积层<ul>
-<li>共享权重</li>
-<li>提取特征</li>
-</ul>
-</li>
-<li>池化层<ul>
-<li>减少参量</li>
-</ul>
-</li>
-<li>全连层<ul>
-<li>二维压缩成一维，方便输出</li>
-</ul>
-</li>
-<li>Softmax层<ul>
-<li>输出概率分布</li>
-</ul>
-</li>
-</ul>
-<h3 id="6-2-代码：-with-pytorch"><a href="#6-2-代码：-with-pytorch" class="headerlink" title="6.2 代码： with pytorch"></a>6.2 代码： with pytorch</h3><h4 id="6-2-1-数据载入"><a href="#6-2-1-数据载入" class="headerlink" title="6.2.1 数据载入"></a>6.2.1 数据载入</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">train_data = torchvision.datasets.MNIST(</span><br><span class="line">    root=<span class="string">&#x27;./&#x27;</span>,    <span class="comment"># 保存或者提取位置</span></span><br><span class="line">    train=<span class="literal">True</span>, </span><br><span class="line">    <span class="comment"># 转换 PIL.Image or numpy.ndarray</span></span><br><span class="line">    transform=torchvision.transforms.ToTensor(),</span><br><span class="line">    download=DOWNLOAD_MNIST,</span><br><span class="line">)</span><br><span class="line"><span class="comment"># print(train_data.data.shape)</span></span><br><span class="line"><span class="comment">#train_data.data : (60000,28,28)</span></span><br><span class="line"><span class="comment"># train_data.targets : (60000)</span></span><br><span class="line">test_data = torchvision.datasets.MNIST(root=<span class="string">&#x27;./&#x27;</span>, train=<span class="literal">False</span>)</span><br><span class="line"><span class="comment"># test_data 包括：test_data.data 和 test_data.targets</span></span><br><span class="line"><span class="comment">#test_data.data : (10000,28,28)</span></span><br><span class="line"><span class="comment">#test_data.targets : (10000)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 批训练 50samples, 1 channel, 28x28 (50, 1, 28, 28)</span></span><br><span class="line">train_batches = Data.DataLoader(</span><br><span class="line">    dataset=train_data, batch_size=BATCH_SIZE, shuffle=<span class="literal">True</span>)</span><br><span class="line"><span class="comment"># print(train_batches.dataset.targets.shape</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 测试前2000个</span></span><br><span class="line">test_x = torch.unsqueeze(test_data.data, dim=<span class="number">1</span>).<span class="built_in">type</span>(torch.FloatTensor)[</span><br><span class="line">    :<span class="number">2000</span>] / <span class="number">255.0</span>  <span class="comment"># shape from (2000, 28, 28) to (2000, 1, 28, 28), value in range(0,1)</span></span><br><span class="line">test_y = test_data.targets[:<span class="number">2000</span>]</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="6-2-2-卷积神经网络构建"><a href="#6-2-2-卷积神经网络构建" class="headerlink" title="6.2.2 卷积神经网络构建"></a>6.2.2 卷积神经网络构建</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">CNN</span>(nn.Module):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">super</span>(CNN, self).__init__()</span><br><span class="line">        self.conv1 = nn.Sequential(  <span class="comment"># input shape (1, 28, 28)</span></span><br><span class="line">            nn.Conv2d(</span><br><span class="line">                in_channels=<span class="number">1</span>,      <span class="comment"># input height</span></span><br><span class="line">                out_channels=<span class="number">16</span>,    <span class="comment"># n_filters i.e. number of features</span></span><br><span class="line">                kernel_size=<span class="number">5</span>,      <span class="comment"># filter size</span></span><br><span class="line">                stride=<span class="number">1</span>,           <span class="comment"># filter movement/step</span></span><br><span class="line">                <span class="comment"># 如果想要 con2d 出来的图片长宽没有变化, padding=(kernel_size-1)/2 当 stride=1</span></span><br><span class="line">                padding=<span class="number">2</span>,</span><br><span class="line">            ),      <span class="comment"># -&gt; (16, 28, 28)</span></span><br><span class="line">            nn.ReLU(),    <span class="comment"># activation</span></span><br><span class="line">            nn.MaxPool2d(kernel_size=<span class="number">2</span>),    <span class="comment"># -&gt; (16, 14, 14)</span></span><br><span class="line">        )</span><br><span class="line">        self.conv2 = nn.Sequential(  <span class="comment"># input shape (16, 14, 14)</span></span><br><span class="line">            nn.Conv2d(<span class="number">16</span>, <span class="number">32</span>, <span class="number">5</span>, <span class="number">1</span>, <span class="number">2</span>),  <span class="comment"># output shape (32, 14, 14)</span></span><br><span class="line">            nn.ReLU(),  <span class="comment"># activation</span></span><br><span class="line">            nn.MaxPool2d(<span class="number">2</span>),  <span class="comment"># output shape (32, 7, 7)</span></span><br><span class="line">        )</span><br><span class="line">        <span class="comment"># fully connected layer, output 10 classes</span></span><br><span class="line">        self.fc1 = nn.Linear(<span class="number">32</span> * <span class="number">7</span> * <span class="number">7</span>, <span class="number">100</span>)</span><br><span class="line">        self.fc2 = nn.Linear(<span class="number">100</span>, <span class="number">10</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">forward</span>(<span class="params">self, x</span>):</span><br><span class="line">        x = self.conv1(x)</span><br><span class="line">        x = self.conv2(x)</span><br><span class="line">        x = x.view(x.size(<span class="number">0</span>), -<span class="number">1</span>)   <span class="comment"># 展平多维的卷积图成 (batch_size, 32 * 7 * 7)</span></span><br><span class="line">        x = torch.sigmoid(self.fc1(x))</span><br><span class="line">        x = self.fc2(x)</span><br><span class="line">        <span class="keyword">return</span> x</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="6-2-3-反向传播、训练神经网络"><a href="#6-2-3-反向传播、训练神经网络" class="headerlink" title="6.2.3 反向传播、训练神经网络"></a>6.2.3 反向传播、训练神经网络</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">cnn = CNN()</span><br><span class="line">optimizer = torch.optim.Adam(cnn.parameters(), lr=LR) <span class="comment">#adam算法</span></span><br><span class="line">loss_func = nn.CrossEntropyLoss()  <span class="comment"># Softmax–Log–NLLLoss，自动输出log-softmax</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">train</span>():</span><br><span class="line">    <span class="keyword">for</span> epoch <span class="keyword">in</span> <span class="built_in">range</span>(epochs):</span><br><span class="line">        <span class="comment"># 分配 batch data, normalize x when iterate train_loader</span></span><br><span class="line">        <span class="keyword">for</span> step, (b_x, b_y) <span class="keyword">in</span> <span class="built_in">enumerate</span>(train_batches):  <span class="comment"># enumerate 添加索引可便历</span></span><br><span class="line">            <span class="comment"># print(b_x.shape)--&gt;(50,1,28,28)</span></span><br><span class="line">            <span class="comment"># print(b_y.shape)--&gt;(50)</span></span><br><span class="line">            <span class="comment"># 1200组</span></span><br><span class="line">            output = cnn(b_x)               <span class="comment"># cnn output</span></span><br><span class="line">            loss = loss_func(output, b_y)   <span class="comment"># cross entropy loss</span></span><br><span class="line">            optimizer.zero_grad()           <span class="comment"># clear gradients for this training step</span></span><br><span class="line">            loss.backward()                 <span class="comment"># backpropagation, compute gradients</span></span><br><span class="line">            optimizer.step()                <span class="comment"># apply gradients</span></span><br><span class="line">            <span class="keyword">if</span> step % <span class="number">100</span> == <span class="number">0</span>:</span><br><span class="line">                test_output = cnn(test_x)</span><br><span class="line">                pred_y = torch.<span class="built_in">max</span>(test_output, <span class="number">1</span>)[</span><br><span class="line">                    <span class="number">1</span>].data.numpy()  <span class="comment"># [0]:一行中的最大值,[1]:最大值的索引</span></span><br><span class="line">                accuracy = <span class="built_in">float</span>((pred_y == test_y.data.numpy()).astype(</span><br><span class="line">                    <span class="built_in">int</span>).<span class="built_in">sum</span>()) / <span class="built_in">float</span>(test_y.size(<span class="number">0</span>))</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">&#x27;Epoch: &#x27;</span>, epoch, <span class="string">&#x27;| train loss: %.4f&#x27;</span> %</span><br><span class="line">                      loss.data.numpy(), <span class="string">&#x27;| test accuracy: %.2f&#x27;</span> % accuracy)</span><br><span class="line">    torch.save(cnn.state_dict(), <span class="string">&quot;cnn_net_params.pkl&quot;</span>)</span><br><span class="line"></span><br><span class="line">train()</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="6-2-4-参数存储与加载"><a href="#6-2-4-参数存储与加载" class="headerlink" title="6.2.4 参数存储与加载"></a>6.2.4 参数存储与加载</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">torch.save(cnn.state_dict(), <span class="string">&quot;cnn_net_params.pkl&quot;</span>)<span class="comment">#保存训练好的参数</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">cnn = CNN()</span><br><span class="line">cnn.load_state_dict(torch.load(<span class="string">&#x27;cnn_net_params.pkl&#x27;</span>))<span class="comment">#加载参数</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-
-
-<p>其他：关于深度学习和图像处理卷积的定义问题：深度学习中conv2d卷积层其实是无所谓是否翻转的，因为所有的weights也就是kernel其实是随机初始化的。那么每次的更新迭代都是为了去寻找一个最合适的kernel，所以是否翻转也变的无关紧要了。</p>
-</div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
-        var options = {
-            selector: '.gallery-item'
-        };
-        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
-        }</script>]]></content>
-      <categories>
-        <category>Notes</category>
-        <category>Deep Learning</category>
-      </categories>
-      <tags>
-        <tag>deep learning</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Image Processing 学习笔记</title>
-    <url>/Computer-Science/Deep%20Learning/Image-Processing%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="图像信息处理"><a href="#图像信息处理" class="headerlink" title="图像信息处理"></a>图像信息处理</h1><p>2020年寒假自学的图像信息处理，这是笔记。</p>
-<h2 id="1-灰度变换与空间滤波"><a href="#1-灰度变换与空间滤波" class="headerlink" title="1  灰度变换与空间滤波"></a>1  灰度变换与空间滤波</h2><h3 id="1-1-灰度变换：-s-x3D-T-r"><a href="#1-1-灰度变换：-s-x3D-T-r" class="headerlink" title="1.1 灰度变换：$s&#x3D;T(r)$"></a>1.1 灰度变换：$s&#x3D;T(r)$</h3><ul>
-<li>图像反转：$s&#x3D;L-1-r$</li>
-<li>对数变换：$s&#x3D;c\log(1+r)$</li>
-<li>伽马变换：$s&#x3D;cr^\gamma$</li>
-<li>分段分式线性变换：对比度拉伸、灰度级分层、比特平面分层</li>
-</ul>
-<p>$ \ $ <span id="more"></span></p>
-<h3 id="1-2-直方图处理"><a href="#1-2-直方图处理" class="headerlink" title="1.2 直方图处理"></a>1.2 直方图处理</h3><p>$ h(r_k)&#x3D;n_k$ ，$r_k$ 是第 $k$ 级灰度值，$n_k$ 为图像中灰度为 $r_k$ 的像素个数。不妨从 $0$ 开始，令 $r_k&#x3D;k$</p>
-<p>归一化： $p(r_k)&#x3D;n_k&#x2F;MN$</p>
-<h4 id="1-2-1-直方图均衡化"><a href="#1-2-1-直方图均衡化" class="headerlink" title="1.2.1 直方图均衡化"></a>1.2.1 直方图均衡化</h4><ol>
-<li>$p_s(s)&#x3D;p_r(r)\cdot |\displaystyle\frac{dr}{ds}|&#x3D;p_r(r) &#x2F; |T^{‘}(r)|$</li>
-<li>选取变换函数  $s&#x3D;T(r)&#x3D;(L-1) \displaystyle\int_0 ^r p_r(w)dw$</li>
-<li>$&#x3D;&gt; \quad p_s(s)&#x3D;\displaystyle\frac{1}{L-1}$</li>
-<li>离散形式：$ s_k&#x3D;T(r_k)&#x3D;(L-1)\displaystyle\sum\limits_{j&#x3D;0}^k p_r (r _ j)&#x3D;\displaystyle\frac{L-1}{MN}\sum\limits_{j&#x3D;0}^k n_j $，最后取值四舍五入</li>
-</ol>
-<h4 id="1-2-2-直方图规定化"><a href="#1-2-2-直方图规定化" class="headerlink" title="1.2.2 直方图规定化"></a>1.2.2 直方图规定化</h4><h4 id="1-2-3-局部直方图处理"><a href="#1-2-3-局部直方图处理" class="headerlink" title="1.2.3 局部直方图处理"></a>1.2.3 局部直方图处理</h4><p>略～</p>
-<p>$ \ $</p>
-<h2 id="1-2-空间滤波"><a href="#1-2-空间滤波" class="headerlink" title="1.2 空间滤波"></a>1.2 空间滤波</h2><p>空间滤波器由一个邻域和预定义操作组成。</p>
-<p>$g(x,y)&#x3D;\displaystyle\sum\limits_{s&#x3D;-a}^b\sum\limits_{t&#x3D;-b}^b w(s,t)f(x+s,y+t)$</p>
-<h3 id="1-2-1-空间相关与卷积"><a href="#1-2-1-空间相关与卷积" class="headerlink" title="1.2.1 空间相关与卷积"></a>1.2.1 空间相关与卷积</h3><p>相关上滤波器模版移过图像并计算每个位置乘积之和的处理，卷积的机理类似，但滤波器首先要旋转$180^o$</p>
-<h4 id="1-2-1-1-平滑空间滤波器"><a href="#1-2-1-1-平滑空间滤波器" class="headerlink" title="1.2.1.1 平滑空间滤波器"></a>1.2.1.1 平滑空间滤波器</h4><ul>
-<li>均值滤波器：$g(x,y)&#x3D;\displaystyle\frac{\sum\limits_{s&#x3D;-a}^a\sum\limits_{s&#x3D;-b}^b w(s,t)f(x+s,y+t)}{\sum\limits_{s&#x3D;-a}^a\sum\limits_{s&#x3D;-b}^b w(s,t)}$</li>
-<li>统计排序滤波器   $e.g. $ 中值滤波器：去除椒盐噪声</li>
-</ul>
-<p>$ \ $</p>
-<h4 id="1-2-1-2-锐化空间滤波器"><a href="#1-2-1-2-锐化空间滤波器" class="headerlink" title="1.2.1.2 锐化空间滤波器"></a>1.2.1.2 锐化空间滤波器</h4><p>定义: $\displaystyle\frac{\partial f}{\partial x}&#x3D;f(x+1)-f(x)$ , $\displaystyle\frac{\partial ^2f}{\partial^2 x}&#x3D;f(x+1)+f(x-1)-2f(x)$</p>
-<p>(1) 使用拉普拉斯算子</p>
-<p>$\nabla^2 f(x,y)&#x3D;f(x+1,y)+f(x-1,y)+f(x,y+1)+f(x,y-1)-4f(x,y)$</p>
-<p>$g(x,y)&#x3D;f(x,y)+c[\nabla^2 f(x,y)]$</p>
-<p><a href="https://www.cnblogs.com/polly333/p/7269843.html">比较清楚的介绍</a></p>
-<p>(2) 非锐化掩蔽</p>
-<ol>
-<li>模糊原图像 $\overline f (x,y)$</li>
-<li>从原图像中减去模糊图像（产生差值图像，即模版）$g_{mask}(x,y)&#x3D;f(x,y)-\overline f(x,y)$</li>
-<li>将模版加到原图像上 $g(x,y)&#x3D;f(x,y)+k\cdot g_{mask}(x,y)$</li>
-</ol>
-<p>(3) 使用梯度算子</p>
-<p><a href="https://blog.csdn.net/qq_29540745/article/details/51918004">Soble算子</a>：$M(x,y)&#x3D;|(z_7+2z_8+z_9)-(z_1+2z_2+z_3)|+|(z_3+2z_6+z_9)-(z_1+2z_4+z_7)$</p>
-<p>$ \ $</p>
-<h3 id="1-2-2-使用模糊技术进行灰度变换和空间滤波"><a href="#1-2-2-使用模糊技术进行灰度变换和空间滤波" class="headerlink" title="1.2.2 使用模糊技术进行灰度变换和空间滤波"></a>1.2.2 使用模糊技术进行灰度变换和空间滤波</h3><h4 id="1-2-2-1-模糊集合论"><a href="#1-2-2-1-模糊集合论" class="headerlink" title="1.2.2.1 模糊集合论"></a>1.2.2.1 模糊集合论</h4><ul>
-<li><p>模糊集合：${(z,\mu(z))}$  有元素和它的隶属度函数组成的数对组成，$\mu(z)\in[0,1]$</p>
-</li>
-<li><p>模糊逻辑：</p>
-<p> $ A\ AND\ B\iff\min(\mu_A(z),\mu_B(z)),\quad \forall z\in Z $ ,</p>
-<p> $A\ OR\ B\iff \max(\mu_A(z),\mu_B(z)),\quad \forall z\in Z$ ,</p>
-<p> $A&#x3D;B\iff\mu_A (z)&#x3D;\mu_B (z),\quad \forall z\in Z $ , </p>
-<p>$A\subseteq B\iff \mu_A(z)\leq\mu_B(z),\quad \forall z\in Z $ ,</p>
-<p>$A\supseteq B\iff \mu_A(z)\geq\mu_B(z),\quad \forall z\in Z $ .</p>
-</li>
-<li><p>应用步骤：</p>
-<ul>
-<li>$IF-THEN$ 形式化</li>
-<li>输入输出模糊化：$\mu_i(z),\mu_o(z)$ </li>
-<li>既满足 $IF$ 又满足 $THEN$ $&#x3D;&gt; INPUT&amp;OUTPUT$ $&#x3D;&gt; \mu_3(z,v)&#x3D;\min{\mu_i(z),\mu_o(v)}$</li>
-<li>对每一个 $z_0$ ，最终模糊输出 $Q(v)&#x3D;\mu_3(z_0,v)$  , 对于多个 $Q_i(v)$ ，全部模糊响应应为单个模糊响应的并集，取 $\max\limits_i (Q_i (v))$ </li>
-<li>去模糊：计算集合重心：$v_0&#x3D;\displaystyle\frac{\sum\limits_{v&#x3D;1}^K vQ(v)}{\sum\limits_{v&#x3D;1}^K Q(v)}$</li>
-</ul>
-</li>
-</ul>
-<h4 id="1-2-2-2-利用模糊集合论进行灰度变换"><a href="#1-2-2-2-利用模糊集合论进行灰度变换" class="headerlink" title="1.2.2.2 利用模糊集合论进行灰度变换"></a>1.2.2.2 利用模糊集合论进行灰度变换</h4><ul>
-<li><p>目的：增强对比度。黑的更黑，白的更白，灰的仍灰</p>
-</li>
-<li><p>$IF-THEN$ 形式化：</p>
-<ul>
-<li><p>$IF\quad dark,\quad THEN \quad darker $</p>
-</li>
-<li><p>$IF\quad gray ,\quad THEN \quad gray$</p>
-</li>
-<li><p>$IF\quad white,\quad THEN \quad whiter$</p>
-</li>
-</ul>
-</li>
-<li><p>输入模糊化：$dark-\mu_{id}(z),\quad gray-\mu_{ig}(z),\quad white-\mu_{iw}(z)$</p>
-<ul>
-<li>$$\mu_{id}(z)&#x3D;\begin{equation}<br>\left{<br>\begin{aligned}<br>1 &amp;, &amp;  0\leq z&lt; 80, \<br> \displaystyle\frac{1}{47}(127-z)&amp; , &amp; 80\leq z\leq 127,\ 0&amp;,&amp; 127&lt;z\leq 255\end{aligned}<br>\right.<br>\end{equation} $$</li>
-<li>$$\mu_{ig}(z)&#x3D;\begin{equation}<br>\left{<br>\begin{aligned}<br>0 &amp;, &amp;  0\leq z&lt; 80, \<br> \displaystyle\frac{1}{47}(z-80)&amp; , &amp; 80\leq z\leq 127,\ \displaystyle\frac{1}{47}(174-z)&amp; , &amp; 127&lt;z\leq 174,\ 0&amp;,&amp; 174&lt;z\leq 255\end{aligned}<br>\right.<br>\end{equation} $$</li>
-<li>$$\mu_{iw}(z)&#x3D;\begin{equation}<br>\left{<br>\begin{aligned}<br>0 &amp;, &amp;  0\leq z&lt; 127, \<br> \displaystyle\frac{1}{47}(z-127)&amp; , &amp; 127\leq z\leq 174,\ 1&amp;,&amp; 174&lt;z\leq 255\end{aligned}<br>\right.<br>\end{equation} $$</li>
-</ul>
-</li>
-<li><p>输出模糊化：$datker-\mu_{od}(v),\quad gray-\mu_{og}(v),\quad whiter-\mu_{ow}(v)$</p>
-<ul>
-<li>$$\mu_{od}(v)&#x3D;\begin{equation}\left {\begin{aligned}\infty,&amp;\quad v&#x3D;v_d\ 0,&amp;\quad otherwise \end{aligned}\right.\end{equation}$$</li>
-<li>$$\mu_{og}(v)&#x3D;\begin{equation}\left {\begin{aligned}\infty,&amp;\quad v&#x3D;v_g\ 0,&amp;\quad otherwise \end{aligned}\right.\end{equation}$$</li>
-<li>$$\mu_{ow}(v)&#x3D;\begin{equation}\left {\begin{aligned}\infty,&amp;\quad v&#x3D;v_w\ 0,&amp;\quad otherwise \end{aligned}\right.\end{equation}$$</li>
-</ul>
-</li>
-<li><p>输出最终模糊响应：$Q(v)&#x3D;\max{Q_d,Q_g,Q_w}&#x3D;\max{\min\limits_{v\in Z}{\mu_{ik}(z_0),\mu_{ok}(v)}}$</p>
-</li>
-<li><p>去模糊：$v_0&#x3D;\displaystyle\frac{\mu_{id}(z_0)\cdot v_d+\mu_{ig}(z_0)\cdot v_g+\mu_{iw}(z_0)\cdot v_w}{\mu_{id}(z_0)+\mu_{ig}(z_0)+\mu_{iw}(z_0)}$</p>
-</li>
-</ul>
-<p>**Code : ** </p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 基于模糊集合论的灰度变换 </span></span><br><span class="line"><span class="comment"># 增加对比度</span></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">f_id</span>(<span class="params">z</span>):</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> z &lt; <span class="number">80</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">elif</span> z &gt;= <span class="number">80</span> <span class="keyword">and</span> z &lt;= <span class="number">127</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span> / <span class="number">47</span> * (<span class="number">127</span> - z)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">f_ig</span>(<span class="params">z</span>):</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> z &gt;= <span class="number">80</span> <span class="keyword">and</span> z &lt;= <span class="number">127</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span> / <span class="number">47</span> * (z - <span class="number">80</span>)</span><br><span class="line">    <span class="keyword">elif</span> z &gt; <span class="number">127</span> <span class="keyword">and</span> z &lt;= <span class="number">174</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span> / <span class="number">47</span> * (<span class="number">174</span> - z)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">f_iw</span>(<span class="params">z</span>):</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> z &gt;= <span class="number">127</span> <span class="keyword">and</span> z &lt;= <span class="number">174</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span> / <span class="number">47</span> * (z - <span class="number">127</span>)</span><br><span class="line">    <span class="keyword">elif</span> z &gt; <span class="number">174</span> <span class="keyword">and</span> z &lt;= <span class="number">255</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">gray_trans</span>(<span class="params">img</span>):</span><br><span class="line">    vd = <span class="number">0</span></span><br><span class="line">    vg = <span class="number">127</span></span><br><span class="line">    vw = <span class="number">255</span></span><br><span class="line">    output_img = np.copy(img)</span><br><span class="line">    m, n = img.shape</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, m):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, n):</span><br><span class="line">            tmp1 = f_id(img[i][j]) * vd + f_ig(img[i][j]) * \</span><br><span class="line">                vg + f_iw(img[i][j]) * vw</span><br><span class="line">            tmp2 = f_id(img[i][j]) + f_ig(img[i][j]) + f_iw(img[i][j])</span><br><span class="line">            output_img[i][j] = tmp1 / tmp2</span><br><span class="line">    <span class="keyword">return</span> output_img</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">img = cv2.imread(<span class="string">&#x27;test.jpg&#x27;</span>, <span class="number">0</span>)</span><br><span class="line">img2 = gray_trans(img)</span><br><span class="line">cv2.imshow(<span class="string">&#x27;before&#x27;</span>, img)</span><br><span class="line">cv2.imshow(<span class="string">&#x27;after&#x27;</span>, img2)</span><br><span class="line">cv2.waitKey(<span class="number">0</span>)</span><br><span class="line">cv2.destroyAllWindows()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<p><strong>效果：</strong>(before and after)</p>
-<p><a href="https://tva1.sinaimg.cn/large/006tNbRwly1gbdwm7ycd7j30dm0go0w3.jpg" title="before" class="gallery-item"><img src="https://tva1.sinaimg.cn/large/006tNbRwly1gbdwm7ycd7j30dm0go0w3.jpg" alt="before"></a></p>
-<p><a href="https://tva1.sinaimg.cn/large/006tNbRwly1gbdwm89b0zj30dm0goq6v.jpg" title="after" class="gallery-item"><img src="https://tva1.sinaimg.cn/large/006tNbRwly1gbdwm89b0zj30dm0goq6v.jpg" alt="after"></a></p>
-<h4 id="1-2-2-3-利用模糊集合进行空间滤波"><a href="#1-2-2-3-利用模糊集合进行空间滤波" class="headerlink" title="1.2.2.3 利用模糊集合进行空间滤波"></a>1.2.2.3 利用模糊集合进行空间滤波</h4><p>有一种基于模糊集合的边缘提取方法.</p>
-<p>$ \ $ </p>
-<h2 id="2-频率域滤波"><a href="#2-频率域滤波" class="headerlink" title="2 频率域滤波"></a>2 频率域滤波</h2><h3 id="2-1-傅立叶变换基础"><a href="#2-1-傅立叶变换基础" class="headerlink" title="2.1 傅立叶变换基础"></a>2.1 傅立叶变换基础</h3><h4 id="2-1-1-冲激函数相关"><a href="#2-1-1-冲激函数相关" class="headerlink" title="2.1.1 冲激函数相关"></a>2.1.1 冲激函数相关</h4><ol>
-<li><p>冲激函数 对连续函数取样和对离散函数取样定义有所不同</p>
-</li>
-<li><p>冲激串函数：$\displaystyle s_{\Delta T}(t)&#x3D;\sum\limits_{n&#x3D;-\infty}^{\infty}\delta(t-n\Delta T)$ , 以 $\Delta T$ 为间隔取样</p>
-</li>
-</ol>
-<h4 id="2-1-2-傅立叶变换相关"><a href="#2-1-2-傅立叶变换相关" class="headerlink" title="2.1.2 傅立叶变换相关"></a>2.1.2 傅立叶变换相关</h4><ol>
-<li><p>傅立叶级数：$\displaystyle f(t)&#x3D;\sum\limits_{n&#x3D;-\infty}^\infty c_ne^{j\frac{2\pi n}{T}t},\quad c_n&#x3D;\frac{1}{T}\int_{-\frac{T}{2}}^\frac{T}{2}f(t)e^{-j\frac{2\pi n}{T}t}$, 其中 $f(t)$ 以 $T$ 为周期</p>
-</li>
-<li><p>傅立叶变换：$\displaystyle\mathcal{F}[f(t)]&#x3D;\int_{-\infty}^\infty f(t)e^{-2\pi\mu t} dt $</p>
-</li>
-<li><p>关于原点对称的宽为 $W$ 、高为 $A$ 的带限函数 $W(t)$ 的傅立叶变换： $\mathcal{F}[W(t)]&#x3D;AWsinc(m)$, 其中在数字图像处理中，$sinc(x)&#x3D;\displaystyle\frac{sin(\pi x)}{\pi x}$</p>
-</li>
-<li><p>冲激函数的傅立叶变换：$\mathcal{F}[\delta(t-t_0)]&#x3D;e^{-j2\pi\mu t_0}&#x3D;&gt;\mathcal{F}^{-1}[e^{-j2\pi\mu t_0}]&#x3D;\delta(t-t_0)&#x3D;&gt;\mathcal{F}[e^{-j2\pi\mu_0 t}]&#x3D;\delta(-\mu-\mu_0)$</p>
-</li>
-<li><p>冲激串函数的傅立叶变换 ：</p>
-<ul>
-<li>将冲激串函数用傅立叶级数展开（不展开直接变换似乎不一致收敛，就不能交换求和号和积分号）：$\displaystyle s_{\Delta T}(t)&#x3D;\sum\limits_{n&#x3D;-\infty}^\infty c_ne^{j\frac{2\pi n}{\Delta T}t},\quad c_n&#x3D;\frac{1}{\Delta T}\int_{-\frac{\Delta T}{2}}^\frac{\Delta T}{2} s_{\Delta T}(t)e^{-j\frac{2\pi n}{\Delta T}t}&#x3D;\frac{1}{\Delta T}e^0&#x3D;\frac{1}{\Delta T}\&#x3D;&gt;\displaystyle  s_{\Delta T}(t)&#x3D;\frac{1}{\Delta T}\sum\limits_{n&#x3D;-\infty}^\infty e^{j\frac{2\pi n}{\Delta T}t}$</li>
-<li>$S(\mu)&#x3D;\displaystyle\mathcal{F}[ s_{\Delta T}(t)]&#x3D;\frac{1}{\Delta T}\sum\limits_{n&#x3D;-\infty}^\infty \delta(\mu-\frac{n}{\Delta T})$</li>
-</ul>
-</li>
-<li><p>卷积：</p>
-<p>$\begin{aligned} f(t)*g(t)&amp;\iff F(\mu)\cdot G(\mu)\F(\mu)*G(\mu)&amp;\iff f(t)\cdot g(t)\end{aligned}$</p>
-</li>
-</ol>
-<h4 id="2-1-3-取样"><a href="#2-1-3-取样" class="headerlink" title="2.1.3 取样"></a>2.1.3 取样</h4><ul>
-<li><p>取样后的函数 $\widetilde f(t)&#x3D;f(t)\cdot s_{\Delta T}(t)&#x3D;\displaystyle \sum\limits_{n&#x3D;-\infty}^{\infty}f(t)\delta(t-n\Delta T)$</p>
-</li>
-<li><p>每个取样值：由加权后的冲激强度给出。 $f_k&#x3D;\displaystyle\int_{-\infty}^{\infty}f(t)\delta(t-k\Delta T)&#x3D;f(k\Delta T)$</p>
-</li>
-<li><p>取样后的函数的傅立叶变换：$\displaystyle \widetilde F(\mu)&#x3D;F(\mu)*S(\mu)&#x3D;\frac{1}{\Delta T}\sum\limits_{n&#x3D;-\infty}^{\infty}\int_{-\infty}^{\infty}F(\tau)\delta(\mu-\frac{n}{\Delta T}-\tau)d\tau&#x3D;\frac{1}{\Delta T}\sum\limits_{n&#x3D;-\infty}^{\infty}F(\mu-\frac{n}{\Delta T})$</p>
-<p>这是取样前函数$F(\mu)$ 的一个拷贝的无限、周期序列，确切的说是周期为 $\displaystyle\frac{1}{\Delta T}$ 的无限延伸的连续函数。</p>
-</li>
-<li><p>另一方面，直接变换得：$\widetilde F(\mu)&#x3D;\displaystyle \sum_{n&#x3D;-\infty}^{\infty}\int_{-\infty}^{\infty}f(t)\delta (t-n\Delta T)e^{-j2\pi \mu t}dt&#x3D; \sum_{n&#x3D;-\infty}^{\infty}f(n\Delta T)e^{-j2\pi \mu n\Delta T}$ </p>
-</li>
-<li><p><strong>取样定理</strong>：如果一超过函数最高频率的两倍的取样率来获得样本，连续的带限函数可以完全地从它的样本集来恢复。 $\displaystyle\frac{1}{\Delta T}&gt;2\mu_{max}$</p>
-</li>
-<li><p>复原：令 $H(\mu)&#x3D;\begin{equation}\left{\begin{aligned} \Delta T,&amp;\quad -\mu_{max}\leqslant\mu\leqslant\mu_{max}\ 0.&amp;\quad otherwise\end{aligned}\right.\end{equation}$,  $F(\mu)&#x3D;H(\mu)\cdot \widetilde F(\mu)$，进而由傅立叶逆变换可复原 $f$</p>
-</li>
-<li><p>但是，在实践中我们通常要限制函数的持续时间，相当于要乘一个周期内为 $1$ 其他地方为 $0$ 的函数，而这在频率域内相当于用 $sinc(x)$ 作卷积，这就引入了频率域无限周期分量。这样，在频率域截取时总无法截取全部周期，混淆总会产生。</p>
-</li>
-</ul>
-<h3 id="2-2-离散傅立叶变换-DFT"><a href="#2-2-离散傅立叶变换-DFT" class="headerlink" title="2.2 离散傅立叶变换 DFT"></a>2.2 离散傅立叶变换 DFT</h3><h4 id="2-2-1-单变量-DFT"><a href="#2-2-1-单变量-DFT" class="headerlink" title="2.2.1 单变量$DFT$"></a>2.2.1 单变量$DFT$</h4><p>对 $\widetilde F(\mu)$ 的一个周期取样是 $DFT$  的基础。</p>
-<p>记 $f(n\Delta T)$ 为 $f_n$ ,  $\widetilde F(\mu)&#x3D;\displaystyle \sum_{n&#x3D;-\infty}^{\infty}f_ne^{-j2\pi \mu n\Delta T}$ </p>
-<p>想在周期 $\mu &#x3D; 0$ 和 $\mu&#x3D;\displaystyle\frac{1}{\Delta T}$ 之间得到 $M$ 个等间距的<em>样本</em> ，可令 $\mu&#x3D;\displaystyle\frac{m}{M\Delta T}$.</p>
-<p>离散傅立叶变换 $DFT$ 为：<br>$$<br>F_m&#x3D;\sum\limits_{n&#x3D;0}^{M-1}f_ne^{-j2\pi mn&#x2F;M}<br>$$<br>离散傅立叶逆变换 $IDFT$ 为：<br>$$<br>f_n&#x3D;\frac{1}{M}\sum\limits_{m&#x3D;0}^{M-1}F_m e^{j2\pi mn&#x2F;M}<br>$$<br>为了更方便表示，引入 $u$ 和 $x$ 代替 $m$ 和 $n$ ：</p>
-<p>$DFT$：<br>$$<br>F(u)&#x3D;\sum\limits_{x&#x3D;0}^{M-1}f(x)e^{-j2\pi ux&#x2F;M}<br>$$<br>$IDFT$：<br>$$<br>f(x)&#x3D;\frac{1}{M}\sum\limits_{u&#x3D;0}^{M-1}F(u)e^{j2\pi ux&#x2F;M}<br>$$</p>
-<p>（PS：有点小疑问：为什么是 $f(x)$ 而不是 $ f(x\Delta T)$ ？）</p>
-<p>傅立叶正变换和逆变换得到的函数都是无限周期的，周期为 $M$。</p>
-<h3 id="2-2-2-二维DFT"><a href="#2-2-2-二维DFT" class="headerlink" title="2.2.2 二维DFT"></a>2.2.2 二维DFT</h3><p>略</p>
-<h3 id="2-2-3-频率域滤波器"><a href="#2-2-3-频率域滤波器" class="headerlink" title="2.2.3 频率域滤波器"></a>2.2.3 频率域滤波器</h3><p>过程：空间域 $&#x3D;&gt;$ 傅立叶变换转到频率域 $&#x3D;&gt;$ 在频率域使用模版处理振幅或者相位 $&#x3D;&gt;$ 傅立叶逆变换回到空间域</p>
-<ul>
-<li>理想低&#x2F;高通滤波器</li>
-<li>k阶布特沃斯低&#x2F;高通滤波器</li>
-<li>高斯低&#x2F;高通滤波器</li>
-<li>频率域拉普拉斯算子（需归一化）</li>
-<li>同态滤波（未完全理解）</li>
-<li>选择性滤波器：带通滤波器、陷波滤波器（未实现）</li>
-</ul>
-<p><strong>代码实现：</strong></p>
-<p>（1）：低通&#x2F;高通滤波器</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">IPF</span>(<span class="params">img, d0, flag</span>):</span><br><span class="line">    <span class="comment">#  理想滤波器 ideal pass filter，d0 为滤波器半径</span></span><br><span class="line">    <span class="comment"># flag == 1 : low pass filter; flag == 0 : high pass filter</span></span><br><span class="line">    m, n = img.shape</span><br><span class="line">    ans = np.zeros(img.shape)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(m):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">            <span class="keyword">if</span> (i - m / <span class="number">2</span>)**<span class="number">2</span> + (j - n / <span class="number">2</span>)**<span class="number">2</span> &lt; d0**<span class="number">2</span>:</span><br><span class="line">                ans[i][j] = <span class="number">1</span></span><br><span class="line">    <span class="keyword">if</span> flag == <span class="number">0</span>:</span><br><span class="line">        ans = <span class="number">1</span> - ans</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> ans</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">GPF</span>(<span class="params">img, d0, flag</span>):</span><br><span class="line">    <span class="comment"># 高斯滤波器</span></span><br><span class="line">    m, n = img.shape</span><br><span class="line">    d0 = d0**<span class="number">2</span></span><br><span class="line">    ans = np.zeros(img.shape)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(m):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">            d = (i - m / <span class="number">2</span>)**<span class="number">2</span> + (j - n / <span class="number">2</span>)**<span class="number">2</span></span><br><span class="line">            <span class="keyword">if</span> d &lt; d0:</span><br><span class="line">                ans[i][j] = np.exp(-d / (<span class="number">2</span> * d0))</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> flag == <span class="number">0</span>:</span><br><span class="line">        ans = <span class="number">1</span> - ans</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> ans</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">BPF</span>(<span class="params">img, do, flag, k</span>):</span><br><span class="line">    <span class="comment"># k阶布特沃斯高通滤波器</span></span><br><span class="line">    m, n = img.shape</span><br><span class="line">    d0 = d0**<span class="number">2</span></span><br><span class="line">    ans = np.zeros(img.shape)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(m):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">            d = (i - m / <span class="number">2</span>)**<span class="number">2</span> + (j - n / <span class="number">2</span>)**<span class="number">2</span></span><br><span class="line">            <span class="keyword">if</span> d &lt; d0:</span><br><span class="line">                ans[i][j] = <span class="number">1</span> / (<span class="number">1</span> + (d / d0)**k)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> flag == <span class="number">0</span>:</span><br><span class="line">        ans = <span class="number">1</span> - ans</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> ans</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 高通滤波--提取轮廓</span></span><br><span class="line"><span class="comment"># 低通滤波--模糊化</span></span><br><span class="line">img_man = cv2.imread(<span class="string">&#x27;ch03_5.jpg&#x27;</span>, <span class="number">0</span>)  <span class="comment"># 直接读为灰度图像</span></span><br><span class="line">plt.subplot(<span class="number">131</span>), plt.imshow(img_man, <span class="string">&#x27;gray&#x27;</span>), plt.title(<span class="string">&#x27;before&#x27;</span>)</span><br><span class="line">plt.xticks([]), plt.yticks([])</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">rows, cols = img_man.shape</span><br><span class="line">mask1 = np.ones(img_man.shape, np.uint8)  <span class="comment"># 高通</span></span><br><span class="line">mask1[<span class="built_in">int</span>(rows / <span class="number">2</span>) - <span class="number">30</span>: <span class="built_in">int</span>(rows / <span class="number">2</span>) + <span class="number">30</span>,</span><br><span class="line">      <span class="built_in">int</span>(cols / <span class="number">2</span>) - <span class="number">30</span>:<span class="built_in">int</span>(cols / <span class="number">2</span>) + <span class="number">30</span>] = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">mask2 = np.zeros(img_man.shape, np.uint8)  <span class="comment"># 低通</span></span><br><span class="line">mask2[<span class="built_in">int</span>(rows / <span class="number">2</span>) - <span class="number">30</span>:<span class="built_in">int</span>(rows / <span class="number">2</span>) + <span class="number">30</span>,</span><br><span class="line">      <span class="built_in">int</span>(cols / <span class="number">2</span>) - <span class="number">30</span>:<span class="built_in">int</span>(cols / <span class="number">2</span>) + <span class="number">30</span>] = <span class="number">1</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">mask31 = np.ones(img_man.shape, np.uint8)</span><br><span class="line">mask31[<span class="built_in">int</span>(rows / <span class="number">2</span>) - <span class="number">10</span>:<span class="built_in">int</span>(rows / <span class="number">2</span>) + <span class="number">10</span>,</span><br><span class="line">       <span class="built_in">int</span>(cols / <span class="number">2</span>) - <span class="number">10</span>:<span class="built_in">int</span>(cols / <span class="number">2</span>) + <span class="number">10</span>] = <span class="number">0</span></span><br><span class="line">mask32 = np.zeros(img_man.shape, np.uint8)</span><br><span class="line">mask32[<span class="built_in">int</span>(rows / <span class="number">2</span>) - <span class="number">80</span>:<span class="built_in">int</span>(rows / <span class="number">2</span>) + <span class="number">80</span>,</span><br><span class="line">       <span class="built_in">int</span>(cols / <span class="number">2</span>) - <span class="number">80</span>:<span class="built_in">int</span>(cols / <span class="number">2</span>) + <span class="number">80</span>] = <span class="number">1</span></span><br><span class="line">mask3 = mask31 * mask32  <span class="comment"># 带通</span></span><br><span class="line"></span><br><span class="line">mask = IPF(img_man, <span class="number">30</span>, <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">f1 = np.fft.fft2(img_man)</span><br><span class="line">f1shift = np.fft.fftshift(f1)</span><br><span class="line">f1shift = f1shift * mask</span><br><span class="line">f2shift = np.fft.ifftshift(f1shift)</span><br><span class="line">img_new = np.fft.ifft2(f2shift)</span><br><span class="line">img_new = np.<span class="built_in">abs</span>(img_new)</span><br><span class="line"><span class="comment"># 调整大小范围便于显示</span></span><br><span class="line"><span class="comment"># img_new = (img_new - np.amin(img_new)) / (np.amax(img_new) - np.amin(img_new))</span></span><br><span class="line"></span><br><span class="line">plt.subplot(<span class="number">132</span>), plt.imshow(mask, <span class="string">&#x27;gray&#x27;</span>), plt.title(<span class="string">&#x27;mask&#x27;</span>)</span><br><span class="line">plt.xticks([]), plt.yticks([])</span><br><span class="line">plt.subplot(<span class="number">133</span>), plt.imshow(img_new, <span class="string">&#x27;gray&#x27;</span>), plt.title(<span class="string">&#x27;after&#x27;</span>)</span><br><span class="line">plt.xticks([]), plt.yticks([])</span><br><span class="line">plt.show()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<p>（2）：频率域拉普拉斯滤波</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">Laplace</span>(<span class="params">shape</span>):</span><br><span class="line">    m, n = shape</span><br><span class="line">    ans = np.zeros(shape)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(m):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">            d = (i - m / <span class="number">2</span>)**<span class="number">2</span> + (j - n / <span class="number">2</span>)**<span class="number">2</span></span><br><span class="line">            ans[i][j] = <span class="number">1</span> + <span class="number">4</span> * (np.pi**<span class="number">2</span>) * d / (m * n)</span><br><span class="line">            <span class="comment"># 之前失败是由于没有处以mn</span></span><br><span class="line">    <span class="keyword">return</span> ans</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">stdimg</span>(<span class="params">img</span>):</span><br><span class="line">        <span class="comment"># 灰度值归一化</span></span><br><span class="line">    m, n = img.shape</span><br><span class="line">    min_img = np.amin(img)</span><br><span class="line">    max_img = np.amax(img)</span><br><span class="line">    img = np.float64(img)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(m):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">            img[i][j] = (img[i][j] - min_img) / (max_img - min_img)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> img</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">img = cv2.imread(<span class="string">&#x27;ch03_3.jpg&#x27;</span>, <span class="number">0</span>)</span><br><span class="line">img = stdimg(img)</span><br><span class="line">f = np.fft.fft2(img)</span><br><span class="line">f = np.fft.fftshift(f)</span><br><span class="line">mask = Laplace(img.shape)</span><br><span class="line">f *= mask</span><br><span class="line">img_back = np.fft.ifftshift(f)</span><br><span class="line">img_back = np.fft.ifft2(img_back)</span><br><span class="line">img_back = np.<span class="built_in">abs</span>(img_back)</span><br><span class="line">plt.subplot(<span class="number">131</span>), plt.imshow(img, <span class="string">&#x27;gray&#x27;</span>), plt.title(<span class="string">&#x27;before&#x27;</span>)</span><br><span class="line">plt.xticks([]), plt.yticks([])</span><br><span class="line">plt.subplot(<span class="number">132</span>), plt.imshow(mask, <span class="string">&#x27;gray&#x27;</span>), plt.title(<span class="string">&#x27;mask&#x27;</span>)</span><br><span class="line">plt.xticks([]), plt.yticks([])</span><br><span class="line">plt.subplot(<span class="number">133</span>), plt.imshow(img_back, <span class="string">&#x27;gray&#x27;</span>), plt.title(<span class="string">&#x27;after&#x27;</span>)</span><br><span class="line">plt.xticks([]), plt.yticks([])</span><br><span class="line"></span><br><span class="line">plt.show()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="3-图像复原与重建"><a href="#3-图像复原与重建" class="headerlink" title="3 图像复原与重建"></a>3 图像复原与重建</h2><h2 id="4-彩色图像处理"><a href="#4-彩色图像处理" class="headerlink" title="4 彩色图像处理"></a>4 彩色图像处理</h2></div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
-        var options = {
-            selector: '.gallery-item'
-        };
-        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
-        }</script>]]></content>
-      <categories>
-        <category>Notes</category>
-        <category>Computer Science</category>
-      </categories>
-      <tags>
-        <tag>image processing</tag>
       </tags>
   </entry>
   <entry>
@@ -2419,8 +2207,8 @@
         <category>Optics</category>
       </categories>
       <tags>
-        <tag>projects</tag>
         <tag>optics</tag>
+        <tag>projects</tag>
       </tags>
   </entry>
   <entry>
@@ -3491,310 +3279,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Scientific Writing Notes</title>
-    <url>/Writing/Scientific-Writing/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="科技写作（光电–狄大卫-x2F-王攀）"><a href="#科技写作（光电–狄大卫-x2F-王攀）" class="headerlink" title="科技写作（光电–狄大卫&#x2F;王攀）"></a>科技写作（光电–狄大卫&#x2F;王攀）</h1><p>好期刊不是科研的追求，成果才是。</p>
-<p>科研的核心：总结，归纳，最终能把自己做的用少数几个词凝练出来。</p>
-<h2 id="1-基本概念与文献调研"><a href="#1-基本概念与文献调研" class="headerlink" title="1 基本概念与文献调研"></a>1 基本概念与文献调研</h2><ul>
-<li><p>影响因子: 某期刊前两年（S, T）发表的论文在统计当年（U）的被引用总次数 X , 除以该期刊在前两年（S, T）内发表的论文总数 Y。公式为：<br>$$<br>\mathrm{IF}_U &#x3D; \frac{X(S,T)}{Y(S,T)}<br>$$</p>
-<ul>
-<li><p>本刊2009年的文章在2010年的被引次数：48；本刊2009年的发文量：187</p>
-<p>本刊2008年的文章在2010年的被引次数：128；本刊2008年的发文量：154</p>
-<p>本刊2010年的影响因子：IF &#x3D; (48+128) &#x2F; (187+154) &#x3D; 0.5161</p>
-</li>
-</ul>
-</li>
-</ul>
- <span id="more"></span>
-
-<ul>
-<li><p>SCI 论文分区：中国科学院文献情报中心根据目前SCI核心库将所有期刊分为数学、物理、化学、生物、地学、天文、工程技术、医学、环境科学、农林科学、社会科学、管理科学及综合性期刊13大类。然后，将13大类期刊分各自为 4 个等级，即 4 个区。按照各类期刊影响因子划分，前5%为该类 1 区、6% ～ 20% 为 2 区、21% ～ 50% 为 3 区，其余的为 4 区。</p>
-</li>
-<li><p>H–index：h代表“高引用次数”（high citations），一名科研人员的h指数是指他 <em>至多有h篇论文分别被引用了至少h次。</em></p>
-</li>
-<li><p>Formality: </p>
-<ul>
-<li>Full words. e.g., can’t –&gt; cannot, won’t –&gt; will not</li>
-<li>a lot –&gt; many</li>
-<li>totally –&gt; completely</li>
-<li>at the same time –&gt; simulataneously</li>
-<li>Interesting –&gt; compelling</li>
-</ul>
-</li>
-</ul>
-<p>学位论文：不要追求写得长，要追求原创性和逻辑性；</p>
-<ul>
-<li>对课题组的同学、同一个学校的同学，是一个重要参考资料！</li>
-</ul>
-<h2 id="2-参考文献的管理与排版"><a href="#2-参考文献的管理与排版" class="headerlink" title="2 参考文献的管理与排版"></a>2 参考文献的管理与排版</h2><ul>
-<li>高效看文献<ul>
-<li>要  <em>get</em> 什么：<strong>带着问题和目的</strong>去找文献</li>
-<li><strong>不求甚解</strong>的精神（略读，扫文献）</li>
-<li>Critical thinking</li>
-</ul>
-</li>
-</ul>
-<h2 id="3-描述研究成果"><a href="#3-描述研究成果" class="headerlink" title="3 描述研究成果"></a>3 描述研究成果</h2><ul>
-<li>Use adj. and adv. sparingly<ul>
-<li><strong>Both of the two</strong> samples had <strong>very similar</strong> concentrations –&gt; The two samples had similar concentrations</li>
-<li>Avoid ‘significantly’, unless have  statistic reference</li>
-</ul>
-</li>
-<li>Focus on science, not scientist </li>
-<li>Avoid empty transitional statements<ul>
-<li>e.g., actually</li>
-<li>Useful statements: conversely, consequently &#x2F; to this end, typically &#x2F; in general</li>
-</ul>
-</li>
-<li>Choose simple words over complex<ul>
-<li>In order to –&gt; to</li>
-<li>has the capacity to –&gt; can</li>
-<li>a number of –&gt; many &#x2F; several</li>
-<li>despite the fact that –&gt; although</li>
-</ul>
-</li>
-</ul>
-<h3 id="时态和语态"><a href="#时态和语态" class="headerlink" title="时态和语态"></a>时态和语态</h3><ul>
-<li>研究的实验工作：过去时</li>
-<li>描述事实结果：现在时</li>
-<li>引述别人工作：现在时或现在完成时</li>
-</ul>
-<h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><ul>
-<li>开门见山，不绕圈子，避免大篇幅讲述历史渊源</li>
-<li>回顾历史有重点，找有代表性的</li>
-</ul>
-<h3 id="Discussion-部分"><a href="#Discussion-部分" class="headerlink" title="Discussion 部分"></a>Discussion 部分</h3><ul>
-<li><p>创造性见解，精炼回答为什么出现这样的结果，以及出现这样的结果意味着什么，逻辑要清晰</p>
-</li>
-<li><p>主要的发现</p>
-</li>
-<li><p>结果的说明、阐释或论述、推论</p>
-</li>
-<li><p>与前人结果的比较</p>
-</li>
-<li><p>结果的意义和重要性、应用</p>
-</li>
-<li><p>研究的局限和不足之处，尚未回答的问题及局限性对研究的影响，建议进一步的研究方向</p>
-</li>
-</ul>
-<h3 id="Conclusion-部分"><a href="#Conclusion-部分" class="headerlink" title="Conclusion 部分"></a>Conclusion 部分</h3><ul>
-<li>一句话总结</li>
-<li>技术的优势和拓展应用</li>
-</ul>
-<h3 id="Supplementary-部分"><a href="#Supplementary-部分" class="headerlink" title="Supplementary 部分"></a>Supplementary 部分</h3><ul>
-<li>放不太重要、但有助于理解结果的实验和讨论</li>
-</ul>
-<h3 id="Figures-and-Tables"><a href="#Figures-and-Tables" class="headerlink" title="Figures and Tables"></a>Figures and Tables</h3><ul>
-<li>先总说</li>
-<li>再有逻辑、递进性地描述图表结果</li>
-<li>讨论</li>
-</ul>
-<h3 id="Title"><a href="#Title" class="headerlink" title="Title"></a>Title</h3><ul>
-<li><p>清楚性</p>
-<ul>
-<li>Highly efficient waveguide grating couplers using silicon-on-insulator (Emphasis: waveguide grating couplers)</li>
-<li>Silicon-on-insulator for high-output waveguide grating couplers (Emphasis: silicon-on-sinsulator)</li>
-</ul>
-</li>
-<li><p>主副题名</p>
-</li>
-<li><p>e.g.</p>
-<ul>
-<li>Low-loss 与 surface smoothness, diameter uniformity<ul>
-<li>Low-loss 在 high-level</li>
-<li>Subwavelength-diameter silica wire for low-loss optical wave guiding</li>
-</ul>
-</li>
-<li>包含凸显性能的关键信息</li>
-<li>要吸引人看<ul>
-<li><strong>Single-Nanowire Single-Mode Laser</strong></li>
-<li>Highly elastic ice microfiber –&gt; Elastic ice microfiber: Highly 太泛泛不准确</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="PPT-展示"><a href="#PPT-展示" class="headerlink" title="PPT 展示"></a>PPT 展示</h3><ul>
-<li><p>图片出处标注：无作者信息，杂志名采用缩写形式，随后是期号（黑体）、首页页码、发表年份</p>
-</li>
-<li><p>原则：让观众最快获取有用信息</p>
-</li>
-</ul>
-<h2 id="论文投稿"><a href="#论文投稿" class="headerlink" title="论文投稿"></a>论文投稿</h2><p>牵扯到人，在哪里都会有偏见或者倾向性的，那也没办法</p>
-<ul>
-<li><p>期刊选择</p>
-<ul>
-<li><p>原理、材料、结构等的重大创新，性能的显著提高：好一点的期刊</p>
-</li>
-<li><p>前人工作的改进优化：中下的期刊</p>
-</li>
-<li><p>期刊所规定的范围</p>
-</li>
-<li><p>期刊的论文平均水平</p>
-</li>
-</ul>
-</li>
-<li><p>投稿前的准备工作: 系统里要填很多东西，投个稿也是很累的</p>
-<ul>
-<li><p>Manuscript</p>
-</li>
-<li><p>Tables, Figures, Movies</p>
-</li>
-<li><p>Supplementary materials</p>
-</li>
-<li><p><strong>Cover Letter</strong></p>
-<ul>
-<li><p>an excellent opportunity to briefly discuss the importance of the submitted work and why it is appropriate for the journal </p>
-</li>
-<li><p>Spend time writing a convincing cover letter and share it with your coauthors for their input</p>
-</li>
-</ul>
-</li>
-<li><p>Email and address for each author</p>
-</li>
-<li><p>Suggested reviewers (name, affiliation, emails)</p>
-</li>
-</ul>
-</li>
-<li><p>申诉：审稿人误解&#x2F;没理解&#x2F;有很强偏见（好的工作，机会难得）</p>
-</li>
-<li><p><strong>发表过一篇文章后，可以申请当审稿人</strong></p>
-</li>
-</ul>
-<h1 id="科技写作（医学–邹炜-x2F-邹键）"><a href="#科技写作（医学–邹炜-x2F-邹键）" class="headerlink" title="科技写作（医学–邹炜&#x2F;邹键）"></a>科技写作（医学–邹炜&#x2F;邹键）</h1><h3 id="Writing-a-scientific-article"><a href="#Writing-a-scientific-article" class="headerlink" title="Writing a scientific article"></a>Writing a scientific article</h3><ul>
-<li>Read the author guideline!</li>
-<li>Figures: One figure, one question<ul>
-<li>figure的逻辑、框架可以提前思考准备</li>
-</ul>
-</li>
-<li>Discussion: <ul>
-<li>Indicate uses, extensions, and limitations </li>
-<li>suggest future experiments and point out those that are underway</li>
-</ul>
-</li>
-<li>Supplementary Material: 不是不重要放到了附录，而是由于篇幅限制才放到了附录</li>
-<li>Start writing<ul>
-<li>Paper: Introduction –&gt; Methods &amp; Materials –&gt; Results –&gt;Discussion –&gt; Figures &amp; Tables</li>
-<li>Write: Abstract –&gt; Results –&gt; Figures &amp; Tables –&gt; Methods &amp; Materials –&gt; Introduction –&gt; Discussion –&gt; Abstract (revision)</li>
-</ul>
-</li>
-</ul>
-<h3 id="Cover-Letter-投稿信"><a href="#Cover-Letter-投稿信" class="headerlink" title="Cover Letter (投稿信)"></a>Cover Letter (投稿信)</h3><ul>
-<li>Basic information</li>
-<li>Cover letter is your chance to speak to the editor directly</li>
-<li>Mention what makes the paper special to the journel</li>
-<li>Confine the length to 2&#x2F;3 page</li>
-</ul>
-<h3 id="Revision-and-response-to-reviewers"><a href="#Revision-and-response-to-reviewers" class="headerlink" title="Revision, and response to reviewers"></a>Revision, and response to reviewers</h3><ul>
-<li>Cherish the chance of discussion your work directly with other scientists in your community. Please prepare a detailed letter of response.</li>
-<li>Cut and paste each comment by the reviewer. Answer it directly below. State specifically what changes you have made to the manuscript. Identify the page and line number.</li>
-<li>Provide a scientific response to the comment you accept; or a convicing, solid and polite rebuttal to the point you think the reviewer is wrong.</li>
-</ul>
-<h3 id="Rejection"><a href="#Rejection" class="headerlink" title="Rejection"></a>Rejection</h3><ul>
-<li>Try to understand why the paper was rejected.</li>
-<li>Re-evaluate your work and decide whether it is appropriate to submit the paper elsewhere. If so, begin as if you are going to write a new article.</li>
-</ul>
-<h1 id="个人积累"><a href="#个人积累" class="headerlink" title="个人积累"></a>个人积累</h1><p>Some comments from the editor.</p>
-<ul>
-<li>Note that terms such as “notably,” “indeed,” and “surprisingly” are redundant in scientific writing and can be deleted as they add no relevance.</li>
-<li>The n-dash (–) could be used instead of “to” but not hyphen (-). For example, 15–25 mm implies 15 to 25 mm. <a href="https://www.grammarly.com/blog/hyphens-and-dashes/">here is a nice demonstration</a>, <a href="https://meta.stackexchange.com/questions/305172/how-to-type-a-dash-or-instead-of-a-hyphen-in-stack-exchange">here is how to type them</a></li>
-</ul>
-<p>deep-learning-empowered</p>
-<p>Expensive flower-filled vase</p>
-<p>Expensive-flower-filled vase</p>
-<ul>
-<li><p>The use of too many words to convey one idea can muddle the message and divert the reader’s attention. Therefore, in writing, especially academic writing, ideas need to be conveyed as concisely as possible. One way of doing this is to use concise alternatives to phrases. For example, the phrase “all over the world” can be replaced with the word “globally” or “worldwide.” </p>
-</li>
-<li><p>Where possible, a direct verb (action) should be used instead of using a noun and verb. For example, “segmentation of images was done” can be replaced with “images were segmented,” which is clearer and preferred in academic writing.</p>
-<!--more--></li>
-</ul>
-<table>
-<thead>
-<tr>
-<th><strong>Example</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>Avoid:</strong> Spectral imaging is essentially beneficial for an ocean of applications that require both spectral and spatial information at high resolution. <strong>Better:</strong> Several applications requiring both spectral and spatial information at high resolution benefit from spectral imaging.</td>
-</tr>
-</tbody></table>
-<p>Some useful word revision from the editor.</p>
-<ul>
-<li><p>While —&gt; Although</p>
-</li>
-<li><p>Here —&gt; In this study</p>
-</li>
-<li><p>These improvements enable us —&gt; enabled us</p>
-</li>
-<li><p>whole —&gt; entire</p>
-</li>
-<li><p>inaccessible —&gt; unreachable</p>
-</li>
-<li><p>Defects —&gt; limitations</p>
-</li>
-<li><p>Unsurprisingly —&gt; Nevertheless</p>
-</li>
-<li><p>confining —&gt; limiting</p>
-</li>
-<li><p>may —&gt; might</p>
-</li>
-<li><p>Besides —&gt; In addition</p>
-</li>
-<li><p>Since —&gt; Because</p>
-</li>
-</ul>
-<p>Some classical mistakes.</p>
-<ul>
-<li><p>is —&gt; was</p>
-</li>
-<li><p>spectral and spatial detections are simultaneously expected —&gt; spectral and spatial detection is</p>
-</li>
-</ul>
-<p>Common phrases.</p>
-<ul>
-<li>because of, due to</li>
-</ul>
-<p>early methods –&gt; early endeavors</p>
-<p>later works developed more methods –&gt; later works involved more methods</p>
-<p>It therefore failed to –&gt; it thereby failing to</p>
-<p><strong>The key difference between thereby and therefore is that thereby means “by that means” or “as a result of that” whereas therefore means “for that reason” or consequently.</strong></p>
-<p>additionally–&gt;besides</p>
-<p><a href="https://home.soka.ac.jp/~alex/sokhome06b/ess/transwords.html">https://home.soka.ac.jp/~alex/sokhome06b/ess/transwords.html</a></p>
-<p>Sec. 1 –&gt; Section 1</p>
-<p>Additional –&gt; Extra</p>
-<p>deep learning is able to handle the complicated combination-architecture model. –&gt; deep learning <strong>allows</strong> to handle the complicated combination-architecture model.</p>
-<p>enough to –&gt;sufficient for</p>
-<p>which is –&gt; namely</p>
-<h3 id="美化篇"><a href="#美化篇" class="headerlink" title="美化篇"></a>美化篇</h3><p>Deep neural networks has been applied widely in reconstruction process of spectral imaging. –&gt; The past decade has witnessed a rapid expansion of deep neural networks applications in reconstruction of spectral imaging.</p>
-<p>We think reinforcement learning (RL) can be used to change this condition. –&gt; We barely believe that we have fully exploited the potential of neural networks. To maximize their performance, one may consider introducing reinforcement learning (RL) technique.</p>
-<h3 id="单词篇"><a href="#单词篇" class="headerlink" title="单词篇"></a>单词篇</h3><p>endure</p>
-<p>endeavor </p>
-<p>notable</p>
-<h3 id="语法篇"><a href="#语法篇" class="headerlink" title="语法篇"></a>语法篇</h3><p>The computational spectral imaging method has resorted to computation power <strong>for reduced system volume</strong>.</p>
-<p>根据强调的内容（后句），把后句的but改成前句的though</p>
-<h3 id="词义篇"><a href="#词义篇" class="headerlink" title="词义篇"></a>词义篇</h3><p>Hence and thus have the same basic meaning and are often interchangeable. However, there is a slight difference. Hence usually refers to the future. Thus usually refers to the past. It is often used to indicate a conclusion.</p>
-<ul>
-<li>Both sides played well, thus no winner was declared.</li>
-<li>The situation is getting more and more complicated. Hence we will have to proceed with caution. (NOT Thus we will have to proceed with caution.)</li>
-</ul>
-<h3 id="资源篇"><a href="#资源篇" class="headerlink" title="资源篇"></a>资源篇</h3><p><a href="https://twitter.com/jbhuang0604/status/1437931021706612736">https://twitter.com/jbhuang0604/status/1437931021706612736</a></p>
-<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>A-xxed B 就是 B is xxed by A. | computer-assisted diagnosis</p>
-<p>A-xxing B 就是 B xx A. | privacy-enhancing techniques</p>
-</div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
-        var options = {
-            selector: '.gallery-item'
-        };
-        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
-        }</script>]]></content>
-      <categories>
-        <category>Notes</category>
-        <category>Writing</category>
-      </categories>
-      <tags>
-        <tag>writing</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Modern Optical Testing Technology</title>
     <url>/Optics/Modern-Optical-Testing-Technology/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><p>浙大光电研究生课程《近代光学测试技术》笔记。</p>
@@ -4381,6 +3865,310 @@
       </categories>
       <tags>
         <tag>optics</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Scientific Writing Notes</title>
+    <url>/Writing/Scientific-Writing/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="科技写作（光电–狄大卫-x2F-王攀）"><a href="#科技写作（光电–狄大卫-x2F-王攀）" class="headerlink" title="科技写作（光电–狄大卫&#x2F;王攀）"></a>科技写作（光电–狄大卫&#x2F;王攀）</h1><p>好期刊不是科研的追求，成果才是。</p>
+<p>科研的核心：总结，归纳，最终能把自己做的用少数几个词凝练出来。</p>
+<h2 id="1-基本概念与文献调研"><a href="#1-基本概念与文献调研" class="headerlink" title="1 基本概念与文献调研"></a>1 基本概念与文献调研</h2><ul>
+<li><p>影响因子: 某期刊前两年（S, T）发表的论文在统计当年（U）的被引用总次数 X , 除以该期刊在前两年（S, T）内发表的论文总数 Y。公式为：<br>$$<br>\mathrm{IF}_U &#x3D; \frac{X(S,T)}{Y(S,T)}<br>$$</p>
+<ul>
+<li><p>本刊2009年的文章在2010年的被引次数：48；本刊2009年的发文量：187</p>
+<p>本刊2008年的文章在2010年的被引次数：128；本刊2008年的发文量：154</p>
+<p>本刊2010年的影响因子：IF &#x3D; (48+128) &#x2F; (187+154) &#x3D; 0.5161</p>
+</li>
+</ul>
+</li>
+</ul>
+ <span id="more"></span>
+
+<ul>
+<li><p>SCI 论文分区：中国科学院文献情报中心根据目前SCI核心库将所有期刊分为数学、物理、化学、生物、地学、天文、工程技术、医学、环境科学、农林科学、社会科学、管理科学及综合性期刊13大类。然后，将13大类期刊分各自为 4 个等级，即 4 个区。按照各类期刊影响因子划分，前5%为该类 1 区、6% ～ 20% 为 2 区、21% ～ 50% 为 3 区，其余的为 4 区。</p>
+</li>
+<li><p>H–index：h代表“高引用次数”（high citations），一名科研人员的h指数是指他 <em>至多有h篇论文分别被引用了至少h次。</em></p>
+</li>
+<li><p>Formality: </p>
+<ul>
+<li>Full words. e.g., can’t –&gt; cannot, won’t –&gt; will not</li>
+<li>a lot –&gt; many</li>
+<li>totally –&gt; completely</li>
+<li>at the same time –&gt; simulataneously</li>
+<li>Interesting –&gt; compelling</li>
+</ul>
+</li>
+</ul>
+<p>学位论文：不要追求写得长，要追求原创性和逻辑性；</p>
+<ul>
+<li>对课题组的同学、同一个学校的同学，是一个重要参考资料！</li>
+</ul>
+<h2 id="2-参考文献的管理与排版"><a href="#2-参考文献的管理与排版" class="headerlink" title="2 参考文献的管理与排版"></a>2 参考文献的管理与排版</h2><ul>
+<li>高效看文献<ul>
+<li>要  <em>get</em> 什么：<strong>带着问题和目的</strong>去找文献</li>
+<li><strong>不求甚解</strong>的精神（略读，扫文献）</li>
+<li>Critical thinking</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-描述研究成果"><a href="#3-描述研究成果" class="headerlink" title="3 描述研究成果"></a>3 描述研究成果</h2><ul>
+<li>Use adj. and adv. sparingly<ul>
+<li><strong>Both of the two</strong> samples had <strong>very similar</strong> concentrations –&gt; The two samples had similar concentrations</li>
+<li>Avoid ‘significantly’, unless have  statistic reference</li>
+</ul>
+</li>
+<li>Focus on science, not scientist </li>
+<li>Avoid empty transitional statements<ul>
+<li>e.g., actually</li>
+<li>Useful statements: conversely, consequently &#x2F; to this end, typically &#x2F; in general</li>
+</ul>
+</li>
+<li>Choose simple words over complex<ul>
+<li>In order to –&gt; to</li>
+<li>has the capacity to –&gt; can</li>
+<li>a number of –&gt; many &#x2F; several</li>
+<li>despite the fact that –&gt; although</li>
+</ul>
+</li>
+</ul>
+<h3 id="时态和语态"><a href="#时态和语态" class="headerlink" title="时态和语态"></a>时态和语态</h3><ul>
+<li>研究的实验工作：过去时</li>
+<li>描述事实结果：现在时</li>
+<li>引述别人工作：现在时或现在完成时</li>
+</ul>
+<h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><ul>
+<li>开门见山，不绕圈子，避免大篇幅讲述历史渊源</li>
+<li>回顾历史有重点，找有代表性的</li>
+</ul>
+<h3 id="Discussion-部分"><a href="#Discussion-部分" class="headerlink" title="Discussion 部分"></a>Discussion 部分</h3><ul>
+<li><p>创造性见解，精炼回答为什么出现这样的结果，以及出现这样的结果意味着什么，逻辑要清晰</p>
+</li>
+<li><p>主要的发现</p>
+</li>
+<li><p>结果的说明、阐释或论述、推论</p>
+</li>
+<li><p>与前人结果的比较</p>
+</li>
+<li><p>结果的意义和重要性、应用</p>
+</li>
+<li><p>研究的局限和不足之处，尚未回答的问题及局限性对研究的影响，建议进一步的研究方向</p>
+</li>
+</ul>
+<h3 id="Conclusion-部分"><a href="#Conclusion-部分" class="headerlink" title="Conclusion 部分"></a>Conclusion 部分</h3><ul>
+<li>一句话总结</li>
+<li>技术的优势和拓展应用</li>
+</ul>
+<h3 id="Supplementary-部分"><a href="#Supplementary-部分" class="headerlink" title="Supplementary 部分"></a>Supplementary 部分</h3><ul>
+<li>放不太重要、但有助于理解结果的实验和讨论</li>
+</ul>
+<h3 id="Figures-and-Tables"><a href="#Figures-and-Tables" class="headerlink" title="Figures and Tables"></a>Figures and Tables</h3><ul>
+<li>先总说</li>
+<li>再有逻辑、递进性地描述图表结果</li>
+<li>讨论</li>
+</ul>
+<h3 id="Title"><a href="#Title" class="headerlink" title="Title"></a>Title</h3><ul>
+<li><p>清楚性</p>
+<ul>
+<li>Highly efficient waveguide grating couplers using silicon-on-insulator (Emphasis: waveguide grating couplers)</li>
+<li>Silicon-on-insulator for high-output waveguide grating couplers (Emphasis: silicon-on-sinsulator)</li>
+</ul>
+</li>
+<li><p>主副题名</p>
+</li>
+<li><p>e.g.</p>
+<ul>
+<li>Low-loss 与 surface smoothness, diameter uniformity<ul>
+<li>Low-loss 在 high-level</li>
+<li>Subwavelength-diameter silica wire for low-loss optical wave guiding</li>
+</ul>
+</li>
+<li>包含凸显性能的关键信息</li>
+<li>要吸引人看<ul>
+<li><strong>Single-Nanowire Single-Mode Laser</strong></li>
+<li>Highly elastic ice microfiber –&gt; Elastic ice microfiber: Highly 太泛泛不准确</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="PPT-展示"><a href="#PPT-展示" class="headerlink" title="PPT 展示"></a>PPT 展示</h3><ul>
+<li><p>图片出处标注：无作者信息，杂志名采用缩写形式，随后是期号（黑体）、首页页码、发表年份</p>
+</li>
+<li><p>原则：让观众最快获取有用信息</p>
+</li>
+</ul>
+<h2 id="论文投稿"><a href="#论文投稿" class="headerlink" title="论文投稿"></a>论文投稿</h2><p>牵扯到人，在哪里都会有偏见或者倾向性的，那也没办法</p>
+<ul>
+<li><p>期刊选择</p>
+<ul>
+<li><p>原理、材料、结构等的重大创新，性能的显著提高：好一点的期刊</p>
+</li>
+<li><p>前人工作的改进优化：中下的期刊</p>
+</li>
+<li><p>期刊所规定的范围</p>
+</li>
+<li><p>期刊的论文平均水平</p>
+</li>
+</ul>
+</li>
+<li><p>投稿前的准备工作: 系统里要填很多东西，投个稿也是很累的</p>
+<ul>
+<li><p>Manuscript</p>
+</li>
+<li><p>Tables, Figures, Movies</p>
+</li>
+<li><p>Supplementary materials</p>
+</li>
+<li><p><strong>Cover Letter</strong></p>
+<ul>
+<li><p>an excellent opportunity to briefly discuss the importance of the submitted work and why it is appropriate for the journal </p>
+</li>
+<li><p>Spend time writing a convincing cover letter and share it with your coauthors for their input</p>
+</li>
+</ul>
+</li>
+<li><p>Email and address for each author</p>
+</li>
+<li><p>Suggested reviewers (name, affiliation, emails)</p>
+</li>
+</ul>
+</li>
+<li><p>申诉：审稿人误解&#x2F;没理解&#x2F;有很强偏见（好的工作，机会难得）</p>
+</li>
+<li><p><strong>发表过一篇文章后，可以申请当审稿人</strong></p>
+</li>
+</ul>
+<h1 id="科技写作（医学–邹炜-x2F-邹键）"><a href="#科技写作（医学–邹炜-x2F-邹键）" class="headerlink" title="科技写作（医学–邹炜&#x2F;邹键）"></a>科技写作（医学–邹炜&#x2F;邹键）</h1><h3 id="Writing-a-scientific-article"><a href="#Writing-a-scientific-article" class="headerlink" title="Writing a scientific article"></a>Writing a scientific article</h3><ul>
+<li>Read the author guideline!</li>
+<li>Figures: One figure, one question<ul>
+<li>figure的逻辑、框架可以提前思考准备</li>
+</ul>
+</li>
+<li>Discussion: <ul>
+<li>Indicate uses, extensions, and limitations </li>
+<li>suggest future experiments and point out those that are underway</li>
+</ul>
+</li>
+<li>Supplementary Material: 不是不重要放到了附录，而是由于篇幅限制才放到了附录</li>
+<li>Start writing<ul>
+<li>Paper: Introduction –&gt; Methods &amp; Materials –&gt; Results –&gt;Discussion –&gt; Figures &amp; Tables</li>
+<li>Write: Abstract –&gt; Results –&gt; Figures &amp; Tables –&gt; Methods &amp; Materials –&gt; Introduction –&gt; Discussion –&gt; Abstract (revision)</li>
+</ul>
+</li>
+</ul>
+<h3 id="Cover-Letter-投稿信"><a href="#Cover-Letter-投稿信" class="headerlink" title="Cover Letter (投稿信)"></a>Cover Letter (投稿信)</h3><ul>
+<li>Basic information</li>
+<li>Cover letter is your chance to speak to the editor directly</li>
+<li>Mention what makes the paper special to the journel</li>
+<li>Confine the length to 2&#x2F;3 page</li>
+</ul>
+<h3 id="Revision-and-response-to-reviewers"><a href="#Revision-and-response-to-reviewers" class="headerlink" title="Revision, and response to reviewers"></a>Revision, and response to reviewers</h3><ul>
+<li>Cherish the chance of discussion your work directly with other scientists in your community. Please prepare a detailed letter of response.</li>
+<li>Cut and paste each comment by the reviewer. Answer it directly below. State specifically what changes you have made to the manuscript. Identify the page and line number.</li>
+<li>Provide a scientific response to the comment you accept; or a convicing, solid and polite rebuttal to the point you think the reviewer is wrong.</li>
+</ul>
+<h3 id="Rejection"><a href="#Rejection" class="headerlink" title="Rejection"></a>Rejection</h3><ul>
+<li>Try to understand why the paper was rejected.</li>
+<li>Re-evaluate your work and decide whether it is appropriate to submit the paper elsewhere. If so, begin as if you are going to write a new article.</li>
+</ul>
+<h1 id="个人积累"><a href="#个人积累" class="headerlink" title="个人积累"></a>个人积累</h1><p>Some comments from the editor.</p>
+<ul>
+<li>Note that terms such as “notably,” “indeed,” and “surprisingly” are redundant in scientific writing and can be deleted as they add no relevance.</li>
+<li>The n-dash (–) could be used instead of “to” but not hyphen (-). For example, 15–25 mm implies 15 to 25 mm. <a href="https://www.grammarly.com/blog/hyphens-and-dashes/">here is a nice demonstration</a>, <a href="https://meta.stackexchange.com/questions/305172/how-to-type-a-dash-or-instead-of-a-hyphen-in-stack-exchange">here is how to type them</a></li>
+</ul>
+<p>deep-learning-empowered</p>
+<p>Expensive flower-filled vase</p>
+<p>Expensive-flower-filled vase</p>
+<ul>
+<li><p>The use of too many words to convey one idea can muddle the message and divert the reader’s attention. Therefore, in writing, especially academic writing, ideas need to be conveyed as concisely as possible. One way of doing this is to use concise alternatives to phrases. For example, the phrase “all over the world” can be replaced with the word “globally” or “worldwide.” </p>
+</li>
+<li><p>Where possible, a direct verb (action) should be used instead of using a noun and verb. For example, “segmentation of images was done” can be replaced with “images were segmented,” which is clearer and preferred in academic writing.</p>
+<!--more--></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><strong>Example</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Avoid:</strong> Spectral imaging is essentially beneficial for an ocean of applications that require both spectral and spatial information at high resolution. <strong>Better:</strong> Several applications requiring both spectral and spatial information at high resolution benefit from spectral imaging.</td>
+</tr>
+</tbody></table>
+<p>Some useful word revision from the editor.</p>
+<ul>
+<li><p>While —&gt; Although</p>
+</li>
+<li><p>Here —&gt; In this study</p>
+</li>
+<li><p>These improvements enable us —&gt; enabled us</p>
+</li>
+<li><p>whole —&gt; entire</p>
+</li>
+<li><p>inaccessible —&gt; unreachable</p>
+</li>
+<li><p>Defects —&gt; limitations</p>
+</li>
+<li><p>Unsurprisingly —&gt; Nevertheless</p>
+</li>
+<li><p>confining —&gt; limiting</p>
+</li>
+<li><p>may —&gt; might</p>
+</li>
+<li><p>Besides —&gt; In addition</p>
+</li>
+<li><p>Since —&gt; Because</p>
+</li>
+</ul>
+<p>Some classical mistakes.</p>
+<ul>
+<li><p>is —&gt; was</p>
+</li>
+<li><p>spectral and spatial detections are simultaneously expected —&gt; spectral and spatial detection is</p>
+</li>
+</ul>
+<p>Common phrases.</p>
+<ul>
+<li>because of, due to</li>
+</ul>
+<p>early methods –&gt; early endeavors</p>
+<p>later works developed more methods –&gt; later works involved more methods</p>
+<p>It therefore failed to –&gt; it thereby failing to</p>
+<p><strong>The key difference between thereby and therefore is that thereby means “by that means” or “as a result of that” whereas therefore means “for that reason” or consequently.</strong></p>
+<p>additionally–&gt;besides</p>
+<p><a href="https://home.soka.ac.jp/~alex/sokhome06b/ess/transwords.html">https://home.soka.ac.jp/~alex/sokhome06b/ess/transwords.html</a></p>
+<p>Sec. 1 –&gt; Section 1</p>
+<p>Additional –&gt; Extra</p>
+<p>deep learning is able to handle the complicated combination-architecture model. –&gt; deep learning <strong>allows</strong> to handle the complicated combination-architecture model.</p>
+<p>enough to –&gt;sufficient for</p>
+<p>which is –&gt; namely</p>
+<h3 id="美化篇"><a href="#美化篇" class="headerlink" title="美化篇"></a>美化篇</h3><p>Deep neural networks has been applied widely in reconstruction process of spectral imaging. –&gt; The past decade has witnessed a rapid expansion of deep neural networks applications in reconstruction of spectral imaging.</p>
+<p>We think reinforcement learning (RL) can be used to change this condition. –&gt; We barely believe that we have fully exploited the potential of neural networks. To maximize their performance, one may consider introducing reinforcement learning (RL) technique.</p>
+<h3 id="单词篇"><a href="#单词篇" class="headerlink" title="单词篇"></a>单词篇</h3><p>endure</p>
+<p>endeavor </p>
+<p>notable</p>
+<h3 id="语法篇"><a href="#语法篇" class="headerlink" title="语法篇"></a>语法篇</h3><p>The computational spectral imaging method has resorted to computation power <strong>for reduced system volume</strong>.</p>
+<p>根据强调的内容（后句），把后句的but改成前句的though</p>
+<h3 id="词义篇"><a href="#词义篇" class="headerlink" title="词义篇"></a>词义篇</h3><p>Hence and thus have the same basic meaning and are often interchangeable. However, there is a slight difference. Hence usually refers to the future. Thus usually refers to the past. It is often used to indicate a conclusion.</p>
+<ul>
+<li>Both sides played well, thus no winner was declared.</li>
+<li>The situation is getting more and more complicated. Hence we will have to proceed with caution. (NOT Thus we will have to proceed with caution.)</li>
+</ul>
+<h3 id="资源篇"><a href="#资源篇" class="headerlink" title="资源篇"></a>资源篇</h3><p><a href="https://twitter.com/jbhuang0604/status/1437931021706612736">https://twitter.com/jbhuang0604/status/1437931021706612736</a></p>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>A-xxed B 就是 B is xxed by A. | computer-assisted diagnosis</p>
+<p>A-xxing B 就是 B xx A. | privacy-enhancing techniques</p>
+</div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script>]]></content>
+      <categories>
+        <category>Notes</category>
+        <category>Writing</category>
+      </categories>
+      <tags>
+        <tag>writing</tag>
       </tags>
   </entry>
   <entry>
@@ -6526,8 +6314,8 @@ ssh -L port:127.0.0.1:port username@ip
         <category>Optics</category>
       </categories>
       <tags>
-        <tag>projects</tag>
         <tag>optics</tag>
+        <tag>projects</tag>
       </tags>
   </entry>
   <entry>
@@ -6555,8 +6343,8 @@ ssh -L port:127.0.0.1:port username@ip
         <category>Optics</category>
       </categories>
       <tags>
-        <tag>projects</tag>
         <tag>optics</tag>
+        <tag>projects</tag>
       </tags>
   </entry>
   <entry>
@@ -6584,8 +6372,8 @@ ssh -L port:127.0.0.1:port username@ip
         <category>Optics</category>
       </categories>
       <tags>
-        <tag>projects</tag>
         <tag>optics</tag>
+        <tag>projects</tag>
       </tags>
   </entry>
   <entry>
@@ -6916,8 +6704,8 @@ ssh -L port:127.0.0.1:port username@ip
       </categories>
       <tags>
         <tag>competition</tag>
-        <tag>projects</tag>
         <tag>optics</tag>
+        <tag>projects</tag>
       </tags>
   </entry>
   <entry>
@@ -7296,133 +7084,6 @@ ssh -L port:127.0.0.1:port username@ip
       </categories>
       <tags>
         <tag>optics</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Quantum-Mechanics Notes</title>
-    <url>/Physics/Quantum-Mechanics/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="Quantum-Mechanics-Notes"><a href="#Quantum-Mechanics-Notes" class="headerlink" title="Quantum-Mechanics-Notes"></a>Quantum-Mechanics-Notes</h1><p>Notes for quantum mechanics of MIT-OCW 8.04.</p>
-<p><em>’This is the goal of 8.04: we will step beyond the scale of daily experiences to develop an intuition for electrons, atoms, and superposition.’</em></p>
-<span id="more"></span>
-
-<h2 id="Uncertainty-Principle-and-Superposition"><a href="#Uncertainty-Principle-and-Superposition" class="headerlink" title="Uncertainty Principle and Superposition"></a>Uncertainty Principle and Superposition</h2><p>Think about a series of experiments.</p>
-<p>Electron has two propeties : <em>white&#x2F;black</em> and <em>hard&#x2F;soft</em> (Denote by W&#x2F;B &amp; H&#x2F;S). </p>
-<p>We made <em>boxes</em> that can <em>measure</em> such properties. For instance, white electron and black electron will exit the box from different directions. From the direction we know the white&#x2F;black property of the electron. Denote ‘C-Box’ (color box) for the boxes that can measure W&#x2F;B property and similarly, ‘H-Box’ (hardness box) for those can measure ‘H&#x2F;S’ property.</p>
-<p>We have mirrors and combinator that put the two directions together, so that we can continue more complicated experiments. Note that they only change the directions.</p>
-<p>Below are the experiments from physicists.</p>
-<p>First there are some basic and naive experiments.</p>
-<ol>
-<li>Electrons —&gt; C-Box —&gt; W and B —&gt; choose W —&gt; C-Box —&gt; W  (repeatability of color &#x2F; hardness)</li>
-<li>Electrons —&gt; H-Box —&gt; H and S —&gt; choose H —&gt;C-Box —&gt; W (50%) and B (50%) (lack of correlation of color with hardness)</li>
-</ol>
-<p>Then comes the weird experiment. </p>
-<ol start="3">
-<li>Electrons —&gt; C-Box —&gt; W and B —&gt; choose W —&gt; H-Box —&gt; H and S —&gt; choose H —&gt; C-Box —&gt; <strong>Not</strong> (100%) W, but $50%$ W and  $50%$ B</li>
-</ol>
-<p>Apparently, hardness box tampers with color. Therefore experiment 3 tells us color and hardness property cannot be measured simultaneously, which is the <strong>uncertainty principle</strong>. Though we know it is white at the begining, as long as we measure the hardness, the color property white is not repeatable anymore.</p>
-<p>Then we use combinator to dig deeper.</p>
-<ol start="4">
-<li><p>White electrons —&gt; H-Box —&gt; $50%$ H and $50%$ S  —&gt; combinator —&gt; H-Box —&gt; $50%$ H and $50%$ S</p>
-</li>
-<li><p>White electrons —&gt; H-Box —&gt; 50% H and 50% S —&gt; combinator —&gt; C-Box —&gt; (100%) W </p>
-</li>
-<li><p>White electrons —&gt; H-Box —&gt; 50% H and 50% S —&gt; put a wall in the Soft’s path —&gt; combinator —&gt; C-Box —&gt; $50%$ W and $50%$ B</p>
-</li>
-</ol>
-<p>Experiment 4 tells us combinator does not change the proberties of electrons. Experiment 5 got totally W because the added combination part act as if H&#x2F;S property doesn’t be measured, hence the W&#x2F;B property will not be disturbed. Experiment 6 shows a disturbing one from which we can see the uncertainty principle plays a role.</p>
-<p>After we understand the principle of the motion of electrons, we consider the <em>being</em> (or state) of it : what is the state of an electron inside the apparatus in the Experiment 5?</p>
-<p>We know it is white, so it cannot be hard or soft, otherwise we will get half-half result by the uncertainty principle. It cannot be both hard and soft since  different property will go in different direction.In one path the electron cannot have both properties. It cannot be neither since we can get some results. </p>
-<p>Therefore, the only condition is the electron has probability of being hard or soft (but we cannot know what exactly is) and such state is called <strong>superposition</strong>.</p>
-<p>Being in a definite state of position means that being in a superposition of having different values for momentum.</p>
-<h2 id="Bell’s-Inequality"><a href="#Bell’s-Inequality" class="headerlink" title="Bell’s Inequality"></a>Bell’s Inequality</h2><p>In lecture 2, the professor demonstrated some intersting experiments that are waiting to be explained using quantum language.</p>
-<ul>
-<li><p>Atom exist. But atomic orbits are unstable.</p>
-</li>
-<li><p>Atomic spectra are discrete. When excites&#x2F;sparks the simple gas like $ H_2$, we get light sent out by it. If we take the light and shine it on a prism, we would find distinct patterns : discrete spectra. Experimentalists found the wavelengths satisfy $1&#x2F;\lambda&#x3D;R\cdot(1&#x2F;n^2-1&#x2F;m^2)$.</p>
-</li>
-<li><p>Photoelectric effect. Stop voltage has no relation with intensity, but is linear to frequency. And it was found that the coefficient is just $h$, the Planck constant derived from Blackbody radiation.</p>
-</li>
-<li><p>Since photon has zero mass, we can develop the momentum equation $p&#x3D;h&#x2F;\lambda$ with $E&#x3D;pc$ and $E&#x3D;h\nu$. This means photon has the particle’s property–momentum. Note that $E&#x3D;h\nu$ is very unusual.</p>
-</li>
-<li><p>Double-slit experiment with electron. The electron comes one in one, and was found randomly positioned. But when the quantity is enough, the statistic told us the electrons were interfered. </p>
-<a href="../../../../Library/Application%20Support/typora-user-images/image-20201109153712555.png" title="image-20201109153712555" class="gallery-item"><img src="../../../../Library/Application%20Support/typora-user-images/image-20201109153712555.png" alt="image-20201109153712555" style="zoom:25%;" /></a>
-</li>
-<li><p>Bragg scattering. If we send in a beam of electrons to a crystal and watch out the scattering from different angles, we would find the interference effect. The intensity as a function of angle of the out beam satisfies the function as if the electron is a wave with the wavelength $\lambda&#x3D;2d\sin\theta&#x2F;n$. The <strong>electron diffracts</strong> off the crystal. </p>
-</li>
-<li><p>Send out $C_{60}$ one by one and make them go through a diffraction grating. [ ]</p>
-</li>
-</ul>
-<p>Next comes the <em>Bell’s inequality</em>.</p>
-<p>If the state of the stuff is definite, then we have:<br>$$<br>\operatorname{Num}(A,\bar B)+\operatorname{Num}(B,\bar C)\ge \operatorname{Num}(A,\bar C)<br>$$<br>The proof is the following:<br>$$<br>\begin{aligned}<br>\operatorname{LHS}&amp;&#x3D;\operatorname{Num}(A,\bar B,C)+\operatorname{Num}(A,\bar B,\bar C)+\operatorname{Num}(A,B,\bar C)+\operatorname{Num}(\bar A,B,\bar C)\<br>&amp;\ge \operatorname{Num}(A,B,\bar C)+\operatorname{Num}(A,\bar B,\bar C)\<br>&amp;&#x3D;\operatorname{Num}(A,\bar C)\<br>&amp;&#x3D;\operatorname{RHS}<br>\end{aligned}<br>$$<br>But Bell found by experiment that:<br>$$<br>\operatorname{Num}(\uparrow_0,\downarrow_\theta)+\operatorname{Num}(\uparrow_\theta,\downarrow_{2\theta})&lt;\operatorname{Num}(\uparrow_0,\downarrow_{2\theta})<br>\<br>$$<br>Where the up and down arrows indicate the spin angular momentum of the electron. I think this can be explained only if the three binary states can be superposed.</p>
-<h2 id="Wave-Function"><a href="#Wave-Function" class="headerlink" title="Wave Function"></a>Wave Function</h2><h3 id="Postulate-of-Wavefunction"><a href="#Postulate-of-Wavefunction" class="headerlink" title="Postulate of Wavefunction"></a>Postulate of Wavefunction</h3><p>An essential postulate: The configuration or <em>state</em> of a quantum object is completely specified by a wavefunction denoted as $\psi(x)$, $\psi\in\mathbb{C}$ . </p>
-<p>Classical: $(\vec p,\vec x)\to$ Quantum: $\psi(\vec x)$</p>
-<p>Furthermore, $p(x)&#x3D;|\psi(x)|^2$ determines the probability (density) that an object in the state $\psi(x)$ will be found at position $x$. Note that the <em>dimension</em> of $\psi$ is <strong>square root of length</strong> since $\displaystyle \int|\psi|^2 \text{d}x&#x3D;1$.</p>
-<h3 id="De-Broglie-Relations"><a href="#De-Broglie-Relations" class="headerlink" title="De Broglie Relations"></a>De Broglie Relations</h3><p>From de Broglie’s generalization of momentum-wavelength relation of photon, we have<br>$$<br>\begin{aligned}<br>E&amp;&#x3D;\hbar\omega\<br>\vec p&amp;&#x3D;\hbar \vec k<br>\end{aligned}<br>$$<br>where $\hbar:&#x3D;h&#x2F;2\pi$.</p>
-<h3 id="Mathematics-of-Superposition"><a href="#Mathematics-of-Superposition" class="headerlink" title="Mathematics of Superposition"></a>Mathematics of Superposition</h3><p>Given to two possible states of a quantum system corresponding to two wavelengths $\psi_a$ and $\psi_b$, the system could also be in a superposition $\psi&#x3D;\alpha\psi_a+\beta\psi_b$ with $\alpha$ and $\beta$ in $\mathbb{C}$ satisfying normalization.</p>
-<p>Hence for the superposition state, we have the probability density<br>$$<br>\begin{aligned}<br>\mathbb{p}(x)&amp;&#x3D;|\alpha\psi_a(x)+\beta\psi_b(x)|^2\<br>&amp;&#x3D;|\alpha\psi_a(x)|^2+|\beta\psi_b(x)|^2+\alpha^<em>\beta\psi_a^</em>(x)\psi_b(x)+\alpha\beta^<em>\psi_a(x)\psi_b^</em>(x)</p>
-<p>\end{aligned}<br>$$<br>which exhibits quantum interference aside from the usual addition probability. It’s the interference between the different momentum that leads to certainty in the position.</p>
-<p>By using the tool of Fourier Transformation, we see that any wavefunction $\psi(x)$ can be expressed as a superposition of states $e^{ikx}$ with definite momenta $p&#x3D;k$ as<br>$$<br>\begin{aligned}<br>\psi(x)&amp;&#x3D;\frac{1}{\sqrt{2\pi}}\int_{-\infty}^\infty \widetilde \psi(x)e^{ikx}\text{d}k\<br>\widetilde\psi(k)&amp;&#x3D;\frac{1}{\sqrt{2\pi}}\int_{-\infty}^\infty \psi(x)e^{-ikx}\text{d}x.<br>\end{aligned}<br>$$<br>I think that means when state is expressed in wavefunction, position and momentum are tightly correlated, one could indicate the other.</p>
-<h2 id="Expectations"><a href="#Expectations" class="headerlink" title="Expectations"></a>Expectations</h2><h3 id="Uncertainty-and-Expectation"><a href="#Uncertainty-and-Expectation" class="headerlink" title="Uncertainty and Expectation"></a>Uncertainty and Expectation</h3><p>To characterize the uncertainty, we use the standard deviation<br>$$<br>\Delta a&#x3D;\sqrt{\langle a^2\rangle-\langle a\rangle^2}<br>$$</p>
-<p>The expectation value of a function of position <strong>in a given quantum state</strong> $\psi(x)$ is<br>$$<br>\langle f(x)\rangle &#x3D;\int_{-\infty}^\infty \psi^\star(x) f(x)\psi(x);\text dx.<br>$$<br>However, when we consider the expectation of momentum $\langle p\rangle$, we get problem: $p$ and $x$ cannot be measured simultaneously.</p>
-<p>( In fact we replace $f$ with $\hat f$ when compute the expectation value of an operator )</p>
-<h3 id="Hints-to-the-operator"><a href="#Hints-to-the-operator" class="headerlink" title="Hints to the operator"></a>Hints to the operator</h3><p>Notice some hints that indicate us to <em>operator</em>:</p>
-<ul>
-<li><p>For wavefunction $\psi&#x3D;e^{ikx}$,<br>$$<br>\begin{aligned}<br>\partial_x \psi&#x3D;ik\psi\implies \frac{\hbar}{i}\partial_x \psi &#x3D;\hbar k\psi&#x3D;p\cdot\psi<br>\end{aligned}<br>$$</p>
-</li>
-<li><p>Noether’s theorem states that <em>to every symmetry is associated a conserved quantity</em> .</p>
-<table>
-<thead>
-<tr>
-<th align="center">Symmetry</th>
-<th align="center">Conservation</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">Translation : $\vec x\to \vec x+\Delta \vec x$</td>
-<td align="center">Momentum : $\dot{\vec p}&#x3D;0$</td>
-</tr>
-<tr>
-<td align="center">Time : $t\to t+\Delta t$</td>
-<td align="center">Energy : $\dot E&#x3D;0$</td>
-</tr>
-<tr>
-<td align="center">Rotation : $\vec x \to \overleftrightarrow R\cdot \vec x$</td>
-<td align="center">Angular Momentum : $\dot{\vec L}&#x3D;0$</td>
-</tr>
-</tbody></table>
-</li>
-<li><p>For translations behave for functions,<br>$$<br>\begin{align}<br>f(x)\to f(x+l)&amp;&#x3D;f(x)+l\partial_x f(x)+\frac{l^2}{2}\partial_x^2 f(x)+\dots\<br>&amp;&#x3D;\sum_{n&#x3D;0}^{\infty} \frac{(l\partial_x)^n}{n!}f(x)\<br>&amp;&#x3D;e^{l\partial_x}f(x)<br>\end{align}<br>$$<br>Translations are generated by spatial derivatives $\partial_x$ and it should be associated with $p$. </p>
-<p>Similarly, $E\sim \partial_t,; L_z\sim\partial_\varphi$.</p>
-</li>
-</ul>
-<p>Finally, momentum in quantum mechanics is realized by an operator:<br>$$<br>\hat p&#x3D;\frac{\hbar}{i}\frac{\partial}{\partial x}.<br>$$<br>And we use operator $\hat p $ to compute expectation values:<br>$$<br>\lang p\rang&#x3D;\int_{-\infty}^\infty \psi^\star(x)\hat p \psi(x);\text dx<br>$$</p>
-<p>I think operator $\hat p$ is introduced more intuitively than mathematically. The key is that we want to calculate expectation of $p$ in a state associated with position $x$, but from uncertainty principle there is no meaning when $p$ and $x$ occured in one expression. Since momentum is related to position, we come out with operator. Then the $\lang p\rang$ is the expectation of the momentum that can be observed. (Only the momentum that is able to be observed can be taken out from  the operator)</p>
-<p>The very interesting thing of momentum operator is it can get distribution of momentum when there is a superposition.</p>
-<h2 id="Operators-and-the-Schr-ddot-o-dinger-Equation"><a href="#Operators-and-the-Schr-ddot-o-dinger-Equation" class="headerlink" title="Operators and the $Schr\ddot{o}dinger ;Equation$"></a>Operators and the $Schr\ddot{o}dinger ;Equation$</h2><h3 id="Common-operator"><a href="#Common-operator" class="headerlink" title="Common operator"></a>Common operator</h3><p>For each observable quantity we have an associate operator.</p>
-<ul>
-<li>Momentum : $\hat p&#x3D;-i\hbar \partial_x$</li>
-<li>Position: $\hat x &#x3D;x$</li>
-<li>Energy: $\hat E&#x3D;\displaystyle \frac{\hat p^2}{2m}+V(\hat x)&#x3D;-\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2}+V(x)$</li>
-</ul>
-<h3 id="Commutator-and-a-deep-equation"><a href="#Commutator-and-a-deep-equation" class="headerlink" title="Commutator and a deep equation"></a>Commutator and a deep equation</h3><p>To measure the importance of operator (act) order, we define the <em>commutator</em> :<br>$$<br>[\hat A,\hat B]&#x3D;\hat A\hat B-\hat B\hat A.<br>$$<br>And one deep and profound result we get is:<br>$$<br>[\hat x,\hat p]&#x3D;i\hbar \hat 1, \label{xp}<br>$$<br>which indicates the uncertainty principle. Assume the first thing we measure is accurate, then think about it, we cannot measure $x$ and $p$ both accurately, for the simple reason that their commutator is not zero: we cannot get the same result after the second one that is measured. Further more, when expressed in matrix, ($\ref{xp}$) is a very hard matrix equation and only infinite dimension matrix is can solve.</p>
-<h3 id="The-Schr-ddot-o-dinger-Equation"><a href="#The-Schr-ddot-o-dinger-Equation" class="headerlink" title="The $Schr\ddot{o}dinger ;Equation$"></a>The $Schr\ddot{o}dinger ;Equation$</h3><p>Actually $e^{ikx}$ is an eigenfunction of operator $\hat p$ and every state $\psi(x)$ can be generated by it from Fourier’s Theorem. </p>
-<p>From de Broglie, we know that any object is a wave, and consider a plane wave<br>$$<br>\psi(x,t;k)&#x3D;e^{i(kx-\omega t)},<br>$$<br>which has momentum $p&#x3D;\hbar k$ and energy $E&#x3D;\hbar \omega$. </p>
-<p>Similarly to hint of momentum, we notice<br>$$<br>i\hbar \frac{\partial\psi(x,t)}{\partial t}&#x3D;\hbar\omega \psi(x,t)&#x3D;E\psi(x,t),<br>$$</p>
-<p>which depicts the time evolution of energy $E$. But maybe we do not know what is energy $E$. </p>
-<p>A little change $E\to \hat E$ complete the equation and that is the $Schr\ddot{o}dinger ;Equation$ :<br>$$<br>\begin{align}<br>i\hbar \frac{\partial}{\partial t}\psi(x,t)&amp;&#x3D;\hat E \psi(x,t)\<br>i.e.\qquad i\hbar\frac{\partial \psi(x,t)}{\partial t}&amp;&#x3D;-\frac{\hbar^2}{2m}\frac{\partial^2 \psi(x,t)}{\partial x^2}+V(x)\psi(x,t).<br>\end{align}<br>$$<br>The equation describing the time evolution of a quantum state.</p>
-<p>It is analogous to the equation of motion $\vec F&#x3D;\dot {\vec p} $ and $\hat E$ is not defined as the operator $i\hbar\partial_t$ any more than $\vec F$ is defined to be $\hat{\vec p}$ .</p>
-</div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
-        var options = {
-            selector: '.gallery-item'
-        };
-        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
-        }</script>]]></content>
-      <categories>
-        <category>Notes</category>
-        <category>Physics</category>
-      </categories>
-      <tags>
-        <tag>physics</tag>
       </tags>
   </entry>
   <entry>
@@ -8009,8 +7670,8 @@ ssh -L port:127.0.0.1:port username@ip
         <category>Optics</category>
       </categories>
       <tags>
-        <tag>projects</tag>
         <tag>optics</tag>
+        <tag>projects</tag>
       </tags>
   </entry>
   <entry>
@@ -8043,8 +7704,8 @@ ssh -L port:127.0.0.1:port username@ip
         <category>Optics</category>
       </categories>
       <tags>
-        <tag>projects</tag>
         <tag>optics</tag>
+        <tag>projects</tag>
         <tag>coding</tag>
       </tags>
   </entry>
@@ -8097,8 +7758,8 @@ ssh -L port:127.0.0.1:port username@ip
         <category>Optics</category>
       </categories>
       <tags>
-        <tag>projects</tag>
         <tag>optics</tag>
+        <tag>projects</tag>
       </tags>
   </entry>
   <entry>
@@ -8137,8 +7798,8 @@ ssh -L port:127.0.0.1:port username@ip
         <category>Optics</category>
       </categories>
       <tags>
-        <tag>projects</tag>
         <tag>optics</tag>
+        <tag>projects</tag>
       </tags>
   </entry>
   <entry>
@@ -8213,8 +7874,8 @@ ssh -L port:127.0.0.1:port username@ip
         <category>Optics</category>
       </categories>
       <tags>
-        <tag>projects</tag>
         <tag>optics</tag>
+        <tag>projects</tag>
       </tags>
   </entry>
   <entry>
@@ -8241,8 +7902,8 @@ ssh -L port:127.0.0.1:port username@ip
         <category>Optics</category>
       </categories>
       <tags>
-        <tag>projects</tag>
         <tag>optics</tag>
+        <tag>projects</tag>
       </tags>
   </entry>
   <entry>
@@ -10040,6 +9701,166 @@ $$
       </tags>
   </entry>
   <entry>
+    <title>神经网络学习</title>
+    <url>/Computer-Science/Deep%20Learning/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="神经网络-学习笔记"><a href="#神经网络-学习笔记" class="headerlink" title="神经网络 学习笔记"></a>神经网络 学习笔记</h1><p>学习资源: <a href="">neuralnetworksanddeeplearning.com</a></p>
+<h2 id="Chapter-1、2"><a href="#Chapter-1、2" class="headerlink" title="Chapter 1、2"></a>Chapter 1、2</h2><h3 id="1-1-基本概念"><a href="#1-1-基本概念" class="headerlink" title="1.1 基本概念"></a>1.1 基本概念</h3><ul>
+<li><p>activation function 激活函数&#x2F;传递函数   定义了该节点在给定的输入或输入的集合下的输出，比如 sigmoid function</p>
+</li>
+<li><p>perceptron model 感知器：输入 $0,1$ 二值函数，输出 $0,1$ 二值函数</p>
+</li>
+<li><p>sigmoid neurons  S 神经元  </p>
+<p>​	中间部分更精细，$\displaystyle\sigma(z)&#x3D;\frac{1}{1+e^{-z}}$ 输入二值，输出为 $[0,1]$ 之间的数，极限性质和感知器一样</p>
+</li>
+<li><p>feedforward neural networks 前馈神经网络</p>
+<p>​	没有反馈的神经网络，由输入层(input layer)、隐藏层(hidden layer)、输出层(output layer)构成</p>
+</li>
+</ul>
+<p>$ \ $ <span id="more"></span></p>
+<h3 id="1-2-stochastic-gradient-descent-随机梯度下降"><a href="#1-2-stochastic-gradient-descent-随机梯度下降" class="headerlink" title="1.2 stochastic gradient descent 随机梯度下降"></a>1.2 stochastic gradient descent 随机梯度下降</h3><h4 id="1-2-1-参数"><a href="#1-2-1-参数" class="headerlink" title="1.2.1 参数"></a>1.2.1 参数</h4><ul>
+<li>$x$ ：输入的训练集（一个矩阵，每一列是一次单独的输入）,  $y$ ：最终输出，$y&#x3D;w\cdot x+b$</li>
+<li>$w$：weights，由矩阵组成的向量。$w_j$ 是一个 $m\times n$ 型矩阵，连接 $j-1$ 层和 $j$ 层，其中 $j-1$ 层有 $n$ 个神经元，$ j $ 层有 $m$ 个神经元</li>
+<li>$b$ ：biases，由 $ m\times 1$ 型矩阵组成的向量。 $b_k$ 是一个$m\times 1$ 型矩阵，连接 $j-1$ 层和 $j$ 层，其中第 $j$ 层有 $m$ 个神经元</li>
+<li>Cost function ： $ C(w,b)&#x3D;\displaystyle\frac{1}{2n}\sum_x |y(x)-a |^2&#x3D;\frac{1}{2n}\sum_{i&#x3D;1}^{n}[y(x^{(i)})-a^{(i)}]^2 $</li>
+</ul>
+<h4 id="1-2-2-方法"><a href="#1-2-2-方法" class="headerlink" title="1.2.2 方法"></a>1.2.2 方法</h4><ul>
+<li>对于整个训练集，用随机梯度下降法使损失函数尽可能小</li>
+<li>先将训练集打乱，再按给定的小批训练集大小等间隔取小批训练集（相当于随机取样），每次选择更优的 $w,b$ 使损失函数一步步减小</li>
+</ul>
+<h4 id="1-2-3-保证每次都获得更优的-w-b-："><a href="#1-2-3-保证每次都获得更优的-w-b-：" class="headerlink" title="1.2.3 保证每次都获得更优的 $w,b$："></a>1.2.3 保证每次都获得更优的 $w,b$：</h4><p>1. </p>
+<p>$$<br>\displaystyle \nabla C&#x3D;(\frac{\partial C}{\partial v_1},\frac{\partial C}{\partial v_2})^T , \quad \vec v_1\equiv v_1\equiv w,\vec v_2\equiv v_2\equiv b\ \displaystyle\Delta C\approx  \frac{\partial C}{\partial w}\Delta v_1+\frac{\partial C}{\partial b}\Delta v_2&#x3D;\Delta v\cdot \nabla C \<br>&#x3D;&gt; take\quad \Delta v&#x3D;(\Delta v_1,\Delta v_2)&#x3D;-\eta \nabla C,\quad \eta&gt;0\<br>\begin{aligned}<br>\therefore C&amp;:&#x3D;C+\Delta C&#x3D;C-\eta |\nabla C |^2\<br>v_1&amp; :&#x3D;v_1-\eta\cdot\frac{\partial C}{\partial v_1}\<br>v_2&amp;:&#x3D;v_2-\eta\cdot\frac{\partial C}{\partial v_2s}<br>\end{aligned}<br>$$</p>
+<ol start="2">
+<li>分量式：</li>
+</ol>
+<p>$$<br>\begin{aligned}<br>w_{jk}&amp;:&#x3D;w_{jk}-\eta\cdot \frac{\partial C}{\partial w_{jk}}&#x3D;w_{jk}-\eta\cdot \nabla C_{w_{jk}}\approx w_{jk}-\eta\cdot \frac{1}{m}\sum_{i&#x3D;1}^m \frac{\partial C}{\partial w_{jk}^{(i)}} \<br>b_{k}&amp;:&#x3D;b_{ k}-\eta\cdot \frac{\partial C}{\partial b_{k}}&#x3D;b_{k}-\eta\cdot \nabla C_{b_{k}}\approx b_{k}-\eta\cdot\frac{1}{m}\sum_{i&#x3D;1}^m \frac{\partial C}{\partial b_{k}^{(i)}}<br>\end{aligned}<br>$$</p>
+<h2 id="2-BP算法（反向传播-back-propagate-）"><a href="#2-BP算法（反向传播-back-propagate-）" class="headerlink" title="2 BP算法（反向传播 back propagate ）"></a>2 BP算法（反向传播 back propagate ）</h2><p>目的：快速计算 $\displaystyle \frac{\partial C}{\partial w},\frac{\partial C}{\partial b}$ .</p>
+<h3 id="2-1-原理："><a href="#2-1-原理：" class="headerlink" title="2.1 原理："></a>2.1 原理：</h3><p>最终结果产生的偏差是由于每个神经元产生的误差叠加起来造成的。通过前向反馈得到的结果若与正确结果有偏差，则从此偏差反向推导，可得到各层神经元产生的误差。</p>
+<h3 id="2-2-符号表示"><a href="#2-2-符号表示" class="headerlink" title="2.2 符号表示"></a>2.2 符号表示</h3><ul>
+<li><p>$w_{jk}^l$ ：连接第 $l-1$层第 $k$ 个神经元和第 $l$ 层第 $j$ 个神经元的权重</p>
+</li>
+<li><p>$w^l$ ：连接第 $l-1$ 和第 $l$ 层网络的权重矩阵</p>
+</li>
+<li><p>$b_j^l$ ：第 $l$ 层第 $j$ 个神经元的 bias</p>
+</li>
+<li><p>$z_j^l$ ：第 $l$ 层网络的带权输入  $z_j^l&#x3D;\displaystyle\sum_k w_{jk}^l a_k^{l-1}+b_j^l$，$z^l&#x3D;w^l a^{l-1}+b^l$</p>
+</li>
+<li><p>$\delta_j^l$ ：第 $l$ 层第 $j$ 个神经元产生的误差,，定义 $\displaystyle \delta^l_j \equiv \frac{\partial C}{\partial z^l_j}$</p>
+</li>
+<li><p>$a_j^l$ ：第 $l$ 层网络的第 $j$ 个神经元的激活量，$a_j^l&#x3D;\sigma(z_j^l)$</p>
+</li>
+<li><p>$C$ ：损失函数，用小批量输入的平均值近似。</p>
+</li>
+</ul>
+<h3 id="2-3-重要的关系公式"><a href="#2-3-重要的关系公式" class="headerlink" title="2.3 重要的关系公式"></a>2.3 重要的关系公式</h3><ol start="0">
+<li><p>注：推导中的除法 ‘’$\bigg &#x2F;$ ‘’、乘法 $\odot$ （ Hadamard Product）均为<strong>elementwise</strong> </p>
+</li>
+<li><p>$$<br>C&#x3D;\displaystyle \frac{1}{2n}\sum_x |y(x)-a^L(x)|^2&#x3D;\frac{1}{n}\sum_x ^n C(x)\approx\frac{1}{m}\sum_x^m C(x)<br>\ C(x)&#x3D;\frac{1}{2}|y-a^L(x)|^2&#x3D;\frac{1}{2}\sum_i \big(y_i-a_i^L(x)\big)^2<br>$$</p>
+</li>
+<li><p>$$<br>a_j^l&#x3D;\sigma\bigg(\sum_k w_{jk}^l a_k^{l-1}+b_j^l\bigg)<br>\ a^l&#x3D;\sigma\bigg(w^l a^{l-1}+b^l\bigg)<br>$$</p>
+</li>
+<li><p>$$<br>\delta^l&#x3D;\frac{\partial C}{\partial b^l}\bigg&#x2F; \frac{\partial z^l}{\partial b^l}&#x3D;\frac{\partial C}{\partial b^l},\qquad \frac{\partial C}{\partial b^l}\triangleq(\frac{\partial C}{\partial b_1^l},\cdots,\frac{\partial C}{\partial b_{N(l)}^l})^T \tag{1}<br>$$</p>
+</li>
+<li><p>$$<br>\delta_j^l&#x3D;\frac{\partial C}{\partial w_{jk}^l}\bigg &#x2F;\frac{\partial z^l}{\partial w_{jk}^l}&#x3D;\frac{\partial C}{\partial w_{jk}^l}\big&#x2F; a_k^{l-1}<br>$$</p>
+</li>
+</ol>
+<p>$$<br>i .e. \qquad \frac{\partial C}{\partial w_{jk}^l}&#x3D;a_{k}^{l-1}\cdot  \delta_j^l \qquad &#x3D;&gt;\nabla C_{w^l}&#x3D;\delta^l\cdot (a^{l-1})^T \tag{2}<br>$$</p>
+<p>5.<br>   $$<br>   \delta^L&#x3D;\frac{\partial C}{\partial a^L}\odot \frac{\partial a^L}{\partial z^L}&#x3D;\frac{\partial C}{\partial a^L}\odot\sigma’(z^L)&#x3D;(a^L-y) \odot \sigma’(z^L)\tag{3}<br>   $$</p>
+<ol start="6">
+<li><p><strong>Move error backward:</strong><br>$$<br>\begin{eqnarray}<br>z^{l+1}<em>k &#x3D; \sum_j w^{l+1}</em>{kj} a^l_j +b^{l+1}<em>k &#x3D; \sum_j w^{l+1}</em>{kj} \sigma(z^l_j) +b^{l+1}_k<br>&#x3D;&gt;\frac{\partial z^{l+1}<em>k}{\partial z^l_j} &#x3D; w^{l+1}</em>{kj} \sigma’(z^l_j)<br>\end{eqnarray}<br>$$</p>
+<p>$$<br>\delta_j^l&#x3D;\sum_k \frac{\partial C}{\partial z_k^{l+1}}\cdot \frac{\partial z_k^{l+1}}{\partial z_j^l}&#x3D;\sum_{k&#x3D;1}^{N(l)}\delta_k^{l+1}\cdot w_{kj}^{l+1}\cdot \sigma’(z_j^l)<br>$$</p>
+<p>$$<br>&#x3D;&gt; \delta^l&#x3D;\big((w^{l+1})^T\sigma’(z^l)\big)\odot \delta^{l+1}\tag{4}<br>$$</p>
+</li>
+</ol>
+<h3 id="2-4-实现步骤"><a href="#2-4-实现步骤" class="headerlink" title="2.4 实现步骤"></a>2.4 实现步骤</h3><ol>
+<li><p>feedforward :  得到 $z^L$ 和相应的 $a^L$<br>$$<br>a^{x,l} &#x3D; \sigma(z^{x,l})<br>$$</p>
+</li>
+<li><p>output error :<br>$$<br>\delta^{x,L} &#x3D; \nabla_a C_x \odot \sigma’(z^{x,L})<br>$$</p>
+</li>
+<li><p>error back propagate :<br>$$<br>\delta^{x,l} &#x3D; ((w^{l+1})^T \delta^{x,l+1})<br>  \odot \sigma’(z^{x,l})<br>$$</p>
+</li>
+<li><p>update weights and biases :<br>$$<br>\begin{aligned}<br>w_{jk}&amp;:&#x3D;w_{jk}-\eta\cdot \nabla C_{w_{jk}}\approx w_{jk}-\eta\cdot \frac{1}{m}\sum_{i&#x3D;1}^m \frac{\partial C}{\partial w_{jk}^{(x_i)}}&#x3D;w_{jk}-\eta\cdot\frac{1}{m}\sum_{i&#x3D;1}^m \big(a_k^{l-1}\delta_j^{l}\big)^{(x_i)}\<br>b_{k}&amp;:&#x3D;b_{k}-\eta\cdot \nabla C_{b_{k}}\approx b_{k}-\eta\cdot\frac{1}{m}\sum_{i&#x3D;1}^m \frac{\partial C}{\partial b_{k}^{(x_i)}}&#x3D;b_{k}-\eta\cdot\frac{1}{m}\sum_{i&#x3D;1}^m \big(\delta_k^{l}\big)^{(x_i)}<br>\end{aligned}<br>$$</p>
+<p>即：<br>$$<br>w^l \rightarrow<br>  w^l-\frac{\eta}{m} \sum_x \delta^{x,l} (a^{x,l-1})^T<br> \b^l \rightarrow b^l-\frac{\eta}{m}<br>  \sum_x \delta^{x,l}<br>$$</p>
+</li>
+</ol>
+<h3 id="2-5-代码实现"><a href="#2-5-代码实现" class="headerlink" title="2.5 代码实现"></a>2.5 代码实现</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Network</span>(<span class="title class_ inherited__">object</span>):</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, sizes</span>):</span><br><span class="line">        <span class="comment"># 生成神经网络 </span></span><br><span class="line">        self.num_layers = <span class="built_in">len</span>(sizes)</span><br><span class="line">        self.sizes = sizes</span><br><span class="line">        self.biases = [np.random.randn(y, <span class="number">1</span>) <span class="keyword">for</span> y <span class="keyword">in</span> sizes[<span class="number">1</span>:]]</span><br><span class="line">        self.weights = [np.random.randn(y, x)</span><br><span class="line">                        <span class="keyword">for</span> x, y <span class="keyword">in</span> <span class="built_in">zip</span>(sizes[:-<span class="number">1</span>], sizes[<span class="number">1</span>:])]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">feedforward</span>(<span class="params">self, a</span>):</span><br><span class="line">        <span class="comment"># 激活神经元，向后面的层产生反馈</span></span><br><span class="line">        <span class="keyword">for</span> b, w <span class="keyword">in</span> <span class="built_in">zip</span>(self.biases, self.weights):</span><br><span class="line">            a = sigmoid(np.dot(w, a) + b)</span><br><span class="line">        <span class="keyword">return</span> a</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">SGD</span>(<span class="params">self, training_data, epochs, mini_batch_size, eta,</span></span><br><span class="line"><span class="params">            test_data=<span class="literal">None</span></span>):</span><br><span class="line">        <span class="comment"># 随机梯度下降 Stochastic Gradient Descent</span></span><br><span class="line">        <span class="comment"># epochs 训练次数, mini_batch_size 每次选取的小训练集大小, eta 学习率 由自己设定</span></span><br><span class="line">        <span class="keyword">if</span> test_data:</span><br><span class="line">            test_data = <span class="built_in">list</span>(test_data)  </span><br><span class="line">            n_test = <span class="built_in">len</span>(test_data)</span><br><span class="line">        training_data = <span class="built_in">list</span>(training_data)</span><br><span class="line">        n = <span class="built_in">len</span>(training_data)</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(epochs):</span><br><span class="line">            random.shuffle(training_data)</span><br><span class="line">            mini_batches = [</span><br><span class="line">                training_data[k:k + mini_batch_size]</span><br><span class="line">                <span class="keyword">for</span> k <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, n, mini_batch_size)]  </span><br><span class="line">            <span class="keyword">for</span> mini_batch <span class="keyword">in</span> mini_batches:</span><br><span class="line">                self.update_mini_batch(mini_batch, eta)</span><br><span class="line">            <span class="keyword">if</span> test_data:</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">&quot;Epoch &#123;0&#125;: &#123;1&#125; / &#123;2&#125;&quot;</span>.<span class="built_in">format</span>(j,</span><br><span class="line">                                                    self.evaluate(test_data), n_test))</span><br><span class="line"></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">&quot;Epoch &#123;0&#125; complete&quot;</span>.<span class="built_in">format</span>(j))</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">update_mini_batch</span>(<span class="params">self, mini_batch, eta</span>):</span><br><span class="line">        <span class="comment"># 更新 w 和 b</span></span><br><span class="line">        nabla_b = [np.zeros(b.shape) <span class="keyword">for</span> b <span class="keyword">in</span> self.biases]</span><br><span class="line">        nabla_w = [np.zeros(w.shape) <span class="keyword">for</span> w <span class="keyword">in</span> self.weights]</span><br><span class="line">        <span class="keyword">for</span> x, y <span class="keyword">in</span> mini_batch:</span><br><span class="line">            delta_nabla_b, delta_nabla_w = self.backprop(x, y)</span><br><span class="line">            nabla_b = [nb + dnb <span class="keyword">for</span> nb, dnb <span class="keyword">in</span> <span class="built_in">zip</span>(nabla_b, delta_nabla_b)]</span><br><span class="line">            nabla_w = [nw + dnw <span class="keyword">for</span> nw, dnw <span class="keyword">in</span> <span class="built_in">zip</span>(nabla_w, delta_nabla_w)]</span><br><span class="line">        self.weights = [w - (eta / <span class="built_in">len</span>(mini_batch)) * nw</span><br><span class="line">                        <span class="keyword">for</span> w, nw <span class="keyword">in</span> <span class="built_in">zip</span>(self.weights, nabla_w)]</span><br><span class="line">        self.biases = [b - (eta / <span class="built_in">len</span>(mini_batch)) * nb</span><br><span class="line">                       <span class="keyword">for</span> b, nb <span class="keyword">in</span> <span class="built_in">zip</span>(self.biases, nabla_b)]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">backprop</span>(<span class="params">self, x, y</span>):</span><br><span class="line">        <span class="comment"># 反向传播算法</span></span><br><span class="line">        nabla_b = [np.zeros(b.shape) <span class="keyword">for</span> b <span class="keyword">in</span> self.biases]</span><br><span class="line">        nabla_w = [np.zeros(w.shape) <span class="keyword">for</span> w <span class="keyword">in</span> self.weights]</span><br><span class="line">        <span class="comment"># feedforward</span></span><br><span class="line">        activation = x</span><br><span class="line">        activations = [x]  <span class="comment"># list to store all the activations, layer by layer</span></span><br><span class="line">        zs = []  <span class="comment"># list to store all the z vectors, layer by layer</span></span><br><span class="line">        <span class="keyword">for</span> b, w <span class="keyword">in</span> <span class="built_in">zip</span>(self.biases, self.weights):</span><br><span class="line">            z = np.dot(w, activation) + b</span><br><span class="line">            zs.append(z)</span><br><span class="line">            activation = sigmoid(z)</span><br><span class="line">            activations.append(activation)</span><br><span class="line">        <span class="comment"># backward pass</span></span><br><span class="line">        delta = self.cost_derivative(activations[-<span class="number">1</span>], y) * \</span><br><span class="line">            sigmoid_prime(zs[-<span class="number">1</span>])<span class="comment"># \delta^L</span></span><br><span class="line">        nabla_b[-<span class="number">1</span>] = delta</span><br><span class="line">        nabla_w[-<span class="number">1</span>] = np.dot(delta, activations[-<span class="number">2</span>].transpose())</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> l <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>, self.num_layers):</span><br><span class="line">            z = zs[-l]</span><br><span class="line">            sp = sigmoid_prime(z)</span><br><span class="line">            delta = np.dot(self.weights[-l + <span class="number">1</span>].transpose(), delta) * sp</span><br><span class="line">            nabla_b[-l] = delta</span><br><span class="line">            nabla_w[-l] = np.dot(delta, activations[-l - <span class="number">1</span>].transpose())</span><br><span class="line">        <span class="keyword">return</span> (nabla_b, nabla_w)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">evaluate</span>(<span class="params">self, test_data</span>):</span><br><span class="line">       <span class="comment"># 返回输出结果和训练数据集的正确结果相同的个数</span></span><br><span class="line">        test_results = [(np.argmax(self.feedforward(x)), y)</span><br><span class="line">                        <span class="keyword">for</span> (x, y) <span class="keyword">in</span> test_data]</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">sum</span>(<span class="built_in">int</span>(x == y) <span class="keyword">for</span> (x, y) <span class="keyword">in</span> test_results) </span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">cost_derivative</span>(<span class="params">self, output_activations, y</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;Return the vector of partial derivatives \partial C_x /</span></span><br><span class="line"><span class="string">        \partial a for the output activations.&quot;&quot;&quot;</span></span><br><span class="line">        <span class="keyword">return</span> (output_activations - y)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Miscellaneous functions</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">sigmoid</span>(<span class="params">z</span>):</span><br><span class="line">    <span class="comment"># The sigmoid function.</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">1.0</span> / (<span class="number">1.0</span> + np.exp(-z))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">sigmoid_prime</span>(<span class="params">z</span>):</span><br><span class="line">    <span class="comment"># Derivative of the sigmoid function.</span></span><br><span class="line">    <span class="keyword">return</span> sigmoid(z) * (<span class="number">1</span> - sigmoid(z))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="Chapter-3"><a href="#Chapter-3" class="headerlink" title="Chapter 3"></a>Chapter 3</h2><h3 id="3-1-交叉熵"><a href="#3-1-交叉熵" class="headerlink" title="3.1 交叉熵"></a>3.1 交叉熵</h3><p>对错误的惩罚力度加大，学习速率更快</p>
+<h3 id="3-2-Softmax"><a href="#3-2-Softmax" class="headerlink" title="3.2 Softmax"></a>3.2 Softmax</h3><p>输出转化为概率分布</p>
+<h3 id="3-3-其他损失函数"><a href="#3-3-其他损失函数" class="headerlink" title="3.3 其他损失函数"></a>3.3 其他损失函数</h3><h3 id="3-4-调整超参数的方法"><a href="#3-4-调整超参数的方法" class="headerlink" title="3.4 调整超参数的方法"></a>3.4 调整超参数的方法</h3><ul>
+<li><p>正则化<br>$$<br>C&#x3D;C_0+\frac{\lambda}{n}|w|^2<br>$$<br>不能提升 $C_0$ ，权重 $w$ 会下降</p>
+</li>
+<li><p>初始化</p>
+<p>考虑 $z&#x3D;\sum_{j&#x3D;1}^n w_jz_j+b$, 初始化 $w\sim N(0,1&#x2F;n)$</p>
+</li>
+</ul>
+<h2 id="Chapter-4"><a href="#Chapter-4" class="headerlink" title="Chapter 4"></a>Chapter 4</h2><p>神经网络可以计算任何函数。</p>
+<h2 id="Chapter-5"><a href="#Chapter-5" class="headerlink" title="Chapter 5"></a>Chapter 5</h2><ul>
+<li><p>vanishing gradient</p>
+</li>
+<li><p>exploding gradient</p>
+</li>
+</ul>
+<h2 id="Chapter-6-CNN"><a href="#Chapter-6-CNN" class="headerlink" title="Chapter 6 CNN"></a>Chapter 6 CNN</h2><h3 id="6-1-架构"><a href="#6-1-架构" class="headerlink" title="6.1 架构"></a>6.1 架构</h3><ul>
+<li>卷积层<ul>
+<li>共享权重</li>
+<li>提取特征</li>
+</ul>
+</li>
+<li>池化层<ul>
+<li>减少参量</li>
+</ul>
+</li>
+<li>全连层<ul>
+<li>二维压缩成一维，方便输出</li>
+</ul>
+</li>
+<li>Softmax层<ul>
+<li>输出概率分布</li>
+</ul>
+</li>
+</ul>
+<h3 id="6-2-代码：-with-pytorch"><a href="#6-2-代码：-with-pytorch" class="headerlink" title="6.2 代码： with pytorch"></a>6.2 代码： with pytorch</h3><h4 id="6-2-1-数据载入"><a href="#6-2-1-数据载入" class="headerlink" title="6.2.1 数据载入"></a>6.2.1 数据载入</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">train_data = torchvision.datasets.MNIST(</span><br><span class="line">    root=<span class="string">&#x27;./&#x27;</span>,    <span class="comment"># 保存或者提取位置</span></span><br><span class="line">    train=<span class="literal">True</span>, </span><br><span class="line">    <span class="comment"># 转换 PIL.Image or numpy.ndarray</span></span><br><span class="line">    transform=torchvision.transforms.ToTensor(),</span><br><span class="line">    download=DOWNLOAD_MNIST,</span><br><span class="line">)</span><br><span class="line"><span class="comment"># print(train_data.data.shape)</span></span><br><span class="line"><span class="comment">#train_data.data : (60000,28,28)</span></span><br><span class="line"><span class="comment"># train_data.targets : (60000)</span></span><br><span class="line">test_data = torchvision.datasets.MNIST(root=<span class="string">&#x27;./&#x27;</span>, train=<span class="literal">False</span>)</span><br><span class="line"><span class="comment"># test_data 包括：test_data.data 和 test_data.targets</span></span><br><span class="line"><span class="comment">#test_data.data : (10000,28,28)</span></span><br><span class="line"><span class="comment">#test_data.targets : (10000)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 批训练 50samples, 1 channel, 28x28 (50, 1, 28, 28)</span></span><br><span class="line">train_batches = Data.DataLoader(</span><br><span class="line">    dataset=train_data, batch_size=BATCH_SIZE, shuffle=<span class="literal">True</span>)</span><br><span class="line"><span class="comment"># print(train_batches.dataset.targets.shape</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 测试前2000个</span></span><br><span class="line">test_x = torch.unsqueeze(test_data.data, dim=<span class="number">1</span>).<span class="built_in">type</span>(torch.FloatTensor)[</span><br><span class="line">    :<span class="number">2000</span>] / <span class="number">255.0</span>  <span class="comment"># shape from (2000, 28, 28) to (2000, 1, 28, 28), value in range(0,1)</span></span><br><span class="line">test_y = test_data.targets[:<span class="number">2000</span>]</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="6-2-2-卷积神经网络构建"><a href="#6-2-2-卷积神经网络构建" class="headerlink" title="6.2.2 卷积神经网络构建"></a>6.2.2 卷积神经网络构建</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">CNN</span>(nn.Module):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">super</span>(CNN, self).__init__()</span><br><span class="line">        self.conv1 = nn.Sequential(  <span class="comment"># input shape (1, 28, 28)</span></span><br><span class="line">            nn.Conv2d(</span><br><span class="line">                in_channels=<span class="number">1</span>,      <span class="comment"># input height</span></span><br><span class="line">                out_channels=<span class="number">16</span>,    <span class="comment"># n_filters i.e. number of features</span></span><br><span class="line">                kernel_size=<span class="number">5</span>,      <span class="comment"># filter size</span></span><br><span class="line">                stride=<span class="number">1</span>,           <span class="comment"># filter movement/step</span></span><br><span class="line">                <span class="comment"># 如果想要 con2d 出来的图片长宽没有变化, padding=(kernel_size-1)/2 当 stride=1</span></span><br><span class="line">                padding=<span class="number">2</span>,</span><br><span class="line">            ),      <span class="comment"># -&gt; (16, 28, 28)</span></span><br><span class="line">            nn.ReLU(),    <span class="comment"># activation</span></span><br><span class="line">            nn.MaxPool2d(kernel_size=<span class="number">2</span>),    <span class="comment"># -&gt; (16, 14, 14)</span></span><br><span class="line">        )</span><br><span class="line">        self.conv2 = nn.Sequential(  <span class="comment"># input shape (16, 14, 14)</span></span><br><span class="line">            nn.Conv2d(<span class="number">16</span>, <span class="number">32</span>, <span class="number">5</span>, <span class="number">1</span>, <span class="number">2</span>),  <span class="comment"># output shape (32, 14, 14)</span></span><br><span class="line">            nn.ReLU(),  <span class="comment"># activation</span></span><br><span class="line">            nn.MaxPool2d(<span class="number">2</span>),  <span class="comment"># output shape (32, 7, 7)</span></span><br><span class="line">        )</span><br><span class="line">        <span class="comment"># fully connected layer, output 10 classes</span></span><br><span class="line">        self.fc1 = nn.Linear(<span class="number">32</span> * <span class="number">7</span> * <span class="number">7</span>, <span class="number">100</span>)</span><br><span class="line">        self.fc2 = nn.Linear(<span class="number">100</span>, <span class="number">10</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">forward</span>(<span class="params">self, x</span>):</span><br><span class="line">        x = self.conv1(x)</span><br><span class="line">        x = self.conv2(x)</span><br><span class="line">        x = x.view(x.size(<span class="number">0</span>), -<span class="number">1</span>)   <span class="comment"># 展平多维的卷积图成 (batch_size, 32 * 7 * 7)</span></span><br><span class="line">        x = torch.sigmoid(self.fc1(x))</span><br><span class="line">        x = self.fc2(x)</span><br><span class="line">        <span class="keyword">return</span> x</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="6-2-3-反向传播、训练神经网络"><a href="#6-2-3-反向传播、训练神经网络" class="headerlink" title="6.2.3 反向传播、训练神经网络"></a>6.2.3 反向传播、训练神经网络</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">cnn = CNN()</span><br><span class="line">optimizer = torch.optim.Adam(cnn.parameters(), lr=LR) <span class="comment">#adam算法</span></span><br><span class="line">loss_func = nn.CrossEntropyLoss()  <span class="comment"># Softmax–Log–NLLLoss，自动输出log-softmax</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">train</span>():</span><br><span class="line">    <span class="keyword">for</span> epoch <span class="keyword">in</span> <span class="built_in">range</span>(epochs):</span><br><span class="line">        <span class="comment"># 分配 batch data, normalize x when iterate train_loader</span></span><br><span class="line">        <span class="keyword">for</span> step, (b_x, b_y) <span class="keyword">in</span> <span class="built_in">enumerate</span>(train_batches):  <span class="comment"># enumerate 添加索引可便历</span></span><br><span class="line">            <span class="comment"># print(b_x.shape)--&gt;(50,1,28,28)</span></span><br><span class="line">            <span class="comment"># print(b_y.shape)--&gt;(50)</span></span><br><span class="line">            <span class="comment"># 1200组</span></span><br><span class="line">            output = cnn(b_x)               <span class="comment"># cnn output</span></span><br><span class="line">            loss = loss_func(output, b_y)   <span class="comment"># cross entropy loss</span></span><br><span class="line">            optimizer.zero_grad()           <span class="comment"># clear gradients for this training step</span></span><br><span class="line">            loss.backward()                 <span class="comment"># backpropagation, compute gradients</span></span><br><span class="line">            optimizer.step()                <span class="comment"># apply gradients</span></span><br><span class="line">            <span class="keyword">if</span> step % <span class="number">100</span> == <span class="number">0</span>:</span><br><span class="line">                test_output = cnn(test_x)</span><br><span class="line">                pred_y = torch.<span class="built_in">max</span>(test_output, <span class="number">1</span>)[</span><br><span class="line">                    <span class="number">1</span>].data.numpy()  <span class="comment"># [0]:一行中的最大值,[1]:最大值的索引</span></span><br><span class="line">                accuracy = <span class="built_in">float</span>((pred_y == test_y.data.numpy()).astype(</span><br><span class="line">                    <span class="built_in">int</span>).<span class="built_in">sum</span>()) / <span class="built_in">float</span>(test_y.size(<span class="number">0</span>))</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">&#x27;Epoch: &#x27;</span>, epoch, <span class="string">&#x27;| train loss: %.4f&#x27;</span> %</span><br><span class="line">                      loss.data.numpy(), <span class="string">&#x27;| test accuracy: %.2f&#x27;</span> % accuracy)</span><br><span class="line">    torch.save(cnn.state_dict(), <span class="string">&quot;cnn_net_params.pkl&quot;</span>)</span><br><span class="line"></span><br><span class="line">train()</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="6-2-4-参数存储与加载"><a href="#6-2-4-参数存储与加载" class="headerlink" title="6.2.4 参数存储与加载"></a>6.2.4 参数存储与加载</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">torch.save(cnn.state_dict(), <span class="string">&quot;cnn_net_params.pkl&quot;</span>)<span class="comment">#保存训练好的参数</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">cnn = CNN()</span><br><span class="line">cnn.load_state_dict(torch.load(<span class="string">&#x27;cnn_net_params.pkl&#x27;</span>))<span class="comment">#加载参数</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+<p>其他：关于深度学习和图像处理卷积的定义问题：深度学习中conv2d卷积层其实是无所谓是否翻转的，因为所有的weights也就是kernel其实是随机初始化的。那么每次的更新迭代都是为了去寻找一个最合适的kernel，所以是否翻转也变的无关紧要了。</p>
+</div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script>]]></content>
+      <categories>
+        <category>Notes</category>
+        <category>Deep Learning</category>
+      </categories>
+      <tags>
+        <tag>deep learning</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Python Notes</title>
     <url>/Computer-Science/Python-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="Python-学习笔记"><a href="#Python-学习笔记" class="headerlink" title="Python 学习笔记"></a>Python 学习笔记</h1><h2 id="Raw-Python"><a href="#Raw-Python" class="headerlink" title="Raw Python"></a>Raw Python</h2><p>参考：<a href="https://docs.python.org/zh-cn/3.9/reference/expressions.html#lambda">官方文档</a></p>
@@ -10273,6 +10094,195 @@ $$
       </tags>
   </entry>
   <entry>
+    <title>Image Processing 学习笔记</title>
+    <url>/Computer-Science/Deep%20Learning/Image-Processing%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="图像信息处理"><a href="#图像信息处理" class="headerlink" title="图像信息处理"></a>图像信息处理</h1><p>2020年寒假自学的图像信息处理，这是笔记。</p>
+<h2 id="1-灰度变换与空间滤波"><a href="#1-灰度变换与空间滤波" class="headerlink" title="1  灰度变换与空间滤波"></a>1  灰度变换与空间滤波</h2><h3 id="1-1-灰度变换：-s-x3D-T-r"><a href="#1-1-灰度变换：-s-x3D-T-r" class="headerlink" title="1.1 灰度变换：$s&#x3D;T(r)$"></a>1.1 灰度变换：$s&#x3D;T(r)$</h3><ul>
+<li>图像反转：$s&#x3D;L-1-r$</li>
+<li>对数变换：$s&#x3D;c\log(1+r)$</li>
+<li>伽马变换：$s&#x3D;cr^\gamma$</li>
+<li>分段分式线性变换：对比度拉伸、灰度级分层、比特平面分层</li>
+</ul>
+<p>$ \ $ <span id="more"></span></p>
+<h3 id="1-2-直方图处理"><a href="#1-2-直方图处理" class="headerlink" title="1.2 直方图处理"></a>1.2 直方图处理</h3><p>$ h(r_k)&#x3D;n_k$ ，$r_k$ 是第 $k$ 级灰度值，$n_k$ 为图像中灰度为 $r_k$ 的像素个数。不妨从 $0$ 开始，令 $r_k&#x3D;k$</p>
+<p>归一化： $p(r_k)&#x3D;n_k&#x2F;MN$</p>
+<h4 id="1-2-1-直方图均衡化"><a href="#1-2-1-直方图均衡化" class="headerlink" title="1.2.1 直方图均衡化"></a>1.2.1 直方图均衡化</h4><ol>
+<li>$p_s(s)&#x3D;p_r(r)\cdot |\displaystyle\frac{dr}{ds}|&#x3D;p_r(r) &#x2F; |T^{‘}(r)|$</li>
+<li>选取变换函数  $s&#x3D;T(r)&#x3D;(L-1) \displaystyle\int_0 ^r p_r(w)dw$</li>
+<li>$&#x3D;&gt; \quad p_s(s)&#x3D;\displaystyle\frac{1}{L-1}$</li>
+<li>离散形式：$ s_k&#x3D;T(r_k)&#x3D;(L-1)\displaystyle\sum\limits_{j&#x3D;0}^k p_r (r _ j)&#x3D;\displaystyle\frac{L-1}{MN}\sum\limits_{j&#x3D;0}^k n_j $，最后取值四舍五入</li>
+</ol>
+<h4 id="1-2-2-直方图规定化"><a href="#1-2-2-直方图规定化" class="headerlink" title="1.2.2 直方图规定化"></a>1.2.2 直方图规定化</h4><h4 id="1-2-3-局部直方图处理"><a href="#1-2-3-局部直方图处理" class="headerlink" title="1.2.3 局部直方图处理"></a>1.2.3 局部直方图处理</h4><p>略～</p>
+<p>$ \ $</p>
+<h2 id="1-2-空间滤波"><a href="#1-2-空间滤波" class="headerlink" title="1.2 空间滤波"></a>1.2 空间滤波</h2><p>空间滤波器由一个邻域和预定义操作组成。</p>
+<p>$g(x,y)&#x3D;\displaystyle\sum\limits_{s&#x3D;-a}^b\sum\limits_{t&#x3D;-b}^b w(s,t)f(x+s,y+t)$</p>
+<h3 id="1-2-1-空间相关与卷积"><a href="#1-2-1-空间相关与卷积" class="headerlink" title="1.2.1 空间相关与卷积"></a>1.2.1 空间相关与卷积</h3><p>相关上滤波器模版移过图像并计算每个位置乘积之和的处理，卷积的机理类似，但滤波器首先要旋转$180^o$</p>
+<h4 id="1-2-1-1-平滑空间滤波器"><a href="#1-2-1-1-平滑空间滤波器" class="headerlink" title="1.2.1.1 平滑空间滤波器"></a>1.2.1.1 平滑空间滤波器</h4><ul>
+<li>均值滤波器：$g(x,y)&#x3D;\displaystyle\frac{\sum\limits_{s&#x3D;-a}^a\sum\limits_{s&#x3D;-b}^b w(s,t)f(x+s,y+t)}{\sum\limits_{s&#x3D;-a}^a\sum\limits_{s&#x3D;-b}^b w(s,t)}$</li>
+<li>统计排序滤波器   $e.g. $ 中值滤波器：去除椒盐噪声</li>
+</ul>
+<p>$ \ $</p>
+<h4 id="1-2-1-2-锐化空间滤波器"><a href="#1-2-1-2-锐化空间滤波器" class="headerlink" title="1.2.1.2 锐化空间滤波器"></a>1.2.1.2 锐化空间滤波器</h4><p>定义: $\displaystyle\frac{\partial f}{\partial x}&#x3D;f(x+1)-f(x)$ , $\displaystyle\frac{\partial ^2f}{\partial^2 x}&#x3D;f(x+1)+f(x-1)-2f(x)$</p>
+<p>(1) 使用拉普拉斯算子</p>
+<p>$\nabla^2 f(x,y)&#x3D;f(x+1,y)+f(x-1,y)+f(x,y+1)+f(x,y-1)-4f(x,y)$</p>
+<p>$g(x,y)&#x3D;f(x,y)+c[\nabla^2 f(x,y)]$</p>
+<p><a href="https://www.cnblogs.com/polly333/p/7269843.html">比较清楚的介绍</a></p>
+<p>(2) 非锐化掩蔽</p>
+<ol>
+<li>模糊原图像 $\overline f (x,y)$</li>
+<li>从原图像中减去模糊图像（产生差值图像，即模版）$g_{mask}(x,y)&#x3D;f(x,y)-\overline f(x,y)$</li>
+<li>将模版加到原图像上 $g(x,y)&#x3D;f(x,y)+k\cdot g_{mask}(x,y)$</li>
+</ol>
+<p>(3) 使用梯度算子</p>
+<p><a href="https://blog.csdn.net/qq_29540745/article/details/51918004">Soble算子</a>：$M(x,y)&#x3D;|(z_7+2z_8+z_9)-(z_1+2z_2+z_3)|+|(z_3+2z_6+z_9)-(z_1+2z_4+z_7)$</p>
+<p>$ \ $</p>
+<h3 id="1-2-2-使用模糊技术进行灰度变换和空间滤波"><a href="#1-2-2-使用模糊技术进行灰度变换和空间滤波" class="headerlink" title="1.2.2 使用模糊技术进行灰度变换和空间滤波"></a>1.2.2 使用模糊技术进行灰度变换和空间滤波</h3><h4 id="1-2-2-1-模糊集合论"><a href="#1-2-2-1-模糊集合论" class="headerlink" title="1.2.2.1 模糊集合论"></a>1.2.2.1 模糊集合论</h4><ul>
+<li><p>模糊集合：${(z,\mu(z))}$  有元素和它的隶属度函数组成的数对组成，$\mu(z)\in[0,1]$</p>
+</li>
+<li><p>模糊逻辑：</p>
+<p> $ A\ AND\ B\iff\min(\mu_A(z),\mu_B(z)),\quad \forall z\in Z $ ,</p>
+<p> $A\ OR\ B\iff \max(\mu_A(z),\mu_B(z)),\quad \forall z\in Z$ ,</p>
+<p> $A&#x3D;B\iff\mu_A (z)&#x3D;\mu_B (z),\quad \forall z\in Z $ , </p>
+<p>$A\subseteq B\iff \mu_A(z)\leq\mu_B(z),\quad \forall z\in Z $ ,</p>
+<p>$A\supseteq B\iff \mu_A(z)\geq\mu_B(z),\quad \forall z\in Z $ .</p>
+</li>
+<li><p>应用步骤：</p>
+<ul>
+<li>$IF-THEN$ 形式化</li>
+<li>输入输出模糊化：$\mu_i(z),\mu_o(z)$ </li>
+<li>既满足 $IF$ 又满足 $THEN$ $&#x3D;&gt; INPUT&amp;OUTPUT$ $&#x3D;&gt; \mu_3(z,v)&#x3D;\min{\mu_i(z),\mu_o(v)}$</li>
+<li>对每一个 $z_0$ ，最终模糊输出 $Q(v)&#x3D;\mu_3(z_0,v)$  , 对于多个 $Q_i(v)$ ，全部模糊响应应为单个模糊响应的并集，取 $\max\limits_i (Q_i (v))$ </li>
+<li>去模糊：计算集合重心：$v_0&#x3D;\displaystyle\frac{\sum\limits_{v&#x3D;1}^K vQ(v)}{\sum\limits_{v&#x3D;1}^K Q(v)}$</li>
+</ul>
+</li>
+</ul>
+<h4 id="1-2-2-2-利用模糊集合论进行灰度变换"><a href="#1-2-2-2-利用模糊集合论进行灰度变换" class="headerlink" title="1.2.2.2 利用模糊集合论进行灰度变换"></a>1.2.2.2 利用模糊集合论进行灰度变换</h4><ul>
+<li><p>目的：增强对比度。黑的更黑，白的更白，灰的仍灰</p>
+</li>
+<li><p>$IF-THEN$ 形式化：</p>
+<ul>
+<li><p>$IF\quad dark,\quad THEN \quad darker $</p>
+</li>
+<li><p>$IF\quad gray ,\quad THEN \quad gray$</p>
+</li>
+<li><p>$IF\quad white,\quad THEN \quad whiter$</p>
+</li>
+</ul>
+</li>
+<li><p>输入模糊化：$dark-\mu_{id}(z),\quad gray-\mu_{ig}(z),\quad white-\mu_{iw}(z)$</p>
+<ul>
+<li>$$\mu_{id}(z)&#x3D;\begin{equation}<br>\left{<br>\begin{aligned}<br>1 &amp;, &amp;  0\leq z&lt; 80, \<br> \displaystyle\frac{1}{47}(127-z)&amp; , &amp; 80\leq z\leq 127,\ 0&amp;,&amp; 127&lt;z\leq 255\end{aligned}<br>\right.<br>\end{equation} $$</li>
+<li>$$\mu_{ig}(z)&#x3D;\begin{equation}<br>\left{<br>\begin{aligned}<br>0 &amp;, &amp;  0\leq z&lt; 80, \<br> \displaystyle\frac{1}{47}(z-80)&amp; , &amp; 80\leq z\leq 127,\ \displaystyle\frac{1}{47}(174-z)&amp; , &amp; 127&lt;z\leq 174,\ 0&amp;,&amp; 174&lt;z\leq 255\end{aligned}<br>\right.<br>\end{equation} $$</li>
+<li>$$\mu_{iw}(z)&#x3D;\begin{equation}<br>\left{<br>\begin{aligned}<br>0 &amp;, &amp;  0\leq z&lt; 127, \<br> \displaystyle\frac{1}{47}(z-127)&amp; , &amp; 127\leq z\leq 174,\ 1&amp;,&amp; 174&lt;z\leq 255\end{aligned}<br>\right.<br>\end{equation} $$</li>
+</ul>
+</li>
+<li><p>输出模糊化：$datker-\mu_{od}(v),\quad gray-\mu_{og}(v),\quad whiter-\mu_{ow}(v)$</p>
+<ul>
+<li>$$\mu_{od}(v)&#x3D;\begin{equation}\left {\begin{aligned}\infty,&amp;\quad v&#x3D;v_d\ 0,&amp;\quad otherwise \end{aligned}\right.\end{equation}$$</li>
+<li>$$\mu_{og}(v)&#x3D;\begin{equation}\left {\begin{aligned}\infty,&amp;\quad v&#x3D;v_g\ 0,&amp;\quad otherwise \end{aligned}\right.\end{equation}$$</li>
+<li>$$\mu_{ow}(v)&#x3D;\begin{equation}\left {\begin{aligned}\infty,&amp;\quad v&#x3D;v_w\ 0,&amp;\quad otherwise \end{aligned}\right.\end{equation}$$</li>
+</ul>
+</li>
+<li><p>输出最终模糊响应：$Q(v)&#x3D;\max{Q_d,Q_g,Q_w}&#x3D;\max{\min\limits_{v\in Z}{\mu_{ik}(z_0),\mu_{ok}(v)}}$</p>
+</li>
+<li><p>去模糊：$v_0&#x3D;\displaystyle\frac{\mu_{id}(z_0)\cdot v_d+\mu_{ig}(z_0)\cdot v_g+\mu_{iw}(z_0)\cdot v_w}{\mu_{id}(z_0)+\mu_{ig}(z_0)+\mu_{iw}(z_0)}$</p>
+</li>
+</ul>
+<p>**Code : ** </p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 基于模糊集合论的灰度变换 </span></span><br><span class="line"><span class="comment"># 增加对比度</span></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">f_id</span>(<span class="params">z</span>):</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> z &lt; <span class="number">80</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">elif</span> z &gt;= <span class="number">80</span> <span class="keyword">and</span> z &lt;= <span class="number">127</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span> / <span class="number">47</span> * (<span class="number">127</span> - z)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">f_ig</span>(<span class="params">z</span>):</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> z &gt;= <span class="number">80</span> <span class="keyword">and</span> z &lt;= <span class="number">127</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span> / <span class="number">47</span> * (z - <span class="number">80</span>)</span><br><span class="line">    <span class="keyword">elif</span> z &gt; <span class="number">127</span> <span class="keyword">and</span> z &lt;= <span class="number">174</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span> / <span class="number">47</span> * (<span class="number">174</span> - z)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">f_iw</span>(<span class="params">z</span>):</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> z &gt;= <span class="number">127</span> <span class="keyword">and</span> z &lt;= <span class="number">174</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span> / <span class="number">47</span> * (z - <span class="number">127</span>)</span><br><span class="line">    <span class="keyword">elif</span> z &gt; <span class="number">174</span> <span class="keyword">and</span> z &lt;= <span class="number">255</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">gray_trans</span>(<span class="params">img</span>):</span><br><span class="line">    vd = <span class="number">0</span></span><br><span class="line">    vg = <span class="number">127</span></span><br><span class="line">    vw = <span class="number">255</span></span><br><span class="line">    output_img = np.copy(img)</span><br><span class="line">    m, n = img.shape</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, m):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, n):</span><br><span class="line">            tmp1 = f_id(img[i][j]) * vd + f_ig(img[i][j]) * \</span><br><span class="line">                vg + f_iw(img[i][j]) * vw</span><br><span class="line">            tmp2 = f_id(img[i][j]) + f_ig(img[i][j]) + f_iw(img[i][j])</span><br><span class="line">            output_img[i][j] = tmp1 / tmp2</span><br><span class="line">    <span class="keyword">return</span> output_img</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">img = cv2.imread(<span class="string">&#x27;test.jpg&#x27;</span>, <span class="number">0</span>)</span><br><span class="line">img2 = gray_trans(img)</span><br><span class="line">cv2.imshow(<span class="string">&#x27;before&#x27;</span>, img)</span><br><span class="line">cv2.imshow(<span class="string">&#x27;after&#x27;</span>, img2)</span><br><span class="line">cv2.waitKey(<span class="number">0</span>)</span><br><span class="line">cv2.destroyAllWindows()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>效果：</strong>(before and after)</p>
+<p><a href="https://tva1.sinaimg.cn/large/006tNbRwly1gbdwm7ycd7j30dm0go0w3.jpg" title="before" class="gallery-item"><img src="https://tva1.sinaimg.cn/large/006tNbRwly1gbdwm7ycd7j30dm0go0w3.jpg" alt="before"></a></p>
+<p><a href="https://tva1.sinaimg.cn/large/006tNbRwly1gbdwm89b0zj30dm0goq6v.jpg" title="after" class="gallery-item"><img src="https://tva1.sinaimg.cn/large/006tNbRwly1gbdwm89b0zj30dm0goq6v.jpg" alt="after"></a></p>
+<h4 id="1-2-2-3-利用模糊集合进行空间滤波"><a href="#1-2-2-3-利用模糊集合进行空间滤波" class="headerlink" title="1.2.2.3 利用模糊集合进行空间滤波"></a>1.2.2.3 利用模糊集合进行空间滤波</h4><p>有一种基于模糊集合的边缘提取方法.</p>
+<p>$ \ $ </p>
+<h2 id="2-频率域滤波"><a href="#2-频率域滤波" class="headerlink" title="2 频率域滤波"></a>2 频率域滤波</h2><h3 id="2-1-傅立叶变换基础"><a href="#2-1-傅立叶变换基础" class="headerlink" title="2.1 傅立叶变换基础"></a>2.1 傅立叶变换基础</h3><h4 id="2-1-1-冲激函数相关"><a href="#2-1-1-冲激函数相关" class="headerlink" title="2.1.1 冲激函数相关"></a>2.1.1 冲激函数相关</h4><ol>
+<li><p>冲激函数 对连续函数取样和对离散函数取样定义有所不同</p>
+</li>
+<li><p>冲激串函数：$\displaystyle s_{\Delta T}(t)&#x3D;\sum\limits_{n&#x3D;-\infty}^{\infty}\delta(t-n\Delta T)$ , 以 $\Delta T$ 为间隔取样</p>
+</li>
+</ol>
+<h4 id="2-1-2-傅立叶变换相关"><a href="#2-1-2-傅立叶变换相关" class="headerlink" title="2.1.2 傅立叶变换相关"></a>2.1.2 傅立叶变换相关</h4><ol>
+<li><p>傅立叶级数：$\displaystyle f(t)&#x3D;\sum\limits_{n&#x3D;-\infty}^\infty c_ne^{j\frac{2\pi n}{T}t},\quad c_n&#x3D;\frac{1}{T}\int_{-\frac{T}{2}}^\frac{T}{2}f(t)e^{-j\frac{2\pi n}{T}t}$, 其中 $f(t)$ 以 $T$ 为周期</p>
+</li>
+<li><p>傅立叶变换：$\displaystyle\mathcal{F}[f(t)]&#x3D;\int_{-\infty}^\infty f(t)e^{-2\pi\mu t} dt $</p>
+</li>
+<li><p>关于原点对称的宽为 $W$ 、高为 $A$ 的带限函数 $W(t)$ 的傅立叶变换： $\mathcal{F}[W(t)]&#x3D;AWsinc(m)$, 其中在数字图像处理中，$sinc(x)&#x3D;\displaystyle\frac{sin(\pi x)}{\pi x}$</p>
+</li>
+<li><p>冲激函数的傅立叶变换：$\mathcal{F}[\delta(t-t_0)]&#x3D;e^{-j2\pi\mu t_0}&#x3D;&gt;\mathcal{F}^{-1}[e^{-j2\pi\mu t_0}]&#x3D;\delta(t-t_0)&#x3D;&gt;\mathcal{F}[e^{-j2\pi\mu_0 t}]&#x3D;\delta(-\mu-\mu_0)$</p>
+</li>
+<li><p>冲激串函数的傅立叶变换 ：</p>
+<ul>
+<li>将冲激串函数用傅立叶级数展开（不展开直接变换似乎不一致收敛，就不能交换求和号和积分号）：$\displaystyle s_{\Delta T}(t)&#x3D;\sum\limits_{n&#x3D;-\infty}^\infty c_ne^{j\frac{2\pi n}{\Delta T}t},\quad c_n&#x3D;\frac{1}{\Delta T}\int_{-\frac{\Delta T}{2}}^\frac{\Delta T}{2} s_{\Delta T}(t)e^{-j\frac{2\pi n}{\Delta T}t}&#x3D;\frac{1}{\Delta T}e^0&#x3D;\frac{1}{\Delta T}\&#x3D;&gt;\displaystyle  s_{\Delta T}(t)&#x3D;\frac{1}{\Delta T}\sum\limits_{n&#x3D;-\infty}^\infty e^{j\frac{2\pi n}{\Delta T}t}$</li>
+<li>$S(\mu)&#x3D;\displaystyle\mathcal{F}[ s_{\Delta T}(t)]&#x3D;\frac{1}{\Delta T}\sum\limits_{n&#x3D;-\infty}^\infty \delta(\mu-\frac{n}{\Delta T})$</li>
+</ul>
+</li>
+<li><p>卷积：</p>
+<p>$\begin{aligned} f(t)*g(t)&amp;\iff F(\mu)\cdot G(\mu)\F(\mu)*G(\mu)&amp;\iff f(t)\cdot g(t)\end{aligned}$</p>
+</li>
+</ol>
+<h4 id="2-1-3-取样"><a href="#2-1-3-取样" class="headerlink" title="2.1.3 取样"></a>2.1.3 取样</h4><ul>
+<li><p>取样后的函数 $\widetilde f(t)&#x3D;f(t)\cdot s_{\Delta T}(t)&#x3D;\displaystyle \sum\limits_{n&#x3D;-\infty}^{\infty}f(t)\delta(t-n\Delta T)$</p>
+</li>
+<li><p>每个取样值：由加权后的冲激强度给出。 $f_k&#x3D;\displaystyle\int_{-\infty}^{\infty}f(t)\delta(t-k\Delta T)&#x3D;f(k\Delta T)$</p>
+</li>
+<li><p>取样后的函数的傅立叶变换：$\displaystyle \widetilde F(\mu)&#x3D;F(\mu)*S(\mu)&#x3D;\frac{1}{\Delta T}\sum\limits_{n&#x3D;-\infty}^{\infty}\int_{-\infty}^{\infty}F(\tau)\delta(\mu-\frac{n}{\Delta T}-\tau)d\tau&#x3D;\frac{1}{\Delta T}\sum\limits_{n&#x3D;-\infty}^{\infty}F(\mu-\frac{n}{\Delta T})$</p>
+<p>这是取样前函数$F(\mu)$ 的一个拷贝的无限、周期序列，确切的说是周期为 $\displaystyle\frac{1}{\Delta T}$ 的无限延伸的连续函数。</p>
+</li>
+<li><p>另一方面，直接变换得：$\widetilde F(\mu)&#x3D;\displaystyle \sum_{n&#x3D;-\infty}^{\infty}\int_{-\infty}^{\infty}f(t)\delta (t-n\Delta T)e^{-j2\pi \mu t}dt&#x3D; \sum_{n&#x3D;-\infty}^{\infty}f(n\Delta T)e^{-j2\pi \mu n\Delta T}$ </p>
+</li>
+<li><p><strong>取样定理</strong>：如果一超过函数最高频率的两倍的取样率来获得样本，连续的带限函数可以完全地从它的样本集来恢复。 $\displaystyle\frac{1}{\Delta T}&gt;2\mu_{max}$</p>
+</li>
+<li><p>复原：令 $H(\mu)&#x3D;\begin{equation}\left{\begin{aligned} \Delta T,&amp;\quad -\mu_{max}\leqslant\mu\leqslant\mu_{max}\ 0.&amp;\quad otherwise\end{aligned}\right.\end{equation}$,  $F(\mu)&#x3D;H(\mu)\cdot \widetilde F(\mu)$，进而由傅立叶逆变换可复原 $f$</p>
+</li>
+<li><p>但是，在实践中我们通常要限制函数的持续时间，相当于要乘一个周期内为 $1$ 其他地方为 $0$ 的函数，而这在频率域内相当于用 $sinc(x)$ 作卷积，这就引入了频率域无限周期分量。这样，在频率域截取时总无法截取全部周期，混淆总会产生。</p>
+</li>
+</ul>
+<h3 id="2-2-离散傅立叶变换-DFT"><a href="#2-2-离散傅立叶变换-DFT" class="headerlink" title="2.2 离散傅立叶变换 DFT"></a>2.2 离散傅立叶变换 DFT</h3><h4 id="2-2-1-单变量-DFT"><a href="#2-2-1-单变量-DFT" class="headerlink" title="2.2.1 单变量$DFT$"></a>2.2.1 单变量$DFT$</h4><p>对 $\widetilde F(\mu)$ 的一个周期取样是 $DFT$  的基础。</p>
+<p>记 $f(n\Delta T)$ 为 $f_n$ ,  $\widetilde F(\mu)&#x3D;\displaystyle \sum_{n&#x3D;-\infty}^{\infty}f_ne^{-j2\pi \mu n\Delta T}$ </p>
+<p>想在周期 $\mu &#x3D; 0$ 和 $\mu&#x3D;\displaystyle\frac{1}{\Delta T}$ 之间得到 $M$ 个等间距的<em>样本</em> ，可令 $\mu&#x3D;\displaystyle\frac{m}{M\Delta T}$.</p>
+<p>离散傅立叶变换 $DFT$ 为：<br>$$<br>F_m&#x3D;\sum\limits_{n&#x3D;0}^{M-1}f_ne^{-j2\pi mn&#x2F;M}<br>$$<br>离散傅立叶逆变换 $IDFT$ 为：<br>$$<br>f_n&#x3D;\frac{1}{M}\sum\limits_{m&#x3D;0}^{M-1}F_m e^{j2\pi mn&#x2F;M}<br>$$<br>为了更方便表示，引入 $u$ 和 $x$ 代替 $m$ 和 $n$ ：</p>
+<p>$DFT$：<br>$$<br>F(u)&#x3D;\sum\limits_{x&#x3D;0}^{M-1}f(x)e^{-j2\pi ux&#x2F;M}<br>$$<br>$IDFT$：<br>$$<br>f(x)&#x3D;\frac{1}{M}\sum\limits_{u&#x3D;0}^{M-1}F(u)e^{j2\pi ux&#x2F;M}<br>$$</p>
+<p>（PS：有点小疑问：为什么是 $f(x)$ 而不是 $ f(x\Delta T)$ ？）</p>
+<p>傅立叶正变换和逆变换得到的函数都是无限周期的，周期为 $M$。</p>
+<h3 id="2-2-2-二维DFT"><a href="#2-2-2-二维DFT" class="headerlink" title="2.2.2 二维DFT"></a>2.2.2 二维DFT</h3><p>略</p>
+<h3 id="2-2-3-频率域滤波器"><a href="#2-2-3-频率域滤波器" class="headerlink" title="2.2.3 频率域滤波器"></a>2.2.3 频率域滤波器</h3><p>过程：空间域 $&#x3D;&gt;$ 傅立叶变换转到频率域 $&#x3D;&gt;$ 在频率域使用模版处理振幅或者相位 $&#x3D;&gt;$ 傅立叶逆变换回到空间域</p>
+<ul>
+<li>理想低&#x2F;高通滤波器</li>
+<li>k阶布特沃斯低&#x2F;高通滤波器</li>
+<li>高斯低&#x2F;高通滤波器</li>
+<li>频率域拉普拉斯算子（需归一化）</li>
+<li>同态滤波（未完全理解）</li>
+<li>选择性滤波器：带通滤波器、陷波滤波器（未实现）</li>
+</ul>
+<p><strong>代码实现：</strong></p>
+<p>（1）：低通&#x2F;高通滤波器</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">IPF</span>(<span class="params">img, d0, flag</span>):</span><br><span class="line">    <span class="comment">#  理想滤波器 ideal pass filter，d0 为滤波器半径</span></span><br><span class="line">    <span class="comment"># flag == 1 : low pass filter; flag == 0 : high pass filter</span></span><br><span class="line">    m, n = img.shape</span><br><span class="line">    ans = np.zeros(img.shape)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(m):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">            <span class="keyword">if</span> (i - m / <span class="number">2</span>)**<span class="number">2</span> + (j - n / <span class="number">2</span>)**<span class="number">2</span> &lt; d0**<span class="number">2</span>:</span><br><span class="line">                ans[i][j] = <span class="number">1</span></span><br><span class="line">    <span class="keyword">if</span> flag == <span class="number">0</span>:</span><br><span class="line">        ans = <span class="number">1</span> - ans</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> ans</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">GPF</span>(<span class="params">img, d0, flag</span>):</span><br><span class="line">    <span class="comment"># 高斯滤波器</span></span><br><span class="line">    m, n = img.shape</span><br><span class="line">    d0 = d0**<span class="number">2</span></span><br><span class="line">    ans = np.zeros(img.shape)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(m):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">            d = (i - m / <span class="number">2</span>)**<span class="number">2</span> + (j - n / <span class="number">2</span>)**<span class="number">2</span></span><br><span class="line">            <span class="keyword">if</span> d &lt; d0:</span><br><span class="line">                ans[i][j] = np.exp(-d / (<span class="number">2</span> * d0))</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> flag == <span class="number">0</span>:</span><br><span class="line">        ans = <span class="number">1</span> - ans</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> ans</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">BPF</span>(<span class="params">img, do, flag, k</span>):</span><br><span class="line">    <span class="comment"># k阶布特沃斯高通滤波器</span></span><br><span class="line">    m, n = img.shape</span><br><span class="line">    d0 = d0**<span class="number">2</span></span><br><span class="line">    ans = np.zeros(img.shape)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(m):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">            d = (i - m / <span class="number">2</span>)**<span class="number">2</span> + (j - n / <span class="number">2</span>)**<span class="number">2</span></span><br><span class="line">            <span class="keyword">if</span> d &lt; d0:</span><br><span class="line">                ans[i][j] = <span class="number">1</span> / (<span class="number">1</span> + (d / d0)**k)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> flag == <span class="number">0</span>:</span><br><span class="line">        ans = <span class="number">1</span> - ans</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> ans</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 高通滤波--提取轮廓</span></span><br><span class="line"><span class="comment"># 低通滤波--模糊化</span></span><br><span class="line">img_man = cv2.imread(<span class="string">&#x27;ch03_5.jpg&#x27;</span>, <span class="number">0</span>)  <span class="comment"># 直接读为灰度图像</span></span><br><span class="line">plt.subplot(<span class="number">131</span>), plt.imshow(img_man, <span class="string">&#x27;gray&#x27;</span>), plt.title(<span class="string">&#x27;before&#x27;</span>)</span><br><span class="line">plt.xticks([]), plt.yticks([])</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">rows, cols = img_man.shape</span><br><span class="line">mask1 = np.ones(img_man.shape, np.uint8)  <span class="comment"># 高通</span></span><br><span class="line">mask1[<span class="built_in">int</span>(rows / <span class="number">2</span>) - <span class="number">30</span>: <span class="built_in">int</span>(rows / <span class="number">2</span>) + <span class="number">30</span>,</span><br><span class="line">      <span class="built_in">int</span>(cols / <span class="number">2</span>) - <span class="number">30</span>:<span class="built_in">int</span>(cols / <span class="number">2</span>) + <span class="number">30</span>] = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">mask2 = np.zeros(img_man.shape, np.uint8)  <span class="comment"># 低通</span></span><br><span class="line">mask2[<span class="built_in">int</span>(rows / <span class="number">2</span>) - <span class="number">30</span>:<span class="built_in">int</span>(rows / <span class="number">2</span>) + <span class="number">30</span>,</span><br><span class="line">      <span class="built_in">int</span>(cols / <span class="number">2</span>) - <span class="number">30</span>:<span class="built_in">int</span>(cols / <span class="number">2</span>) + <span class="number">30</span>] = <span class="number">1</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">mask31 = np.ones(img_man.shape, np.uint8)</span><br><span class="line">mask31[<span class="built_in">int</span>(rows / <span class="number">2</span>) - <span class="number">10</span>:<span class="built_in">int</span>(rows / <span class="number">2</span>) + <span class="number">10</span>,</span><br><span class="line">       <span class="built_in">int</span>(cols / <span class="number">2</span>) - <span class="number">10</span>:<span class="built_in">int</span>(cols / <span class="number">2</span>) + <span class="number">10</span>] = <span class="number">0</span></span><br><span class="line">mask32 = np.zeros(img_man.shape, np.uint8)</span><br><span class="line">mask32[<span class="built_in">int</span>(rows / <span class="number">2</span>) - <span class="number">80</span>:<span class="built_in">int</span>(rows / <span class="number">2</span>) + <span class="number">80</span>,</span><br><span class="line">       <span class="built_in">int</span>(cols / <span class="number">2</span>) - <span class="number">80</span>:<span class="built_in">int</span>(cols / <span class="number">2</span>) + <span class="number">80</span>] = <span class="number">1</span></span><br><span class="line">mask3 = mask31 * mask32  <span class="comment"># 带通</span></span><br><span class="line"></span><br><span class="line">mask = IPF(img_man, <span class="number">30</span>, <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">f1 = np.fft.fft2(img_man)</span><br><span class="line">f1shift = np.fft.fftshift(f1)</span><br><span class="line">f1shift = f1shift * mask</span><br><span class="line">f2shift = np.fft.ifftshift(f1shift)</span><br><span class="line">img_new = np.fft.ifft2(f2shift)</span><br><span class="line">img_new = np.<span class="built_in">abs</span>(img_new)</span><br><span class="line"><span class="comment"># 调整大小范围便于显示</span></span><br><span class="line"><span class="comment"># img_new = (img_new - np.amin(img_new)) / (np.amax(img_new) - np.amin(img_new))</span></span><br><span class="line"></span><br><span class="line">plt.subplot(<span class="number">132</span>), plt.imshow(mask, <span class="string">&#x27;gray&#x27;</span>), plt.title(<span class="string">&#x27;mask&#x27;</span>)</span><br><span class="line">plt.xticks([]), plt.yticks([])</span><br><span class="line">plt.subplot(<span class="number">133</span>), plt.imshow(img_new, <span class="string">&#x27;gray&#x27;</span>), plt.title(<span class="string">&#x27;after&#x27;</span>)</span><br><span class="line">plt.xticks([]), plt.yticks([])</span><br><span class="line">plt.show()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p>（2）：频率域拉普拉斯滤波</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">Laplace</span>(<span class="params">shape</span>):</span><br><span class="line">    m, n = shape</span><br><span class="line">    ans = np.zeros(shape)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(m):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">            d = (i - m / <span class="number">2</span>)**<span class="number">2</span> + (j - n / <span class="number">2</span>)**<span class="number">2</span></span><br><span class="line">            ans[i][j] = <span class="number">1</span> + <span class="number">4</span> * (np.pi**<span class="number">2</span>) * d / (m * n)</span><br><span class="line">            <span class="comment"># 之前失败是由于没有处以mn</span></span><br><span class="line">    <span class="keyword">return</span> ans</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">stdimg</span>(<span class="params">img</span>):</span><br><span class="line">        <span class="comment"># 灰度值归一化</span></span><br><span class="line">    m, n = img.shape</span><br><span class="line">    min_img = np.amin(img)</span><br><span class="line">    max_img = np.amax(img)</span><br><span class="line">    img = np.float64(img)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(m):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">            img[i][j] = (img[i][j] - min_img) / (max_img - min_img)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> img</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">img = cv2.imread(<span class="string">&#x27;ch03_3.jpg&#x27;</span>, <span class="number">0</span>)</span><br><span class="line">img = stdimg(img)</span><br><span class="line">f = np.fft.fft2(img)</span><br><span class="line">f = np.fft.fftshift(f)</span><br><span class="line">mask = Laplace(img.shape)</span><br><span class="line">f *= mask</span><br><span class="line">img_back = np.fft.ifftshift(f)</span><br><span class="line">img_back = np.fft.ifft2(img_back)</span><br><span class="line">img_back = np.<span class="built_in">abs</span>(img_back)</span><br><span class="line">plt.subplot(<span class="number">131</span>), plt.imshow(img, <span class="string">&#x27;gray&#x27;</span>), plt.title(<span class="string">&#x27;before&#x27;</span>)</span><br><span class="line">plt.xticks([]), plt.yticks([])</span><br><span class="line">plt.subplot(<span class="number">132</span>), plt.imshow(mask, <span class="string">&#x27;gray&#x27;</span>), plt.title(<span class="string">&#x27;mask&#x27;</span>)</span><br><span class="line">plt.xticks([]), plt.yticks([])</span><br><span class="line">plt.subplot(<span class="number">133</span>), plt.imshow(img_back, <span class="string">&#x27;gray&#x27;</span>), plt.title(<span class="string">&#x27;after&#x27;</span>)</span><br><span class="line">plt.xticks([]), plt.yticks([])</span><br><span class="line"></span><br><span class="line">plt.show()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="3-图像复原与重建"><a href="#3-图像复原与重建" class="headerlink" title="3 图像复原与重建"></a>3 图像复原与重建</h2><h2 id="4-彩色图像处理"><a href="#4-彩色图像处理" class="headerlink" title="4 彩色图像处理"></a>4 彩色图像处理</h2></div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script>]]></content>
+      <categories>
+        <category>Notes</category>
+        <category>Computer Science</category>
+      </categories>
+      <tags>
+        <tag>image processing</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Git Notes</title>
     <url>/Computer-Science/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><h2 id="Git学习"><a href="#Git学习" class="headerlink" title="Git学习"></a>Git学习</h2><h3 id="创建版本库"><a href="#创建版本库" class="headerlink" title="创建版本库"></a>创建版本库</h3><p>mkdir dirname &#x2F;&#x2F; make directory 创建目录 dirname 为目录名</p>
@@ -10296,9 +10306,9 @@ $$
 <p>rmdir dirname &#x2F;&#x2F; 删除空文件目录</p>
 <p>git rm filename &#x2F;&#x2F; 从版本库中删除文件</p>
 <p>git checkout – filename &#x2F;&#x2F; 误删文件的恢复</p>
-<h3 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h3><p>git remote add origin <a href="mailto:&#x67;&#x69;&#x74;&#x40;&#103;&#105;&#116;&#104;&#x75;&#x62;&#46;&#x63;&#x6f;&#109;">&#x67;&#x69;&#x74;&#x40;&#103;&#105;&#116;&#104;&#x75;&#x62;&#46;&#x63;&#x6f;&#109;</a>:longqianh&#x2F;learngit.git</p>
+<h3 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h3><p>git remote add origin <a href="mailto:&#103;&#x69;&#116;&#64;&#103;&#105;&#116;&#x68;&#117;&#x62;&#x2e;&#x63;&#x6f;&#109;">&#103;&#x69;&#116;&#64;&#103;&#105;&#116;&#x68;&#117;&#x62;&#x2e;&#x63;&#x6f;&#109;</a>:longqianh&#x2F;learngit.git</p>
 <p>git push -u origin master</p>
-<p>git clone <a href="mailto:&#103;&#105;&#116;&#x40;&#103;&#105;&#x74;&#104;&#117;&#x62;&#x2e;&#99;&#x6f;&#x6d;">&#103;&#105;&#116;&#x40;&#103;&#105;&#x74;&#104;&#117;&#x62;&#x2e;&#99;&#x6f;&#x6d;</a>:longqianh&#x2F;learngit.git</p>
+<p>git clone <a href="mailto:&#103;&#x69;&#116;&#x40;&#103;&#x69;&#x74;&#104;&#117;&#x62;&#46;&#99;&#x6f;&#x6d;">&#103;&#x69;&#116;&#x40;&#103;&#x69;&#x74;&#104;&#117;&#x62;&#46;&#99;&#x6f;&#x6d;</a>:longqianh&#x2F;learngit.git</p>
 <h3 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h3><p>git checkout </p>
 <p>git branch &#x2F;&#x2F; 查看分支</p>
 <p>git branch -d branchname &#x2F;&#x2F; 删除分支</p>
