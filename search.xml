@@ -90,7 +90,13 @@
   <entry>
     <title>Mordern Neurobiology</title>
     <url>/Biology/Mordern-Neurobiology/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="现代神经生物学-Advanced-Neurobiology"><a href="#现代神经生物学-Advanced-Neurobiology" class="headerlink" title="现代神经生物学 Advanced Neurobiology"></a>现代神经生物学 Advanced Neurobiology</h1><a href="https://p.ipic.vip/x90er9.png" title="brain" class="gallery-item"><img src="https://p.ipic.vip/x90er9.png" alt="brain" style="zoom:33%;" /></a>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="现代神经生物学-Modern-Neurobiology"><a href="#现代神经生物学-Modern-Neurobiology" class="headerlink" title="现代神经生物学 Modern Neurobiology"></a>现代神经生物学 Modern Neurobiology</h1><a href="https://p.ipic.vip/x90er9.png" title="brain" class="gallery-item"><img src="https://p.ipic.vip/x90er9.png" alt="brain" style="zoom:33%;" /></a>
+
+<p>Notes on <em>Modern Neurobiology</em>. Reference: <em>Principles of Neurobiology</em>. Liqun Luo.</p>
+<p>This first version draft will be polished. </p>
+<span id="more"></span>
+
+
 
 <h2 id="1-Electrical-signals-in-neurons"><a href="#1-Electrical-signals-in-neurons" class="headerlink" title="1 Electrical signals in neurons"></a>1 Electrical signals in neurons</h2><ul>
 <li><p>Galvani frog legs experiment</p>
@@ -119,8 +125,6 @@
 </ul>
 </li>
 </ul>
-<span id="more"></span>
-
 <h3 id="Equilibrium-potential"><a href="#Equilibrium-potential" class="headerlink" title="Equilibrium potential"></a>Equilibrium potential</h3><ul>
 <li><p>电化学平衡：扩散与电迁移达到平衡</p>
 </li>
@@ -2647,8 +2651,8 @@
         <category>Optics</category>
       </categories>
       <tags>
-        <tag>optics</tag>
         <tag>projects</tag>
+        <tag>optics</tag>
       </tags>
   </entry>
   <entry>
@@ -3777,6 +3781,310 @@
       </tags>
   </entry>
   <entry>
+    <title>Scientific Writing Notes</title>
+    <url>/Writing/Scientific-Writing/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="科技写作（光电–狄大卫-x2F-王攀）"><a href="#科技写作（光电–狄大卫-x2F-王攀）" class="headerlink" title="科技写作（光电–狄大卫&#x2F;王攀）"></a>科技写作（光电–狄大卫&#x2F;王攀）</h1><p>好期刊不是科研的追求，成果才是。</p>
+<p>科研的核心：总结，归纳，最终能把自己做的用少数几个词凝练出来。</p>
+<h2 id="1-基本概念与文献调研"><a href="#1-基本概念与文献调研" class="headerlink" title="1 基本概念与文献调研"></a>1 基本概念与文献调研</h2><ul>
+<li><p>影响因子: 某期刊前两年（S, T）发表的论文在统计当年（U）的被引用总次数 X , 除以该期刊在前两年（S, T）内发表的论文总数 Y。公式为：<br>$$<br>\mathrm{IF}_U &#x3D; \frac{X(S,T)}{Y(S,T)}<br>$$</p>
+<ul>
+<li><p>本刊2009年的文章在2010年的被引次数：48；本刊2009年的发文量：187</p>
+<p>本刊2008年的文章在2010年的被引次数：128；本刊2008年的发文量：154</p>
+<p>本刊2010年的影响因子：IF &#x3D; (48+128) &#x2F; (187+154) &#x3D; 0.5161</p>
+</li>
+</ul>
+</li>
+</ul>
+ <span id="more"></span>
+
+<ul>
+<li><p>SCI 论文分区：中国科学院文献情报中心根据目前SCI核心库将所有期刊分为数学、物理、化学、生物、地学、天文、工程技术、医学、环境科学、农林科学、社会科学、管理科学及综合性期刊13大类。然后，将13大类期刊分各自为 4 个等级，即 4 个区。按照各类期刊影响因子划分，前5%为该类 1 区、6% ～ 20% 为 2 区、21% ～ 50% 为 3 区，其余的为 4 区。</p>
+</li>
+<li><p>H–index：h代表“高引用次数”（high citations），一名科研人员的h指数是指他 <em>至多有h篇论文分别被引用了至少h次。</em></p>
+</li>
+<li><p>Formality: </p>
+<ul>
+<li>Full words. e.g., can’t –&gt; cannot, won’t –&gt; will not</li>
+<li>a lot –&gt; many</li>
+<li>totally –&gt; completely</li>
+<li>at the same time –&gt; simulataneously</li>
+<li>Interesting –&gt; compelling</li>
+</ul>
+</li>
+</ul>
+<p>学位论文：不要追求写得长，要追求原创性和逻辑性；</p>
+<ul>
+<li>对课题组的同学、同一个学校的同学，是一个重要参考资料！</li>
+</ul>
+<h2 id="2-参考文献的管理与排版"><a href="#2-参考文献的管理与排版" class="headerlink" title="2 参考文献的管理与排版"></a>2 参考文献的管理与排版</h2><ul>
+<li>高效看文献<ul>
+<li>要  <em>get</em> 什么：<strong>带着问题和目的</strong>去找文献</li>
+<li><strong>不求甚解</strong>的精神（略读，扫文献）</li>
+<li>Critical thinking</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-描述研究成果"><a href="#3-描述研究成果" class="headerlink" title="3 描述研究成果"></a>3 描述研究成果</h2><ul>
+<li>Use adj. and adv. sparingly<ul>
+<li><strong>Both of the two</strong> samples had <strong>very similar</strong> concentrations –&gt; The two samples had similar concentrations</li>
+<li>Avoid ‘significantly’, unless have  statistic reference</li>
+</ul>
+</li>
+<li>Focus on science, not scientist </li>
+<li>Avoid empty transitional statements<ul>
+<li>e.g., actually</li>
+<li>Useful statements: conversely, consequently &#x2F; to this end, typically &#x2F; in general</li>
+</ul>
+</li>
+<li>Choose simple words over complex<ul>
+<li>In order to –&gt; to</li>
+<li>has the capacity to –&gt; can</li>
+<li>a number of –&gt; many &#x2F; several</li>
+<li>despite the fact that –&gt; although</li>
+</ul>
+</li>
+</ul>
+<h3 id="时态和语态"><a href="#时态和语态" class="headerlink" title="时态和语态"></a>时态和语态</h3><ul>
+<li>研究的实验工作：过去时</li>
+<li>描述事实结果：现在时</li>
+<li>引述别人工作：现在时或现在完成时</li>
+</ul>
+<h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><ul>
+<li>开门见山，不绕圈子，避免大篇幅讲述历史渊源</li>
+<li>回顾历史有重点，找有代表性的</li>
+</ul>
+<h3 id="Discussion-部分"><a href="#Discussion-部分" class="headerlink" title="Discussion 部分"></a>Discussion 部分</h3><ul>
+<li><p>创造性见解，精炼回答为什么出现这样的结果，以及出现这样的结果意味着什么，逻辑要清晰</p>
+</li>
+<li><p>主要的发现</p>
+</li>
+<li><p>结果的说明、阐释或论述、推论</p>
+</li>
+<li><p>与前人结果的比较</p>
+</li>
+<li><p>结果的意义和重要性、应用</p>
+</li>
+<li><p>研究的局限和不足之处，尚未回答的问题及局限性对研究的影响，建议进一步的研究方向</p>
+</li>
+</ul>
+<h3 id="Conclusion-部分"><a href="#Conclusion-部分" class="headerlink" title="Conclusion 部分"></a>Conclusion 部分</h3><ul>
+<li>一句话总结</li>
+<li>技术的优势和拓展应用</li>
+</ul>
+<h3 id="Supplementary-部分"><a href="#Supplementary-部分" class="headerlink" title="Supplementary 部分"></a>Supplementary 部分</h3><ul>
+<li>放不太重要、但有助于理解结果的实验和讨论</li>
+</ul>
+<h3 id="Figures-and-Tables"><a href="#Figures-and-Tables" class="headerlink" title="Figures and Tables"></a>Figures and Tables</h3><ul>
+<li>先总说</li>
+<li>再有逻辑、递进性地描述图表结果</li>
+<li>讨论</li>
+</ul>
+<h3 id="Title"><a href="#Title" class="headerlink" title="Title"></a>Title</h3><ul>
+<li><p>清楚性</p>
+<ul>
+<li>Highly efficient waveguide grating couplers using silicon-on-insulator (Emphasis: waveguide grating couplers)</li>
+<li>Silicon-on-insulator for high-output waveguide grating couplers (Emphasis: silicon-on-sinsulator)</li>
+</ul>
+</li>
+<li><p>主副题名</p>
+</li>
+<li><p>e.g.</p>
+<ul>
+<li>Low-loss 与 surface smoothness, diameter uniformity<ul>
+<li>Low-loss 在 high-level</li>
+<li>Subwavelength-diameter silica wire for low-loss optical wave guiding</li>
+</ul>
+</li>
+<li>包含凸显性能的关键信息</li>
+<li>要吸引人看<ul>
+<li><strong>Single-Nanowire Single-Mode Laser</strong></li>
+<li>Highly elastic ice microfiber –&gt; Elastic ice microfiber: Highly 太泛泛不准确</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="PPT-展示"><a href="#PPT-展示" class="headerlink" title="PPT 展示"></a>PPT 展示</h3><ul>
+<li><p>图片出处标注：无作者信息，杂志名采用缩写形式，随后是期号（黑体）、首页页码、发表年份</p>
+</li>
+<li><p>原则：让观众最快获取有用信息</p>
+</li>
+</ul>
+<h2 id="论文投稿"><a href="#论文投稿" class="headerlink" title="论文投稿"></a>论文投稿</h2><p>牵扯到人，在哪里都会有偏见或者倾向性的，那也没办法</p>
+<ul>
+<li><p>期刊选择</p>
+<ul>
+<li><p>原理、材料、结构等的重大创新，性能的显著提高：好一点的期刊</p>
+</li>
+<li><p>前人工作的改进优化：中下的期刊</p>
+</li>
+<li><p>期刊所规定的范围</p>
+</li>
+<li><p>期刊的论文平均水平</p>
+</li>
+</ul>
+</li>
+<li><p>投稿前的准备工作: 系统里要填很多东西，投个稿也是很累的</p>
+<ul>
+<li><p>Manuscript</p>
+</li>
+<li><p>Tables, Figures, Movies</p>
+</li>
+<li><p>Supplementary materials</p>
+</li>
+<li><p><strong>Cover Letter</strong></p>
+<ul>
+<li><p>an excellent opportunity to briefly discuss the importance of the submitted work and why it is appropriate for the journal </p>
+</li>
+<li><p>Spend time writing a convincing cover letter and share it with your coauthors for their input</p>
+</li>
+</ul>
+</li>
+<li><p>Email and address for each author</p>
+</li>
+<li><p>Suggested reviewers (name, affiliation, emails)</p>
+</li>
+</ul>
+</li>
+<li><p>申诉：审稿人误解&#x2F;没理解&#x2F;有很强偏见（好的工作，机会难得）</p>
+</li>
+<li><p><strong>发表过一篇文章后，可以申请当审稿人</strong></p>
+</li>
+</ul>
+<h1 id="科技写作（医学–邹炜-x2F-邹键）"><a href="#科技写作（医学–邹炜-x2F-邹键）" class="headerlink" title="科技写作（医学–邹炜&#x2F;邹键）"></a>科技写作（医学–邹炜&#x2F;邹键）</h1><h3 id="Writing-a-scientific-article"><a href="#Writing-a-scientific-article" class="headerlink" title="Writing a scientific article"></a>Writing a scientific article</h3><ul>
+<li>Read the author guideline!</li>
+<li>Figures: One figure, one question<ul>
+<li>figure的逻辑、框架可以提前思考准备</li>
+</ul>
+</li>
+<li>Discussion: <ul>
+<li>Indicate uses, extensions, and limitations </li>
+<li>suggest future experiments and point out those that are underway</li>
+</ul>
+</li>
+<li>Supplementary Material: 不是不重要放到了附录，而是由于篇幅限制才放到了附录</li>
+<li>Start writing<ul>
+<li>Paper: Introduction –&gt; Methods &amp; Materials –&gt; Results –&gt;Discussion –&gt; Figures &amp; Tables</li>
+<li>Write: Abstract –&gt; Results –&gt; Figures &amp; Tables –&gt; Methods &amp; Materials –&gt; Introduction –&gt; Discussion –&gt; Abstract (revision)</li>
+</ul>
+</li>
+</ul>
+<h3 id="Cover-Letter-投稿信"><a href="#Cover-Letter-投稿信" class="headerlink" title="Cover Letter (投稿信)"></a>Cover Letter (投稿信)</h3><ul>
+<li>Basic information</li>
+<li>Cover letter is your chance to speak to the editor directly</li>
+<li>Mention what makes the paper special to the journel</li>
+<li>Confine the length to 2&#x2F;3 page</li>
+</ul>
+<h3 id="Revision-and-response-to-reviewers"><a href="#Revision-and-response-to-reviewers" class="headerlink" title="Revision, and response to reviewers"></a>Revision, and response to reviewers</h3><ul>
+<li>Cherish the chance of discussion your work directly with other scientists in your community. Please prepare a detailed letter of response.</li>
+<li>Cut and paste each comment by the reviewer. Answer it directly below. State specifically what changes you have made to the manuscript. Identify the page and line number.</li>
+<li>Provide a scientific response to the comment you accept; or a convicing, solid and polite rebuttal to the point you think the reviewer is wrong.</li>
+</ul>
+<h3 id="Rejection"><a href="#Rejection" class="headerlink" title="Rejection"></a>Rejection</h3><ul>
+<li>Try to understand why the paper was rejected.</li>
+<li>Re-evaluate your work and decide whether it is appropriate to submit the paper elsewhere. If so, begin as if you are going to write a new article.</li>
+</ul>
+<h1 id="个人积累"><a href="#个人积累" class="headerlink" title="个人积累"></a>个人积累</h1><p>Some comments from the editor.</p>
+<ul>
+<li>Note that terms such as “notably,” “indeed,” and “surprisingly” are redundant in scientific writing and can be deleted as they add no relevance.</li>
+<li>The n-dash (–) could be used instead of “to” but not hyphen (-). For example, 15–25 mm implies 15 to 25 mm. <a href="https://www.grammarly.com/blog/hyphens-and-dashes/">here is a nice demonstration</a>, <a href="https://meta.stackexchange.com/questions/305172/how-to-type-a-dash-or-instead-of-a-hyphen-in-stack-exchange">here is how to type them</a></li>
+</ul>
+<p>deep-learning-empowered</p>
+<p>Expensive flower-filled vase</p>
+<p>Expensive-flower-filled vase</p>
+<ul>
+<li><p>The use of too many words to convey one idea can muddle the message and divert the reader’s attention. Therefore, in writing, especially academic writing, ideas need to be conveyed as concisely as possible. One way of doing this is to use concise alternatives to phrases. For example, the phrase “all over the world” can be replaced with the word “globally” or “worldwide.” </p>
+</li>
+<li><p>Where possible, a direct verb (action) should be used instead of using a noun and verb. For example, “segmentation of images was done” can be replaced with “images were segmented,” which is clearer and preferred in academic writing.</p>
+<!--more--></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><strong>Example</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Avoid:</strong> Spectral imaging is essentially beneficial for an ocean of applications that require both spectral and spatial information at high resolution. <strong>Better:</strong> Several applications requiring both spectral and spatial information at high resolution benefit from spectral imaging.</td>
+</tr>
+</tbody></table>
+<p>Some useful word revision from the editor.</p>
+<ul>
+<li><p>While —&gt; Although</p>
+</li>
+<li><p>Here —&gt; In this study</p>
+</li>
+<li><p>These improvements enable us —&gt; enabled us</p>
+</li>
+<li><p>whole —&gt; entire</p>
+</li>
+<li><p>inaccessible —&gt; unreachable</p>
+</li>
+<li><p>Defects —&gt; limitations</p>
+</li>
+<li><p>Unsurprisingly —&gt; Nevertheless</p>
+</li>
+<li><p>confining —&gt; limiting</p>
+</li>
+<li><p>may —&gt; might</p>
+</li>
+<li><p>Besides —&gt; In addition</p>
+</li>
+<li><p>Since —&gt; Because</p>
+</li>
+</ul>
+<p>Some classical mistakes.</p>
+<ul>
+<li><p>is —&gt; was</p>
+</li>
+<li><p>spectral and spatial detections are simultaneously expected —&gt; spectral and spatial detection is</p>
+</li>
+</ul>
+<p>Common phrases.</p>
+<ul>
+<li>because of, due to</li>
+</ul>
+<p>early methods –&gt; early endeavors</p>
+<p>later works developed more methods –&gt; later works involved more methods</p>
+<p>It therefore failed to –&gt; it thereby failing to</p>
+<p><strong>The key difference between thereby and therefore is that thereby means “by that means” or “as a result of that” whereas therefore means “for that reason” or consequently.</strong></p>
+<p>additionally–&gt;besides</p>
+<p><a href="https://home.soka.ac.jp/~alex/sokhome06b/ess/transwords.html">https://home.soka.ac.jp/~alex/sokhome06b/ess/transwords.html</a></p>
+<p>Sec. 1 –&gt; Section 1</p>
+<p>Additional –&gt; Extra</p>
+<p>deep learning is able to handle the complicated combination-architecture model. –&gt; deep learning <strong>allows</strong> to handle the complicated combination-architecture model.</p>
+<p>enough to –&gt;sufficient for</p>
+<p>which is –&gt; namely</p>
+<h3 id="美化篇"><a href="#美化篇" class="headerlink" title="美化篇"></a>美化篇</h3><p>Deep neural networks has been applied widely in reconstruction process of spectral imaging. –&gt; The past decade has witnessed a rapid expansion of deep neural networks applications in reconstruction of spectral imaging.</p>
+<p>We think reinforcement learning (RL) can be used to change this condition. –&gt; We barely believe that we have fully exploited the potential of neural networks. To maximize their performance, one may consider introducing reinforcement learning (RL) technique.</p>
+<h3 id="单词篇"><a href="#单词篇" class="headerlink" title="单词篇"></a>单词篇</h3><p>endure</p>
+<p>endeavor </p>
+<p>notable</p>
+<h3 id="语法篇"><a href="#语法篇" class="headerlink" title="语法篇"></a>语法篇</h3><p>The computational spectral imaging method has resorted to computation power <strong>for reduced system volume</strong>.</p>
+<p>根据强调的内容（后句），把后句的but改成前句的though</p>
+<h3 id="词义篇"><a href="#词义篇" class="headerlink" title="词义篇"></a>词义篇</h3><p>Hence and thus have the same basic meaning and are often interchangeable. However, there is a slight difference. Hence usually refers to the future. Thus usually refers to the past. It is often used to indicate a conclusion.</p>
+<ul>
+<li>Both sides played well, thus no winner was declared.</li>
+<li>The situation is getting more and more complicated. Hence we will have to proceed with caution. (NOT Thus we will have to proceed with caution.)</li>
+</ul>
+<h3 id="资源篇"><a href="#资源篇" class="headerlink" title="资源篇"></a>资源篇</h3><p><a href="https://twitter.com/jbhuang0604/status/1437931021706612736">https://twitter.com/jbhuang0604/status/1437931021706612736</a></p>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>A-xxed B 就是 B is xxed by A. | computer-assisted diagnosis</p>
+<p>A-xxing B 就是 B xx A. | privacy-enhancing techniques</p>
+</div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script>]]></content>
+      <categories>
+        <category>Notes</category>
+        <category>Writing</category>
+      </categories>
+      <tags>
+        <tag>writing</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Modern Optical Testing Technology</title>
     <url>/Optics/Modern-Optical-Testing-Technology/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><p>浙大光电研究生课程《近代光学测试技术》笔记。</p>
@@ -4363,310 +4671,6 @@
       </categories>
       <tags>
         <tag>optics</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Scientific Writing Notes</title>
-    <url>/Writing/Scientific-Writing/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="科技写作（光电–狄大卫-x2F-王攀）"><a href="#科技写作（光电–狄大卫-x2F-王攀）" class="headerlink" title="科技写作（光电–狄大卫&#x2F;王攀）"></a>科技写作（光电–狄大卫&#x2F;王攀）</h1><p>好期刊不是科研的追求，成果才是。</p>
-<p>科研的核心：总结，归纳，最终能把自己做的用少数几个词凝练出来。</p>
-<h2 id="1-基本概念与文献调研"><a href="#1-基本概念与文献调研" class="headerlink" title="1 基本概念与文献调研"></a>1 基本概念与文献调研</h2><ul>
-<li><p>影响因子: 某期刊前两年（S, T）发表的论文在统计当年（U）的被引用总次数 X , 除以该期刊在前两年（S, T）内发表的论文总数 Y。公式为：<br>$$<br>\mathrm{IF}_U &#x3D; \frac{X(S,T)}{Y(S,T)}<br>$$</p>
-<ul>
-<li><p>本刊2009年的文章在2010年的被引次数：48；本刊2009年的发文量：187</p>
-<p>本刊2008年的文章在2010年的被引次数：128；本刊2008年的发文量：154</p>
-<p>本刊2010年的影响因子：IF &#x3D; (48+128) &#x2F; (187+154) &#x3D; 0.5161</p>
-</li>
-</ul>
-</li>
-</ul>
- <span id="more"></span>
-
-<ul>
-<li><p>SCI 论文分区：中国科学院文献情报中心根据目前SCI核心库将所有期刊分为数学、物理、化学、生物、地学、天文、工程技术、医学、环境科学、农林科学、社会科学、管理科学及综合性期刊13大类。然后，将13大类期刊分各自为 4 个等级，即 4 个区。按照各类期刊影响因子划分，前5%为该类 1 区、6% ～ 20% 为 2 区、21% ～ 50% 为 3 区，其余的为 4 区。</p>
-</li>
-<li><p>H–index：h代表“高引用次数”（high citations），一名科研人员的h指数是指他 <em>至多有h篇论文分别被引用了至少h次。</em></p>
-</li>
-<li><p>Formality: </p>
-<ul>
-<li>Full words. e.g., can’t –&gt; cannot, won’t –&gt; will not</li>
-<li>a lot –&gt; many</li>
-<li>totally –&gt; completely</li>
-<li>at the same time –&gt; simulataneously</li>
-<li>Interesting –&gt; compelling</li>
-</ul>
-</li>
-</ul>
-<p>学位论文：不要追求写得长，要追求原创性和逻辑性；</p>
-<ul>
-<li>对课题组的同学、同一个学校的同学，是一个重要参考资料！</li>
-</ul>
-<h2 id="2-参考文献的管理与排版"><a href="#2-参考文献的管理与排版" class="headerlink" title="2 参考文献的管理与排版"></a>2 参考文献的管理与排版</h2><ul>
-<li>高效看文献<ul>
-<li>要  <em>get</em> 什么：<strong>带着问题和目的</strong>去找文献</li>
-<li><strong>不求甚解</strong>的精神（略读，扫文献）</li>
-<li>Critical thinking</li>
-</ul>
-</li>
-</ul>
-<h2 id="3-描述研究成果"><a href="#3-描述研究成果" class="headerlink" title="3 描述研究成果"></a>3 描述研究成果</h2><ul>
-<li>Use adj. and adv. sparingly<ul>
-<li><strong>Both of the two</strong> samples had <strong>very similar</strong> concentrations –&gt; The two samples had similar concentrations</li>
-<li>Avoid ‘significantly’, unless have  statistic reference</li>
-</ul>
-</li>
-<li>Focus on science, not scientist </li>
-<li>Avoid empty transitional statements<ul>
-<li>e.g., actually</li>
-<li>Useful statements: conversely, consequently &#x2F; to this end, typically &#x2F; in general</li>
-</ul>
-</li>
-<li>Choose simple words over complex<ul>
-<li>In order to –&gt; to</li>
-<li>has the capacity to –&gt; can</li>
-<li>a number of –&gt; many &#x2F; several</li>
-<li>despite the fact that –&gt; although</li>
-</ul>
-</li>
-</ul>
-<h3 id="时态和语态"><a href="#时态和语态" class="headerlink" title="时态和语态"></a>时态和语态</h3><ul>
-<li>研究的实验工作：过去时</li>
-<li>描述事实结果：现在时</li>
-<li>引述别人工作：现在时或现在完成时</li>
-</ul>
-<h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><ul>
-<li>开门见山，不绕圈子，避免大篇幅讲述历史渊源</li>
-<li>回顾历史有重点，找有代表性的</li>
-</ul>
-<h3 id="Discussion-部分"><a href="#Discussion-部分" class="headerlink" title="Discussion 部分"></a>Discussion 部分</h3><ul>
-<li><p>创造性见解，精炼回答为什么出现这样的结果，以及出现这样的结果意味着什么，逻辑要清晰</p>
-</li>
-<li><p>主要的发现</p>
-</li>
-<li><p>结果的说明、阐释或论述、推论</p>
-</li>
-<li><p>与前人结果的比较</p>
-</li>
-<li><p>结果的意义和重要性、应用</p>
-</li>
-<li><p>研究的局限和不足之处，尚未回答的问题及局限性对研究的影响，建议进一步的研究方向</p>
-</li>
-</ul>
-<h3 id="Conclusion-部分"><a href="#Conclusion-部分" class="headerlink" title="Conclusion 部分"></a>Conclusion 部分</h3><ul>
-<li>一句话总结</li>
-<li>技术的优势和拓展应用</li>
-</ul>
-<h3 id="Supplementary-部分"><a href="#Supplementary-部分" class="headerlink" title="Supplementary 部分"></a>Supplementary 部分</h3><ul>
-<li>放不太重要、但有助于理解结果的实验和讨论</li>
-</ul>
-<h3 id="Figures-and-Tables"><a href="#Figures-and-Tables" class="headerlink" title="Figures and Tables"></a>Figures and Tables</h3><ul>
-<li>先总说</li>
-<li>再有逻辑、递进性地描述图表结果</li>
-<li>讨论</li>
-</ul>
-<h3 id="Title"><a href="#Title" class="headerlink" title="Title"></a>Title</h3><ul>
-<li><p>清楚性</p>
-<ul>
-<li>Highly efficient waveguide grating couplers using silicon-on-insulator (Emphasis: waveguide grating couplers)</li>
-<li>Silicon-on-insulator for high-output waveguide grating couplers (Emphasis: silicon-on-sinsulator)</li>
-</ul>
-</li>
-<li><p>主副题名</p>
-</li>
-<li><p>e.g.</p>
-<ul>
-<li>Low-loss 与 surface smoothness, diameter uniformity<ul>
-<li>Low-loss 在 high-level</li>
-<li>Subwavelength-diameter silica wire for low-loss optical wave guiding</li>
-</ul>
-</li>
-<li>包含凸显性能的关键信息</li>
-<li>要吸引人看<ul>
-<li><strong>Single-Nanowire Single-Mode Laser</strong></li>
-<li>Highly elastic ice microfiber –&gt; Elastic ice microfiber: Highly 太泛泛不准确</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="PPT-展示"><a href="#PPT-展示" class="headerlink" title="PPT 展示"></a>PPT 展示</h3><ul>
-<li><p>图片出处标注：无作者信息，杂志名采用缩写形式，随后是期号（黑体）、首页页码、发表年份</p>
-</li>
-<li><p>原则：让观众最快获取有用信息</p>
-</li>
-</ul>
-<h2 id="论文投稿"><a href="#论文投稿" class="headerlink" title="论文投稿"></a>论文投稿</h2><p>牵扯到人，在哪里都会有偏见或者倾向性的，那也没办法</p>
-<ul>
-<li><p>期刊选择</p>
-<ul>
-<li><p>原理、材料、结构等的重大创新，性能的显著提高：好一点的期刊</p>
-</li>
-<li><p>前人工作的改进优化：中下的期刊</p>
-</li>
-<li><p>期刊所规定的范围</p>
-</li>
-<li><p>期刊的论文平均水平</p>
-</li>
-</ul>
-</li>
-<li><p>投稿前的准备工作: 系统里要填很多东西，投个稿也是很累的</p>
-<ul>
-<li><p>Manuscript</p>
-</li>
-<li><p>Tables, Figures, Movies</p>
-</li>
-<li><p>Supplementary materials</p>
-</li>
-<li><p><strong>Cover Letter</strong></p>
-<ul>
-<li><p>an excellent opportunity to briefly discuss the importance of the submitted work and why it is appropriate for the journal </p>
-</li>
-<li><p>Spend time writing a convincing cover letter and share it with your coauthors for their input</p>
-</li>
-</ul>
-</li>
-<li><p>Email and address for each author</p>
-</li>
-<li><p>Suggested reviewers (name, affiliation, emails)</p>
-</li>
-</ul>
-</li>
-<li><p>申诉：审稿人误解&#x2F;没理解&#x2F;有很强偏见（好的工作，机会难得）</p>
-</li>
-<li><p><strong>发表过一篇文章后，可以申请当审稿人</strong></p>
-</li>
-</ul>
-<h1 id="科技写作（医学–邹炜-x2F-邹键）"><a href="#科技写作（医学–邹炜-x2F-邹键）" class="headerlink" title="科技写作（医学–邹炜&#x2F;邹键）"></a>科技写作（医学–邹炜&#x2F;邹键）</h1><h3 id="Writing-a-scientific-article"><a href="#Writing-a-scientific-article" class="headerlink" title="Writing a scientific article"></a>Writing a scientific article</h3><ul>
-<li>Read the author guideline!</li>
-<li>Figures: One figure, one question<ul>
-<li>figure的逻辑、框架可以提前思考准备</li>
-</ul>
-</li>
-<li>Discussion: <ul>
-<li>Indicate uses, extensions, and limitations </li>
-<li>suggest future experiments and point out those that are underway</li>
-</ul>
-</li>
-<li>Supplementary Material: 不是不重要放到了附录，而是由于篇幅限制才放到了附录</li>
-<li>Start writing<ul>
-<li>Paper: Introduction –&gt; Methods &amp; Materials –&gt; Results –&gt;Discussion –&gt; Figures &amp; Tables</li>
-<li>Write: Abstract –&gt; Results –&gt; Figures &amp; Tables –&gt; Methods &amp; Materials –&gt; Introduction –&gt; Discussion –&gt; Abstract (revision)</li>
-</ul>
-</li>
-</ul>
-<h3 id="Cover-Letter-投稿信"><a href="#Cover-Letter-投稿信" class="headerlink" title="Cover Letter (投稿信)"></a>Cover Letter (投稿信)</h3><ul>
-<li>Basic information</li>
-<li>Cover letter is your chance to speak to the editor directly</li>
-<li>Mention what makes the paper special to the journel</li>
-<li>Confine the length to 2&#x2F;3 page</li>
-</ul>
-<h3 id="Revision-and-response-to-reviewers"><a href="#Revision-and-response-to-reviewers" class="headerlink" title="Revision, and response to reviewers"></a>Revision, and response to reviewers</h3><ul>
-<li>Cherish the chance of discussion your work directly with other scientists in your community. Please prepare a detailed letter of response.</li>
-<li>Cut and paste each comment by the reviewer. Answer it directly below. State specifically what changes you have made to the manuscript. Identify the page and line number.</li>
-<li>Provide a scientific response to the comment you accept; or a convicing, solid and polite rebuttal to the point you think the reviewer is wrong.</li>
-</ul>
-<h3 id="Rejection"><a href="#Rejection" class="headerlink" title="Rejection"></a>Rejection</h3><ul>
-<li>Try to understand why the paper was rejected.</li>
-<li>Re-evaluate your work and decide whether it is appropriate to submit the paper elsewhere. If so, begin as if you are going to write a new article.</li>
-</ul>
-<h1 id="个人积累"><a href="#个人积累" class="headerlink" title="个人积累"></a>个人积累</h1><p>Some comments from the editor.</p>
-<ul>
-<li>Note that terms such as “notably,” “indeed,” and “surprisingly” are redundant in scientific writing and can be deleted as they add no relevance.</li>
-<li>The n-dash (–) could be used instead of “to” but not hyphen (-). For example, 15–25 mm implies 15 to 25 mm. <a href="https://www.grammarly.com/blog/hyphens-and-dashes/">here is a nice demonstration</a>, <a href="https://meta.stackexchange.com/questions/305172/how-to-type-a-dash-or-instead-of-a-hyphen-in-stack-exchange">here is how to type them</a></li>
-</ul>
-<p>deep-learning-empowered</p>
-<p>Expensive flower-filled vase</p>
-<p>Expensive-flower-filled vase</p>
-<ul>
-<li><p>The use of too many words to convey one idea can muddle the message and divert the reader’s attention. Therefore, in writing, especially academic writing, ideas need to be conveyed as concisely as possible. One way of doing this is to use concise alternatives to phrases. For example, the phrase “all over the world” can be replaced with the word “globally” or “worldwide.” </p>
-</li>
-<li><p>Where possible, a direct verb (action) should be used instead of using a noun and verb. For example, “segmentation of images was done” can be replaced with “images were segmented,” which is clearer and preferred in academic writing.</p>
-<!--more--></li>
-</ul>
-<table>
-<thead>
-<tr>
-<th><strong>Example</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>Avoid:</strong> Spectral imaging is essentially beneficial for an ocean of applications that require both spectral and spatial information at high resolution. <strong>Better:</strong> Several applications requiring both spectral and spatial information at high resolution benefit from spectral imaging.</td>
-</tr>
-</tbody></table>
-<p>Some useful word revision from the editor.</p>
-<ul>
-<li><p>While —&gt; Although</p>
-</li>
-<li><p>Here —&gt; In this study</p>
-</li>
-<li><p>These improvements enable us —&gt; enabled us</p>
-</li>
-<li><p>whole —&gt; entire</p>
-</li>
-<li><p>inaccessible —&gt; unreachable</p>
-</li>
-<li><p>Defects —&gt; limitations</p>
-</li>
-<li><p>Unsurprisingly —&gt; Nevertheless</p>
-</li>
-<li><p>confining —&gt; limiting</p>
-</li>
-<li><p>may —&gt; might</p>
-</li>
-<li><p>Besides —&gt; In addition</p>
-</li>
-<li><p>Since —&gt; Because</p>
-</li>
-</ul>
-<p>Some classical mistakes.</p>
-<ul>
-<li><p>is —&gt; was</p>
-</li>
-<li><p>spectral and spatial detections are simultaneously expected —&gt; spectral and spatial detection is</p>
-</li>
-</ul>
-<p>Common phrases.</p>
-<ul>
-<li>because of, due to</li>
-</ul>
-<p>early methods –&gt; early endeavors</p>
-<p>later works developed more methods –&gt; later works involved more methods</p>
-<p>It therefore failed to –&gt; it thereby failing to</p>
-<p><strong>The key difference between thereby and therefore is that thereby means “by that means” or “as a result of that” whereas therefore means “for that reason” or consequently.</strong></p>
-<p>additionally–&gt;besides</p>
-<p><a href="https://home.soka.ac.jp/~alex/sokhome06b/ess/transwords.html">https://home.soka.ac.jp/~alex/sokhome06b/ess/transwords.html</a></p>
-<p>Sec. 1 –&gt; Section 1</p>
-<p>Additional –&gt; Extra</p>
-<p>deep learning is able to handle the complicated combination-architecture model. –&gt; deep learning <strong>allows</strong> to handle the complicated combination-architecture model.</p>
-<p>enough to –&gt;sufficient for</p>
-<p>which is –&gt; namely</p>
-<h3 id="美化篇"><a href="#美化篇" class="headerlink" title="美化篇"></a>美化篇</h3><p>Deep neural networks has been applied widely in reconstruction process of spectral imaging. –&gt; The past decade has witnessed a rapid expansion of deep neural networks applications in reconstruction of spectral imaging.</p>
-<p>We think reinforcement learning (RL) can be used to change this condition. –&gt; We barely believe that we have fully exploited the potential of neural networks. To maximize their performance, one may consider introducing reinforcement learning (RL) technique.</p>
-<h3 id="单词篇"><a href="#单词篇" class="headerlink" title="单词篇"></a>单词篇</h3><p>endure</p>
-<p>endeavor </p>
-<p>notable</p>
-<h3 id="语法篇"><a href="#语法篇" class="headerlink" title="语法篇"></a>语法篇</h3><p>The computational spectral imaging method has resorted to computation power <strong>for reduced system volume</strong>.</p>
-<p>根据强调的内容（后句），把后句的but改成前句的though</p>
-<h3 id="词义篇"><a href="#词义篇" class="headerlink" title="词义篇"></a>词义篇</h3><p>Hence and thus have the same basic meaning and are often interchangeable. However, there is a slight difference. Hence usually refers to the future. Thus usually refers to the past. It is often used to indicate a conclusion.</p>
-<ul>
-<li>Both sides played well, thus no winner was declared.</li>
-<li>The situation is getting more and more complicated. Hence we will have to proceed with caution. (NOT Thus we will have to proceed with caution.)</li>
-</ul>
-<h3 id="资源篇"><a href="#资源篇" class="headerlink" title="资源篇"></a>资源篇</h3><p><a href="https://twitter.com/jbhuang0604/status/1437931021706612736">https://twitter.com/jbhuang0604/status/1437931021706612736</a></p>
-<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>A-xxed B 就是 B is xxed by A. | computer-assisted diagnosis</p>
-<p>A-xxing B 就是 B xx A. | privacy-enhancing techniques</p>
-</div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
-        var options = {
-            selector: '.gallery-item'
-        };
-        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
-        }</script>]]></content>
-      <categories>
-        <category>Notes</category>
-        <category>Writing</category>
-      </categories>
-      <tags>
-        <tag>writing</tag>
       </tags>
   </entry>
   <entry>
@@ -6812,8 +6816,8 @@ ssh -L port:127.0.0.1:port username@ip
         <category>Optics</category>
       </categories>
       <tags>
-        <tag>optics</tag>
         <tag>projects</tag>
+        <tag>optics</tag>
       </tags>
   </entry>
   <entry>
@@ -6841,8 +6845,8 @@ ssh -L port:127.0.0.1:port username@ip
         <category>Optics</category>
       </categories>
       <tags>
-        <tag>optics</tag>
         <tag>projects</tag>
+        <tag>optics</tag>
       </tags>
   </entry>
   <entry>
@@ -6870,8 +6874,8 @@ ssh -L port:127.0.0.1:port username@ip
         <category>Optics</category>
       </categories>
       <tags>
-        <tag>optics</tag>
         <tag>projects</tag>
+        <tag>optics</tag>
       </tags>
   </entry>
   <entry>
@@ -7202,8 +7206,8 @@ ssh -L port:127.0.0.1:port username@ip
       </categories>
       <tags>
         <tag>competition</tag>
-        <tag>optics</tag>
         <tag>projects</tag>
+        <tag>optics</tag>
       </tags>
   </entry>
   <entry>
@@ -8168,8 +8172,8 @@ ssh -L port:127.0.0.1:port username@ip
         <category>Optics</category>
       </categories>
       <tags>
-        <tag>optics</tag>
         <tag>projects</tag>
+        <tag>optics</tag>
       </tags>
   </entry>
   <entry>
@@ -8202,8 +8206,8 @@ ssh -L port:127.0.0.1:port username@ip
         <category>Optics</category>
       </categories>
       <tags>
-        <tag>optics</tag>
         <tag>projects</tag>
+        <tag>optics</tag>
         <tag>coding</tag>
       </tags>
   </entry>
@@ -8256,8 +8260,8 @@ ssh -L port:127.0.0.1:port username@ip
         <category>Optics</category>
       </categories>
       <tags>
-        <tag>optics</tag>
         <tag>projects</tag>
+        <tag>optics</tag>
       </tags>
   </entry>
   <entry>
@@ -8296,8 +8300,8 @@ ssh -L port:127.0.0.1:port username@ip
         <category>Optics</category>
       </categories>
       <tags>
-        <tag>optics</tag>
         <tag>projects</tag>
+        <tag>optics</tag>
       </tags>
   </entry>
   <entry>
@@ -8372,8 +8376,8 @@ ssh -L port:127.0.0.1:port username@ip
         <category>Optics</category>
       </categories>
       <tags>
-        <tag>optics</tag>
         <tag>projects</tag>
+        <tag>optics</tag>
       </tags>
   </entry>
   <entry>
@@ -8400,8 +8404,8 @@ ssh -L port:127.0.0.1:port username@ip
         <category>Optics</category>
       </categories>
       <tags>
-        <tag>optics</tag>
         <tag>projects</tag>
+        <tag>optics</tag>
       </tags>
   </entry>
   <entry>
@@ -10246,9 +10250,9 @@ ssh -L port:127.0.0.1:port username@ip
 <p>rmdir dirname &#x2F;&#x2F; 删除空文件目录</p>
 <p>git rm filename &#x2F;&#x2F; 从版本库中删除文件</p>
 <p>git checkout – filename &#x2F;&#x2F; 误删文件的恢复</p>
-<h3 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h3><p>git remote add origin <a href="mailto:&#x67;&#105;&#116;&#64;&#x67;&#x69;&#116;&#x68;&#117;&#x62;&#46;&#x63;&#x6f;&#109;">&#x67;&#105;&#116;&#64;&#x67;&#x69;&#116;&#x68;&#117;&#x62;&#46;&#x63;&#x6f;&#109;</a>:longqianh&#x2F;learngit.git</p>
+<h3 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h3><p>git remote add origin <a href="mailto:&#103;&#105;&#116;&#x40;&#x67;&#x69;&#x74;&#104;&#x75;&#x62;&#x2e;&#x63;&#x6f;&#x6d;">&#103;&#105;&#116;&#x40;&#x67;&#x69;&#x74;&#104;&#x75;&#x62;&#x2e;&#x63;&#x6f;&#x6d;</a>:longqianh&#x2F;learngit.git</p>
 <p>git push -u origin master</p>
-<p>git clone <a href="mailto:&#103;&#105;&#116;&#64;&#103;&#105;&#116;&#104;&#117;&#x62;&#46;&#x63;&#x6f;&#109;">&#103;&#105;&#116;&#64;&#103;&#105;&#116;&#104;&#117;&#x62;&#46;&#x63;&#x6f;&#109;</a>:longqianh&#x2F;learngit.git</p>
+<p>git clone <a href="mailto:&#103;&#x69;&#116;&#64;&#x67;&#105;&#x74;&#104;&#117;&#98;&#46;&#99;&#111;&#x6d;">&#103;&#x69;&#116;&#64;&#x67;&#105;&#x74;&#104;&#117;&#98;&#46;&#99;&#111;&#x6d;</a>:longqianh&#x2F;learngit.git</p>
 <h3 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h3><p>git checkout </p>
 <p>git branch &#x2F;&#x2F; 查看分支</p>
 <p>git branch -d branchname &#x2F;&#x2F; 删除分支</p>
