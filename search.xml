@@ -3,7 +3,8 @@
   <entry>
     <title>Optics Tutorial</title>
     <url>/Optics/Optics-Tutorial/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><blockquote>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><p><a href="https://p.ipic.vip/6f1ln6.png" title="optics_cover" class="gallery-item"><img src="https://p.ipic.vip/6f1ln6.png" alt="optics_cover"></a></p>
+<blockquote>
 <p>I have to regularly organize and polish my thoughts about optical systems and fundamental theories. Put them here. Also, as a note for guiding freshmen.</p>
 <p>— Longqian :)</p>
 </blockquote>
@@ -1072,64 +1073,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Illumination strategy in Fourier ptychography</title>
-    <url>/Project/Fourier-Ptychography/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><p>This is a mini-review focused on the illumination strategy of Fourier ptychography. It is a course project in academic writing (credit: Prof. Pan Wang, Prof. Dawei Di). It is worth mentioning that the derived SBP-T is a valuable and effective classification metric of microscopy techniques.</p>
-<p>I have submitted it on <a href="https://arxiv.org/abs/2308.13933">arxiv</a>. By the way, it took me almost the entire week to finish reading and writing, and thanks to our teammates, especially Haibo Xu for the valuable discussion of the SBP-T derivation. Through this work, I have a better understanding of the numerical aperture (NA) of the optical system, though it is still slightly elusive.</p>
-<p>I would also like to thank Starbucks for supporting me the supportive coffee :)</p>
-
-
-	<div class="row">
-    <embed src="/projects/survey/FPM_survey.pdf" width="100%" height="550" type="application/pdf">
-	</div>
-
-
-
-
-</div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
-        var options = {
-            selector: '.gallery-item'
-        };
-        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
-        }</script>]]></content>
-      <categories>
-        <category>Notes</category>
-        <category>Optics</category>
-      </categories>
-      <tags>
-        <tag>optics</tag>
-        <tag>microscopy</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Deep Learning Applications in Augmented Reality (AR)</title>
-    <url>/Project/Augmented-Reality/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><p>This is a mini-review focused on the deep learning techiques in Augmented Reality (AR). It is a provincial-level Student Research Training Project (SRTP) at the College of Computer Science and Technology, Zhejiang University, with my peers Mr. Haojie He and Mr. Lingming Zhang.</p>
-
-
-	<div class="row">
-    <embed src="/projects/survey/AR_survey.pdf" width="100%" height="550" type="application/pdf">
-	</div>
-
-
-
-
-</div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
-        var options = {
-            selector: '.gallery-item'
-        };
-        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
-        }</script>]]></content>
-      <categories>
-        <category>Projects</category>
-        <category>Deep Learning</category>
-      </categories>
-      <tags>
-        <tag>projects</tag>
-        <tag>ar</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Quantum-Mechanics Notes</title>
     <url>/Physics/Quantum-Mechanics/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="Quantum-Mechanics-Notes"><a href="#Quantum-Mechanics-Notes" class="headerlink" title="Quantum-Mechanics-Notes"></a>Quantum-Mechanics-Notes</h1><p>Notes for quantum mechanics of MIT-OCW 8.04.</p>
@@ -1867,10 +1810,10 @@
 <p>$$<br>\therefore \Delta u&#x3D;0\iff \frac{1}{r^2}\frac{\partial }{\partial r}\left(r^2\frac{\partial u}{\partial r}\right)+\frac{1}{r^2 \sin \theta}\frac{\partial }{\partial\theta}\left(\sin\theta\frac{\partial u}{\partial\theta}\right)+\frac{1}{r^2\sin^2\theta}\frac{\partial^2 u}{\partial\varphi^2}&#x3D;0<br>$$</p>
 <ol start="2">
 <li><p><strong>分离变量</strong></p>
-<p>设 $u\left(r,\theta,\varphi\right)&#x3D;R\left(r\right)\cdot Y\left(\theta,\varphi\right)$ ，带入 Laplace方程，得：<br>$$<br>\begin{align}<br>&amp;Y\frac{d}{dr}\left(r^2\frac{dR}{dr}\right)+R\frac{1}{\sin\theta}\frac{d}{d\theta}\left(\sin\theta\frac{dY}{d\theta}\right)+R\frac{1}{\sin^2\theta}\frac{d^2 Y}{d\varphi^2}&#x3D;0\notag \\<br>\implies&amp;\frac{1}{R}\frac{d}{dr}\left(r^2\frac{dR}{dr}\right)&#x3D;-\frac{1}{Y}\left(\frac{1}{\sin\theta}\frac{d}{d\theta}\left(\sin\theta\frac{dY}{d\theta}\right)+\frac{1}{\sin^2\theta}\frac{d^2 Y}{d\varphi^2}\right)\triangleq l\left(l+1\right)\notag \\<br>\implies&amp; \quad r^2 R’’+2rR’-l\left(l+1\right) R&#x3D;0,<br>\label{EulerODE}&amp;\\<br>&amp;\quad \frac{1}{\sin\theta}\frac{d}{d\theta}\left(\sin\theta\frac{dY}{d\theta}\right)+\frac{1}{\sin^2\theta}\frac{d^2 Y}{d\varphi^2}+l\left(l+1\right)Y&#x3D;0<br>\label{ballfunc}<br>\end{align}<br>$$</p>
-<p>$(\ref{EulerODE})$ 为欧拉型 ODE，解为 $\displaystyle R\left(r\right)&#x3D;Cr^l+D\frac{1}{r^{l+1}}$</p>
-<p>$ (\ref{ballfunc})$为 <strong>球函数方程</strong>， 现进一步分离变量，设 $Y\left(\theta,\varphi\right)&#x3D;H\left(\theta\right)\cdot\Phi\left(\varphi\right)$ , 代入得 :<br>$$<br>\begin{aligned}<br>&amp;\Phi\cdot\frac{1}{\sin \theta}\frac{d}{d\theta}\left(\sin\theta\frac{dH}{d\theta}\right)+H\cdot\frac{1}{\sin^2\theta}\frac{d^2\Phi}{d\varphi^2}+l\left(l+1\right)H\cdot\Phi&#x3D;0\\<br>\implies  &amp; \quad \frac{\sin\theta}{H}\frac{d}{d\theta}\left(\sin\theta\frac{dH}{d\theta}\right)+l\left(l+1\right)\sin^2\theta&#x3D;-\frac{1}{\Phi}\frac{d^2\Phi}{d\varphi^2}\triangleq\lambda\\<br>\implies&amp;\quad \Phi’’+\lambda\Phi&#x3D;0 ,\quad \sin\theta\frac{d}{d\theta}\left(\sin\theta\frac{dH}{d\theta}\right)+[l\left(l+1\right)\sin^2\theta-\lambda\big]H&#x3D;0<br>\end{aligned}<br>$$</p>
-<p>关于 $\Phi$ 的方程结合自然周期条件 $\Phi\left(\varphi\right)&#x3D;\Phi\left(\varphi+2\pi\right)$, 可得：<br>$$<br>\lambda&#x3D;m^2,\quad m&#x3D;0,1,2,3,\cdots\\<br>\Phi\left(\varphi\right)&#x3D;A\cos m\varphi+B\sin m\varphi<br>\notag<br>$$<br>将 $\lambda&#x3D;m^2$ 代入关于 $H$ 的方程, 并记 $x\equiv \cos\theta$：<br>$$<br>\begin{equation}<br>\left(1-x^2\right)\frac{d^2 H}{dx^2}-2x\frac{d H}{dx}+[l\left(l+1\right)-\frac{m^2}{1-x^2}]H&#x3D;0<br>\label{l-Legendre}<br>\end{equation}<br>$$<br>$(\ref{l-Legendre})$ 为 $l$ 阶 <strong>连带勒让德方程</strong></p>
+<p>设 $u\left(r,\theta,\varphi\right)&#x3D;R\left(r\right)\cdot Y\left(\theta,\varphi\right)$ ，带入 Laplace方程，得：<br>$$<br>\begin{aligned}<br>&amp;Y\frac{d}{dr}\left(r^2\frac{dR}{dr}\right)+R\frac{1}{\sin\theta}\frac{d}{d\theta}\left(\sin\theta\frac{dY}{d\theta}\right)+R\frac{1}{\sin^2\theta}\frac{d^2 Y}{d\varphi^2}&#x3D;0\notag \\<br>\implies&amp;\frac{1}{R}\frac{d}{dr}\left(r^2\frac{dR}{dr}\right)&#x3D;-\frac{1}{Y}\left(\frac{1}{\sin\theta}\frac{d}{d\theta}\left(\sin\theta\frac{dY}{d\theta}\right)+\frac{1}{\sin^2\theta}\frac{d^2 Y}{d\varphi^2}\right)\triangleq l\left(l+1\right)\notag \\<br>\implies&amp; \quad r^2 R’’+2rR’-l\left(l+1\right) R&#x3D;0,<br>&amp;&amp; \text{(A)}\label{EulerODE}\\<br>&amp;\quad \frac{1}{\sin\theta}\frac{d}{d\theta}\left(\sin\theta\frac{dY}{d\theta}\right)+\frac{1}{\sin^2\theta}\frac{d^2 Y}{d\varphi^2}+l\left(l+1\right)Y&#x3D;0<br>&amp;&amp; \text{(B)}\label{ballfunc}<br>\end{aligned}<br>$$</p>
+<p>$\text{(A)}$ 为欧拉型 ODE，解为 $\displaystyle R\left(r\right)&#x3D;Cr^l+D\frac{1}{r^{l+1}}$</p>
+<p>$\text{(B)}$ 为 <strong>球函数方程</strong>， 现进一步分离变量，设 $Y\left(\theta,\varphi\right)&#x3D;H\left(\theta\right)\cdot\Phi\left(\varphi\right)$ , 代入得 :<br>$$<br>\begin{aligned}<br>&amp;\Phi\cdot\frac{1}{\sin \theta}\frac{d}{d\theta}\left(\sin\theta\frac{dH}{d\theta}\right)+H\cdot\frac{1}{\sin^2\theta}\frac{d^2\Phi}{d\varphi^2}+l\left(l+1\right)H\cdot\Phi&#x3D;0\\<br>\implies  &amp; \quad \frac{\sin\theta}{H}\frac{d}{d\theta}\left(\sin\theta\frac{dH}{d\theta}\right)+l\left(l+1\right)\sin^2\theta&#x3D;-\frac{1}{\Phi}\frac{d^2\Phi}{d\varphi^2}\triangleq\lambda\\<br>\implies&amp;\quad \Phi’’+\lambda\Phi&#x3D;0 ,\quad \sin\theta\frac{d}{d\theta}\left(\sin\theta\frac{dH}{d\theta}\right)+[l\left(l+1\right)\sin^2\theta-\lambda\big]H&#x3D;0<br>\end{aligned}<br>$$</p>
+<p>关于 $\Phi$ 的方程结合自然周期条件 $\Phi\left(\varphi\right)&#x3D;\Phi\left(\varphi+2\pi\right)$, 可得：<br>$$<br>\lambda&#x3D;m^2,\quad m&#x3D;0,1,2,3,\cdots\\<br>\Phi\left(\varphi\right)&#x3D;A\cos m\varphi+B\sin m\varphi<br>\notag<br>$$<br>将 $\lambda&#x3D;m^2$ 代入关于 $H$ 的方程, 并记 $x\equiv \cos\theta$, 得到 $l$ 阶 <strong>连带勒让德方程</strong>:<br>$$<br>\left(1-x^2\right)\frac{d^2 H}{dx^2}-2x\frac{d H}{dx}+[l\left(l+1\right)-\frac{m^2}{1-x^2}]H&#x3D;0<br>\label{l-Legendre}.<br>$$</p>
 </li>
 </ol>
 <h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><ul>
@@ -1885,8 +1828,7 @@
 </ul>
 <h3 id="3-2-亥姆霍兹方程"><a href="#3-2-亥姆霍兹方程" class="headerlink" title="3.2 亥姆霍兹方程"></a>3.2 亥姆霍兹方程</h3><p>$$<br>\Delta v+k^2v&#x3D;0<br>$$</p>
 <p>波动方程 $u_{tt}-a^2\Delta u&#x3D;0$ 或者输运方程 $u_t-a^2\Delta u&#x3D;0$  分离时间和空间变量 (令 $u\left(\vec r,t\right)&#x3D;T\left(t\right)R\left(\vec r\right)$)后将得到亥姆霍兹方程。</p>
-<h4 id="（1）柱坐标系"><a href="#（1）柱坐标系" class="headerlink" title="（1）柱坐标系"></a>（1）柱坐标系</h4><p>$$<br>\begin{aligned}<br>&amp;\Delta v+k^2 v&#x3D;0\\<br>&amp;v_{rr}+\frac{1}{r}v_r+\frac{1}{r^2}v_{\varphi\varphi}+v_{zz}+k^2 v&#x3D;0\</p>
-<p>\end{aligned}<br>$$</p>
+<h4 id="（1）柱坐标系"><a href="#（1）柱坐标系" class="headerlink" title="（1）柱坐标系"></a>（1）柱坐标系</h4><p>$$<br>\begin{aligned}<br>&amp;\Delta v+k^2 v&#x3D;0\\<br>&amp;v_{rr}+\frac{1}{r}v_r+\frac{1}{r^2}v_{\varphi\varphi}+v_{zz}+k^2 v&#x3D;0\<br>\end{aligned}<br>$$</p>
 <p>设 $v\left(r,\varphi,z\right)\triangleq R\left(r\right)\Phi\left(\varphi\right)Z\left(z\right)$</p>
 <p>先分离 $\Phi$ :<br>$$<br>\frac{r^2 R’’Z+r R’Z+r^2Z’’+k^2r^2 R Z}{RZ}&#x3D;-\frac{\Phi’’}{\Phi}\triangleq\lambda<br>\notag<br>$$</p>
 <p>$\implies$ $ \lambda&#x3D;m^2 $ , $\Phi\left(\varphi\right)&#x3D;A\cos m\varphi+\sin m\varphi$</p>
@@ -1903,7 +1845,7 @@
 <p>线性二阶常微分方程：<br>$$<br>\begin{align}<br>w’’+p\left(z\right)w’+q\left(z\right)w&#x3D;0\label{ode1}\\<br>w\left(z_0\right)&#x3D;C_0,\ w’\left(z_0\right)&#x3D;C_1\notag<br>\end{align}<br>$$<br>其中 $p\left(z\right),\ q\left(z\right)$ 为点 $z_0$ 的邻域 $|z-z_0|&lt;R$ 上的解析函数。</p>
 <p>令 $w\left(z\right)&#x3D;\displaystyle \sum\limits_{k&#x3D;0}^\infty a_k\left(z-z_0\right)^k$， 代入方程合并同幂项，对应系数分别为零。</p>
 <h4 id="求解勒让德方程"><a href="#求解勒让德方程" class="headerlink" title="求解勒让德方程"></a>求解勒让德方程</h4><p>在 $x_0&#x3D;0$ 的邻域上求解 $l$ 阶勒让德方程<br>$$<br>\left(1-x^2\right)y’’-2xy’+l\left(l+1\right)y&#x3D;0\notag<br>$$<br>设 $y&#x3D;\sum\limits_{n&#x3D;0}^\infty a_n x^n$  $\implies$<br>$$<br>a_{k+2}&#x3D;\frac{\left(k-l\right)\left(k+l+1\right)}{\left(k+2\right)\left(k+1\right)}a_k\notag<br>$$<br>$\implies$<br>$$<br>y&#x3D;a_0y_0 \left(x\right)+a_1 y_1\left(x\right)\notag<br>$$</p>
-<h3 id="4-2-正则奇点邻域的级数解法"><a href="#4-2-正则奇点邻域的级数解法" class="headerlink" title="4.2 正则奇点邻域的级数解法"></a>4.2 正则奇点邻域的级数解法</h3><p>正则奇点：在方程 $(\ref{ode1})$ 的奇点邻域上，两个线性无关解全都有有限个负幂项。</p>
+<h3 id="4-2-正则奇点邻域的级数解法"><a href="#4-2-正则奇点邻域的级数解法" class="headerlink" title="4.2 正则奇点邻域的级数解法"></a>4.2 正则奇点邻域的级数解法</h3><p>正则奇点：在4.1中线性二阶常微分方程的奇点邻域上，两个线性无关解全都有有限个负幂项。</p>
 <p>如：  $p\left(z\right)$ 以 $z_0$ 为不高于一阶的极点，且 $q\left(z\right)$ 以 $z_0$ 为不高于二阶的极点。<br>$$<br>i.e.\qquad p\left(z\right)&#x3D;\sum\limits_{k&#x3D;-1}^\infty p_k\left(z-z_0\right)^k ,\ q\left(z\right)&#x3D;\sum\limits_{k&#x3D;-2}^\infty q_k\left(z-z_0\right)^k \notag<br>$$</p>
 <h4 id="（1）基本求解步骤"><a href="#（1）基本求解步骤" class="headerlink" title="（1）基本求解步骤"></a>（1）基本求解步骤</h4><ol>
 <li><p>设 $y&#x3D;\displaystyle\sum_{n&#x3D;0}^\infty a_n\left(z-z_0\right)^{s+n}$</p>
@@ -1923,7 +1865,7 @@
 <p>通常取<br>$$<br>a_0&#x3D;\frac{1}{2}\Gamma\left(\nu+1\right)\notag<br>$$<br>代入得到 $\nu$ 阶 <strong>贝塞尔函数</strong> ：<br>$$<br>J_\nu\left(x\right)&#x3D;\sum_{k&#x3D;0}^\infty \left(-1\right)^k\frac{1}{k!\Gamma\left(\nu+k+1\right)}\left(\frac{x}{2}\right)^{\nu+2k}<br>$$<br>取 $s&#x3D;s_2$ :</p>
 <p>得到 $-\nu$ 阶 贝塞尔函数：<br>$$<br>J_{-\nu}\left(x\right)&#x3D;\sum_{k&#x3D;0}^\infty \left(-1\right)^k\frac{1}{k!\Gamma\left(-\nu+k+1\right)}\left(\frac{x}{2}\right)^{-\nu+2k}<br>$$</p>
 <p>$\nu$ 阶贝塞尔方程的通解为：<br>$$<br>y\left(x\right)&#x3D;C_1J_\nu\left(x\right)+C_2J_{-\nu}\left(x\right)<br>$$</p>
-<p>取 $C_1&#x3D;\cot \nu\pi,\ C_2&#x3D;-\csc\nu\pi$ 代入得到一个特解 $\nu$ 阶<strong>诺伊曼函数</strong>，以此作为 $\nu$ 阶贝塞尔方程的第二个线性独立的解：<br>$$<br>N_\nu\left(x\right)&#x3D;\frac{J_v\left(x\right)\cos\nu\pi-J_{-\nu}\left(x\right)}{\sin\nu\pi}<br>$$</p>
+<p>取 $C_1&#x3D;\cot \nu\pi,\ C_2&#x3D;-\csc\nu\pi$ 代入得到一个特解 $\nu$ 阶 <strong>诺伊曼函数</strong>，以此作为 $\nu$ 阶贝塞尔方程的第二个线性独立的解：<br>$$<br>N_\nu\left(x\right)&#x3D;\frac{J_v\left(x\right)\cos\nu\pi-J_{-\nu}\left(x\right)}{\sin\nu\pi}<br>$$</p>
 <h4 id="（3）求解半奇数阶贝塞尔方程"><a href="#（3）求解半奇数阶贝塞尔方程" class="headerlink" title="（3）求解半奇数阶贝塞尔方程"></a>（3）求解半奇数阶贝塞尔方程</h4><p>$$<br>x^2 y’’+xy’+[x^2-\left(l+\frac{1}{2}\right)^2]y&#x3D;0\notag<br>$$</p>
 <p>$x_0&#x3D;0$ 为方程的正则奇点。</p>
 <p>$l&#x3D;0$ 时：<br>$$<br>\begin{aligned}y_1\left(x\right)&#x3D;J_{\frac{1}{2}}\left(x\right)&amp;&#x3D;\sum_{k&#x3D;0}^\infty\left(-1\right)^k \frac{1}{k!\Gamma\left(k+\frac{3}{2}\right)}\left(\frac{x}{2}\right)^{2k+\frac{1}{2}}\\<br>&amp;&#x3D;\sum_{k&#x3D;0}^\infty\frac{\left(-1\right)^k}{k!\left(k+\frac{1}{2}\right)\cdots \frac{1}{2}\Gamma\left(\frac{1}{2}\right)}\left(\frac{x}{2}\right)^{2k+\frac{1}{2}}\\<br>&amp;&#x3D;\sum_{k&#x3D;0}^\infty\frac{\left(-1\right)^k}{k!\left(k+\frac{1}{2}\right)\cdots \frac{1}{2}\sqrt \pi\cdot 2^{k+1}\cdot2^k}x^{2k+\frac{1}{2}}\cdot\left(\frac{1}{2}\right)^{-\frac{1}{2}}\\<br>&amp;&#x3D;\sqrt{\frac{2x}{\pi}}\sum_{k&#x3D;0}^\infty\left(-1\right)^k\frac{x^{2k}}{\left(2k+1\right)!}\\<br>&amp;&#x3D;\sqrt{\frac{2}{\pi x}}\sin x.<br>\end{aligned}<br>$$<br>（同理可得：$\displaystyle J_{-\frac{1}{2}}&#x3D;\sqrt{\frac{2}{\pi x}}\cos x$ )</p>
@@ -1954,8 +1896,8 @@
 <p>​			 $y_n,y_m$ 分别满足：<br>$$<br>\frac{d}{dx}\left(ky^{\prime}_n\right)-qy_n+\lambda_n\rho y_n&#x3D;0\tag{A}\\<br>$$</p>
 <p>$$<br>\frac{d}{dx}\left(ky^{\prime}_m\right)-qy_m+\lambda_m\rho y_m&#x3D;0\tag{B}\\<br>$$<br>​					$\implies\displaystyle \int_a^b\left[(\text{A})\cdot y_m-(\text{B})\cdot y_n\right]dx $ :<br>$$<br>\begin{aligned}<br>\quad \quad 0&amp;&#x3D;\int_a^b\left[y_m d\left(ky_n’\right)-y_nd\left(ky_m’\right)\right]+\left(\lambda_n-\lambda_m\right)\int_a^b y_ny_m\rho dx\\<br>&amp;&#x3D;\left(ky_my_n’\right)|_a^b-\left(ky_ny_m’\right)|_a^b+\int_a^b \left[\left(ky_n’y_m’\right)-\left(ky_n’y_m’\right)\right]dx+\left(\lambda_n-\lambda_m\right)\int_a^b y_ny_m\rho dx\\<br>&amp;&#x3D;\left(\lambda_n-\lambda_m\right)\int_a^b y_ny_m\rho dx<br>\end{aligned}<br>$$<br>​			故 :<br>$$<br>\int_a^b y_ny_m\rho dx&#x3D;0\qquad \left(n\neq m\right)\notag<br>$$</p>
 <h2 id="五-球函数"><a href="#五-球函数" class="headerlink" title="五 球函数"></a>五 球函数</h2><p>球坐标拉普拉斯方程 :<br>$$<br>\frac{1}{r^2}\frac{\partial }{\partial r}\left(r^2\frac{\partial u}{\partial r}\right)+\frac{1}{r^2 \sin \theta}\frac{\partial }{\partial\theta}\left(\sin\theta\frac{\partial u}{\partial\theta}\right)+\frac{1}{r^2\sin^2\theta}\frac{\partial^2 u}{\partial\varphi^2}&#x3D;0<br>$$<br>分离变量可得：<br>$$<br>\begin{align}<br>&amp;R&#x3D;Cr^l+\frac{D}{r^{l+1}}\\<br>&amp;\frac{1}{\sin\theta}\frac{d}{d\theta}\left(\sin\theta\frac{dY}{d\theta}\right)+\frac{1}<br>{\sin^2\theta}\frac{d^2 Y}{d\varphi^2}+l\left(l+1\right)Y&#x3D;0 \label{ball}<br>\end{align}<br>$$</p>
-<p>方程$(\ref{ball})$为<em>球函数方程</em>，再次分离变量：<br>$$<br>\begin{align}<br>&amp;\Phi_m\left(\varphi\right)&#x3D;A_m\cos m\varphi+B_m\sin m\varphi \\<br>&amp;\left(1-x^2\right)\frac{d^2 H}{dx^2}-2x\frac{d H}{dx}+\left[l\left(l+1\right)-\frac{m^2}{1-x^2}\right]H&#x3D;0 \label{associated-Legendre}<br>\end{align}<br>$$<br>就得到了<em>连带勒让德方程</em> $(\ref{associated-Legendre})$.</p>
-<h3 id="5-1-轴对称球函数"><a href="#5-1-轴对称球函数" class="headerlink" title="5.1 轴对称球函数"></a>5.1 轴对称球函数</h3><p>$(\ref{associated-Legendre})$ 中 $m&#x3D;0$ 时的情况：<br>$$<br>\left(1-x^2\right)y’’-2xy’+\left[l\left(l+1\right)\right]y&#x3D;0<br>$$</p>
+<p>分离后关于 $\theta$ 和 $\varphi$ 的为<em>球函数方程</em>，再次分离变量：<br>$$<br>\begin{align}<br>&amp;\Phi_m\left(\varphi\right)&#x3D;A_m\cos m\varphi+B_m\sin m\varphi \\<br>&amp;\left(1-x^2\right)\frac{d^2 H}{dx^2}-2x\frac{d H}{dx}+\left[l\left(l+1\right)-\frac{m^2}{1-x^2}\right]H&#x3D;0 \label{associated-Legendre}<br>\end{align}<br>$$<br>就得到了<em>连带勒让德方程</em> 。</p>
+<h3 id="5-1-轴对称球函数"><a href="#5-1-轴对称球函数" class="headerlink" title="5.1 轴对称球函数"></a>5.1 轴对称球函数</h3><p><em>连带勒让德方程</em> 中 $m&#x3D;0$ 时的情况：<br>$$<br>\left(1-x^2\right)y’’-2xy’+\left[l\left(l+1\right)\right]y&#x3D;0<br>$$</p>
 <h4 id="（1）勒让德多项式的表达式"><a href="#（1）勒让德多项式的表达式" class="headerlink" title="（1）勒让德多项式的表达式"></a>（1）勒让德多项式的表达式</h4><p>  勒让德方程若和边界条件构成定解问题，一般有自然边界条件（边界处有界），则方程须退化为多项式，此时 $l$ 为整数。将退化的多项式乘以适当的常数，可以得到 $l$ 阶勒让德多项式。因为 $m&#x3D;0$ 时 $\Phi\left(\varphi\right)$ 为常数，轴对称球函数 $Y$ 简化为勒让德多项式 $P_l\left(x\right)$ 。<br>$$<br>\begin{aligned}<br>a_l&amp;&#x3D;\frac{\left(2l\right)!}{2^l \left(l!\right)^2}\\<br>a_{k+2}&amp;&#x3D;\frac{k\left(k+1\right)-l\left(l+1\right)}{\left(k+2\right)\left(k+1\right)}a_k\\&amp;&#x3D;\frac{\left(k-l\right)\left(k+1-l\right)}{\left(k+2\right)\left(k+1\right)}a_k<br>\end{aligned}<br>$$<br>勒让德多项式：<br>$$<br>P_l\left(x\right)&#x3D;\sum_{k&#x3D;0}^{[l&#x2F;2]}\left(-1\right)^k\frac{\left(2l-2k\right)!}{2^l k! \left(l-k\right)!\left(l-2k\right)!}x^{l-2k}<br>$$</p>
 <hr>
 <p>常用：<br>$$<br>\begin{aligned}<br>&amp; P_0\left(x\right)&#x3D;1\\<br>&amp;P_1\left(x\right)&#x3D;x\\<br>&amp;P_2\left(x\right)&#x3D;\frac{1}{2}\left(3x^2-1\right)\\<br>&amp;P_3\left(x\right)&#x3D;\frac{1}{2}\left(5x^3-3x\right)\\<br>&amp;P_4\left(x\right)&#x3D;\frac{1}{8}\left(35x^4-30x^2+3\right)\\<br>&amp;P_l\left(1\right)&#x3D;1\\<br>&amp;P_l\left(-1\right)&#x3D;\left(-1\right)^l\\<br>&amp; P_{2n}\left(0\right)&#x3D;\left(-1\right)^{n}\frac{\left(2l-1\right)!!}{\left(2l\right)!!}\\<br>&amp; P_{2n+1}\left(0\right)&#x3D;0<br>\end{aligned}<br>$$</p>
@@ -2045,7 +1987,7 @@
 <h2 id="六-柱函数"><a href="#六-柱函数" class="headerlink" title="六 柱函数"></a>六 柱函数</h2><h3 id="6-1-柱函数的导出"><a href="#6-1-柱函数的导出" class="headerlink" title="6.1 柱函数的导出"></a>6.1 柱函数的导出</h3><h4 id="（1）柱坐标拉普拉斯方程"><a href="#（1）柱坐标拉普拉斯方程" class="headerlink" title="（1）柱坐标拉普拉斯方程"></a>（1）柱坐标拉普拉斯方程</h4><p>$$<br>\begin{aligned}<br>&amp;\Delta u&#x3D;\frac{1}{\rho}\frac{\partial}{\partial \rho}\left(\rho\frac{\partial u}{\partial \rho}\right)+\frac{1}{\rho^2}\frac{\partial^2 u}{\partial \varphi^2}+\frac{\partial ^2 u}{\partial z^2}&#x3D; 0\\<br>\implies&amp; \begin{cases}<br>\Phi’’+m^2\Phi&#x3D;0,\\<br>Z’’-\mu Z&#x3D;0,\\<br>\rho^2 R’’+\rho R+\left(\mu\rho^2-m^2\right)R&#x3D;0<br>\end{cases}<br>\end{aligned}<br>$$</p>
 <p>求解得：<br>$$<br>\begin{aligned}<br>&amp;\mu&#x3D;0:<br>u&#x3D;\left[\begin{aligned}1\\z\end{aligned}\right]\left[\begin{aligned}&amp;1\\ &amp;\ln\rho\end{aligned}\right]+\left[\begin{aligned}1\\z\end{aligned}\right]\left[\begin{aligned}\cos m\varphi\\ \sin m\varphi \end{aligned}\right]\left[\begin{aligned}&amp;\rho^m\\ &amp;1&#x2F;\rho^{m}\end{aligned}\right]<br>\\<br>&amp;\mu&gt;0:<br>u&#x3D;\left[\begin{aligned}e^{\sqrt\mu z}\\e^{-\sqrt\mu z}\end{aligned}\right]\left[\begin{aligned}\cos m\varphi\\ \sin m\varphi \end{aligned}\right]\left[\begin{aligned}J_m\left(\sqrt\mu \rho\right)\\ N_m\left(\sqrt\mu \rho\right)\end{aligned}\right]\\<br>&amp;\mu&lt;0:<br>u&#x3D;\left[\begin{aligned}\cos\sqrt{-\mu} z\\\sin\sqrt{-\mu} z\end{aligned}\right]\left[\begin{aligned}\cos m\varphi\\ \sin m\varphi \end{aligned}\right]\left[\begin{aligned} \widetilde  I_m\left(\sqrt{-\mu} \rho\right)\\ \widetilde I_{-m}\left(\sqrt{-\mu} \rho\right)\end{aligned}\right]\\<br>\end{aligned}<br>$$</p>
 <h4 id="（2）球坐标亥姆霍兹方程"><a href="#（2）球坐标亥姆霍兹方程" class="headerlink" title="（2）球坐标亥姆霍兹方程"></a>（2）球坐标亥姆霍兹方程</h4><p>$$<br>\frac{1}{r^2}\frac{\partial }{\partial r}\left(r^2\frac{\partial v}{\partial r}\right)+\frac{1}{r^2 \sin \theta}\frac{\partial }{\partial\theta}\left(\sin\theta\frac{\partial v}{\partial\theta}\right)+\frac{1}{r^2\sin^2\theta}\frac{\partial^2 v}{\partial\varphi^2}+k^2v&#x3D;0<br>$$</p>
-<p>分离变量可得到球函数方程 $(\ref{ball})$  和 $l$ 阶球贝塞尔方程：<br>$$<br>r^2\frac{d^2R}{dr^2}+2r\frac{dR}{dr}+\left[k^2r^2-l(l+1)\right]R&#x3D;0<br>$$<br>令 $x&#x3D;kr,R(r)&#x3D;\displaystyle\sqrt\frac{\pi}{2x} y(x)$, 可以得到<br>$$<br>x^2y’’+xy’+\left[x^2-\left(l+\frac{1}{2}\right)^2\right]y&#x3D;0<br>$$<br>是 $l+1&#x2F;2$ 阶贝塞尔方程。</p>
+<p>分离变量可得到 <em>球函数方程</em><br>$$<br>\frac{1}{\sin\theta}\frac{d}{d\theta}\left(\sin\theta\frac{dY}{d\theta}\right)+\frac{1}{\sin^2\theta}\frac{d^2 Y}{d\varphi^2}+l\left(l+1\right)Y&#x3D;0<br>$$<br>和 $l$ 阶球贝塞尔方程：<br>$$<br>r^2\frac{d^2R}{dr^2}+2r\frac{dR}{dr}+\left[k^2r^2-l(l+1)\right]R&#x3D;0<br>$$<br>令 $x&#x3D;kr,R(r)&#x3D;\displaystyle\sqrt\frac{\pi}{2x} y(x)$, 可以得到<br>$$<br>x^2y’’+xy’+\left[x^2-\left(l+\frac{1}{2}\right)^2\right]y&#x3D;0<br>$$<br>是 $l+1&#x2F;2$ 阶贝塞尔方程。</p>
 <h4 id="（3）柱坐标亥姆霍兹方程"><a href="#（3）柱坐标亥姆霍兹方程" class="headerlink" title="（3）柱坐标亥姆霍兹方程"></a>（3）柱坐标亥姆霍兹方程</h4><p>$$<br>\begin{aligned}<br>&amp;\Delta v+k^2v&#x3D;0\\<br>\implies&amp; \begin{cases}<br>\Phi^{\prime\prime}+m^2\Phi&#x3D;0,\\<br>Z^{\prime\prime}+\nu^2 Z&#x3D;0,\\<br>\displaystyle R^{\prime\prime}+\frac{1}{\rho} R+\left(k^2-\nu^2-\frac{m^2}{\rho^2}\right)R&#x3D;0<br>\end{cases}<br>\end{aligned}<br>\<br>$$</p>
 <p>注意， $z$ 轴的齐次边界条件保证了 $\nu^2$  一定是大于 $0$ 的，否则 $Z$ 为 $e$ 指数形式，不可能为 $0$ .</p>
 <p>令 $\mu’\equiv k^2-\nu^2$, 则 $\rho$ 方向的齐次边界条件保证了 $\mu’$ 是大于等于 $0$ 的（贝塞尔函数的非负零点）.</p>
@@ -2058,7 +2000,7 @@
 <li><p>公式</p>
 <p>$$<br>J_\nu\left(x\right)&#x3D;\sum_{k&#x3D;0}^\infty \frac{\left(-1\right)^k}{k!\Gamma\left(\nu+k+1\right)}\left(\frac x 2 \right)^{2k+\nu}<br>$$</p>
 </li>
-<li><p>递推关系<br>$$<br>\begin{aligned}<br>&amp;\frac{d}{dx}\left[x^\nu Z_\nu\left(x\right)\right]&#x3D;x^{\nu}Z_{\nu-1}\left(x\right)<br>\\<br>&amp;\frac{d}{dx}\left[\frac{Z_\nu\left(x\right)}{x^\nu} \right]&#x3D;-\frac{Z_{\nu}\left(x\right)}{x^{\nu+1}}<br>\\<br>\left(展开\right)\quad &amp; Z^{\prime}<em>\nu\left(x\right) +\frac{\nu}{x}Z_\nu\left(x\right)&#x3D;Z</em>{\nu-1}\left(x\right)\\<br>&amp;Z^{\prime}<em>\nu\left(x\right) -\frac{\nu}{x}Z_\nu\left(x\right)&#x3D;-Z</em>{\nu+1}\left(x\right)\\<br>&amp;Z^{\prime}<em>\nu\left(x\right)&#x3D;\frac{1}{2}\left[Z</em>{\nu+1}\left(x\right)-Z_{\nu-1}\left(x\right)\right]<br>\\<br>&amp; Z_{\nu+1}\left(x\right)-2\frac{\nu}{x}Z_\nu\left(x\right)+Z_{\nu-1}\left(x\right)&#x3D;0<br>\end{aligned}<br>$$</p>
+<li><p>递推关系<br>$$<br>\begin{aligned}<br>&amp;\frac{d}{dx}\left[x^\nu Z_\nu\left(x\right)\right]<br>&#x3D;x^{\nu}Z_{\nu-1}\left(x\right)<br>\\<br>&amp;\frac{d}{dx}\left[\frac{Z_\nu\left(x\right)}{x^\nu} \right]<br>&#x3D;-\frac{Z_{\nu}\left(x\right)}{x^{\nu+1}}<br>\\<br>\left(\text{展开}\right)\quad &amp; Z^{\prime}<em>\nu\left(x\right) +\frac{\nu}{x}Z_\nu\left(x\right)<br>&#x3D;Z</em>{\nu-1}\left(x\right)\\<br>&amp;Z^{\prime}<em>\nu\left(x\right)<br>-\frac{\nu}{x}Z_\nu\left(x\right)<br>&#x3D;-Z</em>{\nu+1}\left(x\right)\\<br>&amp;Z^{\prime}<em>\nu\left(x\right)<br>&#x3D;\frac{1}{2}\left[Z</em>{\nu+1}\left(x\right)<br>-Z_{\nu-1}\left(x\right)\right]<br>\\<br>&amp; Z_{\nu+1}\left(x\right)<br>-2\frac{\nu}{x}Z_\nu\left(x\right)<br>+Z_{\nu-1}\left(x\right)&#x3D;0<br>\end{aligned}<br>$$</p>
 </li>
 <li><p>生成函数<br>$$<br>\begin{aligned}<br>e^{\frac 1 2 x\left(z-\frac 1 z\right)}&amp;&#x3D;\sum_{m&#x3D;-\infty}^\infty J_m\left(x\right)z^m\\<br>\quad e^{ix\sin\theta}&amp;&#x3D;\sum_{m&#x3D;-\infty}^\infty J_m\left(x\right) e^{im\theta}<br>&amp;(take \ z&#x3D;e^{i\theta})<br>\end{aligned}<br>$$</p>
 </li>
@@ -2073,7 +2015,7 @@
 </li>
 <li><p>模</p>
 <p>$$<br>\begin{aligned} \left[N_n^{(m)}\right]^2&amp;&#x3D;\int_0^{\rho_0}\left[J_m(\sqrt{\mu_n^{(m)}}\rho)\right]^2\rho d\rho\notag\\<br>&amp;&#x3D;\frac 1 {\mu_n^{(m)}}\int_0^{x_0} J^2_m(x)xdx\notag\\<br>&amp;&#x3D;\frac 1 {\mu_n^{(m)}}\left[\frac{x^2}{2}J_m(x)\biggm\vert_0^{x_0}-\int_0^{x_0} \frac 1 2 x^2 \cdot 2 J_m(x)J^{\prime}_m(x)dx \right]<br>\notag\\<br>&amp;&#x3D;\frac 1 {\mu_n^{(m)}}\left[\frac{x^2}{2}J_m(x)\biggm\vert_0^{x_0}-\int_0^{x_0} \left(-x^2J’’_m -xJ_m’+m^2J_m\right)J^{\prime}_mdx \right]<br>\notag\\<br>&amp;&#x3D;\frac 1 {\mu_n^{(m)}}\left[\frac{x^2}{2}J_m\biggm\vert_0^{x_0}-\frac {m^2} 2 J_m^2\biggm\vert_0^{x_0}+\int_0^{x_0} \left(x^2J’’_m +xJ_m’\right)J^{\prime}_m(x)dx \right]<br>\notag\\<br>&amp;&#x3D;\frac 1 {\mu_n^{(m)}}\left[\frac{x^2}{2}J_m\biggm\vert_0^{x_0}-\frac {m^2} 2 J_m^2\biggm\vert_0^{x_0}+\int_0^{x_0}x^2d(J_m’^2)&#x2F;2+\int_0^{x_0} x J’^2_m dx\right]<br>\notag\\<br>&amp;&#x3D;\frac 1 {\mu_n^{(m)}}\left[\frac{x^2}{2}J_m\biggm\vert_0^{x_0}-\frac {m^2} 2 J_m^2\biggm\vert_0^{x_0}+\frac{x^2}{2}J^{\prime}_m\biggm\vert_0^{x_0}+\int_0^{x_0} (x J’^2_m-xJ_m’^2)dx\right]\notag\\<br>&amp;&#x3D;\frac 1 2 \left(\rho_0^2-\frac{m^2}{\mu_0^2}\right)J_m^2(\sqrt{\mu_n^{(m)}}\rho_0)+\frac 1 2 \rho_0^2J_m’^2<br>\end{aligned}<br>$$</p>
-<p><strong>第一类齐次边界条件：</strong><br>$$<br>\begin{aligned}<br>J_m\equiv0\implies \left[N_n^{(m)}\right]^2&amp;&#x3D;\frac 1 2 \rho_0^2 \left(J_m’\right)^2\\<br>(J^{\prime}<em>m-\frac {mJ_m} {\sqrt \mu \rho}&#x3D;-J</em>{m+1})\qquad &amp;&#x3D;\frac 1 2 \rho_0 J^2_{m+1}(\sqrt{\mu_n^{(m)}}\rho)<br>\end{aligned}<br>$$</p>
+<p><strong>第一类齐次边界条件：</strong><br>$$<br>\begin{aligned}<br>J_m\equiv0\implies \left[N_n^{(m)}\right]^2&amp;&#x3D;\frac{1}{2}\rho_0^2 \left(J_m^\prime\right)^2\\<br>(J^{\prime}<em>m-\frac{mJ_m}{\sqrt \mu \rho}&#x3D;-J</em>{m+1})&amp;&#x3D;\frac{1}{2} \rho_0 J^2_{m+1}(\sqrt{\mu_n^{(m)}}\rho)<br>\end{aligned}<br>$$</p>
 <p><strong>第二类齐次边界条件：</strong><br>$$<br>\left[N_n^{(m)}\right]^2&#x3D;\frac 1 2 (\rho_0^2-\frac {m^2}{\mu_n^{(m)}})J_m^2<br>$$</p>
 <p><strong>第三类齐次边界条件：</strong><br>$$<br>J_m+HJ_m’&#x3D;0\implies\\<br>\left[N_n^{(m)}\right]^2&#x3D;\frac 1 2 \left[\rho_0^2-\frac {m^2}{\mu_n^{(m)}}+\frac{\rho_0^2}{H\mu_n^{(m)}}\right]J_m^2<br>$$</p>
 </li>
@@ -2105,14 +2047,15 @@
 </ul>
 <h4 id="4-虚宗量贝塞尔函数"><a href="#4-虚宗量贝塞尔函数" class="headerlink" title="(4) 虚宗量贝塞尔函数"></a>(4) 虚宗量贝塞尔函数</h4><p>柱侧面有齐次边界条件时：$\mu\geq 0$, 因为虚宗量贝塞尔函数为正项级数</p>
 <p>若柱的上下底面为齐次边界条件，则 $\mu\leq 0$ </p>
-<p>得到虚宗量贝赛尔方程：<br>$$<br>x^2R’’+xR’-(x^2+m^2)R&#x3D;0<br>$$<br>方程的解为虚宗量贝塞尔函数 $(\ref{i-bessel})$ 。</p>
-<p>$\nu&#x3D;m$ 为整数时，$I_m(x)&#x3D;I_{-m}(x) $， 需构造出另一个线性独立解 <em>虚宗量汉克尔函数</em>：<br>$$<br>\begin{aligned}<br>K_\nu (x)&amp;&#x3D;\frac {\pi}{2}i e^{i\frac \pi 2\nu}H^{(1)}<em>\nu(ix)\notag\\<br>&amp;&#x3D;\frac \pi 2 \frac{I</em>{-\nu}(x)-I_\nu(x)}{\sin\nu\pi}<br>\end{aligned}<br>$$<br>$m$ 阶虚宗量贝塞尔方程的通解是：<br>$$<br>y(x)&#x3D;C_1I_m(x)+C_2 K_m(x)<br>$$</p>
+<p>得到虚宗量贝赛尔方程：<br>$$<br>x^2R’’+xR’-(x^2+m^2)R&#x3D;0<br>$$<br>该方程的解为虚宗量贝塞尔函数 $I_v(x)$。</p>
+<p>$\nu&#x3D;m$ 为整数时，$I_m(x)&#x3D;I_{-m}(x) $， 需构造出另一个线性独立解 <em>虚宗量汉克尔函数</em>：<br>$$<br>\begin{aligned}<br>K_\nu (x)&amp;&#x3D;\frac{\pi}{2}i e^{i\frac{\pi}{2}\nu}<br>H^{(1)}<em>\nu(ix)\notag\\<br>&amp;&#x3D;\frac{\pi}{2} \frac{I</em>{-\nu}(x)<br>-I_\nu(x)}{\sin\nu\pi}<br>\end{aligned}<br>$$<br>$m$ 阶虚宗量贝塞尔方程的通解是：<br>$$<br>y(x)&#x3D;C_1I_m(x)+C_2 K_m(x)<br>$$</p>
 <p><strong>渐近性质：</strong><br>$$<br>\begin{aligned}<br>x\to 0,&amp;\quad I_m(x)&#x3D;0,&amp;&amp; K_m(x)\to \infty\\<br>x\to \infty,&amp;\quad I_m(x)\to \infty,&amp;&amp;K_m(x)\to 0<br>\end{aligned}<br>$$</p>
 <h4 id="5-球贝塞尔函数"><a href="#5-球贝塞尔函数" class="headerlink" title="(5) 球贝塞尔函数"></a>(5) 球贝塞尔函数</h4><h5 id="球贝塞尔函数"><a href="#球贝塞尔函数" class="headerlink" title="球贝塞尔函数"></a>球贝塞尔函数</h5><p>$$<br>\begin{aligned}<br>j_l(x)&amp;&#x3D;\sqrt{\frac{\pi}{2x}}J_{l+1&#x2F;2}(x)\\<br>j_{-l}(x)&amp;&#x3D;\sqrt{\frac{\pi}{2x}}J_{-l+1&#x2F;2}(x)<br>\end{aligned}<br>$$</p>
 <h5 id="球诺依曼函数"><a href="#球诺依曼函数" class="headerlink" title="球诺依曼函数"></a>球诺依曼函数</h5><p>$$<br>n_l(x)&#x3D;\sqrt{\frac{\pi}{2x}}N_{l+1&#x2F;2}(x)<br>$$</p>
 <h5 id="球汉克尔函数"><a href="#球汉克尔函数" class="headerlink" title="球汉克尔函数"></a>球汉克尔函数</h5><p>$$<br>h_l^{(1,2)}(x)&#x3D;\sqrt{\frac{\pi}{2x}}H^{(1,2)}_{l+1&#x2F;2}(x)<br>$$</p>
 <hr>
-<p>常用：<br>$$<br>\begin{aligned}<br>j_0&amp;&#x3D;\frac {\sin x}{x}\\<br>j_{-1}(x)&amp;&#x3D;\frac{\cos x}{x}\\<br>n_l(x)&amp;&#x3D;(-1)^{l+1}j_{-(l+1)}(x)\\<br>\notag\\<br>x\to \infty:\notag\\<br>j_l(x)&amp;\sim \frac 1 x \cos\left(x-\frac{l+1}{2}\pi\right)\\<br>n_l(x)&amp;\sim \frac 1 x \sin\left(x-\frac{l+1}{2}\pi\right)\\<br>h^{(1)}_l(x)&amp;\sim\frac 1 x e^{ix}(-i)^{l+1}\\<br>h^{(2)}(x)&amp;\sim\frac 1 x e^{ix}i^{l+1}\\<br>\end{aligned}<br>$$</p>
+<p>常用：<br>$$<br>\begin{aligned}<br>j_0&amp;&#x3D;\frac {\sin x}{x}\\<br>j_{-1}(x)&amp;&#x3D;\frac{\cos x}{x}\\<br>n_l(x)&amp;&#x3D;(-1)^{l+1}j_{-(l+1)}(x)\\</p>
+<p>x\to \infty:\notag\\<br>j_l(x)&amp;\sim \frac 1 x \cos\left(x-\frac{l+1}{2}\pi\right)\\<br>n_l(x)&amp;\sim \frac 1 x \sin\left(x-\frac{l+1}{2}\pi\right)\\<br>h^{(1)}_l(x)&amp;\sim\frac 1 x e^{ix}(-i)^{l+1}\\<br>h^{(2)}(x)&amp;\sim\frac 1 x e^{ix}i^{l+1}\\<br>\end{aligned}<br>$$</p>
 <hr>
 <h5 id="球形区域本征值问题"><a href="#球形区域本征值问题" class="headerlink" title="球形区域本征值问题"></a>球形区域本征值问题</h5><p>$$<br>\int_0^{r_0}j_l(k_m r)j_l(k_nr)r^2dr&#x3D;\delta_{mn}<br>$$</p>
 <p>注意和之前的柱形区域不同，正交所带权重为 $r^2$ 。</p>
@@ -2225,7 +2168,7 @@
 </ul>
 <h3 id="9-4-常用电势电容结论"><a href="#9-4-常用电势电容结论" class="headerlink" title="9.4 常用电势电容结论"></a>9.4 常用电势电容结论</h3><h4 id="（1）同轴圆柱单位电容"><a href="#（1）同轴圆柱单位电容" class="headerlink" title="（1）同轴圆柱单位电容"></a>（1）同轴圆柱单位电容</h4><p>$$<br>C&#x3D;\frac{2\pi \varepsilon_0}{\ln \left(R_1&#x2F;R_2\right)}<br>$$</p>
 <p>证明：</p>
-<p>​		利用 $\zeta\left(z\right)&#x3D;\ln z&#x3D;\ln\vertz|+i Argz$ 将同轴圆柱变为平行板电容器</p>
+<p>​		利用 $\zeta\left(z\right)&#x3D;\ln z&#x3D;\ln\vert z\vert+i Argz$ 将同轴圆柱变为平行板电容器</p>
 <p>​		$\displaystyle C\cdot l&#x3D;\frac{\varepsilon_0A}{d}&#x3D;\frac{\varepsilon\cdot 2\pi\cdot l}{\ln\left(R_1&#x2F;R_2\right)}\implies C&#x3D;\frac{2\pi\varepsilon_0}{\ln\left(R_1&#x2F;R_2\right)}$</p>
 <h4 id="（2）接地金属圆柱壳-中心细导线电势分布"><a href="#（2）接地金属圆柱壳-中心细导线电势分布" class="headerlink" title="（2）接地金属圆柱壳+中心细导线电势分布"></a>（2）接地金属圆柱壳+中心细导线电势分布</h4><p>设金属圆柱壳的半径为 $a$ 。<br>$$<br>u&#x3D;\frac{\lambda}{2\pi\varepsilon_0}\ln\left(\frac{a}{|\zeta|} \right)<br>$$<br>证明：</p>
 <p>​		由高斯定律 $\displaystyle E\cdot 2\pi rl&#x3D;\lambda l&#x2F;\varepsilon_0\implies E&#x3D;\frac{\lambda}{2\pi\varepsilon_0}\frac 1 r$</p>
@@ -2254,7 +2197,9 @@
   <entry>
     <title>Electrodynamics</title>
     <url>/Physics/Electrodynamics/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="电动力学笔记"><a href="#电动力学笔记" class="headerlink" title="电动力学笔记"></a>电动力学笔记</h1><p>感谢授课老师朱华星老师</p>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="电动力学笔记-Notes-on-Electrodynamics"><a href="#电动力学笔记-Notes-on-Electrodynamics" class="headerlink" title="电动力学笔记 Notes on Electrodynamics"></a>电动力学笔记 Notes on Electrodynamics</h1><a href="https://p.ipic.vip/oezw3r.png" title="image-20231207145801925" class="gallery-item"><img src="https://p.ipic.vip/oezw3r.png" alt="image-20231207145801925" style="zoom: 30%;" /></a>
+
+<p>$ \ $ <span id="more"></span></p>
 <h2 id="0-麦克斯韦方程和规范理论概述起源（杨振宁）"><a href="#0-麦克斯韦方程和规范理论概述起源（杨振宁）" class="headerlink" title="0 麦克斯韦方程和规范理论概述起源（杨振宁）"></a>0 麦克斯韦方程和规范理论概述起源（杨振宁）</h2><ul>
 <li><p>Electrotonic state, Faraday	<br>$$<br>H&#x3D;\nabla \times A<br>$$</p>
 </li>
@@ -2272,7 +2217,6 @@
 </li>
 </ul>
 <p><strong>“妙的地方”</strong></p>
-<p>$ \ $ <span id="more"></span></p>
 <h2 id="1-矢量分析整理"><a href="#1-矢量分析整理" class="headerlink" title="1 矢量分析整理"></a>1 矢量分析整理</h2><h3 id="符号约定"><a href="#符号约定" class="headerlink" title="符号约定"></a>符号约定</h3><ul>
 <li><p>Kronecker<br>$$<br>\delta_{ij}&#x3D;\begin{cases}1\quad i&#x3D;j,\\0 \quad i\neq j.\end{cases}<br>\notag<br>$$</p>
 </li>
@@ -2412,7 +2356,7 @@
 <p>$\vec M$ 为单位体积内的磁矩。</p>
 <p>这一部分需要再细细整理。</p>
 <h3 id="边界条件"><a href="#边界条件" class="headerlink" title="边界条件"></a>边界条件</h3><p>$$<br>\begin{aligned}<br>\vec D^{\perp }_1-\vec D_2^\perp&amp;&#x3D;\sigma_f\\<br>\vec E_1^{\parallel}-\vec E^{\parallel}_2&amp;&#x3D;0  \ \<br>\vec H_1^{\parallel}-\vec H_2^{\parallel}&amp;&#x3D;\vec K_f\times\vec n\\<br>\vec B_1^\perp-\vec B_2^\perp&amp;&#x3D;0<br>\end{aligned}<br>$$</p>
-<h2 id="4-电磁场能动量"><a href="#4-电磁场能动量" class="headerlink" title="4 电磁场能动量"></a>4 电磁场能动量</h2><h3 id="能量"><a href="#能量" class="headerlink" title="能量"></a>能量</h3><p>能流密度：<br>$$<br>\vec S&#x3D;\frac{1}{\mu_0}\vec E\times \vec B\<br>$$<br>电磁场能量密度：<br>$$<br>w&#x3D;\frac{1}{2}(\varepsilon_0 E^2+\frac{1}{\mu_0}B^2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             )<br>$$</p>
+<h2 id="4-电磁场能动量"><a href="#4-电磁场能动量" class="headerlink" title="4 电磁场能动量"></a>4 电磁场能动量</h2><h3 id="能量"><a href="#能量" class="headerlink" title="能量"></a>能量</h3><p>能流密度：<br>$$<br>\vec S&#x3D;\frac{1}{\mu_0}\vec E\times \vec B\<br>$$<br>电磁场能量密度：<br>$$<br>w&#x3D;\frac{1}{2}(\varepsilon_0 E^2+\frac{1}{\mu_0}B^2)<br>$$</p>
 <h3 id="麦克斯韦应力张量"><a href="#麦克斯韦应力张量" class="headerlink" title="麦克斯韦应力张量"></a>麦克斯韦应力张量</h3><p>$$<br>\begin{aligned}<br>\vec f&amp;&#x3D;\rho \vec E+\rho \vec v\times\vec B&#x3D;\rho\vec E+\vec j\times \vec B\\<br>&amp;&#x3D;\nabla\cdot \overleftrightarrow{\mathcal{T}}-\varepsilon_0\mu_0\frac{\partial \vec S}{\partial t}<br>\end{aligned}<br>$$</p>
 <p>其中，麦克斯韦应力张量：<br>$$<br>\overleftrightarrow{\mathcal{T}}&#x3D;\varepsilon_0\vec E\vec E+\frac{1}{\mu_0}\vec B\vec B-\frac{1}{2}\big(\varepsilon_0\vec E^2+\frac{1}{\mu_0}\vec B^2\big)\overleftrightarrow I<br>$$<br>分量形式为：<br>$$<br>T_{ij}&#x3D;\varepsilon_0(E_iE_j-\frac 1 2 \delta_{ij}E^2)+\frac 1 \mu_0 (B_iB_j-\frac 1 2 \delta_{ij}B^2)<br>$$</p>
 <p>空间 $V$ 内电荷所受合力为：<br>$$<br>\vec F&#x3D;\int_V\vec f d\tau&#x3D;\int_S\overleftrightarrow{\mathcal{T}}\cdot d\vec \sigma-\varepsilon_0\mu_o\frac{d}{dt}\int_V \vec S d\tau<br>$$</p>
@@ -2556,7 +2500,7 @@
 <h2 id="9-电磁波的激发"><a href="#9-电磁波的激发" class="headerlink" title="9 电磁波的激发"></a>9 电磁波的激发</h2><h3 id="麦克斯韦方程组的探讨"><a href="#麦克斯韦方程组的探讨" class="headerlink" title="麦克斯韦方程组的探讨"></a>麦克斯韦方程组的探讨</h3><p>$$<br>\begin{align}<br>\nabla\cdot \vec E&amp;&#x3D;-\frac {\rho(\vec r,t)}{\varepsilon}\label{E-divergence}\\<br>\nabla\times\vec E&amp;&#x3D;-\frac{\partial \vec B}{\partial t}\label{E-curl}\\<br>\nabla\cdot\vec B&amp;&#x3D;0\label{B-divergence}\\<br>\nabla \times\vec B&amp;&#x3D;\mu\vec J+\varepsilon\mu\frac{\partial\vec E}{\partial t}\label{B-curl}<br>\end{align}<br>$$</p>
 <p>$\vec J$ 是电流密度。</p>
 <p>由标势和矢势可以确定电场和磁场：</p>
-<p>由 $(\ref{B-divergence})$ 可得<br>$$<br>\vec B&#x3D;\nabla\times\vec A\label{B}<br>$$<br>这将确定磁场。</p>
+<p>由 $(\ref{B-divergence})$ 可得<br>$$<br>\begin{equation}<br>\vec B&#x3D;\nabla\times\vec A\label{B}<br>\end{equation}<br>$$<br>这将确定磁场。</p>
 <p>由 $(\ref{E-curl})$ 可得<br>$$<br>\begin{align}<br>&amp;\nabla\times\left (\vec E+\frac{\partial \vec A}{\partial t}\right)&#x3D;0\notag \\<br>\implies &amp;\vec E&#x3D;-\nabla \varphi-\frac{\partial \vec A}{\partial t}\label{E}<br>\end{align}<br>$$<br>这将确定电场。</p>
 <p>由 $(\ref{E-divergence})$ 和 $(\ref{B-curl})$ 可以确定电荷分布和电流分布：<br>$$<br>\begin{align}<br>-\frac{\rho} \varepsilon&amp;&#x3D;\nabla^2\varphi+\frac{\partial}{\partial t}(\nabla\cdot \vec A)\\<br>-\mu \vec J&amp;&#x3D;\nabla^2\vec A-\varepsilon\mu\frac{\partial^2 }{\partial t^2}\vec A-\nabla\left(\nabla\cdot \vec A+\varepsilon\mu \frac{\partial}{\partial t }\varphi \right)<br>\end{align}<br>$$</p>
 <p>麦克斯韦方程组本来有六个变量 $E_x,E_y,E_z,B_x,B_y,B_z$ ，利用矢势和标势将其浓缩为四个变量 $A_x,A_y,A_z,V$ ，留下两个自由度可以用来做规范变换。</p>
@@ -2663,6 +2607,7 @@
 <h3 id="运动电荷的场-1"><a href="#运动电荷的场-1" class="headerlink" title="运动电荷的场"></a>运动电荷的场</h3><ul>
 <li>推迟势</li>
 </ul>
+<p>感谢：授课老师朱华星老师</p>
 </div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
         var options = {
             selector: '.gallery-item'
@@ -2702,8 +2647,38 @@
         <category>Optics</category>
       </categories>
       <tags>
-        <tag>projects</tag>
         <tag>optics</tag>
+        <tag>projects</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Illumination strategy in Fourier ptychography</title>
+    <url>/Project/Fourier-Ptychography/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><p>This is a mini-review focused on the illumination strategy of Fourier ptychography. It is a course project in academic writing (credit: Prof. Pan Wang, Prof. Dawei Di). It is worth mentioning that the derived SBP-T is a valuable and effective classification metric of microscopy techniques.</p>
+<p>I have submitted it on <a href="https://arxiv.org/abs/2308.13933">arxiv</a>. By the way, it took me almost the entire week to finish reading and writing. Thanks to our teammates, especially Haibo Xu, for the valuable discussion of the SBP-T derivation. Through this work, I better understand the numerical aperture (NA) of the optical system, though it is still slightly elusive.</p>
+<p>I would also like to thank Starbucks for supporting me with the supportive coffee :)</p>
+
+
+	<div class="row">
+    <embed src="/projects/survey/FPM_survey.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+
+</div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script>]]></content>
+      <categories>
+        <category>Notes</category>
+        <category>Optics</category>
+      </categories>
+      <tags>
+        <tag>optics</tag>
+        <tag>microscopy</tag>
       </tags>
   </entry>
   <entry>
@@ -3569,6 +3544,34 @@
       </tags>
   </entry>
   <entry>
+    <title>Deep Learning Applications in Augmented Reality (AR)</title>
+    <url>/Project/Augmented-Reality/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><p>This is a mini-review focused on the deep learning techiques in Augmented Reality (AR). It is a provincial-level Student Research Training Project (SRTP) at the College of Computer Science and Technology, Zhejiang University, with my peers Mr. Haojie He and Mr. Lingming Zhang.</p>
+
+
+	<div class="row">
+    <embed src="/projects/survey/AR_survey.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+
+</div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script>]]></content>
+      <categories>
+        <category>Projects</category>
+        <category>Deep Learning</category>
+      </categories>
+      <tags>
+        <tag>projects</tag>
+        <tag>ar</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Android App Notes</title>
     <url>/Computer-Science/Android-app-notes/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="Android-App-Development-Note"><a href="#Android-App-Development-Note" class="headerlink" title="Android App Development Note"></a>Android App Development Note</h1><p>这篇笔记是在2021年光电设计竞赛中，我独立负责开发安卓APP过程的自学笔记。可能学习链接较多，未仔细重新整理。</p>
@@ -3771,310 +3774,6 @@
       <tags>
         <tag>competition</tag>
         <tag>projects</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Scientific Writing Notes</title>
-    <url>/Writing/Scientific-Writing/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="科技写作（光电–狄大卫-x2F-王攀）"><a href="#科技写作（光电–狄大卫-x2F-王攀）" class="headerlink" title="科技写作（光电–狄大卫&#x2F;王攀）"></a>科技写作（光电–狄大卫&#x2F;王攀）</h1><p>好期刊不是科研的追求，成果才是。</p>
-<p>科研的核心：总结，归纳，最终能把自己做的用少数几个词凝练出来。</p>
-<h2 id="1-基本概念与文献调研"><a href="#1-基本概念与文献调研" class="headerlink" title="1 基本概念与文献调研"></a>1 基本概念与文献调研</h2><ul>
-<li><p>影响因子: 某期刊前两年（S, T）发表的论文在统计当年（U）的被引用总次数 X , 除以该期刊在前两年（S, T）内发表的论文总数 Y。公式为：<br>$$<br>\mathrm{IF}_U &#x3D; \frac{X(S,T)}{Y(S,T)}<br>$$</p>
-<ul>
-<li><p>本刊2009年的文章在2010年的被引次数：48；本刊2009年的发文量：187</p>
-<p>本刊2008年的文章在2010年的被引次数：128；本刊2008年的发文量：154</p>
-<p>本刊2010年的影响因子：IF &#x3D; (48+128) &#x2F; (187+154) &#x3D; 0.5161</p>
-</li>
-</ul>
-</li>
-</ul>
- <span id="more"></span>
-
-<ul>
-<li><p>SCI 论文分区：中国科学院文献情报中心根据目前SCI核心库将所有期刊分为数学、物理、化学、生物、地学、天文、工程技术、医学、环境科学、农林科学、社会科学、管理科学及综合性期刊13大类。然后，将13大类期刊分各自为 4 个等级，即 4 个区。按照各类期刊影响因子划分，前5%为该类 1 区、6% ～ 20% 为 2 区、21% ～ 50% 为 3 区，其余的为 4 区。</p>
-</li>
-<li><p>H–index：h代表“高引用次数”（high citations），一名科研人员的h指数是指他 <em>至多有h篇论文分别被引用了至少h次。</em></p>
-</li>
-<li><p>Formality: </p>
-<ul>
-<li>Full words. e.g., can’t –&gt; cannot, won’t –&gt; will not</li>
-<li>a lot –&gt; many</li>
-<li>totally –&gt; completely</li>
-<li>at the same time –&gt; simulataneously</li>
-<li>Interesting –&gt; compelling</li>
-</ul>
-</li>
-</ul>
-<p>学位论文：不要追求写得长，要追求原创性和逻辑性；</p>
-<ul>
-<li>对课题组的同学、同一个学校的同学，是一个重要参考资料！</li>
-</ul>
-<h2 id="2-参考文献的管理与排版"><a href="#2-参考文献的管理与排版" class="headerlink" title="2 参考文献的管理与排版"></a>2 参考文献的管理与排版</h2><ul>
-<li>高效看文献<ul>
-<li>要  <em>get</em> 什么：<strong>带着问题和目的</strong>去找文献</li>
-<li><strong>不求甚解</strong>的精神（略读，扫文献）</li>
-<li>Critical thinking</li>
-</ul>
-</li>
-</ul>
-<h2 id="3-描述研究成果"><a href="#3-描述研究成果" class="headerlink" title="3 描述研究成果"></a>3 描述研究成果</h2><ul>
-<li>Use adj. and adv. sparingly<ul>
-<li><strong>Both of the two</strong> samples had <strong>very similar</strong> concentrations –&gt; The two samples had similar concentrations</li>
-<li>Avoid ‘significantly’, unless have  statistic reference</li>
-</ul>
-</li>
-<li>Focus on science, not scientist </li>
-<li>Avoid empty transitional statements<ul>
-<li>e.g., actually</li>
-<li>Useful statements: conversely, consequently &#x2F; to this end, typically &#x2F; in general</li>
-</ul>
-</li>
-<li>Choose simple words over complex<ul>
-<li>In order to –&gt; to</li>
-<li>has the capacity to –&gt; can</li>
-<li>a number of –&gt; many &#x2F; several</li>
-<li>despite the fact that –&gt; although</li>
-</ul>
-</li>
-</ul>
-<h3 id="时态和语态"><a href="#时态和语态" class="headerlink" title="时态和语态"></a>时态和语态</h3><ul>
-<li>研究的实验工作：过去时</li>
-<li>描述事实结果：现在时</li>
-<li>引述别人工作：现在时或现在完成时</li>
-</ul>
-<h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><ul>
-<li>开门见山，不绕圈子，避免大篇幅讲述历史渊源</li>
-<li>回顾历史有重点，找有代表性的</li>
-</ul>
-<h3 id="Discussion-部分"><a href="#Discussion-部分" class="headerlink" title="Discussion 部分"></a>Discussion 部分</h3><ul>
-<li><p>创造性见解，精炼回答为什么出现这样的结果，以及出现这样的结果意味着什么，逻辑要清晰</p>
-</li>
-<li><p>主要的发现</p>
-</li>
-<li><p>结果的说明、阐释或论述、推论</p>
-</li>
-<li><p>与前人结果的比较</p>
-</li>
-<li><p>结果的意义和重要性、应用</p>
-</li>
-<li><p>研究的局限和不足之处，尚未回答的问题及局限性对研究的影响，建议进一步的研究方向</p>
-</li>
-</ul>
-<h3 id="Conclusion-部分"><a href="#Conclusion-部分" class="headerlink" title="Conclusion 部分"></a>Conclusion 部分</h3><ul>
-<li>一句话总结</li>
-<li>技术的优势和拓展应用</li>
-</ul>
-<h3 id="Supplementary-部分"><a href="#Supplementary-部分" class="headerlink" title="Supplementary 部分"></a>Supplementary 部分</h3><ul>
-<li>放不太重要、但有助于理解结果的实验和讨论</li>
-</ul>
-<h3 id="Figures-and-Tables"><a href="#Figures-and-Tables" class="headerlink" title="Figures and Tables"></a>Figures and Tables</h3><ul>
-<li>先总说</li>
-<li>再有逻辑、递进性地描述图表结果</li>
-<li>讨论</li>
-</ul>
-<h3 id="Title"><a href="#Title" class="headerlink" title="Title"></a>Title</h3><ul>
-<li><p>清楚性</p>
-<ul>
-<li>Highly efficient waveguide grating couplers using silicon-on-insulator (Emphasis: waveguide grating couplers)</li>
-<li>Silicon-on-insulator for high-output waveguide grating couplers (Emphasis: silicon-on-sinsulator)</li>
-</ul>
-</li>
-<li><p>主副题名</p>
-</li>
-<li><p>e.g.</p>
-<ul>
-<li>Low-loss 与 surface smoothness, diameter uniformity<ul>
-<li>Low-loss 在 high-level</li>
-<li>Subwavelength-diameter silica wire for low-loss optical wave guiding</li>
-</ul>
-</li>
-<li>包含凸显性能的关键信息</li>
-<li>要吸引人看<ul>
-<li><strong>Single-Nanowire Single-Mode Laser</strong></li>
-<li>Highly elastic ice microfiber –&gt; Elastic ice microfiber: Highly 太泛泛不准确</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="PPT-展示"><a href="#PPT-展示" class="headerlink" title="PPT 展示"></a>PPT 展示</h3><ul>
-<li><p>图片出处标注：无作者信息，杂志名采用缩写形式，随后是期号（黑体）、首页页码、发表年份</p>
-</li>
-<li><p>原则：让观众最快获取有用信息</p>
-</li>
-</ul>
-<h2 id="论文投稿"><a href="#论文投稿" class="headerlink" title="论文投稿"></a>论文投稿</h2><p>牵扯到人，在哪里都会有偏见或者倾向性的，那也没办法</p>
-<ul>
-<li><p>期刊选择</p>
-<ul>
-<li><p>原理、材料、结构等的重大创新，性能的显著提高：好一点的期刊</p>
-</li>
-<li><p>前人工作的改进优化：中下的期刊</p>
-</li>
-<li><p>期刊所规定的范围</p>
-</li>
-<li><p>期刊的论文平均水平</p>
-</li>
-</ul>
-</li>
-<li><p>投稿前的准备工作: 系统里要填很多东西，投个稿也是很累的</p>
-<ul>
-<li><p>Manuscript</p>
-</li>
-<li><p>Tables, Figures, Movies</p>
-</li>
-<li><p>Supplementary materials</p>
-</li>
-<li><p><strong>Cover Letter</strong></p>
-<ul>
-<li><p>an excellent opportunity to briefly discuss the importance of the submitted work and why it is appropriate for the journal </p>
-</li>
-<li><p>Spend time writing a convincing cover letter and share it with your coauthors for their input</p>
-</li>
-</ul>
-</li>
-<li><p>Email and address for each author</p>
-</li>
-<li><p>Suggested reviewers (name, affiliation, emails)</p>
-</li>
-</ul>
-</li>
-<li><p>申诉：审稿人误解&#x2F;没理解&#x2F;有很强偏见（好的工作，机会难得）</p>
-</li>
-<li><p><strong>发表过一篇文章后，可以申请当审稿人</strong></p>
-</li>
-</ul>
-<h1 id="科技写作（医学–邹炜-x2F-邹键）"><a href="#科技写作（医学–邹炜-x2F-邹键）" class="headerlink" title="科技写作（医学–邹炜&#x2F;邹键）"></a>科技写作（医学–邹炜&#x2F;邹键）</h1><h3 id="Writing-a-scientific-article"><a href="#Writing-a-scientific-article" class="headerlink" title="Writing a scientific article"></a>Writing a scientific article</h3><ul>
-<li>Read the author guideline!</li>
-<li>Figures: One figure, one question<ul>
-<li>figure的逻辑、框架可以提前思考准备</li>
-</ul>
-</li>
-<li>Discussion: <ul>
-<li>Indicate uses, extensions, and limitations </li>
-<li>suggest future experiments and point out those that are underway</li>
-</ul>
-</li>
-<li>Supplementary Material: 不是不重要放到了附录，而是由于篇幅限制才放到了附录</li>
-<li>Start writing<ul>
-<li>Paper: Introduction –&gt; Methods &amp; Materials –&gt; Results –&gt;Discussion –&gt; Figures &amp; Tables</li>
-<li>Write: Abstract –&gt; Results –&gt; Figures &amp; Tables –&gt; Methods &amp; Materials –&gt; Introduction –&gt; Discussion –&gt; Abstract (revision)</li>
-</ul>
-</li>
-</ul>
-<h3 id="Cover-Letter-投稿信"><a href="#Cover-Letter-投稿信" class="headerlink" title="Cover Letter (投稿信)"></a>Cover Letter (投稿信)</h3><ul>
-<li>Basic information</li>
-<li>Cover letter is your chance to speak to the editor directly</li>
-<li>Mention what makes the paper special to the journel</li>
-<li>Confine the length to 2&#x2F;3 page</li>
-</ul>
-<h3 id="Revision-and-response-to-reviewers"><a href="#Revision-and-response-to-reviewers" class="headerlink" title="Revision, and response to reviewers"></a>Revision, and response to reviewers</h3><ul>
-<li>Cherish the chance of discussion your work directly with other scientists in your community. Please prepare a detailed letter of response.</li>
-<li>Cut and paste each comment by the reviewer. Answer it directly below. State specifically what changes you have made to the manuscript. Identify the page and line number.</li>
-<li>Provide a scientific response to the comment you accept; or a convicing, solid and polite rebuttal to the point you think the reviewer is wrong.</li>
-</ul>
-<h3 id="Rejection"><a href="#Rejection" class="headerlink" title="Rejection"></a>Rejection</h3><ul>
-<li>Try to understand why the paper was rejected.</li>
-<li>Re-evaluate your work and decide whether it is appropriate to submit the paper elsewhere. If so, begin as if you are going to write a new article.</li>
-</ul>
-<h1 id="个人积累"><a href="#个人积累" class="headerlink" title="个人积累"></a>个人积累</h1><p>Some comments from the editor.</p>
-<ul>
-<li>Note that terms such as “notably,” “indeed,” and “surprisingly” are redundant in scientific writing and can be deleted as they add no relevance.</li>
-<li>The n-dash (–) could be used instead of “to” but not hyphen (-). For example, 15–25 mm implies 15 to 25 mm. <a href="https://www.grammarly.com/blog/hyphens-and-dashes/">here is a nice demonstration</a>, <a href="https://meta.stackexchange.com/questions/305172/how-to-type-a-dash-or-instead-of-a-hyphen-in-stack-exchange">here is how to type them</a></li>
-</ul>
-<p>deep-learning-empowered</p>
-<p>Expensive flower-filled vase</p>
-<p>Expensive-flower-filled vase</p>
-<ul>
-<li><p>The use of too many words to convey one idea can muddle the message and divert the reader’s attention. Therefore, in writing, especially academic writing, ideas need to be conveyed as concisely as possible. One way of doing this is to use concise alternatives to phrases. For example, the phrase “all over the world” can be replaced with the word “globally” or “worldwide.” </p>
-</li>
-<li><p>Where possible, a direct verb (action) should be used instead of using a noun and verb. For example, “segmentation of images was done” can be replaced with “images were segmented,” which is clearer and preferred in academic writing.</p>
-<!--more--></li>
-</ul>
-<table>
-<thead>
-<tr>
-<th><strong>Example</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>Avoid:</strong> Spectral imaging is essentially beneficial for an ocean of applications that require both spectral and spatial information at high resolution. <strong>Better:</strong> Several applications requiring both spectral and spatial information at high resolution benefit from spectral imaging.</td>
-</tr>
-</tbody></table>
-<p>Some useful word revision from the editor.</p>
-<ul>
-<li><p>While —&gt; Although</p>
-</li>
-<li><p>Here —&gt; In this study</p>
-</li>
-<li><p>These improvements enable us —&gt; enabled us</p>
-</li>
-<li><p>whole —&gt; entire</p>
-</li>
-<li><p>inaccessible —&gt; unreachable</p>
-</li>
-<li><p>Defects —&gt; limitations</p>
-</li>
-<li><p>Unsurprisingly —&gt; Nevertheless</p>
-</li>
-<li><p>confining —&gt; limiting</p>
-</li>
-<li><p>may —&gt; might</p>
-</li>
-<li><p>Besides —&gt; In addition</p>
-</li>
-<li><p>Since —&gt; Because</p>
-</li>
-</ul>
-<p>Some classical mistakes.</p>
-<ul>
-<li><p>is —&gt; was</p>
-</li>
-<li><p>spectral and spatial detections are simultaneously expected —&gt; spectral and spatial detection is</p>
-</li>
-</ul>
-<p>Common phrases.</p>
-<ul>
-<li>because of, due to</li>
-</ul>
-<p>early methods –&gt; early endeavors</p>
-<p>later works developed more methods –&gt; later works involved more methods</p>
-<p>It therefore failed to –&gt; it thereby failing to</p>
-<p><strong>The key difference between thereby and therefore is that thereby means “by that means” or “as a result of that” whereas therefore means “for that reason” or consequently.</strong></p>
-<p>additionally–&gt;besides</p>
-<p><a href="https://home.soka.ac.jp/~alex/sokhome06b/ess/transwords.html">https://home.soka.ac.jp/~alex/sokhome06b/ess/transwords.html</a></p>
-<p>Sec. 1 –&gt; Section 1</p>
-<p>Additional –&gt; Extra</p>
-<p>deep learning is able to handle the complicated combination-architecture model. –&gt; deep learning <strong>allows</strong> to handle the complicated combination-architecture model.</p>
-<p>enough to –&gt;sufficient for</p>
-<p>which is –&gt; namely</p>
-<h3 id="美化篇"><a href="#美化篇" class="headerlink" title="美化篇"></a>美化篇</h3><p>Deep neural networks has been applied widely in reconstruction process of spectral imaging. –&gt; The past decade has witnessed a rapid expansion of deep neural networks applications in reconstruction of spectral imaging.</p>
-<p>We think reinforcement learning (RL) can be used to change this condition. –&gt; We barely believe that we have fully exploited the potential of neural networks. To maximize their performance, one may consider introducing reinforcement learning (RL) technique.</p>
-<h3 id="单词篇"><a href="#单词篇" class="headerlink" title="单词篇"></a>单词篇</h3><p>endure</p>
-<p>endeavor </p>
-<p>notable</p>
-<h3 id="语法篇"><a href="#语法篇" class="headerlink" title="语法篇"></a>语法篇</h3><p>The computational spectral imaging method has resorted to computation power <strong>for reduced system volume</strong>.</p>
-<p>根据强调的内容（后句），把后句的but改成前句的though</p>
-<h3 id="词义篇"><a href="#词义篇" class="headerlink" title="词义篇"></a>词义篇</h3><p>Hence and thus have the same basic meaning and are often interchangeable. However, there is a slight difference. Hence usually refers to the future. Thus usually refers to the past. It is often used to indicate a conclusion.</p>
-<ul>
-<li>Both sides played well, thus no winner was declared.</li>
-<li>The situation is getting more and more complicated. Hence we will have to proceed with caution. (NOT Thus we will have to proceed with caution.)</li>
-</ul>
-<h3 id="资源篇"><a href="#资源篇" class="headerlink" title="资源篇"></a>资源篇</h3><p><a href="https://twitter.com/jbhuang0604/status/1437931021706612736">https://twitter.com/jbhuang0604/status/1437931021706612736</a></p>
-<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>A-xxed B 就是 B is xxed by A. | computer-assisted diagnosis</p>
-<p>A-xxing B 就是 B xx A. | privacy-enhancing techniques</p>
-</div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
-        var options = {
-            selector: '.gallery-item'
-        };
-        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
-        }</script>]]></content>
-      <categories>
-        <category>Notes</category>
-        <category>Writing</category>
-      </categories>
-      <tags>
-        <tag>writing</tag>
       </tags>
   </entry>
   <entry>
@@ -4664,6 +4363,310 @@
       </categories>
       <tags>
         <tag>optics</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Scientific Writing Notes</title>
+    <url>/Writing/Scientific-Writing/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="科技写作（光电–狄大卫-x2F-王攀）"><a href="#科技写作（光电–狄大卫-x2F-王攀）" class="headerlink" title="科技写作（光电–狄大卫&#x2F;王攀）"></a>科技写作（光电–狄大卫&#x2F;王攀）</h1><p>好期刊不是科研的追求，成果才是。</p>
+<p>科研的核心：总结，归纳，最终能把自己做的用少数几个词凝练出来。</p>
+<h2 id="1-基本概念与文献调研"><a href="#1-基本概念与文献调研" class="headerlink" title="1 基本概念与文献调研"></a>1 基本概念与文献调研</h2><ul>
+<li><p>影响因子: 某期刊前两年（S, T）发表的论文在统计当年（U）的被引用总次数 X , 除以该期刊在前两年（S, T）内发表的论文总数 Y。公式为：<br>$$<br>\mathrm{IF}_U &#x3D; \frac{X(S,T)}{Y(S,T)}<br>$$</p>
+<ul>
+<li><p>本刊2009年的文章在2010年的被引次数：48；本刊2009年的发文量：187</p>
+<p>本刊2008年的文章在2010年的被引次数：128；本刊2008年的发文量：154</p>
+<p>本刊2010年的影响因子：IF &#x3D; (48+128) &#x2F; (187+154) &#x3D; 0.5161</p>
+</li>
+</ul>
+</li>
+</ul>
+ <span id="more"></span>
+
+<ul>
+<li><p>SCI 论文分区：中国科学院文献情报中心根据目前SCI核心库将所有期刊分为数学、物理、化学、生物、地学、天文、工程技术、医学、环境科学、农林科学、社会科学、管理科学及综合性期刊13大类。然后，将13大类期刊分各自为 4 个等级，即 4 个区。按照各类期刊影响因子划分，前5%为该类 1 区、6% ～ 20% 为 2 区、21% ～ 50% 为 3 区，其余的为 4 区。</p>
+</li>
+<li><p>H–index：h代表“高引用次数”（high citations），一名科研人员的h指数是指他 <em>至多有h篇论文分别被引用了至少h次。</em></p>
+</li>
+<li><p>Formality: </p>
+<ul>
+<li>Full words. e.g., can’t –&gt; cannot, won’t –&gt; will not</li>
+<li>a lot –&gt; many</li>
+<li>totally –&gt; completely</li>
+<li>at the same time –&gt; simulataneously</li>
+<li>Interesting –&gt; compelling</li>
+</ul>
+</li>
+</ul>
+<p>学位论文：不要追求写得长，要追求原创性和逻辑性；</p>
+<ul>
+<li>对课题组的同学、同一个学校的同学，是一个重要参考资料！</li>
+</ul>
+<h2 id="2-参考文献的管理与排版"><a href="#2-参考文献的管理与排版" class="headerlink" title="2 参考文献的管理与排版"></a>2 参考文献的管理与排版</h2><ul>
+<li>高效看文献<ul>
+<li>要  <em>get</em> 什么：<strong>带着问题和目的</strong>去找文献</li>
+<li><strong>不求甚解</strong>的精神（略读，扫文献）</li>
+<li>Critical thinking</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-描述研究成果"><a href="#3-描述研究成果" class="headerlink" title="3 描述研究成果"></a>3 描述研究成果</h2><ul>
+<li>Use adj. and adv. sparingly<ul>
+<li><strong>Both of the two</strong> samples had <strong>very similar</strong> concentrations –&gt; The two samples had similar concentrations</li>
+<li>Avoid ‘significantly’, unless have  statistic reference</li>
+</ul>
+</li>
+<li>Focus on science, not scientist </li>
+<li>Avoid empty transitional statements<ul>
+<li>e.g., actually</li>
+<li>Useful statements: conversely, consequently &#x2F; to this end, typically &#x2F; in general</li>
+</ul>
+</li>
+<li>Choose simple words over complex<ul>
+<li>In order to –&gt; to</li>
+<li>has the capacity to –&gt; can</li>
+<li>a number of –&gt; many &#x2F; several</li>
+<li>despite the fact that –&gt; although</li>
+</ul>
+</li>
+</ul>
+<h3 id="时态和语态"><a href="#时态和语态" class="headerlink" title="时态和语态"></a>时态和语态</h3><ul>
+<li>研究的实验工作：过去时</li>
+<li>描述事实结果：现在时</li>
+<li>引述别人工作：现在时或现在完成时</li>
+</ul>
+<h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><ul>
+<li>开门见山，不绕圈子，避免大篇幅讲述历史渊源</li>
+<li>回顾历史有重点，找有代表性的</li>
+</ul>
+<h3 id="Discussion-部分"><a href="#Discussion-部分" class="headerlink" title="Discussion 部分"></a>Discussion 部分</h3><ul>
+<li><p>创造性见解，精炼回答为什么出现这样的结果，以及出现这样的结果意味着什么，逻辑要清晰</p>
+</li>
+<li><p>主要的发现</p>
+</li>
+<li><p>结果的说明、阐释或论述、推论</p>
+</li>
+<li><p>与前人结果的比较</p>
+</li>
+<li><p>结果的意义和重要性、应用</p>
+</li>
+<li><p>研究的局限和不足之处，尚未回答的问题及局限性对研究的影响，建议进一步的研究方向</p>
+</li>
+</ul>
+<h3 id="Conclusion-部分"><a href="#Conclusion-部分" class="headerlink" title="Conclusion 部分"></a>Conclusion 部分</h3><ul>
+<li>一句话总结</li>
+<li>技术的优势和拓展应用</li>
+</ul>
+<h3 id="Supplementary-部分"><a href="#Supplementary-部分" class="headerlink" title="Supplementary 部分"></a>Supplementary 部分</h3><ul>
+<li>放不太重要、但有助于理解结果的实验和讨论</li>
+</ul>
+<h3 id="Figures-and-Tables"><a href="#Figures-and-Tables" class="headerlink" title="Figures and Tables"></a>Figures and Tables</h3><ul>
+<li>先总说</li>
+<li>再有逻辑、递进性地描述图表结果</li>
+<li>讨论</li>
+</ul>
+<h3 id="Title"><a href="#Title" class="headerlink" title="Title"></a>Title</h3><ul>
+<li><p>清楚性</p>
+<ul>
+<li>Highly efficient waveguide grating couplers using silicon-on-insulator (Emphasis: waveguide grating couplers)</li>
+<li>Silicon-on-insulator for high-output waveguide grating couplers (Emphasis: silicon-on-sinsulator)</li>
+</ul>
+</li>
+<li><p>主副题名</p>
+</li>
+<li><p>e.g.</p>
+<ul>
+<li>Low-loss 与 surface smoothness, diameter uniformity<ul>
+<li>Low-loss 在 high-level</li>
+<li>Subwavelength-diameter silica wire for low-loss optical wave guiding</li>
+</ul>
+</li>
+<li>包含凸显性能的关键信息</li>
+<li>要吸引人看<ul>
+<li><strong>Single-Nanowire Single-Mode Laser</strong></li>
+<li>Highly elastic ice microfiber –&gt; Elastic ice microfiber: Highly 太泛泛不准确</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="PPT-展示"><a href="#PPT-展示" class="headerlink" title="PPT 展示"></a>PPT 展示</h3><ul>
+<li><p>图片出处标注：无作者信息，杂志名采用缩写形式，随后是期号（黑体）、首页页码、发表年份</p>
+</li>
+<li><p>原则：让观众最快获取有用信息</p>
+</li>
+</ul>
+<h2 id="论文投稿"><a href="#论文投稿" class="headerlink" title="论文投稿"></a>论文投稿</h2><p>牵扯到人，在哪里都会有偏见或者倾向性的，那也没办法</p>
+<ul>
+<li><p>期刊选择</p>
+<ul>
+<li><p>原理、材料、结构等的重大创新，性能的显著提高：好一点的期刊</p>
+</li>
+<li><p>前人工作的改进优化：中下的期刊</p>
+</li>
+<li><p>期刊所规定的范围</p>
+</li>
+<li><p>期刊的论文平均水平</p>
+</li>
+</ul>
+</li>
+<li><p>投稿前的准备工作: 系统里要填很多东西，投个稿也是很累的</p>
+<ul>
+<li><p>Manuscript</p>
+</li>
+<li><p>Tables, Figures, Movies</p>
+</li>
+<li><p>Supplementary materials</p>
+</li>
+<li><p><strong>Cover Letter</strong></p>
+<ul>
+<li><p>an excellent opportunity to briefly discuss the importance of the submitted work and why it is appropriate for the journal </p>
+</li>
+<li><p>Spend time writing a convincing cover letter and share it with your coauthors for their input</p>
+</li>
+</ul>
+</li>
+<li><p>Email and address for each author</p>
+</li>
+<li><p>Suggested reviewers (name, affiliation, emails)</p>
+</li>
+</ul>
+</li>
+<li><p>申诉：审稿人误解&#x2F;没理解&#x2F;有很强偏见（好的工作，机会难得）</p>
+</li>
+<li><p><strong>发表过一篇文章后，可以申请当审稿人</strong></p>
+</li>
+</ul>
+<h1 id="科技写作（医学–邹炜-x2F-邹键）"><a href="#科技写作（医学–邹炜-x2F-邹键）" class="headerlink" title="科技写作（医学–邹炜&#x2F;邹键）"></a>科技写作（医学–邹炜&#x2F;邹键）</h1><h3 id="Writing-a-scientific-article"><a href="#Writing-a-scientific-article" class="headerlink" title="Writing a scientific article"></a>Writing a scientific article</h3><ul>
+<li>Read the author guideline!</li>
+<li>Figures: One figure, one question<ul>
+<li>figure的逻辑、框架可以提前思考准备</li>
+</ul>
+</li>
+<li>Discussion: <ul>
+<li>Indicate uses, extensions, and limitations </li>
+<li>suggest future experiments and point out those that are underway</li>
+</ul>
+</li>
+<li>Supplementary Material: 不是不重要放到了附录，而是由于篇幅限制才放到了附录</li>
+<li>Start writing<ul>
+<li>Paper: Introduction –&gt; Methods &amp; Materials –&gt; Results –&gt;Discussion –&gt; Figures &amp; Tables</li>
+<li>Write: Abstract –&gt; Results –&gt; Figures &amp; Tables –&gt; Methods &amp; Materials –&gt; Introduction –&gt; Discussion –&gt; Abstract (revision)</li>
+</ul>
+</li>
+</ul>
+<h3 id="Cover-Letter-投稿信"><a href="#Cover-Letter-投稿信" class="headerlink" title="Cover Letter (投稿信)"></a>Cover Letter (投稿信)</h3><ul>
+<li>Basic information</li>
+<li>Cover letter is your chance to speak to the editor directly</li>
+<li>Mention what makes the paper special to the journel</li>
+<li>Confine the length to 2&#x2F;3 page</li>
+</ul>
+<h3 id="Revision-and-response-to-reviewers"><a href="#Revision-and-response-to-reviewers" class="headerlink" title="Revision, and response to reviewers"></a>Revision, and response to reviewers</h3><ul>
+<li>Cherish the chance of discussion your work directly with other scientists in your community. Please prepare a detailed letter of response.</li>
+<li>Cut and paste each comment by the reviewer. Answer it directly below. State specifically what changes you have made to the manuscript. Identify the page and line number.</li>
+<li>Provide a scientific response to the comment you accept; or a convicing, solid and polite rebuttal to the point you think the reviewer is wrong.</li>
+</ul>
+<h3 id="Rejection"><a href="#Rejection" class="headerlink" title="Rejection"></a>Rejection</h3><ul>
+<li>Try to understand why the paper was rejected.</li>
+<li>Re-evaluate your work and decide whether it is appropriate to submit the paper elsewhere. If so, begin as if you are going to write a new article.</li>
+</ul>
+<h1 id="个人积累"><a href="#个人积累" class="headerlink" title="个人积累"></a>个人积累</h1><p>Some comments from the editor.</p>
+<ul>
+<li>Note that terms such as “notably,” “indeed,” and “surprisingly” are redundant in scientific writing and can be deleted as they add no relevance.</li>
+<li>The n-dash (–) could be used instead of “to” but not hyphen (-). For example, 15–25 mm implies 15 to 25 mm. <a href="https://www.grammarly.com/blog/hyphens-and-dashes/">here is a nice demonstration</a>, <a href="https://meta.stackexchange.com/questions/305172/how-to-type-a-dash-or-instead-of-a-hyphen-in-stack-exchange">here is how to type them</a></li>
+</ul>
+<p>deep-learning-empowered</p>
+<p>Expensive flower-filled vase</p>
+<p>Expensive-flower-filled vase</p>
+<ul>
+<li><p>The use of too many words to convey one idea can muddle the message and divert the reader’s attention. Therefore, in writing, especially academic writing, ideas need to be conveyed as concisely as possible. One way of doing this is to use concise alternatives to phrases. For example, the phrase “all over the world” can be replaced with the word “globally” or “worldwide.” </p>
+</li>
+<li><p>Where possible, a direct verb (action) should be used instead of using a noun and verb. For example, “segmentation of images was done” can be replaced with “images were segmented,” which is clearer and preferred in academic writing.</p>
+<!--more--></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><strong>Example</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Avoid:</strong> Spectral imaging is essentially beneficial for an ocean of applications that require both spectral and spatial information at high resolution. <strong>Better:</strong> Several applications requiring both spectral and spatial information at high resolution benefit from spectral imaging.</td>
+</tr>
+</tbody></table>
+<p>Some useful word revision from the editor.</p>
+<ul>
+<li><p>While —&gt; Although</p>
+</li>
+<li><p>Here —&gt; In this study</p>
+</li>
+<li><p>These improvements enable us —&gt; enabled us</p>
+</li>
+<li><p>whole —&gt; entire</p>
+</li>
+<li><p>inaccessible —&gt; unreachable</p>
+</li>
+<li><p>Defects —&gt; limitations</p>
+</li>
+<li><p>Unsurprisingly —&gt; Nevertheless</p>
+</li>
+<li><p>confining —&gt; limiting</p>
+</li>
+<li><p>may —&gt; might</p>
+</li>
+<li><p>Besides —&gt; In addition</p>
+</li>
+<li><p>Since —&gt; Because</p>
+</li>
+</ul>
+<p>Some classical mistakes.</p>
+<ul>
+<li><p>is —&gt; was</p>
+</li>
+<li><p>spectral and spatial detections are simultaneously expected —&gt; spectral and spatial detection is</p>
+</li>
+</ul>
+<p>Common phrases.</p>
+<ul>
+<li>because of, due to</li>
+</ul>
+<p>early methods –&gt; early endeavors</p>
+<p>later works developed more methods –&gt; later works involved more methods</p>
+<p>It therefore failed to –&gt; it thereby failing to</p>
+<p><strong>The key difference between thereby and therefore is that thereby means “by that means” or “as a result of that” whereas therefore means “for that reason” or consequently.</strong></p>
+<p>additionally–&gt;besides</p>
+<p><a href="https://home.soka.ac.jp/~alex/sokhome06b/ess/transwords.html">https://home.soka.ac.jp/~alex/sokhome06b/ess/transwords.html</a></p>
+<p>Sec. 1 –&gt; Section 1</p>
+<p>Additional –&gt; Extra</p>
+<p>deep learning is able to handle the complicated combination-architecture model. –&gt; deep learning <strong>allows</strong> to handle the complicated combination-architecture model.</p>
+<p>enough to –&gt;sufficient for</p>
+<p>which is –&gt; namely</p>
+<h3 id="美化篇"><a href="#美化篇" class="headerlink" title="美化篇"></a>美化篇</h3><p>Deep neural networks has been applied widely in reconstruction process of spectral imaging. –&gt; The past decade has witnessed a rapid expansion of deep neural networks applications in reconstruction of spectral imaging.</p>
+<p>We think reinforcement learning (RL) can be used to change this condition. –&gt; We barely believe that we have fully exploited the potential of neural networks. To maximize their performance, one may consider introducing reinforcement learning (RL) technique.</p>
+<h3 id="单词篇"><a href="#单词篇" class="headerlink" title="单词篇"></a>单词篇</h3><p>endure</p>
+<p>endeavor </p>
+<p>notable</p>
+<h3 id="语法篇"><a href="#语法篇" class="headerlink" title="语法篇"></a>语法篇</h3><p>The computational spectral imaging method has resorted to computation power <strong>for reduced system volume</strong>.</p>
+<p>根据强调的内容（后句），把后句的but改成前句的though</p>
+<h3 id="词义篇"><a href="#词义篇" class="headerlink" title="词义篇"></a>词义篇</h3><p>Hence and thus have the same basic meaning and are often interchangeable. However, there is a slight difference. Hence usually refers to the future. Thus usually refers to the past. It is often used to indicate a conclusion.</p>
+<ul>
+<li>Both sides played well, thus no winner was declared.</li>
+<li>The situation is getting more and more complicated. Hence we will have to proceed with caution. (NOT Thus we will have to proceed with caution.)</li>
+</ul>
+<h3 id="资源篇"><a href="#资源篇" class="headerlink" title="资源篇"></a>资源篇</h3><p><a href="https://twitter.com/jbhuang0604/status/1437931021706612736">https://twitter.com/jbhuang0604/status/1437931021706612736</a></p>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>A-xxed B 就是 B is xxed by A. | computer-assisted diagnosis</p>
+<p>A-xxing B 就是 B xx A. | privacy-enhancing techniques</p>
+</div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script>]]></content>
+      <categories>
+        <category>Notes</category>
+        <category>Writing</category>
+      </categories>
+      <tags>
+        <tag>writing</tag>
       </tags>
   </entry>
   <entry>
@@ -6809,8 +6812,8 @@ ssh -L port:127.0.0.1:port username@ip
         <category>Optics</category>
       </categories>
       <tags>
-        <tag>projects</tag>
         <tag>optics</tag>
+        <tag>projects</tag>
       </tags>
   </entry>
   <entry>
@@ -6838,8 +6841,8 @@ ssh -L port:127.0.0.1:port username@ip
         <category>Optics</category>
       </categories>
       <tags>
-        <tag>projects</tag>
         <tag>optics</tag>
+        <tag>projects</tag>
       </tags>
   </entry>
   <entry>
@@ -6867,8 +6870,8 @@ ssh -L port:127.0.0.1:port username@ip
         <category>Optics</category>
       </categories>
       <tags>
-        <tag>projects</tag>
         <tag>optics</tag>
+        <tag>projects</tag>
       </tags>
   </entry>
   <entry>
@@ -7199,8 +7202,8 @@ ssh -L port:127.0.0.1:port username@ip
       </categories>
       <tags>
         <tag>competition</tag>
-        <tag>projects</tag>
         <tag>optics</tag>
+        <tag>projects</tag>
       </tags>
   </entry>
   <entry>
@@ -8165,8 +8168,8 @@ ssh -L port:127.0.0.1:port username@ip
         <category>Optics</category>
       </categories>
       <tags>
-        <tag>projects</tag>
         <tag>optics</tag>
+        <tag>projects</tag>
       </tags>
   </entry>
   <entry>
@@ -8199,8 +8202,8 @@ ssh -L port:127.0.0.1:port username@ip
         <category>Optics</category>
       </categories>
       <tags>
-        <tag>projects</tag>
         <tag>optics</tag>
+        <tag>projects</tag>
         <tag>coding</tag>
       </tags>
   </entry>
@@ -8253,8 +8256,8 @@ ssh -L port:127.0.0.1:port username@ip
         <category>Optics</category>
       </categories>
       <tags>
-        <tag>projects</tag>
         <tag>optics</tag>
+        <tag>projects</tag>
       </tags>
   </entry>
   <entry>
@@ -8293,8 +8296,8 @@ ssh -L port:127.0.0.1:port username@ip
         <category>Optics</category>
       </categories>
       <tags>
-        <tag>projects</tag>
         <tag>optics</tag>
+        <tag>projects</tag>
       </tags>
   </entry>
   <entry>
@@ -8369,8 +8372,8 @@ ssh -L port:127.0.0.1:port username@ip
         <category>Optics</category>
       </categories>
       <tags>
-        <tag>projects</tag>
         <tag>optics</tag>
+        <tag>projects</tag>
       </tags>
   </entry>
   <entry>
@@ -8397,8 +8400,8 @@ ssh -L port:127.0.0.1:port username@ip
         <category>Optics</category>
       </categories>
       <tags>
-        <tag>projects</tag>
         <tag>optics</tag>
+        <tag>projects</tag>
       </tags>
   </entry>
   <entry>
@@ -10243,9 +10246,9 @@ ssh -L port:127.0.0.1:port username@ip
 <p>rmdir dirname &#x2F;&#x2F; 删除空文件目录</p>
 <p>git rm filename &#x2F;&#x2F; 从版本库中删除文件</p>
 <p>git checkout – filename &#x2F;&#x2F; 误删文件的恢复</p>
-<h3 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h3><p>git remote add origin <a href="mailto:&#103;&#105;&#x74;&#64;&#x67;&#x69;&#x74;&#104;&#x75;&#x62;&#x2e;&#99;&#x6f;&#109;">&#103;&#105;&#x74;&#64;&#x67;&#x69;&#x74;&#104;&#x75;&#x62;&#x2e;&#99;&#x6f;&#109;</a>:longqianh&#x2F;learngit.git</p>
+<h3 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h3><p>git remote add origin <a href="mailto:&#x67;&#105;&#116;&#64;&#x67;&#x69;&#116;&#x68;&#117;&#x62;&#46;&#x63;&#x6f;&#109;">&#x67;&#105;&#116;&#64;&#x67;&#x69;&#116;&#x68;&#117;&#x62;&#46;&#x63;&#x6f;&#109;</a>:longqianh&#x2F;learngit.git</p>
 <p>git push -u origin master</p>
-<p>git clone <a href="mailto:&#103;&#105;&#x74;&#64;&#x67;&#105;&#x74;&#x68;&#x75;&#98;&#x2e;&#x63;&#x6f;&#109;">&#103;&#105;&#x74;&#64;&#x67;&#105;&#x74;&#x68;&#x75;&#98;&#x2e;&#x63;&#x6f;&#109;</a>:longqianh&#x2F;learngit.git</p>
+<p>git clone <a href="mailto:&#103;&#105;&#116;&#64;&#103;&#105;&#116;&#104;&#117;&#x62;&#46;&#x63;&#x6f;&#109;">&#103;&#105;&#116;&#64;&#103;&#105;&#116;&#104;&#117;&#x62;&#46;&#x63;&#x6f;&#109;</a>:longqianh&#x2F;learngit.git</p>
 <h3 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h3><p>git checkout </p>
 <p>git branch &#x2F;&#x2F; 查看分支</p>
 <p>git branch -d branchname &#x2F;&#x2F; 删除分支</p>
