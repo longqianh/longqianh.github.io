@@ -6,7 +6,7 @@
   <link href="http://longqianh.com/rss2.xml" rel="self"/>
   
   <link href="http://longqianh.com/"/>
-  <updated>2023-12-07T07:07:06.917Z</updated>
+  <updated>2024-02-07T12:35:12.338Z</updated>
   <id>http://longqianh.com/</id>
   
   <author>
@@ -17,11 +17,61 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Ophthalmology</title>
+    <link href="http://longqianh.com/Biology/Ophthalmology/"/>
+    <id>http://longqianh.com/Biology/Ophthalmology/</id>
+    <published>2024-02-07T12:18:21.000Z</published>
+    <updated>2024-02-07T12:35:12.338Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css&quot; /&gt;&lt;div</summary>
+        
+      
+    
+    
+    
+    
+    <category term="OCT" scheme="http://longqianh.com/tags/OCT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Computational-Imaging-and-Microscopy</title>
+    <link href="http://longqianh.com/Optics/Computational-Imaging-and-Microscopy/"/>
+    <id>http://longqianh.com/Optics/Computational-Imaging-and-Microscopy/</id>
+    <published>2023-12-15T01:58:43.000Z</published>
+    <updated>2023-12-15T05:18:27.248Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css&quot; /&gt;&lt;div</summary>
+        
+      
+    
+    
+    
+    <category term="Notes" scheme="http://longqianh.com/categories/Notes/"/>
+    
+    <category term="Optics" scheme="http://longqianh.com/categories/Notes/Optics/"/>
+    
+    
+    <category term="optics" scheme="http://longqianh.com/tags/optics/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Optics Tutorial</title>
     <link href="http://longqianh.com/Optics/Optics-Tutorial/"/>
     <id>http://longqianh.com/Optics/Optics-Tutorial/</id>
     <published>2022-11-30T06:49:00.000Z</published>
-    <updated>2023-12-07T07:07:06.917Z</updated>
+    <updated>2023-12-17T15:33:56.190Z</updated>
     
     
     <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css&quot; /&gt;&lt;div class=&quot;.article-gallery&quot;&gt;&lt;p&gt;&lt;a href=&quot;https://p.ipic.vip/6f1ln6.png&quot; title=&quot;optics_cover&quot; class=&quot;gallery-item&quot;&gt;&lt;img src=&quot;https://p.ipic.vip/6f1ln6.png&quot; alt=&quot;optics_cover&quot;&gt;&lt;/a&gt;&lt;/p&gt;
@@ -46,7 +96,7 @@
     <link href="http://longqianh.com/Biology/Mordern-Neurobiology/"/>
     <id>http://longqianh.com/Biology/Mordern-Neurobiology/</id>
     <published>2022-11-09T09:08:29.000Z</published>
-    <updated>2023-12-07T08:16:59.346Z</updated>
+    <updated>2024-02-07T12:29:36.336Z</updated>
     
     
     <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css&quot; /&gt;&lt;div class=&quot;.article-gallery&quot;&gt;&lt;h1 id=&quot;现代神经生物学-Modern-Neurobiology&quot;&gt;&lt;a href=&quot;#现代神经生物学-Modern-Neurobiology&quot; class=&quot;headerlink&quot; title=&quot;现代神经生物学 Modern Neurobiology&quot;&gt;&lt;/a&gt;现代神经生物学 Modern Neurobiology&lt;/h1&gt;&lt;a href=&quot;https://p.ipic.vip/x90er9.png&quot; title=&quot;brain&quot; class=&quot;gallery-item&quot;&gt;&lt;img src=&quot;https://p.ipic.vip/x90er9.png&quot; alt=&quot;brain&quot; style=&quot;zoom:33%;&quot; /&gt;&lt;/a&gt;
@@ -563,62 +613,6 @@
     
     
     <category term="electronics" scheme="http://longqianh.com/tags/electronics/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Terminal for Deep Learning</title>
-    <link href="http://longqianh.com/Computer-Science/Deep%20Learning/Terminal/"/>
-    <id>http://longqianh.com/Computer-Science/Deep%20Learning/Terminal/</id>
-    <published>2020-12-10T18:50:37.000Z</published>
-    <updated>2022-09-05T18:38:44.938Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css&quot; /&gt;&lt;div</summary>
-        
-      
-    
-    
-    
-    <category term="Notes" scheme="http://longqianh.com/categories/Notes/"/>
-    
-    <category term="Deep Learning" scheme="http://longqianh.com/categories/Notes/Deep-Learning/"/>
-    
-    
-    <category term="deep learning" scheme="http://longqianh.com/tags/deep-learning/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Lunar Lidar Design</title>
-    <link href="http://longqianh.com/Project/Lunar-Lidar-Design/"/>
-    <id>http://longqianh.com/Project/Lunar-Lidar-Design/</id>
-    <published>2020-11-07T13:16:27.000Z</published>
-    <updated>2023-01-27T02:24:53.625Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css&quot; /&gt;&lt;div</summary>
-        
-      
-    
-    
-    
-    <category term="Projects" scheme="http://longqianh.com/categories/Projects/"/>
-    
-    <category term="Optics" scheme="http://longqianh.com/categories/Projects/Optics/"/>
-    
-    
-    <category term="optics" scheme="http://longqianh.com/tags/optics/"/>
-    
-    <category term="projects" scheme="http://longqianh.com/tags/projects/"/>
     
   </entry>
   

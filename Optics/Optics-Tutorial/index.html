@@ -165,7 +165,13 @@
  <a target="_blank" rel="noopener" href="https://p.ipic.vip/gb8mpd.png" title="image-20230720212242881" class="gallery-item"><img src="https://p.ipic.vip/gb8mpd.png" alt="image-20230720212242881" style="zoom:25%;" /></a>
 
 <p>Here, we should know that the tube lens focal length of the Nikon and Olympus objectives are 200 mm and 180 mm, respectively.</p>
-<h3 id="Illumination"><a href="#Illumination" class="headerlink" title="Illumination"></a>Illumination</h3><p>todo: Köhler illumination, etc.</p>
+<h3 id="Illumination"><a href="#Illumination" class="headerlink" title="Illumination"></a>Illumination</h3><p>Köhler illumination</p>
+<ul>
+<li><p>Do not image the light source into the sample: Lamp source –&gt; [Lens + 4f] –&gt; sample</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.thorlabs.com/newgrouppage9.cfm?objectgroup_id=14357">https://www.thorlabs.com/newgrouppage9.cfm?objectgroup_id=14357</a></p>
+</li>
+</ul>
 <h2 id="Seeing-through-Scattering-Media"><a href="#Seeing-through-Scattering-Media" class="headerlink" title="Seeing through Scattering Media"></a>Seeing through Scattering Media</h2><p>Let the input filed be $E_{in}\in\mathbb{C}^{N}$. It has $N$ modes, where $N&#x3D;h\times w$ is the input image number. The transmission matrix (TM) that describe the scattering media is $T\in\mathbb{C}^{M\times N}$, and the output field is $E_{out}\in\mathbb{C}^{M}$, $M&#x3D;H\times W$ is the output image pixels. They have relation:<br>$$<br>E_{out}&#x3D;TE_{in}.<br>$$<br>Assume we modulate the $N$ input modes, and $E_{in}&#x3D;[a_1e^{i\varphi_1},\dots,a_ne^{i\varphi_n}]^T.$ Without modulation, the output field mode $m$ is<br>$$<br>E_{m}&#x3D;\sum_{i&#x3D;1}^N t_{mn}a_ne^{i\varphi_n}<br>$$</p>
 <h3 id="Peak-Ratio-and-Enhancement"><a href="#Peak-Ratio-and-Enhancement" class="headerlink" title="Peak Ratio and Enhancement"></a>Peak Ratio and Enhancement</h3><p>We derive phase and amplitude modulation for focusing through a scattering media. Assume $t_{mn}\in\mathcal{CN}(0,1)$ (a Circular Gaussian), which means both the real and imag part of $t_{mn}$ obey a Gaussian distribution $\mathcal{N}(0,1)$. Let $\varphi_n&#x3D;0$, the focusing position be $m^*$, and the modulation term be $\mathbf{b}&#x3D;[b_1e^{i\phi_1},\dots,b_ne^{i\phi_n}]^T$. Then:<br>$$<br>E_{out,peak}&#x3D;\sum_{n&#x3D;1}^{N}\left|t_{m^\star n}\right|a_n b_n e^{i[\arg(t_{m^\star n})+\phi_n]}.<br>$$</p>
 <ul>
@@ -224,6 +230,15 @@
    
   <nav class="article-nav">
     
+      <a href="/Optics/Computational-Imaging-and-Microscopy/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            Computational-Imaging-and-Microscopy
+          
+        </div>
+      </a>
+    
     
       <a href="/Biology/Mordern-Neurobiology/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
@@ -243,7 +258,7 @@
     <ul>
       <li>
         Copyrights &copy;
-        2020-2023
+        2020-2024
         <i class="ri-heart-fill heart_icon"></i> Longqian Huang
       </li>
     </ul>

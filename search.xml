@@ -1,6 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Computational-Imaging-and-Microscopy</title>
+    <url>/Optics/Computational-Imaging-and-Microscopy/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><p><a href="https://imagingtext.github.io/">https://imagingtext.github.io</a></p>
+<h3 id="Computational-imaging"><a href="#Computational-imaging" class="headerlink" title="Computational imaging"></a>Computational imaging</h3><p>Property imaging</p>
+<ul>
+<li>Phase imaging</li>
+<li>Spectral imaging</li>
+<li><strong>Polarization imaging</strong></li>
+</ul>
+<p>Task imaging</p>
+<ul>
+<li>Non Line of Sight imaging</li>
+<li>HDR imaging</li>
+<li><strong>Ultrafast imaging</strong></li>
+<li>Photoacoustic imaging</li>
+</ul>
+<h3 id="Microscopy"><a href="#Microscopy" class="headerlink" title="Microscopy"></a>Microscopy</h3><p>Theory-based microscopy</p>
+<ul>
+<li>Multi-photon microscopy</li>
+<li><strong>Stimulated Raman microscopy</strong></li>
+<li>Optical Coherence Tomography</li>
+<li>Light Sheet Microscopy (LSM)</li>
+</ul>
+<p>Computational microscopy</p>
+<ul>
+<li><strong>Super-resolution microscopy</strong></li>
+<li><strong>Light Field Microscopy</strong> (LFM)</li>
+<li><strong>Fourier Ptychography Microscopy</strong> (FPM)</li>
+</ul>
+<p>LFM uses the interplay between spatial and angular resolvability to achieve refocusing through a three-dimensional sample; the 3D image lies behind it.</p>
+<p>FPM maps angular resolvability to spatial frequency and interplays between spatial and frequency to synthesize a high-resolution image; the high spatial frequency image lies behind it.</p>
+<p>(consequently, we would expect FLFPM for high-resolution 3D image)</p>
+</div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script>]]></content>
+      <categories>
+        <category>Notes</category>
+        <category>Optics</category>
+      </categories>
+      <tags>
+        <tag>optics</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Optics Tutorial</title>
     <url>/Optics/Optics-Tutorial/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><p><a href="https://p.ipic.vip/6f1ln6.png" title="optics_cover" class="gallery-item"><img src="https://p.ipic.vip/6f1ln6.png" alt="optics_cover"></a></p>
@@ -55,7 +102,13 @@
  <a href="https://p.ipic.vip/gb8mpd.png" title="image-20230720212242881" class="gallery-item"><img src="https://p.ipic.vip/gb8mpd.png" alt="image-20230720212242881" style="zoom:25%;" /></a>
 
 <p>Here, we should know that the tube lens focal length of the Nikon and Olympus objectives are 200 mm and 180 mm, respectively.</p>
-<h3 id="Illumination"><a href="#Illumination" class="headerlink" title="Illumination"></a>Illumination</h3><p>todo: Köhler illumination, etc.</p>
+<h3 id="Illumination"><a href="#Illumination" class="headerlink" title="Illumination"></a>Illumination</h3><p>Köhler illumination</p>
+<ul>
+<li><p>Do not image the light source into the sample: Lamp source –&gt; [Lens + 4f] –&gt; sample</p>
+</li>
+<li><p><a href="https://www.thorlabs.com/newgrouppage9.cfm?objectgroup_id=14357">https://www.thorlabs.com/newgrouppage9.cfm?objectgroup_id=14357</a></p>
+</li>
+</ul>
 <h2 id="Seeing-through-Scattering-Media"><a href="#Seeing-through-Scattering-Media" class="headerlink" title="Seeing through Scattering Media"></a>Seeing through Scattering Media</h2><p>Let the input filed be $E_{in}\in\mathbb{C}^{N}$. It has $N$ modes, where $N&#x3D;h\times w$ is the input image number. The transmission matrix (TM) that describe the scattering media is $T\in\mathbb{C}^{M\times N}$, and the output field is $E_{out}\in\mathbb{C}^{M}$, $M&#x3D;H\times W$ is the output image pixels. They have relation:<br>$$<br>E_{out}&#x3D;TE_{in}.<br>$$<br>Assume we modulate the $N$ input modes, and $E_{in}&#x3D;[a_1e^{i\varphi_1},\dots,a_ne^{i\varphi_n}]^T.$ Without modulation, the output field mode $m$ is<br>$$<br>E_{m}&#x3D;\sum_{i&#x3D;1}^N t_{mn}a_ne^{i\varphi_n}<br>$$</p>
 <h3 id="Peak-Ratio-and-Enhancement"><a href="#Peak-Ratio-and-Enhancement" class="headerlink" title="Peak Ratio and Enhancement"></a>Peak Ratio and Enhancement</h3><p>We derive phase and amplitude modulation for focusing through a scattering media. Assume $t_{mn}\in\mathcal{CN}(0,1)$ (a Circular Gaussian), which means both the real and imag part of $t_{mn}$ obey a Gaussian distribution $\mathcal{N}(0,1)$. Let $\varphi_n&#x3D;0$, the focusing position be $m^*$, and the modulation term be $\mathbf{b}&#x3D;[b_1e^{i\phi_1},\dots,b_ne^{i\phi_n}]^T$. Then:<br>$$<br>E_{out,peak}&#x3D;\sum_{n&#x3D;1}^{N}\left|t_{m^\star n}\right|a_n b_n e^{i[\arg(t_{m^\star n})+\phi_n]}.<br>$$</p>
 <ul>
@@ -457,8 +510,10 @@
 </ul>
 </li>
 </ul>
-<h3 id="GPCR"><a href="#GPCR" class="headerlink" title="GPCR"></a>GPCR</h3><ul>
-<li><p>命名问题：<strong>GPCR can interact with non-G proteins</strong></p>
+<h3 id="GPCR"><a href="#GPCR" class="headerlink" title="GPCR"></a>GPCR</h3><a href="https://p.ipic.vip/qrun9y.png" title="GPCR" class="gallery-item"><img src="https://p.ipic.vip/qrun9y.png" alt="GPCR" style="zoom: 50%;" /></a>
+
+<ul>
+<li><p>命名问题：GPCR can interact with non-G proteins</p>
 </li>
 <li><p>Architecture of GPCRs</p>
 <ul>
@@ -629,121 +684,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="4-Generation-of-Neural-Network-and-Regeneration"><a href="#4-Generation-of-Neural-Network-and-Regeneration" class="headerlink" title="4 Generation of Neural Network and Regeneration"></a>4 Generation of Neural Network and Regeneration</h2><p>神经发育</p>
-<blockquote>
-<ol>
-<li>How do individual neurons differentiate and connect with their partners?</li>
-<li>How do groups of neurons wire in a coordinated manner to form a functional circuit, such as a neural map?</li>
-</ol>
-</blockquote>
-<h3 id="Neural-tube-genesis"><a href="#Neural-tube-genesis" class="headerlink" title="Neural tube genesis"></a>Neural tube genesis</h3><p>The vertebrate nervous system derives from the neural tube, an ectodermal structure. Extrinsic morphogens and intrinsic transcription factors pattern the neural tube differentiation.</p>
-<ul>
-<li><p>neural plate –&gt; neural fold –&gt; neural tube –&gt; spinal cord</p>
-</li>
-<li><p>Bone morphogenetic proteins (BMPs) signaling</p>
-<ul>
-<li>suppressors of neuronal differentiation</li>
-</ul>
-</li>
-<li><p>Wnt signaling</p>
-<ul>
-<li>Response:<ul>
-<li>cells in anterior express Otx2 –&gt; forebrain, midbrain</li>
-<li>cells in posterior express Gbx2 –&gt; hindbrain</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="Neural-stem-cells"><a href="#Neural-stem-cells" class="headerlink" title="Neural stem cells"></a>Neural stem cells</h3><ul>
-<li><p>Ref: <em>Annu. Rev. Neurosci</em>. <strong>32</strong>: 149–84 (2009)</p>
-</li>
-<li><p>Asymmetric division (进行非对称型分裂)：progenitor cell–&gt; (a) self–renewal (b) neuron&#x2F;glia</p>
-<ul>
-<li>neuronal progenitor –&gt; neuron</li>
-<li>glial progenitor –&gt; astrocyte, oligodendrocyte</li>
-</ul>
-</li>
-<li><p>Reason of asymmetric division: the distributino of cell constituents in precusor cells.  The protein <em>notch-1</em> and <em>numb</em> are differentially distributed in the precursor cells of the developing neucortex.</p>
-<ul>
-<li>vertical cleavage (asymmetric) v.s. horizonatal cleavage (symmetric)</li>
-</ul>
-</li>
-<li><p>Notch–delta mediated lateral inhibitation diverfsifies cell fates</p>
-</li>
-</ul>
-<h3 id="Neuron-migration"><a href="#Neuron-migration" class="headerlink" title="Neuron migration"></a>Neuron migration</h3><ul>
-<li><p>Radial glial cells</p>
-<ul>
-<li>neurons migrate along radial glial cells (radial migration)</li>
-</ul>
-</li>
-<li><p>Inside–out pattern of neuronal migration</p>
-<ul>
-<li>早期产生的神经元位于皮层最内侧</li>
-<li>晚期产生的神经元越过早期神经元到达皮层最外侧</li>
-</ul>
-</li>
-<li><p>GABAergic neurons（interneurons）: tangential migration (切向迁移)</p>
-<ul>
-<li>after migration: random walk</li>
-</ul>
-</li>
-<li><p>成年期海马的神经发生是比较稀少的</p>
-</li>
-</ul>
-<h3 id="Morphogens-and-transcription-factors-specify-spinal-cord-neuronal-fates"><a href="#Morphogens-and-transcription-factors-specify-spinal-cord-neuronal-fates" class="headerlink" title="Morphogens and transcription factors specify spinal cord neuronal fates"></a>Morphogens and transcription factors specify spinal cord neuronal fates</h3><blockquote>
-<p>The nervous system has a rough blueprint that specifies the numbers and types of neurons at specific locations.</p>
-</blockquote>
-<ul>
-<li><p>Ref: New neurons and new memories: how does adult hippocampal neurogenesis affect learning and memory? <a href="https://doi.org/10.1038/nrn2822">10.1038&#x2F;nrn2822</a></p>
-</li>
-<li><p>转录因子在神经细胞发育早期高表达</p>
-</li>
-<li><p>Dorsal&#x2F;ventral targeting</p>
-</li>
-<li><p><em>Neuronal growth cone</em></p>
-</li>
-<li><p>Event: crossing the midline 脊髓发育中的重要事件</p>
-<ul>
-<li>跨过脊髓中线进行投射</li>
-</ul>
-</li>
-<li><p>Neural survival: neurotrophic factor hypothesis 神经营养因子</p>
-<ul>
-<li>NGF: nerve growth factor</li>
-<li>BDNF: brain derived neurotrophic factor</li>
-<li>interacts with a different transmembrane Trk</li>
-</ul>
-</li>
-<li><p>Multiple cue-receptor systems guide axons to their final destinaations. 指示轴突到达正确的投射位置</p>
-</li>
-</ul>
-<h3 id="Key-steps-in-brain-wiring"><a href="#Key-steps-in-brain-wiring" class="headerlink" title="Key steps in brain wiring"></a>Key steps in brain wiring</h3><h4 id="Synapse-formation-amp-elimination"><a href="#Synapse-formation-amp-elimination" class="headerlink" title="Synapse formation &amp; elimination"></a>Synapse formation &amp; elimination</h4><ul>
-<li>突触修剪：Some neuromuscular synapses are eliminated after birth</li>
-<li>Axon pruning<ul>
-<li>primary axon extension –&gt; interstitial axon branching –&gt; selective axon elimination</li>
-</ul>
-</li>
-<li>Signaling from surrounding glia</li>
-</ul>
-<h4 id="Self–avoidance-of-axonal-and-dendritic-branches"><a href="#Self–avoidance-of-axonal-and-dendritic-branches" class="headerlink" title="Self–avoidance of axonal and dendritic branches"></a>Self–avoidance of axonal and dendritic branches</h4><ul>
-<li>Dscam gene control</li>
-</ul>
-<h3 id="Repairing-the-damaged-brain"><a href="#Repairing-the-damaged-brain" class="headerlink" title="Repairing the damaged brain"></a>Repairing the damaged brain</h3><ul>
-<li><p>axons in the periphery regenerate better than those in the central nervous system</p>
-</li>
-<li><p>peripheral and central nerves differ in their ability to support axonal regeneration</p>
-<ul>
-<li>外周神经系统比中枢神经系统有更好的损伤修复能力</li>
-</ul>
-</li>
-<li><p>myelin and glial scar components inhibit regeneration of central axons</p>
-</li>
-<li><p>using sources of neuronal cells with reprogramming and transplantation</p>
-</li>
-</ul>
-<h2 id="5-Glutamate-and-GABA-receptor"><a href="#5-Glutamate-and-GABA-receptor" class="headerlink" title="5 Glutamate and GABA receptor"></a>5 Glutamate and GABA receptor</h2><p>阅读：<a href="http://www.bristol.ac.uk/synaptic/receptors/ampar/">http://www.bristol.ac.uk/synaptic/receptors/ampar/</a></p>
+<h2 id="4-Glutamate-and-GABA-receptor"><a href="#4-Glutamate-and-GABA-receptor" class="headerlink" title="4 Glutamate and GABA receptor"></a>4 Glutamate and GABA receptor</h2><p>阅读：<a href="http://www.bristol.ac.uk/synaptic/receptors/ampar/">http://www.bristol.ac.uk/synaptic/receptors/ampar/</a></p>
 <h3 id="Glutamate-Receptor"><a href="#Glutamate-Receptor" class="headerlink" title="Glutamate Receptor"></a>Glutamate Receptor</h3><p>阳离子通道，兴奋性受体，开放后介导膜的去极化</p>
 <h4 id="Glutamate"><a href="#Glutamate" class="headerlink" title="Glutamate"></a>Glutamate</h4><ul>
 <li>The major excitatory neurotransmitter in the mammalian CNS, acting through both ligand-gated ion channels (ionotropic 离子型受体) and G-protein-coupled receptors (metabotropic 代谢型受体).</li>
@@ -867,7 +808,7 @@
 <h3 id="推荐阅读"><a href="#推荐阅读" class="headerlink" title="推荐阅读"></a>推荐阅读</h3><p>[1] Variations on an inhibitory theme: phasic and tonic activation of GABAA receptors (Nature reviews,2005) </p>
 <p>[2] Regulation of AMPA receptor trafficking and synaptic plasticity (Current Opinion  in Neurobiology,2011) </p>
 <p>[3] Molecular basis of NMDA receptor functional diversity (European Journal of Neuroscience, 2011)</p>
-<h2 id="6-Calcium-Signaling"><a href="#6-Calcium-Signaling" class="headerlink" title="6 Calcium Signaling"></a>6 Calcium Signaling</h2><ul>
+<h2 id="5-Calcium-Signaling"><a href="#5-Calcium-Signaling" class="headerlink" title="5 Calcium Signaling"></a>5 Calcium Signaling</h2><ul>
 <li><p>胞内钙～0.0001 mMol，胞外钙～1.5mMol，非常敏感</p>
 </li>
 <li><p>细胞内钙离子浓度升高：外钙内流&#x2F;内钙释放($IP_3R$ –&gt; ER –&gt; Ca)</p>
@@ -879,6 +820,7 @@
 <li><p>RYR通道</p>
 </li>
 <li><p>CAMPKII: CA2+&#x2F;calmodulin-dependent protein kinase II</p>
+<a href="https://p.ipic.vip/shr19l.png" title="CaMKII" class="gallery-item"><img src="https://p.ipic.vip/shr19l.png" alt="CaMKII" style="zoom: 65%;" /></a>
 </li>
 <li><p>CAM: calmodulin target proteins</p>
 <ul>
@@ -924,7 +866,7 @@
 </li>
 <li>$K_d$ 值的含义</li>
 </ul>
-<h2 id="7-Synaptic-Plasticity-Learning-and-Memory"><a href="#7-Synaptic-Plasticity-Learning-and-Memory" class="headerlink" title="7 Synaptic Plasticity Learning and Memory"></a>7 Synaptic Plasticity Learning and Memory</h2><ul>
+<h2 id="6-Synaptic-Plasticity-Learning-and-Memory"><a href="#6-Synaptic-Plasticity-Learning-and-Memory" class="headerlink" title="6 Synaptic Plasticity Learning and Memory"></a>6 Synaptic Plasticity Learning and Memory</h2><ul>
 <li>Postsynaptic density (PSD)</li>
 <li>突触的量子释放理论</li>
 </ul>
@@ -984,6 +926,120 @@
 <li>Cell assembly</li>
 <li>H.M. 病人：海马是新记忆产生的起点</li>
 <li>海马和空间记忆</li>
+</ul>
+<h2 id="7-Generation-of-Neural-Network-and-Regeneration"><a href="#7-Generation-of-Neural-Network-and-Regeneration" class="headerlink" title="7 Generation of Neural Network and Regeneration"></a>7 Generation of Neural Network and Regeneration</h2><p>神经发育</p>
+<blockquote>
+<ol>
+<li>How do individual neurons differentiate and connect with their partners?</li>
+<li>How do groups of neurons wire in a coordinated manner to form a functional circuit, such as a neural map?</li>
+</ol>
+</blockquote>
+<h3 id="Neural-tube-genesis"><a href="#Neural-tube-genesis" class="headerlink" title="Neural tube genesis"></a>Neural tube genesis</h3><p>The vertebrate nervous system derives from the neural tube, an ectodermal structure. Extrinsic morphogens and intrinsic transcription factors pattern the neural tube differentiation.</p>
+<ul>
+<li><p>neural plate –&gt; neural fold –&gt; neural tube –&gt; spinal cord</p>
+</li>
+<li><p>Bone morphogenetic proteins (BMPs) signaling</p>
+<ul>
+<li>suppressors of neuronal differentiation</li>
+</ul>
+</li>
+<li><p>Wnt signaling</p>
+<ul>
+<li>Response:<ul>
+<li>cells in anterior express Otx2 –&gt; forebrain, midbrain</li>
+<li>cells in posterior express Gbx2 –&gt; hindbrain</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="Neural-stem-cells"><a href="#Neural-stem-cells" class="headerlink" title="Neural stem cells"></a>Neural stem cells</h3><ul>
+<li><p>Ref: <em>Annu. Rev. Neurosci</em>. <strong>32</strong>: 149–84 (2009)</p>
+</li>
+<li><p>Asymmetric division (进行非对称型分裂)：progenitor cell–&gt; (a) self–renewal (b) neuron&#x2F;glia</p>
+<ul>
+<li>neuronal progenitor –&gt; neuron</li>
+<li>glial progenitor –&gt; astrocyte, oligodendrocyte</li>
+</ul>
+</li>
+<li><p>Reason of asymmetric division: the distributino of cell constituents in precusor cells.  The protein <em>notch-1</em> and <em>numb</em> are differentially distributed in the precursor cells of the developing neucortex.</p>
+<ul>
+<li>vertical cleavage (asymmetric) v.s. horizonatal cleavage (symmetric)</li>
+</ul>
+</li>
+<li><p>Notch–delta mediated lateral inhibitation diverfsifies cell fates</p>
+</li>
+</ul>
+<h3 id="Neuron-migration"><a href="#Neuron-migration" class="headerlink" title="Neuron migration"></a>Neuron migration</h3><ul>
+<li><p>Radial glial cells</p>
+<ul>
+<li>neurons migrate along radial glial cells (radial migration)</li>
+</ul>
+</li>
+<li><p>Inside–out pattern of neuronal migration</p>
+<ul>
+<li>早期产生的神经元位于皮层最内侧</li>
+<li>晚期产生的神经元越过早期神经元到达皮层最外侧</li>
+</ul>
+</li>
+<li><p>GABAergic neurons（interneurons）: tangential migration (切向迁移)</p>
+<ul>
+<li>after migration: random walk</li>
+</ul>
+</li>
+<li><p>成年期海马的神经发生是比较稀少的</p>
+</li>
+</ul>
+<h3 id="Morphogens-and-transcription-factors-specify-spinal-cord-neuronal-fates"><a href="#Morphogens-and-transcription-factors-specify-spinal-cord-neuronal-fates" class="headerlink" title="Morphogens and transcription factors specify spinal cord neuronal fates"></a>Morphogens and transcription factors specify spinal cord neuronal fates</h3><blockquote>
+<p>The nervous system has a rough blueprint that specifies the numbers and types of neurons at specific locations.</p>
+</blockquote>
+<ul>
+<li><p>Ref: New neurons and new memories: how does adult hippocampal neurogenesis affect learning and memory? <a href="https://doi.org/10.1038/nrn2822">10.1038&#x2F;nrn2822</a></p>
+</li>
+<li><p>转录因子在神经细胞发育早期高表达</p>
+</li>
+<li><p>Dorsal&#x2F;ventral targeting</p>
+</li>
+<li><p><em>Neuronal growth cone</em></p>
+</li>
+<li><p>Event: crossing the midline 脊髓发育中的重要事件</p>
+<ul>
+<li>跨过脊髓中线进行投射</li>
+</ul>
+</li>
+<li><p>Neural survival: neurotrophic factor hypothesis 神经营养因子</p>
+<ul>
+<li>NGF: nerve growth factor</li>
+<li>BDNF: brain derived neurotrophic factor</li>
+<li>interacts with a different transmembrane Trk</li>
+</ul>
+</li>
+<li><p>Multiple cue-receptor systems guide axons to their final destinaations. 指示轴突到达正确的投射位置</p>
+</li>
+</ul>
+<h3 id="Key-steps-in-brain-wiring"><a href="#Key-steps-in-brain-wiring" class="headerlink" title="Key steps in brain wiring"></a>Key steps in brain wiring</h3><h4 id="Synapse-formation-amp-elimination"><a href="#Synapse-formation-amp-elimination" class="headerlink" title="Synapse formation &amp; elimination"></a>Synapse formation &amp; elimination</h4><ul>
+<li>突触修剪：Some neuromuscular synapses are eliminated after birth</li>
+<li>Axon pruning<ul>
+<li>primary axon extension –&gt; interstitial axon branching –&gt; selective axon elimination</li>
+</ul>
+</li>
+<li>Signaling from surrounding glia</li>
+</ul>
+<h4 id="Self–avoidance-of-axonal-and-dendritic-branches"><a href="#Self–avoidance-of-axonal-and-dendritic-branches" class="headerlink" title="Self–avoidance of axonal and dendritic branches"></a>Self–avoidance of axonal and dendritic branches</h4><ul>
+<li>Dscam gene control</li>
+</ul>
+<h3 id="Repairing-the-damaged-brain"><a href="#Repairing-the-damaged-brain" class="headerlink" title="Repairing the damaged brain"></a>Repairing the damaged brain</h3><ul>
+<li><p>axons in the periphery regenerate better than those in the central nervous system</p>
+</li>
+<li><p>peripheral and central nerves differ in their ability to support axonal regeneration</p>
+<ul>
+<li>外周神经系统比中枢神经系统有更好的损伤修复能力</li>
+</ul>
+</li>
+<li><p>myelin and glial scar components inhibit regeneration of central axons</p>
+</li>
+<li><p>using sources of neuronal cells with reprogramming and transplantation</p>
+</li>
 </ul>
 <h2 id="8-Brain-Circuit-and-Brain-Disorders"><a href="#8-Brain-Circuit-and-Brain-Disorders" class="headerlink" title="8 Brain Circuit and Brain Disorders"></a>8 Brain Circuit and Brain Disorders</h2><h3 id="History-1"><a href="#History-1" class="headerlink" title="History"></a>History</h3><ul>
 <li>Localization of function in the brain<ul>
@@ -1079,7 +1135,9 @@
   <entry>
     <title>Quantum-Mechanics Notes</title>
     <url>/Physics/Quantum-Mechanics/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="Quantum-Mechanics-Notes"><a href="#Quantum-Mechanics-Notes" class="headerlink" title="Quantum-Mechanics-Notes"></a>Quantum-Mechanics-Notes</h1><p>Notes for quantum mechanics of MIT-OCW 8.04.</p>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="Quantum-Mechanics-Notes"><a href="#Quantum-Mechanics-Notes" class="headerlink" title="Quantum-Mechanics-Notes"></a>Quantum-Mechanics-Notes</h1><a href="https://p.ipic.vip/2rh3q4.png" title="image-20231214231110346" class="gallery-item"><img src="https://p.ipic.vip/2rh3q4.png" alt="image-20231214231110346" style="zoom:50%;" /></a>
+
+<p>Notes for quantum mechanics of MIT-OCW 8.04.</p>
 <p><em>’This is the goal of 8.04: we will step beyond the scale of daily experiences to develop an intuition for electrons, atoms, and superposition.’</em></p>
 <span id="more"></span>
 
@@ -1166,7 +1224,7 @@
 <h2 id="4-Expectations"><a href="#4-Expectations" class="headerlink" title="4 Expectations"></a>4 Expectations</h2><h3 id="Uncertainty-and-Expectation"><a href="#Uncertainty-and-Expectation" class="headerlink" title="Uncertainty and Expectation"></a>Uncertainty and Expectation</h3><p>To characterize the uncertainty, we use the standard deviation<br>$$<br>\Delta a&#x3D;\sqrt{\langle a^2\rangle-\langle a\rangle^2}<br>$$</p>
 <p>The expectation value of a function of position <strong>in a given quantum state</strong> $\psi(x)$ is<br>$$<br>\langle f(x)\rangle &#x3D;\int_{-\infty}^\infty \psi^\star(x) f(x)\psi(x);\text dx.<br>$$<br>However, when we consider the expectation of momentum $\langle p\rangle$, we get problem: $p$ and $x$ cannot be measured simultaneously.</p>
 <p>(In fact we replace $f$ with $\hat f$ when compute the expectation value of an operator)</p>
-<h3 id="Hints-to-the-operator"><a href="#Hints-to-the-operator" class="headerlink" title="Hints to the operator"></a>Hints to the operator</h3><p>Notice some hints that indicate us to <em>operator</em>:</p>
+<h3 id="Operators"><a href="#Operators" class="headerlink" title="Operators"></a>Operators</h3><p>Notice some hints that indicate us to <em>operator</em>:</p>
 <ul>
 <li><p>For wavefunction $\psi&#x3D;e^{ikx}$,<br>$$<br>\begin{aligned}<br>\partial_x \psi&#x3D;ik\psi\implies \frac{\hbar}{i}\partial_x \psi &#x3D;\hbar k\psi&#x3D;p\cdot\psi<br>\end{aligned}<br>$$</p>
 </li>
@@ -1192,26 +1250,59 @@
 </tr>
 </tbody></table>
 </li>
-<li><p>For translations behave for functions,<br>$$<br>\begin{align}<br>f(x)\to f(x+l)&amp;&#x3D;f(x)+l\partial_x f(x)+\frac{l^2}{2}\partial_x^2 f(x)+\dots\\<br>&amp;&#x3D;\sum_{n&#x3D;0}^{\infty} \frac{(l\partial_x)^n}{n!}f(x)\\<br>&amp;&#x3D;e^{l\partial_x}f(x)<br>\end{align}<br>$$<br>Translations are generated by spatial derivatives $\partial_x$ and it should be associated with $p$. </p>
+<li><p>For translations behave for functions,<br>$$<br>\begin{align}<br>f(x)\to f(x+l)&amp;&#x3D;f(x)+l\partial_x f(x)+\frac{l^2}{2}\partial_x^2 f(x)+\dots\\<br>&amp;&#x3D;\sum_{n&#x3D;0}^{\infty} \frac{(l\partial_x)^n}{n!}f(x)\\<br>&amp;&#x3D;e^{l\partial_x}f(x)<br>\end{align}<br>$$<br><strong>Translations are generated by spatial derivatives</strong> $\partial_x$ and it should be associated with $p$. </p>
 <p>Similarly, $E\sim \partial_t,; L_z\sim\partial_\varphi$.</p>
 </li>
 </ul>
-<p>Finally, momentum in quantum mechanics is realized by an operator:<br>$$<br>\hat p&#x3D;\frac{\hbar}{i}\frac{\partial}{\partial x}.<br>$$<br>And we use operator $\hat p $ to compute expectation values:<br>$$<br>\langle p\rangle&#x3D;\int_{-\infty}^\infty \psi^\star(x)\hat p \psi(x);\text dx<br>$$</p>
+<p>Finally, momentum in quantum mechanics is realized by an operator:<br>$$<br>\hat p&#x3D;\frac{\hbar}{i}\frac{\partial}{\partial x}.<br>$$</p>
+<ul>
+<li>The hat above $p$ indicates it’s not a number, but <strong>a rule that operates on functions</strong></li>
+</ul>
+<p>And we use operator $\hat p $ to compute expectation values:<br>$$<br>\langle p\rangle&#x3D;\int_{-\infty}^\infty \psi^\star(x)\hat p \psi(x);\text dx<br>$$</p>
 <p>I think operator $\hat p$ is introduced more intuitively than mathematically. The key is that we want to calculate expectation of $p$ in a state associated with position $x$, but from uncertainty principle there is no meaning when $p$ and $x$ occured in one expression. Since momentum is related to position, we come out with operator. Then the $\langle p\rangle$ is the expectation of the momentum that can be observed. (Only the momentum that is able to be observed can be taken out from  the operator)</p>
 <p>The very interesting thing of momentum operator is it can get distribution of momentum when there is a superposition.</p>
-<h2 id="5-Operators-and-the-Schrodinger-Equation"><a href="#5-Operators-and-the-Schrodinger-Equation" class="headerlink" title="5 Operators and the Schrödinger Equation"></a>5 Operators and the Schrödinger Equation</h2><h3 id="Common-operator"><a href="#Common-operator" class="headerlink" title="Common operator"></a>Common operator</h3><p>For each observable quantity we have an associate operator.</p>
 <ul>
-<li>Momentum : $\hat p&#x3D;-i\hbar \partial_x$</li>
-<li>Position: $\hat x &#x3D;x$</li>
-<li>Energy: $\hat E&#x3D;\displaystyle \frac{\hat p^2}{2m}+V(\hat x)&#x3D;-\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2}+V(x)$</li>
+<li>BTW: At end of the lecture, the wishes from pirates are wonderful!</li>
 </ul>
-<h3 id="Commutator-and-a-deep-equation"><a href="#Commutator-and-a-deep-equation" class="headerlink" title="Commutator and a deep equation"></a>Commutator and a deep equation</h3><p>To measure the importance of operator (act) order, we define the <em>commutator</em> :<br>$$<br>[\hat A,\hat B]&#x3D;\hat A\hat B-\hat B\hat A.<br>$$<br>And one deep and profound result we get is:<br>$$<br>[\hat x,\hat p]&#x3D;i\hbar \hat 1, \label{xp}<br>$$<br>which indicates the uncertainty principle. Assume the first thing we measure is accurate, then think about it, we cannot measure $x$ and $p$ both accurately, for the simple reason that their commutator is not zero: we cannot get the same result after the second one that is measured. Further more, when expressed in matrix, ($\ref{xp}$) is a very hard matrix equation and only infinite dimension matrix is can solve.</p>
+<h2 id="5-Operators-and-the-Schrodinger-Equation"><a href="#5-Operators-and-the-Schrodinger-Equation" class="headerlink" title="5 Operators and the Schrödinger Equation"></a>5 Operators and the Schrödinger Equation</h2><h3 id="Common-operator"><a href="#Common-operator" class="headerlink" title="Common operator"></a>Common operator</h3><p>For each <strong>observable quantity</strong> we have an associate operator.</p>
+<ul>
+<li>Momentum : $\displaystyle\hat p:\hat pf(x)\to\frac{\hbar}{i} \partial_xf(x)$</li>
+<li>Position: $\hat x: \hat x f(x)\to xf(x)$</li>
+<li>Energy: $\displaystyle\hat E: \hat E f(x)\to\left[\frac{\hat p^2}{2m}+V(\hat x)\right]f(x)&#x3D;\left[-\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2}+V(x)\right]f(x)$</li>
+</ul>
+<h3 id="Measurement"><a href="#Measurement" class="headerlink" title="Measurement"></a>Measurement</h3><ul>
+<li><p>Measuring the observable quantity $A$ associate with $\hat A$, is operating on the function again and again:<br>$$<br>\langle \hat A\rangle_\psi&#x3D;\int\psi(x)^\dagger \hat A\psi(x) \ \mathrm{d}x.<br>$$</p>
+</li>
+<li><p>Measuring gets you a value: this measured value has to be one of the real eigenvalues of $\hat A$</p>
+</li>
+<li><p>After measurement, system <em>collapses</em> into $\psi_a$ with eigenvalue $a$ measured</p>
+</li>
+<li><p>State can be expanded by $\hat A$‘s normalized eigenfunctions ${\psi_a(x)}$:<br>$$<br>\psi(x)&#x3D;\int_a C_a\psi_a(x)\ \mathrm{d}x<br>$$<br>with $\vert C_a\vert^2$ being the probability of getting $a$ upon measurement.</p>
+</li>
+</ul>
+<h3 id="Commutator-and-a-deep-equation"><a href="#Commutator-and-a-deep-equation" class="headerlink" title="Commutator and a deep equation"></a>Commutator and a deep equation</h3><p>To measure the importance of operator (act) order, we define the <em>commutator</em> :<br>$$<br>[\hat A,\hat B]&#x3D;\hat A\hat B-\hat B\hat A.<br>$$<br>Doing on position and momentum, we get the following lovely and deep equation:<br>$$<br>[\hat x,\hat p]&#x3D;i\hbar \hat 1,<br>$$<br>which indicates the uncertainty principle. Assume the first thing we measure is accurate, then think about it, we cannot measure $x$ and $p$ both accurately, for the simple reason that their commutator is not zero: we cannot get the same result after the second one that is measured. Further more, when expressed in matrix, it is a very hard matrix equation and only infinite dimension matrix is can solve.</p>
 <h3 id="The-Schrodinger-Equation"><a href="#The-Schrodinger-Equation" class="headerlink" title="The Schrödinger Equation"></a>The Schrödinger Equation</h3><p>Actually $e^{ikx}$ is an eigenfunction of operator $\hat p$ and every state $\psi(x)$ can be generated by it from Fourier’s Theorem. </p>
 <p>From de Broglie, we know that any object is a wave, and consider a plane wave<br>$$<br>\psi(x,t;k)&#x3D;e^{i(kx-\omega t)},<br>$$<br>which has momentum $p&#x3D;\hbar k$ and energy $E&#x3D;\hbar \omega$. </p>
 <p>Similarly to hint of momentum, we notice<br>$$<br>i\hbar \frac{\partial\psi(x,t)}{\partial t}&#x3D;\hbar\omega \psi(x,t)&#x3D;E\psi(x,t),<br>$$</p>
-<p>which depicts the time evolution of energy $E$. But maybe we do not know what is energy $E$. </p>
-<p>A little change $E\to \hat E$ complete the equation and that is the $Schr\ddot{o}dinger ;Equation$ :<br>$$<br>\begin{align}<br>i\hbar \frac{\partial}{\partial t}\psi(x,t)&amp;&#x3D;\hat E \psi(x,t)\\<br>i.e.\qquad i\hbar\frac{\partial \psi(x,t)}{\partial t}&amp;&#x3D;-\frac{\hbar^2}{2m}\frac{\partial^2 \psi(x,t)}{\partial x^2}+V(x)\psi(x,t).<br>\end{align}<br>$$<br>The equation describing the time evolution of a quantum state.</p>
-<p>It is analogous to the equation of motion $\vec F&#x3D;\dot {\vec p} $ and $\hat E$ is not defined as the operator $i\hbar\partial_t$ any more than $\vec F$ is defined to be $\hat{\vec p}$ .</p>
+<p>which depicts the time evolution of energy $E$. For waves it is trivial that $E&#x3D;\hbar \omega$, but for particles maybe the energy $E$ is not trivial to get.</p>
+<p>Changing $E\to \hat E$ complete the  Schrödinger Equation:<br>$$<br>\begin{align}<br>i\hbar \frac{\partial}{\partial t}\psi(x,t)&amp;&#x3D;\hat E \psi(x,t)\\<br>i.e.\qquad i\hbar\frac{\partial \psi(x,t)}{\partial t}&amp;&#x3D;-\frac{\hbar^2}{2m}\frac{\partial^2 \psi(x,t)}{\partial x^2}+V(x)\psi(x,t).<br>\end{align}<br>$$</p>
+<blockquote>
+<p>The quantum mechanic model.</p>
+</blockquote>
+<p>It generates from the observation of properties of the wave, and adding operators to make it ubiquitous for particles.</p>
+<p>The equation describing the time evolution of a quantum state $\psi(x,t)$. </p>
+<p>It is analogous to the equation of motion $\vec F&#x3D;\dot {\vec p} $  and $\hat E$ is not defined as the operator $i\hbar\partial_t$ any more than $\vec F$ is defined to be $\hat{\vec p}$ .</p>
+<h2 id="6-Solving-the-Schrodinger-Equation"><a href="#6-Solving-the-Schrodinger-Equation" class="headerlink" title="6 Solving the Schrödinger Equation"></a>6 Solving the Schrödinger Equation</h2><p>To solve the Schrödinger Equation, we can first determine the energy eigenfunction $\phi_E(x)$, and then expand the wavefunction with the eigenfunctions, finally add the time evolution term by solving the time derivative in the Schrödinger Equation.<br>$$<br>\begin{aligned}<br>\hat E\psi(x)&amp;&#x3D;E\psi(x)\implies {\phi_E}\<br>\psi(x,0)&amp;&#x3D;\sum_E C_E\phi_E(x),\ C_E&#x3D;\int_{-\infty}^{\infty}\psi^\dagger(x,0)\phi_E(x)\ \mathrm{d}x \<br>\implies \psi(x,t)&amp;&#x3D;\sum_E C_E e^{-i\omega t}\phi_E(x),\ \omega&#x3D;E&#x2F;\hbar.<br>\end{aligned}<br>$$</p>
+<h2 id="7-More-on-Energy-Eigenstates"><a href="#7-More-on-Energy-Eigenstates" class="headerlink" title="7 More on Energy Eigenstates"></a>7 More on Energy Eigenstates</h2><ul>
+<li>A profound quality analysis on eiengy eigenstate function:<br>$$<br>-\frac{\hbar^2}{2m}\phi_E^{\prime\prime}(x)+U(x)\phi_E(x)&#x3D;E\phi_E(x)\<br>\implies \frac{\phi_E^{\prime\prime}}{\phi_E}&#x3D;-\frac{2m}{\hbar^2}\left[E-U(x)\right]<br>$$</li>
+</ul>
+<h2 id="8-Quantum-Harmonic-Oscillator-II"><a href="#8-Quantum-Harmonic-Oscillator-II" class="headerlink" title="8 Quantum Harmonic Oscillator II"></a>8 Quantum Harmonic Oscillator II</h2><p>brute force solving</p>
+<h2 id="9-Quantum-Harmonic-Oscillator-II"><a href="#9-Quantum-Harmonic-Oscillator-II" class="headerlink" title="9 Quantum Harmonic Oscillator II"></a>9 Quantum Harmonic Oscillator II</h2><p>adjoint operator</p>
+<p>solving with</p>
+<ul>
+<li>lowering operator $\hat a$</li>
+<li>raising operator $\hat a^\dagger$</li>
+</ul>
 </div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
         var options = {
             selector: '.gallery-item'
@@ -2627,6 +2718,22 @@
       </categories>
       <tags>
         <tag>physics</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Ophthalmology</title>
+    <url>/Biology/Ophthalmology/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><p>Here I will go through basic ophthalmology knowledge related to OCT application.</p>
+<h3 id="Fundus-Image"><a href="#Fundus-Image" class="headerlink" title="Fundus Image"></a>Fundus Image</h3><p><a href="https://p.ipic.vip/rvjosj.png" title="Macula" class="gallery-item"><img src="https://p.ipic.vip/rvjosj.png" alt="Macula"></a> </p>
+<h3 id="Tomography-Structures"><a href="#Tomography-Structures" class="headerlink" title="Tomography Structures"></a>Tomography Structures</h3><p><a href="https://p.ipic.vip/w1lu76.png" title="Retinal Microvasculature" class="gallery-item"><img src="https://p.ipic.vip/w1lu76.png" alt="Retinal Microvasculature"></a></p>
+</div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script>]]></content>
+      <tags>
+        <tag>OCT</tag>
       </tags>
   </entry>
   <entry>
@@ -10253,9 +10360,9 @@ ssh -L port:127.0.0.1:port username@ip
 <p>rmdir dirname &#x2F;&#x2F; 删除空文件目录</p>
 <p>git rm filename &#x2F;&#x2F; 从版本库中删除文件</p>
 <p>git checkout – filename &#x2F;&#x2F; 误删文件的恢复</p>
-<h3 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h3><p>git remote add origin <a href="mailto:&#103;&#x69;&#x74;&#64;&#103;&#x69;&#x74;&#104;&#117;&#98;&#x2e;&#x63;&#111;&#109;">&#103;&#x69;&#x74;&#64;&#103;&#x69;&#x74;&#104;&#117;&#98;&#x2e;&#x63;&#111;&#109;</a>:longqianh&#x2F;learngit.git</p>
+<h3 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h3><p>git remote add origin <a href="mailto:&#x67;&#105;&#116;&#x40;&#103;&#105;&#116;&#104;&#117;&#98;&#46;&#99;&#111;&#109;">&#x67;&#105;&#116;&#x40;&#103;&#105;&#116;&#104;&#117;&#98;&#46;&#99;&#111;&#109;</a>:longqianh&#x2F;learngit.git</p>
 <p>git push -u origin master</p>
-<p>git clone <a href="mailto:&#x67;&#105;&#116;&#x40;&#x67;&#105;&#116;&#104;&#x75;&#x62;&#46;&#x63;&#x6f;&#109;">&#x67;&#105;&#116;&#x40;&#x67;&#105;&#116;&#104;&#x75;&#x62;&#46;&#x63;&#x6f;&#109;</a>:longqianh&#x2F;learngit.git</p>
+<p>git clone <a href="mailto:&#103;&#105;&#116;&#64;&#x67;&#x69;&#116;&#104;&#117;&#x62;&#x2e;&#x63;&#x6f;&#109;">&#103;&#105;&#116;&#64;&#x67;&#x69;&#116;&#104;&#117;&#x62;&#x2e;&#x63;&#x6f;&#109;</a>:longqianh&#x2F;learngit.git</p>
 <h3 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h3><p>git checkout </p>
 <p>git branch &#x2F;&#x2F; 查看分支</p>
 <p>git branch -d branchname &#x2F;&#x2F; 删除分支</p>
