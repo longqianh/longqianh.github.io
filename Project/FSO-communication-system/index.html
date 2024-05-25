@@ -114,7 +114,7 @@
     <div class="article-entry" itemprop="articleBody">
        
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><p>This is the project I have done in 2020 UIUC’s OPTIC summer program.</p>
-<p>Thank you all , my teammates! </p>
+<p>Thank you all , my teammates!</p>
 <ul>
 <li>Group Number : 3</li>
 <li>Group Leader : Longqian Huang</li>
@@ -130,106 +130,125 @@
 
 
 
-
-
-
-
-
 <p>Next is our output article :)</p>
-<h1 id="Free-Space-Optical-Communication-System"><a href="#Free-Space-Optical-Communication-System" class="headerlink" title="Free Space Optical  Communication System"></a>Free Space Optical  Communication System</h1><h2 id="1-What-is-FSO-Communication-System"><a href="#1-What-is-FSO-Communication-System" class="headerlink" title="1. What is FSO Communication System"></a>1. What is FSO Communication System</h2><p>We read the review and searched the Wikipedia to get a overview of FSO Communication System. </p>
+<h1>Free Space Optical  Communication System</h1>
+<h2 id="1-What-is-FSO-Communication-System">1. What is FSO Communication System</h2>
+<p>We read the review and searched the Wikipedia to get a overview of FSO Communication System.</p>
 <p>FSO Communication is an idea of wireless communication using light based on the theory of light propagation in free space.</p>
 <p>Devices using technology of FSO communication make up a system. It is a outdoor system of <em>wireless optical communication system</em> (WOCS) and has some branches. Below is a classification tree of WOCS [1] :</p>
 <p><a target="_blank" rel="noopener" href="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djubq55j30oo0ewq49.jpg" title="WOCS classifications" class="gallery-item"><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djubq55j30oo0ewq49.jpg" alt="WOCS classifications"></a></p>
 <p>From that we know that we have choices of terrestrial links and space links. We considered both and think that terrestrial links is practical but space links is as well interesting and maybe a future-hot point.</p>
 <p>Below is a diagram of FSO communication link [1] (which maybe what we will construct in the next few days):</p>
 <p><a target="_blank" rel="noopener" href="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djwkyeuj30nu0eimyd.jpg" title="System composition" class="gallery-item"><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djwkyeuj30nu0eimyd.jpg" alt="System composition"></a></p>
-<h2 id="2-System-Design"><a href="#2-System-Design" class="headerlink" title="2. System Design"></a>2. System Design</h2><h3 id="2-1-Type-of-the-system"><a href="#2-1-Type-of-the-system" class="headerlink" title="2.1 Type of the system"></a>2.1 Type of the system</h3><p> We will construct <em>Ground-to-Satellite Link</em> as the type of the FSO communication system. Below is a concept figure of the system.</p>
+<h2 id="2-System-Design">2. System Design</h2>
+<h3 id="2-1-Type-of-the-system">2.1 Type of the system</h3>
+<p>We will construct <em>Ground-to-Satellite Link</em> as the type of the FSO communication system. Below is a concept figure of the system.</p>
 <a target="_blank" rel="noopener" href="https://tva1.sinaimg.cn/large/007S8ZIlly1gh6v9igawcj30of0dhabh.jpg" title="qeyssat-satellite-879x485" class="gallery-item"><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh6v9igawcj30of0dhabh.jpg" alt="qeyssat-satellite-879x485"  /></a>
-
-
-
-<h3 id="2-2-Wavelength-to-use"><a href="#2-2-Wavelength-to-use" class="headerlink" title="2.2 Wavelength to use"></a>2.2 Wavelength to use</h3><p>The main consideration is attenuation after propagating long distance. From [2] we know to make attenuation less, infrared band is a good choice. Then we have two choices:</p>
+<h3 id="2-2-Wavelength-to-use">2.2 Wavelength to use</h3>
+<p>The main consideration is attenuation after propagating long distance. From [2] we know to make attenuation less, infrared band is a good choice. Then we have two choices:</p>
 <ul>
 <li>850 nm</li>
 <li>1550 nm</li>
 </ul>
-<p>We digged further and found that 1550 nm lasers are considered “eye safe” at much higher power levels than traditionally used 850nm lasers. </p>
+<p>We digged further and found that 1550 nm lasers are considered “eye safe” at much higher power levels than traditionally used 850nm lasers.</p>
 <p>So our choice for wavelength is 1550 nm. And the benefits are as follows [1] :</p>
 <ul>
 <li>reduce background noise and Rayleigh scattering</li>
 <li>high transmitter power</li>
 <li>Eye-save wavelength ( the maximum permissible exposure for eye is much higher at 1550 nm wavelength )</li>
 </ul>
-<h3 id="2-3-Laser-Type"><a href="#2-3-Laser-Type" class="headerlink" title="2.3 Laser Type"></a>2.3 Laser Type</h3><h4 id="2-3-1-LED-or-CW"><a href="#2-3-1-LED-or-CW" class="headerlink" title="2.3.1 LED or CW"></a>2.3.1 LED or CW</h4><p>To be clear: </p>
+<h3 id="2-3-Laser-Type">2.3 Laser Type</h3>
+<h4 id="2-3-1-LED-or-CW">2.3.1 LED or CW</h4>
+<p>To be clear:</p>
 <ul>
-<li><p>A light-emitting diode (<em>LED</em>) is a semiconductor light source that emits light when current flows through it. </p>
+<li>
+<p>A light-emitting diode (<em>LED</em>) is a semiconductor light source that emits light when current flows through it.</p>
 </li>
-<li><p>A continuous wave (CW)  laser is a laser that emits a continuous laser beam with a controlled heat output, as beam duration and intensity.</p>
+<li>
+<p>A continuous wave (CW)  laser is a laser that emits a continuous laser beam with a controlled heat output, as beam duration and intensity.</p>
 </li>
 </ul>
 <p>For ground-to-satellite links, we don’t think a light of LED can surrive after passing the atmosphere. So we definitely choose CW laser.</p>
-<h4 id="2-3-2-Comparasion"><a href="#2-3-2-Comparasion" class="headerlink" title="2.3.2 Comparasion"></a>2.3.2 Comparasion</h4><p>We have four choices and they all have own advantages and disadvantages:</p>
-<h5 id="Gas-laser"><a href="#Gas-laser" class="headerlink" title="Gas laser"></a>Gas laser</h5><p><a target="_blank" rel="noopener" href="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk4mvtij30xc0iugos.jpg" title="Carbon dioxide laser - Wikipedia" class="gallery-item"><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk4mvtij30xc0iugos.jpg" alt="Carbon dioxide laser - Wikipedia"></a></p>
+<h4 id="2-3-2-Comparasion">2.3.2 Comparasion</h4>
+<p>We have four choices and they all have own advantages and disadvantages:</p>
+<h5 id="Gas-laser">Gas laser</h5>
+<p><a target="_blank" rel="noopener" href="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk4mvtij30xc0iugos.jpg" title="Carbon dioxide laser - Wikipedia" class="gallery-item"><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk4mvtij30xc0iugos.jpg" alt="Carbon dioxide laser - Wikipedia"></a></p>
 <ul>
 <li>Carbon dioxide laser are stable and less sensitive to atomospheric effects</li>
 <li>Large volume and unreliability</li>
 </ul>
-<h5 id="Solid-state-laser"><a href="#Solid-state-laser" class="headerlink" title="Solid-state laser"></a>Solid-state laser</h5><ul>
+<h5 id="Solid-state-laser">Solid-state laser</h5>
+<ul>
 <li>Stable and narrow spectral linewidth</li>
 <li>Very high peak power</li>
 </ul>
-<h5 id="Semiconductor-laser"><a href="#Semiconductor-laser" class="headerlink" title="Semiconductor laser"></a>Semiconductor laser</h5><ul>
+<h5 id="Semiconductor-laser">Semiconductor laser</h5>
+<ul>
 <li>Compact in size, light weight, easy to operate</li>
 <li>Quite low output power hence <strong>require additional amplifier</strong> for long distance communication</li>
 <li>Diodes require great care</li>
 </ul>
-<h5 id="Fiber-laser-4"><a href="#Fiber-laser-4" class="headerlink" title="Fiber laser [4]"></a>Fiber laser [4]</h5><p><a target="_blank" rel="noopener" href="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk51ei3j30zk0k075c.jpg" title="Fiber laser cutting machine FOL-3015AJ" class="gallery-item"><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk51ei3j30zk0k075c.jpg" alt="Fiber laser cutting machine FOL-3015AJ"></a></p>
+<h5 id="Fiber-laser-4">Fiber laser [4]</h5>
+<p><a target="_blank" rel="noopener" href="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk51ei3j30zk0k075c.jpg" title="Fiber laser cutting machine FOL-3015AJ" class="gallery-item"><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk51ei3j30zk0k075c.jpg" alt="Fiber laser cutting machine FOL-3015AJ"></a></p>
 <ul>
 <li>The laser light is both generated and delivered by an inherently flexible medium, which allows easier delivery to the focusing location and target.</li>
-<li>Fiber lasers can have active regions several kilometers long, and so can provide very high optical gain. </li>
+<li>Fiber lasers can have active regions several kilometers long, and so can provide very high optical gain.</li>
 <li>Fiber lasers are compact compared to solid-state or gas lasers of comparable power ( because the fiber can be bent and coiled)</li>
 <li>The additional power and better beam quality provide cleaner cut edges and faster cutting speeds</li>
 </ul>
-<h4 id="2-3-3-Choice-of-laser-device-type"><a href="#2-3-3-Choice-of-laser-device-type" class="headerlink" title="2.3.3 Choice of laser device type"></a>2.3.3 Choice of laser device type</h4><p>It seems that fiber laser is great in comparison with others. We first considered solid state laser but fiber laser seems to be better and it has many applications in telecommunications. So we choose <strong>fiber laser</strong> as our type of laser device.</p>
-<h3 id="2-4-Modulator"><a href="#2-4-Modulator" class="headerlink" title="2.4 Modulator"></a>2.4 Modulator</h3><p>We have two consideration of the modulator, to be clear:</p>
+<h4 id="2-3-3-Choice-of-laser-device-type">2.3.3 Choice of laser device type</h4>
+<p>It seems that fiber laser is great in comparison with others. We first considered solid state laser but fiber laser seems to be better and it has many applications in telecommunications. So we choose <strong>fiber laser</strong> as our type of laser device.</p>
+<h3 id="2-4-Modulator">2.4 Modulator</h3>
+<p>We have two consideration of the modulator, to be clear:</p>
 <ul>
-<li><p>Electro-optic modulator [6]</p>
+<li>
+<p>Electro-optic modulator [6]</p>
 <p>An electro-optic modulator (EOM) is an optical device in which a signal-controlled element exhibiting an electro-optic effect is used to modulate a beam of light.</p>
 </li>
-<li><p>Acoustic-optic modulator [5]</p>
+<li>
+<p>Acoustic-optic modulator [5]</p>
 <p>An acousto-optic modulator (AOM), uses the acousto-optic effect to and shift the frequency of light using sound waves.</p>
 </li>
 </ul>
-<p>We found little applications in telecommunications about acoustic-optic modulator and it seems electro-optic modulator has a more mature technology. We found that $LiNbO_3$ has nice performance in the application of long distance communication and there are a lot of type we could choose as provided in [7]. So we choose electro-optic modulator for our ground-to-satellite FOS communication system goal. </p>
-<p>To be more specific, we will use <em>$LiNbO_3$ Mach-Zehnder Modulator</em> for its good performance.</p>
-<h2 id="3-Simulation"><a href="#3-Simulation" class="headerlink" title="3. Simulation"></a>3. Simulation</h2><h3 id="3-1-Demo-FSO-communication-system"><a href="#3-1-Demo-FSO-communication-system" class="headerlink" title="3.1 Demo: FSO communication system"></a>3.1 Demo: FSO communication system</h3><p>We considered the composition of the system and drew a structure graph as below:</p>
+<p>We found little applications in telecommunications about acoustic-optic modulator and it seems electro-optic modulator has a more mature technology. We found that <a target="_blank" rel="noopener" href="https://math.now.sh?inline=LiNbO_3" class="gallery-item"><img src="https://math.now.sh?inline=LiNbO_3" style="display:inline-block;margin: 0;"/></a> has nice performance in the application of long distance communication and there are a lot of type we could choose as provided in [7]. So we choose electro-optic modulator for our ground-to-satellite FOS communication system goal.</p>
+<p>To be more specific, we will use <em><a target="_blank" rel="noopener" href="https://math.now.sh?inline=LiNbO_3" class="gallery-item"><img src="https://math.now.sh?inline=LiNbO_3" style="display:inline-block;margin: 0;"/></a> Mach-Zehnder Modulator</em> for its good performance.</p>
+<h2 id="3-Simulation">3. Simulation</h2>
+<h3 id="3-1-Demo-FSO-communication-system">3.1 Demo: FSO communication system</h3>
+<p>We considered the composition of the system and drew a structure graph as below:</p>
 <p><a target="_blank" rel="noopener" href="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djy58q7j31t00u0q79.jpg" title="FSOCS" class="gallery-item"><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djy58q7j31t00u0q79.jpg" alt="FSOCS"></a></p>
 <p>We put our emphasis on the <em>Transmitter</em> part and the following sections are our simulation work.</p>
-<h4 id="3-1-1-Layout"><a href="#3-1-1-Layout" class="headerlink" title="3.1.1 Layout"></a>3.1.1 Layout</h4><p>Below is the layout of our communication system. We used OptiSystem software to do the simulation.</p>
+<h4 id="3-1-1-Layout">3.1.1 Layout</h4>
+<p>Below is the layout of our communication system. We used OptiSystem software to do the simulation.</p>
 <p>The transmitter part is in the left and we will dig into it later.</p>
-<p> In the middle is the FSO Channel. Since Ground-to-Satellite system has at least 90 km (see <em>regions of atmosphere</em> diagram below) , we set the range of the FSO channel 100 km. On the left and right of the FSO channel are two opticla amplifiers, from simulation result we can found their role in the system. </p>
+<p>In the middle is the FSO Channel. Since Ground-to-Satellite system has at least 90 km (see <em>regions of atmosphere</em> diagram below) , we set the range of the FSO channel 100 km. On the left and right of the FSO channel are two opticla amplifiers, from simulation result we can found their role in the system.</p>
 <p><a target="_blank" rel="noopener" href="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk5x5ydj318t0rswih.jpg" title="Regions of atmosphere" class="gallery-item"><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk5x5ydj318t0rswih.jpg" alt="Regions of atmosphere"></a></p>
-<p>On the right is the Receiver part. It consists of PIN Photodiode (which transfer optic wave into electric signal),  Law Pass Bessel Filter (which is used to filter out noise) and Data Recovery Module (which do the demodulation and get the recovered signal). </p>
+<p>On the right is the Receiver part. It consists of PIN Photodiode (which transfer optic wave into electric signal),  Law Pass Bessel Filter (which is used to filter out noise) and Data Recovery Module (which do the demodulation and get the recovered signal).</p>
 <p>We use BER Analyter to analyse the bit error rate of the system.</p>
 <p><a target="_blank" rel="noopener" href="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djvig9aj31720cb7aq.jpg" title="FSO demo layout" class="gallery-item"><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djvig9aj31720cb7aq.jpg" alt="FSO demo layout"></a></p>
-<h4 id="3-1-2-Simulation-result"><a href="#3-1-2-Simulation-result" class="headerlink" title="3.1.2 Simulation result"></a>3.1.2 Simulation result</h4><p><a target="_blank" rel="noopener" href="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djzynsxj318n0md140.jpg" title="simulation result" class="gallery-item"><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djzynsxj318n0md140.jpg" alt="simulation result"></a></p>
-<p>Above is our simulation result from which we can found that loss is huge. The reason is FSO channel is too long. </p>
+<h4 id="3-1-2-Simulation-result">3.1.2 Simulation result</h4>
+<p><a target="_blank" rel="noopener" href="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djzynsxj318n0md140.jpg" title="simulation result" class="gallery-item"><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djzynsxj318n0md140.jpg" alt="simulation result"></a></p>
+<p>Above is our simulation result from which we can found that loss is huge. The reason is FSO channel is too long.</p>
 <p>Because of the time and technology limitation, we didn’t get a good simulation result. Below is something we considered:</p>
 <ul>
-<li><p>how to overcome the problem of very big loss</p>
+<li>
+<p>how to overcome the problem of very big loss</p>
 </li>
-<li><p>how to choose the laser power</p>
+<li>
+<p>how to choose the laser power</p>
 </li>
-<li><p>how to choose photodetector</p>
+<li>
+<p>how to choose photodetector</p>
 <ul>
 <li>photodiode</li>
 <li>optical power detector</li>
 <li>optical phase detector</li>
 </ul>
 </li>
-<li><p>how to choose filters</p>
+<li>
+<p>how to choose filters</p>
 <ul>
-<li>low pass<ul>
+<li>low pass
+<ul>
 <li>Gaussian filter</li>
 <li>Bessel filter</li>
 <li>etc.</li>
@@ -239,48 +258,56 @@
 <li>band pass</li>
 </ul>
 </li>
-<li><p>how to set parameters of optical amplifier</p>
+<li>
+<p>how to set parameters of optical amplifier</p>
 <ul>
 <li>gain</li>
 <li>noise figure</li>
 </ul>
 </li>
 </ul>
-<h3 id="3-2-Optical-transmitter"><a href="#3-2-Optical-transmitter" class="headerlink" title="3.2 Optical transmitter"></a>3.2 Optical transmitter</h3><p>From COSMOL, we get the some insight of the modulator. But it is not that clear.</p>
+<h3 id="3-2-Optical-transmitter">3.2 Optical transmitter</h3>
+<p>From COSMOL, we get the some insight of the modulator. But it is not that clear.</p>
 <p>We use OptiSystem to construct our <em>optical transmitter</em> and further more, we digged a little deeper and build a demo of the whole <em>FSO communication system.</em></p>
 <p>Below are the layout of our system.</p>
 <p><a target="_blank" rel="noopener" href="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk0rwezj30sm0cladg.jpg" title="FSO-transmitter-layout" class="gallery-item"><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk0rwezj30sm0cladg.jpg" alt="FSO-transmitter-layout"></a></p>
 <p>From the figure we can see the structure of the transmitter clearly.</p>
 <ul>
-<li><p>We use simple <em>Bit Sequence Generator</em> to generate electric signal and use <em>NRZ Pulse Generator</em> to generate electric pulse.</p>
+<li>
+<p>We use simple <em>Bit Sequence Generator</em> to generate electric signal and use <em>NRZ Pulse Generator</em> to generate electric pulse.</p>
 </li>
-<li><p>We use <em>Fiber Laser</em> as our laser device. As there isn’t Fiber Laser device in the software, we put a CW Laser and add a description. CW Laser can generate 1550 nm optical wave.</p>
+<li>
+<p>We use <em>Fiber Laser</em> as our laser device. As there isn’t Fiber Laser device in the software, we put a CW Laser and add a description. CW Laser can generate 1550 nm optical wave.</p>
 </li>
-<li><p>We use $LiNbO_3$ Mach-Zehnder Modulator in our transmitter. The reasons have been stated in section 2.</p>
+<li>
+<p>We use <a target="_blank" rel="noopener" href="https://math.now.sh?inline=LiNbO_3" class="gallery-item"><img src="https://math.now.sh?inline=LiNbO_3" style="display:inline-block;margin: 0;"/></a> Mach-Zehnder Modulator in our transmitter. The reasons have been stated in section 2.</p>
 </li>
-<li><p>Put the optic signal and electric pulse into the MZ Modulator, we can get the modulated optical signal.</p>
+<li>
+<p>Put the optic signal and electric pulse into the MZ Modulator, we can get the modulated optical signal.</p>
 </li>
 </ul>
 <p>Above are the details of our transmitter, we then use Optical Power Meter and Optical Spectrum Analyzer to do the simulation.</p>
 <p>Results are as follows :</p>
 <p><a target="_blank" rel="noopener" href="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk1s5hnj312r0jtwln.jpg" title="FSO-transmitter-simulation-result" class="gallery-item"><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk1s5hnj312r0jtwln.jpg" alt="FSO-transmitter-simulation-result"></a></p>
-<p>We can see from the figure that the transmitter has $2.485$ dBm los and the output power is $56.432\times 10^{-3} W$. We need optical amplifiers to make it larger.</p>
-<h3 id="3-3-Electro-optic-Modulation-Process"><a href="#3-3-Electro-optic-Modulation-Process" class="headerlink" title="3.3 Electro-optic Modulation Process"></a>3.3 Electro-optic Modulation Process</h3><p>In order to give a more specific model, we use COMSOL to simulate the <em>Electro-optic modulation process</em>. Below are what we have done.</p>
+<p>We can see from the figure that the transmitter has <a target="_blank" rel="noopener" href="https://math.now.sh?inline=2.485" class="gallery-item"><img src="https://math.now.sh?inline=2.485" style="display:inline-block;margin: 0;"/></a> dBm los and the output power is <a target="_blank" rel="noopener" href="https://math.now.sh?inline=56.432%5Ctimes%2010%5E%7B-3%7D%20W" class="gallery-item"><img src="https://math.now.sh?inline=56.432%5Ctimes%2010%5E%7B-3%7D%20W" style="display:inline-block;margin: 0;"/></a>. We need optical amplifiers to make it larger.</p>
+<h3 id="3-3-Electro-optic-Modulation-Process">3.3 Electro-optic Modulation Process</h3>
+<p>In order to give a more specific model, we use COMSOL to simulate the <em>Electro-optic modulation process</em>. Below are what we have done.</p>
 <p>We choose the <strong>wave optics module</strong>.</p>
 <p>Then we perform the 2D geometrical modeling since the system is symmetric.</p>
 <p>We can find that the structure has core and cladding:</p>
 <p><a target="_blank" rel="noopener" href="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk3n0tdj30xo0hnaab.jpg" title="structure of core and cladding" class="gallery-item"><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk3n0tdj30xo0hnaab.jpg" alt="structure of core and cladding"></a></p>
 <p>Next we set the boundary conditions so that the COSMOL can do the calculation. We set the applied voltage boundary of the light or rather the boundary of the wave:</p>
 <p><a target="_blank" rel="noopener" href="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djz4eraj309n09pmx5.jpg" title="step1" class="gallery-item"><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djz4eraj309n09pmx5.jpg" alt="step1"></a></p>
-<p> Before calculation, we set some configurations:</p>
+<p>Before calculation, we set some configurations:</p>
 <p><a target="_blank" rel="noopener" href="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk2mm1hj309h05pa9y.jpg" title="step2" class="gallery-item"><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk2mm1hj309h05pa9y.jpg" alt="step2"></a></p>
-<p>(To be clear: “步骤 $k$ ” &lt;—&gt; “ Step $k$ ” , “求解器配置” &lt;—&gt; “Solver Configuration” and “作业配置” &lt;—&gt; “ Work Configuration” )</p>
-<p>Finally, we get the simulation result. In the figure it is the distribution of the electric field in the waveguide. We also get the loss, transmittance and reflectance of the system. </p>
+<p>(To be clear: “步骤 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=k" class="gallery-item"><img src="https://math.now.sh?inline=k" style="display:inline-block;margin: 0;"/></a> ” &lt;—&gt; “ Step <a target="_blank" rel="noopener" href="https://math.now.sh?inline=k" class="gallery-item"><img src="https://math.now.sh?inline=k" style="display:inline-block;margin: 0;"/></a> ” , “求解器配置” &lt;—&gt; “Solver Configuration” and “作业配置” &lt;—&gt; “ Work Configuration” )</p>
+<p>Finally, we get the simulation result. In the figure it is the distribution of the electric field in the waveguide. We also get the loss, transmittance and reflectance of the system.</p>
 <p>(The first line of the figure “表面：电场模” &lt;—&gt; “Surface: Electric field mode” )</p>
 <p><a target="_blank" rel="noopener" href="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk362bij30xd0h9wer.jpg" title="EF distribution" class="gallery-item"><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk362bij30xd0h9wer.jpg" alt="EF distribution"></a></p>
 <p><a target="_blank" rel="noopener" href="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk16evoj30xe0grq39.jpg" title="Property inside" class="gallery-item"><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk16evoj30xe0grq39.jpg" alt="Property inside"></a></p>
 <p>However, we cannot get the change of the phase. It seems that the software has some limitation. And we didn’t consider the electric signals. These are something that can be improved.</p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>[1] Kaushal H, Jain V K, Kar S. Free space optical communication[M]. Gurgaon, Haryana: Springer, 2017.</p>
+<h2 id="Reference">Reference</h2>
+<p>[1] Kaushal H, Jain V K, Kar S. Free space optical communication[M]. Gurgaon, Haryana: Springer, 2017.</p>
 <p>[2] 高瞻, 丁铁骑, 吕辉. 光无线通信系统通信波长的选择[J]. 通讯世界, 2002, 8(12): 70-71.</p>
 <p>[3] <a target="_blank" rel="noopener" href="https://seminex.com/1550nm-lasers.aspx/">https://seminex.com/1550nm-lasers.aspx/</a></p>
 <p>[4] <a target="_blank" rel="noopener" href="https://www.wikiwand.com/en/Fiber_laser">https://www.wikiwand.com/en/Fiber_laser</a></p>

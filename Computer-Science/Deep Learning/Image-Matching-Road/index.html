@@ -89,7 +89,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">245</span>
+            <span class="post-count">248</span>
         </span>
     </span>
 
@@ -113,15 +113,18 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><p>This is a note for image-matching things in the deep learning field. </p>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><p>This is a note for image-matching things in the deep learning field.</p>
 <p>Started this in 2020’s summer and it is a part of an SRTP project regarding an AR app with Haojie He and Lingming Zhang.</p>
-<h2 id="SuperPoint-amp-SuperGlue"><a href="#SuperPoint-amp-SuperGlue" class="headerlink" title="SuperPoint &amp; SuperGlue"></a>SuperPoint &amp; SuperGlue</h2><h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><p>SuperPoint is a great feature extractor.</p>
+<h2 id="SuperPoint-SuperGlue">SuperPoint &amp; SuperGlue</h2>
+<h3 id="Overview">Overview</h3>
+<p>SuperPoint is a great feature extractor.</p>
 <p>SuperGlue is a good image-matching network based on features extracted from images.</p>
-<p>It is a really nice project by Magic Leap. </p>
+<p>It is a really nice project by Magic Leap.</p>
 <p>I did a little simplification and put the code <a target="_blank" rel="noopener" href="https://github.com/longqianh/Image-Matching.git">here</a>.</p>
-<h3 id="Experience-and-thoughts"><a href="#Experience-and-thoughts" class="headerlink" title="Experience and thoughts"></a>Experience and thoughts</h3><p>For SuperPoint, I think it is a mature network and can be used as a helpful feature extracting tool. (And there are some wonderful tricks in the code! )</p>
+<h3 id="Experience-and-thoughts">Experience and thoughts</h3>
+<p>For SuperPoint, I think it is a mature network and can be used as a helpful feature extracting tool. (And there are some wonderful tricks in the code! )</p>
 <p>For SuperGlue, I didn’t quite get the key to it, such as the Attention Network and the Encoding Method.</p>
-<p> In addition, it is quite hard to transfer models from SuperGlue. I have already transferred SuperPoint into Libtorch code, which can be used in C++. It is also easy to transfer to ONNX or other frameworks. However, I suffered greatly in transferring SuperGlue into libtorch code or ONNX. Hence the SuperGlue can work fine on Python but has some difficulty ( for me ) to be deployed.</p>
+<p>In addition, it is quite hard to transfer models from SuperGlue. I have already transferred SuperPoint into Libtorch code, which can be used in C++. It is also easy to transfer to ONNX or other frameworks. However, I suffered greatly in transferring SuperGlue into libtorch code or ONNX. Hence the SuperGlue can work fine on Python but has some difficulty ( for me ) to be deployed.</p>
 <p>So I think, later on, I will find a more simple ( hopefully, also more powerful ) matching network so that it can be easily deployed. Or maybe I can create my own networks and do some training.</p>
 </div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
         var options = {

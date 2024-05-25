@@ -89,7 +89,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">926</span>
+            <span class="post-count">910</span>
         </span>
     </span>
 
@@ -119,35 +119,35 @@
 <p>我想要放弃电，但是我不能。因为他太重要了。</p>
 </blockquote>
 <p>2022.9.6: 之前写的好好笑</p>
-<h2 id="Transistor-三极管"><a href="#Transistor-三极管" class="headerlink" title="Transistor 三极管"></a>Transistor 三极管</h2><p>三极管是一个非常重要的元件，模电数电经常与他碰面，然而他的原理我直到光电子学讲了半导体物理才明白。</p>
+<h2 id="Transistor-三极管">Transistor 三极管</h2>
+<p>三极管是一个非常重要的元件，模电数电经常与他碰面，然而他的原理我直到光电子学讲了半导体物理才明白。</p>
 <p>首先直观地去看三极管，<a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=7ukDKVHnac4">YouTube上有一个非常棒的视频</a></p>
 <p>看完视频基本上可以对三极管有一个宏观和近微观的认识，然后可以看一下<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/34534183/answer/137383173">知乎的这个回答</a>，了解一下它的微观机理</p>
-<h4 id="1-半导体"><a href="#1-半导体" class="headerlink" title="1 半导体"></a>1 半导体</h4><a target="_blank" rel="noopener" href="https://tva1.sinaimg.cn/large/0081Kckwly1glk6kdauiij30zo0eg191.jpg" title="image-20201211201747794" class="gallery-item"><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glk6kdauiij30zo0eg191.jpg" alt="image-20201211201747794" style="zoom:50%;" /></a>
-
-<p>图中圆圈表示空穴，负号表示电子。$E_f$ 为热平衡状态下的费米能级。</p>
+<h4 id="1-半导体">1 半导体</h4>
+<a target="_blank" rel="noopener" href="https://tva1.sinaimg.cn/large/0081Kckwly1glk6kdauiij30zo0eg191.jpg" title="image-20201211201747794" class="gallery-item"><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glk6kdauiij30zo0eg191.jpg" alt="image-20201211201747794" style="zoom:50%;" /></a>
+<p>图中圆圈表示空穴，负号表示电子。<a target="_blank" rel="noopener" href="https://math.now.sh?inline=E_f" class="gallery-item"><img src="https://math.now.sh?inline=E_f" style="display:inline-block;margin: 0;"/></a> 为热平衡状态下的费米能级。</p>
 <p>Q：为什么N型半导体的大量电子在价带？</p>
-<p>由于 $E_g$ 小，随着温度升高，电子将会因为热激发作用从价带跃过带隙而进入导带。这些电子可以自由移动，称为 <em>自由载流子</em> 。</p>
+<p>由于 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=E_g" class="gallery-item"><img src="https://math.now.sh?inline=E_g" style="display:inline-block;margin: 0;"/></a> 小，随着温度升高，电子将会因为热激发作用从价带跃过带隙而进入导带。这些电子可以自由移动，称为 <em>自由载流子</em> 。</p>
 <span id="more"></span>
-
-<h4 id="2-PN结"><a href="#2-PN结" class="headerlink" title="2 PN结"></a>2 PN结</h4><a target="_blank" rel="noopener" href="https://tva1.sinaimg.cn/large/0081Kckwly1glk6sc8psyj30u018jx6p.jpg" title="image-20201211202519512" class="gallery-item"><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glk6sc8psyj30u018jx6p.jpg" alt="image-20201211202519512" style="zoom:50%;" /></a>
-
+<h4 id="2-PN结">2 PN结</h4>
+<a target="_blank" rel="noopener" href="https://tva1.sinaimg.cn/large/0081Kckwly1glk6sc8psyj30u018jx6p.jpg" title="image-20201211202519512" class="gallery-item"><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glk6sc8psyj30u018jx6p.jpg" alt="image-20201211202519512" style="zoom:50%;" /></a>
 <p>把这P和N型半导体并在一起（metallurgical contact）,由于扩散作用（上边的电子浓度大，N—&gt;P,下边的空穴浓度大，P—&gt;N）在中间的地方形成了结区，平衡时的内建电场阻止了进一步的扩散。两个半导体的费米能级合到了一起。</p>
-<h4 id="2-5-二极管"><a href="#2-5-二极管" class="headerlink" title="2.5 二极管"></a>2.5 二极管</h4><p>歪个楼，这时可以考察一下PN结的二极管性质：在P极加正向偏压U（forward biasing），电子可以被正向偏压吸引克服内建电场的势垒从N区进入P区，进而形成电流。</p>
-<p>另外我们会发现费米能级“撕裂”了，这时P区的每个电子都增加了 $eU$ 的能量，根据费米能级的物理含义（电子拥有 $E_f$ 能量（占据该能级）的概率 为 $1&#x2F;2$）可以知道P区的新费米能级为 $E_f’&#x3D;E_f-eU$. </p>
+<h4 id="2-5-二极管">2.5 二极管</h4>
+<p>歪个楼，这时可以考察一下PN结的二极管性质：在P极加正向偏压U（forward biasing），电子可以被正向偏压吸引克服内建电场的势垒从N区进入P区，进而形成电流。</p>
+<p>另外我们会发现费米能级“撕裂”了，这时P区的每个电子都增加了 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=eU" class="gallery-item"><img src="https://math.now.sh?inline=eU" style="display:inline-block;margin: 0;"/></a> 的能量，根据费米能级的物理含义（电子拥有 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=E_f" class="gallery-item"><img src="https://math.now.sh?inline=E_f" style="display:inline-block;margin: 0;"/></a> 能量（占据该能级）的概率 为 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=1%2F2" class="gallery-item"><img src="https://math.now.sh?inline=1%2F2" style="display:inline-block;margin: 0;"/></a>）可以知道P区的新费米能级为 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=E_f%E2%80%99%3DE_f-eU" class="gallery-item"><img src="https://math.now.sh?inline=E_f%E2%80%99%3DE_f-eU" style="display:inline-block;margin: 0;"/></a>.</p>
 <a target="_blank" rel="noopener" href="https://tva1.sinaimg.cn/large/0081Kckwly1glk74l8c8fj30yj0ikh8w.jpg" title="image-20201211203721245" class="gallery-item"><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glk74l8c8fj30yj0ikh8w.jpg" alt="image-20201211203721245" style="zoom:50%;" /></a>
-
 <p>相反，如果加反向偏压，则会把P区的空穴和N区的电子往外赶，使内建电场（PN结厚度）增大，无电流产生，不导通。</p>
 <p><a target="_blank" rel="noopener" href="https://tva1.sinaimg.cn/large/0081Kckwly1glk75mqrayj30ed06agov.jpg" title="image-20201211203829433" class="gallery-item"><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glk75mqrayj30ed06agov.jpg" alt="image-20201211203829433"></a></p>
-<h4 id="3-NPN结：三极管"><a href="#3-NPN结：三极管" class="headerlink" title="3 NPN结：三极管"></a>3 NPN结：三极管</h4><h5 id="放大的原理"><a href="#放大的原理" class="headerlink" title="放大的原理"></a>放大的原理</h5><p>就像YouTube视频中说的，NPN中总有一个不导通（cb），另一个导通（eb）的原因是电子借助正向偏压克服了内建电场的势垒。</p>
-<p>然后我们就要问了：基极电流 $I_B$ 起到了什么作用？没有它似乎该导通（be）的还是导通，不导通（cb）的仍旧不导通。</p>
+<h4 id="3-NPN结：三极管">3 NPN结：三极管</h4>
+<h5 id="放大的原理">放大的原理</h5>
+<p>就像YouTube视频中说的，NPN中总有一个不导通（cb），另一个导通（eb）的原因是电子借助正向偏压克服了内建电场的势垒。</p>
+<p>然后我们就要问了：基极电流 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=I_B" class="gallery-item"><img src="https://math.now.sh?inline=I_B" style="display:inline-block;margin: 0;"/></a> 起到了什么作用？没有它似乎该导通（be）的还是导通，不导通（cb）的仍旧不导通。</p>
 <p>知乎上的那篇答案说清楚了：基极电流注向中间P区注入了电子，使b和e极之间的势垒降低，从而克服势垒从发射极e进入b的电子指数上升。</p>
-<p>由于基极b的厚度很小，跟着 $I_B$ 回流的电子少，大部分电子加入到了中间的P区，然后从P区进入N区，由于是反向偏压，进入的电子使内建电场不断扩大（知乎答案说的“漂移”），这构成了集电极电流。</p>
+<p>由于基极b的厚度很小，跟着 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=I_B" class="gallery-item"><img src="https://math.now.sh?inline=I_B" style="display:inline-block;margin: 0;"/></a> 回流的电子少，大部分电子加入到了中间的P区，然后从P区进入N区，由于是反向偏压，进入的电子使内建电场不断扩大（知乎答案说的“漂移”），这构成了集电极电流。</p>
 <p>（没想通的一点是 集电极电流的部分 反向偏压 但好像电子是可以通过的</p>
 <a target="_blank" rel="noopener" href="https://tva1.sinaimg.cn/large/0081Kckwly1glk7gaj1wij31260u0kjl.jpg" title="image-20201211204831143" class="gallery-item"><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glk7gaj1wij31260u0kjl.jpg" alt="image-20201211204831143" style="zoom:50%;" /></a>
-
-
-
-<h5 id="饱和"><a href="#饱和" class="headerlink" title="饱和"></a>饱和</h5><p>三极管的饱和现在就很好解释了：be间的势垒被减到N区所有电子都可以通过，再通电流 $I_B$，发射极到集电极的电流 $I_{CE}$ 也不会改变了。</p>
+<h5 id="饱和">饱和</h5>
+<p>三极管的饱和现在就很好解释了：be间的势垒被减到N区所有电子都可以通过，再通电流 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=I_B" class="gallery-item"><img src="https://math.now.sh?inline=I_B" style="display:inline-block;margin: 0;"/></a>，发射极到集电极的电流 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=I_%7BCE%7D" class="gallery-item"><img src="https://math.now.sh?inline=I_%7BCE%7D" style="display:inline-block;margin: 0;"/></a> 也不会改变了。</p>
 </div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
         var options = {
             selector: '.gallery-item'

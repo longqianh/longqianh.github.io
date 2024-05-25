@@ -76,10 +76,10 @@
     <updated>2024-02-07T12:29:36.336Z</updated>
     
     
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css&quot; /&gt;&lt;div class=&quot;.article-gallery&quot;&gt;&lt;h1 id=&quot;现代神经生物学-Modern-Neurobiology&quot;&gt;&lt;a href=&quot;#现代神经生物学-Modern-Neurobiology&quot; class=&quot;headerlink&quot; title=&quot;现代神经生物学 Modern Neurobiology&quot;&gt;&lt;/a&gt;现代神经生物学 Modern Neurobiology&lt;/h1&gt;&lt;a href=&quot;https://p.ipic.vip/x90er9.png&quot; title=&quot;brain&quot; class=&quot;gallery-item&quot;&gt;&lt;img src=&quot;https://p.ipic.vip/x90er9.png&quot; alt=&quot;brain&quot; style=&quot;zoom:33%;&quot; /&gt;&lt;/a&gt;
-
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css&quot; /&gt;&lt;div class=&quot;.article-gallery&quot;&gt;&lt;h1&gt;现代神经生物学 Modern Neurobiology&lt;/h1&gt;
+&lt;a href=&quot;https://p.ipic.vip/x90er9.png&quot; title=&quot;brain&quot; class=&quot;gallery-item&quot;&gt;&lt;img src=&quot;https://p.ipic.vip/x90er9.png&quot; alt=&quot;brain&quot; style=&quot;zoom:33%;&quot; /&gt;&lt;/a&gt;
 &lt;p&gt;Notes on &lt;em&gt;Modern Neurobiology&lt;/em&gt;. Reference: &lt;em&gt;Principles of Neurobiology&lt;/em&gt;. Liqun Luo.&lt;/p&gt;
-&lt;p&gt;This first version draft will be polished. &lt;/p&gt;</summary>
+&lt;p&gt;This first version draft will be polished.&lt;/p&gt;</summary>
     
     
     
@@ -115,9 +115,9 @@
     <category term="Optics" scheme="http://longqianh.com/categories/Projects/Optics/"/>
     
     
-    <category term="projects" scheme="http://longqianh.com/tags/projects/"/>
-    
     <category term="optics" scheme="http://longqianh.com/tags/optics/"/>
+    
+    <category term="projects" scheme="http://longqianh.com/tags/projects/"/>
     
   </entry>
   
@@ -158,11 +158,13 @@
     <updated>2023-12-06T17:49:13.410Z</updated>
     
     
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css&quot; /&gt;&lt;div class=&quot;.article-gallery&quot;&gt;&lt;h1 id=&quot;分子医学-I-（分子生物学）&quot;&gt;&lt;a href=&quot;#分子医学-I-（分子生物学）&quot; class=&quot;headerlink&quot; title=&quot;分子医学 I （分子生物学）&quot;&gt;&lt;/a&gt;分子医学 I （分子生物学）&lt;/h1&gt;&lt;p&gt;研究逻辑：gain of function, loss of function&lt;/p&gt;
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css&quot; /&gt;&lt;div class=&quot;.article-gallery&quot;&gt;&lt;h1&gt;分子医学 I （分子生物学）&lt;/h1&gt;
+&lt;p&gt;研究逻辑：gain of function, loss of function&lt;/p&gt;
 &lt;p&gt;关键关联学科：生物信息学, 细胞生物学&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;研究技术&lt;/li&gt;
-&lt;li&gt;里程碑&lt;ul&gt;
+&lt;li&gt;里程碑
+&lt;ul&gt;
 &lt;li&gt;基因工程技术的建立：限制性核酸内切酶，聚合酶链式反应(PCR), DNA重组技术&lt;/li&gt;
 &lt;li&gt;人类基因组计划 (Human Genome Project, HGP): 基因测序&lt;/li&gt;
 &lt;/ul&gt;
@@ -217,24 +219,34 @@
     <updated>2022-09-05T18:25:09.278Z</updated>
     
     
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css&quot; /&gt;&lt;div class=&quot;.article-gallery&quot;&gt;&lt;h1 id=&quot;Android-App-Development-Note&quot;&gt;&lt;a href=&quot;#Android-App-Development-Note&quot; class=&quot;headerlink&quot; title=&quot;Android App Development Note&quot;&gt;&lt;/a&gt;Android App Development Note&lt;/h1&gt;&lt;p&gt;这篇笔记是在2021年光电设计竞赛中，我独立负责开发安卓APP过程的自学笔记。可能学习链接较多，未仔细重新整理。&lt;/p&gt;
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css&quot; /&gt;&lt;div class=&quot;.article-gallery&quot;&gt;&lt;h1&gt;Android App Development Note&lt;/h1&gt;
+&lt;p&gt;这篇笔记是在2021年光电设计竞赛中，我独立负责开发安卓APP过程的自学笔记。可能学习链接较多，未仔细重新整理。&lt;/p&gt;
 &lt;p&gt;开发使用的语言是Kotlin，最终成果见 &lt;a href=&quot;https://github.com/longqianh/AppleSugar.git&quot;&gt;AppleSugar&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&quot;Kotlin-Basics&quot;&gt;&lt;a href=&quot;#Kotlin-Basics&quot; class=&quot;headerlink&quot; title=&quot;Kotlin Basics&quot;&gt;&lt;/a&gt;Kotlin Basics&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;nullable: &lt;code&gt;?&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Kotlin-Basics&quot;&gt;Kotlin Basics&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;nullable: &lt;code&gt;?&lt;/code&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://stackoverflow.com/questions/42646016/what-does-the-arrow-operator-do-in-kotlin&quot;&gt;&lt;code&gt;-&amp;gt;&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://stackoverflow.com/questions/42646016/what-does-the-arrow-operator-do-in-kotlin&quot;&gt;&lt;code&gt;-&amp;gt;&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://kotlinlang.org/docs/lambdas.html#it-implicit-name-of-a-single-parameter&quot;&gt;&lt;code&gt;it&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://kotlinlang.org/docs/lambdas.html#it-implicit-name-of-a-single-parameter&quot;&gt;&lt;code&gt;it&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://cloud.tencent.com/developer/article/1719701&quot;&gt;::&lt;/a&gt;&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://cloud.tencent.com/developer/article/1719701&quot;&gt;::&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://kotlinlang.org/docs/scope-functions.html#let&quot;&gt;Scope functions&lt;/a&gt;&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://kotlinlang.org/docs/scope-functions.html#let&quot;&gt;Scope functions&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://stackoverflow.com/questions/36262305/difference-between-list-and-array-types-in-kotlin&quot;&gt;List v.s. Array&lt;/a&gt;&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://stackoverflow.com/questions/36262305/difference-between-list-and-array-types-in-kotlin&quot;&gt;List v.s. Array&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://blog.autsoft.hu/top-10-kotlin-stack-overflow-questions/&quot;&gt;10 top stackoverfloew&lt;/a&gt; &lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://blog.autsoft.hu/top-10-kotlin-stack-overflow-questions/&quot;&gt;10 top stackoverfloew&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://www.jianshu.com/p/e2cb4c65d4ff&quot;&gt;lazy&lt;/a&gt;&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.jianshu.com/p/e2cb4c65d4ff&quot;&gt;lazy&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</summary>
     
@@ -277,6 +289,63 @@
   </entry>
   
   <entry>
+    <title>Modern Optical Testing Technology</title>
+    <link href="http://longqianh.com/Optics/Modern-Optical-Testing-Technology/"/>
+    <id>http://longqianh.com/Optics/Modern-Optical-Testing-Technology/</id>
+    <published>2021-04-05T16:35:11.000Z</published>
+    <updated>2022-11-03T08:38:37.503Z</updated>
+    
+    
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css&quot; /&gt;&lt;div class=&quot;.article-gallery&quot;&gt;&lt;p&gt;浙大光电研究生课程《近代光学测试技术》笔记。&lt;/p&gt;
+&lt;h2 id=&quot;2022-9-13&quot;&gt;2022.9.13&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;现代光学：偏量子光学一些，所以叫近代光学&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;光学工程：生物体的眼睛&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;信息–感知探测&lt;/li&gt;
+&lt;li&gt;加工&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;大型仪器装置&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;自动驾驶汽车–激光雷达、3D相机&lt;/li&gt;
+&lt;li&gt;工业机器人：传感器精度与传感器融合&lt;/li&gt;
+&lt;li&gt;引力波测试：极端灵敏探测，精度天花板&lt;/li&gt;
+&lt;li&gt;ROMY地震观测台：观测完整的地面运动&lt;/li&gt;
+&lt;li&gt;光刻机：&lt;strong&gt;前沿&lt;/strong&gt;光学基础理论，&lt;strong&gt;尖端&lt;/strong&gt;光学工程技术&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;沈毅斌老师：10亿像素CCD，导师邻居！&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;舒晓武老师：1991年读博，本科在物理系和童利民老师是同学，原来和白剑老师一个实验室&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;激光雷达：精度还是不够&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;激光陀螺：光学旋转传感器，fiber coil&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;强激光国家实验室：激光武器/微波武器的发射与防护&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Notes" scheme="http://longqianh.com/categories/Notes/"/>
+    
+    <category term="Optics" scheme="http://longqianh.com/categories/Notes/Optics/"/>
+    
+    
+    <category term="optics" scheme="http://longqianh.com/tags/optics/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Scientific Writing Notes</title>
     <link href="http://longqianh.com/Writing/Scientific-Writing/"/>
     <id>http://longqianh.com/Writing/Scientific-Writing/</id>
@@ -284,14 +353,18 @@
     <updated>2022-10-21T03:29:16.291Z</updated>
     
     
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css&quot; /&gt;&lt;div class=&quot;.article-gallery&quot;&gt;&lt;h1 id=&quot;科技写作（光电–狄大卫-x2F-王攀）&quot;&gt;&lt;a href=&quot;#科技写作（光电–狄大卫-x2F-王攀）&quot; class=&quot;headerlink&quot; title=&quot;科技写作（光电–狄大卫&amp;#x2F;王攀）&quot;&gt;&lt;/a&gt;科技写作（光电–狄大卫&amp;#x2F;王攀）&lt;/h1&gt;&lt;p&gt;好期刊不是科研的追求，成果才是。&lt;/p&gt;
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css&quot; /&gt;&lt;div class=&quot;.article-gallery&quot;&gt;&lt;h1&gt;科技写作（光电–狄大卫/王攀）&lt;/h1&gt;
+&lt;p&gt;好期刊不是科研的追求，成果才是。&lt;/p&gt;
 &lt;p&gt;科研的核心：总结，归纳，最终能把自己做的用少数几个词凝练出来。&lt;/p&gt;
-&lt;h2 id=&quot;1-基本概念与文献调研&quot;&gt;&lt;a href=&quot;#1-基本概念与文献调研&quot; class=&quot;headerlink&quot; title=&quot;1 基本概念与文献调研&quot;&gt;&lt;/a&gt;1 基本概念与文献调研&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;影响因子: 某期刊前两年（S, T）发表的论文在统计当年（U）的被引用总次数 X , 除以该期刊在前两年（S, T）内发表的论文总数 Y。公式为：&lt;br&gt;$$&lt;br&gt;&#92;mathrm{IF}_U &amp;#x3D; &#92;frac{X(S,T)}{Y(S,T)}&lt;br&gt;$$&lt;/p&gt;
+&lt;h2 id=&quot;1-基本概念与文献调研&quot;&gt;1 基本概念与文献调研&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;本刊2009年的文章在2010年的被引次数：48；本刊2009年的发文量：187&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;影响因子: 某期刊前两年（S, T）发表的论文在统计当年（U）的被引用总次数 X , 除以该期刊在前两年（S, T）内发表的论文总数 Y。公式为：&lt;/p&gt;
+&lt;p style=&quot;&quot;&gt;&lt;a href=&quot;https://math.now.sh?from=%5Cmathrm%7BIF%7D_U%20%3D%20%5Cfrac%7BX%28S%2CT%29%7D%7BY(S%2CT)%7D%0A&quot; class=&quot;gallery-item&quot;&gt;&lt;img src=&quot;https://math.now.sh?from=%5Cmathrm%7BIF%7D_U%20%3D%20%5Cfrac%7BX%28S%2CT%29%7D%7BY(S%2CT)%7D%0A&quot; /&gt;&lt;/a&gt;&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;本刊2009年的文章在2010年的被引次数：48；本刊2009年的发文量：187&lt;/p&gt;
 &lt;p&gt;本刊2008年的文章在2010年的被引次数：128；本刊2008年的发文量：154&lt;/p&gt;
-&lt;p&gt;本刊2010年的影响因子：IF &amp;#x3D; (48+128) &amp;#x2F; (187+154) &amp;#x3D; 0.5161&lt;/p&gt;
+&lt;p&gt;本刊2010年的影响因子：IF = (48+128) / (187+154) = 0.5161&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -309,54 +382,6 @@
   </entry>
   
   <entry>
-    <title>Modern Optical Testing Technology</title>
-    <link href="http://longqianh.com/Optics/Modern-Optical-Testing-Technology/"/>
-    <id>http://longqianh.com/Optics/Modern-Optical-Testing-Technology/</id>
-    <published>2021-04-05T16:35:11.000Z</published>
-    <updated>2022-11-03T08:38:37.503Z</updated>
-    
-    
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css&quot; /&gt;&lt;div class=&quot;.article-gallery&quot;&gt;&lt;p&gt;浙大光电研究生课程《近代光学测试技术》笔记。&lt;/p&gt;
-&lt;h2 id=&quot;2022-9-13&quot;&gt;&lt;a href=&quot;#2022-9-13&quot; class=&quot;headerlink&quot; title=&quot;2022.9.13&quot;&gt;&lt;/a&gt;2022.9.13&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;现代光学：偏量子光学一些，所以叫近代光学&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;光学工程：生物体的眼睛&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;信息–感知探测&lt;/li&gt;
-&lt;li&gt;加工&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;大型仪器装置&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;自动驾驶汽车–激光雷达、3D相机&lt;/li&gt;
-&lt;li&gt;工业机器人：传感器精度与传感器融合&lt;/li&gt;
-&lt;li&gt;引力波测试：极端灵敏探测，精度天花板&lt;/li&gt;
-&lt;li&gt;ROMY地震观测台：观测完整的地面运动&lt;/li&gt;
-&lt;li&gt;光刻机：&lt;strong&gt;前沿&lt;/strong&gt;光学基础理论，&lt;strong&gt;尖端&lt;/strong&gt;光学工程技术&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;沈毅斌老师：10亿像素CCD，导师邻居！&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;舒晓武老师：1991年读博，本科在物理系和童利民老师是同学，原来和白剑老师一个实验室&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;激光雷达：精度还是不够&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;激光陀螺：光学旋转传感器，fiber coil&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;强激光国家实验室：激光武器&amp;#x2F;微波武器的发射与防护&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Notes" scheme="http://longqianh.com/categories/Notes/"/>
-    
-    <category term="Optics" scheme="http://longqianh.com/categories/Notes/Optics/"/>
-    
-    
-    <category term="optics" scheme="http://longqianh.com/tags/optics/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Optical Communication Notes</title>
     <link href="http://longqianh.com/Optics/Optical-Communication/"/>
     <id>http://longqianh.com/Optics/Optical-Communication/</id>
@@ -364,8 +389,9 @@
     <updated>2023-01-27T03:06:59.960Z</updated>
     
     
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css&quot; /&gt;&lt;div class=&quot;.article-gallery&quot;&gt;&lt;h1 id=&quot;光通信技术&quot;&gt;&lt;a href=&quot;#光通信技术&quot; class=&quot;headerlink&quot; title=&quot;光通信技术&quot;&gt;&lt;/a&gt;光通信技术&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt; Imagine yourself a researcher working about thirty years ago. Your project: Find a way to transmit a light signal for communications.&lt;/p&gt;
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css&quot; /&gt;&lt;div class=&quot;.article-gallery&quot;&gt;&lt;h1&gt;光通信技术&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Imagine yourself a researcher working about thirty years ago. Your project: Find a way to transmit a light signal for communications.&lt;/p&gt;
 &lt;/blockquote&gt;</summary>
     
     
@@ -388,8 +414,10 @@
     
     
     <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css&quot; /&gt;&lt;div class=&quot;.article-gallery&quot;&gt;&lt;p&gt;学习压缩感知理论的笔记，参考书为 &lt;em&gt;A Mathematical Introduction to Compressive Sensing&lt;/em&gt;, Simon Foucart, Holger Rauhut 及相关论文。&lt;/p&gt;
-&lt;h3 id=&quot;Lasso-Regression-with-Soft-Thresholding&quot;&gt;&lt;a href=&quot;#Lasso-Regression-with-Soft-Thresholding&quot; class=&quot;headerlink&quot; title=&quot;Lasso Regression with Soft Thresholding&quot;&gt;&lt;/a&gt;Lasso Regression with Soft Thresholding&lt;/h3&gt;&lt;p&gt;Problem: regression with regularization&lt;br&gt;$$&lt;br&gt;&#92;min_&#92;mathbf{x} |&#92;mathbf{y}-&#92;mathbf{Wx}|_2^2+&#92;lambda|&#92;mathbf{W}|_1,&lt;br&gt;$$&lt;br&gt;where $&#92;mathbf{W}$ is weight vector.&lt;/p&gt;
-&lt;p&gt;Solution: Do derivative to the cost function, and use &lt;em&gt;soft thresholding function&lt;/em&gt; $&#92;text{soft}(&#92;lambda,&#92;mathbf{W})$ as the &lt;strong&gt;subderivative&lt;/strong&gt; to replace the derivate of non-differentiable absolute function.&lt;/p&gt;
+&lt;h3 id=&quot;Lasso-Regression-with-Soft-Thresholding&quot;&gt;Lasso Regression with Soft Thresholding&lt;/h3&gt;
+&lt;p&gt;Problem: regression with regularization&lt;/p&gt;
+&lt;p style=&quot;&quot;&gt;&lt;a href=&quot;https://math.now.sh?from=%5Cmin_%5Cmathbf%7Bx%7D%20%5C%7C%5Cmathbf%7By%7D-%5Cmathbf%7BWx%7D%5C%7C_2%5E2%2B%5Clambda%5C%7C%5Cmathbf%7BW%7D%5C%7C_1%2C%0A&quot; class=&quot;gallery-item&quot;&gt;&lt;img src=&quot;https://math.now.sh?from=%5Cmin_%5Cmathbf%7Bx%7D%20%5C%7C%5Cmathbf%7By%7D-%5Cmathbf%7BWx%7D%5C%7C_2%5E2%2B%5Clambda%5C%7C%5Cmathbf%7BW%7D%5C%7C_1%2C%0A&quot; /&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;where &lt;a href=&quot;https://math.now.sh?inline=%5Cmathbf%7BW%7D&quot; class=&quot;gallery-item&quot;&gt;&lt;img src=&quot;https://math.now.sh?inline=%5Cmathbf%7BW%7D&quot; style=&quot;display:inline-block;margin: 0;&quot;/&gt;&lt;/a&gt; is weight vector.&lt;/p&gt;
+&lt;p&gt;Solution: Do derivative to the cost function, and use &lt;em&gt;soft thresholding function&lt;/em&gt; &lt;a href=&quot;https://math.now.sh?inline=%5Ctext%7Bsoft%7D%28%5Clambda%2C%5Cmathbf%7BW%7D%29&quot; class=&quot;gallery-item&quot;&gt;&lt;img src=&quot;https://math.now.sh?inline=%5Ctext%7Bsoft%7D%28%5Clambda%2C%5Cmathbf%7BW%7D%29&quot; style=&quot;display:inline-block;margin: 0;&quot;/&gt;&lt;/a&gt; as the &lt;strong&gt;subderivative&lt;/strong&gt; to replace the derivate of non-differentiable absolute function.&lt;/p&gt;
 &lt;p&gt;Reference: &lt;a href=&quot;https://www.kaggle.com/residentmario/soft-thresholding-with-lasso-regression&quot;&gt;soft thresholding with lasso regression&lt;/a&gt;&lt;/p&gt;</summary>
     
     
@@ -469,29 +497,37 @@
     <updated>2022-09-05T18:53:00.159Z</updated>
     
     
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css&quot; /&gt;&lt;div class=&quot;.article-gallery&quot;&gt;&lt;h1 id=&quot;量子光学笔记&quot;&gt;&lt;a href=&quot;#量子光学笔记&quot; class=&quot;headerlink&quot; title=&quot;量子光学笔记&quot;&gt;&lt;/a&gt;量子光学笔记&lt;/h1&gt;&lt;p&gt;这种讲座类的课，应该每节课课前看好论文，课后做好总结，及时与老师交流问题。&lt;/p&gt;
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css&quot; /&gt;&lt;div class=&quot;.article-gallery&quot;&gt;&lt;h1&gt;量子光学笔记&lt;/h1&gt;
+&lt;p&gt;这种讲座类的课，应该每节课课前看好论文，课后做好总结，及时与老师交流问题。&lt;/p&gt;
 &lt;p&gt;Author：Peter_H&lt;/p&gt;
 &lt;p&gt;致谢：屠老师，汤圆老师，海威同志，梓儿&lt;/p&gt;
-&lt;h2 id=&quot;Photon&quot;&gt;&lt;a href=&quot;#Photon&quot; class=&quot;headerlink&quot; title=&quot;Photon&quot;&gt;&lt;/a&gt;Photon&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;光子的大小：以相互作用范围来衡量&lt;/p&gt;
+&lt;h2 id=&quot;Photon&quot;&gt;Photon&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;光子的大小：以相互作用范围来衡量&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;单光子干涉&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;单光子干涉&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Dirac：光子只与自身发生作用，光子的波通过两个狭缝时自身产生了干涉&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;引力波探测：略&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;引力波探测：略&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&quot;Photon-Statistics&quot;&gt;&lt;a href=&quot;#Photon-Statistics&quot; class=&quot;headerlink&quot; title=&quot;Photon Statistics&quot;&gt;&lt;/a&gt;Photon Statistics&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Uncertainty principle&lt;br&gt;$$&lt;br&gt;&#92;begin{aligned}&lt;br&gt;&#92;Delta x&#92;cdot&#92;Delta p&amp;amp;&#92;ge &#92;hbar&amp;#x2F;2 &#92;&lt;br&gt;&#92;Delta E&#92;cdot&#92;Delta t&amp;amp;&#92;ge&#92;hbar&amp;#x2F;2 &#92;quad &#92;text{能量,时间（波列长度）}&#92;&lt;br&gt;&#92;Delta n&#92;cdot&#92;Delta &#92;phi&amp;amp;&#92;ge &#92;hbar&amp;#x2F;2 &#92;quad &#92;text{光子数，相位}&lt;/p&gt;
-&lt;p&gt;&#92;end{aligned}&lt;br&gt;$$&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;微波辐射先于激光产生：产生微波波段需要的跃迁能量较低，可以来自分子的振动与转动；微波波段的光对谐振腔的要求也小，对于同样的频率展宽，谐振腔的长度改变容易得到允许。&lt;/p&gt;
+&lt;h2 id=&quot;Photon-Statistics&quot;&gt;Photon Statistics&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Uncertainty principle&lt;/p&gt;
+&lt;p style=&quot;&quot;&gt;&lt;a href=&quot;https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%5CDelta%20x%5Ccdot%5CDelta%20p%26%5Cge%20%5Chbar%2F2%20%5C%5C%0A%5CDelta%20E%5Ccdot%5CDelta%20t%26%5Cge%5Chbar%2F2%20%5Cquad%20%5Ctext%7B%E8%83%BD%E9%87%8F%2C%E6%97%B6%E9%97%B4%EF%BC%88%E6%B3%A2%E5%88%97%E9%95%BF%E5%BA%A6%EF%BC%89%7D%5C%5C%0A%5CDelta%20n%5Ccdot%5CDelta%20%5Cphi%26%5Cge%20%5Chbar%2F2%20%5Cquad%20%5Ctext%7B%E5%85%89%E5%AD%90%E6%95%B0%EF%BC%8C%E7%9B%B8%E4%BD%8D%7D%0A%0A%5Cend%7Baligned%7D%0A&quot; class=&quot;gallery-item&quot;&gt;&lt;img src=&quot;https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%5CDelta%20x%5Ccdot%5CDelta%20p%26%5Cge%20%5Chbar%2F2%20%5C%5C%0A%5CDelta%20E%5Ccdot%5CDelta%20t%26%5Cge%5Chbar%2F2%20%5Cquad%20%5Ctext%7B%E8%83%BD%E9%87%8F%2C%E6%97%B6%E9%97%B4%EF%BC%88%E6%B3%A2%E5%88%97%E9%95%BF%E5%BA%A6%EF%BC%89%7D%5C%5C%0A%5CDelta%20n%5Ccdot%5CDelta%20%5Cphi%26%5Cge%20%5Chbar%2F2%20%5Cquad%20%5Ctext%7B%E5%85%89%E5%AD%90%E6%95%B0%EF%BC%8C%E7%9B%B8%E4%BD%8D%7D%0A%0A%5Cend%7Baligned%7D%0A&quot; /&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;微波辐射先于激光产生：产生微波波段需要的跃迁能量较低，可以来自分子的振动与转动；微波波段的光对谐振腔的要求也小，对于同样的频率展宽，谐振腔的长度改变容易得到允许。&lt;/p&gt;
 &lt;p&gt;（原子发光—&amp;gt;在展宽范围内满足谐振条件的可以进行谐振）&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;如何分辨激光与F-P干涉仪产生的单色光？&lt;/p&gt;
-&lt;p&gt;利用二阶相干函数 $g^{(2)}$。激光是处于相干态的光，光子数分布为泊松分布，$g^{(2)}(0)&amp;#x3D;1$ ；F-P干涉仪产生的单色光是热光中选频选出来的单频光，属于热光场，$g^{(2)}&amp;gt;1$。&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;如何分辨激光与F-P干涉仪产生的单色光？&lt;/p&gt;
+&lt;p&gt;利用二阶相干函数 &lt;a href=&quot;https://math.now.sh?inline=g%5E%7B%282%29%7D&quot; class=&quot;gallery-item&quot;&gt;&lt;img src=&quot;https://math.now.sh?inline=g%5E%7B%282%29%7D&quot; style=&quot;display:inline-block;margin: 0;&quot;/&gt;&lt;/a&gt;。激光是处于相干态的光，光子数分布为泊松分布，&lt;a href=&quot;https://math.now.sh?inline=g%5E%7B%282%29%7D(0)%3D1&quot; class=&quot;gallery-item&quot;&gt;&lt;img src=&quot;https://math.now.sh?inline=g%5E%7B%282%29%7D(0)%3D1&quot; style=&quot;display:inline-block;margin: 0;&quot;/&gt;&lt;/a&gt; ；F-P干涉仪产生的单色光是热光中选频选出来的单频光，属于热光场，&lt;a href=&quot;https://math.now.sh?inline=g%5E%7B%282%29%7D%3E1&quot; class=&quot;gallery-item&quot;&gt;&lt;img src=&quot;https://math.now.sh?inline=g%5E%7B%282%29%7D%3E1&quot; style=&quot;display:inline-block;margin: 0;&quot;/&gt;&lt;/a&gt;。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</summary>
     
@@ -514,7 +550,8 @@
     <updated>2022-09-05T18:24:44.768Z</updated>
     
     
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css&quot; /&gt;&lt;div class=&quot;.article-gallery&quot;&gt;&lt;h1 id=&quot;软件技术基础—光电&quot;&gt;&lt;a href=&quot;#软件技术基础—光电&quot; class=&quot;headerlink&quot; title=&quot;软件技术基础—光电&quot;&gt;&lt;/a&gt;软件技术基础—光电&lt;/h1&gt;&lt;p&gt;光电的软件技术基础课程，授课教师是白剑老师，这是一篇关于这门课的复习笔记。&lt;/p&gt;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css&quot; /&gt;&lt;div class=&quot;.article-gallery&quot;&gt;&lt;h1&gt;软件技术基础—光电&lt;/h1&gt;
+&lt;p&gt;光电的软件技术基础课程，授课教师是白剑老师，这是一篇关于这门课的复习笔记。&lt;/p&gt;</summary>
     
     
     
@@ -535,16 +572,22 @@
     <updated>2022-09-05T18:25:39.341Z</updated>
     
     
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css&quot; /&gt;&lt;div class=&quot;.article-gallery&quot;&gt;&lt;h1 id=&quot;Google-Code-Standard&quot;&gt;&lt;a href=&quot;#Google-Code-Standard&quot; class=&quot;headerlink&quot; title=&quot;Google Code Standard&quot;&gt;&lt;/a&gt;Google Code Standard&lt;/h1&gt;&lt;p&gt;华为海思的项目需要了解一下Google编程规范，就简单看了一下。&lt;/p&gt;
-&lt;h2 id=&quot;Header-Files&quot;&gt;&lt;a href=&quot;#Header-Files&quot; class=&quot;headerlink&quot; title=&quot;Header Files&quot;&gt;&lt;/a&gt;Header Files&lt;/h2&gt;&lt;p&gt;头文件自包含、最好将模板和内联函数的定义与其声明放置在同一文件中。&lt;/p&gt;
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css&quot; /&gt;&lt;div class=&quot;.article-gallery&quot;&gt;&lt;h1&gt;Google Code Standard&lt;/h1&gt;
+&lt;p&gt;华为海思的项目需要了解一下Google编程规范，就简单看了一下。&lt;/p&gt;
+&lt;h2 id=&quot;Header-Files&quot;&gt;Header Files&lt;/h2&gt;
+&lt;p&gt;头文件自包含、最好将模板和内联函数的定义与其声明放置在同一文件中。&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;All header files should be self-contained. Users and refactoring tools should not have to adhere to special conditions to include the header. Specifically, a header should have &lt;a href=&quot;https://google.github.io/styleguide/cppguide.html#The__define_Guard&quot;&gt;header guards&lt;/a&gt; and include all other headers it needs.&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;All header files should be self-contained. Users and refactoring tools should not have to adhere to special conditions to include the header. Specifically, a header should have &lt;a href=&quot;https://google.github.io/styleguide/cppguide.html#The__define_Guard&quot;&gt;header guards&lt;/a&gt; and include all other headers it needs.&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Prefer placing the definitions for template and inline functions in the same file as their declarations. The definitions of these constructs must be included into every &lt;code&gt;.cc&lt;/code&gt; file that uses them, or the program may fail to link in some build configurations. If declarations and definitions are in different files, including the former should transitively include the latter. Do not move these definitions to separately included header files (&lt;code&gt;-inl.h&lt;/code&gt;); this practice was common in the past, but is no longer allowed.&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;Prefer placing the definitions for template and inline functions in the same file as their declarations. The definitions of these constructs must be included into every &lt;code&gt;.cc&lt;/code&gt; file that uses them, or the program may fail to link in some build configurations. If declarations and definitions are in different files, including the former should transitively include the latter. Do not move these definitions to separately included header files (&lt;code&gt;-inl.h&lt;/code&gt;); this practice was common in the past, but is no longer allowed.&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Avoid using forward declarations where possible. &lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;Avoid using forward declarations where possible.&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Define functions inline only when they are small, say, 10 lines or fewer.  经常用的小函数写成内联函数提升效率。&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;Define functions inline only when they are small, say, 10 lines or fewer.  经常用的小函数写成内联函数提升效率。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</summary>
     
@@ -573,14 +616,15 @@
 &lt;p&gt;我想要放弃电，但是我不能。因为他太重要了。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;2022.9.6: 之前写的好好笑&lt;/p&gt;
-&lt;h2 id=&quot;Transistor-三极管&quot;&gt;&lt;a href=&quot;#Transistor-三极管&quot; class=&quot;headerlink&quot; title=&quot;Transistor 三极管&quot;&gt;&lt;/a&gt;Transistor 三极管&lt;/h2&gt;&lt;p&gt;三极管是一个非常重要的元件，模电数电经常与他碰面，然而他的原理我直到光电子学讲了半导体物理才明白。&lt;/p&gt;
+&lt;h2 id=&quot;Transistor-三极管&quot;&gt;Transistor 三极管&lt;/h2&gt;
+&lt;p&gt;三极管是一个非常重要的元件，模电数电经常与他碰面，然而他的原理我直到光电子学讲了半导体物理才明白。&lt;/p&gt;
 &lt;p&gt;首先直观地去看三极管，&lt;a href=&quot;https://www.youtube.com/watch?v=7ukDKVHnac4&quot;&gt;YouTube上有一个非常棒的视频&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;看完视频基本上可以对三极管有一个宏观和近微观的认识，然后可以看一下&lt;a href=&quot;https://www.zhihu.com/question/34534183/answer/137383173&quot;&gt;知乎的这个回答&lt;/a&gt;，了解一下它的微观机理&lt;/p&gt;
-&lt;h4 id=&quot;1-半导体&quot;&gt;&lt;a href=&quot;#1-半导体&quot; class=&quot;headerlink&quot; title=&quot;1 半导体&quot;&gt;&lt;/a&gt;1 半导体&lt;/h4&gt;&lt;a href=&quot;https://tva1.sinaimg.cn/large/0081Kckwly1glk6kdauiij30zo0eg191.jpg&quot; title=&quot;image-20201211201747794&quot; class=&quot;gallery-item&quot;&gt;&lt;img src=&quot;https://tva1.sinaimg.cn/large/0081Kckwly1glk6kdauiij30zo0eg191.jpg&quot; alt=&quot;image-20201211201747794&quot; style=&quot;zoom:50%;&quot; /&gt;&lt;/a&gt;
-
-&lt;p&gt;图中圆圈表示空穴，负号表示电子。$E_f$ 为热平衡状态下的费米能级。&lt;/p&gt;
+&lt;h4 id=&quot;1-半导体&quot;&gt;1 半导体&lt;/h4&gt;
+&lt;a href=&quot;https://tva1.sinaimg.cn/large/0081Kckwly1glk6kdauiij30zo0eg191.jpg&quot; title=&quot;image-20201211201747794&quot; class=&quot;gallery-item&quot;&gt;&lt;img src=&quot;https://tva1.sinaimg.cn/large/0081Kckwly1glk6kdauiij30zo0eg191.jpg&quot; alt=&quot;image-20201211201747794&quot; style=&quot;zoom:50%;&quot; /&gt;&lt;/a&gt;
+&lt;p&gt;图中圆圈表示空穴，负号表示电子。&lt;a href=&quot;https://math.now.sh?inline=E_f&quot; class=&quot;gallery-item&quot;&gt;&lt;img src=&quot;https://math.now.sh?inline=E_f&quot; style=&quot;display:inline-block;margin: 0;&quot;/&gt;&lt;/a&gt; 为热平衡状态下的费米能级。&lt;/p&gt;
 &lt;p&gt;Q：为什么N型半导体的大量电子在价带？&lt;/p&gt;
-&lt;p&gt;由于 $E_g$ 小，随着温度升高，电子将会因为热激发作用从价带跃过带隙而进入导带。这些电子可以自由移动，称为 &lt;em&gt;自由载流子&lt;/em&gt; 。&lt;/p&gt;</summary>
+&lt;p&gt;由于 &lt;a href=&quot;https://math.now.sh?inline=E_g&quot; class=&quot;gallery-item&quot;&gt;&lt;img src=&quot;https://math.now.sh?inline=E_g&quot; style=&quot;display:inline-block;margin: 0;&quot;/&gt;&lt;/a&gt; 小，随着温度升高，电子将会因为热激发作用从价带跃过带隙而进入导带。这些电子可以自由移动，称为 &lt;em&gt;自由载流子&lt;/em&gt; 。&lt;/p&gt;</summary>
     
     
     

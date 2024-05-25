@@ -89,7 +89,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">2.1k</span>
+            <span class="post-count">1.8k</span>
         </span>
     </span>
 
@@ -98,7 +98,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">7 min</span>
+            <span class="post-count">5 min</span>
         </span>
     </span>
 </div>
@@ -114,43 +114,60 @@
     <div class="article-entry" itemprop="articleBody">
        
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><p>光电子学的一个大作业是设计探月三维成像激光雷达，开始毫无头绪，后来在玉泉图书馆找到一本哈工大的书「激光雷达系统设计」（王春晖，陈德应著）。想着以后要把书还回去，目前网上找到的资料大多是论文，而莫得这本宝书，就简要地「抄」一下这本书的部分章节。</p>
-<h1 id="激光雷达系统设计"><a href="#激光雷达系统设计" class="headerlink" title="激光雷达系统设计"></a>激光雷达系统设计</h1><p>激光雷达是指以激光作为载波、以光电探测器作为接收器件、以光学望远镜作为天线的光雷达。</p>
-<h3 id="发射光学系统"><a href="#发射光学系统" class="headerlink" title="发射光学系统"></a>发射光学系统</h3><p>在远距离激光雷达系统设计中，为了增加作用距离，常常需要压缩激光源地发散角，即采用望远镜系统对激光源进行扩束，这时该定向辐射源具有一定辐射面积，人们常常把这类光源成为空间受限定相光源。由于激光器发射光束具有高斯光束地特点，这时在受限空间内光强分布的不均匀性就凸显出来。一般假设这种光源的方向图函数是高斯型的，即<br>$$<br>f(\theta,\varphi)&#x3D;\exp\left[-\frac{r^2}{(z\alpha)^2}\right]&#x3D;\exp\left[-\frac{\theta^2}{\alpha^2}\right]<br>$$<br>注：方向图函数定义为任意方向 $\vec n$ 上的辐射强度 $I(\vec n)$ 与最大光强之比 $I(\vec n)&#x2F;I_{\max}&#x3D;I(\theta,\varphi)&#x2F;I_{\max}$。</p>
+<h1>激光雷达系统设计</h1>
+<p>激光雷达是指以激光作为载波、以光电探测器作为接收器件、以光学望远镜作为天线的光雷达。</p>
+<h3 id="发射光学系统">发射光学系统</h3>
+<p>在远距离激光雷达系统设计中，为了增加作用距离，常常需要压缩激光源地发散角，即采用望远镜系统对激光源进行扩束，这时该定向辐射源具有一定辐射面积，人们常常把这类光源成为空间受限定相光源。由于激光器发射光束具有高斯光束地特点，这时在受限空间内光强分布的不均匀性就凸显出来。一般假设这种光源的方向图函数是高斯型的，即</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=f%28%5Ctheta%2C%5Cvarphi%29%3D%5Cexp%5Cleft%5B-%5Cfrac%7Br%5E2%7D%7B(z%5Calpha)%5E2%7D%5Cright%5D%3D%5Cexp%5Cleft%5B-%5Cfrac%7B%5Ctheta%5E2%7D%7B%5Calpha%5E2%7D%5Cright%5D%0A" class="gallery-item"><img src="https://math.now.sh?from=f%28%5Ctheta%2C%5Cvarphi%29%3D%5Cexp%5Cleft%5B-%5Cfrac%7Br%5E2%7D%7B(z%5Calpha)%5E2%7D%5Cright%5D%3D%5Cexp%5Cleft%5B-%5Cfrac%7B%5Ctheta%5E2%7D%7B%5Calpha%5E2%7D%5Cright%5D%0A" /></a></p><p>注：方向图函数定义为任意方向 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cvec%20n" class="gallery-item"><img src="https://math.now.sh?inline=%5Cvec%20n" style="display:inline-block;margin: 0;"/></a> 上的辐射强度 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=I%28%5Cvec%20n%29" class="gallery-item"><img src="https://math.now.sh?inline=I%28%5Cvec%20n%29" style="display:inline-block;margin: 0;"/></a> 与最大光强之比 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=I%28%5Cvec%20n%29%2FI_%7B%5Cmax%7D%3DI(%5Ctheta%2C%5Cvarphi)%2FI_%7B%5Cmax%7D" class="gallery-item"><img src="https://math.now.sh?inline=I%28%5Cvec%20n%29%2FI_%7B%5Cmax%7D%3DI(%5Ctheta%2C%5Cvarphi)%2FI_%7B%5Cmax%7D" style="display:inline-block;margin: 0;"/></a>。</p>
 <p>书中给了激光发射机的光度学模型和波动学模型，但是没有对激光器进行详细叙述。感觉这是对激光发射的结果进行了建模，而产生激光的过程还需要参考别的书籍。</p>
 <span id="more"></span>
-
-
-
-<h2 id="接收光学系统"><a href="#接收光学系统" class="headerlink" title="接收光学系统"></a>接收光学系统</h2><p>对于远距离探测，常采用望远镜加物镜的结构设计或远心成像光学系统。</p>
+<h2 id="接收光学系统">接收光学系统</h2>
+<p>对于远距离探测，常采用望远镜加物镜的结构设计或远心成像光学系统。</p>
 <p>光电探测器是指能把光辐射能转换成一种便于测量（电压或电流）的物理量器件。光电流时光电探测器对入射光功率的响应，它的变化也就反映光信号的变化。</p>
-<p>接收光学系统应由入瞳直径为 $D$、焦距为 $f$ 到 成像物镜以及光敏面直径 $d$ 的光电探测器组成。</p>
-<h3 id="光学天线"><a href="#光学天线" class="headerlink" title="光学天线"></a>光学天线</h3><p>光学天线的基本功能，就是将激光发射机所发射的激光波束变成激光雷达所需要的照射波束，把激光能量发送到空间，并尽可能多地收集从目标返回地激光能量。光学天线按功能分为发射光学天线和接收光学天线。</p>
+<p>接收光学系统应由入瞳直径为 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=D" class="gallery-item"><img src="https://math.now.sh?inline=D" style="display:inline-block;margin: 0;"/></a>、焦距为 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=f" class="gallery-item"><img src="https://math.now.sh?inline=f" style="display:inline-block;margin: 0;"/></a> 到 成像物镜以及光敏面直径 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=d" class="gallery-item"><img src="https://math.now.sh?inline=d" style="display:inline-block;margin: 0;"/></a> 的光电探测器组成。</p>
+<h3 id="光学天线">光学天线</h3>
+<p>光学天线的基本功能，就是将激光发射机所发射的激光波束变成激光雷达所需要的照射波束，把激光能量发送到空间，并尽可能多地收集从目标返回地激光能量。光学天线按功能分为发射光学天线和接收光学天线。</p>
 <p>光学天线的设计思路：针对是相干探测还是直接探测激光雷达系统，同时考虑发射光束和接受光束的截面函数、波前相位、偏振态以及光学系统准直度等因素，合理选取、优化设计光学天线与探测器光敏面的几何参数。</p>
-<h3 id="光电探测器传递函数"><a href="#光电探测器传递函数" class="headerlink" title="光电探测器传递函数"></a>光电探测器传递函数</h3><p>常见的光电探测器往往是矩形的。假设一个单元探测器的 <em>线度</em> 为 $d$, 则这个矩形函数的傅立叶变换为 $sinc$ 函数，但愿探测器作为空间滤波器的传递函数为：<br>$$<br>H_{dl}&#x3D;\operatorname{sinc}(\pi d f).<br>$$<br>如果探测器是面阵的，即含有 $n\times m$ 个单元探测器，每个单元的线度为 $(d_x,d_y)$，单元之间的间距为 $(b_x,b_y)$，重复周期为 $(c_x&#x3D;d_x+b_x,c_y&#x3D;d_y+b_y)$,则根据傅立叶变换的位移定理，列阵探测器的传递函数为：<br>$$<br>H_{dnm}&#x3D;\left(\operatorname{sinc}(\pi d_x f_x)\frac{\sin(\pi c_x n f_x)}{\sin(\pi c_x f_x)}\right)\left(\operatorname{sinc}(\pi d_y f_y)\frac{\sin(\pi c_y m f_y)}{\sin(\pi c_y f_y)}\right).<br>$$</p>
-<h2 id="微弱光信号探测"><a href="#微弱光信号探测" class="headerlink" title="微弱光信号探测"></a>微弱光信号探测</h2><h3 id="A-直接探测"><a href="#A-直接探测" class="headerlink" title="A 直接探测"></a>A 直接探测</h3><p>信号光 $\to$ 光学天线（光学接收系统) $\to$ 光电探测器 $\to$ 放大器 $\to;\cdots$</p>
+<h3 id="光电探测器传递函数">光电探测器传递函数</h3>
+<p>常见的光电探测器往往是矩形的。假设一个单元探测器的 <em>线度</em> 为 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=d" class="gallery-item"><img src="https://math.now.sh?inline=d" style="display:inline-block;margin: 0;"/></a>, 则这个矩形函数的傅立叶变换为 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=sinc" class="gallery-item"><img src="https://math.now.sh?inline=sinc" style="display:inline-block;margin: 0;"/></a> 函数，但愿探测器作为空间滤波器的传递函数为：</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=H_%7Bdl%7D%3D%5Coperatorname%7Bsinc%7D%28%5Cpi%20d%20f%29.%0A" class="gallery-item"><img src="https://math.now.sh?from=H_%7Bdl%7D%3D%5Coperatorname%7Bsinc%7D%28%5Cpi%20d%20f%29.%0A" /></a></p><p>如果探测器是面阵的，即含有 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=n%5Ctimes%20m" class="gallery-item"><img src="https://math.now.sh?inline=n%5Ctimes%20m" style="display:inline-block;margin: 0;"/></a> 个单元探测器，每个单元的线度为 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%28d_x%2Cd_y%29" class="gallery-item"><img src="https://math.now.sh?inline=%28d_x%2Cd_y%29" style="display:inline-block;margin: 0;"/></a>，单元之间的间距为 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%28b_x%2Cb_y%29" class="gallery-item"><img src="https://math.now.sh?inline=%28b_x%2Cb_y%29" style="display:inline-block;margin: 0;"/></a>，重复周期为 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%28c_x%3Dd_x%2Bb_x%2Cc_y%3Dd_y%2Bb_y%29" class="gallery-item"><img src="https://math.now.sh?inline=%28c_x%3Dd_x%2Bb_x%2Cc_y%3Dd_y%2Bb_y%29" style="display:inline-block;margin: 0;"/></a>,则根据傅立叶变换的位移定理，列阵探测器的传递函数为：</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=H_%7Bdnm%7D%3D%5Cleft%28%5Coperatorname%7Bsinc%7D(%5Cpi%20d_x%20f_x%29%5Cfrac%7B%5Csin(%5Cpi%20c_x%20n%20f_x)%7D%7B%5Csin(%5Cpi%20c_x%20f_x)%7D%5Cright)%5Cleft(%5Coperatorname%7Bsinc%7D(%5Cpi%20d_y%20f_y)%5Cfrac%7B%5Csin(%5Cpi%20c_y%20m%20f_y)%7D%7B%5Csin(%5Cpi%20c_y%20f_y)%7D%5Cright).%0A" class="gallery-item"><img src="https://math.now.sh?from=H_%7Bdnm%7D%3D%5Cleft%28%5Coperatorname%7Bsinc%7D(%5Cpi%20d_x%20f_x%29%5Cfrac%7B%5Csin(%5Cpi%20c_x%20n%20f_x)%7D%7B%5Csin(%5Cpi%20c_x%20f_x)%7D%5Cright)%5Cleft(%5Coperatorname%7Bsinc%7D(%5Cpi%20d_y%20f_y)%5Cfrac%7B%5Csin(%5Cpi%20c_y%20m%20f_y)%7D%7B%5Csin(%5Cpi%20c_y%20f_y)%7D%5Cright).%0A" /></a></p><h2 id="微弱光信号探测">微弱光信号探测</h2>
+<h3 id="A-直接探测">A 直接探测</h3>
+<p>信号光 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cto" class="gallery-item"><img src="https://math.now.sh?inline=%5Cto" style="display:inline-block;margin: 0;"/></a> 光学天线（光学接收系统) <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cto" class="gallery-item"><img src="https://math.now.sh?inline=%5Cto" style="display:inline-block;margin: 0;"/></a> 光电探测器 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cto" class="gallery-item"><img src="https://math.now.sh?inline=%5Cto" style="display:inline-block;margin: 0;"/></a> 放大器 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cto%5C%3B%5Ccdots" class="gallery-item"><img src="https://math.now.sh?inline=%5Cto%5C%3B%5Ccdots" style="display:inline-block;margin: 0;"/></a></p>
 <ul>
 <li>输出光电流</li>
 </ul>
-<p>$$<br>i&#x3D;\frac{e\eta}{h\nu}P&#x3D;\frac{e\eta}{2h\nu}\int_S|U(\vec r,t)|^2\text dS\propto |U|^2&#x3D;I(\vec r,t)<br>$$</p>
-<ul>
-<li><p>输出电功率</p>
-<p>设光探测器的负载电阻为 $R_L$.<br>$$<br>P_s&#x3D;i^2R_L&#x3D;\left(\frac{e\eta}{h\nu}\right)^2P^2R_L<br>$$</p>
-</li>
-<li><p>信噪比</p>
-<p>设入射到光电探测器的信号光功率为 $P_s$, 噪声功率为 $P_n$, 输出的信号电功率为 $S_p$, 噪声功率为 $N_p$, 则<br>$$<br>S_p+N_p&#x3D;\left(\frac{e\eta}{h\nu}\right)^2R_L(P_s+P_n)^2&#x3D;\left(\frac{e\eta}{h\nu}\right)^2R_L(P_s^2+2P_nP_s+P_n^2),<br>$$</p>
-<p>考虑到信号和噪声的独立性，有<br>$$<br>\begin{align}<br>S_p&amp;&#x3D;\left(\frac{e\eta}{h\nu}\right)^2R_LP_s^2\<br>N_p&amp;&#x3D;\left(\frac{e\eta}{h\nu}\right)^2R_L(2P_sP_n+P_n^2)\</p>
-<p>\end{align}<br>$$<br>因此输出信噪比<br>$$<br>SNR_D&#x3D;\frac{S_p}{N_n}&#x3D;\frac{P_s^2}{2P_sP_n+P_n^2},<br>$$</p>
-<p>直接探测的输出信噪比在 $P_s&#x2F;P_n\gg 1$ 时<br>$$<br>SNR_D\approx\frac{P_s}{2P_n}.<br>$$<br>这从理论上漂亮地证明了直接探测方法不能改善信噪比，且经过光电转换后信噪比损失了3dB。</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=i%3D%5Cfrac%7Be%5Ceta%7D%7Bh%5Cnu%7DP%3D%5Cfrac%7Be%5Ceta%7D%7B2h%5Cnu%7D%5Cint_S%7CU%28%5Cvec%20r%2Ct%29%7C%5E2%5Ctext%20dS%5Cpropto%20%7CU%7C%5E2%3DI(%5Cvec%20r%2Ct)%0A" class="gallery-item"><img src="https://math.now.sh?from=i%3D%5Cfrac%7Be%5Ceta%7D%7Bh%5Cnu%7DP%3D%5Cfrac%7Be%5Ceta%7D%7B2h%5Cnu%7D%5Cint_S%7CU%28%5Cvec%20r%2Ct%29%7C%5E2%5Ctext%20dS%5Cpropto%20%7CU%7C%5E2%3DI(%5Cvec%20r%2Ct)%0A" /></a></p><ul>
+<li>
+<p>输出电功率</p>
+<p>设光探测器的负载电阻为 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=R_L" class="gallery-item"><img src="https://math.now.sh?inline=R_L" style="display:inline-block;margin: 0;"/></a>.</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=P_s%3Di%5E2R_L%3D%5Cleft%28%5Cfrac%7Be%5Ceta%7D%7Bh%5Cnu%7D%5Cright%29%5E2P%5E2R_L%0A" class="gallery-item"><img src="https://math.now.sh?from=P_s%3Di%5E2R_L%3D%5Cleft%28%5Cfrac%7Be%5Ceta%7D%7Bh%5Cnu%7D%5Cright%29%5E2P%5E2R_L%0A" /></a></p></li>
+<li>
+<p>信噪比</p>
+<p>设入射到光电探测器的信号光功率为 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=P_s" class="gallery-item"><img src="https://math.now.sh?inline=P_s" style="display:inline-block;margin: 0;"/></a>, 噪声功率为 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=P_n" class="gallery-item"><img src="https://math.now.sh?inline=P_n" style="display:inline-block;margin: 0;"/></a>, 输出的信号电功率为 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=S_p" class="gallery-item"><img src="https://math.now.sh?inline=S_p" style="display:inline-block;margin: 0;"/></a>, 噪声功率为 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=N_p" class="gallery-item"><img src="https://math.now.sh?inline=N_p" style="display:inline-block;margin: 0;"/></a>, 则</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=S_p%2BN_p%3D%5Cleft%28%5Cfrac%7Be%5Ceta%7D%7Bh%5Cnu%7D%5Cright%29%5E2R_L(P_s%2BP_n)%5E2%3D%5Cleft(%5Cfrac%7Be%5Ceta%7D%7Bh%5Cnu%7D%5Cright)%5E2R_L(P_s%5E2%2B2P_nP_s%2BP_n%5E2)%2C%0A" class="gallery-item"><img src="https://math.now.sh?from=S_p%2BN_p%3D%5Cleft%28%5Cfrac%7Be%5Ceta%7D%7Bh%5Cnu%7D%5Cright%29%5E2R_L(P_s%2BP_n)%5E2%3D%5Cleft(%5Cfrac%7Be%5Ceta%7D%7Bh%5Cnu%7D%5Cright)%5E2R_L(P_s%5E2%2B2P_nP_s%2BP_n%5E2)%2C%0A" /></a></p><p>考虑到信号和噪声的独立性，有</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=%5Cbegin%7Balign%7D%0AS_p%26%3D%5Cleft%28%5Cfrac%7Be%5Ceta%7D%7Bh%5Cnu%7D%5Cright%29%5E2R_LP_s%5E2%5C%5C%0AN_p%26%3D%5Cleft(%5Cfrac%7Be%5Ceta%7D%7Bh%5Cnu%7D%5Cright)%5E2R_L(2P_sP_n%2BP_n%5E2)%5C%5C%0A%0A%5Cend%7Balign%7D%0A" class="gallery-item"><img src="https://math.now.sh?from=%5Cbegin%7Balign%7D%0AS_p%26%3D%5Cleft%28%5Cfrac%7Be%5Ceta%7D%7Bh%5Cnu%7D%5Cright%29%5E2R_LP_s%5E2%5C%5C%0AN_p%26%3D%5Cleft(%5Cfrac%7Be%5Ceta%7D%7Bh%5Cnu%7D%5Cright)%5E2R_L(2P_sP_n%2BP_n%5E2)%5C%5C%0A%0A%5Cend%7Balign%7D%0A" /></a></p><p>因此输出信噪比</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=SNR_D%3D%5Cfrac%7BS_p%7D%7BN_n%7D%3D%5Cfrac%7BP_s%5E2%7D%7B2P_sP_n%2BP_n%5E2%7D%2C%0A" class="gallery-item"><img src="https://math.now.sh?from=SNR_D%3D%5Cfrac%7BS_p%7D%7BN_n%7D%3D%5Cfrac%7BP_s%5E2%7D%7B2P_sP_n%2BP_n%5E2%7D%2C%0A" /></a></p><p>直接探测的输出信噪比在 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=P_s%2FP_n%5Cgg%201" class="gallery-item"><img src="https://math.now.sh?inline=P_s%2FP_n%5Cgg%201" style="display:inline-block;margin: 0;"/></a> 时</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=SNR_D%5Capprox%5Cfrac%7BP_s%7D%7B2P_n%7D.%0A" class="gallery-item"><img src="https://math.now.sh?from=SNR_D%5Capprox%5Cfrac%7BP_s%7D%7B2P_n%7D.%0A" /></a></p><p>这从理论上漂亮地证明了直接探测方法不能改善信噪比，且经过光电转换后信噪比损失了3dB。</p>
 </li>
 </ul>
-<h3 id="B-外差探测-x2F-相干探测"><a href="#B-外差探测-x2F-相干探测" class="headerlink" title="B 外差探测&#x2F;相干探测"></a>B 外差探测&#x2F;相干探测</h3><p>加入了本振激光器，光探测器输出的中频功率正比于信号光和本振光平均功率的乘积，因而只要本振光功率足够大，对极微弱光信号仍能得到可观的中频输出！</p>
+<h3 id="B-外差探测-相干探测">B 外差探测/相干探测</h3>
+<p>加入了本振激光器，光探测器输出的中频功率正比于信号光和本振光平均功率的乘积，因而只要本振光功率足够大，对极微弱光信号仍能得到可观的中频输出！</p>
 <p>外差探测引入了相干光，利用干涉获得有关光信号的全部信息，这也是一种全息吧！</p>
-<h4 id="本振光数学模型"><a href="#本振光数学模型" class="headerlink" title="本振光数学模型"></a>本振光数学模型</h4><p>本机振荡激光器输出的高斯光束由于是短距离传输，其波面有两种情况：一是高斯光束经过精心设计的成像物镜后，束腰落在探测器光敏面上，高斯光束束腰的波阵面表现为平面波的性质，且控制高斯光束束腰半径 $W_0\gg R_D$, 这时本振光截面函数相对于探测器光敏面而言可认为是均匀光束：<br>$$<br>U_{LOU}(\vec r)&#x3D;Ae^{-j\vec k\cdot\vec r}.<br>$$<br>二是高斯光束的束腰没有聚焦在光电探测器光敏面，这时本振光复振幅分布的数学模型为:<br>$$<br>U_{LOG}(\vec r)&#x3D;\frac{A}{W(z)}\exp\left[-\frac{\rho^2}{W^2(z)}\right]\exp\left[-jkz-jk\frac{\rho^2}{2R(z)}+\phi(z)\right].<br>$$</p>
-<h4 id="信号光数学模型"><a href="#信号光数学模型" class="headerlink" title="信号光数学模型"></a>信号光数学模型</h4><p>主振激光器发射的高斯光束，由于要经过长距离的传输，并被探测目标反射或后向散射形成信号光，信号光回波的光斑将变得非常大（达到几米的数量级），光学接受天线的有效孔径却很小，能被光学天线接受的部分信号光近似为平面波。因此，位于光学天线系统焦平面处探测器光敏面的信号光的复振幅分布对于圆对称光学系统用光束光学天线系统的艾里斑图样。信号光的复振幅数学模型为：<br>$$<br>U_{SA}(\vec r)&#x3D;A\frac{2J_1(\chi)}{\chi}e^{-j\vec k\cdot \vec r}<br>$$<br>其中，$\chi&#x3D;\pi r&#x2F;\lambda F$ 为探测器光学参数，F为接收光学天线系统的F数。（注意，根据菲涅尔衍射原理，还应存在一个二次位相因子，由于激光雷达的作用距离R远大于接收光学系统的孔径d，可将此忽略）</p>
-<h4 id="光学天线与探测器最佳匹配关系"><a href="#光学天线与探测器最佳匹配关系" class="headerlink" title="光学天线与探测器最佳匹配关系"></a>光学天线与探测器最佳匹配关系</h4><p>考虑空间失配角情况下使系统外差效率 $\eta_H$ 最大，得到高斯光束模场半径最佳值约为<br>$$<br>W\approx 0.77\frac{\lambda f}{d},<br>$$<br>上式为高斯光束艾里斑相干激光雷达光学天线与探测器最佳匹配关系。</p>
-<h2 id="激光雷达方程"><a href="#激光雷达方程" class="headerlink" title="激光雷达方程"></a>激光雷达方程</h2><p>激光雷达系统设计的一个基本问题是确定达到接收机孔径的光强总通量，进而确定入射到探测器光敏面元件上的总的光功率。激光雷达方程通常用来确定激光雷达在特定条件下对某个特殊目标的接收功率。</p>
+<h4 id="本振光数学模型">本振光数学模型</h4>
+<p>本机振荡激光器输出的高斯光束由于是短距离传输，其波面有两种情况：一是高斯光束经过精心设计的成像物镜后，束腰落在探测器光敏面上，高斯光束束腰的波阵面表现为平面波的性质，且控制高斯光束束腰半径 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=W_0%5Cgg%20R_D" class="gallery-item"><img src="https://math.now.sh?inline=W_0%5Cgg%20R_D" style="display:inline-block;margin: 0;"/></a>, 这时本振光截面函数相对于探测器光敏面而言可认为是均匀光束：</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=U_%7BLOU%7D%28%5Cvec%20r%29%3DAe%5E%7B-j%5Cvec%20k%5Ccdot%5Cvec%20r%7D.%0A" class="gallery-item"><img src="https://math.now.sh?from=U_%7BLOU%7D%28%5Cvec%20r%29%3DAe%5E%7B-j%5Cvec%20k%5Ccdot%5Cvec%20r%7D.%0A" /></a></p><p>二是高斯光束的束腰没有聚焦在光电探测器光敏面，这时本振光复振幅分布的数学模型为:</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=U_%7BLOG%7D%28%5Cvec%20r%29%3D%5Cfrac%7BA%7D%7BW(z)%7D%5Cexp%5Cleft%5B-%5Cfrac%7B%5Crho%5E2%7D%7BW%5E2(z)%7D%5Cright%5D%5Cexp%5Cleft%5B-jkz-jk%5Cfrac%7B%5Crho%5E2%7D%7B2R(z)%7D%2B%5Cphi(z)%5Cright%5D.%0A" class="gallery-item"><img src="https://math.now.sh?from=U_%7BLOG%7D%28%5Cvec%20r%29%3D%5Cfrac%7BA%7D%7BW(z)%7D%5Cexp%5Cleft%5B-%5Cfrac%7B%5Crho%5E2%7D%7BW%5E2(z)%7D%5Cright%5D%5Cexp%5Cleft%5B-jkz-jk%5Cfrac%7B%5Crho%5E2%7D%7B2R(z)%7D%2B%5Cphi(z)%5Cright%5D.%0A" /></a></p><h4 id="信号光数学模型">信号光数学模型</h4>
+<p>主振激光器发射的高斯光束，由于要经过长距离的传输，并被探测目标反射或后向散射形成信号光，信号光回波的光斑将变得非常大（达到几米的数量级），光学接受天线的有效孔径却很小，能被光学天线接受的部分信号光近似为平面波。因此，位于光学天线系统焦平面处探测器光敏面的信号光的复振幅分布对于圆对称光学系统用光束光学天线系统的艾里斑图样。信号光的复振幅数学模型为：</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=U_%7BSA%7D%28%5Cvec%20r%29%3DA%5Cfrac%7B2J_1(%5Cchi)%7D%7B%5Cchi%7De%5E%7B-j%5Cvec%20k%5Ccdot%20%5Cvec%20r%7D%0A" class="gallery-item"><img src="https://math.now.sh?from=U_%7BSA%7D%28%5Cvec%20r%29%3DA%5Cfrac%7B2J_1(%5Cchi)%7D%7B%5Cchi%7De%5E%7B-j%5Cvec%20k%5Ccdot%20%5Cvec%20r%7D%0A" /></a></p><p>其中，<a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cchi%3D%5Cpi%20r%2F%5Clambda%20F" class="gallery-item"><img src="https://math.now.sh?inline=%5Cchi%3D%5Cpi%20r%2F%5Clambda%20F" style="display:inline-block;margin: 0;"/></a> 为探测器光学参数，F为接收光学天线系统的F数。（注意，根据菲涅尔衍射原理，还应存在一个二次位相因子，由于激光雷达的作用距离R远大于接收光学系统的孔径d，可将此忽略）</p>
+<h4 id="光学天线与探测器最佳匹配关系">光学天线与探测器最佳匹配关系</h4>
+<p>考虑空间失配角情况下使系统外差效率 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Ceta_H" class="gallery-item"><img src="https://math.now.sh?inline=%5Ceta_H" style="display:inline-block;margin: 0;"/></a> 最大，得到高斯光束模场半径最佳值约为</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=W%5Capprox%200.77%5Cfrac%7B%5Clambda%20f%7D%7Bd%7D%2C%0A" class="gallery-item"><img src="https://math.now.sh?from=W%5Capprox%200.77%5Cfrac%7B%5Clambda%20f%7D%7Bd%7D%2C%0A" /></a></p><p>上式为高斯光束艾里斑相干激光雷达光学天线与探测器最佳匹配关系。</p>
+<h2 id="激光雷达方程">激光雷达方程</h2>
+<p>激光雷达系统设计的一个基本问题是确定达到接收机孔径的光强总通量，进而确定入射到探测器光敏面元件上的总的光功率。激光雷达方程通常用来确定激光雷达在特定条件下对某个特殊目标的接收功率。</p>
 <p>书中只给了一些理论推导，莫得一个应用实例，感觉有道理但不太直观。就不抄了。</p>
-<h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h3><p>[1] 王春晖, 陈德应. 激光雷达系统设计[J].</p>
+<h3 id="参考文献">参考文献</h3>
+<p>[1] 王春晖, 陈德应. 激光雷达系统设计[J].</p>
 </div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
         var options = {
             selector: '.gallery-item'

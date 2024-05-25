@@ -113,141 +113,192 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="Android-App-Development-Note"><a href="#Android-App-Development-Note" class="headerlink" title="Android App Development Note"></a>Android App Development Note</h1><p>这篇笔记是在2021年光电设计竞赛中，我独立负责开发安卓APP过程的自学笔记。可能学习链接较多，未仔细重新整理。</p>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><h1>Android App Development Note</h1>
+<p>这篇笔记是在2021年光电设计竞赛中，我独立负责开发安卓APP过程的自学笔记。可能学习链接较多，未仔细重新整理。</p>
 <p>开发使用的语言是Kotlin，最终成果见 <a target="_blank" rel="noopener" href="https://github.com/longqianh/AppleSugar.git">AppleSugar</a>.</p>
-<h2 id="Kotlin-Basics"><a href="#Kotlin-Basics" class="headerlink" title="Kotlin Basics"></a>Kotlin Basics</h2><ul>
-<li><p>nullable: <code>?</code></p>
+<h2 id="Kotlin-Basics">Kotlin Basics</h2>
+<ul>
+<li>
+<p>nullable: <code>?</code></p>
 </li>
-<li><p><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/42646016/what-does-the-arrow-operator-do-in-kotlin"><code>-&gt;</code></a></p>
+<li>
+<p><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/42646016/what-does-the-arrow-operator-do-in-kotlin"><code>-&gt;</code></a></p>
 </li>
-<li><p><a target="_blank" rel="noopener" href="https://kotlinlang.org/docs/lambdas.html#it-implicit-name-of-a-single-parameter"><code>it</code></a></p>
+<li>
+<p><a target="_blank" rel="noopener" href="https://kotlinlang.org/docs/lambdas.html#it-implicit-name-of-a-single-parameter"><code>it</code></a></p>
 </li>
-<li><p><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1719701">::</a></p>
+<li>
+<p><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1719701">::</a></p>
 </li>
-<li><p><a target="_blank" rel="noopener" href="https://kotlinlang.org/docs/scope-functions.html#let">Scope functions</a></p>
+<li>
+<p><a target="_blank" rel="noopener" href="https://kotlinlang.org/docs/scope-functions.html#let">Scope functions</a></p>
 </li>
-<li><p><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/36262305/difference-between-list-and-array-types-in-kotlin">List v.s. Array</a></p>
+<li>
+<p><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/36262305/difference-between-list-and-array-types-in-kotlin">List v.s. Array</a></p>
 </li>
-<li><p><a target="_blank" rel="noopener" href="https://blog.autsoft.hu/top-10-kotlin-stack-overflow-questions/">10 top stackoverfloew</a> </p>
+<li>
+<p><a target="_blank" rel="noopener" href="https://blog.autsoft.hu/top-10-kotlin-stack-overflow-questions/">10 top stackoverfloew</a></p>
 </li>
-<li><p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/e2cb4c65d4ff">lazy</a></p>
+<li>
+<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/e2cb4c65d4ff">lazy</a></p>
 </li>
 </ul>
 <span id="more"></span>
-
-<h3 id="dataBinding"><a href="#dataBinding" class="headerlink" title="dataBinding"></a>dataBinding</h3><p><a target="_blank" rel="noopener" href="https://developer.android.com/codelabs/android-databinding">https://developer.android.com/codelabs/android-databinding</a></p>
-<h3 id="Activity"><a href="#Activity" class="headerlink" title="Activity"></a>Activity</h3><p><code>setContentView</code>:<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/9acdf27aae06">https://www.jianshu.com/p/9acdf27aae06</a></p>
+<h3 id="dataBinding">dataBinding</h3>
+<p><a target="_blank" rel="noopener" href="https://developer.android.com/codelabs/android-databinding">https://developer.android.com/codelabs/android-databinding</a></p>
+<h3 id="Activity">Activity</h3>
+<p><code>setContentView</code>:<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/9acdf27aae06">https://www.jianshu.com/p/9acdf27aae06</a></p>
 <p><code>requireActivity</code>: <a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/61045573/what-is-the-difference-between-requireactivity-and-onactivitycreated">https://stackoverflow.com/questions/61045573/what-is-the-difference-between-requireactivity-and-onactivitycreated</a></p>
-<h3 id="Layout"><a href="#Layout" class="headerlink" title="Layout"></a>Layout</h3><p>layout不需要id，fragment有id</p>
+<h3 id="Layout">Layout</h3>
+<p>layout不需要id，fragment有id</p>
 <ul>
-<li><p><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/25679369/what-does-framelayout-do/50086743">FrameLayout</a></p>
+<li>
+<p><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/25679369/what-does-framelayout-do/50086743">FrameLayout</a></p>
 </li>
-<li><p><a target="_blank" rel="noopener" href="https://developer.android.google.cn/reference/android/support/constraint/ConstraintLayout">ConstraintLayout</a></p>
+<li>
+<p><a target="_blank" rel="noopener" href="https://developer.android.google.cn/reference/android/support/constraint/ConstraintLayout">ConstraintLayout</a></p>
 </li>
-<li><p><a target="_blank" rel="noopener" href="https://twiserandom.com/android/graphics/what-is-a-bitmap-in-android/index.html#What_is_bitmap">Bitmap</a></p>
+<li>
+<p><a target="_blank" rel="noopener" href="https://twiserandom.com/android/graphics/what-is-a-bitmap-in-android/index.html#What_is_bitmap">Bitmap</a></p>
 </li>
-<li><p>good fontFamily: roboto</p>
+<li>
+<p>good fontFamily: roboto</p>
 </li>
 </ul>
-<h3 id="Context"><a href="#Context" class="headerlink" title="Context"></a>Context</h3><p>带看：<a target="_blank" rel="noopener" href="https://blog.csdn.net/guolin_blog/article/details/47028975">https://blog.csdn.net/guolin_blog/article/details/47028975</a></p>
-<h3 id="Button"><a href="#Button" class="headerlink" title="Button"></a>Button</h3><p><code>onClickListener</code></p>
-<h3 id="CameraX"><a href="#CameraX" class="headerlink" title="CameraX"></a>CameraX</h3><p>底层成像原理：<a target="_blank" rel="noopener" href="https://blog.csdn.net/Windgs_YF/article/details/104262321">https://blog.csdn.net/Windgs_YF/article/details/104262321</a></p>
+<h3 id="Context">Context</h3>
+<p>带看：<a target="_blank" rel="noopener" href="https://blog.csdn.net/guolin_blog/article/details/47028975">https://blog.csdn.net/guolin_blog/article/details/47028975</a></p>
+<h3 id="Button">Button</h3>
+<p><code>onClickListener</code></p>
+<h3 id="CameraX">CameraX</h3>
+<p>底层成像原理：<a target="_blank" rel="noopener" href="https://blog.csdn.net/Windgs_YF/article/details/104262321">https://blog.csdn.net/Windgs_YF/article/details/104262321</a></p>
 <p>使用：<a target="_blank" rel="noopener" href="https://developer.android.com/codelabs/camerax-getting-started#4">https://developer.android.com/codelabs/camerax-getting-started#4</a></p>
 <p>Camera沉思录：<a target="_blank" rel="noopener" href="https://yeungeek.github.io/2020/01/14/AndroidCamera-Basic/">https://yeungeek.github.io/2020/01/14/AndroidCamera-Basic/</a></p>
-<h3 id="Fragment"><a href="#Fragment" class="headerlink" title="Fragment"></a>Fragment</h3><p><a target="_blank" rel="noopener" href="https://developer.android.com/guide/fragments/create">https://developer.android.com/guide/fragments/create</a></p>
+<h3 id="Fragment">Fragment</h3>
+<p><a target="_blank" rel="noopener" href="https://developer.android.com/guide/fragments/create">https://developer.android.com/guide/fragments/create</a></p>
 <p>A Fragment is a piece of an application’s user interface or behavior that can be placed in an <code>Activity</code>. Interaction with fragments is done through <code>FragmentManager</code>, which can be obtained via <code>Activity.getFragmentManager()</code> and <code>Fragment.getFragmentManager()</code>.</p>
-<p>You can add your fragment to the activity’s view hierarchy either by defining the fragment in your activity’s layout file or by defining a fragment container in your activity’s layout file and then programmatically adding the fragment from within your activity.In either case, you need to add a <code>FragmentContainerView</code> that defines the location where the fragment should be placed within the activity’s view hierarchy.</p>
+<p>You can add your fragment to the activity’s view hierarchy either by defining the fragment in your activity’s layout file or by defining a fragment container in your activity’s layout file and then programmatically adding the fragment from within your <a target="_blank" rel="noopener" href="http://activity.In">activity.In</a> either case, you need to add a <code>FragmentContainerView</code> that defines the location where the fragment should be placed within the activity’s view hierarchy.</p>
 <ul>
-<li><p>静态添加fragment</p>
+<li>
+<p>静态添加fragment</p>
 </li>
-<li><p>动态添加fragment</p>
+<li>
+<p>动态添加fragment</p>
 </li>
-<li><p>FragmentTransaction</p>
+<li>
+<p>FragmentTransaction</p>
 <ul>
 <li>同一个界面内的fragment操作</li>
 <li><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/18634207/difference-between-add-replace-and-addtobackstack">add vs replace</a></li>
 </ul>
 </li>
 </ul>
-<h3 id="Navigation"><a href="#Navigation" class="headerlink" title="Navigation"></a>Navigation</h3><p>Navigation 组件旨在用于具有一个主 Activity 和多个 Fragment 目的地的应用。<strong>主 Activity 与导航图相关联</strong>，且包含一个负责根据需要交换目的地的 <code>NavHostFragment</code>。</p>
+<h3 id="Navigation">Navigation</h3>
+<p>Navigation 组件旨在用于具有一个主 Activity 和多个 Fragment 目的地的应用。<strong>主 Activity 与导航图相关联</strong>，且包含一个负责根据需要交换目的地的 <code>NavHostFragment</code>。</p>
 <p><a target="_blank" rel="noopener" href="https://developer.android.com/guide/navigation/navigation-getting-started">https://developer.android.com/guide/navigation/navigation-getting-started</a></p>
 <p>导航到一个目的地会将该目的地推送到堆栈的顶部。</p>
 <p>Practice: <a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1759529">https://cloud.tencent.com/developer/article/1759529</a></p>
 <ul>
-<li><p>safeArgs: 带着变量一起导航过去</p>
+<li>
+<p>safeArgs: 带着变量一起导航过去</p>
 <p><a target="_blank" rel="noopener" href="https://www.raywenderlich.com/19327407-using-safe-args-with-the-android-navigation-component">https://www.raywenderlich.com/19327407-using-safe-args-with-the-android-navigation-component</a></p>
 </li>
 </ul>
-<h3 id="onCreated-v-s-onViewCreated"><a href="#onCreated-v-s-onViewCreated" class="headerlink" title="onCreated v.s onViewCreated"></a>onCreated v.s onViewCreated</h3><p><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/28929637/difference-and-uses-of-oncreate-oncreateview-and-onactivitycreated-in-fra">https://stackoverflow.com/questions/28929637/difference-and-uses-of-oncreate-oncreateview-and-onactivitycreated-in-fra</a></p>
-<h2 id="Data-Binding"><a href="#Data-Binding" class="headerlink" title="Data Binding"></a>Data Binding</h2><p>Fragment databinding：<a target="_blank" rel="noopener" href="https://developer.android.com/topic/libraries/view-binding#fragments">https://developer.android.com/topic/libraries/view-binding#fragments</a></p>
+<h3 id="onCreated-v-s-onViewCreated">onCreated v.s onViewCreated</h3>
+<p><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/28929637/difference-and-uses-of-oncreate-oncreateview-and-onactivitycreated-in-fra">https://stackoverflow.com/questions/28929637/difference-and-uses-of-oncreate-oncreateview-and-onactivitycreated-in-fra</a></p>
+<h2 id="Data-Binding">Data Binding</h2>
+<p>Fragment databinding：<a target="_blank" rel="noopener" href="https://developer.android.com/topic/libraries/view-binding#fragments">https://developer.android.com/topic/libraries/view-binding#fragments</a></p>
 <p>注意添加dependency后会自动生成 FragmentBinding的一个类，比如我的一个fragment叫inferFragment，那么类名就是 InferFragmentBinding</p>
 <p>Build遇到的问题：<a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/55909804/duplicate-class-android-support-v4-app-inotificationsidechannel-found-in-modules">https://stackoverflow.com/questions/55909804/duplicate-class-android-support-v4-app-inotificationsidechannel-found-in-modules</a></p>
-<h2 id="LifeCycyle"><a href="#LifeCycyle" class="headerlink" title="LifeCycyle"></a>LifeCycyle</h2><ul>
-<li><p>onStart: when the activity becomes visible , when navigate away and come back, onStart will be called</p>
+<h2 id="LifeCycyle">LifeCycyle</h2>
+<ul>
+<li>
+<p>onStart: when the activity becomes visible , when navigate away and come back, onStart will be called</p>
 </li>
-<li><p>onStop: when the activity becomes out of the screen. Use this to persist (permanently save) data.</p>
+<li>
+<p>onStop: when the activity becomes out of the screen. Use this to persist (permanently save) data.</p>
 </li>
-<li><p>onResume: when the activity gains focus</p>
+<li>
+<p>onResume: when the activity gains focus</p>
 </li>
-<li><p>onPause: when the activity losses focus. Should keep execution fast in onRause since the next activity is not shown until it completes.</p>
+<li>
+<p>onPause: when the activity losses focus. Should keep execution fast in onRause since the next activity is not shown until it completes.</p>
 </li>
-<li><p>onCreate: only called once when the activity is first launched. Initialize variables (that initialize only once) in onCreate.</p>
+<li>
+<p>onCreate: only called once when the activity is first launched. Initialize variables (that initialize only once) in onCreate.</p>
 </li>
-<li><p>onDestory: It is called once when the activity is fully destroyed. </p>
+<li>
+<p>onDestory: It is called once when the activity is fully destroyed.</p>
 <p><a target="_blank" rel="noopener" href="https://tva1.sinaimg.cn/large/008i3skNly1grehsmkkm5j61c30u0my502.jpg" title="img" class="gallery-item"><img src="https://tva1.sinaimg.cn/large/008i3skNly1grehsmkkm5j61c30u0my502.jpg" alt="img"></a></p>
 </li>
 </ul>
-<h3 id="Intent"><a href="#Intent" class="headerlink" title="Intent"></a>Intent</h3><p><a target="_blank" rel="noopener" href="https://jishuin.proginn.com/p/763bfbd30374">https://jishuin.proginn.com/p/763bfbd30374</a></p>
+<h3 id="Intent">Intent</h3>
+<p><a target="_blank" rel="noopener" href="https://jishuin.proginn.com/p/763bfbd30374">https://jishuin.proginn.com/p/763bfbd30374</a></p>
 <ul>
 <li>action</li>
 <li>data</li>
 </ul>
 <p><a target="_blank" rel="noopener" href="https://developer.android.com/reference/android/content/Intent">https://developer.android.com/reference/android/content/Intent</a></p>
-<h4 id="pick-picture-intent"><a href="#pick-picture-intent" class="headerlink" title="pick picture intent:"></a>pick picture intent:</h4><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">lateinit</span> <span class="keyword">var</span> getContent: ActivityResultLauncher&lt;String&gt;</span><br><span class="line"></span><br><span class="line">getContent = registerForActivityResult(ActivityResultContracts.GetContent()) &#123; uri: Uri -&gt;</span><br><span class="line">            <span class="comment">// some calculation process                                                                  </span></span><br><span class="line">            CoroutineScope(Dispatchers.Main).launch &#123;</span><br><span class="line">                intensity = Utils.getIntensityFromUri(uri,contentResolver)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">getContent.launch(<span class="string">&quot;image/*&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="Activity-Result"><a href="#Activity-Result" class="headerlink" title="Activity Result"></a>Activity Result</h3><p><a target="_blank" rel="noopener" href="https://developer.android.com/training/basics/intents/result?hl=zh-cn">https://developer.android.com/training/basics/intents/result?hl=zh-cn</a></p>
+<h4 id="pick-picture-intent">pick picture intent:</h4>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">lateinit</span> <span class="keyword">var</span> getContent: ActivityResultLauncher&lt;String&gt;</span><br><span class="line"></span><br><span class="line">getContent = registerForActivityResult(ActivityResultContracts.GetContent()) &#123; uri: Uri -&gt;</span><br><span class="line">            <span class="comment">// some calculation process                                                                  </span></span><br><span class="line">            CoroutineScope(Dispatchers.Main).launch &#123;</span><br><span class="line">                intensity = Utils.getIntensityFromUri(uri,contentResolver)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">getContent.launch(<span class="string">&quot;image/*&quot;</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="Activity-Result">Activity Result</h3>
+<p><a target="_blank" rel="noopener" href="https://developer.android.com/training/basics/intents/result?hl=zh-cn">https://developer.android.com/training/basics/intents/result?hl=zh-cn</a></p>
 <ul>
 <li>Pull the photo URI into an image variable and create a writeable image of it?</li>
 </ul>
 <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_38304672/article/details/110846682">https://blog.csdn.net/qq_38304672/article/details/110846682</a></p>
-<h2 id="Import-Modules"><a href="#Import-Modules" class="headerlink" title="Import Modules"></a>Import Modules</h2><p><a target="_blank" rel="noopener" href="https://medium.com/android-news/a-beginners-guide-to-setting-up-opencv-android-library-on-android-studio-19794e220f3c">opencv</a></p>
-<h3 id="Proxy"><a href="#Proxy" class="headerlink" title="Proxy"></a>Proxy</h3><ul>
+<h2 id="Import-Modules">Import Modules</h2>
+<p><a target="_blank" rel="noopener" href="https://medium.com/android-news/a-beginners-guide-to-setting-up-opencv-android-library-on-android-studio-19794e220f3c">opencv</a></p>
+<h3 id="Proxy">Proxy</h3>
+<ul>
 <li>setup <a target="_blank" rel="noopener" href="https://github.com/yanue/V2rayU/wiki/V2rayU%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E">v2ray</a></li>
 <li>setup android as below</li>
 </ul>
 <p><a target="_blank" rel="noopener" href="https://tva1.sinaimg.cn/large/008i3skNly1grfkusmyr3j312c0u0dze.jpg" title="image-20210612164639566" class="gallery-item"><img src="https://tva1.sinaimg.cn/large/008i3skNly1grfkusmyr3j312c0u0dze.jpg" alt="image-20210612164639566"></a></p>
 <p><a target="_blank" rel="noopener" href="https://tva1.sinaimg.cn/large/008i3skNly1grfkujxyccj31c00u0wyu.jpg" title="image-20210612164622393" class="gallery-item"><img src="https://tva1.sinaimg.cn/large/008i3skNly1grfkujxyccj31c00u0wyu.jpg" alt="image-20210612164622393"></a></p>
-<h2 id="Opencv"><a href="#Opencv" class="headerlink" title="Opencv"></a>Opencv</h2><ul>
+<h2 id="Opencv">Opencv</h2>
+<ul>
 <li><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/25642532/opencv-pointx-y-represent-column-row-or-row-column">Point: {column,row}~(x,y) in graph</a></li>
 </ul>
-<h2 id="Assets"><a href="#Assets" class="headerlink" title="Assets"></a>Assets</h2><p>Use AssetManager: provides access to an application’s raw asset files.</p>
+<h2 id="Assets">Assets</h2>
+<p>Use AssetManager: provides access to an application’s raw asset files.</p>
 <p><code>context.getAssets()</code> will return <code>AssetManager</code> object.</p>
 <ul>
-<li><p><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/54384425/how-to-get-a-listbitmap-from-asset-folder-in-kotlin">get a list of bitmap from assets folder</a></p>
+<li>
+<p><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/54384425/how-to-get-a-listbitmap-from-asset-folder-in-kotlin">get a list of bitmap from assets folder</a></p>
 </li>
-<li><p>assetManager 操作的路径是 <code>assets</code> 下，所以打开图片的话路径就是 <code>image.jpg</code>, 而不是 <code>assets/image.jpg</code></p>
+<li>
+<p>assetManager 操作的路径是 <code>assets</code> 下，所以打开图片的话路径就是 <code>image.jpg</code>, 而不是 <code>assets/image.jpg</code></p>
 </li>
-<li><p>打开并加载图片</p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> am= requireContext().assets</span><br><span class="line"><span class="keyword">val</span> istm: InputStream = am.<span class="keyword">open</span>(<span class="string">&quot;test.jpg&quot;</span>)</span><br><span class="line"><span class="keyword">val</span> bitmap = BitmapFactory.decodeStream(istm)</span><br><span class="line">imageIs.setImageBitmap(bitmap)</span><br></pre></td></tr></table></figure></li>
+<li>
+<p>打开并加载图片</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> am= requireContext().assets</span><br><span class="line"><span class="keyword">val</span> istm: InputStream = am.<span class="keyword">open</span>(<span class="string">&quot;test.jpg&quot;</span>)</span><br><span class="line"><span class="keyword">val</span> bitmap = BitmapFactory.decodeStream(istm)</span><br><span class="line">imageIs.setImageBitmap(bitmap)</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
-<h3 id="TfLite"><a href="#TfLite" class="headerlink" title="TfLite"></a>TfLite</h3><p>See a good example <a target="_blank" rel="noopener" href="https://github.com/teresawu/random">here</a>.</p>
+<h3 id="TfLite">TfLite</h3>
+<p>See a good example <a target="_blank" rel="noopener" href="https://github.com/teresawu/random">here</a>.</p>
 <p><a target="_blank" rel="noopener" href="https://tva1.sinaimg.cn/large/008i3skNly1grhgl4bffqj31c00u0qv5.jpg" title="ae6b294b3d6ab85f4c689dffdd0c9102" class="gallery-item"><img src="https://tva1.sinaimg.cn/large/008i3skNly1grhgl4bffqj31c00u0qv5.jpg" alt="ae6b294b3d6ab85f4c689dffdd0c9102"></a></p>
-<h3 id="Listen-on-multiple-Buttons"><a href="#Listen-on-multiple-Buttons" class="headerlink" title="Listen on multiple Buttons"></a>Listen on multiple Buttons</h3><p><a target="_blank" rel="noopener" href="https://myandroid.site/multiple-onclicklistener-in-kotlin-android-studio-example/">https://myandroid.site/multiple-onclicklistener-in-kotlin-android-studio-example/</a></p>
-<h3 id="Load-TfLite-Model"><a href="#Load-TfLite-Model" class="headerlink" title="Load TfLite Model"></a>Load TfLite Model</h3><p><a target="_blank" rel="noopener" href="https://towardsdatascience.com/spam-classification-in-android-with-tensorflow-lite-cde417e81260">https://towardsdatascience.com/spam-classification-in-android-with-tensorflow-lite-cde417e81260</a></p>
+<h3 id="Listen-on-multiple-Buttons">Listen on multiple Buttons</h3>
+<p><a target="_blank" rel="noopener" href="https://myandroid.site/multiple-onclicklistener-in-kotlin-android-studio-example/">https://myandroid.site/multiple-onclicklistener-in-kotlin-android-studio-example/</a></p>
+<h3 id="Load-TfLite-Model">Load TfLite Model</h3>
+<p><a target="_blank" rel="noopener" href="https://towardsdatascience.com/spam-classification-in-android-with-tensorflow-lite-cde417e81260">https://towardsdatascience.com/spam-classification-in-android-with-tensorflow-lite-cde417e81260</a></p>
 <p><a target="_blank" rel="noopener" href="https://heartbeat.fritz.ai/loading-and-running-a-quantized-tensorflow-lite-model-on-android-18aa7505076a">https://heartbeat.fritz.ai/loading-and-running-a-quantized-tensorflow-lite-model-on-android-18aa7505076a</a></p>
-<h2 id="Bluetooth"><a href="#Bluetooth" class="headerlink" title="Bluetooth"></a>Bluetooth</h2><p><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=eg-t_rhDSoM">https://www.youtube.com/watch?v=eg-t_rhDSoM</a></p>
+<h2 id="Bluetooth">Bluetooth</h2>
+<p><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=eg-t_rhDSoM">https://www.youtube.com/watch?v=eg-t_rhDSoM</a></p>
 <ul>
 <li>标定</li>
 </ul>
-<h3 id="如何在Fragment之间共享数据"><a href="#如何在Fragment之间共享数据" class="headerlink" title="如何在Fragment之间共享数据?"></a>如何在Fragment之间共享数据?</h3><p><a target="_blank" rel="noopener" href="https://johnsonlee.io/2020/12/05/sharing-data-between-fragments/">https://johnsonlee.io/2020/12/05/sharing-data-between-fragments/</a></p>
-<h2 id="协程与挂起"><a href="#协程与挂起" class="headerlink" title="协程与挂起"></a>协程与挂起</h2><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1KJ41137E9/?spm_id_from=333.788.recommend_more_video.-1">https://www.bilibili.com/video/BV1KJ41137E9/?spm_id_from=333.788.recommend_more_video.-1</a></p>
-<h3 id="suspend"><a href="#suspend" class="headerlink" title="suspend"></a>suspend</h3><p>挂起。</p>
+<h3 id="如何在Fragment之间共享数据">如何在Fragment之间共享数据?</h3>
+<p><a target="_blank" rel="noopener" href="https://johnsonlee.io/2020/12/05/sharing-data-between-fragments/">https://johnsonlee.io/2020/12/05/sharing-data-between-fragments/</a></p>
+<h2 id="协程与挂起">协程与挂起</h2>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1KJ41137E9/?spm_id_from=333.788.recommend_more_video.-1">https://www.bilibili.com/video/BV1KJ41137E9/?spm_id_from=333.788.recommend_more_video.-1</a></p>
+<h3 id="suspend">suspend</h3>
+<p>挂起。</p>
 <ul>
 <li>作用：函数的创建者对调用者的提醒，告诉调用者这是一个耗时函数，最好放到协程里在后台执行。会限制函数只能在协程里被调用。</li>
-<li>什么时候用？<ul>
-<li>耗时的时候：I&#x2F;O操作和计算工作。<ul>
+<li>什么时候用？
+<ul>
+<li>耗时的时候：I/O操作和计算工作。
+<ul>
 <li>文件读写、网络交互、图片处理等</li>
 <li>需要等待的函数</li>
 </ul>
@@ -257,15 +308,17 @@
 <li>挂起后主线程就去不会执行当前代码块了，会往后走。这样主线程就不会卡。</li>
 </ul>
 <p><code>launch &#123;&#125;</code> &lt;-&gt; handler.post { task } +resume ( suspend挂起后回到主线程继续执行 )</p>
-<h3 id="async"><a href="#async" class="headerlink" title="async"></a>async</h3><p>同时挂起</p>
-<h2 id="一件拍摄"><a href="#一件拍摄" class="headerlink" title="一件拍摄"></a>一件拍摄</h2><p>通过delay</p>
-<h3 id="同步"><a href="#同步" class="headerlink" title="同步"></a>同步</h3><p>要加锁</p>
+<h3 id="async">async</h3>
+<p>同时挂起</p>
+<h2 id="一件拍摄">一件拍摄</h2>
+<p>通过delay</p>
+<h3 id="同步">同步</h3>
+<p>要加锁</p>
 <p><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/56480520/kotlin-coroutines-sequential-execution">https://stackoverflow.com/questions/56480520/kotlin-coroutines-sequential-execution</a></p>
-<h2 id="ViewModel"><a href="#ViewModel" class="headerlink" title="ViewModel"></a>ViewModel</h2><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">lateinit</span> <span class="keyword">var</span> viewModel: InferViewModel</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">var</span> _binding: InferFragmentBinding? = <span class="literal">null</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">val</span> binding <span class="keyword">get</span>() = _binding!!</span><br><span class="line"></span><br><span class="line"> <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onCreateView</span><span class="params">(</span></span></span><br><span class="line"><span class="params"><span class="function">        inflater: <span class="type">LayoutInflater</span>, container: <span class="type">ViewGroup</span>?,</span></span></span><br><span class="line"><span class="params"><span class="function">        savedInstanceState: <span class="type">Bundle</span>?</span></span></span><br><span class="line"><span class="params"><span class="function">    )</span></span>: View &#123;</span><br><span class="line">        viewModel = ViewModelProviders.of(<span class="keyword">this</span>).<span class="keyword">get</span>(InferViewModel::<span class="keyword">class</span>.java)</span><br><span class="line">        _binding = InferFragmentBinding.inflate(inflater, container, <span class="literal">false</span>)</span><br><span class="line">        <span class="keyword">return</span> binding.root</span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="Build-apk"><a href="#Build-apk" class="headerlink" title="Build apk"></a>Build apk</h2><p>split分包：</p>
+<h2 id="ViewModel">ViewModel</h2>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">lateinit</span> <span class="keyword">var</span> viewModel: InferViewModel</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">var</span> _binding: InferFragmentBinding? = <span class="literal">null</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">val</span> binding <span class="keyword">get</span>() = _binding!!</span><br><span class="line"></span><br><span class="line"> <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onCreateView</span><span class="params">(</span></span></span><br><span class="line"><span class="params"><span class="function">        inflater: <span class="type">LayoutInflater</span>, container: <span class="type">ViewGroup</span>?,</span></span></span><br><span class="line"><span class="params"><span class="function">        savedInstanceState: <span class="type">Bundle</span>?</span></span></span><br><span class="line"><span class="params"><span class="function">    )</span></span>: View &#123;</span><br><span class="line">        viewModel = ViewModelProviders.of(<span class="keyword">this</span>).<span class="keyword">get</span>(InferViewModel::<span class="keyword">class</span>.java)</span><br><span class="line">        _binding = InferFragmentBinding.inflate(inflater, container, <span class="literal">false</span>)</span><br><span class="line">        <span class="keyword">return</span> binding.root</span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Build-apk">Build apk</h2>
+<p>split分包：</p>
 <p><a target="_blank" rel="noopener" href="https://juejin.cn/post/6844904006976798733">https://juejin.cn/post/6844904006976798733</a></p>
 </div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
         var options = {
