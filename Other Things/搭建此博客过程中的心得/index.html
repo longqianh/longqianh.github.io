@@ -113,126 +113,107 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><h1>搭建此博客过程中的心得</h1>
-<h2 id="1-Hexo框架">1. <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/26625249">Hexo框架</a></h2>
-<p>看到“绑定域名”之前就可以了。</p>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="搭建此博客过程中的心得"><a href="#搭建此博客过程中的心得" class="headerlink" title="搭建此博客过程中的心得"></a>搭建此博客过程中的心得</h1><h2 id="1-Hexo框架"><a href="#1-Hexo框架" class="headerlink" title="1. Hexo框架"></a>1. <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/26625249">Hexo框架</a></h2><p>看到“绑定域名”之前就可以了。</p>
 <p>理解以下：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">hexo clean % 清除当前缓存</span><br><span class="line">hexo g -d % generate 生成博客</span><br><span class="line">hexo d % deploy 将博客部署到GitHub</span><br><span class="line">hexo s % hexo server的简写 之后可以在localhost上访问</span><br><span class="line">hexo new &quot;bulabula&quot; %生成名为bulabula的md文件（一篇新文章）</span><br></pre></td></tr></table></figure>
-<h2 id="2-购买域名">2. 购买域名</h2>
-<p>选择了阿里云，发现域名买起来也挺方便的。</p>
+
+
+
+<h2 id="2-购买域名"><a href="#2-购买域名" class="headerlink" title="2. 购买域名"></a>2. 购买域名</h2><p>选择了阿里云，发现域名买起来也挺方便的。</p>
  <span id="more"></span>
-<h2 id="3-域名与GitHub-Page-绑定">3. 域名与GitHub Page 绑定</h2>
-<p>这里踩了不少坑。有的文章跟着走下来却没有效果。最后是跟着<a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1037114">这篇文章</a>的域名解析和GitHub解析部分完成的。还是要用SSH。只需要做一个A类型和一个CNAME类型两个域名解析。</p>
+
+<h2 id="3-域名与GitHub-Page-绑定"><a href="#3-域名与GitHub-Page-绑定" class="headerlink" title="3. 域名与GitHub Page 绑定"></a>3. 域名与GitHub Page 绑定</h2><p>这里踩了不少坑。有的文章跟着走下来却没有效果。最后是跟着<a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1037114">这篇文章</a>的域名解析和GitHub解析部分完成的。还是要用SSH。只需要做一个A类型和一个CNAME类型两个域名解析。</p>
 <p>需要域名和GitHub Page双向绑定。</p>
-<p>（1）<a target="_blank" rel="noopener" href="http://xn--longqianh-4b3oz585c.github.io">输入longqianh.github.io</a>。由于在setting里的设置，GitHub <a target="_blank" rel="noopener" href="http://xn--Pagelongqianh-691ui1ffttvxhbu0bjikurtda5826ib62e0gxa.com">Page会帮我重定向到我购买的longqianh.com</a>，然后DNS服务器解析域名，将 <a href="http://longqianh.com">longqianh.com</a> 解析为我GitHub Page 的IP地址，然后得以访问。<a target="_blank" rel="noopener" href="https://blog.csdn.net/gui951753/article/details/83070180">但是可能是一个IP可能对应多个web地址，直接访问IP地址是不行的</a>。</p>
-<p>（2）<a target="_blank" rel="noopener" href="http://xn--longqianh-4b3oz585c.com">输入longqianh.com</a>。DNS服务器解析到GitHub Page的IP地址进行访问。</p>
-<h3 id="CNAME">CNAME</h3>
-<p>我似乎还没有理解在域名解析那里设置CNAME所起的作用。</p>
+<p>（1）输入longqianh.github.io。由于在setting里的设置，GitHub Page会帮我重定向到我购买的longqianh.com，然后DNS服务器解析域名，将 longqianh.com 解析为我GitHub Page 的IP地址，然后得以访问。<a target="_blank" rel="noopener" href="https://blog.csdn.net/gui951753/article/details/83070180">但是可能是一个IP可能对应多个web地址，直接访问IP地址是不行的</a>。</p>
+<p>（2）输入longqianh.com。DNS服务器解析到GitHub Page的IP地址进行访问。</p>
+<h3 id="CNAME"><a href="#CNAME" class="headerlink" title="CNAME"></a>CNAME</h3><p>我似乎还没有理解在域名解析那里设置CNAME所起的作用。</p>
 <ul>
-<li>2022.9.6 现在理解了：在 source/ 下写入CNAME，deploy后github会自动把github.io换到CNAME中的自定义域名里</li>
+<li>2022.9.6 现在理解了：在 source&#x2F; 下写入CNAME，deploy后github会自动把github.io换到CNAME中的自定义域名里</li>
 </ul>
-<h2 id="4-主题设置">4. 主题设置</h2>
-<p>我从<a target="_blank" rel="noopener" href="https://hexo.io/themes/">各种hexo的主题</a>里选择了 Ayer 主题， 然后修改.yml文件、一些.ejs文件，然后更换了一些图片。从Google的主题上拿下来了一个钢铁侠的超好看背景图片，然后从一些icon网站下了一些钢铁侠的图标，用PS反相操作一下，把黑色反转成白色以突出，就成了现在的模样。</p>
-<h2 id="5-一些常见问题">5. 一些常见问题</h2>
-<h3 id="将本地Blog文件与remote-GitHub-repo链接">将本地Blog文件与remote GitHub repo链接</h3>
-<ul>
+<h2 id="4-主题设置"><a href="#4-主题设置" class="headerlink" title="4. 主题设置"></a>4. 主题设置</h2><p>我从<a target="_blank" rel="noopener" href="https://hexo.io/themes/">各种hexo的主题</a>里选择了 Ayer 主题， 然后修改.yml文件、一些.ejs文件，然后更换了一些图片。从Google的主题上拿下来了一个钢铁侠的超好看背景图片，然后从一些icon网站下了一些钢铁侠的图标，用PS反相操作一下，把黑色反转成白色以突出，就成了现在的模样。</p>
+<h2 id="5-一些常见问题"><a href="#5-一些常见问题" class="headerlink" title="5. 一些常见问题"></a>5. 一些常见问题</h2><h3 id="将本地Blog文件与remote-GitHub-repo链接"><a href="#将本地Blog文件与remote-GitHub-repo链接" class="headerlink" title="将本地Blog文件与remote GitHub repo链接"></a>将本地Blog文件与remote GitHub repo链接</h3><ul>
 <li>remote: Support for password authentication was removed on August 13, 2021.</li>
-<li>2021.8.13之后不能再用账号密码链接里，需要利用GitHub token
-<ul>
-<li>登陆 GitHub –&gt; settings –&gt; Developer settings –&gt; Personal access tokens –&gt; generate new token</li>
+<li>2021.8.13之后不能再用账号密码链接里，需要利用GitHub token<ul>
+<li>登陆 GitHub –&gt; settings –&gt; Developer settings –&gt; Personal access tokens –&gt; generate new token </li>
 <li><code>git remote set-url origin https://&lt;token&gt;@github.com/longqianh/blog.git</code></li>
 <li>这里 <code>blog.git</code> 是我的远程代码仓库，<code>github.io.git</code> 是hexo部署上去的GitHub Page的仓库，这两个仓库分离是可以实现代码同步和快速部署相互不干扰</li>
 </ul>
 </li>
 </ul>
-<h3 id="hexo-g-失败">hexo g 失败</h3>
-<p>‘YAMLException: can not read a block mapping entry; a multiline key may not be an implicit key at line 6, column 1’</p>
+<h3 id="hexo-g-失败"><a href="#hexo-g-失败" class="headerlink" title="hexo g 失败"></a>hexo g 失败</h3><p>‘YAMLException: can not read a block mapping entry; a multiline key may not be an implicit key at line 6, column 1’</p>
 <p>解决：</p>
 <p>title: hexo 注意冒号后面要加空格</p>
 <p>categories 下面的’-’ 号，后面也要加空格再写字</p>
-<h3 id="hexo-d-失败">hexo d 失败</h3>
-<p>某一天突然hexo d失败，说access failed，查了一下发现GitHub上的SSH没了。</p>
+<h3 id="hexo-d-失败"><a href="#hexo-d-失败" class="headerlink" title="hexo d 失败"></a>hexo d 失败</h3><p>某一天突然hexo d失败，说access failed，查了一下发现GitHub上的SSH没了。</p>
 <p>到settings的deploy keys，Add deploy key，然后回到自己本地的github.io的文件夹，获取ssh key：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;邮箱名&quot;</span><br></pre></td></tr></table></figure>
+
 <p>这里邮箱名应该是GitHub的注册邮箱。</p>
 <p>然后进入.ssh文件夹，打开id_rsa，全选复制到GitHub的ssh key那里，选上下面的write access，然后就可以了。</p>
 <p>可以测试一下：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+
 <p>应该是可以得到回应的。</p>
 <p>接下来 <code>hexo g -d</code> 就可以部署啦！</p>
-<h4 id="2022-11-30">2022.11.30</h4>
-<p><code>hexo g -d</code> 报错：</p>
+<h4 id="2022-11-30"><a href="#2022-11-30" class="headerlink" title="2022.11.30"></a>2022.11.30</h4><p><code>hexo g -d</code> 报错：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">kex_exchange_identification: Connection closed by remote host</span><br><span class="line">Connection closed by 20.205.243.166 port 22</span><br></pre></td></tr></table></figure>
+
 <p>这里原因是ssh连接出了问题。可以重新连一遍：</p>
 <ol>
-<li>
-<p>local端：重新生成私有仓库密钥（注意：rsa对应着私钥，还有个ed-25519的是公钥，用在public repo）</p>
+<li><p>local端：重新生成私有仓库密钥（注意：rsa对应着私钥，还有个ed-25519的是公钥，用在public repo）</p>
 <p><code>ssh-keygen -t rsa -C &quot;longqianh@gmail.com&quot;</code>，然后一直按回车</p>
 </li>
-<li>
-<p>remote端：删除这个电脑之前的密钥，添加新的私钥</p>
+<li><p>remote端：删除这个电脑之前的密钥，添加新的私钥</p>
 <ul>
-<li>进入 /usr/longqianh/.ssh (<code>command+shift+.</code> 显示隐藏文件)</li>
+<li>进入 &#x2F;usr&#x2F;longqianh&#x2F;.ssh (<code>command+shift+.</code> 显示隐藏文件)</li>
 <li>复制 <code>id_rsa.pub</code> 里的全部内容</li>
 <li>在GitHub远端粘贴</li>
 </ul>
 </li>
-<li>
-<p><code>ssh -T git@github.com</code> 测试，成功</p>
+<li><p><code>ssh -T git@github.com</code> 测试，成功</p>
 </li>
 </ol>
 <p>后记：其实和第一个问题是一样的，只不过解决过程中对rsa的理解加深了，ed25519对应着public repo，一开始按照github的教程[1]添加ed25519，出现了permission denied。而用rsa的原因就在于其对应private repo [2]。</p>
 <p>参考文档：</p>
 <p>​	[1] <a target="_blank" rel="noopener" href="https://github.com/settings/keys">https://github.com/settings/keys</a></p>
 <p>​	[2] <a target="_blank" rel="noopener" href="https://bobcares.com/blog/permission-denied-in-publickey-ssh-github/">https://bobcares.com/blog/permission-denied-in-publickey-ssh-github/</a></p>
-<h3 id="部署后GitHub有些文件没改动">部署后GitHub有些文件没改动</h3>
-<ul>
+<h3 id="部署后GitHub有些文件没改动"><a href="#部署后GitHub有些文件没改动" class="headerlink" title="部署后GitHub有些文件没改动"></a>部署后GitHub有些文件没改动</h3><ul>
 <li>之前的About文件夹改成了about，但是 <code>hexo clean &amp;&amp; hexo g -d</code> 后仍然是About</li>
 <li>需要删除 <code>.deploy_git</code> 文件再重新部署 <code>rm -rf .deploy_git</code></li>
 </ul>
-<h3 id="其它">其它</h3>
-<ul>
-<li>
-<p>404</p>
+<h3 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h3><ul>
+<li><p>404</p>
 <p>GitHub中在Enforce https上打个勾 ✅</p>
 </li>
 </ul>
-<p>​</p>
-<h2 id="6-日志">6. 日志</h2>
-<h3 id="2020-5-4">2020.5.4</h3>
-<ul>
+<p>​	</p>
+<h2 id="6-日志"><a href="#6-日志" class="headerlink" title="6. 日志"></a>6. 日志</h2><h3 id="2020-5-4"><a href="#2020-5-4" class="headerlink" title="2020.5.4"></a>2020.5.4</h3><ul>
 <li>尝试改善一下mathjax渲染，行内公式有些问题。莫得成功。<a target="_blank" rel="noopener" href="https://abelsu7.top/2018/10/29/hexo-mathjax/#%E6%9B%BF%E6%8D%A2%E9%BB%98%E8%AE%A4%E6%B8%B2%E6%9F%93%E5%BC%95%E6%93%8E">替换默认渲染引擎</a></li>
-<li>给目录添加超链接  <a target="_blank" rel="noopener" href="http://xianbai.me/learn-md/article/syntax/links.html">markdown学习</a> 默认的初始路径为/public 应该从public文件中找html。</li>
-<li>具体一些，比如2020-ICM添加的超链接路径是这样的：/2020/05/02/Projects/2020-ICM/index.html</li>
+<li>给目录添加超链接  <a target="_blank" rel="noopener" href="http://xianbai.me/learn-md/article/syntax/links.html">markdown学习</a> 默认的初始路径为&#x2F;public 应该从public文件中找html。</li>
+<li>具体一些，比如2020-ICM添加的超链接路径是这样的：&#x2F;2020&#x2F;05&#x2F;02&#x2F;Projects&#x2F;2020-ICM&#x2F;index.html</li>
 </ul>
-<h3 id="2022-9-6">2022.9.6</h3>
-<ul>
-<li>将 <code>blog.git</code> 是作为远程代码仓库，<code>github.io.git</code> 作为hexo部署上去的GitHub Page的仓库，实现代码同步和快速部署相互不干扰，以后可以在Mac Studio/Macbook Air任意一台上写和改blog，然后部署、<code>git push -u origin main:main</code>，在另一台 <code>git pull</code> 同步代码了</li>
+<h3 id="2022-9-6"><a href="#2022-9-6" class="headerlink" title="2022.9.6"></a>2022.9.6</h3><ul>
+<li>将 <code>blog.git</code> 是作为远程代码仓库，<code>github.io.git</code> 作为hexo部署上去的GitHub Page的仓库，实现代码同步和快速部署相互不干扰，以后可以在Mac Studio&#x2F;Macbook Air任意一台上写和改blog，然后部署、<code>git push -u origin main:main</code>，在另一台 <code>git pull</code> 同步代码了</li>
 <li>增加了CNAME，由此修好了部署后需要重新修改自定义域名的问题</li>
 <li>更新了关于、友链界面，增加了近闻、论文和画廊</li>
 <li>增加了文章置顶</li>
-<li>修改和整理了标签与分类
-<ul>
+<li>修改和整理了标签与分类<ul>
 <li>标签要有特性</li>
 <li>分类可以分级，目前分为了Life、Notes 和 Projects</li>
 </ul>
 </li>
 </ul>
-<h3 id="2023-1-25">2023.1.25</h3>
-<ul>
+<h3 id="2023-1-25"><a href="#2023-1-25" class="headerlink" title="2023.1.25"></a>2023.1.25</h3><ul>
 <li>hexo 的 Latex 渲染存在换行的问题需要解决</li>
 <li>增加了简易的gallery 需要改layout美化</li>
-<li>latex 的书写问题：
-<ul>
-<li>Na_{out}^{+} <a target="_blank" rel="noopener" href="https://math.now.sh?inline=Na%5E%7B%2B%7D_%7Bout%7D" class="gallery-item"><img src="https://math.now.sh?inline=Na%5E%7B%2B%7D_%7Bout%7D" style="display:inline-block;margin: 0;"/></a>和 Na^{+}_{out}  <a target="_blank" rel="noopener" href="https://math.now.sh?inline=Na_%7Bout%7D%5E%7B%2B%7D" class="gallery-item"><img src="https://math.now.sh?inline=Na_%7Bout%7D%5E%7B%2B%7D" style="display:inline-block;margin: 0;"/></a> 在 typora 中都能成功渲染</li>
+<li>latex 的书写问题：<ul>
+<li>Na_{out}^{+} $Na^{+}<em>{out}$和 Na^{+}_{out}  $Na</em>{out}^{+}$ 在 typora 中都能成功渲染</li>
 <li>但是只有先下标再上标的书写方式 Na_{out}^{+} 可以在 hexo 的 blog 中成功渲染</li>
 </ul>
 </li>
 </ul>
-<h3 id="2023-1-27">2023.1.27</h3>
-<ul>
-<li>
-<p>sinaimg 链接失效的问题亟待解决 很多图片木有了😭</p>
+<h3 id="2023-1-27"><a href="#2023-1-27" class="headerlink" title="2023.1.27"></a>2023.1.27</h3><ul>
+<li><p>sinaimg 链接失效的问题亟待解决 很多图片木有了😭</p>
 <ul>
 <li>数学物理方法笔记</li>
 <li>光通信笔记</li>
@@ -242,44 +223,35 @@
 <li>…….</li>
 </ul>
 </li>
-<li>
-<p>之后的图片放在本地的assets文件夹内，但是需要解决本地md端和网页端显示一致的问题</p>
+<li><p>之后的图片放在本地的assets文件夹内，但是需要解决本地md端和网页端显示一致的问题</p>
 <ul>
 <li>🌟解决方案：<a target="_blank" rel="noopener" href="https://www.npmjs.com/package/hexo-intuitive-image">hexo-intuitive-image</a>, <a target="_blank" rel="noopener" href="https://www.npmjs.com/package/hexo-image-localpath?activeTab=explore">hexo-image-localpath</a></li>
 <li>把 hexo-image-localpath 101行代码 <code>await fs.copyFile(src,dest)</code> 改为了 <code>fs.move(src,dest)</code> 以节省空间</li>
 </ul>
 </li>
-<li>
-<p>修改了post链接方式：</p>
+<li><p>修改了post链接方式：</p>
 <ul>
 <li>before：<code>permalink: :year/:month/:day/:title/</code></li>
 <li>after：<code>permalink: :title/</code></li>
 </ul>
 </li>
 </ul>
-<h3 id="2023-5-2">2023.5.2</h3>
-<ul>
-<li>
-<p>重新 deploy 及遇到 npm包出错的问题</p>
+<h3 id="2023-5-2"><a href="#2023-5-2" class="headerlink" title="2023.5.2"></a>2023.5.2</h3><ul>
+<li><p>重新 deploy 及遇到 npm包出错的问题</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">rm</span> -rf ./.deploy_git</span><br><span class="line">npm uninstall hexo-pdf</span><br><span class="line">npm install --save hexo-pdf</span><br><span class="line">npm uninstall hexo-generator-search</span><br><span class="line">npm install hexo-generator-search --save</span><br></pre></td></tr></table></figure>
 </li>
-<li>
-<p>latex-to-image-renderer：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm i hexo-renderer-markdown-it --save</span><br><span class="line">npm i markdown-it-latex2img --save</span><br></pre></td></tr></table></figure>
-</li>
+<li><p>latex-to-image-renderer：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm i hexo-renderer-markdown-it --save</span><br><span class="line">npm i markdown-it-latex2img --save</span><br></pre></td></tr></table></figure></li>
 </ul>
-<h3 id="2023-12-5-7">2023.12.5~7</h3>
-<ul>
-<li>解决部分图片显示失败的问题
-<ul>
+<h3 id="2023-12-5-7"><a href="#2023-12-5-7" class="headerlink" title="2023.12.5~7"></a>2023.12.5~7</h3><ul>
+<li>解决部分图片显示失败的问题<ul>
 <li>solution：图片存到 assets 文件夹作为备份，文件夹中的图片上传到图床</li>
 </ul>
 </li>
-<li>解决部分数学公式显示失败的问题
-<ul>
+<li>解决部分数学公式显示失败的问题<ul>
 <li>换行的转译问题: 2个\会有一个被认作转译符，因此需要打4个\</li>
 <li>align 的换行问题：\end{align} 上面不要有空行</li>
-<li><code>*</code> 的显示问题：<code>**</code> 存在转译问题，因此把乘号换成 <code>\star</code> 或者 <code>\dagger</code></li>
+<li><code>*</code> 的显示问题：<code>**</code> 存在转译问题，因此把乘号换成 <code>\star</code> 或者 <code>\dagger</code> </li>
 <li><code>|</code> 的显示问题：使用 <code>\vert</code></li>
 <li><code>‘</code> 的显示问题：使用 <code>^\prime</code></li>
 <li><code>\left\&#123;</code> 改为 <code>\left[</code></li>
@@ -287,44 +259,43 @@
 </li>
 <li>添加整体资源文件夹 assets 用于更有条理地分类存放pdf</li>
 </ul>
-<h3 id="待办">待办</h3>
-<ul>
-<li>
-<p>[ ] 调整html文章行间距和字体大小 现在行间距有点小 字体也有点小</p>
+<h3 id="待办"><a href="#待办" class="headerlink" title="待办"></a>待办</h3><ul>
+<li><p><input disabled="" type="checkbox"> 
+调整html文章行间距和字体大小 现在行间距有点小 字体也有点小</p>
 </li>
-<li>
-<p>[ ] 把分类一栏做的漂亮些 现在各级目录都有 但是大小不一</p>
+<li><p><input disabled="" type="checkbox"> 
+把分类一栏做的漂亮些 现在各级目录都有 但是大小不一</p>
 </li>
-<li>
-<p>[ ] 修改超链接hover颜色 弄的好看一点 蓝色太尴尬了</p>
+<li><p><input disabled="" type="checkbox"> 
+修改超链接hover颜色 弄的好看一点 蓝色太尴尬了</p>
 </li>
-<li>
-<p>[ ] 了解RSS并配置</p>
+<li><p><input disabled="" type="checkbox"> 
+了解RSS并配置</p>
 </li>
-<li>
-<p>[ ] 制作像“简悦”里那样的目录样式：鼠标移到左边显示目录 移开目录隐藏</p>
+<li><p><input disabled="" type="checkbox"> 
+制作像“简悦”里那样的目录样式：鼠标移到左边显示目录 移开目录隐藏</p>
 </li>
-<li>
-<p>[ ] 配置页面文字和代码样式：借助 Typora 的主题文件夹中的主题代码</p>
+<li><p><input disabled="" type="checkbox"> 
+配置页面文字和代码样式：借助 Typora 的主题文件夹中的主题代码</p>
 </li>
-<li>
-<p>[x] 添加、修改CV</p>
+<li><p><input checked="" disabled="" type="checkbox"> 
+添加、修改CV</p>
 </li>
-<li>
-<p>[ ] 笔记翻修：ongoing</p>
+<li><p><input disabled="" type="checkbox"> 
+笔记翻修：ongoing</p>
 </li>
-<li>
-<p>[ ] 项目界面图形化精简化为 card 形式：参考 <a target="_blank" rel="noopener" href="https://www.mit.edu/~amidi/">https://www.mit.edu/~amidi/</a></p>
+<li><p><input disabled="" type="checkbox"> 
+项目界面图形化精简化为 card 形式：参考 <a target="_blank" rel="noopener" href="https://www.mit.edu/~amidi/">https://www.mit.edu/~amidi/</a></p>
 </li>
-<li>
-<p>[x] Use <code>markdown-it-latex2img</code> to beautify the math</p>
+<li><p><input checked="" disabled="" type="checkbox"> 
+Use <code>markdown-it-latex2img</code> to beautify the math</p>
 <ul>
 <li>按照 <a target="_blank" rel="noopener" href="https://github.com/MakerGYT/markdown-it-latex2img#Hexo%EF%BC%8C%E6%B3%A8%E6%84%8F%E8%BF%98%E8%A6%81%E5%AE%89%E8%A3%85%E4%B8%80%E4%B8%AArenderer">https://github.com/MakerGYT/markdown-it-latex2img#Hexo，注意还要安装一个renderer</a></li>
-<li>注意 label/ref 不能用了（未改）</li>
+<li>注意 label&#x2F;ref 不能用了（未改）</li>
 </ul>
 </li>
-<li>
-<p>[x] 公式渲染中的引用问题</p>
+<li><p><input checked="" disabled="" type="checkbox"> 
+公式渲染中的引用问题</p>
 </li>
 </ul>
 </div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {

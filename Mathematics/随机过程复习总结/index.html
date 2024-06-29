@@ -89,7 +89,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">742</span>
+            <span class="post-count">1.2k</span>
         </span>
     </span>
 
@@ -98,7 +98,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">2 min</span>
+            <span class="post-count">5 min</span>
         </span>
     </span>
 </div>
@@ -113,146 +113,110 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><h1>随机过程复习总结</h1>
-<p>随机过程课程的复习总结笔记。</p>
-<h2 id="1-Markov-过程">1. Markov 过程</h2>
-<h3 id="状态转移矩阵">状态转移矩阵</h3>
-<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=p_%7Bij%7D%5En%3DP%28X_%7Bt_0%2Bn%7D%3Dj%5Cmid%20X_%7Bt_0%7D%3Di%29" class="gallery-item"><img src="https://math.now.sh?inline=p_%7Bij%7D%5En%3DP%28X_%7Bt_0%2Bn%7D%3Dj%5Cmid%20X_%7Bt_0%7D%3Di%29" style="display:inline-block;margin: 0;"/></a></p>
-<p>CK方程： <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cvec%5Cmu%5E%7B%28n%29%7D%3D%5Cvec%5Cmu%5E%7B0%7DP%5En" class="gallery-item"><img src="https://math.now.sh?inline=%5Cvec%5Cmu%5E%7B%28n%29%7D%3D%5Cvec%5Cmu%5E%7B0%7DP%5En" style="display:inline-block;margin: 0;"/></a></p>
-<h3 id="常返和暂留">常返和暂留</h3>
-<p>常返：状态 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=i" class="gallery-item"><img src="https://math.now.sh?inline=i" style="display:inline-block;margin: 0;"/></a> 出发有限次可回</p>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="随机过程复习总结"><a href="#随机过程复习总结" class="headerlink" title="随机过程复习总结"></a>随机过程复习总结</h1><p>随机过程课程的复习总结笔记。</p>
+<h2 id="1-Markov-过程"><a href="#1-Markov-过程" class="headerlink" title="1. Markov 过程"></a>1. Markov 过程</h2><h3 id="状态转移矩阵"><a href="#状态转移矩阵" class="headerlink" title="状态转移矩阵"></a>状态转移矩阵</h3><p> $p_{ij}^n&#x3D;P(X_{t_0+n}&#x3D;j\mid X_{t_0}&#x3D;i)$</p>
+<p>CK方程： $\vec\mu^{(n)}&#x3D;\vec\mu^{0}P^n$</p>
+<h3 id="常返和暂留"><a href="#常返和暂留" class="headerlink" title="常返和暂留"></a>常返和暂留</h3><p>常返：状态 $i$ 出发有限次可回</p>
 <p><em>常见考点</em>：求出所有互达等价类，各状态的周期和常返性，计算所有正常返态的平均回转时，计算极限概率</p>
 <p><strong>是否常返</strong>：</p>
 <ul>
-<li>
-<p>有限马尔可夫链可以利用闭互达等价类直接判断：如果状态空间 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=I" class="gallery-item"><img src="https://math.now.sh?inline=I" style="display:inline-block;margin: 0;"/></a> 有限，则状态 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=i" class="gallery-item"><img src="https://math.now.sh?inline=i" style="display:inline-block;margin: 0;"/></a> 常返当且仅当 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=i" class="gallery-item"><img src="https://math.now.sh?inline=i" style="display:inline-block;margin: 0;"/></a> 的互达等价类是闭的，且这时 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=i" class="gallery-item"><img src="https://math.now.sh?inline=i" style="display:inline-block;margin: 0;"/></a> 一定是正常返</p>
+<li><p>有限马尔可夫链可以利用闭互达等价类直接判断：如果状态空间 $I$ 有限，则状态 $i$ 常返当且仅当 $i$ 的互达等价类是闭的，且这时 $i$ 一定是正常返</p>
 </li>
-<li>
-<p>利用互达等价类减少计算：若状态 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=i" class="gallery-item"><img src="https://math.now.sh?inline=i" style="display:inline-block;margin: 0;"/></a> 和 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=j" class="gallery-item"><img src="https://math.now.sh?inline=j" style="display:inline-block;margin: 0;"/></a> 互达，则 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=d%28i%29%3Dd(j)" class="gallery-item"><img src="https://math.now.sh?inline=d%28i%29%3Dd(j)" style="display:inline-block;margin: 0;"/></a> （周期相等），<a target="_blank" rel="noopener" href="https://math.now.sh?inline=i" class="gallery-item"><img src="https://math.now.sh?inline=i" style="display:inline-block;margin: 0;"/></a> 常返/正常返当且仅当 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=j" class="gallery-item"><img src="https://math.now.sh?inline=j" style="display:inline-block;margin: 0;"/></a> 常返/正常返</p>
+<li><p>利用互达等价类减少计算：若状态 $i$ 和 $j$ 互达，则 $d(i)&#x3D;d(j)$ （周期相等），$i$ 常返&#x2F;正常返当且仅当 $j$ 常返&#x2F;正常返</p>
 </li>
-<li>
-<p>通过计算来判断：计算 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=f_%7Bii%7D%3D%5Csum%5Climits_%7Bn%7Df_%7Bii%7D%5E%7B%28n%29%7D" class="gallery-item"><img src="https://math.now.sh?inline=f_%7Bii%7D%3D%5Csum%5Climits_%7Bn%7Df_%7Bii%7D%5E%7B%28n%29%7D" style="display:inline-block;margin: 0;"/></a>, <a target="_blank" rel="noopener" href="https://math.now.sh?inline=f_%7Bii%7D%3D1" class="gallery-item"><img src="https://math.now.sh?inline=f_%7Bii%7D%3D1" style="display:inline-block;margin: 0;"/></a> 常返，<a target="_blank" rel="noopener" href="https://math.now.sh?inline=f_%7Bii%7D%3C1" class="gallery-item"><img src="https://math.now.sh?inline=f_%7Bii%7D%3C1" style="display:inline-block;margin: 0;"/></a> 暂留。其中 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=f_%7Bij%7D%5E%7B%28n%29%7D" class="gallery-item"><img src="https://math.now.sh?inline=f_%7Bij%7D%5E%7B%28n%29%7D" style="display:inline-block;margin: 0;"/></a> 是 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=i" class="gallery-item"><img src="https://math.now.sh?inline=i" style="display:inline-block;margin: 0;"/></a> 出发在第 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=n" class="gallery-item"><img src="https://math.now.sh?inline=n" style="display:inline-block;margin: 0;"/></a> 步首次击中 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=j" class="gallery-item"><img src="https://math.now.sh?inline=j" style="display:inline-block;margin: 0;"/></a> 的概率。对于非封闭的互达等价类，通过计算 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=f_%7Bii%7D" class="gallery-item"><img src="https://math.now.sh?inline=f_%7Bii%7D" style="display:inline-block;margin: 0;"/></a> 说明暂留性。</p>
+<li><p>通过计算来判断：计算 $f_{ii}&#x3D;\sum\limits_{n}f_{ii}^{(n)}$, $f_{ii}&#x3D;1$ 常返，$f_{ii}&lt;1$ 暂留。其中 $f_{ij}^{(n)}$ 是 $i$ 出发在第 $n$ 步首次击中 $j$ 的概率。对于非封闭的互达等价类，通过计算 $f_{ii}$ 说明暂留性。</p>
 </li>
-<li>
-<p>是否正常返：计算平均回转时 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cmu_i%3D%5Csum%5Climits_n%20nf_%7Bii%7D%5E%7B%28n%29%7D" class="gallery-item"><img src="https://math.now.sh?inline=%5Cmu_i%3D%5Csum%5Climits_n%20nf_%7Bii%7D%5E%7B%28n%29%7D" style="display:inline-block;margin: 0;"/></a>, 看是否有限, 若无限则为零常返</p>
+<li><p>是否正常返：计算平均回转时 $\mu_i&#x3D;\sum\limits_n nf_{ii}^{(n)}$, 看是否有限, 若无限则为零常返</p>
 </li>
 </ul>
 <p><strong>极限概率：</strong></p>
 <ul>
 <li>利用平稳分布</li>
-<li>若状态 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=j" class="gallery-item"><img src="https://math.now.sh?inline=j" style="display:inline-block;margin: 0;"/></a> 为暂留或零常返，则对所有 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=i" class="gallery-item"><img src="https://math.now.sh?inline=i" style="display:inline-block;margin: 0;"/></a>, <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Clim_%5Climits%7Bn%5Cto%5Cinfty%7D%20p_%7Bij%7D%5E%7B%28n%29%7D%3D0" class="gallery-item"><img src="https://math.now.sh?inline=%5Clim_%5Climits%7Bn%5Cto%5Cinfty%7D%20p_%7Bij%7D%5E%7B%28n%29%7D%3D0" style="display:inline-block;margin: 0;"/></a></li>
+<li>若状态 $j$ 为暂留或零常返，则对所有 $i$, $\lim_\limits{n\to\infty} p_{ij}^{(n)}&#x3D;0$</li>
 </ul>
-<h3 id="平稳分布">平稳分布</h3>
-<p>初始分布与一步分布相同：<a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cpi%20P%3D%5Cpi" class="gallery-item"><img src="https://math.now.sh?inline=%5Cpi%20P%3D%5Cpi" style="display:inline-block;margin: 0;"/></a>。</p>
-<p>比如：<a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cpi_1%3D%5Cfrac%201%202%20%5Cpi_1%2B%5Cfrac%201%203%5Cpi_2" class="gallery-item"><img src="https://math.now.sh?inline=%5Cpi_1%3D%5Cfrac%201%202%20%5Cpi_1%2B%5Cfrac%201%203%5Cpi_2" style="display:inline-block;margin: 0;"/></a> , 是指从初始状态 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cpi_1" class="gallery-item"><img src="https://math.now.sh?inline=%5Cpi_1" style="display:inline-block;margin: 0;"/></a> 一步后到 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cpi_1" class="gallery-item"><img src="https://math.now.sh?inline=%5Cpi_1" style="display:inline-block;margin: 0;"/></a> 再从 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cpi_1" class="gallery-item"><img src="https://math.now.sh?inline=%5Cpi_1" style="display:inline-block;margin: 0;"/></a> 以 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cfrac%201%202" class="gallery-item"><img src="https://math.now.sh?inline=%5Cfrac%201%202" style="display:inline-block;margin: 0;"/></a> 概率回到 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cpi_1" class="gallery-item"><img src="https://math.now.sh?inline=%5Cpi_1" style="display:inline-block;margin: 0;"/></a>， 一步后到 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cpi_2" class="gallery-item"><img src="https://math.now.sh?inline=%5Cpi_2" style="display:inline-block;margin: 0;"/></a> 再从 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cpi_2" class="gallery-item"><img src="https://math.now.sh?inline=%5Cpi_2" style="display:inline-block;margin: 0;"/></a> 以 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cfrac%201%203" class="gallery-item"><img src="https://math.now.sh?inline=%5Cfrac%201%203" style="display:inline-block;margin: 0;"/></a> 概率回到 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cpi_1" class="gallery-item"><img src="https://math.now.sh?inline=%5Cpi_1" style="display:inline-block;margin: 0;"/></a>。</p>
+<h3 id="平稳分布"><a href="#平稳分布" class="headerlink" title="平稳分布"></a>平稳分布</h3><p>初始分布与一步分布相同：$\pi P&#x3D;\pi$。</p>
+<p>比如：$\pi_1&#x3D;\frac 1 2 \pi_1+\frac 1 3\pi_2$ , 是指从初始状态 $\pi_1$ 一步后到 $\pi_1$ 再从 $\pi_1$ 以 $\frac 1 2$ 概率回到 $\pi_1$， 一步后到 $\pi_2$ 再从 $\pi_2$ 以 $\frac 1 3$ 概率回到 $\pi_1$。</p>
 <p>对互达等价类（不可约状态集）的计算：</p>
 <ul>
-<li>闭的 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cimplies" class="gallery-item"><img src="https://math.now.sh?inline=%5Cimplies" style="display:inline-block;margin: 0;"/></a> 正常返 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cimplies" class="gallery-item"><img src="https://math.now.sh?inline=%5Cimplies" style="display:inline-block;margin: 0;"/></a> 平稳分布存在且唯一， <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cpi_i%3D%5Cfrac%201%20%7B%5Cmu_i%7D" class="gallery-item"><img src="https://math.now.sh?inline=%5Cpi_i%3D%5Cfrac%201%20%7B%5Cmu_i%7D" style="display:inline-block;margin: 0;"/></a></li>
-<li>若为非周期正常返，则任何状态 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=i%2Cj%2C%5Clim_%5Climits%7Bn%5Cto%5Cinfty%7Dp_%7Bij%7D%5E%7B%28n%29%7D%3D%5Cpi_j" class="gallery-item"><img src="https://math.now.sh?inline=i%2Cj%2C%5Clim_%5Climits%7Bn%5Cto%5Cinfty%7Dp_%7Bij%7D%5E%7B%28n%29%7D%3D%5Cpi_j" style="display:inline-block;margin: 0;"/></a></li>
+<li>闭的 $\implies$ 正常返 $\implies$ 平稳分布存在且唯一， $\pi_i&#x3D;\frac 1 {\mu_i}$</li>
+<li>若为非周期正常返，则任何状态 $i,j,\lim_\limits{n\to\infty}p_{ij}^{(n)}&#x3D;\pi_j$</li>
 </ul>
-<h3 id="吸收概率和平均吸收时间">吸收概率和平均吸收时间</h3>
-<p>用递推的思想。</p>
-<p>设 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=h_i%3DP%28T_a%3C%5Cinfty%5Cmid%20X_0%3Di%29" class="gallery-item"><img src="https://math.now.sh?inline=h_i%3DP%28T_a%3C%5Cinfty%5Cmid%20X_0%3Di%29" style="display:inline-block;margin: 0;"/></a> 表示从状态 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=i" class="gallery-item"><img src="https://math.now.sh?inline=i" style="display:inline-block;margin: 0;"/></a> 出发在有限时间内能访问状态 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=a" class="gallery-item"><img src="https://math.now.sh?inline=a" style="display:inline-block;margin: 0;"/></a> 的概率，其中 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=T_a" class="gallery-item"><img src="https://math.now.sh?inline=T_a" style="display:inline-block;margin: 0;"/></a> 为首次访问状态 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=a" class="gallery-item"><img src="https://math.now.sh?inline=a" style="display:inline-block;margin: 0;"/></a> 的时间，有 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=h_i%3D%5Csum_%5Climits%7Bj%7Dp_%7Bij%7Dh_j" class="gallery-item"><img src="https://math.now.sh?inline=h_i%3D%5Csum_%5Climits%7Bj%7Dp_%7Bij%7Dh_j" style="display:inline-block;margin: 0;"/></a>.</p>
-<p>设 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=a_i%3DE%28T_a%5Cmid%20X_0%3Di%29" class="gallery-item"><img src="https://math.now.sh?inline=a_i%3DE%28T_a%5Cmid%20X_0%3Di%29" style="display:inline-block;margin: 0;"/></a> 表示从 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=i" class="gallery-item"><img src="https://math.now.sh?inline=i" style="display:inline-block;margin: 0;"/></a> 出发首次访问 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=a" class="gallery-item"><img src="https://math.now.sh?inline=a" style="display:inline-block;margin: 0;"/></a> 的平均步数，有 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=a_i%3D1%2B%5Csum_%5Climits%7Bj%7Dp_%7Bij%7Da_j" class="gallery-item"><img src="https://math.now.sh?inline=a_i%3D1%2B%5Csum_%5Climits%7Bj%7Dp_%7Bij%7Da_j" style="display:inline-block;margin: 0;"/></a>.</p>
-<h2 id="2-独立增量过程">2. 独立增量过程</h2>
-<h3 id="泊松过程">泊松过程</h3>
-<h4 id="定义">定义</h4>
-<ul>
-<li>
-<p>独立增量过程</p>
+<h3 id="吸收概率和平均吸收时间"><a href="#吸收概率和平均吸收时间" class="headerlink" title="吸收概率和平均吸收时间"></a>吸收概率和平均吸收时间</h3><p>用递推的思想。</p>
+<p>设 $h_i&#x3D;P(T_a&lt;\infty\mid X_0&#x3D;i)$ 表示从状态 $i$ 出发在有限时间内能访问状态 $a$ 的概率，其中 $T_a$ 为首次访问状态 $a$ 的时间，有 $h_i&#x3D;\sum_\limits{j}p_{ij}h_j$.</p>
+<p>设 $a_i&#x3D;E(T_a\mid X_0&#x3D;i)$ 表示从 $i$ 出发首次访问 $a$ 的平均步数，有 $a_i&#x3D;1+\sum_\limits{j}p_{ij}a_j$.</p>
+<h2 id="2-独立增量过程"><a href="#2-独立增量过程" class="headerlink" title="2. 独立增量过程"></a>2. 独立增量过程</h2><h3 id="泊松过程"><a href="#泊松过程" class="headerlink" title="泊松过程"></a>泊松过程</h3><h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><ul>
+<li><p>独立增量过程</p>
 </li>
-<li>
-<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=N%280%29%3D0" class="gallery-item"><img src="https://math.now.sh?inline=N%280%29%3D0" style="display:inline-block;margin: 0;"/></a></p>
+<li><p>$N(0)&#x3D;0$</p>
 </li>
-<li>
-<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=N%28t%29-N(s)%5Csim%20%5Cpi(%5Clambda(t-s))" class="gallery-item"><img src="https://math.now.sh?inline=N%28t%29-N(s)%5Csim%20%5Cpi(%5Clambda(t-s))" style="display:inline-block;margin: 0;"/></a></p>
+<li><p>$N(t)-N(s)\sim \pi(\lambda(t-s))$</p>
 </li>
-<li>
-<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cdisplaystyle%20P%28N(t%29-N(s)%3Dk)%3D%5Cfrac%7B%5B%5Clambda%20(t-s)%5D%5Eke%5E%7B-%5Clambda(t-s)%7D%7D%7Bk!%7D" class="gallery-item"><img src="https://math.now.sh?inline=%5Cdisplaystyle%20P%28N(t%29-N(s)%3Dk)%3D%5Cfrac%7B%5B%5Clambda%20(t-s)%5D%5Eke%5E%7B-%5Clambda(t-s)%7D%7D%7Bk!%7D" style="display:inline-block;margin: 0;"/></a></p>
+<li><p>$\displaystyle P(N(t)-N(s)&#x3D;k)&#x3D;\frac{[\lambda (t-s)]^ke^{-\lambda(t-s)}}{k!}$</p>
 </li>
 </ul>
-<h4 id="数字特征">数字特征</h4>
-<ul>
-<li>均值 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cmu_N%28t%29%3DE(N(t))%3D%5Clambda%20t" class="gallery-item"><img src="https://math.now.sh?inline=%5Cmu_N%28t%29%3DE(N(t))%3D%5Clambda%20t" style="display:inline-block;margin: 0;"/></a></li>
-<li>方差 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=D_N%28t%29%3D%5Clambda%20t" class="gallery-item"><img src="https://math.now.sh?inline=D_N%28t%29%3D%5Clambda%20t" style="display:inline-block;margin: 0;"/></a></li>
-<li>自协方差函数 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=C_N%28s%2Ct%29%3D%5Clambda%20%5Cmin%5C%7Bs%2Ct%5C%7D" class="gallery-item"><img src="https://math.now.sh?inline=C_N%28s%2Ct%29%3D%5Clambda%20%5Cmin%5C%7Bs%2Ct%5C%7D" style="display:inline-block;margin: 0;"/></a></li>
-<li>自相关函数 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=R_N%28s%2Ct%29%3DE(N(s)N(t))%3D%5Clambda%20%5Cmin%5C%7Bs%2Ct%5C%7D%2B%5Clambda%5E2%20st" class="gallery-item"><img src="https://math.now.sh?inline=R_N%28s%2Ct%29%3DE(N(s)N(t))%3D%5Clambda%20%5Cmin%5C%7Bs%2Ct%5C%7D%2B%5Clambda%5E2%20st" style="display:inline-block;margin: 0;"/></a></li>
+<h4 id="数字特征"><a href="#数字特征" class="headerlink" title="数字特征"></a>数字特征</h4><ul>
+<li>均值 $\mu_N(t)&#x3D;E(N(t))&#x3D;\lambda t$</li>
+<li>方差 $D_N(t)&#x3D;\lambda t$</li>
+<li>自协方差函数 $C_N(s,t)&#x3D;\lambda \min{s,t}$</li>
+<li>自相关函数 $R_N(s,t)&#x3D;E(N(s)N(t))&#x3D;\lambda \min{s,t}+\lambda^2 st$</li>
 </ul>
-<h4 id="推广">推广</h4>
-<ul>
-<li>
-<p>合成、分解后依旧是泊松过程</p>
+<h4 id="推广"><a href="#推广" class="headerlink" title="推广"></a>推广</h4><ul>
+<li><p>合成、分解后依旧是泊松过程</p>
 </li>
-<li>
-<p>非齐次：<a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Clambda%3D%5Clambda%28t%29" class="gallery-item"><img src="https://math.now.sh?inline=%5Clambda%3D%5Clambda%28t%29" style="display:inline-block;margin: 0;"/></a></p>
+<li><p>非齐次：$\lambda&#x3D;\lambda(t)$</p>
 </li>
-<li>
-<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5C%7BN%28t%29%5C%7D" class="gallery-item"><img src="https://math.now.sh?inline=%5C%7BN%28t%29%5C%7D" style="display:inline-block;margin: 0;"/></a> 为强度 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Clambda" class="gallery-item"><img src="https://math.now.sh?inline=%5Clambda" style="display:inline-block;margin: 0;"/></a> 的泊松过程 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Ciff" class="gallery-item"><img src="https://math.now.sh?inline=%5Ciff" style="display:inline-block;margin: 0;"/></a> 时间间隔 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=T_1%2CT_2%2C%5Ccdots" class="gallery-item"><img src="https://math.now.sh?inline=T_1%2CT_2%2C%5Ccdots" style="display:inline-block;margin: 0;"/></a> 相互独立，且服从均值为 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=1%2F%5Clambda" class="gallery-item"><img src="https://math.now.sh?inline=1%2F%5Clambda" style="display:inline-block;margin: 0;"/></a> 的指数分布</p>
+<li><p>${N(t)}$ 为强度 $\lambda$ 的泊松过程 $\iff$ 时间间隔 $T_1,T_2,\cdots$ 相互独立，且服从均值为 $1&#x2F;\lambda$ 的指数分布</p>
 </li>
 </ul>
-<h3 id="布朗运动">布朗运动</h3>
-<p>特殊的正态过程</p>
-<h4 id="定义-2">定义</h4>
-<ul>
-<li>
-<p>独立增量过程</p>
+<h3 id="布朗运动"><a href="#布朗运动" class="headerlink" title="布朗运动"></a>布朗运动</h3><p>特殊的正态过程</p>
+<h4 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h4><ul>
+<li><p>独立增量过程</p>
 </li>
-<li>
-<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=X%280%29%3D0" class="gallery-item"><img src="https://math.now.sh?inline=X%280%29%3D0" style="display:inline-block;margin: 0;"/></a></p>
+<li><p>$X(0)&#x3D;0$</p>
 </li>
-<li>
-<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=X%28t%29-X(s)%5Csim%20N(0%2C%5Csigma%5E2(t-s))" class="gallery-item"><img src="https://math.now.sh?inline=X%28t%29-X(s)%5Csim%20N(0%2C%5Csigma%5E2(t-s))" style="display:inline-block;margin: 0;"/></a></p>
+<li><p>$X(t)-X(s)\sim N(0,\sigma^2(t-s))$</p>
 </li>
 </ul>
-<h4 id="数字特征-2">数字特征</h4>
-<p>对标准布朗运动 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=B%28t%29%3D%5C%7BX(t)%2F%5Csigma%5C%7D" class="gallery-item"><img src="https://math.now.sh?inline=B%28t%29%3D%5C%7BX(t)%2F%5Csigma%5C%7D" style="display:inline-block;margin: 0;"/></a></p>
+<h4 id="数字特征-1"><a href="#数字特征-1" class="headerlink" title="数字特征"></a>数字特征</h4><p>对标准布朗运动 $B(t)&#x3D;{X(t)&#x2F;\sigma}$</p>
 <ul>
-<li><a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cmu_B%28t%29%3D0" class="gallery-item"><img src="https://math.now.sh?inline=%5Cmu_B%28t%29%3D0" style="display:inline-block;margin: 0;"/></a></li>
-<li><a target="_blank" rel="noopener" href="https://math.now.sh?inline=D_B%28t%29%3Dt" class="gallery-item"><img src="https://math.now.sh?inline=D_B%28t%29%3Dt" style="display:inline-block;margin: 0;"/></a></li>
-<li><a target="_blank" rel="noopener" href="https://math.now.sh?inline=C_B%28s%2Ct%29%3D%5Cmin%5C%7Bs%2Ct%5C%7D" class="gallery-item"><img src="https://math.now.sh?inline=C_B%28s%2Ct%29%3D%5Cmin%5C%7Bs%2Ct%5C%7D" style="display:inline-block;margin: 0;"/></a></li>
-<li><a target="_blank" rel="noopener" href="https://math.now.sh?inline=R_B%28s%2Ct%29%3D%5Cmin%5C%7Bs%2Ct%5C%7D" class="gallery-item"><img src="https://math.now.sh?inline=R_B%28s%2Ct%29%3D%5Cmin%5C%7Bs%2Ct%5C%7D" style="display:inline-block;margin: 0;"/></a></li>
+<li>$\mu_B(t)&#x3D;0$</li>
+<li>$D_B(t)&#x3D;t$</li>
+<li>$C_B(s,t)&#x3D;\min{s,t}$</li>
+<li>$R_B(s,t)&#x3D;\min{s,t}$</li>
 </ul>
-<h4 id="推广-2">推广</h4>
-<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5C%7BB%28t%29%3Bt%5Cgeq%200%5C%7D" class="gallery-item"><img src="https://math.now.sh?inline=%5C%7BB%28t%29%3Bt%5Cgeq%200%5C%7D" style="display:inline-block;margin: 0;"/></a> 是标准布朗运动，则：</p>
+<h4 id="推广-1"><a href="#推广-1" class="headerlink" title="推广"></a>推广</h4><p>${B(t);t\geq 0}$ 是标准布朗运动，则：</p>
 <ul>
-<li><a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5C%7BB%28t%2B%5Ctau%29-B(%5Ctau)%5C%7D" class="gallery-item"><img src="https://math.now.sh?inline=%5C%7BB%28t%2B%5Ctau%29-B(%5Ctau)%5C%7D" style="display:inline-block;margin: 0;"/></a> 也是</li>
-<li><a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5C%7B%5Cdisplaystyle%20%5Cfrac%201%20c%20B%28c%5E2t%29%5C%7D" class="gallery-item"><img src="https://math.now.sh?inline=%5C%7B%5Cdisplaystyle%20%5Cfrac%201%20c%20B%28c%5E2t%29%5C%7D" style="display:inline-block;margin: 0;"/></a> 也是</li>
-<li>$\widetilde B(t)=t\displaystyle B(\frac 1 t) $ 也是 （定义 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=0" class="gallery-item"><img src="https://math.now.sh?inline=0" style="display:inline-block;margin: 0;"/></a> 处为 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=0" class="gallery-item"><img src="https://math.now.sh?inline=0" style="display:inline-block;margin: 0;"/></a>）</li>
+<li>${B(t+\tau)-B(\tau)}$ 也是</li>
+<li>${\displaystyle \frac 1 c B(c^2t)}$ 也是</li>
+<li>$\widetilde B(t)&#x3D;t\displaystyle B(\frac 1 t) $ 也是 （定义 $0$ 处为 $0$）</li>
 </ul>
 <p>布朗桥过程：</p>
 <ul>
-<li><a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5C%7BB%28t%29%3B0%5Cleq%20t%5Cleq%201%5Cmid%20B(1)%3D0%5C%7D" class="gallery-item"><img src="https://math.now.sh?inline=%5C%7BB%28t%29%3B0%5Cleq%20t%5Cleq%201%5Cmid%20B(1)%3D0%5C%7D" style="display:inline-block;margin: 0;"/></a></li>
-<li><a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cmu%3D0" class="gallery-item"><img src="https://math.now.sh?inline=%5Cmu%3D0" style="display:inline-block;margin: 0;"/></a></li>
-<li><a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Csigma%5E2%3Dt%281-t%29" class="gallery-item"><img src="https://math.now.sh?inline=%5Csigma%5E2%3Dt%281-t%29" style="display:inline-block;margin: 0;"/></a></li>
-<li>对 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=0%5Cleq%20s%5Cleq%20t%5Cleq%201%2C%20%5Coperatorname%7BCov%7D%28B(s%29%2CB(t)%5Cmid%20B(1)%3D0)%3Ds(1-t)" class="gallery-item"><img src="https://math.now.sh?inline=0%5Cleq%20s%5Cleq%20t%5Cleq%201%2C%20%5Coperatorname%7BCov%7D%28B(s%29%2CB(t)%5Cmid%20B(1)%3D0)%3Ds(1-t)" style="display:inline-block;margin: 0;"/></a></li>
+<li>${B(t);0\leq t\leq 1\mid B(1)&#x3D;0}$</li>
+<li>$\mu&#x3D;0$</li>
+<li>$\sigma^2&#x3D;t(1-t)$</li>
+<li>对 $0\leq s\leq t\leq 1, \operatorname{Cov}(B(s),B(t)\mid B(1)&#x3D;0)&#x3D;s(1-t)$</li>
 </ul>
-<h4 id="首中时间相关">首中时间相关</h4>
-<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=P%28%5Cmax%5Climits_%7B0%5Cleq%20s%5Cleq%20t%7DB(s%29%5Cgeq%20y)%3DP(T_y%5Cleq%20t)%3D2P(B(t)%5Cgeq%20y)" class="gallery-item"><img src="https://math.now.sh?inline=P%28%5Cmax%5Climits_%7B0%5Cleq%20s%5Cleq%20t%7DB(s%29%5Cgeq%20y)%3DP(T_y%5Cleq%20t)%3D2P(B(t)%5Cgeq%20y)" style="display:inline-block;margin: 0;"/></a></p>
-<h2 id="3-平稳过程">3. 平稳过程</h2>
-<h4 id="宽平稳过程">宽平稳过程</h4>
-<ul>
+<h4 id="首中时间相关"><a href="#首中时间相关" class="headerlink" title="首中时间相关"></a>首中时间相关</h4><p>$P(\max\limits_{0\leq s\leq t}B(s)\geq y)&#x3D;P(T_y\leq t)&#x3D;2P(B(t)\geq y)$</p>
+<h2 id="3-平稳过程"><a href="#3-平稳过程" class="headerlink" title="3. 平稳过程"></a>3. 平稳过程</h2><h4 id="宽平稳过程"><a href="#宽平稳过程" class="headerlink" title="宽平稳过程"></a>宽平稳过程</h4><ul>
 <li>均值为常数</li>
 <li>自相关函数只和时间差有关</li>
 </ul>
-<h4 id="各态历经性">各态历经性</h4>
-<p>记 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Clangle%20X%28t%29%5Crangle%3D%5Cdisplaystyle%5Clim_%5Climits%7BT%5Cto%20%5Cinfty%7D%20%5Cfrac%7B1%7D%7B2T%7D%5Cint_%7B-T%7D%5E%7BT%7DX(t)dt" class="gallery-item"><img src="https://math.now.sh?inline=%5Clangle%20X%28t%29%5Crangle%3D%5Cdisplaystyle%5Clim_%5Climits%7BT%5Cto%20%5Cinfty%7D%20%5Cfrac%7B1%7D%7B2T%7D%5Cint_%7B-T%7D%5E%7BT%7DX(t)dt" style="display:inline-block;margin: 0;"/></a></p>
+<h4 id="各态历经性"><a href="#各态历经性" class="headerlink" title="各态历经性"></a>各态历经性</h4><p>记 $\langle X(t)\rangle&#x3D;\displaystyle\lim_\limits{T\to \infty} \frac{1}{2T}\int_{-T}^{T}X(t)dt$</p>
 <ul>
-<li>均值各态历经性： <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Clangle%20X%28t%29%5Crangle%3D%5Cmu_X" class="gallery-item"><img src="https://math.now.sh?inline=%5Clangle%20X%28t%29%5Crangle%3D%5Cmu_X" style="display:inline-block;margin: 0;"/></a></li>
-<li>自相关函数各态历经性：<a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Clangle%20X%28t%29X(t%2B%5Ctau)%5Crangle%3DE%5BX(t)X(t%2B%5Ctau)%5D%3DR_X(%5Ctau)" class="gallery-item"><img src="https://math.now.sh?inline=%5Clangle%20X%28t%29X(t%2B%5Ctau)%5Crangle%3DE%5BX(t)X(t%2B%5Ctau)%5D%3DR_X(%5Ctau)" style="display:inline-block;margin: 0;"/></a></li>
+<li>均值各态历经性： $\langle X(t)\rangle&#x3D;\mu_X$</li>
+<li>自相关函数各态历经性：$\langle X(t)X(t+\tau)\rangle&#x3D;E[X(t)X(t+\tau)]&#x3D;R_X(\tau)$</li>
 <li>（宽）各态历经过程：均值函数和自相关函数都有各态历经性</li>
 </ul>
 <p>重要推论：</p>
-<p>若 $\lim\limits_{\tau\to\infty} R_X(\tau) $ 存在，则 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5C%7BX%28t%29%5C%7D" class="gallery-item"><img src="https://math.now.sh?inline=%5C%7BX%28t%29%5C%7D" style="display:inline-block;margin: 0;"/></a> 对均值具有各态历经性当且仅当 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Clim_%5Climits%7B%5Ctau%5Cto%20%5Cinfty%7D%20R_X%28%5Ctau%29%3D%5Cmu_X%5E2" class="gallery-item"><img src="https://math.now.sh?inline=%5Clim_%5Climits%7B%5Ctau%5Cto%20%5Cinfty%7D%20R_X%28%5Ctau%29%3D%5Cmu_X%5E2" style="display:inline-block;margin: 0;"/></a></p>
-<h4 id="频率域表述">频率域表述</h4>
-<ul>
-<li>
-<p>平均功率 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%3D%20R_X%280%29%3D%5Cdisplaystyle%20%5Cfrac%201%20%7B2%5Cpi%7D%5Cint_%7B-%5Cinfty%7D%5E%7B%5Cinfty%7D%20S_X(%5Comega)%20%5Coperatorname%7Bd%7D%20%5Comega" class="gallery-item"><img src="https://math.now.sh?inline=%3D%20R_X%280%29%3D%5Cdisplaystyle%20%5Cfrac%201%20%7B2%5Cpi%7D%5Cint_%7B-%5Cinfty%7D%5E%7B%5Cinfty%7D%20S_X(%5Comega)%20%5Coperatorname%7Bd%7D%20%5Comega" style="display:inline-block;margin: 0;"/></a></p>
+<p>若 $\lim\limits_{\tau\to\infty} R_X(\tau) $ 存在，则 ${X(t)}$ 对均值具有各态历经性当且仅当 $\lim_\limits{\tau\to \infty} R_X(\tau)&#x3D;\mu_X^2$</p>
+<h4 id="频率域表述"><a href="#频率域表述" class="headerlink" title="频率域表述"></a>频率域表述</h4><ul>
+<li><p>平均功率 $&#x3D; R_X(0)&#x3D;\displaystyle \frac 1 {2\pi}\int_{-\infty}^{\infty} S_X(\omega) \operatorname{d} \omega$</p>
 </li>
-<li>
-<p>维纳-辛钦公式：<a target="_blank" rel="noopener" href="https://math.now.sh?inline=S_X%28%5Comega%29" class="gallery-item"><img src="https://math.now.sh?inline=S_X%28%5Comega%29" style="display:inline-block;margin: 0;"/></a> 和 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=R_X%28t%29" class="gallery-item"><img src="https://math.now.sh?inline=R_X%28t%29" style="display:inline-block;margin: 0;"/></a> 互为傅立叶变换对</p>
+<li><p>维纳-辛钦公式：$S_X(\omega)$ 和 $R_X(t)$ 互为傅立叶变换对</p>
 </li>
 </ul>
-<p>常用变换：<a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cdisplaystyle%20e%5E%7B-a%7C%5Ctau%7C%7D%5Cleftrightarrow%20%5Cfrac%7B2a%7D%7Ba%5E2%2B%5Comega%5Ew%7D" class="gallery-item"><img src="https://math.now.sh?inline=%5Cdisplaystyle%20e%5E%7B-a%7C%5Ctau%7C%7D%5Cleftrightarrow%20%5Cfrac%7B2a%7D%7Ba%5E2%2B%5Comega%5Ew%7D" style="display:inline-block;margin: 0;"/></a></p>
+<p>常用变换：$\displaystyle e^{-a|\tau|}\leftrightarrow \frac{2a}{a^2+\omega^w}$</p>
 </div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
         var options = {
             selector: '.gallery-item'

@@ -113,17 +113,13 @@
        
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><p>Train deep learning models on remote host.</p>
 <ul>
-<li>
-<p>tmux</p>
+<li><p>tmux</p>
 </li>
-<li>
-<p>conda virtual env</p>
+<li><p>conda virtual env</p>
 </li>
-<li>
-<p>visdom to monitor remotely</p>
+<li><p>visdom to monitor remotely</p>
 </li>
-<li>
-<pre><code class="language-shell">ssh username@ip
+<li><pre><code class="shell">ssh username@ip
 visdom -p port
 # then detach it
 
@@ -136,7 +132,6 @@ tmux new -s session-to-run-visdom-without-broken-pipe
 ssh -L port:127.0.0.1:port username@ip
 # then detach it 
 # then monitor the loss etc. in host machine at 127.0.0.1:port
-
 </code></pre>
 </li>
 </ul>
