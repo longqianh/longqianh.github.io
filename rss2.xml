@@ -6,7 +6,7 @@
   <link href="http://longqianh.com/rss2.xml" rel="self"/>
   
   <link href="http://longqianh.com/"/>
-  <updated>2024-06-11T01:48:21.489Z</updated>
+  <updated>2024-07-07T03:10:21.394Z</updated>
   <id>http://longqianh.com/</id>
   
   <author>
@@ -20,8 +20,8 @@
     <title>Compressed Ultrafast Photography (CUP)</title>
     <link href="http://longqianh.com/Research/Compressed-Ultrafast-Photography-CUP/"/>
     <id>http://longqianh.com/Research/Compressed-Ultrafast-Photography-CUP/</id>
-    <published>2024-06-10T15:21:13.000Z</published>
-    <updated>2024-06-11T01:48:21.489Z</updated>
+    <published>2024-06-11T06:21:13.000Z</published>
+    <updated>2024-07-07T03:10:21.394Z</updated>
     
     
       
@@ -49,7 +49,7 @@
     <title>Ophthalmology</title>
     <link href="http://longqianh.com/Biology/Ophthalmology/"/>
     <id>http://longqianh.com/Biology/Ophthalmology/</id>
-    <published>2024-02-07T12:18:21.000Z</published>
+    <published>2024-02-08T04:18:21.000Z</published>
     <updated>2024-04-10T02:08:28.708Z</updated>
     
     
@@ -76,7 +76,7 @@
     <title>Optics Tutorial</title>
     <link href="http://longqianh.com/Optics/Optics-Tutorial/"/>
     <id>http://longqianh.com/Optics/Optics-Tutorial/</id>
-    <published>2022-11-30T06:49:00.000Z</published>
+    <published>2022-11-30T22:49:00.000Z</published>
     <updated>2023-12-17T15:33:56.190Z</updated>
     
     
@@ -101,7 +101,7 @@
     <title>Mordern Neurobiology</title>
     <link href="http://longqianh.com/Biology/Mordern-Neurobiology/"/>
     <id>http://longqianh.com/Biology/Mordern-Neurobiology/</id>
-    <published>2022-11-09T09:08:29.000Z</published>
+    <published>2022-11-10T01:08:29.000Z</published>
     <updated>2024-02-07T12:29:36.336Z</updated>
     
     
@@ -125,7 +125,7 @@
     <title>Laser Ranging Design</title>
     <link href="http://longqianh.com/Project/Laser-Ranging-Design/"/>
     <id>http://longqianh.com/Project/Laser-Ranging-Design/</id>
-    <published>2022-11-09T06:40:27.000Z</published>
+    <published>2022-11-09T22:40:27.000Z</published>
     <updated>2023-01-27T02:26:45.784Z</updated>
     
     
@@ -144,9 +144,9 @@
     <category term="Optics" scheme="http://longqianh.com/categories/Projects/Optics/"/>
     
     
-    <category term="optics" scheme="http://longqianh.com/tags/optics/"/>
-    
     <category term="projects" scheme="http://longqianh.com/tags/projects/"/>
+    
+    <category term="optics" scheme="http://longqianh.com/tags/optics/"/>
     
   </entry>
   
@@ -154,7 +154,7 @@
     <title>Illumination strategy in Fourier ptychography</title>
     <link href="http://longqianh.com/Project/Fourier-Ptychography/"/>
     <id>http://longqianh.com/Project/Fourier-Ptychography/</id>
-    <published>2022-11-07T12:40:26.000Z</published>
+    <published>2022-11-08T04:40:26.000Z</published>
     <updated>2023-12-07T06:59:47.266Z</updated>
     
     
@@ -183,7 +183,7 @@
     <title>Molecular Medicine Notes</title>
     <link href="http://longqianh.com/Biology/Molecular-Medicine/"/>
     <id>http://longqianh.com/Biology/Molecular-Medicine/</id>
-    <published>2022-09-12T05:38:36.000Z</published>
+    <published>2022-09-12T20:38:36.000Z</published>
     <updated>2023-12-06T17:49:13.410Z</updated>
     
     
@@ -213,7 +213,7 @@
     <title>Deep Learning Applications in Augmented Reality (AR)</title>
     <link href="http://longqianh.com/Project/Augmented-Reality/"/>
     <id>http://longqianh.com/Project/Augmented-Reality/</id>
-    <published>2021-06-16T16:40:00.000Z</published>
+    <published>2021-06-17T07:40:00.000Z</published>
     <updated>2023-12-07T07:00:43.044Z</updated>
     
     
@@ -242,7 +242,7 @@
     <title>Android App Notes</title>
     <link href="http://longqianh.com/Computer-Science/Android-app-notes/"/>
     <id>http://longqianh.com/Computer-Science/Android-app-notes/</id>
-    <published>2021-06-06T07:26:00.000Z</published>
+    <published>2021-06-06T22:26:00.000Z</published>
     <updated>2022-09-05T18:25:09.278Z</updated>
     
     
@@ -282,7 +282,7 @@
     <title>2021-ICM</title>
     <link href="http://longqianh.com/Project/2021-ICM/"/>
     <id>http://longqianh.com/Project/2021-ICM/</id>
-    <published>2021-05-02T15:22:00.000Z</published>
+    <published>2021-05-03T06:22:00.000Z</published>
     <updated>2023-12-04T17:11:41.223Z</updated>
     
     
@@ -309,7 +309,7 @@
     <title>Modern Optical Testing Technology</title>
     <link href="http://longqianh.com/Optics/Modern-Optical-Testing-Technology/"/>
     <id>http://longqianh.com/Optics/Modern-Optical-Testing-Technology/</id>
-    <published>2021-04-05T16:35:11.000Z</published>
+    <published>2021-04-06T07:35:11.000Z</published>
     <updated>2022-11-03T08:38:37.503Z</updated>
     
     
@@ -357,7 +357,7 @@
     <title>Scientific Writing Notes</title>
     <link href="http://longqianh.com/Writing/Scientific-Writing/"/>
     <id>http://longqianh.com/Writing/Scientific-Writing/</id>
-    <published>2021-04-05T16:35:11.000Z</published>
+    <published>2021-04-06T07:35:11.000Z</published>
     <updated>2022-10-21T03:29:16.291Z</updated>
     
     
@@ -389,7 +389,7 @@
     <title>Optical Communication Notes</title>
     <link href="http://longqianh.com/Optics/Optical-Communication/"/>
     <id>http://longqianh.com/Optics/Optical-Communication/</id>
-    <published>2021-04-01T01:58:23.000Z</published>
+    <published>2021-04-01T16:58:23.000Z</published>
     <updated>2023-01-27T03:06:59.960Z</updated>
     
     
@@ -412,7 +412,7 @@
     <title>Compressive Sensing Notes</title>
     <link href="http://longqianh.com/Mathematics/Compressive-Sensing-Notes/"/>
     <id>http://longqianh.com/Mathematics/Compressive-Sensing-Notes/</id>
-    <published>2021-02-19T06:55:32.000Z</published>
+    <published>2021-02-19T22:55:32.000Z</published>
     <updated>2022-09-05T18:31:53.829Z</updated>
     
     
@@ -438,7 +438,7 @@
     <title>Tensor Algebra Notes</title>
     <link href="http://longqianh.com/Mathematics/Tensor-Algebra-Notes/"/>
     <id>http://longqianh.com/Mathematics/Tensor-Algebra-Notes/</id>
-    <published>2021-02-17T03:10:22.000Z</published>
+    <published>2021-02-17T19:10:22.000Z</published>
     <updated>2023-01-27T02:16:16.204Z</updated>
     
     
@@ -467,7 +467,7 @@
     <title>How to Write Review</title>
     <link href="http://longqianh.com/Writing/Writing-Review/"/>
     <id>http://longqianh.com/Writing/Writing-Review/</id>
-    <published>2021-02-02T06:18:28.000Z</published>
+    <published>2021-02-02T22:18:28.000Z</published>
     <updated>2022-09-06T03:55:14.746Z</updated>
     
     
@@ -494,8 +494,8 @@
     <title>Quantum Optics Notes</title>
     <link href="http://longqianh.com/Optics/Quantum-Optics/"/>
     <id>http://longqianh.com/Optics/Quantum-Optics/</id>
-    <published>2021-01-25T03:01:43.000Z</published>
-    <updated>2022-09-05T18:53:00.159Z</updated>
+    <published>2021-01-25T19:01:43.000Z</published>
+    <updated>2024-09-15T18:04:43.977Z</updated>
     
     
     <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css&quot; /&gt;&lt;div class=&quot;.article-gallery&quot;&gt;&lt;h1 id=&quot;量子光学笔记&quot;&gt;&lt;a href=&quot;#量子光学笔记&quot; class=&quot;headerlink&quot; title=&quot;量子光学笔记&quot;&gt;&lt;/a&gt;量子光学笔记&lt;/h1&gt;&lt;p&gt;这种讲座类的课，应该每节课课前看好论文，课后做好总结，及时与老师交流问题。&lt;/p&gt;
@@ -513,8 +513,7 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&quot;Photon-Statistics&quot;&gt;&lt;a href=&quot;#Photon-Statistics&quot; class=&quot;headerlink&quot; title=&quot;Photon Statistics&quot;&gt;&lt;/a&gt;Photon Statistics&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Uncertainty principle&lt;br&gt;$$&lt;br&gt;&#92;begin{aligned}&lt;br&gt;&#92;Delta x&#92;cdot&#92;Delta p&amp;amp;&#92;ge &#92;hbar&amp;#x2F;2 &#92;&lt;br&gt;&#92;Delta E&#92;cdot&#92;Delta t&amp;amp;&#92;ge&#92;hbar&amp;#x2F;2 &#92;quad &#92;text{能量,时间（波列长度）}&#92;&lt;br&gt;&#92;Delta n&#92;cdot&#92;Delta &#92;phi&amp;amp;&#92;ge &#92;hbar&amp;#x2F;2 &#92;quad &#92;text{光子数，相位}&lt;/p&gt;
-&lt;p&gt;&#92;end{aligned}&lt;br&gt;$$&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;Uncertainty principle&lt;br&gt;$$&lt;br&gt;&#92;begin{aligned}&lt;br&gt;&#92;Delta x&#92;cdot&#92;Delta p&amp;amp;&#92;ge &#92;hbar&amp;#x2F;2 &#92;&lt;br&gt;&#92;Delta E&#92;cdot&#92;Delta t&amp;amp;&#92;ge&#92;hbar&amp;#x2F;2 &#92;quad &#92;text{能量,时间（波列长度）}&#92;&lt;br&gt;&#92;Delta n&#92;cdot&#92;Delta &#92;phi&amp;amp;&#92;ge &#92;hbar&amp;#x2F;2 &#92;quad &#92;text{光子数，相位}&lt;br&gt;&#92;end{aligned}&lt;br&gt;$$&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;微波辐射先于激光产生：产生微波波段需要的跃迁能量较低，可以来自分子的振动与转动；微波波段的光对谐振腔的要求也小，对于同样的频率展宽，谐振腔的长度改变容易得到允许。&lt;/p&gt;
 &lt;p&gt;（原子发光—&amp;gt;在展宽范围内满足谐振条件的可以进行谐振）&lt;/p&gt;
@@ -539,7 +538,7 @@
     <title>Software Technical Foundation Notes</title>
     <link href="http://longqianh.com/Computer-Science/%E8%BD%AF%E4%BB%B6%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80/"/>
     <id>http://longqianh.com/Computer-Science/%E8%BD%AF%E4%BB%B6%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80/</id>
-    <published>2021-01-11T16:00:00.000Z</published>
+    <published>2021-01-12T08:00:00.000Z</published>
     <updated>2022-09-05T18:24:44.768Z</updated>
     
     
@@ -560,7 +559,7 @@
     <title>C++ Programming Specification</title>
     <link href="http://longqianh.com/Computer-Science/C++%E7%BC%96%E7%A8%8B%E8%A7%84%E8%8C%83/"/>
     <id>http://longqianh.com/Computer-Science/C++%E7%BC%96%E7%A8%8B%E8%A7%84%E8%8C%83/</id>
-    <published>2021-01-01T01:53:00.000Z</published>
+    <published>2021-01-01T17:53:00.000Z</published>
     <updated>2022-09-05T18:25:39.341Z</updated>
     
     
@@ -592,7 +591,7 @@
     <title>Electronics</title>
     <link href="http://longqianh.com/Electronics/Electronics/"/>
     <id>http://longqianh.com/Electronics/Electronics/</id>
-    <published>2020-12-11T11:41:32.000Z</published>
+    <published>2020-12-12T03:41:32.000Z</published>
     <updated>2022-09-05T18:29:27.908Z</updated>
     
     
