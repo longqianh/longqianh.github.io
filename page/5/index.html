@@ -151,6 +151,264 @@
     
     
     <article
+  id="post-Project/FSO-communication-system"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/Project/FSO-communication-system/"
+    >FSO communication system</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/Project/FSO-communication-system/" class="article-date">
+  <time datetime="2020-07-31T05:33:15.000Z" itemprop="datePublished">2020-07-30</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Projects/">Projects</a> / <a class="article-category-link" href="/categories/Projects/Optics/">Optics</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><p>This is the project I have done in 2020 UIUC’s OPTIC summer program.</p>
+<p>Thank you all , my teammates!</p>
+<ul>
+<li>Group Number : 3</li>
+<li>Group Leader : Longqian Huang</li>
+<li>Group members : Liang Sun, Yuxuan Liu, Junchi Feng, Yuhao Ma, Jinquan Shi, Zhuo Cheng, Yiru Pan, Dongao Cui, Muxi Zhao</li>
+</ul>
+<p>By the way, I think I did a great job in the presentation. The recording of our presentation is here. The powerpoint (Keynote) can be accessed <a target="_blank" rel="noopener" href="https://mega.nz/folder/NcYTxASI#RFHN-JpP7UUpRwfXU4NIxw">here</a>.</p>
+<p>Or you can get I quick view of the presentation below: (without the video)</p>
+
+
+	<div class="row">
+    <embed src="/projects/optical-system/FSOCS.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+<p>Next is our output article :)</p>
+<h1>Free Space Optical  Communication System</h1>
+<h2 id="1-What-is-FSO-Communication-System">1. What is FSO Communication System</h2>
+<p>We read the review and searched the Wikipedia to get a overview of FSO Communication System.</p>
+<p>FSO Communication is an idea of wireless communication using light based on the theory of light propagation in free space.</p>
+<p>Devices using technology of FSO communication make up a system. It is a outdoor system of <em>wireless optical communication system</em> (WOCS) and has some branches. Below is a classification tree of WOCS [1] :</p>
+<p><a target="_blank" rel="noopener" href="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djubq55j30oo0ewq49.jpg" title="WOCS classifications" class="gallery-item"><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djubq55j30oo0ewq49.jpg" alt="WOCS classifications"></a></p>
+<p>From that we know that we have choices of terrestrial links and space links. We considered both and think that terrestrial links is practical but space links is as well interesting and maybe a future-hot point.</p>
+<p>Below is a diagram of FSO communication link [1] (which maybe what we will construct in the next few days):</p>
+<p><a target="_blank" rel="noopener" href="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djwkyeuj30nu0eimyd.jpg" title="System composition" class="gallery-item"><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djwkyeuj30nu0eimyd.jpg" alt="System composition"></a></p>
+<h2 id="2-System-Design">2. System Design</h2>
+<h3 id="2-1-Type-of-the-system">2.1 Type of the system</h3>
+<p>We will construct <em>Ground-to-Satellite Link</em> as the type of the FSO communication system. Below is a concept figure of the system.</p>
+<a target="_blank" rel="noopener" href="https://tva1.sinaimg.cn/large/007S8ZIlly1gh6v9igawcj30of0dhabh.jpg" title="qeyssat-satellite-879x485" class="gallery-item"><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh6v9igawcj30of0dhabh.jpg" alt="qeyssat-satellite-879x485"  /></a>
+<h3 id="2-2-Wavelength-to-use">2.2 Wavelength to use</h3>
+<p>The main consideration is attenuation after propagating long distance. From [2] we know to make attenuation less, infrared band is a good choice. Then we have two choices:</p>
+<ul>
+<li>850 nm</li>
+<li>1550 nm</li>
+</ul>
+<p>We digged further and found that 1550 nm lasers are considered “eye safe” at much higher power levels than traditionally used 850nm lasers.</p>
+<p>So our choice for wavelength is 1550 nm. And the benefits are as follows [1] :</p>
+<ul>
+<li>reduce background noise and Rayleigh scattering</li>
+<li>high transmitter power</li>
+<li>Eye-save wavelength ( the maximum permissible exposure for eye is much higher at 1550 nm wavelength )</li>
+</ul>
+<h3 id="2-3-Laser-Type">2.3 Laser Type</h3>
+<h4 id="2-3-1-LED-or-CW">2.3.1 LED or CW</h4>
+<p>To be clear:</p>
+<ul>
+<li>
+<p>A light-emitting diode (<em>LED</em>) is a semiconductor light source that emits light when current flows through it.</p>
+</li>
+<li>
+<p>A continuous wave (CW)  laser is a laser that emits a continuous laser beam with a controlled heat output, as beam duration and intensity.</p>
+</li>
+</ul>
+<p>For ground-to-satellite links, we don’t think a light of LED can surrive after passing the atmosphere. So we definitely choose CW laser.</p>
+<h4 id="2-3-2-Comparasion">2.3.2 Comparasion</h4>
+<p>We have four choices and they all have own advantages and disadvantages:</p>
+<h5 id="Gas-laser">Gas laser</h5>
+<p><a target="_blank" rel="noopener" href="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk4mvtij30xc0iugos.jpg" title="Carbon dioxide laser - Wikipedia" class="gallery-item"><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk4mvtij30xc0iugos.jpg" alt="Carbon dioxide laser - Wikipedia"></a></p>
+<ul>
+<li>Carbon dioxide laser are stable and less sensitive to atomospheric effects</li>
+<li>Large volume and unreliability</li>
+</ul>
+<h5 id="Solid-state-laser">Solid-state laser</h5>
+<ul>
+<li>Stable and narrow spectral linewidth</li>
+<li>Very high peak power</li>
+</ul>
+<h5 id="Semiconductor-laser">Semiconductor laser</h5>
+<ul>
+<li>Compact in size, light weight, easy to operate</li>
+<li>Quite low output power hence <strong>require additional amplifier</strong> for long distance communication</li>
+<li>Diodes require great care</li>
+</ul>
+<h5 id="Fiber-laser-4">Fiber laser [4]</h5>
+<p><a target="_blank" rel="noopener" href="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk51ei3j30zk0k075c.jpg" title="Fiber laser cutting machine FOL-3015AJ" class="gallery-item"><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk51ei3j30zk0k075c.jpg" alt="Fiber laser cutting machine FOL-3015AJ"></a></p>
+<ul>
+<li>The laser light is both generated and delivered by an inherently flexible medium, which allows easier delivery to the focusing location and target.</li>
+<li>Fiber lasers can have active regions several kilometers long, and so can provide very high optical gain.</li>
+<li>Fiber lasers are compact compared to solid-state or gas lasers of comparable power ( because the fiber can be bent and coiled)</li>
+<li>The additional power and better beam quality provide cleaner cut edges and faster cutting speeds</li>
+</ul>
+<h4 id="2-3-3-Choice-of-laser-device-type">2.3.3 Choice of laser device type</h4>
+<p>It seems that fiber laser is great in comparison with others. We first considered solid state laser but fiber laser seems to be better and it has many applications in telecommunications. So we choose <strong>fiber laser</strong> as our type of laser device.</p>
+<h3 id="2-4-Modulator">2.4 Modulator</h3>
+<p>We have two consideration of the modulator, to be clear:</p>
+<ul>
+<li>
+<p>Electro-optic modulator [6]</p>
+<p>An electro-optic modulator (EOM) is an optical device in which a signal-controlled element exhibiting an electro-optic effect is used to modulate a beam of light.</p>
+</li>
+<li>
+<p>Acoustic-optic modulator [5]</p>
+<p>An acousto-optic modulator (AOM), uses the acousto-optic effect to and shift the frequency of light using sound waves.</p>
+</li>
+</ul>
+<p>We found little applications in telecommunications about acoustic-optic modulator and it seems electro-optic modulator has a more mature technology. We found that <a target="_blank" rel="noopener" href="https://math.now.sh?inline=LiNbO_3" class="gallery-item"><img src="https://math.now.sh?inline=LiNbO_3" style="display:inline-block;margin: 0;"/></a> has nice performance in the application of long distance communication and there are a lot of type we could choose as provided in [7]. So we choose electro-optic modulator for our ground-to-satellite FOS communication system goal.</p>
+<p>To be more specific, we will use <em><a target="_blank" rel="noopener" href="https://math.now.sh?inline=LiNbO_3" class="gallery-item"><img src="https://math.now.sh?inline=LiNbO_3" style="display:inline-block;margin: 0;"/></a> Mach-Zehnder Modulator</em> for its good performance.</p>
+<h2 id="3-Simulation">3. Simulation</h2>
+<h3 id="3-1-Demo-FSO-communication-system">3.1 Demo: FSO communication system</h3>
+<p>We considered the composition of the system and drew a structure graph as below:</p>
+<p><a target="_blank" rel="noopener" href="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djy58q7j31t00u0q79.jpg" title="FSOCS" class="gallery-item"><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djy58q7j31t00u0q79.jpg" alt="FSOCS"></a></p>
+<p>We put our emphasis on the <em>Transmitter</em> part and the following sections are our simulation work.</p>
+<h4 id="3-1-1-Layout">3.1.1 Layout</h4>
+<p>Below is the layout of our communication system. We used OptiSystem software to do the simulation.</p>
+<p>The transmitter part is in the left and we will dig into it later.</p>
+<p>In the middle is the FSO Channel. Since Ground-to-Satellite system has at least 90 km (see <em>regions of atmosphere</em> diagram below) , we set the range of the FSO channel 100 km. On the left and right of the FSO channel are two opticla amplifiers, from simulation result we can found their role in the system.</p>
+<p><a target="_blank" rel="noopener" href="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk5x5ydj318t0rswih.jpg" title="Regions of atmosphere" class="gallery-item"><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk5x5ydj318t0rswih.jpg" alt="Regions of atmosphere"></a></p>
+<p>On the right is the Receiver part. It consists of PIN Photodiode (which transfer optic wave into electric signal),  Law Pass Bessel Filter (which is used to filter out noise) and Data Recovery Module (which do the demodulation and get the recovered signal).</p>
+<p>We use BER Analyter to analyse the bit error rate of the system.</p>
+<p><a target="_blank" rel="noopener" href="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djvig9aj31720cb7aq.jpg" title="FSO demo layout" class="gallery-item"><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djvig9aj31720cb7aq.jpg" alt="FSO demo layout"></a></p>
+<h4 id="3-1-2-Simulation-result">3.1.2 Simulation result</h4>
+<p><a target="_blank" rel="noopener" href="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djzynsxj318n0md140.jpg" title="simulation result" class="gallery-item"><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djzynsxj318n0md140.jpg" alt="simulation result"></a></p>
+<p>Above is our simulation result from which we can found that loss is huge. The reason is FSO channel is too long.</p>
+<p>Because of the time and technology limitation, we didn’t get a good simulation result. Below is something we considered:</p>
+<ul>
+<li>
+<p>how to overcome the problem of very big loss</p>
+</li>
+<li>
+<p>how to choose the laser power</p>
+</li>
+<li>
+<p>how to choose photodetector</p>
+<ul>
+<li>photodiode</li>
+<li>optical power detector</li>
+<li>optical phase detector</li>
+</ul>
+</li>
+<li>
+<p>how to choose filters</p>
+<ul>
+<li>low pass
+<ul>
+<li>Gaussian filter</li>
+<li>Bessel filter</li>
+<li>etc.</li>
+</ul>
+</li>
+<li>height pass</li>
+<li>band pass</li>
+</ul>
+</li>
+<li>
+<p>how to set parameters of optical amplifier</p>
+<ul>
+<li>gain</li>
+<li>noise figure</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-2-Optical-transmitter">3.2 Optical transmitter</h3>
+<p>From COSMOL, we get the some insight of the modulator. But it is not that clear.</p>
+<p>We use OptiSystem to construct our <em>optical transmitter</em> and further more, we digged a little deeper and build a demo of the whole <em>FSO communication system.</em></p>
+<p>Below are the layout of our system.</p>
+<p><a target="_blank" rel="noopener" href="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk0rwezj30sm0cladg.jpg" title="FSO-transmitter-layout" class="gallery-item"><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk0rwezj30sm0cladg.jpg" alt="FSO-transmitter-layout"></a></p>
+<p>From the figure we can see the structure of the transmitter clearly.</p>
+<ul>
+<li>
+<p>We use simple <em>Bit Sequence Generator</em> to generate electric signal and use <em>NRZ Pulse Generator</em> to generate electric pulse.</p>
+</li>
+<li>
+<p>We use <em>Fiber Laser</em> as our laser device. As there isn’t Fiber Laser device in the software, we put a CW Laser and add a description. CW Laser can generate 1550 nm optical wave.</p>
+</li>
+<li>
+<p>We use <a target="_blank" rel="noopener" href="https://math.now.sh?inline=LiNbO_3" class="gallery-item"><img src="https://math.now.sh?inline=LiNbO_3" style="display:inline-block;margin: 0;"/></a> Mach-Zehnder Modulator in our transmitter. The reasons have been stated in section 2.</p>
+</li>
+<li>
+<p>Put the optic signal and electric pulse into the MZ Modulator, we can get the modulated optical signal.</p>
+</li>
+</ul>
+<p>Above are the details of our transmitter, we then use Optical Power Meter and Optical Spectrum Analyzer to do the simulation.</p>
+<p>Results are as follows :</p>
+<p><a target="_blank" rel="noopener" href="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk1s5hnj312r0jtwln.jpg" title="FSO-transmitter-simulation-result" class="gallery-item"><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk1s5hnj312r0jtwln.jpg" alt="FSO-transmitter-simulation-result"></a></p>
+<p>We can see from the figure that the transmitter has <a target="_blank" rel="noopener" href="https://math.now.sh?inline=2.485" class="gallery-item"><img src="https://math.now.sh?inline=2.485" style="display:inline-block;margin: 0;"/></a> dBm los and the output power is <a target="_blank" rel="noopener" href="https://math.now.sh?inline=56.432%5Ctimes%2010%5E%7B-3%7D%20W" class="gallery-item"><img src="https://math.now.sh?inline=56.432%5Ctimes%2010%5E%7B-3%7D%20W" style="display:inline-block;margin: 0;"/></a>. We need optical amplifiers to make it larger.</p>
+<h3 id="3-3-Electro-optic-Modulation-Process">3.3 Electro-optic Modulation Process</h3>
+<p>In order to give a more specific model, we use COMSOL to simulate the <em>Electro-optic modulation process</em>. Below are what we have done.</p>
+<p>We choose the <strong>wave optics module</strong>.</p>
+<p>Then we perform the 2D geometrical modeling since the system is symmetric.</p>
+<p>We can find that the structure has core and cladding:</p>
+<p><a target="_blank" rel="noopener" href="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk3n0tdj30xo0hnaab.jpg" title="structure of core and cladding" class="gallery-item"><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk3n0tdj30xo0hnaab.jpg" alt="structure of core and cladding"></a></p>
+<p>Next we set the boundary conditions so that the COSMOL can do the calculation. We set the applied voltage boundary of the light or rather the boundary of the wave:</p>
+<p><a target="_blank" rel="noopener" href="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djz4eraj309n09pmx5.jpg" title="step1" class="gallery-item"><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9djz4eraj309n09pmx5.jpg" alt="step1"></a></p>
+<p>Before calculation, we set some configurations:</p>
+<p><a target="_blank" rel="noopener" href="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk2mm1hj309h05pa9y.jpg" title="step2" class="gallery-item"><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk2mm1hj309h05pa9y.jpg" alt="step2"></a></p>
+<p>(To be clear: “步骤 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=k" class="gallery-item"><img src="https://math.now.sh?inline=k" style="display:inline-block;margin: 0;"/></a> ” &lt;—&gt; “ Step <a target="_blank" rel="noopener" href="https://math.now.sh?inline=k" class="gallery-item"><img src="https://math.now.sh?inline=k" style="display:inline-block;margin: 0;"/></a> ” , “求解器配置” &lt;—&gt; “Solver Configuration” and “作业配置” &lt;—&gt; “ Work Configuration” )</p>
+<p>Finally, we get the simulation result. In the figure it is the distribution of the electric field in the waveguide. We also get the loss, transmittance and reflectance of the system.</p>
+<p>(The first line of the figure “表面：电场模” &lt;—&gt; “Surface: Electric field mode” )</p>
+<p><a target="_blank" rel="noopener" href="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk362bij30xd0h9wer.jpg" title="EF distribution" class="gallery-item"><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk362bij30xd0h9wer.jpg" alt="EF distribution"></a></p>
+<p><a target="_blank" rel="noopener" href="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk16evoj30xe0grq39.jpg" title="Property inside" class="gallery-item"><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gh9dk16evoj30xe0grq39.jpg" alt="Property inside"></a></p>
+<p>However, we cannot get the change of the phase. It seems that the software has some limitation. And we didn’t consider the electric signals. These are something that can be improved.</p>
+<h2 id="Reference">Reference</h2>
+<p>[1] Kaushal H, Jain V K, Kar S. Free space optical communication[M]. Gurgaon, Haryana: Springer, 2017.</p>
+<p>[2] 高瞻, 丁铁骑, 吕辉. 光无线通信系统通信波长的选择[J]. 通讯世界, 2002, 8(12): 70-71.</p>
+<p>[3] <a target="_blank" rel="noopener" href="https://seminex.com/1550nm-lasers.aspx/">https://seminex.com/1550nm-lasers.aspx/</a></p>
+<p>[4] <a target="_blank" rel="noopener" href="https://www.wikiwand.com/en/Fiber_laser">https://www.wikiwand.com/en/Fiber_laser</a></p>
+<p>[5] <a target="_blank" rel="noopener" href="https://www.wikiwand.com/en/Acousto-optic_modulator">https://www.wikiwand.com/en/Acousto-optic_modulator</a></p>
+<p>[6] <a target="_blank" rel="noopener" href="https://www.wikiwand.com/en/Electro-optic_modulator">https://www.wikiwand.com/en/Electro-optic_modulator</a></p>
+<p>[7] <a target="_blank" rel="noopener" href="https://www.newport.com/medias/sys_master/images/images/h31/hfb/8797089398814/Electro-Optic-Modulator-Brochure.pdf">https://www.newport.com/medias/sys_master/images/images/h31/hfb/8797089398814/Electro-Optic-Modulator-Brochure.pdf</a></p>
+</div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script> 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/optics/" rel="tag">optics</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/projects/" rel="tag">projects</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
   id="post-Project/Optical-system-design"
   class="article article-type-post"
   itemscope
@@ -182,16 +440,20 @@
       
     <div class="article-entry" itemprop="articleBody">
        
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="光学系统设计-Project"><a href="#光学系统设计-Project" class="headerlink" title="光学系统设计 Project"></a>光学系统设计 Project</h1><h2 id="光路计算部分"><a href="#光路计算部分" class="headerlink" title="光路计算部分"></a>光路计算部分</h2><p>这是光学系统设计的光路计算 Project，具体的程序和发行版我已经放到了<a target="_blank" rel="noopener" href="https://github.com/longqianh/simple-ray-tracing.git">GitHub上</a>。</p>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><h1>光学系统设计 Project</h1>
+<h2 id="光路计算部分">光路计算部分</h2>
+<p>这是光学系统设计的光路计算 Project，具体的程序和发行版我已经放到了<a target="_blank" rel="noopener" href="https://github.com/longqianh/simple-ray-tracing.git">GitHub上</a>。</p>
 <p>这是一个非专业协作的非专业项目，一开始头文件和cpp没有分开，GitHub提交也比较混乱，文件、代码、GitHub 更加专业是我努力学习完善的方向。</p>
 <p>但是这是我较为满意的一次项目，至少我不认为这是学术垃圾。光线的计算程序写了三、四十个小时，在类的设计上花了不少功夫，我认为程序具有可拓展性、易理解性，比如要进行光路追迹，只需要声明光线，便可利用<code>ray_tracing(ray,ku,kw)</code> 函数得到输出光线。</p>
 <p>真的感谢吴恩宗做出一个无比美丽和强大的GUI，而且提供了非常细致的帮助文档。</p>
 <p>真的感谢孙昊天在我debug到绝望的时候陪着我一起de，让我看到了希望的光。</p>
-<h2 id="光学系统设计部分"><a href="#光学系统设计部分" class="headerlink" title="光学系统设计部分"></a>光学系统设计部分</h2><p>应该说，这一部分全靠两位队友带。</p>
+<h2 id="光学系统设计部分">光学系统设计部分</h2>
+<p>应该说，这一部分全靠两位队友带。</p>
 <p>我是直接奔着3个透镜去做的，因为都在紫金港，我可以直接去队友们的寝室里。中间遇到了很多困难，都是队友们在我旁边指导着克服的。因为同时有四个项目进行，我做完以后就算做完了，不再继续优化。</p>
 <p>吴恩宗设计了一个四透镜的，可以说，优化到了极致。孙昊天三四五都做了，而且都做得很棒，三透镜做到了F2.8，所以最后就用他的三透镜系统啦！</p>
 <p>项目报告就放到第三部分了。By the way，最后的答辩孙昊天非常认真地准备，我看着时间真的把握地很好，PPT也很妙，赞啊啊!</p>
-<h2 id="项目报告"><a href="#项目报告" class="headerlink" title="项目报告"></a>项目报告</h2>
+<h2 id="项目报告">项目报告</h2>
+
 
 	<div class="row">
     <embed src="/projects/optical-system/光学系统设计-项目报告.pdf" width="100%" height="550" type="application/pdf">
@@ -322,7 +584,7 @@
     <div class="article-entry" itemprop="articleBody">
        
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><p>This is my final report for the Semiconductor Laser Holography experiment in the physics experiment course.</p>
-<p>I experimented with my dear roommates Yiheng Mao and Weiming Zhou under the guidance of teacher Xing Chen. </p>
+<p>I experimented with my dear roommates Yiheng Mao and Weiming Zhou under the guidance of teacher Xing Chen.</p>
 
 
 	<div class="row">
@@ -390,7 +652,8 @@
        
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><p>This is the major assignment for our optomechanical structural design course. Thanks a lot for Xiaowen Wang, Longxun Cao and Hanmo Mei. That  week we all had little time for sleep and we finally made a really big guy! Although that period was very hard , I really cherish it.</p>
 <p>I will make it more detailed when I have time.</p>
-<h3 id="工程图汇总"><a href="#工程图汇总" class="headerlink" title="工程图汇总"></a>工程图汇总</h3>
+<h3 id="工程图汇总">工程图汇总</h3>
+
 
 	<div class="row">
     <embed src="/projects/solidworks/钢铁侠手臂台灯-工程图汇总.pdf" width="100%" height="550" type="application/pdf">
@@ -398,15 +661,12 @@
 
 
 
+<h3 id="设计文件">设计文件</h3>
 
-
-
-<h3 id="设计文件"><a href="#设计文件" class="headerlink" title="设计文件"></a>设计文件</h3>
 
 	<div class="row">
     <embed src="/projects/solidworks/钢铁侠手臂台灯项目设计文件.pdf" width="100%" height="550" type="application/pdf">
 	</div>
-
 
 
 
@@ -473,7 +733,6 @@
 	<div class="row">
     <embed src="/notes/数值分析方法.pdf" width="100%" height="550" type="application/pdf">
 	</div>
-
 
 
 
@@ -604,7 +863,6 @@
 
 
 
-
 </div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
         var options = {
             selector: '.gallery-item'
@@ -671,7 +929,6 @@
 
 
 
-
 </div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
         var options = {
             selector: '.gallery-item'
@@ -729,16 +986,13 @@
       
     <div class="article-entry" itemprop="articleBody">
        
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><p>This work is mainly about the football game team strategy based on big data and is our final paper for the D problem of the 2020 Interdisciplinary Contest in Modelling (ICM 2020), contributed collaboratively and equally by R.C. Luo, Y.Z. Zhang and me. </p>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><p>This work is mainly about the football game team strategy based on big data and is our final paper for the D problem of the 2020 Interdisciplinary Contest in Modelling (ICM 2020), contributed collaboratively and equally by R.C. Luo, Y.Z. Zhang and me.</p>
 <p>Thanks cordially to the combined efforts of the whole group, we, fortunately, won an M-prize. Due to privacy and copyright, the control number in our paper is erased.</p>
 
 
 	<div class="row">
     <embed src="/projects/2020_ICM.pdf" width="100%" height="550" type="application/pdf">
 	</div>
-
-
-
 
 
 
@@ -767,62 +1021,6 @@
 </article>
 
     
-    <article
-  id="post-Computer-Science/Matlab学习"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/Computer-Science/Matlab%E5%AD%A6%E4%B9%A0/"
-    >Matlab学习</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/Computer-Science/Matlab%E5%AD%A6%E4%B9%A0/" class="article-date">
-  <time datetime="2020-03-04T00:40:36.000Z" itemprop="datePublished">2020-03-03</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Notes/">Notes</a> / <a class="article-category-link" href="/categories/Notes/Coding/">Coding</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="MatLab-学习笔记"><a href="#MatLab-学习笔记" class="headerlink" title="MatLab 学习笔记"></a>MatLab 学习笔记</h1><p>这是一篇学习使用MATLAB过程中的心得笔记，目前主要是来自大二时的<strong>信号与系统</strong>课程。也比较散，未整理，见谅。</p> 
-      <a class="article-more-link" href="/Computer-Science/Matlab%E5%AD%A6%E4%B9%A0/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/matlab/" rel="tag">matlab</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-    
-</article>
-
-    
   </article>
   
 
@@ -840,7 +1038,7 @@
     <ul>
       <li>
         Copyrights &copy;
-        2020-2024
+        2020-2025
         <i class="ri-heart-fill heart_icon"></i> Longqian Huang
       </li>
     </ul>

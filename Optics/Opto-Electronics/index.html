@@ -89,7 +89,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">4.9k</span>
+            <span class="post-count">3.2k</span>
         </span>
     </span>
 
@@ -98,7 +98,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">21 min</span>
+            <span class="post-count">11 min</span>
         </span>
     </span>
 </div>
@@ -113,211 +113,290 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="Optoelectronics"><a href="#Optoelectronics" class="headerlink" title="Optoelectronics"></a>Optoelectronics</h1><h2 id="Matrix-Optics-「矩阵光学」"><a href="#Matrix-Optics-「矩阵光学」" class="headerlink" title="Matrix Optics 「矩阵光学」"></a>Matrix Optics 「矩阵光学」</h2><h3 id="光学元件的传播矩阵"><a href="#光学元件的传播矩阵" class="headerlink" title="光学元件的传播矩阵"></a>光学元件的传播矩阵</h3><p>小坑待填.</p>
-<h3 id="光线在周期系统的位置轨迹"><a href="#光线在周期系统的位置轨迹" class="headerlink" title="光线在周期系统的位置轨迹"></a>光线在周期系统的位置轨迹</h3><p>$$<br>\begin{pmatrix}<br>y_{m+1}\<br>\theta_{m+1}<br>\end{pmatrix}&#x3D;M\begin{pmatrix}<br>y_m\<br>\theta_m<br>\end{pmatrix}<br>$$</p>
-<p>其中 $M&#x3D;\displaystyle\begin{pmatrix}A&amp;B \ C&amp;D\end{pmatrix}$ 为周期系统的传播矩阵。</p>
-<p>进而得到<br>$$<br>\begin{align}<br>y_{m+1}&amp;&#x3D;Ay_m+B\theta_m\<br>\theta_{m+1}&amp;&#x3D;Cy_m+D\theta_m<br>\end{align}<br>$$<br>整理得<br>$$<br>\begin{align}<br>y_{m+2}&amp;&#x3D;(A+D)y_{m+1}+(BC-AD)y_m \notag\<br>i.e. \quad y_{m+2}&amp;&#x3D;2by_{m+1}-F^2y_m\<br>\end{align}<br>$$</p>
-<p>其中 $b&#x3D;(A+D)&#x2F;2,F^2&#x3D;\det (M)$.</p>
-<p>尝试解 $y_m&#x3D;y_0h^m$, 可得<br>$$<br>y_m&#x3D;y_0F^me^{\pm im\varphi}<br>$$<br>其中 $\varphi$ 满足 $b&#x3D;F\cos\varphi$.</p>
-<p>可见，传递矩阵的 $\det$ 带来幅值增益，其 $\operatorname {trace}$ 带来相位增益。</p>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><h1>Optoelectronics</h1>
+<h2 id="Matrix-Optics-「矩阵光学」">Matrix Optics 「矩阵光学」</h2>
+<h3 id="光学元件的传播矩阵">光学元件的传播矩阵</h3>
+<p>小坑待填.</p>
+<h3 id="光线在周期系统的位置轨迹">光线在周期系统的位置轨迹</h3>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=%5Cbegin%7Bpmatrix%7D%0Ay_%7Bm%2B1%7D%5C%5C%0A%5Ctheta_%7Bm%2B1%7D%0A%5Cend%7Bpmatrix%7D%3DM%5Cbegin%7Bpmatrix%7D%0Ay_m%5C%5C%0A%5Ctheta_m%0A%5Cend%7Bpmatrix%7D%0A" class="gallery-item"><img src="https://math.now.sh?from=%5Cbegin%7Bpmatrix%7D%0Ay_%7Bm%2B1%7D%5C%5C%0A%5Ctheta_%7Bm%2B1%7D%0A%5Cend%7Bpmatrix%7D%3DM%5Cbegin%7Bpmatrix%7D%0Ay_m%5C%5C%0A%5Ctheta_m%0A%5Cend%7Bpmatrix%7D%0A" /></a></p><p>其中 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=M%3D%5Cdisplaystyle%5Cbegin%7Bpmatrix%7DA%26B%20%5C%5C%20C%26D%5Cend%7Bpmatrix%7D" class="gallery-item"><img src="https://math.now.sh?inline=M%3D%5Cdisplaystyle%5Cbegin%7Bpmatrix%7DA%26B%20%5C%5C%20C%26D%5Cend%7Bpmatrix%7D" style="display:inline-block;margin: 0;"/></a> 为周期系统的传播矩阵。</p>
+<p>进而得到</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=%5Cbegin%7Balign%7D%0Ay_%7Bm%2B1%7D%26%3DAy_m%2BB%5Ctheta_m%5C%5C%0A%5Ctheta_%7Bm%2B1%7D%26%3DCy_m%2BD%5Ctheta_m%0A%5Cend%7Balign%7D%0A" class="gallery-item"><img src="https://math.now.sh?from=%5Cbegin%7Balign%7D%0Ay_%7Bm%2B1%7D%26%3DAy_m%2BB%5Ctheta_m%5C%5C%0A%5Ctheta_%7Bm%2B1%7D%26%3DCy_m%2BD%5Ctheta_m%0A%5Cend%7Balign%7D%0A" /></a></p><p>整理得</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=%5Cbegin%7Balign%7D%0Ay_%7Bm%2B2%7D%26%3D%28A%2BD%29y_%7Bm%2B1%7D%2B(BC-AD)y_m%20%5Cnotag%5C%5C%0Ai.e.%20%5Cquad%20y_%7Bm%2B2%7D%26%3D2by_%7Bm%2B1%7D-F%5E2y_m%5C%5C%0A%5Cend%7Balign%7D%0A" class="gallery-item"><img src="https://math.now.sh?from=%5Cbegin%7Balign%7D%0Ay_%7Bm%2B2%7D%26%3D%28A%2BD%29y_%7Bm%2B1%7D%2B(BC-AD)y_m%20%5Cnotag%5C%5C%0Ai.e.%20%5Cquad%20y_%7Bm%2B2%7D%26%3D2by_%7Bm%2B1%7D-F%5E2y_m%5C%5C%0A%5Cend%7Balign%7D%0A" /></a></p><p>其中 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=b%3D%28A%2BD%29%2F2%2CF%5E2%3D%5Cdet%20(M)" class="gallery-item"><img src="https://math.now.sh?inline=b%3D%28A%2BD%29%2F2%2CF%5E2%3D%5Cdet%20(M)" style="display:inline-block;margin: 0;"/></a>.</p>
+<p>尝试解 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=y_m%3Dy_0h%5Em" class="gallery-item"><img src="https://math.now.sh?inline=y_m%3Dy_0h%5Em" style="display:inline-block;margin: 0;"/></a>, 可得</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=y_m%3Dy_0F%5Eme%5E%7B%5Cpm%20im%5Cvarphi%7D%0A" class="gallery-item"><img src="https://math.now.sh?from=y_m%3Dy_0F%5Eme%5E%7B%5Cpm%20im%5Cvarphi%7D%0A" /></a></p><p>其中 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cvarphi" class="gallery-item"><img src="https://math.now.sh?inline=%5Cvarphi" style="display:inline-block;margin: 0;"/></a> 满足 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=b%3DF%5Ccos%5Cvarphi" class="gallery-item"><img src="https://math.now.sh?inline=b%3DF%5Ccos%5Cvarphi" style="display:inline-block;margin: 0;"/></a>.</p>
+<p>可见，传递矩阵的 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cdet" class="gallery-item"><img src="https://math.now.sh?inline=%5Cdet" style="display:inline-block;margin: 0;"/></a> 带来幅值增益，其 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Coperatorname%20%7Btrace%7D" class="gallery-item"><img src="https://math.now.sh?inline=%5Coperatorname%20%7Btrace%7D" style="display:inline-block;margin: 0;"/></a> 带来相位增益。</p>
 <span id="more"></span>
-
-<h3 id="谐振腔稳定条件"><a href="#谐振腔稳定条件" class="headerlink" title="谐振腔稳定条件"></a>谐振腔稳定条件</h3><p>可以证明（？） $\det(M)&#x3D;n_i&#x2F;n_f$, 其中 $n_i,n_f$ 分别为系统基本单元初始和最后一部分的折射率。</p>
-<p>稳定需要传播的光束不会溢出光学系统，因而需要 $\varphi&#x3D;\arccos(b)$ 为实数：<br>$$<br>|b|\le1\iff\frac{|A+D|}{2}\le 1. \label{stable-cond0}<br>$$<br>对于谐振腔系统：自由空间 $\to$ 透镜2 $\to$ 自由空间 $\to$ 透镜1的周期组合，可得其传递矩阵<br>$$<br>M&#x3D;M_{1}M_dM_2M_d&#x3D;\begin{pmatrix}<br>1-d&#x2F;f_1 &amp; \<br>&amp; -d&#x2F;f_2+(1-d&#x2F;f_2)(1-d&#x2F;f_1)<br>\end{pmatrix},<br>$$<br>根据稳定条件 $(\ref{stable-cond0})$ ,有：<br>$$<br>\begin{align}<br>&amp;0\le1-d&#x2F;f_1-d&#x2F;f_2+d^2&#x2F;2f_1f_2&#x3D; 2(1-d&#x2F;2f_1)(1-d&#x2F;2f_2)-1\le 1\notag<br>\<br>\iff &amp; 0\le \left(1-\frac{d}{2f_1}\right)\left(1-\frac{d}{2f_2}\right)\le 1<br>.<br>\tag{$\star$}<br>\label{stable-cond}<br>\end{align}<br>$$</p>
-<p>($\ref{stable-cond}$) 就是谐振腔稳定条件。</p>
-<p>对于球面谐振腔，传递矩阵中的 $\displaystyle -\frac{1}{f}$ 换成了 $\displaystyle\frac{2}{R}$，因而稳定条件变为：<br>$$<br>0\le \left(1+\frac{d}{R_1}\right)\left(1+\frac{d}{R_2}\right)\le 1.<br>$$</p>
-<h2 id="Gaussian-Beam-「高斯光束」"><a href="#Gaussian-Beam-「高斯光束」" class="headerlink" title="Gaussian Beam 「高斯光束」"></a>Gaussian Beam 「高斯光束」</h2><h3 id="高斯光束的推导"><a href="#高斯光束的推导" class="headerlink" title="高斯光束的推导"></a>高斯光束的推导</h3><p>​		高斯光束是傍轴亥姆霍兹方程的一个试探解。</p>
-<h3 id="高斯光束的性质"><a href="#高斯光束的性质" class="headerlink" title="高斯光束的性质"></a>高斯光束的性质</h3><p>波函数<br>$$<br>U(\vec r)&#x3D;\frac{A_1}{iz_0}\frac{W_0}{W(z)}\exp\left[-\frac{\rho^2}{W^2(z)}\right]\exp\left[-ikz-ik\frac{\rho^2}{2R(z)}+i\zeta(z)\right]<br>$$</p>
-<p>光强<br>$$<br>I(\rho,z)&#x3D;|U|^2&#x3D;I_0\left[\frac{W_0}{W(z)}\right]^2\exp\left[-\frac{2\rho^2}{W^2(z)}\right]<br>$$</p>
-<p>功率<br>$$<br>P&#x3D;\int_0^\infty I(\rho,z)2\pi\rho\text d\rho&#x3D;\frac{1}{2}\pi W_0^2 I_0<br>$$</p>
-<h3 id="高斯光束的传播"><a href="#高斯光束的传播" class="headerlink" title="高斯光束的传播"></a>高斯光束的传播</h3><h4 id="ABCD定律"><a href="#ABCD定律" class="headerlink" title="ABCD定律"></a>ABCD定律</h4><p>高斯光束经过一个具有ABCD矩阵的光学系统后的 $q$ 参数：<br>$$<br>q_2&#x3D;\frac{Aq_1+B}{Cq_1+D},<br>$$<br>其中 $q$ 满足<br>$$<br>\frac{1}{q(z)}&#x3D;\frac{1}{R(z)}-j\frac{\lambda}{\pi W^2(z)}.<br>$$</p>
-<h2 id="Photon-Optics-「光子光学」"><a href="#Photon-Optics-「光子光学」" class="headerlink" title="Photon Optics 「光子光学」"></a>Photon Optics 「光子光学」</h2><p>Category :</p>
+<h3 id="谐振腔稳定条件">谐振腔稳定条件</h3>
+<p>可以证明（？） <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cdet%28M%29%3Dn_i%2Fn_f" class="gallery-item"><img src="https://math.now.sh?inline=%5Cdet%28M%29%3Dn_i%2Fn_f" style="display:inline-block;margin: 0;"/></a>, 其中 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=n_i%2Cn_f" class="gallery-item"><img src="https://math.now.sh?inline=n_i%2Cn_f" style="display:inline-block;margin: 0;"/></a> 分别为系统基本单元初始和最后一部分的折射率。</p>
+<p>稳定需要传播的光束不会溢出光学系统，因而需要 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cvarphi%3D%5Carccos%28b%29" class="gallery-item"><img src="https://math.now.sh?inline=%5Cvarphi%3D%5Carccos%28b%29" style="display:inline-block;margin: 0;"/></a> 为实数：</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=%7Cb%7C%5Cle1%5Ciff%5Cfrac%7B%7CA%2BD%7C%7D%7B2%7D%5Cle%201.%20%5Clabel%7Bstable-cond0%7D%0A" class="gallery-item"><img src="https://math.now.sh?from=%7Cb%7C%5Cle1%5Ciff%5Cfrac%7B%7CA%2BD%7C%7D%7B2%7D%5Cle%201.%20%5Clabel%7Bstable-cond0%7D%0A" /></a></p><p>对于谐振腔系统：自由空间 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cto" class="gallery-item"><img src="https://math.now.sh?inline=%5Cto" style="display:inline-block;margin: 0;"/></a> 透镜2 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cto" class="gallery-item"><img src="https://math.now.sh?inline=%5Cto" style="display:inline-block;margin: 0;"/></a> 自由空间 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cto" class="gallery-item"><img src="https://math.now.sh?inline=%5Cto" style="display:inline-block;margin: 0;"/></a> 透镜1的周期组合，可得其传递矩阵</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=M%3DM_%7B1%7DM_dM_2M_d%3D%5Cbegin%7Bpmatrix%7D%0A1-d%2Ff_1%20%26%20%5C%5C%0A%26%20-d%2Ff_2%2B%281-d%2Ff_2%29(1-d%2Ff_1)%0A%5Cend%7Bpmatrix%7D%2C%0A" class="gallery-item"><img src="https://math.now.sh?from=M%3DM_%7B1%7DM_dM_2M_d%3D%5Cbegin%7Bpmatrix%7D%0A1-d%2Ff_1%20%26%20%5C%5C%0A%26%20-d%2Ff_2%2B%281-d%2Ff_2%29(1-d%2Ff_1)%0A%5Cend%7Bpmatrix%7D%2C%0A" /></a></p><p>根据稳定条件 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%28%5Cref%7Bstable-cond0%7D%29" class="gallery-item"><img src="https://math.now.sh?inline=%28%5Cref%7Bstable-cond0%7D%29" style="display:inline-block;margin: 0;"/></a> ,有：</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=%5Cbegin%7Balign%7D%0A%260%5Cle1-d%2Ff_1-d%2Ff_2%2Bd%5E2%2F2f_1f_2%3D%202%281-d%2F2f_1%29(1-d%2F2f_2)-1%5Cle%201%5Cnotag%0A%5C%5C%0A%5Ciff%20%26%200%5Cle%20%5Cleft(1-%5Cfrac%7Bd%7D%7B2f_1%7D%5Cright)%5Cleft(1-%5Cfrac%7Bd%7D%7B2f_2%7D%5Cright)%5Cle%201%0A.%0A%5Ctag%7B%24%5Cstar%24%7D%0A%5Clabel%7Bstable-cond%7D%0A%5Cend%7Balign%7D%0A" class="gallery-item"><img src="https://math.now.sh?from=%5Cbegin%7Balign%7D%0A%260%5Cle1-d%2Ff_1-d%2Ff_2%2Bd%5E2%2F2f_1f_2%3D%202%281-d%2F2f_1%29(1-d%2F2f_2)-1%5Cle%201%5Cnotag%0A%5C%5C%0A%5Ciff%20%26%200%5Cle%20%5Cleft(1-%5Cfrac%7Bd%7D%7B2f_1%7D%5Cright)%5Cleft(1-%5Cfrac%7Bd%7D%7B2f_2%7D%5Cright)%5Cle%201%0A.%0A%5Ctag%7B%24%5Cstar%24%7D%0A%5Clabel%7Bstable-cond%7D%0A%5Cend%7Balign%7D%0A" /></a></p><p>(<a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cref%7Bstable-cond%7D" class="gallery-item"><img src="https://math.now.sh?inline=%5Cref%7Bstable-cond%7D" style="display:inline-block;margin: 0;"/></a>) 就是谐振腔稳定条件。</p>
+<p>对于球面谐振腔，传递矩阵中的 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cdisplaystyle%20-%5Cfrac%7B1%7D%7Bf%7D" class="gallery-item"><img src="https://math.now.sh?inline=%5Cdisplaystyle%20-%5Cfrac%7B1%7D%7Bf%7D" style="display:inline-block;margin: 0;"/></a> 换成了 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cdisplaystyle%5Cfrac%7B2%7D%7BR%7D" class="gallery-item"><img src="https://math.now.sh?inline=%5Cdisplaystyle%5Cfrac%7B2%7D%7BR%7D" style="display:inline-block;margin: 0;"/></a>，因而稳定条件变为：</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=0%5Cle%20%5Cleft%281%2B%5Cfrac%7Bd%7D%7BR_1%7D%5Cright%29%5Cleft(1%2B%5Cfrac%7Bd%7D%7BR_2%7D%5Cright)%5Cle%201.%0A" class="gallery-item"><img src="https://math.now.sh?from=0%5Cle%20%5Cleft%281%2B%5Cfrac%7Bd%7D%7BR_1%7D%5Cright%29%5Cleft(1%2B%5Cfrac%7Bd%7D%7BR_2%7D%5Cright)%5Cle%201.%0A" /></a></p><h2 id="Gaussian-Beam-「高斯光束」">Gaussian Beam 「高斯光束」</h2>
+<h3 id="高斯光束的推导">高斯光束的推导</h3>
+<p>​		高斯光束是傍轴亥姆霍兹方程的一个试探解。</p>
+<h3 id="高斯光束的性质">高斯光束的性质</h3>
+<p>波函数</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=U%28%5Cvec%20r%29%3D%5Cfrac%7BA_1%7D%7Biz_0%7D%5Cfrac%7BW_0%7D%7BW(z)%7D%5Cexp%5Cleft%5B-%5Cfrac%7B%5Crho%5E2%7D%7BW%5E2(z)%7D%5Cright%5D%5Cexp%5Cleft%5B-ikz-ik%5Cfrac%7B%5Crho%5E2%7D%7B2R(z)%7D%2Bi%5Czeta(z)%5Cright%5D%0A" class="gallery-item"><img src="https://math.now.sh?from=U%28%5Cvec%20r%29%3D%5Cfrac%7BA_1%7D%7Biz_0%7D%5Cfrac%7BW_0%7D%7BW(z)%7D%5Cexp%5Cleft%5B-%5Cfrac%7B%5Crho%5E2%7D%7BW%5E2(z)%7D%5Cright%5D%5Cexp%5Cleft%5B-ikz-ik%5Cfrac%7B%5Crho%5E2%7D%7B2R(z)%7D%2Bi%5Czeta(z)%5Cright%5D%0A" /></a></p><p>光强</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=I%28%5Crho%2Cz%29%3D%7CU%7C%5E2%3DI_0%5Cleft%5B%5Cfrac%7BW_0%7D%7BW(z)%7D%5Cright%5D%5E2%5Cexp%5Cleft%5B-%5Cfrac%7B2%5Crho%5E2%7D%7BW%5E2(z)%7D%5Cright%5D%0A" class="gallery-item"><img src="https://math.now.sh?from=I%28%5Crho%2Cz%29%3D%7CU%7C%5E2%3DI_0%5Cleft%5B%5Cfrac%7BW_0%7D%7BW(z)%7D%5Cright%5D%5E2%5Cexp%5Cleft%5B-%5Cfrac%7B2%5Crho%5E2%7D%7BW%5E2(z)%7D%5Cright%5D%0A" /></a></p><p>功率</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=P%3D%5Cint_0%5E%5Cinfty%20I%28%5Crho%2Cz%292%5Cpi%5Crho%5Ctext%20d%5Crho%3D%5Cfrac%7B1%7D%7B2%7D%5Cpi%20W_0%5E2%20I_0%0A" class="gallery-item"><img src="https://math.now.sh?from=P%3D%5Cint_0%5E%5Cinfty%20I%28%5Crho%2Cz%292%5Cpi%5Crho%5Ctext%20d%5Crho%3D%5Cfrac%7B1%7D%7B2%7D%5Cpi%20W_0%5E2%20I_0%0A" /></a></p><h3 id="高斯光束的传播">高斯光束的传播</h3>
+<h4 id="ABCD定律">ABCD定律</h4>
+<p>高斯光束经过一个具有ABCD矩阵的光学系统后的 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=q" class="gallery-item"><img src="https://math.now.sh?inline=q" style="display:inline-block;margin: 0;"/></a> 参数：</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=q_2%3D%5Cfrac%7BAq_1%2BB%7D%7BCq_1%2BD%7D%2C%0A" class="gallery-item"><img src="https://math.now.sh?from=q_2%3D%5Cfrac%7BAq_1%2BB%7D%7BCq_1%2BD%7D%2C%0A" /></a></p><p>其中 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=q" class="gallery-item"><img src="https://math.now.sh?inline=q" style="display:inline-block;margin: 0;"/></a> 满足</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=%5Cfrac%7B1%7D%7Bq%28z%29%7D%3D%5Cfrac%7B1%7D%7BR(z)%7D-j%5Cfrac%7B%5Clambda%7D%7B%5Cpi%20W%5E2(z)%7D.%0A" class="gallery-item"><img src="https://math.now.sh?from=%5Cfrac%7B1%7D%7Bq%28z%29%7D%3D%5Cfrac%7B1%7D%7BR(z)%7D-j%5Cfrac%7B%5Clambda%7D%7B%5Cpi%20W%5E2(z)%7D.%0A" /></a></p><h2 id="Photon-Optics-「光子光学」">Photon Optics 「光子光学」</h2>
+<p>Category :</p>
 <ul>
 <li>Single Photon’s Property</li>
 <li>Photon Stream</li>
 </ul>
-<h3 id="1-Photon-Interference-「单光子干涉」"><a href="#1-Photon-Interference-「单光子干涉」" class="headerlink" title="1. Photon Interference 「单光子干涉」"></a>1. Photon Interference 「单光子干涉」</h3><p>If a histogram of the locations of the detected photon is constructed by repeating the experiment many times, the classical interference pattern obtained by carrying out the experiment only once with a strong beam of light emerges.</p>
-<p><strong>单光子干涉的统计规律和经典光波干涉的现象一致。</strong>干涉现象应该是单光子干涉的统计规律的显现，或者说其本质是单光子干涉。</p>
-<p>单光子是可以干涉的，这来自光子本身的性质。光子的性质由一个概率波 $\psi$ 描述，当处于两条缝可以选择的叠加态时，$|\psi|^2$ 就会出现干涉项。</p>
+<h3 id="1-Photon-Interference-「单光子干涉」">1. Photon Interference 「单光子干涉」</h3>
+<p>If a histogram of the locations of the detected photon is constructed by repeating the experiment many times, the classical interference pattern obtained by carrying out the experiment only once with a strong beam of light emerges.</p>
+<p>**单光子干涉的统计规律和经典光波干涉的现象一致。**干涉现象应该是单光子干涉的统计规律的显现，或者说其本质是单光子干涉。</p>
+<p>单光子是可以干涉的，这来自光子本身的性质。光子的性质由一个概率波 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cpsi" class="gallery-item"><img src="https://math.now.sh?inline=%5Cpsi" style="display:inline-block;margin: 0;"/></a> 描述，当处于两条缝可以选择的叠加态时，<a target="_blank" rel="noopener" href="https://math.now.sh?inline=%7C%5Cpsi%7C%5E2" class="gallery-item"><img src="https://math.now.sh?inline=%7C%5Cpsi%7C%5E2" style="display:inline-block;margin: 0;"/></a> 就会出现干涉项。</p>
 <p>我感觉这很数学，很妙，物理学家从现象中挖出了光子的本质。光子不得不是概率波。</p>
 <p>参考：</p>
 <ul>
 <li><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/40343270/answer/111817926">如何解释单光子干涉</a></li>
 <li><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/61933450/answer/1225803587">为何单个电子通过双缝会发生干涉？</a></li>
 </ul>
-<h3 id="2-Photon-Stream-「光子流」"><a href="#2-Photon-Stream-「光子流」" class="headerlink" title="2. Photon Stream 「光子流」"></a>2. Photon Stream 「光子流」</h3><p>光子流中光子的到达是随机的，量子力学成功地找到了这种随机性的来源：不确定性原理。</p>
+<h3 id="2-Photon-Stream-「光子流」">2. Photon Stream 「光子流」</h3>
+<p>光子流中光子的到达是随机的，量子力学成功地找到了这种随机性的来源：不确定性原理。</p>
 <p>接下来要对这种随机性进行建模，涉及一些随机过程和数理统计。</p>
-<h4 id="描述光子流"><a href="#描述光子流" class="headerlink" title="描述光子流"></a>描述光子流</h4><ul>
-<li>平均光子通量密度 $\phi(\vec r)&#x3D;\displaystyle \frac{I(\vec r)}{h\bar\nu}$ ：单位时间单位面积的平均光子数</li>
-<li>平均光子通量 $\Phi(\vec r)&#x3D;\int \phi(\vec r)\ \text{d}A&#x3D;\displaystyle\frac{P}{h\bar\nu}$ ：单位时间的平均光子数</li>
-<li>平均光子数 $\bar n&#x3D;\int \Phi\ \text{d}t&#x3D;\displaystyle \frac{E}{h\bar\nu}$</li>
+<h4 id="描述光子流">描述光子流</h4>
+<ul>
+<li>平均光子通量密度 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cphi%28%5Cvec%20r%29%3D%5Cdisplaystyle%20%5Cfrac%7BI(%5Cvec%20r)%7D%7Bh%5Cbar%5Cnu%7D" class="gallery-item"><img src="https://math.now.sh?inline=%5Cphi%28%5Cvec%20r%29%3D%5Cdisplaystyle%20%5Cfrac%7BI(%5Cvec%20r)%7D%7Bh%5Cbar%5Cnu%7D" style="display:inline-block;margin: 0;"/></a> ：单位时间单位面积的平均光子数</li>
+<li>平均光子通量 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5CPhi%28%5Cvec%20r%29%3D%5Cint%20%5Cphi(%5Cvec%20r)%5C%20%5Ctext%7Bd%7DA%3D%5Cdisplaystyle%5Cfrac%7BP%7D%7Bh%5Cbar%5Cnu%7D" class="gallery-item"><img src="https://math.now.sh?inline=%5CPhi%28%5Cvec%20r%29%3D%5Cint%20%5Cphi(%5Cvec%20r)%5C%20%5Ctext%7Bd%7DA%3D%5Cdisplaystyle%5Cfrac%7BP%7D%7Bh%5Cbar%5Cnu%7D" style="display:inline-block;margin: 0;"/></a> ：单位时间的平均光子数</li>
+<li>平均光子数 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cbar%20n%3D%5Cint%20%5CPhi%5C%20%5Ctext%7Bd%7Dt%3D%5Cdisplaystyle%20%5Cfrac%7BE%7D%7Bh%5Cbar%5Cnu%7D" class="gallery-item"><img src="https://math.now.sh?inline=%5Cbar%20n%3D%5Cint%20%5CPhi%5C%20%5Ctext%7Bd%7Dt%3D%5Cdisplaystyle%20%5Cfrac%7BE%7D%7Bh%5Cbar%5Cnu%7D" style="display:inline-block;margin: 0;"/></a></li>
 </ul>
 <p>在频域，用对应的谱密度去描述。</p>
-<h4 id="光子流中的到达光子数"><a href="#光子流中的到达光子数" class="headerlink" title="光子流中的到达光子数"></a>光子流中的到达光子数</h4><h5 id="（1）Coherent-Light"><a href="#（1）Coherent-Light" class="headerlink" title="（1）Coherent Light"></a>（1）Coherent Light</h5><p>相干光有恒定的功率。因此有确定的平均光子数，这也是其服从的泊松分布的强度。</p>
-<p>为什么光子数分布 $p(n)$ 服从泊松分布？</p>
-<p>对于一段时间 $T$, 将其等分为非常多的份数 $N$, 使得每一份时间 $T&#x2F;N$ 里最多出现一个光子。出现一个光子的概率应为 $\bar n&#x2F;N$，整个时间段 $T$ 内出现 $n$ 个光子的概率就服从二项分布：<br>$$<br>p(n)&#x3D;C_N^n(\bar n&#x2F;N)^n(1-\bar n&#x2F;N)^{N-n}<br>$$<br>$N\to \infty$, 二项分布成为 Poisson 分布：<br>$$<br>p(n)&#x3D;\frac{\bar n^n e^{-\bar n}}{n!}<br>$$</p>
-<h5 id="（2）Thermal-Light"><a href="#（2）Thermal-Light" class="headerlink" title="（2）Thermal Light"></a>（2）Thermal Light</h5><p>对于热光，要考虑热平衡条件下的分布—玻尔兹曼分布。</p>
+<h4 id="光子流中的到达光子数">光子流中的到达光子数</h4>
+<h5 id="（1）Coherent-Light">（1）Coherent Light</h5>
+<p>相干光有恒定的功率。因此有确定的平均光子数，这也是其服从的泊松分布的强度。</p>
+<p>为什么光子数分布 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=p%28n%29" class="gallery-item"><img src="https://math.now.sh?inline=p%28n%29" style="display:inline-block;margin: 0;"/></a> 服从泊松分布？</p>
+<p>对于一段时间 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=T" class="gallery-item"><img src="https://math.now.sh?inline=T" style="display:inline-block;margin: 0;"/></a>, 将其等分为非常多的份数 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=N" class="gallery-item"><img src="https://math.now.sh?inline=N" style="display:inline-block;margin: 0;"/></a>, 使得每一份时间 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=T%2FN" class="gallery-item"><img src="https://math.now.sh?inline=T%2FN" style="display:inline-block;margin: 0;"/></a> 里最多出现一个光子。出现一个光子的概率应为 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cbar%20n%2FN" class="gallery-item"><img src="https://math.now.sh?inline=%5Cbar%20n%2FN" style="display:inline-block;margin: 0;"/></a>，整个时间段 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=T" class="gallery-item"><img src="https://math.now.sh?inline=T" style="display:inline-block;margin: 0;"/></a> 内出现 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=n" class="gallery-item"><img src="https://math.now.sh?inline=n" style="display:inline-block;margin: 0;"/></a> 个光子的概率就服从二项分布：</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=p%28n%29%3DC_N%5En(%5Cbar%20n%2FN)%5En(1-%5Cbar%20n%2FN)%5E%7BN-n%7D%0A" class="gallery-item"><img src="https://math.now.sh?from=p%28n%29%3DC_N%5En(%5Cbar%20n%2FN)%5En(1-%5Cbar%20n%2FN)%5E%7BN-n%7D%0A" /></a></p><p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=N%5Cto%20%5Cinfty" class="gallery-item"><img src="https://math.now.sh?inline=N%5Cto%20%5Cinfty" style="display:inline-block;margin: 0;"/></a>, 二项分布成为 Poisson 分布：</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=p%28n%29%3D%5Cfrac%7B%5Cbar%20n%5En%20e%5E%7B-%5Cbar%20n%7D%7D%7Bn!%7D%0A" class="gallery-item"><img src="https://math.now.sh?from=p%28n%29%3D%5Cfrac%7B%5Cbar%20n%5En%20e%5E%7B-%5Cbar%20n%7D%7D%7Bn!%7D%0A" /></a></p><h5 id="（2）Thermal-Light">（2）Thermal Light</h5>
+<p>对于热光，要考虑热平衡条件下的分布—玻尔兹曼分布。</p>
 <p><em>Boltzmann Distribution</em>：gives the probability that a system will be in a certain state as a function of that state’s energy.</p>
-<p>（推导）The Boltzmann distribution is the distribution that maximizes the entropy<br>$$<br>H(p_1,p_2,\dots,p_M)&#x3D;-\sum_{i&#x3D;1}^Mp_i\log_2 p_i<br>$$<br>subject to the constraint that $\sum p_i\varepsilon_i$ equals a particular mean energy value.</p>
-<p>热平衡条件下的熵应为最大，由此导出玻尔兹曼分布：<br>$$<br>p_i\propto e^{-\varepsilon_i&#x2F;kT}<br>$$<br>即处于粒子状态 $i$ 的概率与状态 $i$ 的能量 $\varepsilon_i$ 的关系。</p>
-<p>对于光子流，其光子数的分布为：<br>$$<br>p(n)\propto \left[\exp\left(-\frac{nh\nu}{kT}\right)\right]^n\label{photon-dis-boltz}<br>$$<br>由 $\bar n&#x3D;\sum np(n)$ 得到<br>$$<br>\bar n&#x3D;\frac{1}{\exp(h\nu&#x2F;kT)-1}<br>$$<br>将其带入 ($\ref{photon-dis-boltz}$)，得到 Bose-Einstein 分布：<br>$$<br>p(n)&#x3D;\frac{1}{\bar n+1}\left(\frac{\bar n}{\bar n+1}\right)^n.<br>$$</p>
-<p>作为一个应用，热平衡时（求解速率方程时的热平衡条件）：<br>$$<br>\frac{N_2}{N_1}&#x3D;\exp\left(-\frac{E_2-E_1}{k_B T}\right)&#x3D;\exp\left(-\frac{h\nu}{k_B T}\right).<br>$$</p>
-<h5 id="（3）坑待填"><a href="#（3）坑待填" class="headerlink" title="（3）坑待填"></a>（3）坑待填</h5><ul>
+<p>（推导）The Boltzmann distribution is the distribution that maximizes the entropy</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=H%28p_1%2Cp_2%2C%5Cdots%2Cp_M%29%3D-%5Csum_%7Bi%3D1%7D%5EMp_i%5Clog_2%20p_i%0A" class="gallery-item"><img src="https://math.now.sh?from=H%28p_1%2Cp_2%2C%5Cdots%2Cp_M%29%3D-%5Csum_%7Bi%3D1%7D%5EMp_i%5Clog_2%20p_i%0A" /></a></p><p>subject to the constraint that <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Csum%20p_i%5Cvarepsilon_i" class="gallery-item"><img src="https://math.now.sh?inline=%5Csum%20p_i%5Cvarepsilon_i" style="display:inline-block;margin: 0;"/></a> equals a particular mean energy value.</p>
+<p>热平衡条件下的熵应为最大，由此导出玻尔兹曼分布：</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=p_i%5Cpropto%20e%5E%7B-%5Cvarepsilon_i%2FkT%7D%0A" class="gallery-item"><img src="https://math.now.sh?from=p_i%5Cpropto%20e%5E%7B-%5Cvarepsilon_i%2FkT%7D%0A" /></a></p><p>即处于粒子状态 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=i" class="gallery-item"><img src="https://math.now.sh?inline=i" style="display:inline-block;margin: 0;"/></a> 的概率与状态 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=i" class="gallery-item"><img src="https://math.now.sh?inline=i" style="display:inline-block;margin: 0;"/></a> 的能量 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cvarepsilon_i" class="gallery-item"><img src="https://math.now.sh?inline=%5Cvarepsilon_i" style="display:inline-block;margin: 0;"/></a> 的关系。</p>
+<p>对于光子流，其光子数的分布为：</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=p%28n%29%5Cpropto%20%5Cleft%5B%5Cexp%5Cleft(-%5Cfrac%7Bnh%5Cnu%7D%7BkT%7D%5Cright)%5Cright%5D%5En%5Clabel%7Bphoton-dis-boltz%7D%0A" class="gallery-item"><img src="https://math.now.sh?from=p%28n%29%5Cpropto%20%5Cleft%5B%5Cexp%5Cleft(-%5Cfrac%7Bnh%5Cnu%7D%7BkT%7D%5Cright)%5Cright%5D%5En%5Clabel%7Bphoton-dis-boltz%7D%0A" /></a></p><p>由 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cbar%20n%3D%5Csum%20np%28n%29" class="gallery-item"><img src="https://math.now.sh?inline=%5Cbar%20n%3D%5Csum%20np%28n%29" style="display:inline-block;margin: 0;"/></a> 得到</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=%5Cbar%20n%3D%5Cfrac%7B1%7D%7B%5Cexp%28h%5Cnu%2FkT%29-1%7D%0A" class="gallery-item"><img src="https://math.now.sh?from=%5Cbar%20n%3D%5Cfrac%7B1%7D%7B%5Cexp%28h%5Cnu%2FkT%29-1%7D%0A" /></a></p><p>将其带入 (<a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cref%7Bphoton-dis-boltz%7D" class="gallery-item"><img src="https://math.now.sh?inline=%5Cref%7Bphoton-dis-boltz%7D" style="display:inline-block;margin: 0;"/></a>)，得到 Bose-Einstein 分布：</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=p%28n%29%3D%5Cfrac%7B1%7D%7B%5Cbar%20n%2B1%7D%5Cleft(%5Cfrac%7B%5Cbar%20n%7D%7B%5Cbar%20n%2B1%7D%5Cright)%5En.%0A" class="gallery-item"><img src="https://math.now.sh?from=p%28n%29%3D%5Cfrac%7B1%7D%7B%5Cbar%20n%2B1%7D%5Cleft(%5Cfrac%7B%5Cbar%20n%7D%7B%5Cbar%20n%2B1%7D%5Cright)%5En.%0A" /></a></p><p>作为一个应用，热平衡时（求解速率方程时的热平衡条件）：</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=%5Cfrac%7BN_2%7D%7BN_1%7D%3D%5Cexp%5Cleft%28-%5Cfrac%7BE_2-E_1%7D%7Bk_B%20T%7D%5Cright%29%3D%5Cexp%5Cleft(-%5Cfrac%7Bh%5Cnu%7D%7Bk_B%20T%7D%5Cright).%0A" class="gallery-item"><img src="https://math.now.sh?from=%5Cfrac%7BN_2%7D%7BN_1%7D%3D%5Cexp%5Cleft%28-%5Cfrac%7BE_2-E_1%7D%7Bk_B%20T%7D%5Cright%29%3D%5Cexp%5Cleft(-%5Cfrac%7Bh%5Cnu%7D%7Bk_B%20T%7D%5Cright).%0A" /></a></p><h5 id="（3）坑待填">（3）坑待填</h5>
+<ul>
 <li>doubly stochastic Poisson process (DSPP)</li>
-<li>quantum states of light<ul>
+<li>quantum states of light
+<ul>
 <li>Two-Photon Optics</li>
 </ul>
 </li>
 </ul>
-<h2 id="Light-and-Matter"><a href="#Light-and-Matter" class="headerlink" title="Light and Matter"></a>Light and Matter</h2><h3 id="1-跃迁与辐射"><a href="#1-跃迁与辐射" class="headerlink" title="1. 跃迁与辐射"></a>1. 跃迁与辐射</h3><p>需要对原子的辐射、跃迁进行完整的建模。</p>
+<h2 id="Light-and-Matter">Light and Matter</h2>
+<h3 id="1-跃迁与辐射">1. 跃迁与辐射</h3>
+<p>需要对原子的辐射、跃迁进行完整的建模。</p>
 <p>接下来进行宏观的分析。</p>
 <ul>
 <li>自发辐射寿命</li>
 </ul>
-<p>设单位时间内自发辐射概率密度为 $\operatorname P_{sp}$，即 $1s$ 辐射 $\operatorname{P}<em>{sp}$ 个光子，因此光子的自发辐射寿命<br>$$<br>t</em>{sp}&#x3D;\frac{1}{\operatorname{P}_{sp}}<br>$$<br>即每个光子辐射出来“平均”需要多少 $s$。</p>
-<p>事实上: $\text dN&#x2F;\text dt&#x3D;-Np_{sp}\implies N&#x3D;e^{-p_{sp}t}$, $t_{sp}$ 为粒子数减小为原来 $1&#x2F;e$ 时的时间间隔。</p>
+<p>设单位时间内自发辐射概率密度为 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Coperatorname%20P_%7Bsp%7D" class="gallery-item"><img src="https://math.now.sh?inline=%5Coperatorname%20P_%7Bsp%7D" style="display:inline-block;margin: 0;"/></a>，即 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=1s" class="gallery-item"><img src="https://math.now.sh?inline=1s" style="display:inline-block;margin: 0;"/></a> 辐射 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Coperatorname%7BP%7D_%7Bsp%7D" class="gallery-item"><img src="https://math.now.sh?inline=%5Coperatorname%7BP%7D_%7Bsp%7D" style="display:inline-block;margin: 0;"/></a> 个光子，因此光子的自发辐射寿命</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=t_%7Bsp%7D%3D%5Cfrac%7B1%7D%7B%5Coperatorname%7BP%7D_%7Bsp%7D%7D%0A" class="gallery-item"><img src="https://math.now.sh?from=t_%7Bsp%7D%3D%5Cfrac%7B1%7D%7B%5Coperatorname%7BP%7D_%7Bsp%7D%7D%0A" /></a></p><p>即每个光子辐射出来“平均”需要多少 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=s" class="gallery-item"><img src="https://math.now.sh?inline=s" style="display:inline-block;margin: 0;"/></a>。</p>
+<p>事实上: <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Ctext%20dN%2F%5Ctext%20dt%3D-Np_%7Bsp%7D%5Cimplies%20N%3De%5E%7B-p_%7Bsp%7Dt%7D" class="gallery-item"><img src="https://math.now.sh?inline=%5Ctext%20dN%2F%5Ctext%20dt%3D-Np_%7Bsp%7D%5Cimplies%20N%3De%5E%7B-p_%7Bsp%7Dt%7D" style="display:inline-block;margin: 0;"/></a>, <a target="_blank" rel="noopener" href="https://math.now.sh?inline=t_%7Bsp%7D" class="gallery-item"><img src="https://math.now.sh?inline=t_%7Bsp%7D" style="display:inline-block;margin: 0;"/></a> 为粒子数减小为原来 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=1%2Fe" class="gallery-item"><img src="https://math.now.sh?inline=1%2Fe" style="display:inline-block;margin: 0;"/></a> 时的时间间隔。</p>
 <ul>
 <li>跃迁截面</li>
 </ul>
-<p>跃迁截面可以看作有效作用面积：<br>$$<br>\sigma(\nu)&#x3D;Sg(\nu),\quad \int_0^\infty g(\nu)\text d\nu&#x3D;1<br>$$<br>$S$ 为相互作用强度，$g(\nu)$ 为线型函数。</p>
-<p>对洛伦兹线形，有 $g(\nu_0)&#x3D;2&#x2F;(\pi\Delta \nu)$, $\Delta\nu&#x3D;1&#x2F;2\pi t_{sp}$</p>
+<p>跃迁截面可以看作有效作用面积：</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=%5Csigma%28%5Cnu%29%3DSg(%5Cnu)%2C%5Cquad%20%5Cint_0%5E%5Cinfty%20g(%5Cnu)%5Ctext%20d%5Cnu%3D1%0A" class="gallery-item"><img src="https://math.now.sh?from=%5Csigma%28%5Cnu%29%3DSg(%5Cnu)%2C%5Cquad%20%5Cint_0%5E%5Cinfty%20g(%5Cnu)%5Ctext%20d%5Cnu%3D1%0A" /></a></p><p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=S" class="gallery-item"><img src="https://math.now.sh?inline=S" style="display:inline-block;margin: 0;"/></a> 为相互作用强度，<a target="_blank" rel="noopener" href="https://math.now.sh?inline=g%28%5Cnu%29" class="gallery-item"><img src="https://math.now.sh?inline=g%28%5Cnu%29" style="display:inline-block;margin: 0;"/></a> 为线型函数。</p>
+<p>对洛伦兹线形，有 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=g%28%5Cnu_0%29%3D2%2F(%5Cpi%5CDelta%20%5Cnu)" class="gallery-item"><img src="https://math.now.sh?inline=g%28%5Cnu_0%29%3D2%2F(%5Cpi%5CDelta%20%5Cnu)" style="display:inline-block;margin: 0;"/></a>, <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5CDelta%5Cnu%3D1%2F2%5Cpi%20t_%7Bsp%7D" class="gallery-item"><img src="https://math.now.sh?inline=%5CDelta%5Cnu%3D1%2F2%5Cpi%20t_%7Bsp%7D" style="display:inline-block;margin: 0;"/></a></p>
 <ul>
 <li>辐射概率密度</li>
 </ul>
-<p>对自发辐射、吸收和受激辐射<strong>（怎么来的？）</strong>：<br>$$<br>\begin{align}<br>\operatorname p_{sp}&amp;&#x3D;\frac{c}{V}\sigma(\nu)\<br>\operatorname P_{ab}&amp;&#x3D;\bar n\frac{c}{V}\sigma(\nu)\<br>\operatorname P_{st}&amp;&#x3D;\bar n\frac{c}{V}\sigma(\nu)<br>\end{align}<br>$$<br>其中 $\bar n$ 为相互作用过程中的(平均)光子数。</p>
-<p>注意三个 $\sigma$ 其实有所不同，自发辐射要对 $\theta$ 取平均，受激辐射则是特定的角度 $\theta_0$.</p>
-<p>一般光子自发辐射寿命可测，由此可去算 $S$：<br>$$<br>\begin{align}<br>\operatorname P_{sp}&amp;&#x3D;\int_0^\infty \left[\frac{c}{V}\sigma(\nu)\right]\left[VM(\nu)\right]\text d \nu\approx M(\nu_0)cS\<br>\implies &amp; S&#x3D;\frac{\lambda^2}{8\pi t_{sp}}</p>
-<p>\end{align}<br>$$</p>
-<ul>
-<li><p>受激辐射概率密度</p>
-<p>用 $W_i$ 表示吸收概率密度，也等于受激辐射概率密度，$W_i&#x3D;\bar n&#x2F;t_{sp}$, 概率密度的单位为 $s^{-1}$。</p>
-<p>对于单频光：$n&#x3D;\phi V&#x2F;c$<br>$$<br>W_i&#x3D;\operatorname P_{st}&#x3D;P_{ab}&#x3D;\phi \cdot \sigma(\nu)<br>$$<br>对于宽频光：需知道其光谱能量密度 $\rho(\nu)$<br>$$<br>\begin{align}<br>W_i&amp;&#x3D;\int_0^\infty n(\nu)\operatorname P_{st}(\nu)\text d\nu&#x3D;\int_0^\infty \left[\rho(\nu)V\text d \nu\right&#x2F;h\nu]\left[\frac{c}{V}\sigma(nu)\right]\<br>&amp;\approx \frac{\bar n}{t_{sp}}<br>\end{align}<br>$$<br>其中  $\bar n&#x3D;\displaystyle\frac{\lambda_0^3}{8\pi h}\rho(\nu_0)&#x3D;\frac{cS\operatorname P_{sp}\rho(\nu_0)}{h\nu_0}$ 代表<strong>每个模式的平均光子数</strong>。</p>
+<p>对自发辐射、吸收和受激辐射**（怎么来的？）**：</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=%5Cbegin%7Balign%7D%0A%5Coperatorname%20p_%7Bsp%7D%26%3D%5Cfrac%7Bc%7D%7BV%7D%5Csigma%28%5Cnu%29%5C%5C%0A%5Coperatorname%20P_%7Bab%7D%26%3D%5Cbar%20n%5Cfrac%7Bc%7D%7BV%7D%5Csigma(%5Cnu)%5C%5C%0A%5Coperatorname%20P_%7Bst%7D%26%3D%5Cbar%20n%5Cfrac%7Bc%7D%7BV%7D%5Csigma(%5Cnu)%0A%5Cend%7Balign%7D%0A" class="gallery-item"><img src="https://math.now.sh?from=%5Cbegin%7Balign%7D%0A%5Coperatorname%20p_%7Bsp%7D%26%3D%5Cfrac%7Bc%7D%7BV%7D%5Csigma%28%5Cnu%29%5C%5C%0A%5Coperatorname%20P_%7Bab%7D%26%3D%5Cbar%20n%5Cfrac%7Bc%7D%7BV%7D%5Csigma(%5Cnu)%5C%5C%0A%5Coperatorname%20P_%7Bst%7D%26%3D%5Cbar%20n%5Cfrac%7Bc%7D%7BV%7D%5Csigma(%5Cnu)%0A%5Cend%7Balign%7D%0A" /></a></p><p>其中 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cbar%20n" class="gallery-item"><img src="https://math.now.sh?inline=%5Cbar%20n" style="display:inline-block;margin: 0;"/></a> 为相互作用过程中的(平均)光子数。</p>
+<p>注意三个 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Csigma" class="gallery-item"><img src="https://math.now.sh?inline=%5Csigma" style="display:inline-block;margin: 0;"/></a> 其实有所不同，自发辐射要对 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Ctheta" class="gallery-item"><img src="https://math.now.sh?inline=%5Ctheta" style="display:inline-block;margin: 0;"/></a> 取平均，受激辐射则是特定的角度 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Ctheta_0" class="gallery-item"><img src="https://math.now.sh?inline=%5Ctheta_0" style="display:inline-block;margin: 0;"/></a>.</p>
+<p>一般光子自发辐射寿命可测，由此可去算 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=S" class="gallery-item"><img src="https://math.now.sh?inline=S" style="display:inline-block;margin: 0;"/></a>：</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=%5Cbegin%7Balign%7D%0A%5Coperatorname%20P_%7Bsp%7D%26%3D%5Cint_0%5E%5Cinfty%20%5Cleft%5B%5Cfrac%7Bc%7D%7BV%7D%5Csigma%28%5Cnu%29%5Cright%5D%5Cleft%5BVM(%5Cnu)%5Cright%5D%5Ctext%20d%20%5Cnu%5Capprox%20M(%5Cnu_0)cS%5C%5C%0A%5Cimplies%20%26%20S%3D%5Cfrac%7B%5Clambda%5E2%7D%7B8%5Cpi%20t_%7Bsp%7D%7D%0A%0A%5Cend%7Balign%7D%0A" class="gallery-item"><img src="https://math.now.sh?from=%5Cbegin%7Balign%7D%0A%5Coperatorname%20P_%7Bsp%7D%26%3D%5Cint_0%5E%5Cinfty%20%5Cleft%5B%5Cfrac%7Bc%7D%7BV%7D%5Csigma%28%5Cnu%29%5Cright%5D%5Cleft%5BVM(%5Cnu)%5Cright%5D%5Ctext%20d%20%5Cnu%5Capprox%20M(%5Cnu_0)cS%5C%5C%0A%5Cimplies%20%26%20S%3D%5Cfrac%7B%5Clambda%5E2%7D%7B8%5Cpi%20t_%7Bsp%7D%7D%0A%0A%5Cend%7Balign%7D%0A" /></a></p><ul>
+<li>
+<p>受激辐射概率密度</p>
+<p>用 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=W_i" class="gallery-item"><img src="https://math.now.sh?inline=W_i" style="display:inline-block;margin: 0;"/></a> 表示吸收概率密度，也等于受激辐射概率密度，<a target="_blank" rel="noopener" href="https://math.now.sh?inline=W_i%3D%5Cbar%20n%2Ft_%7Bsp%7D" class="gallery-item"><img src="https://math.now.sh?inline=W_i%3D%5Cbar%20n%2Ft_%7Bsp%7D" style="display:inline-block;margin: 0;"/></a>, 概率密度的单位为 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=s%5E%7B-1%7D" class="gallery-item"><img src="https://math.now.sh?inline=s%5E%7B-1%7D" style="display:inline-block;margin: 0;"/></a>。</p>
+<p>对于单频光：<a target="_blank" rel="noopener" href="https://math.now.sh?inline=n%3D%5Cphi%20V%2Fc" class="gallery-item"><img src="https://math.now.sh?inline=n%3D%5Cphi%20V%2Fc" style="display:inline-block;margin: 0;"/></a></p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=W_i%3D%5Coperatorname%20P_%7Bst%7D%3DP_%7Bab%7D%3D%5Cphi%20%5Ccdot%20%5Csigma%28%5Cnu%29%0A" class="gallery-item"><img src="https://math.now.sh?from=W_i%3D%5Coperatorname%20P_%7Bst%7D%3DP_%7Bab%7D%3D%5Cphi%20%5Ccdot%20%5Csigma%28%5Cnu%29%0A" /></a></p><p>对于宽频光：需知道其光谱能量密度 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Crho%28%5Cnu%29" class="gallery-item"><img src="https://math.now.sh?inline=%5Crho%28%5Cnu%29" style="display:inline-block;margin: 0;"/></a></p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=%5Cbegin%7Balign%7D%0AW_i%26%3D%5Cint_0%5E%5Cinfty%20n%28%5Cnu%29%5Coperatorname%20P_%7Bst%7D(%5Cnu)%5Ctext%20d%5Cnu%3D%5Cint_0%5E%5Cinfty%20%5Cleft%5B%5Crho(%5Cnu)V%5Ctext%20d%20%5Cnu%5Cright%2Fh%5Cnu%5D%5Cleft%5B%5Cfrac%7Bc%7D%7BV%7D%5Csigma(nu)%5Cright%5D%5C%5C%0A%26%5Capprox%20%5Cfrac%7B%5Cbar%20n%7D%7Bt_%7Bsp%7D%7D%0A%5Cend%7Balign%7D%0A" class="gallery-item"><img src="https://math.now.sh?from=%5Cbegin%7Balign%7D%0AW_i%26%3D%5Cint_0%5E%5Cinfty%20n%28%5Cnu%29%5Coperatorname%20P_%7Bst%7D(%5Cnu)%5Ctext%20d%5Cnu%3D%5Cint_0%5E%5Cinfty%20%5Cleft%5B%5Crho(%5Cnu)V%5Ctext%20d%20%5Cnu%5Cright%2Fh%5Cnu%5D%5Cleft%5B%5Cfrac%7Bc%7D%7BV%7D%5Csigma(nu)%5Cright%5D%5C%5C%0A%26%5Capprox%20%5Cfrac%7B%5Cbar%20n%7D%7Bt_%7Bsp%7D%7D%0A%5Cend%7Balign%7D%0A" /></a></p><p>其中  <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cbar%20n%3D%5Cdisplaystyle%5Cfrac%7B%5Clambda_0%5E3%7D%7B8%5Cpi%20h%7D%5Crho%28%5Cnu_0%29%3D%5Cfrac%7BcS%5Coperatorname%20P_%7Bsp%7D%5Crho(%5Cnu_0)%7D%7Bh%5Cnu_0%7D" class="gallery-item"><img src="https://math.now.sh?inline=%5Cbar%20n%3D%5Cdisplaystyle%5Cfrac%7B%5Clambda_0%5E3%7D%7B8%5Cpi%20h%7D%5Crho%28%5Cnu_0%29%3D%5Cfrac%7BcS%5Coperatorname%20P_%7Bsp%7D%5Crho(%5Cnu_0)%7D%7Bh%5Cnu_0%7D" style="display:inline-block;margin: 0;"/></a> 代表<strong>每个模式的平均光子数</strong>。</p>
 </li>
-<li><p>爱因斯坦系数</p>
-<p>$$<br>\begin{align}<br>P_{sp}&amp;&#x3D;\mathbb{A}\<br>W_i&amp;&#x3D;\mathbb{B} \rho(\nu_0)<br>\end{align}<br>$$<br>其中 $\rho(\nu)$ 为光谱能量密度，$\mathbb{A},\mathbb{B}$ 为爱因斯坦系数，有：<br>$$<br>\mathbb{A}&#x3D;\frac{1}{t_{sp}},\mathbb{B}&#x3D;\frac{\lambda^3}{8\pi ht_{sp}}.<br>$$</p>
-</li>
+<li>
+<p>爱因斯坦系数</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=%5Cbegin%7Balign%7D%0AP_%7Bsp%7D%26%3D%5Cmathbb%7BA%7D%5C%5C%0AW_i%26%3D%5Cmathbb%7BB%7D%20%5Crho%28%5Cnu_0%29%0A%5Cend%7Balign%7D%0A" class="gallery-item"><img src="https://math.now.sh?from=%5Cbegin%7Balign%7D%0AP_%7Bsp%7D%26%3D%5Cmathbb%7BA%7D%5C%5C%0AW_i%26%3D%5Cmathbb%7BB%7D%20%5Crho%28%5Cnu_0%29%0A%5Cend%7Balign%7D%0A" /></a></p><p>其中 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Crho%28%5Cnu%29" class="gallery-item"><img src="https://math.now.sh?inline=%5Crho%28%5Cnu%29" style="display:inline-block;margin: 0;"/></a> 为光谱能量密度，<a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cmathbb%7BA%7D%2C%5Cmathbb%7BB%7D" class="gallery-item"><img src="https://math.now.sh?inline=%5Cmathbb%7BA%7D%2C%5Cmathbb%7BB%7D" style="display:inline-block;margin: 0;"/></a> 为爱因斯坦系数，有：</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=%5Cmathbb%7BA%7D%3D%5Cfrac%7B1%7D%7Bt_%7Bsp%7D%7D%2C%5Cmathbb%7BB%7D%3D%5Cfrac%7B%5Clambda%5E3%7D%7B8%5Cpi%20ht_%7Bsp%7D%7D.%0A" class="gallery-item"><img src="https://math.now.sh?from=%5Cmathbb%7BA%7D%3D%5Cfrac%7B1%7D%7Bt_%7Bsp%7D%7D%2C%5Cmathbb%7BB%7D%3D%5Cfrac%7B%5Clambda%5E3%7D%7B8%5Cpi%20ht_%7Bsp%7D%7D.%0A" /></a></p></li>
 </ul>
-<h3 id="2-速率方程"><a href="#2-速率方程" class="headerlink" title="2. 速率方程"></a>2. 速率方程</h3><p>我们需要描述泵浦作用下原子内部的跃迁情况，这相当于原子辐射和跃迁的微观分析。</p>
-<p>设泵源使得的由下能级跃迁到能级2的速率为 $R_2$,（单位时间单位体积的粒子数） 从能级1跃迁到其他能级的速率为 $R_1$。</p>
-<p>由跃迁速率和能级寿命的反比关系，能级寿命 $\tau_2^{-1}&#x3D;\tau_{21}^{-1}+\tau_{20}^{-1}$, $\tau_{21}^{-1}&#x3D;\tau_{sp}^{-1}+\tau_{nr}^{-1}$, $\tau_{nr}$ 为非辐射跃迁成分。</p>
-<p>不考虑辐射时，有：<br>$$<br>\begin{align}<br>\frac{\text dN_2}{\text dt}&amp;&#x3D;R_2-\frac{N_2}{\tau_2}\<br>\frac{\text dN_1}{\text d t}&amp;&#x3D;-R_1-\frac{N_1}{\tau_1}+\frac{N_2}{\tau_{21}}<br>\end{align}<br>$$<br>稳态条件下（ $\text dN&#x2F;\text d t&#x3D;0$ ）解得无辐射时稳态粒子数差<br>$$<br>N_0&#x3D;R_2\tau_2(1-\frac{\tau_1}{\tau_{21}})+R_1\tau_1<br>$$</p>
-<p>考虑辐射时：<br>$$<br>\begin{aligned}<br>\frac{\text dN_2}{\text dt}&amp;&#x3D;R_2-\frac{N_2}{\tau_2}+N_1W_i-N_2W_i\<br>\frac{\text dN_1}{\text d t}&amp;&#x3D;-R_1-\frac{N_1}{\tau_1}+\frac{N_2}{\tau_{21}}-N_1W_i+N_2W_i<br>\end{aligned}<br>$$<br>稳态条件下解得：<br>$$<br>N&#x3D;\frac{N_0}{1+\tau_sW_i} \label{sat}<br>$$<br>这就意味着随着<strong>辐射变强</strong>（增加输入光子流密度，“用光直接泵浦”），$W_i$ 增大，反转粒子数出现饱和。其中 $\tau_s&#x3D;\tau_2+\tau_1(1-\displaystyle\frac{\tau_2}{\tau_{21}})$ 。</p>
-<p>对于四能级泵浦机制，外部的能量源以速率 $R$ 将原子从能级0泵浦到能级3，有以下假设：</p>
+<h3 id="2-速率方程">2. 速率方程</h3>
+<p>我们需要描述泵浦作用下原子内部的跃迁情况，这相当于原子辐射和跃迁的微观分析。</p>
+<p>设泵源使得的由下能级跃迁到能级2的速率为 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=R_2" class="gallery-item"><img src="https://math.now.sh?inline=R_2" style="display:inline-block;margin: 0;"/></a>,（单位时间单位体积的粒子数） 从能级1跃迁到其他能级的速率为 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=R_1" class="gallery-item"><img src="https://math.now.sh?inline=R_1" style="display:inline-block;margin: 0;"/></a>。</p>
+<p>由跃迁速率和能级寿命的反比关系，能级寿命 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Ctau_2%5E%7B-1%7D%3D%5Ctau_%7B21%7D%5E%7B-1%7D%2B%5Ctau_%7B20%7D%5E%7B-1%7D" class="gallery-item"><img src="https://math.now.sh?inline=%5Ctau_2%5E%7B-1%7D%3D%5Ctau_%7B21%7D%5E%7B-1%7D%2B%5Ctau_%7B20%7D%5E%7B-1%7D" style="display:inline-block;margin: 0;"/></a>, <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Ctau_%7B21%7D%5E%7B-1%7D%3D%5Ctau_%7Bsp%7D%5E%7B-1%7D%2B%5Ctau_%7Bnr%7D%5E%7B-1%7D" class="gallery-item"><img src="https://math.now.sh?inline=%5Ctau_%7B21%7D%5E%7B-1%7D%3D%5Ctau_%7Bsp%7D%5E%7B-1%7D%2B%5Ctau_%7Bnr%7D%5E%7B-1%7D" style="display:inline-block;margin: 0;"/></a>, <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Ctau_%7Bnr%7D" class="gallery-item"><img src="https://math.now.sh?inline=%5Ctau_%7Bnr%7D" style="display:inline-block;margin: 0;"/></a> 为非辐射跃迁成分。</p>
+<p>不考虑辐射时，有：</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=%5Cbegin%7Balign%7D%0A%5Cfrac%7B%5Ctext%20dN_2%7D%7B%5Ctext%20dt%7D%26%3DR_2-%5Cfrac%7BN_2%7D%7B%5Ctau_2%7D%5C%5C%0A%5Cfrac%7B%5Ctext%20dN_1%7D%7B%5Ctext%20d%20t%7D%26%3D-R_1-%5Cfrac%7BN_1%7D%7B%5Ctau_1%7D%2B%5Cfrac%7BN_2%7D%7B%5Ctau_%7B21%7D%7D%0A%5Cend%7Balign%7D%0A" class="gallery-item"><img src="https://math.now.sh?from=%5Cbegin%7Balign%7D%0A%5Cfrac%7B%5Ctext%20dN_2%7D%7B%5Ctext%20dt%7D%26%3DR_2-%5Cfrac%7BN_2%7D%7B%5Ctau_2%7D%5C%5C%0A%5Cfrac%7B%5Ctext%20dN_1%7D%7B%5Ctext%20d%20t%7D%26%3D-R_1-%5Cfrac%7BN_1%7D%7B%5Ctau_1%7D%2B%5Cfrac%7BN_2%7D%7B%5Ctau_%7B21%7D%7D%0A%5Cend%7Balign%7D%0A" /></a></p><p>稳态条件下（ <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Ctext%20dN%2F%5Ctext%20d%20t%3D0" class="gallery-item"><img src="https://math.now.sh?inline=%5Ctext%20dN%2F%5Ctext%20d%20t%3D0" style="display:inline-block;margin: 0;"/></a> ）解得无辐射时稳态粒子数差</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=N_0%3DR_2%5Ctau_2%281-%5Cfrac%7B%5Ctau_1%7D%7B%5Ctau_%7B21%7D%7D%29%2BR_1%5Ctau_1%0A" class="gallery-item"><img src="https://math.now.sh?from=N_0%3DR_2%5Ctau_2%281-%5Cfrac%7B%5Ctau_1%7D%7B%5Ctau_%7B21%7D%7D%29%2BR_1%5Ctau_1%0A" /></a></p><p>考虑辐射时：</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%5Cfrac%7B%5Ctext%20dN_2%7D%7B%5Ctext%20dt%7D%26%3DR_2-%5Cfrac%7BN_2%7D%7B%5Ctau_2%7D%2BN_1W_i-N_2W_i%5C%5C%0A%5Cfrac%7B%5Ctext%20dN_1%7D%7B%5Ctext%20d%20t%7D%26%3D-R_1-%5Cfrac%7BN_1%7D%7B%5Ctau_1%7D%2B%5Cfrac%7BN_2%7D%7B%5Ctau_%7B21%7D%7D-N_1W_i%2BN_2W_i%0A%5Cend%7Baligned%7D%0A" class="gallery-item"><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%5Cfrac%7B%5Ctext%20dN_2%7D%7B%5Ctext%20dt%7D%26%3DR_2-%5Cfrac%7BN_2%7D%7B%5Ctau_2%7D%2BN_1W_i-N_2W_i%5C%5C%0A%5Cfrac%7B%5Ctext%20dN_1%7D%7B%5Ctext%20d%20t%7D%26%3D-R_1-%5Cfrac%7BN_1%7D%7B%5Ctau_1%7D%2B%5Cfrac%7BN_2%7D%7B%5Ctau_%7B21%7D%7D-N_1W_i%2BN_2W_i%0A%5Cend%7Baligned%7D%0A" /></a></p><p>稳态条件下解得：</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=N%3D%5Cfrac%7BN_0%7D%7B1%2B%5Ctau_sW_i%7D%20%5Clabel%7Bsat%7D%0A" class="gallery-item"><img src="https://math.now.sh?from=N%3D%5Cfrac%7BN_0%7D%7B1%2B%5Ctau_sW_i%7D%20%5Clabel%7Bsat%7D%0A" /></a></p><p>这就意味着随着<strong>辐射变强</strong>（增加输入光子流密度，“用光直接泵浦”），<a target="_blank" rel="noopener" href="https://math.now.sh?inline=W_i" class="gallery-item"><img src="https://math.now.sh?inline=W_i" style="display:inline-block;margin: 0;"/></a> 增大，反转粒子数出现饱和。其中 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Ctau_s%3D%5Ctau_2%2B%5Ctau_1%281-%5Cdisplaystyle%5Cfrac%7B%5Ctau_2%7D%7B%5Ctau_%7B21%7D%7D%29" class="gallery-item"><img src="https://math.now.sh?inline=%5Ctau_s%3D%5Ctau_2%2B%5Ctau_1%281-%5Cdisplaystyle%5Cfrac%7B%5Ctau_2%7D%7B%5Ctau_%7B21%7D%7D%29" style="display:inline-block;margin: 0;"/></a> 。</p>
+<p>对于四能级泵浦机制，外部的能量源以速率 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=R" class="gallery-item"><img src="https://math.now.sh?inline=R" style="display:inline-block;margin: 0;"/></a> 将原子从能级0泵浦到能级3，有以下假设：</p>
 <ul>
-<li><p>能级1和能级3是短寿命的 $N_1\approx N_3\approx 0$</p>
+<li>
+<p>能级1和能级3是短寿命的 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=N_1%5Capprox%20N_3%5Capprox%200" class="gallery-item"><img src="https://math.now.sh?inline=N_1%5Capprox%20N_3%5Capprox%200" style="display:inline-block;margin: 0;"/></a></p>
 </li>
-<li><p>能级3到能级2的衰减非常快 $R_2&#x3D;R$</p>
+<li>
+<p>能级3到能级2的衰减非常快 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=R_2%3DR" class="gallery-item"><img src="https://math.now.sh?inline=R_2%3DR" style="display:inline-block;margin: 0;"/></a></p>
 </li>
-<li><p>能级1没有原子泵浦进入和流出 $R_1&#x3D;0$</p>
+<li>
+<p>能级1没有原子泵浦进入和流出 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=R_1%3D0" class="gallery-item"><img src="https://math.now.sh?inline=R_1%3D0" style="display:inline-block;margin: 0;"/></a></p>
 </li>
-<li><p>能级2和能级1之间的 <em>非辐射跃迁</em> 一般可以忽略 $\tau_{20}\gg t_{sp}\gg \tau_1 \implies \tau_s\approx t_{sp}$</p>
+<li>
+<p>能级2和能级1之间的 <em>非辐射跃迁</em> 一般可以忽略 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Ctau_%7B20%7D%5Cgg%20t_%7Bsp%7D%5Cgg%20%5Ctau_1%20%5Cimplies%20%5Ctau_s%5Capprox%20t_%7Bsp%7D" class="gallery-item"><img src="https://math.now.sh?inline=%5Ctau_%7B20%7D%5Cgg%20t_%7Bsp%7D%5Cgg%20%5Ctau_1%20%5Cimplies%20%5Ctau_s%5Capprox%20t_%7Bsp%7D" style="display:inline-block;margin: 0;"/></a></p>
 </li>
 </ul>
 <p>三能及泵浦机制抽去了四能级机制中基态能级和长寿命能级2度中间级，它有以下假设：</p>
 <ul>
-<li>3—1衰减很慢，3—2衰减很快 $\tau_{32}\ll \tau_{31}$ $\implies \tau_2&#x3D;\tau_{21},\tau_1&#x3D;\infty$</li>
-<li>能级3寿命很短 $N_a&#x3D;N_1+N_2$</li>
-<li>能级2和能级1之间的非辐射跃迁可忽略 $t_{sp}\ll t_{nr}$ （速率很慢）</li>
+<li>3—1衰减很慢，3—2衰减很快 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Ctau_%7B32%7D%5Cll%20%5Ctau_%7B31%7D" class="gallery-item"><img src="https://math.now.sh?inline=%5Ctau_%7B32%7D%5Cll%20%5Ctau_%7B31%7D" style="display:inline-block;margin: 0;"/></a> <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cimplies%20%5Ctau_2%3D%5Ctau_%7B21%7D%2C%5Ctau_1%3D%5Cinfty" class="gallery-item"><img src="https://math.now.sh?inline=%5Cimplies%20%5Ctau_2%3D%5Ctau_%7B21%7D%2C%5Ctau_1%3D%5Cinfty" style="display:inline-block;margin: 0;"/></a></li>
+<li>能级3寿命很短 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=N_a%3DN_1%2BN_2" class="gallery-item"><img src="https://math.now.sh?inline=N_a%3DN_1%2BN_2" style="display:inline-block;margin: 0;"/></a></li>
+<li>能级2和能级1之间的非辐射跃迁可忽略 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=t_%7Bsp%7D%5Cll%20t_%7Bnr%7D" class="gallery-item"><img src="https://math.now.sh?inline=t_%7Bsp%7D%5Cll%20t_%7Bnr%7D" style="display:inline-block;margin: 0;"/></a> （速率很慢）</li>
 </ul>
-<p>由此重新求解速率方程，得到 $\tau_s\approx 2t_{sp}$ .</p>
-<h4 id="光子数密度的速率方程"><a href="#光子数密度的速率方程" class="headerlink" title="光子数密度的速率方程"></a>光子数密度的速率方程</h4><p>$$<br>\frac{\text d n}{\text d t}&#x3D;-\frac{n}{\tau_p}+NW_i<br>$$</p>
-<p>注意 $NW_i&#x3D;N_2W_i-N_1W_i&#x3D;N_2P_{st}-N_1P_{ab}$ 是由二能级的受激辐射（原子接收光子再双倍产生光子）和一能级的吸收（低能级原子接收光子）组成的。</p>
-<h2 id="Laser-Theory-「激光器机理」"><a href="#Laser-Theory-「激光器机理」" class="headerlink" title="Laser Theory 「激光器机理」"></a>Laser Theory 「激光器机理」</h2><p>激光泵浦提供了一个初始反转粒子数 $N_0$, 由泵浦速率 $R$ 和相关光子能级寿命计算得到。</p>
-<p>这个初始反转粒子数如果高于阈值$N_t$, 有 $\gamma_0&#x3D;N_0\sigma&gt;\alpha_r&#x3D;N_t\sigma$ ，激光开始振荡，腔内光子流密度不断增加（增加原因：受激辐射大？）。</p>
-<p>光子流密度增加过程中，光子原子相互作用会消耗反转粒子数 $N$，腔内增益系数 $\gamma&#x3D;N\sigma$ 随着 $N$ 的消耗而逐渐趋于饱和，这个过程中腔内光子流密度不断增加但增加速率逐渐降低。</p>
-<p>最后增益系数钳位到损耗吸数，激光器进入稳态，腔内光子流密度达到最大值，反转粒子数降低到稳态值 $N_t$。</p>
-<h3 id="1-增益饱和"><a href="#1-增益饱和" class="headerlink" title="1. 增益饱和"></a>1. 增益饱和</h3><ul>
+<p>由此重新求解速率方程，得到 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Ctau_s%5Capprox%202t_%7Bsp%7D" class="gallery-item"><img src="https://math.now.sh?inline=%5Ctau_s%5Capprox%202t_%7Bsp%7D" style="display:inline-block;margin: 0;"/></a> .</p>
+<h4 id="光子数密度的速率方程">光子数密度的速率方程</h4>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=%5Cfrac%7B%5Ctext%20d%20n%7D%7B%5Ctext%20d%20t%7D%3D-%5Cfrac%7Bn%7D%7B%5Ctau_p%7D%2BNW_i%0A" class="gallery-item"><img src="https://math.now.sh?from=%5Cfrac%7B%5Ctext%20d%20n%7D%7B%5Ctext%20d%20t%7D%3D-%5Cfrac%7Bn%7D%7B%5Ctau_p%7D%2BNW_i%0A" /></a></p><p>注意 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=NW_i%3DN_2W_i-N_1W_i%3DN_2P_%7Bst%7D-N_1P_%7Bab%7D" class="gallery-item"><img src="https://math.now.sh?inline=NW_i%3DN_2W_i-N_1W_i%3DN_2P_%7Bst%7D-N_1P_%7Bab%7D" style="display:inline-block;margin: 0;"/></a> 是由二能级的受激辐射（原子接收光子再双倍产生光子）和一能级的吸收（低能级原子接收光子）组成的。</p>
+<h2 id="Laser-Theory-「激光器机理」">Laser Theory 「激光器机理」</h2>
+<p>激光泵浦提供了一个初始反转粒子数 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=N_0" class="gallery-item"><img src="https://math.now.sh?inline=N_0" style="display:inline-block;margin: 0;"/></a>, 由泵浦速率 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=R" class="gallery-item"><img src="https://math.now.sh?inline=R" style="display:inline-block;margin: 0;"/></a> 和相关光子能级寿命计算得到。</p>
+<p>这个初始反转粒子数如果高于阈值<a target="_blank" rel="noopener" href="https://math.now.sh?inline=N_t" class="gallery-item"><img src="https://math.now.sh?inline=N_t" style="display:inline-block;margin: 0;"/></a>, 有 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cgamma_0%3DN_0%5Csigma%3E%5Calpha_r%3DN_t%5Csigma" class="gallery-item"><img src="https://math.now.sh?inline=%5Cgamma_0%3DN_0%5Csigma%3E%5Calpha_r%3DN_t%5Csigma" style="display:inline-block;margin: 0;"/></a> ，激光开始振荡，腔内光子流密度不断增加（增加原因：受激辐射大？）。</p>
+<p>光子流密度增加过程中，光子原子相互作用会消耗反转粒子数 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=N" class="gallery-item"><img src="https://math.now.sh?inline=N" style="display:inline-block;margin: 0;"/></a>，腔内增益系数 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cgamma%3DN%5Csigma" class="gallery-item"><img src="https://math.now.sh?inline=%5Cgamma%3DN%5Csigma" style="display:inline-block;margin: 0;"/></a> 随着 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=N" class="gallery-item"><img src="https://math.now.sh?inline=N" style="display:inline-block;margin: 0;"/></a> 的消耗而逐渐趋于饱和，这个过程中腔内光子流密度不断增加但增加速率逐渐降低。</p>
+<p>最后增益系数钳位到损耗吸数，激光器进入稳态，腔内光子流密度达到最大值，反转粒子数降低到稳态值 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=N_t" class="gallery-item"><img src="https://math.now.sh?inline=N_t" style="display:inline-block;margin: 0;"/></a>。</p>
+<h3 id="1-增益饱和">1. 增益饱和</h3>
+<ul>
 <li>增益系数</li>
 </ul>
-<p>单位时间光子数净增量（只有受激辐射才会贡献净增量，因而只需要算 $N\cdot W_i$）：<br>$$<br>\begin{align}<br>\text d\phi&amp;&#x3D;(N_2-N_1)W_i\cdot \text dz&#x3D;NW_i\text dz\<br>\implies \frac{\text d\phi(z)}{\text d z}&amp;&#x3D;NW_i&#x3D;N\phi(z)\sigma(\nu):&#x3D;\gamma(\nu)\phi(z)\<br>\phi(z)&amp;&#x3D;\phi(0)e^{\gamma(\nu)z}, I(z)&#x3D;I(0)e^{\gamma(\nu)z}</p>
-<p>\end{align}<br>$$<br>由此，激光介质的增益系数<br>$$<br>\gamma(\nu)&#x3D;N\sigma(\nu)<br>$$</p>
-<ul>
+<p>单位时间光子数净增量（只有受激辐射才会贡献净增量，因而只需要算 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=N%5Ccdot%20W_i" class="gallery-item"><img src="https://math.now.sh?inline=N%5Ccdot%20W_i" style="display:inline-block;margin: 0;"/></a>）：</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=%5Cbegin%7Balign%7D%0A%5Ctext%20d%5Cphi%26%3D%28N_2-N_1%29W_i%5Ccdot%20%5Ctext%20dz%3DNW_i%5Ctext%20dz%5C%5C%0A%5Cimplies%20%5Cfrac%7B%5Ctext%20d%5Cphi(z)%7D%7B%5Ctext%20d%20z%7D%26%3DNW_i%3DN%5Cphi(z)%5Csigma(%5Cnu)%3A%3D%5Cgamma(%5Cnu)%5Cphi(z)%5C%5C%0A%5Cphi(z)%26%3D%5Cphi(0)e%5E%7B%5Cgamma(%5Cnu)z%7D%2C%20I(z)%3DI(0)e%5E%7B%5Cgamma(%5Cnu)z%7D%0A%0A%5Cend%7Balign%7D%0A" class="gallery-item"><img src="https://math.now.sh?from=%5Cbegin%7Balign%7D%0A%5Ctext%20d%5Cphi%26%3D%28N_2-N_1%29W_i%5Ccdot%20%5Ctext%20dz%3DNW_i%5Ctext%20dz%5C%5C%0A%5Cimplies%20%5Cfrac%7B%5Ctext%20d%5Cphi(z)%7D%7B%5Ctext%20d%20z%7D%26%3DNW_i%3DN%5Cphi(z)%5Csigma(%5Cnu)%3A%3D%5Cgamma(%5Cnu)%5Cphi(z)%5C%5C%0A%5Cphi(z)%26%3D%5Cphi(0)e%5E%7B%5Cgamma(%5Cnu)z%7D%2C%20I(z)%3DI(0)e%5E%7B%5Cgamma(%5Cnu)z%7D%0A%0A%5Cend%7Balign%7D%0A" /></a></p><p>由此，激光介质的增益系数</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=%5Cgamma%28%5Cnu%29%3DN%5Csigma(%5Cnu)%0A" class="gallery-item"><img src="https://math.now.sh?from=%5Cgamma%28%5Cnu%29%3DN%5Csigma(%5Cnu)%0A" /></a></p><ul>
 <li>增益饱和</li>
 </ul>
-<p>小信号增益系数<br>$$<br>\gamma_0(\nu)&#x3D;N_0\sigma(\nu)&#x3D;N_0\frac{\lambda^2}{8\pi t_{sp}}g(\nu)<br>$$<br>由反转粒子数 $N$ 存在饱和 ($\ref{sat}$) 以及跃迁截面的不变性，有：</p>
-<p>饱和放大增益系数<br>$$<br>\gamma(\nu)&#x3D;\frac{\gamma_0(\nu)}{1+\phi&#x2F;\phi_s}<br>$$</p>
-<p>其中饱和光子流密度<br>$$<br>\phi_s&#x3D;\frac{1}{\tau_s\sigma(\nu)}<br>$$</p>
-<p>在四能级系统中 $\tau_s\approx t_{sp}$, 三能级系统中 $\tau_s\approx 2t_{sp}$。增益饱和本质上是光子与介质作用耗空反转粒子数的结果。</p>
-<p>由于 $I&#x3D;h\nu\phi$, 有<br>$$<br>\gamma(\nu)&#x3D;\frac{\gamma_0(\nu)}{1+I&#x2F;I_s}.<br>$$</p>
-<ul>
-<li><p>总增益</p>
-<p>通过求解<br>$$<br>\frac{\text d\phi}{\text d z}&#x3D;\frac{\gamma_0\phi}{1+\phi&#x2F;\phi_s}<br>$$<br>可以得到输出光子流密度 $\phi(d)$ 与输入光子流密度 $\phi(0)$ 的关系。</p>
-<p>在确定增益系数 $\gamma$ 后，由<br>$$<br>G&#x3D;e^{(\gamma-\alpha_r) d}<br>$$<br>得到总增益。如果是宽频光入射，则需对频率进行积分：<br>$$<br>G&#x3D;\frac{1}{2\Delta \nu}\int_{\nu_0-\Delta \nu}^{\nu_0+\Delta\nu}e^{[\gamma(\nu)-\alpha_r]d}\text d \nu<br>$$</p>
-</li>
-<li><p>相移</p>
-<p>（不明白）<br>$$<br>H(\nu)&#x3D;\frac{1}{2}\gamma(\nu)-i\varphi(\nu)<br>$$<br>放大器系统传递函数的实部和虚部满足希尔伯特变换的关系，由此推出<br>$$<br>\phi(\nu)&#x3D;\frac{\nu-\nu_0}{\Delta\nu}\gamma(\nu)<br>$$</p>
-</li>
+<p>小信号增益系数</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=%5Cgamma_0%28%5Cnu%29%3DN_0%5Csigma(%5Cnu)%3DN_0%5Cfrac%7B%5Clambda%5E2%7D%7B8%5Cpi%20t_%7Bsp%7D%7Dg(%5Cnu)%0A" class="gallery-item"><img src="https://math.now.sh?from=%5Cgamma_0%28%5Cnu%29%3DN_0%5Csigma(%5Cnu)%3DN_0%5Cfrac%7B%5Clambda%5E2%7D%7B8%5Cpi%20t_%7Bsp%7D%7Dg(%5Cnu)%0A" /></a></p><p>由反转粒子数 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=N" class="gallery-item"><img src="https://math.now.sh?inline=N" style="display:inline-block;margin: 0;"/></a> 存在饱和 (<a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cref%7Bsat%7D" class="gallery-item"><img src="https://math.now.sh?inline=%5Cref%7Bsat%7D" style="display:inline-block;margin: 0;"/></a>) 以及跃迁截面的不变性，有：</p>
+<p>饱和放大增益系数</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=%5Cgamma%28%5Cnu%29%3D%5Cfrac%7B%5Cgamma_0(%5Cnu)%7D%7B1%2B%5Cphi%2F%5Cphi_s%7D%0A" class="gallery-item"><img src="https://math.now.sh?from=%5Cgamma%28%5Cnu%29%3D%5Cfrac%7B%5Cgamma_0(%5Cnu)%7D%7B1%2B%5Cphi%2F%5Cphi_s%7D%0A" /></a></p><p>其中饱和光子流密度</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=%5Cphi_s%3D%5Cfrac%7B1%7D%7B%5Ctau_s%5Csigma%28%5Cnu%29%7D%0A" class="gallery-item"><img src="https://math.now.sh?from=%5Cphi_s%3D%5Cfrac%7B1%7D%7B%5Ctau_s%5Csigma%28%5Cnu%29%7D%0A" /></a></p><p>在四能级系统中 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Ctau_s%5Capprox%20t_%7Bsp%7D" class="gallery-item"><img src="https://math.now.sh?inline=%5Ctau_s%5Capprox%20t_%7Bsp%7D" style="display:inline-block;margin: 0;"/></a>, 三能级系统中 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Ctau_s%5Capprox%202t_%7Bsp%7D" class="gallery-item"><img src="https://math.now.sh?inline=%5Ctau_s%5Capprox%202t_%7Bsp%7D" style="display:inline-block;margin: 0;"/></a>。增益饱和本质上是光子与介质作用耗空反转粒子数的结果。</p>
+<p>由于 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=I%3Dh%5Cnu%5Cphi" class="gallery-item"><img src="https://math.now.sh?inline=I%3Dh%5Cnu%5Cphi" style="display:inline-block;margin: 0;"/></a>, 有</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=%5Cgamma%28%5Cnu%29%3D%5Cfrac%7B%5Cgamma_0(%5Cnu)%7D%7B1%2BI%2FI_s%7D.%0A" class="gallery-item"><img src="https://math.now.sh?from=%5Cgamma%28%5Cnu%29%3D%5Cfrac%7B%5Cgamma_0(%5Cnu)%7D%7B1%2BI%2FI_s%7D.%0A" /></a></p><ul>
+<li>
+<p>总增益</p>
+<p>通过求解</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=%5Cfrac%7B%5Ctext%20d%5Cphi%7D%7B%5Ctext%20d%20z%7D%3D%5Cfrac%7B%5Cgamma_0%5Cphi%7D%7B1%2B%5Cphi%2F%5Cphi_s%7D%0A" class="gallery-item"><img src="https://math.now.sh?from=%5Cfrac%7B%5Ctext%20d%5Cphi%7D%7B%5Ctext%20d%20z%7D%3D%5Cfrac%7B%5Cgamma_0%5Cphi%7D%7B1%2B%5Cphi%2F%5Cphi_s%7D%0A" /></a></p><p>可以得到输出光子流密度 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cphi%28d%29" class="gallery-item"><img src="https://math.now.sh?inline=%5Cphi%28d%29" style="display:inline-block;margin: 0;"/></a> 与输入光子流密度 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cphi%280%29" class="gallery-item"><img src="https://math.now.sh?inline=%5Cphi%280%29" style="display:inline-block;margin: 0;"/></a> 的关系。</p>
+<p>在确定增益系数 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cgamma" class="gallery-item"><img src="https://math.now.sh?inline=%5Cgamma" style="display:inline-block;margin: 0;"/></a> 后，由</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=G%3De%5E%7B%28%5Cgamma-%5Calpha_r%29%20d%7D%0A" class="gallery-item"><img src="https://math.now.sh?from=G%3De%5E%7B%28%5Cgamma-%5Calpha_r%29%20d%7D%0A" /></a></p><p>得到总增益。如果是宽频光入射，则需对频率进行积分：</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=G%3D%5Cfrac%7B1%7D%7B2%5CDelta%20%5Cnu%7D%5Cint_%7B%5Cnu_0-%5CDelta%20%5Cnu%7D%5E%7B%5Cnu_0%2B%5CDelta%5Cnu%7De%5E%7B%5B%5Cgamma%28%5Cnu%29-%5Calpha_r%5Dd%7D%5Ctext%20d%20%5Cnu%0A" class="gallery-item"><img src="https://math.now.sh?from=G%3D%5Cfrac%7B1%7D%7B2%5CDelta%20%5Cnu%7D%5Cint_%7B%5Cnu_0-%5CDelta%20%5Cnu%7D%5E%7B%5Cnu_0%2B%5CDelta%5Cnu%7De%5E%7B%5B%5Cgamma%28%5Cnu%29-%5Calpha_r%5Dd%7D%5Ctext%20d%20%5Cnu%0A" /></a></p></li>
+<li>
+<p>相移</p>
+<p>（不明白）</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=H%28%5Cnu%29%3D%5Cfrac%7B1%7D%7B2%7D%5Cgamma(%5Cnu)-i%5Cvarphi(%5Cnu)%0A" class="gallery-item"><img src="https://math.now.sh?from=H%28%5Cnu%29%3D%5Cfrac%7B1%7D%7B2%7D%5Cgamma(%5Cnu)-i%5Cvarphi(%5Cnu)%0A" /></a></p><p>放大器系统传递函数的实部和虚部满足希尔伯特变换的关系，由此推出</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=%5Cphi%28%5Cnu%29%3D%5Cfrac%7B%5Cnu-%5Cnu_0%7D%7B%5CDelta%5Cnu%7D%5Cgamma(%5Cnu)%0A" class="gallery-item"><img src="https://math.now.sh?from=%5Cphi%28%5Cnu%29%3D%5Cfrac%7B%5Cnu-%5Cnu_0%7D%7B%5CDelta%5Cnu%7D%5Cgamma(%5Cnu)%0A" /></a></p></li>
 </ul>
-<h3 id="2-反馈与损耗"><a href="#2-反馈与损耗" class="headerlink" title="2. 反馈与损耗"></a>2. 反馈与损耗</h3><p>首先描述一个光学谐振腔，有模式间隔、细度、光谱半宽度、腔内光子寿命、品质因子。</p>
-<p>对于一个光学谐振腔，腔内光子寿命<br>$$<br>\tau_p&#x3D;\frac{1}{\alpha_r c}<br>$$<br>其中 $\alpha_r$ 为光学谐振腔的总衰减系数：<br>$$<br>\begin{align}<br>\alpha_r&amp;&#x3D;\alpha_s+\alpha_{m1}+\alpha_{m2}<br>\<br>&amp;&#x3D;\alpha_s+\frac{1}{2d}\ln\frac{1}{R_1}+\frac{1}{2d}\ln\frac{1}{R_2}<br>\end{align}<br>$$<br>其中 $\alpha_s$ 为分布是损耗的衰减系数，光沿谐振腔来回一周时有：<br>$$<br>\phi(z+2d)&#x3D;\phi(z)e^{-\alpha_r2d}&#x3D;\phi(0)R_1R_2e^{-\alpha_s2d}<br>$$</p>
-<h3 id="3-激光振荡条件"><a href="#3-激光振荡条件" class="headerlink" title="3. 激光振荡条件"></a>3. 激光振荡条件</h3><ul>
+<h3 id="2-反馈与损耗">2. 反馈与损耗</h3>
+<p>首先描述一个光学谐振腔，有模式间隔、细度、光谱半宽度、腔内光子寿命、品质因子。</p>
+<p>对于一个光学谐振腔，腔内光子寿命</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=%5Ctau_p%3D%5Cfrac%7B1%7D%7B%5Calpha_r%20c%7D%0A" class="gallery-item"><img src="https://math.now.sh?from=%5Ctau_p%3D%5Cfrac%7B1%7D%7B%5Calpha_r%20c%7D%0A" /></a></p><p>其中 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Calpha_r" class="gallery-item"><img src="https://math.now.sh?inline=%5Calpha_r" style="display:inline-block;margin: 0;"/></a> 为光学谐振腔的总衰减系数：</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=%5Cbegin%7Balign%7D%0A%5Calpha_r%26%3D%5Calpha_s%2B%5Calpha_%7Bm1%7D%2B%5Calpha_%7Bm2%7D%0A%5C%5C%0A%26%3D%5Calpha_s%2B%5Cfrac%7B1%7D%7B2d%7D%5Cln%5Cfrac%7B1%7D%7BR_1%7D%2B%5Cfrac%7B1%7D%7B2d%7D%5Cln%5Cfrac%7B1%7D%7BR_2%7D%0A%5Cend%7Balign%7D%0A" class="gallery-item"><img src="https://math.now.sh?from=%5Cbegin%7Balign%7D%0A%5Calpha_r%26%3D%5Calpha_s%2B%5Calpha_%7Bm1%7D%2B%5Calpha_%7Bm2%7D%0A%5C%5C%0A%26%3D%5Calpha_s%2B%5Cfrac%7B1%7D%7B2d%7D%5Cln%5Cfrac%7B1%7D%7BR_1%7D%2B%5Cfrac%7B1%7D%7B2d%7D%5Cln%5Cfrac%7B1%7D%7BR_2%7D%0A%5Cend%7Balign%7D%0A" /></a></p><p>其中 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Calpha_s" class="gallery-item"><img src="https://math.now.sh?inline=%5Calpha_s" style="display:inline-block;margin: 0;"/></a> 为分布是损耗的衰减系数，光沿谐振腔来回一周时有：</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=%5Cphi%28z%2B2d%29%3D%5Cphi(z)e%5E%7B-%5Calpha_r2d%7D%3D%5Cphi(0)R_1R_2e%5E%7B-%5Calpha_s2d%7D%0A" class="gallery-item"><img src="https://math.now.sh?from=%5Cphi%28z%2B2d%29%3D%5Cphi(z)e%5E%7B-%5Calpha_r2d%7D%3D%5Cphi(0)R_1R_2e%5E%7B-%5Calpha_s2d%7D%0A" /></a></p><h3 id="3-激光振荡条件">3. 激光振荡条件</h3>
+<ul>
 <li>增益条件：</li>
 </ul>
-<p>激光振荡的 <em>启动</em> 必须满足小信号增益大于损耗系数：<br>$$<br>\begin{align}<br>&amp;\gamma_0(\nu)&gt;\alpha_r\<br>\implies &amp;N_0&gt;\frac{\alpha_r}{\sigma(\nu)}:&#x3D;N_t</p>
-<p>\end{align}<br>$$</p>
-<p>其中：<br>$$<br>N_t&#x3D;\frac{\alpha_r}{\sigma(\nu)}<br>$$</p>
-<p>为阈值反转粒子数差，决定了激光振荡能够启动的最小泵浦速率 $R_t$。</p>
+<p>激光振荡的 <em>启动</em> 必须满足小信号增益大于损耗系数：</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=%5Cbegin%7Balign%7D%0A%26%5Cgamma_0%28%5Cnu%29%3E%5Calpha_r%5C%5C%0A%5Cimplies%20%26N_0%3E%5Cfrac%7B%5Calpha_r%7D%7B%5Csigma(%5Cnu)%7D%3A%3DN_t%0A%0A%5Cend%7Balign%7D%0A" class="gallery-item"><img src="https://math.now.sh?from=%5Cbegin%7Balign%7D%0A%26%5Cgamma_0%28%5Cnu%29%3E%5Calpha_r%5C%5C%0A%5Cimplies%20%26N_0%3E%5Cfrac%7B%5Calpha_r%7D%7B%5Csigma(%5Cnu)%7D%3A%3DN_t%0A%0A%5Cend%7Balign%7D%0A" /></a></p><p>其中：</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=N_t%3D%5Cfrac%7B%5Calpha_r%7D%7B%5Csigma%28%5Cnu%29%7D%0A" class="gallery-item"><img src="https://math.now.sh?from=N_t%3D%5Cfrac%7B%5Calpha_r%7D%7B%5Csigma%28%5Cnu%29%7D%0A" /></a></p><p>为阈值反转粒子数差，决定了激光振荡能够启动的最小泵浦速率 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=R_t" class="gallery-item"><img src="https://math.now.sh?inline=R_t" style="display:inline-block;margin: 0;"/></a>。</p>
 <ul>
-<li>位相条件：<br>$$<br>2kd+2\phi(\nu)d&#x3D;2\pi q,\quad q&#x3D;1,2,\dots<br>$$<br>可得冷腔频率 $\nu_q$ 被拉向中心频率 $\nu_0$：<br>$$<br>\nu&#x3D;\nu_q-\frac{c}{2\pi}\frac{\nu-\nu_0}{\Delta \nu}\gamma(\nu)<br>$$</li>
+<li>位相条件：<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=2kd%2B2%5Cphi%28%5Cnu%29d%3D2%5Cpi%20q%2C%5Cquad%20q%3D1%2C2%2C%5Cdots%0A" class="gallery-item"><img src="https://math.now.sh?from=2kd%2B2%5Cphi%28%5Cnu%29d%3D2%5Cpi%20q%2C%5Cquad%20q%3D1%2C2%2C%5Cdots%0A" /></a></p>可得冷腔频率 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cnu_q" class="gallery-item"><img src="https://math.now.sh?inline=%5Cnu_q" style="display:inline-block;margin: 0;"/></a> 被拉向中心频率 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cnu_0" class="gallery-item"><img src="https://math.now.sh?inline=%5Cnu_0" style="display:inline-block;margin: 0;"/></a>：<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=%5Cnu%3D%5Cnu_q-%5Cfrac%7Bc%7D%7B2%5Cpi%7D%5Cfrac%7B%5Cnu-%5Cnu_0%7D%7B%5CDelta%20%5Cnu%7D%5Cgamma%28%5Cnu%29%0A" class="gallery-item"><img src="https://math.now.sh?from=%5Cnu%3D%5Cnu_q-%5Cfrac%7Bc%7D%7B2%5Cpi%7D%5Cfrac%7B%5Cnu-%5Cnu_0%7D%7B%5CDelta%20%5Cnu%7D%5Cgamma%28%5Cnu%29%0A" /></a></p></li>
 </ul>
-<h3 id="4-激光输出特性"><a href="#4-激光输出特性" class="headerlink" title="4. 激光输出特性"></a>4. 激光输出特性</h3><h4 id="稳态情况"><a href="#稳态情况" class="headerlink" title="稳态情况"></a>稳态情况</h4><p>激光振荡启动后，随着反转粒子数的耗空，将出现增益饱和，光子流密度停止增长，激光振荡由此达到稳态。</p>
-<p>根据<br>$$<br>\frac{\gamma_0(\nu)}{1+\phi&#x2F;\phi_s}&#x3D;\alpha_r<br>$$<br>可以确定饱和时<strong>腔内的光子流密度</strong>:<br>$$<br>\phi&#x3D;\begin{cases}\displaystyle\phi_s(\nu)\left[\frac{\gamma_0(\nu)}{\alpha_r}-1\right],&amp;&amp; \gamma_0(\nu)&gt;\alpha_r\<br>0,&amp;&amp;\gamma_0(\nu)\le\alpha_r<br>\end{cases}<br>$$<br>或<br>$$<br>\phi&#x3D;\begin{cases}\displaystyle\phi_s(\nu)\left[\frac{N_0}{N_t}-1\right],&amp;&amp; N0&gt;N_t\<br>0,&amp;&amp;N_0\le N_t<br>\end{cases}<br>$$<br>注意小信号增益系数 $\gamma_0(\nu)&#x3D;N_0\sigma(\nu)$, 而不是 $N\sigma(\nu)$, 这是因为 $\gamma_0$ 是不考虑饱和情况时的增益系数，对应着无辐射时的粒子数差 $N_0$ ，考虑辐射时的粒子数差 $N$ 将出现饱和。</p>
-<p>内部的光子数密度为：<br>$$<br>n&#x3D;\frac{\phi}{c}.<br>$$<br>稳态情况下总的光子密度损失率（由 $\tau_p$ 造成）等于超额的泵浦速率 $R-R_t$:<br>$$<br>\frac{n}{\tau_p}&#x3D;\frac{N_0-N_t}{\tau_s}\approx R-\frac{N_t}{t_{sp}}:&#x3D;R-R_t<br>$$</p>
-<h4 id="输出情况"><a href="#输出情况" class="headerlink" title="输出情况"></a>输出情况</h4><ul>
+<h3 id="4-激光输出特性">4. 激光输出特性</h3>
+<h4 id="稳态情况">稳态情况</h4>
+<p>激光振荡启动后，随着反转粒子数的耗空，将出现增益饱和，光子流密度停止增长，激光振荡由此达到稳态。</p>
+<p>根据</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=%5Cfrac%7B%5Cgamma_0%28%5Cnu%29%7D%7B1%2B%5Cphi%2F%5Cphi_s%7D%3D%5Calpha_r%0A" class="gallery-item"><img src="https://math.now.sh?from=%5Cfrac%7B%5Cgamma_0%28%5Cnu%29%7D%7B1%2B%5Cphi%2F%5Cphi_s%7D%3D%5Calpha_r%0A" /></a></p><p>可以确定饱和时<strong>腔内的光子流密度</strong>:</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=%5Cphi%3D%5Cbegin%7Bcases%7D%5Cdisplaystyle%5Cphi_s%28%5Cnu%29%5Cleft%5B%5Cfrac%7B%5Cgamma_0(%5Cnu)%7D%7B%5Calpha_r%7D-1%5Cright%5D%2C%26%26%20%5Cgamma_0(%5Cnu)%3E%5Calpha_r%5C%5C%0A0%2C%26%26%5Cgamma_0(%5Cnu)%5Cle%5Calpha_r%0A%5Cend%7Bcases%7D%0A" class="gallery-item"><img src="https://math.now.sh?from=%5Cphi%3D%5Cbegin%7Bcases%7D%5Cdisplaystyle%5Cphi_s%28%5Cnu%29%5Cleft%5B%5Cfrac%7B%5Cgamma_0(%5Cnu)%7D%7B%5Calpha_r%7D-1%5Cright%5D%2C%26%26%20%5Cgamma_0(%5Cnu)%3E%5Calpha_r%5C%5C%0A0%2C%26%26%5Cgamma_0(%5Cnu)%5Cle%5Calpha_r%0A%5Cend%7Bcases%7D%0A" /></a></p><p>或</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=%5Cphi%3D%5Cbegin%7Bcases%7D%5Cdisplaystyle%5Cphi_s%28%5Cnu%29%5Cleft%5B%5Cfrac%7BN_0%7D%7BN_t%7D-1%5Cright%5D%2C%26%26%20N0%3EN_t%5C%5C%0A0%2C%26%26N_0%5Cle%20N_t%0A%5Cend%7Bcases%7D%0A" class="gallery-item"><img src="https://math.now.sh?from=%5Cphi%3D%5Cbegin%7Bcases%7D%5Cdisplaystyle%5Cphi_s%28%5Cnu%29%5Cleft%5B%5Cfrac%7BN_0%7D%7BN_t%7D-1%5Cright%5D%2C%26%26%20N0%3EN_t%5C%5C%0A0%2C%26%26N_0%5Cle%20N_t%0A%5Cend%7Bcases%7D%0A" /></a></p><p>注意小信号增益系数 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cgamma_0%28%5Cnu%29%3DN_0%5Csigma(%5Cnu)" class="gallery-item"><img src="https://math.now.sh?inline=%5Cgamma_0%28%5Cnu%29%3DN_0%5Csigma(%5Cnu)" style="display:inline-block;margin: 0;"/></a>, 而不是 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=N%5Csigma%28%5Cnu%29" class="gallery-item"><img src="https://math.now.sh?inline=N%5Csigma%28%5Cnu%29" style="display:inline-block;margin: 0;"/></a>, 这是因为 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cgamma_0" class="gallery-item"><img src="https://math.now.sh?inline=%5Cgamma_0" style="display:inline-block;margin: 0;"/></a> 是不考虑饱和情况时的增益系数，对应着无辐射时的粒子数差 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=N_0" class="gallery-item"><img src="https://math.now.sh?inline=N_0" style="display:inline-block;margin: 0;"/></a> ，考虑辐射时的粒子数差 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=N" class="gallery-item"><img src="https://math.now.sh?inline=N" style="display:inline-block;margin: 0;"/></a> 将出现饱和。</p>
+<p>内部的光子数密度为：</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=n%3D%5Cfrac%7B%5Cphi%7D%7Bc%7D.%0A" class="gallery-item"><img src="https://math.now.sh?from=n%3D%5Cfrac%7B%5Cphi%7D%7Bc%7D.%0A" /></a></p><p>稳态情况下总的光子密度损失率（由 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Ctau_p" class="gallery-item"><img src="https://math.now.sh?inline=%5Ctau_p" style="display:inline-block;margin: 0;"/></a> 造成）等于超额的泵浦速率 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=R-R_t" class="gallery-item"><img src="https://math.now.sh?inline=R-R_t" style="display:inline-block;margin: 0;"/></a>:</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=%5Cfrac%7Bn%7D%7B%5Ctau_p%7D%3D%5Cfrac%7BN_0-N_t%7D%7B%5Ctau_s%7D%5Capprox%20R-%5Cfrac%7BN_t%7D%7Bt_%7Bsp%7D%7D%3A%3DR-R_t%0A" class="gallery-item"><img src="https://math.now.sh?from=%5Cfrac%7Bn%7D%7B%5Ctau_p%7D%3D%5Cfrac%7BN_0-N_t%7D%7B%5Ctau_s%7D%5Capprox%20R-%5Cfrac%7BN_t%7D%7Bt_%7Bsp%7D%7D%3A%3DR-R_t%0A" /></a></p><h4 id="输出情况">输出情况</h4>
+<ul>
 <li>输出光子流密度为</li>
 </ul>
-<p>$$<br>\phi_0&#x3D;\frac{T\phi}{2}<br>$$</p>
-<ul>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=%5Cphi_0%3D%5Cfrac%7BT%5Cphi%7D%7B2%7D%0A" class="gallery-item"><img src="https://math.now.sh?from=%5Cphi_0%3D%5Cfrac%7BT%5Cphi%7D%7B2%7D%0A" /></a></p><ul>
 <li>激光输出强度为</li>
 </ul>
-<p>$$<br>I_0&#x3D;h\nu\cdot\phi_0<br>$$</p>
-<ul>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=I_0%3Dh%5Cnu%5Ccdot%5Cphi_0%0A" class="gallery-item"><img src="https://math.now.sh?from=I_0%3Dh%5Cnu%5Ccdot%5Cphi_0%0A" /></a></p><ul>
 <li>激光输出功率为</li>
 </ul>
-<p>$$<br>P&#x3D;I_0A<br>$$</p>
-<p>$A$ 为激光束到截面。</p>
-<p>需要指出的一点是，输出光子流密度可以优化（存在极大值），存在一个最佳透射率 $T$ 使激光的输出强度（～输出光子流密度）最大。</p>
-<h3 id="5-选频"><a href="#5-选频" class="headerlink" title="5. 选频"></a>5. 选频</h3><p>如果在腔内用F-P标准具进行选频，则需要：<br>$$<br>\begin{align}<br>\nu_F’&amp;\ge B\<br>\delta \nu’&amp;\ge\nu_F<br>\end{align}<br>$$<br>其中 $B$ 为增益系数等于损耗系数所确定的带宽，$\nu_F’,\delta\nu’$ 均为 F-P 标准具的特性参数。</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=P%3DI_0A%0A" class="gallery-item"><img src="https://math.now.sh?from=P%3DI_0A%0A" /></a></p><p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=A" class="gallery-item"><img src="https://math.now.sh?inline=A" style="display:inline-block;margin: 0;"/></a> 为激光束到截面。</p>
+<p>需要指出的一点是，输出光子流密度可以优化（存在极大值），存在一个最佳透射率 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=T" class="gallery-item"><img src="https://math.now.sh?inline=T" style="display:inline-block;margin: 0;"/></a> 使激光的输出强度（～输出光子流密度）最大。</p>
+<h3 id="5-选频">5. 选频</h3>
+<p>如果在腔内用F-P标准具进行选频，则需要：</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=%5Cbegin%7Balign%7D%0A%5Cnu_F'%26%5Cge%20B%5C%5C%0A%5Cdelta%20%5Cnu'%26%5Cge%5Cnu_F%0A%5Cend%7Balign%7D%0A" class="gallery-item"><img src="https://math.now.sh?from=%5Cbegin%7Balign%7D%0A%5Cnu_F'%26%5Cge%20B%5C%5C%0A%5Cdelta%20%5Cnu'%26%5Cge%5Cnu_F%0A%5Cend%7Balign%7D%0A" /></a></p><p>其中 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=B" class="gallery-item"><img src="https://math.now.sh?inline=B" style="display:inline-block;margin: 0;"/></a> 为增益系数等于损耗系数所确定的带宽，<a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cnu_F%E2%80%99%2C%5Cdelta%5Cnu%E2%80%99" class="gallery-item"><img src="https://math.now.sh?inline=%5Cnu_F%E2%80%99%2C%5Cdelta%5Cnu%E2%80%99" style="display:inline-block;margin: 0;"/></a> 均为 F-P 标准具的特性参数。</p>
 <p>另外，标准具放在腔内显然较好，因为放在腔外会损失掉未选中频率的能量。</p>
-<h3 id="6-调Q激光器"><a href="#6-调Q激光器" class="headerlink" title="6. 调Q激光器"></a>6. 调Q激光器</h3><h3 id="7-关于锁模"><a href="#7-关于锁模" class="headerlink" title="7. 关于锁模"></a>7. 关于锁模</h3><p>多模输出的光中可分解出多个频率分量，即多种模式。这些模式的光相位不同，非常杂乱，叠加输出的结果是得到一个均值强度的光。这给人一种浪费的感觉，锁模技术是将这些模式的光相位锁成一致，进而使之干涉增强。这样得到的激光将是一个序列脉冲，更加纯净，强度和频率也都非常可以。</p>
-<p>经过干涉叠加的计算（留坑），锁模脉冲序列的时间间隔<br>$$<br>T_F&#x3D;\frac{2d}{c},<br>$$<br>脉冲宽度（半高全宽）<br>$$<br>\tau_{pulse}&#x3D;\frac{T_F}{M},<br>$$<br>平均强度和峰值强度<br>$$<br>\begin{align}<br>\bar I&amp;&#x3D;M|A|^2,\<br>I_p&amp;&#x3D;M^2|A|^2&#x3D;M\bar I.<br>\end{align}<br>$$</p>
-<h3 id="8-烧孔"><a href="#8-烧孔" class="headerlink" title="8. 烧孔"></a>8. 烧孔</h3><h4 id="空间烧孔"><a href="#空间烧孔" class="headerlink" title="空间烧孔"></a>空间烧孔</h4><p>考虑在谐振腔中以中心频率振荡的驻波模式。在峰值处光强最大，$N&#x3D;N_0&#x2F;[1+\phi&#x2F;\phi_s]$ 最小, 而在中心模式的波节处光强最小，$N$ 很大。</p>
-<p>波节处的 $N$ 还可以再维持一个模式的振荡，从而形成多摸振荡，造成 $\gamma-\nu$ 图上的烧孔，这便是空间烧孔。</p>
-<h4 id="光谱烧孔"><a href="#光谱烧孔" class="headerlink" title="光谱烧孔"></a>光谱烧孔</h4><p>增益介质含有多原子时，存在不同模式的振荡，在增益饱和处增益最小，形成 $\gamma-\nu$ 图上的烧孔，这是光谱烧孔。</p>
-<h2 id="discussion-amp-questions"><a href="#discussion-amp-questions" class="headerlink" title="discussion&amp;questions"></a>discussion&amp;questions</h2><ul>
+<h3 id="6-调Q激光器">6. 调Q激光器</h3>
+<h3 id="7-关于锁模">7. 关于锁模</h3>
+<p>多模输出的光中可分解出多个频率分量，即多种模式。这些模式的光相位不同，非常杂乱，叠加输出的结果是得到一个均值强度的光。这给人一种浪费的感觉，锁模技术是将这些模式的光相位锁成一致，进而使之干涉增强。这样得到的激光将是一个序列脉冲，更加纯净，强度和频率也都非常可以。</p>
+<p>经过干涉叠加的计算（留坑），锁模脉冲序列的时间间隔</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=T_F%3D%5Cfrac%7B2d%7D%7Bc%7D%2C%0A" class="gallery-item"><img src="https://math.now.sh?from=T_F%3D%5Cfrac%7B2d%7D%7Bc%7D%2C%0A" /></a></p><p>脉冲宽度（半高全宽）</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=%5Ctau_%7Bpulse%7D%3D%5Cfrac%7BT_F%7D%7BM%7D%2C%0A" class="gallery-item"><img src="https://math.now.sh?from=%5Ctau_%7Bpulse%7D%3D%5Cfrac%7BT_F%7D%7BM%7D%2C%0A" /></a></p><p>平均强度和峰值强度</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=%5Cbegin%7Balign%7D%0A%5Cbar%20I%26%3DM%7CA%7C%5E2%2C%5C%5C%0AI_p%26%3DM%5E2%7CA%7C%5E2%3DM%5Cbar%20I.%0A%5Cend%7Balign%7D%0A" class="gallery-item"><img src="https://math.now.sh?from=%5Cbegin%7Balign%7D%0A%5Cbar%20I%26%3DM%7CA%7C%5E2%2C%5C%5C%0AI_p%26%3DM%5E2%7CA%7C%5E2%3DM%5Cbar%20I.%0A%5Cend%7Balign%7D%0A" /></a></p><h3 id="8-烧孔">8. 烧孔</h3>
+<h4 id="空间烧孔">空间烧孔</h4>
+<p>考虑在谐振腔中以中心频率振荡的驻波模式。在峰值处光强最大，<a target="_blank" rel="noopener" href="https://math.now.sh?inline=N%3DN_0%2F%5B1%2B%5Cphi%2F%5Cphi_s%5D" class="gallery-item"><img src="https://math.now.sh?inline=N%3DN_0%2F%5B1%2B%5Cphi%2F%5Cphi_s%5D" style="display:inline-block;margin: 0;"/></a> 最小, 而在中心模式的波节处光强最小，<a target="_blank" rel="noopener" href="https://math.now.sh?inline=N" class="gallery-item"><img src="https://math.now.sh?inline=N" style="display:inline-block;margin: 0;"/></a> 很大。</p>
+<p>波节处的 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=N" class="gallery-item"><img src="https://math.now.sh?inline=N" style="display:inline-block;margin: 0;"/></a> 还可以再维持一个模式的振荡，从而形成多摸振荡，造成 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cgamma-%5Cnu" class="gallery-item"><img src="https://math.now.sh?inline=%5Cgamma-%5Cnu" style="display:inline-block;margin: 0;"/></a> 图上的烧孔，这便是空间烧孔。</p>
+<h4 id="光谱烧孔">光谱烧孔</h4>
+<p>增益介质含有多原子时，存在不同模式的振荡，在增益饱和处增益最小，形成 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cgamma-%5Cnu" class="gallery-item"><img src="https://math.now.sh?inline=%5Cgamma-%5Cnu" style="display:inline-block;margin: 0;"/></a> 图上的烧孔，这是光谱烧孔。</p>
+<h2 id="discussion-questions">discussion&amp;questions</h2>
+<ul>
 <li>烧孔？</li>
 </ul>
-<p>$$<br>\gamma_0-\gamma_s&#x3D;\gamma_0-\frac{\gamma_0}{1+\phi&#x2F;\phi_s}<br>$$</p>
-<ul>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=%5Cgamma_0-%5Cgamma_s%3D%5Cgamma_0-%5Cfrac%7B%5Cgamma_0%7D%7B1%2B%5Cphi%2F%5Cphi_s%7D%0A" class="gallery-item"><img src="https://math.now.sh?from=%5Cgamma_0-%5Cgamma_s%3D%5Cgamma_0-%5Cfrac%7B%5Cgamma_0%7D%7B1%2B%5Cphi%2F%5Cphi_s%7D%0A" /></a></p><ul>
 <li>5.7 如果激光被泵浦了，但是泵浦强度不足以产生激光振荡</li>
 </ul>
-<h4 id="Remark"><a href="#Remark" class="headerlink" title="Remark"></a>Remark</h4><ul>
+<h4 id="Remark">Remark</h4>
+<ul>
 <li>EDFA是光泵浦</li>
 <li>LD是电泵浦</li>
 </ul>
-<h4 id="Q"><a href="#Q" class="headerlink" title="Q"></a>Q</h4><ul>
-<li><p>增益介质的作用？</p>
+<h4 id="Q">Q</h4>
+<ul>
+<li>
+<p>增益介质的作用？</p>
 <p>产生光子。</p>
 </li>
 </ul>
-<h2 id="Acousto-Optics"><a href="#Acousto-Optics" class="headerlink" title="Acousto Optics"></a>Acousto Optics</h2><p>布拉格方程 (Bragg Condication) ：<br>$$<br>\sin\theta_{\mathcal{B}}&#x3D;\frac{\lambda}{2\Lambda}<br>$$<br>其中：</p>
+<h2 id="Acousto-Optics">Acousto Optics</h2>
+<p>布拉格方程 (Bragg Condication) ：</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=%5Csin%5Ctheta_%7B%5Cmathcal%7BB%7D%7D%3D%5Cfrac%7B%5Clambda%7D%7B2%5CLambda%7D%0A" class="gallery-item"><img src="https://math.now.sh?from=%5Csin%5Ctheta_%7B%5Cmathcal%7BB%7D%7D%3D%5Cfrac%7B%5Clambda%7D%7B2%5CLambda%7D%0A" /></a></p><p>其中：</p>
 <ul>
-<li><p>$\Lambda$ 为声波在介质中的波长，由声波在介质中的速度 $v_s$ 计算：$\Lambda&#x3D;v_s&#x2F;f$</p>
+<li>
+<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5CLambda" class="gallery-item"><img src="https://math.now.sh?inline=%5CLambda" style="display:inline-block;margin: 0;"/></a> 为声波在介质中的波长，由声波在介质中的速度 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=v_s" class="gallery-item"><img src="https://math.now.sh?inline=v_s" style="display:inline-block;margin: 0;"/></a> 计算：<a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5CLambda%3Dv_s%2Ff" class="gallery-item"><img src="https://math.now.sh?inline=%5CLambda%3Dv_s%2Ff" style="display:inline-block;margin: 0;"/></a></p>
 </li>
-<li><p>$\lambda$ 为光波在介质中的波长，$\lambda&#x3D;\lambda_0&#x2F;n$</p>
+<li>
+<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Clambda" class="gallery-item"><img src="https://math.now.sh?inline=%5Clambda" style="display:inline-block;margin: 0;"/></a> 为光波在介质中的波长，<a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Clambda%3D%5Clambda_0%2Fn" class="gallery-item"><img src="https://math.now.sh?inline=%5Clambda%3D%5Clambda_0%2Fn" style="display:inline-block;margin: 0;"/></a></p>
 </li>
-<li><p>$\theta_{\mathcal{B}}$ 为介质内部的反射角 (this angle is internal), 出射角还要再进行一次折射：$\theta_{\mathcal{B}}’\approx n\theta_{\mathcal{B}}$ ; 入射角也应该由 $\theta_{\mathcal{B}}$ 计算得到</p>
+<li>
+<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Ctheta_%7B%5Cmathcal%7BB%7D%7D" class="gallery-item"><img src="https://math.now.sh?inline=%5Ctheta_%7B%5Cmathcal%7BB%7D%7D" style="display:inline-block;margin: 0;"/></a> 为介质内部的反射角 (this angle is internal), 出射角还要再进行一次折射：<a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Ctheta_%7B%5Cmathcal%7BB%7D%7D%E2%80%99%5Capprox%20n%5Ctheta_%7B%5Cmathcal%7BB%7D%7D" class="gallery-item"><img src="https://math.now.sh?inline=%5Ctheta_%7B%5Cmathcal%7BB%7D%7D%E2%80%99%5Capprox%20n%5Ctheta_%7B%5Cmathcal%7BB%7D%7D" style="display:inline-block;margin: 0;"/></a> ; 入射角也应该由 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Ctheta_%7B%5Cmathcal%7BB%7D%7D" class="gallery-item"><img src="https://math.now.sh?inline=%5Ctheta_%7B%5Cmathcal%7BB%7D%7D" style="display:inline-block;margin: 0;"/></a> 计算得到</p>
 </li>
-<li><p>$\theta_{\mathcal{B}}$ 是很小的，因此为掠入射，一般从晶体两侧出光，而不是上下</p>
+<li>
+<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Ctheta_%7B%5Cmathcal%7BB%7D%7D" class="gallery-item"><img src="https://math.now.sh?inline=%5Ctheta_%7B%5Cmathcal%7BB%7D%7D" style="display:inline-block;margin: 0;"/></a> 是很小的，因此为掠入射，一般从晶体两侧出光，而不是上下</p>
 </li>
 </ul>
-<h2 id="Waveguide-Optics-「导波光学」"><a href="#Waveguide-Optics-「导波光学」" class="headerlink" title="Waveguide Optics 「导波光学」"></a>Waveguide Optics 「导波光学」</h2><h3 id="Waveguide-Modes"><a href="#Waveguide-Modes" class="headerlink" title="Waveguide Modes"></a>Waveguide Modes</h3><p>Planar-Mirror Waveguides:</p>
+<h2 id="Waveguide-Optics-「导波光学」">Waveguide Optics 「导波光学」</h2>
+<h3 id="Waveguide-Modes">Waveguide Modes</h3>
+<p>Planar-Mirror Waveguides:</p>
 <a target="_blank" rel="noopener" href="https://tva1.sinaimg.cn/large/008eGmZEly1gonucjkv3wj30jx09btew.jpg" title="image-20210318101832542" class="gallery-item"><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gonucjkv3wj30jx09btew.jpg" alt="image-20210318101832542" style="zoom: 67%;" /></a>
-
-<p>光在平面波导中传播，反射两次应该和原光波重合，因此为满足这样的自洽性，只有特定入射角 $\theta$ 的模式的光可以留下来：<br>$$<br>\frac{2\pi}{\lambda}2d\sin\theta&#x3D;m\cdot 2\pi\implies\sin\theta_m&#x3D;m\frac{\lambda}{2d}<br>$$<br>于是有 <em>Transverse Component</em> $k_{ym}$ 和 <em>Propagation Constants</em> $\beta_m$:<br>$$<br>\begin{aligned}<br>k_{ym}&amp;&#x3D;k\sin\theta_m&#x3D;m\frac{\pi}{d},\<br>\beta_m^2&amp;&#x3D;k\cos\theta_m&#x3D;k^2-\frac{m^2\pi^2}{d^2}.<br>\end{aligned}<br>$$</p>
-<p>Each mode can be viewed as a standing wave in the $y$ directoin, traveling in the $z$ direction.</p>
-<p>有了波导的模式（由上面几何光学的方法求得，复杂波导应该借助电动力学），就可以写出其中传播的电磁波：<br>$$<br>\vec E&#x3D;A_m\exp(-jk_{ym}y-j\beta_mz)<br>$$<br>或（？）<br>$$<br>\vec E&#x3D;e^{j(m-1)\pi}\cdot A_m\exp(jk_{ym}y-j\beta_mz)<br>$$</p>
-</div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+<p>光在平面波导中传播，反射两次应该和原光波重合，因此为满足这样的自洽性，只有特定入射角 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Ctheta" class="gallery-item"><img src="https://math.now.sh?inline=%5Ctheta" style="display:inline-block;margin: 0;"/></a> 的模式的光可以留下来：</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=%5Cfrac%7B2%5Cpi%7D%7B%5Clambda%7D2d%5Csin%5Ctheta%3Dm%5Ccdot%202%5Cpi%5Cimplies%5Csin%5Ctheta_m%3Dm%5Cfrac%7B%5Clambda%7D%7B2d%7D%0A" class="gallery-item"><img src="https://math.now.sh?from=%5Cfrac%7B2%5Cpi%7D%7B%5Clambda%7D2d%5Csin%5Ctheta%3Dm%5Ccdot%202%5Cpi%5Cimplies%5Csin%5Ctheta_m%3Dm%5Cfrac%7B%5Clambda%7D%7B2d%7D%0A" /></a></p><p>于是有 <em>Transverse Component</em> <a target="_blank" rel="noopener" href="https://math.now.sh?inline=k_%7Bym%7D" class="gallery-item"><img src="https://math.now.sh?inline=k_%7Bym%7D" style="display:inline-block;margin: 0;"/></a> 和 <em>Propagation Constants</em> <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cbeta_m" class="gallery-item"><img src="https://math.now.sh?inline=%5Cbeta_m" style="display:inline-block;margin: 0;"/></a>:</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0Ak_%7Bym%7D%26%3Dk%5Csin%5Ctheta_m%3Dm%5Cfrac%7B%5Cpi%7D%7Bd%7D%2C%5C%5C%0A%5Cbeta_m%5E2%26%3Dk%5Ccos%5Ctheta_m%3Dk%5E2-%5Cfrac%7Bm%5E2%5Cpi%5E2%7D%7Bd%5E2%7D.%0A%5Cend%7Baligned%7D%0A" class="gallery-item"><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0Ak_%7Bym%7D%26%3Dk%5Csin%5Ctheta_m%3Dm%5Cfrac%7B%5Cpi%7D%7Bd%7D%2C%5C%5C%0A%5Cbeta_m%5E2%26%3Dk%5Ccos%5Ctheta_m%3Dk%5E2-%5Cfrac%7Bm%5E2%5Cpi%5E2%7D%7Bd%5E2%7D.%0A%5Cend%7Baligned%7D%0A" /></a></p><p>Each mode can be viewed as a standing wave in the <a target="_blank" rel="noopener" href="https://math.now.sh?inline=y" class="gallery-item"><img src="https://math.now.sh?inline=y" style="display:inline-block;margin: 0;"/></a> directoin, traveling in the <a target="_blank" rel="noopener" href="https://math.now.sh?inline=z" class="gallery-item"><img src="https://math.now.sh?inline=z" style="display:inline-block;margin: 0;"/></a> direction.</p>
+<p>有了波导的模式（由上面几何光学的方法求得，复杂波导应该借助电动力学），就可以写出其中传播的电磁波：</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=%5Cvec%20E%3DA_m%5Cexp%28-jk_%7Bym%7Dy-j%5Cbeta_mz%29%0A" class="gallery-item"><img src="https://math.now.sh?from=%5Cvec%20E%3DA_m%5Cexp%28-jk_%7Bym%7Dy-j%5Cbeta_mz%29%0A" /></a></p><p>或（？）</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=%5Cvec%20E%3De%5E%7Bj%28m-1%29%5Cpi%7D%5Ccdot%20A_m%5Cexp(jk_%7Bym%7Dy-j%5Cbeta_mz)%0A" class="gallery-item"><img src="https://math.now.sh?from=%5Cvec%20E%3De%5E%7Bj%28m-1%29%5Cpi%7D%5Ccdot%20A_m%5Cexp(jk_%7Bym%7Dy-j%5Cbeta_mz)%0A" /></a></p></div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
         var options = {
             selector: '.gallery-item'
         };
@@ -386,7 +465,7 @@
     <ul>
       <li>
         Copyrights &copy;
-        2020-2024
+        2020-2025
         <i class="ri-heart-fill heart_icon"></i> Longqian Huang
       </li>
     </ul>

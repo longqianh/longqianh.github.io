@@ -113,143 +113,181 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="Google-Code-Standard"><a href="#Google-Code-Standard" class="headerlink" title="Google Code Standard"></a>Google Code Standard</h1><p>华为海思的项目需要了解一下Google编程规范，就简单看了一下。</p>
-<h2 id="Header-Files"><a href="#Header-Files" class="headerlink" title="Header Files"></a>Header Files</h2><p>头文件自包含、最好将模板和内联函数的定义与其声明放置在同一文件中。</p>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><h1>Google Code Standard</h1>
+<p>华为海思的项目需要了解一下Google编程规范，就简单看了一下。</p>
+<h2 id="Header-Files">Header Files</h2>
+<p>头文件自包含、最好将模板和内联函数的定义与其声明放置在同一文件中。</p>
 <ul>
-<li><p>All header files should be self-contained. Users and refactoring tools should not have to adhere to special conditions to include the header. Specifically, a header should have <a target="_blank" rel="noopener" href="https://google.github.io/styleguide/cppguide.html#The__define_Guard">header guards</a> and include all other headers it needs.</p>
+<li>
+<p>All header files should be self-contained. Users and refactoring tools should not have to adhere to special conditions to include the header. Specifically, a header should have <a target="_blank" rel="noopener" href="https://google.github.io/styleguide/cppguide.html#The__define_Guard">header guards</a> and include all other headers it needs.</p>
 </li>
-<li><p>Prefer placing the definitions for template and inline functions in the same file as their declarations. The definitions of these constructs must be included into every <code>.cc</code> file that uses them, or the program may fail to link in some build configurations. If declarations and definitions are in different files, including the former should transitively include the latter. Do not move these definitions to separately included header files (<code>-inl.h</code>); this practice was common in the past, but is no longer allowed.</p>
+<li>
+<p>Prefer placing the definitions for template and inline functions in the same file as their declarations. The definitions of these constructs must be included into every <code>.cc</code> file that uses them, or the program may fail to link in some build configurations. If declarations and definitions are in different files, including the former should transitively include the latter. Do not move these definitions to separately included header files (<code>-inl.h</code>); this practice was common in the past, but is no longer allowed.</p>
 </li>
-<li><p>Avoid using forward declarations where possible. </p>
+<li>
+<p>Avoid using forward declarations where possible.</p>
 </li>
-<li><p>Define functions inline only when they are small, say, 10 lines or fewer.  经常用的小函数写成内联函数提升效率。</p>
+<li>
+<p>Define functions inline only when they are small, say, 10 lines or fewer.  经常用的小函数写成内联函数提升效率。</p>
 </li>
 </ul>
  <span id="more"></span>
-
-
 <ul>
-<li><p>Include headers in the following order: Related header, C system headers, C++ standard library headers, other libraries’ headers, your project’s headers.Separate each non-empty group with one blank line.</p>
-<p>e .g. </p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;foo/server/fooserver.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sys/types.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;unistd.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;base/basictypes.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;base/commandlineflags.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;foo/server/bar.h&quot;</span></span></span><br></pre></td></tr></table></figure></li>
+<li>
+<p>Include headers in the following order: Related header, C system headers, C++ standard library headers, other libraries’ headers, your project’s headers.Separate each non-empty group with one blank line.</p>
+<p>e .g.</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;foo/server/fooserver.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sys/types.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;unistd.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;base/basictypes.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;base/commandlineflags.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;foo/server/bar.h&quot;</span></span></span><br></pre></td></tr></table></figure>
+</li>
 </ul>
-<h2 id="Namespace"><a href="#Namespace" class="headerlink" title="Namespace"></a>Namespace</h2><ul>
-<li><p>With few exceptions, place code in a namespace. Namespaces should have unique names based on the project name, and possibly its path. </p>
+<h2 id="Namespace">Namespace</h2>
+<ul>
+<li>
+<p>With few exceptions, place code in a namespace. Namespaces should have unique names based on the project name, and possibly its path.</p>
 </li>
-<li><p>Do not use <em>using-directives</em> (e.g., <code>using namespace foo</code>) which pollutes the namespace. . Do not use inline namespaces.</p>
+<li>
+<p>Do not use <em>using-directives</em> (e.g., <code>using namespace foo</code>) which pollutes the namespace. . Do not use inline namespaces.</p>
 </li>
-<li><p>Terminate multi-line namespaces with comments as shown in the given examples (below).</p>
+<li>
+<p>Terminate multi-line namespaces with comments as shown in the given examples (below).</p>
 </li>
-<li><p>Namespaces wrap the entire source file after includes, <a target="_blank" rel="noopener" href="https://gflags.github.io/gflags/">gflags</a> definitions&#x2F;declarations and forward declarations of classes from other namespaces.</p>
+<li>
+<p>Namespaces wrap the entire source file after includes, <a target="_blank" rel="noopener" href="https://gflags.github.io/gflags/">gflags</a> definitions/declarations and forward declarations of classes from other namespaces.</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// In the .h file</span></span><br><span class="line"><span class="keyword">namespace</span> mynamespace &#123;</span><br><span class="line"></span><br><span class="line"><span class="comment">// All declarations are within the namespace scope.</span></span><br><span class="line"><span class="comment">// Notice the lack of indentation.</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MyClass</span> &#123;</span><br><span class="line"> <span class="keyword">public</span>:</span><br><span class="line">  ...</span><br><span class="line">  <span class="function"><span class="type">void</span> <span class="title">Foo</span><span class="params">()</span></span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">&#125;  <span class="comment">// namespace mynamespace</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p>When definitions in a <code>.cc</code> file do not need to be referenced outside that file, place them in an unnamed namespace or declare them <code>static</code>. Do not use either of these constructs in <code>.h</code> files.</p>
+<li>
+<p>When definitions in a <code>.cc</code> file do not need to be referenced outside that file, place them in an unnamed namespace or declare them <code>static</code>. Do not use either of these constructs in <code>.h</code> files.</p>
 </li>
-<li><p>Do not use a class simply to group static members. Static methods of a class should generally be closely related to instances of the class or the class’s static data.</p>
+<li>
+<p>Do not use a class simply to group static members. Static methods of a class should generally be closely related to instances of the class or the class’s static data.</p>
 </li>
 </ul>
-<h2 id="Variables"><a href="#Variables" class="headerlink" title="Variables"></a>Variables</h2><ul>
-<li><p>Declare variables in as local a scope as possible, and as close to the first use as possible. </p>
+<h2 id="Variables">Variables</h2>
+<ul>
+<li>
+<p>Declare variables in as local a scope as possible, and as close to the first use as possible.</p>
   <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> i;</span><br><span class="line">i = <span class="built_in">f</span>();      <span class="comment">// Bad -- initialization separate from declaration.</span></span><br><span class="line"><span class="type">int</span> j = <span class="built_in">g</span>();  <span class="comment">// Good -- declaration has initialization.</span></span><br><span class="line"></span><br><span class="line">std::vector&lt;<span class="type">int</span>&gt; v;</span><br><span class="line">v.<span class="built_in">push_back</span>(<span class="number">1</span>);  <span class="comment">// Prefer initializing using brace initialization.</span></span><br><span class="line">v.<span class="built_in">push_back</span>(<span class="number">2</span>);</span><br><span class="line">std::vector&lt;<span class="type">int</span>&gt; v = &#123;<span class="number">1</span>, <span class="number">2</span>&#125;;  <span class="comment">// Good -- v starts initialized.</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p>Variables needed for <code>if</code>, <code>while</code> and <code>for</code> statements should normally be declared within those statements, so that such variables are confined to those scopes. E.g.:</p>
+<li>
+<p>Variables needed for <code>if</code>, <code>while</code> and <code>for</code> statements should normally be declared within those statements, so that such variables are confined to those scopes. E.g.:</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> (<span class="type">const</span> <span class="type">char</span>* p = <span class="built_in">strchr</span>(str, <span class="string">&#x27;/&#x27;</span>)) str = p + <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>Caveat: if the variable is an <em>object</em>, its constructor is invoked every time it enters scope and is created, and its destructor is invoked every time it goes out of scope.</p>
+<li>
+<p>Caveat: if the variable is an <em>object</em>, its constructor is invoked every time it enters scope and is created, and its destructor is invoked every time it goes out of scope.</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// Inefficient implementation:</span><br><span class="line">for (int i = 0; i &lt; 1000000; ++i) &#123;</span><br><span class="line">  Foo f;  // My ctor and dtor get called 1000000 times each.</span><br><span class="line">  f.DoSomething(i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p>It may be more efficient to declare such a variable used in a loop outside that loop:</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Foo f;  // My ctor and dtor get called once each.</span><br><span class="line">for (int i = 0; i &lt; 1000000; ++i) &#123;</span><br><span class="line">  f.DoSomething(i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
 </li>
-<li><p>Objects with <a target="_blank" rel="noopener" href="http://en.cppreference.com/w/cpp/language/storage_duration#Storage_duration">static storage duration</a> are forbidden unless they are <a target="_blank" rel="noopener" href="http://en.cppreference.com/w/cpp/types/is_destructible">trivially destructible</a>.  Fundamental types (like pointers and <code>int</code>) are trivially destructible, as are arrays of trivially destructible types. Note that variables marked with <code>constexpr</code> are trivially destructible.</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">int</span> kNum = <span class="number">10</span>;  <span class="comment">// allowed</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">X</span> &#123; <span class="type">int</span> n; &#125;;</span><br><span class="line"><span class="type">const</span> X kX[] = &#123;&#123;<span class="number">1</span>&#125;, &#123;<span class="number">2</span>&#125;, &#123;<span class="number">3</span>&#125;&#125;;  <span class="comment">// allowed</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">foo</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="type">static</span> <span class="type">const</span> <span class="type">char</span>* <span class="type">const</span> kMessages[] = &#123;<span class="string">&quot;hello&quot;</span>, <span class="string">&quot;world&quot;</span>&#125;;  <span class="comment">// allowed</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// allowed: constexpr guarantees trivial destructor</span></span><br><span class="line"><span class="keyword">constexpr</span> std::array&lt;<span class="type">int</span>, 3&gt; kArray = &#123;&#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// bad: non-trivial destructor</span></span><br><span class="line"><span class="type">const</span> std::string kFoo = <span class="string">&quot;foo&quot;</span>;</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h2 id="Initializing"><a href="#Initializing" class="headerlink" title="Initializing"></a>Initializing</h2><ul>
-<li><p><code>constexpr</code> : 编译时优化</p>
-</li>
-<li><p>the initializing expression is a constant expression, and if the object is initialized by a constructor call, then the constructor must be specified as <code>constexpr</code>, too:</p>
+<li>
+<p>Objects with <a target="_blank" rel="noopener" href="http://en.cppreference.com/w/cpp/language/storage_duration#Storage_duration">static storage duration</a> are forbidden unless they are <a target="_blank" rel="noopener" href="http://en.cppreference.com/w/cpp/types/is_destructible">trivially destructible</a>.  Fundamental types (like pointers and <code>int</code>) are trivially destructible, as are arrays of trivially destructible types. Note that variables marked with <code>constexpr</code> are trivially destructible.</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">int</span> kNum = <span class="number">10</span>;  <span class="comment">// allowed</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">X</span> &#123; <span class="type">int</span> n; &#125;;</span><br><span class="line"><span class="type">const</span> X kX[] = &#123;&#123;<span class="number">1</span>&#125;, &#123;<span class="number">2</span>&#125;, &#123;<span class="number">3</span>&#125;&#125;;  <span class="comment">// allowed</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">foo</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="type">static</span> <span class="type">const</span> <span class="type">char</span>* <span class="type">const</span> kMessages[] = &#123;<span class="string">&quot;hello&quot;</span>, <span class="string">&quot;world&quot;</span>&#125;;  <span class="comment">// allowed</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// allowed: constexpr guarantees trivial destructor</span></span><br><span class="line"><span class="keyword">constexpr</span> std::array&lt;<span class="type">int</span>, 3&gt; kArray = &#123;&#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// bad: non-trivial destructor</span></span><br><span class="line"><span class="type">const</span> std::string kFoo = <span class="string">&quot;foo&quot;</span>;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>	</p>
+<h2 id="Initializing">Initializing</h2>
+<ul>
+<li>
+<p><code>constexpr</code> : 编译时优化</p>
+</li>
+<li>
+<p>the initializing expression is a constant expression, and if the object is initialized by a constructor call, then the constructor must be specified as <code>constexpr</code>, too:</p>
+</li>
+</ul>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">Foo</span> &#123; <span class="function"><span class="keyword">constexpr</span> <span class="title">Foo</span><span class="params">(<span class="type">int</span>)</span> </span>&#123;&#125; &#125;;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n = <span class="number">5</span>;  <span class="comment">// fine, 5 is a constant expression</span></span><br><span class="line"><span class="function">Foo <span class="title">x</span><span class="params">(<span class="number">2</span>)</span></span>;   <span class="comment">// fine, 2 is a constant expression and the chosen constructor is constexpr</span></span><br><span class="line">Foo a[] = &#123; <span class="built_in">Foo</span>(<span class="number">1</span>), <span class="built_in">Foo</span>(<span class="number">2</span>), <span class="built_in">Foo</span>(<span class="number">3</span>) &#125;;  <span class="comment">// fine</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h2 id="Class"><a href="#Class" class="headerlink" title="Class"></a>Class</h2><h3 id="explicit"><a href="#explicit" class="headerlink" title="explicit"></a><code>explicit</code></h3><ul>
-<li><p>Do not define implicit conversions. Use the <code>explicit</code> keyword for conversion operators and single-argument constructors.</p>
+<h2 id="Class">Class</h2>
+<h3 id="explicit"><code>explicit</code></h3>
+<ul>
+<li>
+<p>Do not define implicit conversions. Use the <code>explicit</code> keyword for conversion operators and single-argument constructors.</p>
 </li>
-<li><p>Implicit conversions allow an object of one type (called the source type) to be used where a different type (called the destination type) is expected, such as when passing an <code>int</code> argument to a function that takes a <code>double</code> parameter.</p>
+<li>
+<p>Implicit conversions allow an object of one type (called the source type) to be used where a different type (called the destination type) is expected, such as when passing an <code>int</code> argument to a function that takes a <code>double</code> parameter.</p>
 </li>
-<li><p>The <code>explicit</code> keyword can be applied to a constructor or (since C++11) a conversion operator, to ensure that it can only be used when the destination type is explicit at the point of use, e.g., with a cast. This applies not only to implicit conversions, but to C++11’s list initialization syntax:</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Foo</span> &#123;</span><br><span class="line">  <span class="function"><span class="keyword">explicit</span> <span class="title">Foo</span><span class="params">(<span class="type">int</span> x, <span class="type">double</span> y)</span></span>;</span><br><span class="line">  ...</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Func</span><span class="params">(Foo f)</span></span>;</span><br><span class="line"><span class="built_in">Func</span>(&#123;<span class="number">42</span>, <span class="number">3.14</span>&#125;);  <span class="comment">// Error</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-<h3 id="struct-or-class"><a href="#struct-or-class" class="headerlink" title="struct or class"></a>struct or class</h3><p>Use a <code>struct</code> only for passive objects that carry data; everything else is a <code>class</code>.</p>
-<h3 id="Inheritance"><a href="#Inheritance" class="headerlink" title="Inheritance"></a>Inheritance</h3><ul>
-<li><p>Composition is often more appropriate than inheritance. When using inheritance, make it <code>public</code>.</p>
-</li>
-<li><p>Do not overuse implementation inheritance. Composition is often more appropriate. Try to restrict use of inheritance to the “is-a” case: <code>Bar</code> subclasses <code>Foo</code> if it can reasonably be said that <code>Bar</code> “is a kind of” <code>Foo</code>.</p>
+<li>
+<p>The <code>explicit</code> keyword can be applied to a constructor or (since C++11) a conversion operator, to ensure that it can only be used when the destination type is explicit at the point of use, e.g., with a cast. This applies not only to implicit conversions, but to C++11’s list initialization syntax:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Foo</span> &#123;</span><br><span class="line">  <span class="function"><span class="keyword">explicit</span> <span class="title">Foo</span><span class="params">(<span class="type">int</span> x, <span class="type">double</span> y)</span></span>;</span><br><span class="line">  ...</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Func</span><span class="params">(Foo f)</span></span>;</span><br><span class="line"><span class="built_in">Func</span>(&#123;<span class="number">42</span>, <span class="number">3.14</span>&#125;);  <span class="comment">// Error</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h3 id="Access-Control"><a href="#Access-Control" class="headerlink" title="Access Control"></a>Access Control</h3><ul>
-<li>Limit the use of <code>protected</code> to those member functions that might need to be accessed from subclasses. </li>
+<h3 id="struct-or-class">struct or class</h3>
+<p>Use a <code>struct</code> only for passive objects that carry data; everything else is a <code>class</code>.</p>
+<h3 id="Inheritance">Inheritance</h3>
+<ul>
+<li>
+<p>Composition is often more appropriate than inheritance. When using inheritance, make it <code>public</code>.</p>
+</li>
+<li>
+<p>Do not overuse implementation inheritance. Composition is often more appropriate. Try to restrict use of inheritance to the “is-a” case: <code>Bar</code> subclasses <code>Foo</code> if it can reasonably be said that <code>Bar</code> “is a kind of” <code>Foo</code>.</p>
+</li>
+</ul>
+<h3 id="Access-Control">Access Control</h3>
+<ul>
+<li>Limit the use of <code>protected</code> to those member functions that might need to be accessed from subclasses.</li>
 <li>Make classes’ data members <code>private</code>, unless they are <a target="_blank" rel="noopener" href="https://google.github.io/styleguide/cppguide.html#Constant_Names">constants</a>.</li>
 </ul>
-<h3 id="Declaration-Order"><a href="#Declaration-Order" class="headerlink" title="Declaration Order"></a>Declaration Order</h3><p>Group similar declarations together, placing public parts earlier.</p>
+<h3 id="Declaration-Order">Declaration Order</h3>
+<p>Group similar declarations together, placing public parts earlier.</p>
 <p>A class definition should usually start with a <code>public:</code> section, followed by <code>protected:</code>, then <code>private:</code>. Omit sections that would be empty.</p>
 <p>Within each section, prefer grouping similar kinds of declarations together, and prefer the following order: types (including <code>typedef</code>, <code>using</code>, and nested structs and classes), constants, factory functions, constructors and assignment operators, destructor, all other methods, data members.</p>
-<h2 id="Functions"><a href="#Functions" class="headerlink" title="Functions"></a>Functions</h2><ul>
-<li><p>The output of a C++ function is naturally provided via a return value and sometimes via output parameters (or in&#x2F;out parameters).</p>
+<h2 id="Functions">Functions</h2>
+<ul>
+<li>
+<p>The output of a C++ function is naturally provided via a return value and sometimes via output parameters (or in/out parameters).</p>
 </li>
-<li><p>Prefer using return values over output parameters: they improve readability, and often provide the same or better performance.</p>
+<li>
+<p>Prefer using return values over output parameters: they improve readability, and often provide the same or better performance.</p>
 </li>
-<li><p>When ordering function parameters, put all input-only parameters before any output parameters. In particular, do not add new parameters to the end of the function just because they are new; place new input-only parameters before the output parameters. This is not a hard-and-fast rule. Parameters that are both input and output muddy the waters, and, as always, consistency with related functions may require you to bend the rule. Variadic functions may also require unusual parameter ordering.</p>
+<li>
+<p>When ordering function parameters, put all input-only parameters before any output parameters. In particular, do not add new parameters to the end of the function just because they are new; place new input-only parameters before the output parameters. This is not a hard-and-fast rule. Parameters that are both input and output muddy the waters, and, as always, consistency with related functions may require you to bend the rule. Variadic functions may also require unusual parameter ordering.</p>
 </li>
-<li><p>Prefer small and focused functions.</p>
+<li>
+<p>Prefer small and focused functions.</p>
 </li>
-<li><p>Default arguments are allowed on non-virtual functions when the default is guaranteed to always have the same value.</p>
+<li>
+<p>Default arguments are allowed on non-virtual functions when the default is guaranteed to always have the same value.</p>
 </li>
 </ul>
-<h2 id="Naming"><a href="#Naming" class="headerlink" title="Naming"></a>Naming</h2><h3 id="General"><a href="#General" class="headerlink" title="General"></a>General</h3><ul>
-<li>Use names that describe the purpose or intent of the object. Do not worry about saving horizontal space as it is far more important to make your code immediately understandable by a new reader. Minimize the use of abbreviations that would likely be unknown to someone outside your project (especially acronyms and initialisms). </li>
+<h2 id="Naming">Naming</h2>
+<h3 id="General">General</h3>
+<ul>
+<li>Use names that describe the purpose or intent of the object. Do not worry about saving horizontal space as it is far more important to make your code immediately understandable by a new reader. Minimize the use of abbreviations that would likely be unknown to someone outside your project (especially acronyms and initialisms).</li>
 <li>Do not abbreviate by deleting letters within a word. As a rule of thumb, an abbreviation is probably OK if it’s listed in Wikipedia. Generally speaking, descriptiveness should be proportional to the name’s scope of visibility.</li>
 <li>Note that certain universally-known abbreviations are OK, such as <code>i</code> for an iteration variable and <code>T</code> for a template parameter.</li>
 <li>Namespace names are all lower-case, with words separated by underscores. Top-level namespace names are based on the project name .</li>
 <li>Enumerators (for both scoped and unscoped enums) should be named like <a target="_blank" rel="noopener" href="https://google.github.io/styleguide/cppguide.html#Constant_Names">constants</a>, not like <a target="_blank" rel="noopener" href="https://google.github.io/styleguide/cppguide.html#Macro_Names">macros</a>.</li>
 <li>In general macros should <em>not</em> be used. However, if they are absolutely needed, then they should be named with all capitals and underscores.</li>
 </ul>
-<h3 id="File-Names"><a href="#File-Names" class="headerlink" title="File Names"></a>File Names</h3><ul>
-<li>Filenames should be all lowercase and can include underscores (<code>_</code>) or dashes (<code>-</code>). </li>
+<h3 id="File-Names">File Names</h3>
+<ul>
+<li>Filenames should be all lowercase and can include underscores (<code>_</code>) or dashes (<code>-</code>).</li>
 <li>In general, make your filenames very specific. For example, use <code>http_server_logs.h</code> rather than <code>logs.h</code>. A very common case is to have a pair of files called, e.g., <code>foo_bar.h</code> and <code>foo_bar.cc</code>, defining a class called <code>FooBar</code>.</li>
 </ul>
-<h3 id="Type-Names"><a href="#Type-Names" class="headerlink" title="Type Names"></a>Type Names</h3><p>The names of all types — classes, structs, type aliases, enums, and type template parameters — have the same naming convention. Type names should start with a capital letter and have a capital letter for each new word. No underscores. </p>
-<h3 id="Variable-Names"><a href="#Variable-Names" class="headerlink" title="Variable Names"></a>Variable Names</h3><p>The names of variables (including function parameters) and data members are all lowercase, with underscores between words. Data members of classes (but not structs) additionally have trailing underscores. For instance: <code>a_local_variable</code>, <code>a_struct_data_member</code>, <code>a_class_data_member_</code>.</p>
+<h3 id="Type-Names">Type Names</h3>
+<p>The names of all types — classes, structs, type aliases, enums, and type template parameters — have the same naming convention. Type names should start with a capital letter and have a capital letter for each new word. No underscores.</p>
+<h3 id="Variable-Names">Variable Names</h3>
+<p>The names of variables (including function parameters) and data members are all lowercase, with underscores between words. Data members of classes (but not structs) additionally have trailing underscores. For instance: <code>a_local_variable</code>, <code>a_struct_data_member</code>, <code>a_class_data_member_</code>.</p>
 <p>Variables declared constexpr or const, and whose value is fixed for the duration of the program, are named with a leading “k” followed by mixed case. Underscores can be used as separators in the rare cases where capitalization cannot be used for separation. For example:</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">const int kDaysInAWeek = 7;</span><br><span class="line">const int kAndroid8_0_0 = 24;  // Android 8.0.0</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="Function-Names"><a href="#Function-Names" class="headerlink" title="Function Names"></a>Function Names</h3><p>Regular functions have mixed case; accessors and mutators may be named like variables.</p>
+<h3 id="Function-Names">Function Names</h3>
+<p>Regular functions have mixed case; accessors and mutators may be named like variables.</p>
 <ul>
-<li><p>Ordinarily, functions should start with a capital letter and have a capital letter for each new word.</p>
+<li>
+<p>Ordinarily, functions should start with a capital letter and have a capital letter for each new word.</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">AddTableEntry</span>()</span><br><span class="line"><span class="built_in">DeleteUrl</span>()</span><br><span class="line"><span class="built_in">OpenFileOrDie</span>()</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>Accessors and mutators (get and set functions) may be named like variables. These often correspond to actual member variables, but this is not required. For example, <code>int count()</code> and <code>void set_count(int count)</code>.</p>
+<li>
+<p>Accessors and mutators (get and set functions) may be named like variables. These often correspond to actual member variables, but this is not required. For example, <code>int count()</code> and <code>void set_count(int count)</code>.</p>
 </li>
 </ul>
-<h2 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h2><h3 id="Don’ts"><a href="#Don’ts" class="headerlink" title="Don’ts"></a>Don’ts</h3><p>Do not state the obvious. In particular, don’t literally describe what code does, unless the behavior is nonobvious to a reader who understands C++ well. Instead, provide higher level comments that describe <em>why</em> the code does what it does, or make the code self describing.</p>
-<h3 id="Spaces-vs-Tabs"><a href="#Spaces-vs-Tabs" class="headerlink" title="Spaces vs. Tabs"></a>Spaces vs. Tabs</h3><p>Use only spaces, and indent 2 spaces at a time.</p>
+<h2 id="Comments">Comments</h2>
+<h3 id="Don’ts">Don’ts</h3>
+<p>Do not state the obvious. In particular, don’t literally describe what code does, unless the behavior is nonobvious to a reader who understands C++ well. Instead, provide higher level comments that describe <em>why</em> the code does what it does, or make the code self describing.</p>
+<h3 id="Spaces-vs-Tabs">Spaces vs. Tabs</h3>
+<p>Use only spaces, and indent 2 spaces at a time.</p>
 <p>We use spaces for indentation. Do not use tabs in your code. You should set your editor to emit spaces when you hit the tab key.</p>
-<h3 id="Function-Declarations-and-Definitions"><a href="#Function-Declarations-and-Definitions" class="headerlink" title="Function Declarations and Definitions"></a>Function Declarations and Definitions</h3><p>Return type on the same line as function name, parameters on the same line if they fit. Wrap parameter lists which do not fit on a single line as you would wrap arguments in a <a target="_blank" rel="noopener" href="https://google.github.io/styleguide/cppguide.html#Function_Calls">function call</a>.</p>
+<h3 id="Function-Declarations-and-Definitions">Function Declarations and Definitions</h3>
+<p>Return type on the same line as function name, parameters on the same line if they fit. Wrap parameter lists which do not fit on a single line as you would wrap arguments in a <a target="_blank" rel="noopener" href="https://google.github.io/styleguide/cppguide.html#Function_Calls">function call</a>.</p>
 <p>Functions look like this:</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ReturnType ClassName::FunctionName(Type par_name1, Type par_name2) &#123;</span><br><span class="line">  DoSomething();</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p>If you have too much text to fit on one line:</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ReturnType ClassName::ReallyLongFunctionName(Type par_name1, Type par_name2,</span><br><span class="line">                                             Type par_name3) &#123;</span><br><span class="line">  DoSomething();</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p>or if you cannot fit even the first parameter:</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ReturnType LongClassName::ReallyReallyReallyLongFunctionName(</span><br><span class="line">    Type par_name1,  // 4 space indent</span><br><span class="line">    Type par_name2,</span><br><span class="line">    Type par_name3) &#123;</span><br><span class="line">  DoSomething();  // 2 space indent</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
         var options = {
@@ -314,7 +352,7 @@
     <ul>
       <li>
         Copyrights &copy;
-        2020-2024
+        2020-2025
         <i class="ri-heart-fill heart_icon"></i> Longqian Huang
       </li>
     </ul>

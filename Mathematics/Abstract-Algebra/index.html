@@ -89,7 +89,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">4.2k</span>
+            <span class="post-count">3k</span>
         </span>
     </span>
 
@@ -98,7 +98,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">18 min</span>
+            <span class="post-count">11 min</span>
         </span>
     </span>
 </div>
@@ -113,310 +113,394 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="抽象代数内容整理"><a href="#抽象代数内容整理" class="headerlink" title="抽象代数内容整理"></a>抽象代数内容整理</h1><h2 id="1-群论"><a href="#1-群论" class="headerlink" title="1  群论"></a>1  群论</h2><h3 id="1-1-群-Group"><a href="#1-1-群-Group" class="headerlink" title="1.1 群 Group"></a>1.1 群 Group</h3><h4 id="1-1-1-群的定义"><a href="#1-1-1-群的定义" class="headerlink" title="1.1.1 群的定义"></a>1.1.1 群的定义</h4><p>一个<em>群</em> 是带有下列性质的合成法则的集合$G$ :</p>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><h1>抽象代数内容整理</h1>
+<h2 id="1-群论">1  群论</h2>
+<h3 id="1-1-群-Group">1.1 群 Group</h3>
+<h4 id="1-1-1-群的定义">1.1.1 群的定义</h4>
+<p>一个<em>群</em> 是带有下列性质的合成法则的集合<a target="_blank" rel="noopener" href="https://math.now.sh?inline=G" class="gallery-item"><img src="https://math.now.sh?inline=G" style="display:inline-block;margin: 0;"/></a> :</p>
 <ol>
 <li>合成法则满足结合律</li>
 <li>包含单位元</li>
 <li>每个元素都有逆元</li>
 </ol>
-<p>&#x3D;&gt; 消去律</p>
+<p>=&gt; 消去律</p>
 <p>$ \ $ <span id="more"></span></p>
-<h4 id="1-1-2-子群"><a href="#1-1-2-子群" class="headerlink" title="1.1.2 子群"></a>1.1.2 子群</h4><h4 id="1-1-2-1-定义"><a href="#1-1-2-1-定义" class="headerlink" title="1.1.2.1 定义"></a>1.1.2.1 定义</h4><ol>
+<h4 id="1-1-2-子群">1.1.2 子群</h4>
+<h4 id="1-1-2-1-定义">1.1.2.1 定义</h4>
+<ol>
 <li>对运算具有封闭性</li>
 <li>包含单位元</li>
 <li>每个元素都有逆元</li>
 </ol>
 <p>$ \ $</p>
-<h4 id="1-1-2-2-正规子群"><a href="#1-1-2-2-正规子群" class="headerlink" title="1.1.2.2 正规子群"></a>1.1.2.2 正规子群</h4><p>$ N \trianglelefteq G $</p>
-<p>$ \iff  $ $ \forall a\in N,g\in G \quad gag^{-1}\in G $ $ \ $ </p>
-<p>$ \iff  $ $ gNg^{-1}&#x3D;N $</p>
-<p>$ \iff $ $ gN&#x3D;Ng $</p>
+<h4 id="1-1-2-2-正规子群">1.1.2.2 正规子群</h4>
+<p>$ N \trianglelefteq G $</p>
+<p>$ \iff  $ $ \forall a\in N,g\in G \quad gag^{-1}\in G $ $ \ $</p>
+<p>$ \iff  $ $ gNg^{-1}=N $</p>
+<p>$ \iff $ $ gN=Ng $</p>
 <p>$ \ $</p>
-<h4 id="1-1-3-同态"><a href="#1-1-3-同态" class="headerlink" title="1.1.3 同态"></a>1.1.3 同态</h4><p>两个群中与合成法则相容的映射。</p>
-<p>$\varphi : G\to G’, s.t \ \forall a,b \in G, \quad \varphi(ab)&#x3D;\varphi(a)\varphi(b)  $</p>
-<p>$\implies$ $\varphi$ 把单位元映射为单位元，把逆元映射为逆元</p>
-<p>$\implies$ $ im \varphi \leqslant G’, \quad \ker \varphi \trianglelefteq G$ </p>
-<p>$\implies$ 群同态基本定理： $G&#x2F;\ker\varphi \cong im\varphi$</p>
+<h4 id="1-1-3-同态">1.1.3 同态</h4>
+<p>两个群中与合成法则相容的映射。</p>
+<p>$\varphi : G\to G’, s.t \ \forall a,b \in G, \quad \varphi(ab)=\varphi(a)\varphi(b)  $</p>
+<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cimplies" class="gallery-item"><img src="https://math.now.sh?inline=%5Cimplies" style="display:inline-block;margin: 0;"/></a> <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cvarphi" class="gallery-item"><img src="https://math.now.sh?inline=%5Cvarphi" style="display:inline-block;margin: 0;"/></a> 把单位元映射为单位元，把逆元映射为逆元</p>
+<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cimplies" class="gallery-item"><img src="https://math.now.sh?inline=%5Cimplies" style="display:inline-block;margin: 0;"/></a> $ im \varphi \leqslant G’, \quad \ker \varphi \trianglelefteq G$</p>
+<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cimplies" class="gallery-item"><img src="https://math.now.sh?inline=%5Cimplies" style="display:inline-block;margin: 0;"/></a> 群同态基本定理： <a target="_blank" rel="noopener" href="https://math.now.sh?inline=G%2F%5Cker%5Cvarphi%20%5Ccong%20im%5Cvarphi" class="gallery-item"><img src="https://math.now.sh?inline=G%2F%5Cker%5Cvarphi%20%5Ccong%20im%5Cvarphi" style="display:inline-block;margin: 0;"/></a></p>
 <p>$ \ $</p>
-<h4 id="1-1-4-同构"><a href="#1-1-4-同构" class="headerlink" title="1.1.4 同构"></a>1.1.4 同构</h4><p>双射群同态。</p>
-<p>$\implies$ 第一同构定理：</p>
-<p> $ \varphi$ 是一个满同态， $\pi $ 是典范态射 $(canonical)$ </p>
-<p>则存在唯一一个同构映射$\overline \varphi : \overline G\to G’ \quad  s.t. \quad \varphi&#x3D;\overline\varphi \circ \pi$</p>
+<h4 id="1-1-4-同构">1.1.4 同构</h4>
+<p>双射群同态。</p>
+<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cimplies" class="gallery-item"><img src="https://math.now.sh?inline=%5Cimplies" style="display:inline-block;margin: 0;"/></a> 第一同构定理：</p>
+<p>$ \varphi$ 是一个满同态， $\pi $ 是典范态射 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%28canonical%29" class="gallery-item"><img src="https://math.now.sh?inline=%28canonical%29" style="display:inline-block;margin: 0;"/></a></p>
+<p>则存在唯一一个同构映射<a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Coverline%20%5Cvarphi%20%3A%20%5Coverline%20G%5Cto%20G'%20%5Cquad%20%20s.t.%20%5Cquad%20%5Cvarphi%3D%5Coverline%5Cvarphi%20%5Ccirc%20%5Cpi" class="gallery-item"><img src="https://math.now.sh?inline=%5Coverline%20%5Cvarphi%20%3A%20%5Coverline%20G%5Cto%20G'%20%5Cquad%20%20s.t.%20%5Cquad%20%5Cvarphi%3D%5Coverline%5Cvarphi%20%5Ccirc%20%5Cpi" style="display:inline-block;margin: 0;"/></a></p>
 <ul>
-<li><p>验证 $\varphi:G\to G’$ 是同构的方法：</p>
-<p>只需验证 $\ker \varphi&#x3D;{1},im\varphi&#x3D;G’$</p>
+<li>
+<p>验证 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cvarphi%3AG%5Cto%20G%E2%80%99" class="gallery-item"><img src="https://math.now.sh?inline=%5Cvarphi%3AG%5Cto%20G%E2%80%99" style="display:inline-block;margin: 0;"/></a> 是同构的方法：</p>
+<p>只需验证 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cker%20%5Cvarphi%3D%5C%7B1%5C%7D%2Cim%5Cvarphi%3DG'" class="gallery-item"><img src="https://math.now.sh?inline=%5Cker%20%5Cvarphi%3D%5C%7B1%5C%7D%2Cim%5Cvarphi%3DG'" style="display:inline-block;margin: 0;"/></a></p>
 </li>
 </ul>
-<h4 id="1-1-5-陪集"><a href="#1-1-5-陪集" class="headerlink" title="1.1.5 陪集"></a>1.1.5 陪集</h4><p>关于同余关系的等价类。</p>
-<h4 id="1-1-5-1-左陪集"><a href="#1-1-5-1-左陪集" class="headerlink" title="1.1.5.1 左陪集"></a>1.1.5.1 左陪集</h4><p>$ H\leqslant G, a\in G, aH&#x3D;{ah|a\in H  }$ </p>
-<p>$\implies$ $a\in bH \Leftrightarrow aH&#x3D;bH$</p>
-<p>$\implies$ $ |G|&#x3D;[G:H]\cdot|H|$</p>
+<h4 id="1-1-5-陪集">1.1.5 陪集</h4>
+<p>关于同余关系的等价类。</p>
+<h4 id="1-1-5-1-左陪集">1.1.5.1 左陪集</h4>
+<p>$ H\leqslant G, a\in G, aH={ah|a\in H  }$</p>
+<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cimplies" class="gallery-item"><img src="https://math.now.sh?inline=%5Cimplies" style="display:inline-block;margin: 0;"/></a> <a target="_blank" rel="noopener" href="https://math.now.sh?inline=a%5Cin%20bH%20%5CLeftrightarrow%20aH%3DbH" class="gallery-item"><img src="https://math.now.sh?inline=a%5Cin%20bH%20%5CLeftrightarrow%20aH%3DbH" style="display:inline-block;margin: 0;"/></a></p>
+<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cimplies" class="gallery-item"><img src="https://math.now.sh?inline=%5Cimplies" style="display:inline-block;margin: 0;"/></a> $ |G|=[G:H]\cdot|H|$</p>
 <p>$ \ $</p>
-<h4 id="1-1-5-2-拉格朗日定理"><a href="#1-1-5-2-拉格朗日定理" class="headerlink" title="1.1.5.2 拉格朗日定理"></a>1.1.5.2 拉格朗日定理</h4><p>子群的阶整除群的阶。 $i.e. |H| \biggm| |G|$</p>
-<p>$\implies$ 素数阶群是循环群</p>
-<p>  $ \ $</p>
-<h4 id="1-1-6-对应定理"><a href="#1-1-6-对应定理" class="headerlink" title="1.1.6 对应定理"></a>1.1.6 对应定理</h4><p>$\varphi : G\to G’ $ 是一个满同态.</p>
-<p>$ K&#x3D;ker\varphi, H’\leqslant G’, H\supset K$ .</p>
-<p>$\implies$ 若 $H’$ 是正规子群，则 $H$ 也是正规子群。$\varphi$ 是满射，$H$ 是正规子群，则$H’$ 也是正规子群。</p>
-<p>$\implies$ ${G的含有K的子群 }\longleftrightarrow {G’的子群}$</p>
+<h4 id="1-1-5-2-拉格朗日定理">1.1.5.2 拉格朗日定理</h4>
+<p>子群的阶整除群的阶。 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=i.e.%20%7CH%7C%20%5Cbiggm%7C%20%7CG%7C" class="gallery-item"><img src="https://math.now.sh?inline=i.e.%20%7CH%7C%20%5Cbiggm%7C%20%7CG%7C" style="display:inline-block;margin: 0;"/></a></p>
+<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cimplies" class="gallery-item"><img src="https://math.now.sh?inline=%5Cimplies" style="display:inline-block;margin: 0;"/></a> 素数阶群是循环群</p>
 <p>$ \ $</p>
-<h4 id="1-1-7-积群"><a href="#1-1-7-积群" class="headerlink" title="1.1.7 积群"></a>1.1.7 积群</h4><p>$G\times G’&#x3D;{(g,g’) |g\in G, g’\in G’}$</p>
+<h4 id="1-1-6-对应定理">1.1.6 对应定理</h4>
+<p>$\varphi : G\to G’ $ 是一个满同态.</p>
+<p>$ K=ker\varphi, H’\leqslant G’, H\supset K$ .</p>
+<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cimplies" class="gallery-item"><img src="https://math.now.sh?inline=%5Cimplies" style="display:inline-block;margin: 0;"/></a> 若 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=H'" class="gallery-item"><img src="https://math.now.sh?inline=H'" style="display:inline-block;margin: 0;"/></a> 是正规子群，则 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=H" class="gallery-item"><img src="https://math.now.sh?inline=H" style="display:inline-block;margin: 0;"/></a> 也是正规子群。<a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cvarphi" class="gallery-item"><img src="https://math.now.sh?inline=%5Cvarphi" style="display:inline-block;margin: 0;"/></a> 是满射，<a target="_blank" rel="noopener" href="https://math.now.sh?inline=H" class="gallery-item"><img src="https://math.now.sh?inline=H" style="display:inline-block;margin: 0;"/></a> 是正规子群，则<a target="_blank" rel="noopener" href="https://math.now.sh?inline=H'" class="gallery-item"><img src="https://math.now.sh?inline=H'" style="display:inline-block;margin: 0;"/></a> 也是正规子群。</p>
+<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cimplies" class="gallery-item"><img src="https://math.now.sh?inline=%5Cimplies" style="display:inline-block;margin: 0;"/></a> <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5C%7BG%E7%9A%84%E5%90%AB%E6%9C%89K%E7%9A%84%E5%AD%90%E7%BE%A4%20%5C%7D%5Clongleftrightarrow%20%5C%7BG'%E7%9A%84%E5%AD%90%E7%BE%A4%5C%7D" class="gallery-item"><img src="https://math.now.sh?inline=%5C%7BG%E7%9A%84%E5%90%AB%E6%9C%89K%E7%9A%84%E5%AD%90%E7%BE%A4%20%5C%7D%5Clongleftrightarrow%20%5C%7BG'%E7%9A%84%E5%AD%90%E7%BE%A4%5C%7D" style="display:inline-block;margin: 0;"/></a></p>
 <p>$ \ $</p>
-<p>$\implies$ $r$、$s$ 互素，则 $C_{rs}\cong C_r\times C_s$</p>
-<p>$\implies$ 命题 $2.11.4$ :</p>
-<p>$H,K \leqslant G, let \quad f:H\times K \to G$ 是一个映射，</p>
-<p>$def : f(h,k)&#x3D;hk. \quad imf&#x3D;HK&#x3D;{hk|h\in H,k\in K } $</p>
-<p>$then$ $f$  是一个同构   i.e  $H\times K \cong HK $ </p>
-<p>$ \iff$ $H\cap K&#x3D;{1},HK&#x3D;G,\quad H\trianglelefteq G,K\trianglelefteq G.  $</p>
+<h4 id="1-1-7-积群">1.1.7 积群</h4>
+<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=G%5Ctimes%20G'%3D%5C%7B%28g%2Cg'%29%20%7Cg%5Cin%20G%2C%20g'%5Cin%20G'%5C%7D" class="gallery-item"><img src="https://math.now.sh?inline=G%5Ctimes%20G'%3D%5C%7B%28g%2Cg'%29%20%7Cg%5Cin%20G%2C%20g'%5Cin%20G'%5C%7D" style="display:inline-block;margin: 0;"/></a></p>
 <p>$ \ $</p>
-<h4 id="1-1-8-商群"><a href="#1-1-8-商群" class="headerlink" title="1.1.8 商群"></a>1.1.8 商群</h4><p>群$G$在正规子群$N$的陪集的集合上定义合成法则，这个运算法则使得正规子群的陪集成为一个群，称为<em>商群</em>。</p>
-<p>$\overline G&#x3D;G&#x2F;N\triangleq { \overline g|\overline g&#x3D;gN,g\in G }$</p>
+<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cimplies" class="gallery-item"><img src="https://math.now.sh?inline=%5Cimplies" style="display:inline-block;margin: 0;"/></a> <a target="_blank" rel="noopener" href="https://math.now.sh?inline=r" class="gallery-item"><img src="https://math.now.sh?inline=r" style="display:inline-block;margin: 0;"/></a>、<a target="_blank" rel="noopener" href="https://math.now.sh?inline=s" class="gallery-item"><img src="https://math.now.sh?inline=s" style="display:inline-block;margin: 0;"/></a> 互素，则 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=C_%7Brs%7D%5Ccong%20C_r%5Ctimes%20C_s" class="gallery-item"><img src="https://math.now.sh?inline=C_%7Brs%7D%5Ccong%20C_r%5Ctimes%20C_s" style="display:inline-block;margin: 0;"/></a></p>
+<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cimplies" class="gallery-item"><img src="https://math.now.sh?inline=%5Cimplies" style="display:inline-block;margin: 0;"/></a> 命题 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=2.11.4" class="gallery-item"><img src="https://math.now.sh?inline=2.11.4" style="display:inline-block;margin: 0;"/></a> :</p>
+<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=H%2CK%20%5Cleqslant%20G%2C%20let%20%5Cquad%20f%3AH%5Ctimes%20K%20%5Cto%20G" class="gallery-item"><img src="https://math.now.sh?inline=H%2CK%20%5Cleqslant%20G%2C%20let%20%5Cquad%20f%3AH%5Ctimes%20K%20%5Cto%20G" style="display:inline-block;margin: 0;"/></a> 是一个映射，</p>
+<p>$def : f(h,k)=hk. \quad imf=HK={hk|h\in H,k\in K } $</p>
+<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=then" class="gallery-item"><img src="https://math.now.sh?inline=then" style="display:inline-block;margin: 0;"/></a> <a target="_blank" rel="noopener" href="https://math.now.sh?inline=f" class="gallery-item"><img src="https://math.now.sh?inline=f" style="display:inline-block;margin: 0;"/></a>  是一个同构   i.e  $H\times K \cong HK $</p>
+<p>$ \iff$ $H\cap K={1},HK=G,\quad H\trianglelefteq G,K\trianglelefteq G.  $</p>
 <p>$ \ $</p>
-<p>$\implies$ 典范态射：$\pi : G\to \overline G \quad g\mapsto\overline g$  	这是一个满同态。</p>
+<h4 id="1-1-8-商群">1.1.8 商群</h4>
+<p>群<a target="_blank" rel="noopener" href="https://math.now.sh?inline=G" class="gallery-item"><img src="https://math.now.sh?inline=G" style="display:inline-block;margin: 0;"/></a>在正规子群<a target="_blank" rel="noopener" href="https://math.now.sh?inline=N" class="gallery-item"><img src="https://math.now.sh?inline=N" style="display:inline-block;margin: 0;"/></a>的陪集的集合上定义合成法则，这个运算法则使得正规子群的陪集成为一个群，称为<em>商群</em>。</p>
+<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Coverline%20G%3DG%2FN%5Ctriangleq%20%5C%7B%20%5Coverline%20g%7C%5Coverline%20g%3DgN%2Cg%5Cin%20G%20%5C%7D" class="gallery-item"><img src="https://math.now.sh?inline=%5Coverline%20G%3DG%2FN%5Ctriangleq%20%5C%7B%20%5Coverline%20g%7C%5Coverline%20g%3DgN%2Cg%5Cin%20G%20%5C%7D" style="display:inline-block;margin: 0;"/></a></p>
 <p>$ \ $</p>
-<h3 id="1-2-群作用"><a href="#1-2-群作用" class="headerlink" title="1.2 群作用"></a>1.2 群作用</h3><h4 id="1-2-1-轨道、稳定子"><a href="#1-2-1-轨道、稳定子" class="headerlink" title="1.2.1 轨道、稳定子"></a>1.2.1 轨道、稳定子</h4><h4 id="1-2-1-1-定义"><a href="#1-2-1-1-定义" class="headerlink" title="1.2.1.1 定义"></a>1.2.1.1 定义</h4><p>orbit： $O_s&#x3D;{s’\in S | s’&#x3D;gs,g\in G}$</p>
-<p>stabilizer：$G_s&#x3D;{g\in G|gs&#x3D;s}$</p>
+<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cimplies" class="gallery-item"><img src="https://math.now.sh?inline=%5Cimplies" style="display:inline-block;margin: 0;"/></a> 典范态射：<a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cpi%20%3A%20G%5Cto%20%5Coverline%20G%20%5Cquad%20g%5Cmapsto%5Coverline%20g" class="gallery-item"><img src="https://math.now.sh?inline=%5Cpi%20%3A%20G%5Cto%20%5Coverline%20G%20%5Cquad%20g%5Cmapsto%5Coverline%20g" style="display:inline-block;margin: 0;"/></a>  	这是一个满同态。</p>
 <p>$ \ $</p>
-<h4 id="1-2-1-2-计数公式"><a href="#1-2-1-2-计数公式" class="headerlink" title="1.2.1.2 计数公式"></a>1.2.1.2 计数公式</h4><p>$|G|&#x3D;|G_s|\cdot |O_s|$</p>
+<h3 id="1-2-群作用">1.2 群作用</h3>
+<h4 id="1-2-1-轨道、稳定子">1.2.1 轨道、稳定子</h4>
+<h4 id="1-2-1-1-定义">1.2.1.1 定义</h4>
+<p>orbit： <a target="_blank" rel="noopener" href="https://math.now.sh?inline=O_s%3D%5C%7Bs'%5Cin%20S%20%7C%20s'%3Dgs%2Cg%5Cin%20G%5C%7D" class="gallery-item"><img src="https://math.now.sh?inline=O_s%3D%5C%7Bs'%5Cin%20S%20%7C%20s'%3Dgs%2Cg%5Cin%20G%5C%7D" style="display:inline-block;margin: 0;"/></a></p>
+<p>stabilizer：<a target="_blank" rel="noopener" href="https://math.now.sh?inline=G_s%3D%5C%7Bg%5Cin%20G%7Cgs%3Ds%5C%7D" class="gallery-item"><img src="https://math.now.sh?inline=G_s%3D%5C%7Bg%5Cin%20G%7Cgs%3Ds%5C%7D" style="display:inline-block;margin: 0;"/></a></p>
 <p>$ \ $</p>
-<p>$\implies$  $|O_s|&#x3D;[G:G_s]$</p>
-<p>$\implies$ $|S|&#x3D;|O_1|+|O_2|+\cdots +|O_k|$</p>
+<h4 id="1-2-1-2-计数公式">1.2.1.2 计数公式</h4>
+<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=%7CG%7C%3D%7CG_s%7C%5Ccdot%20%7CO_s%7C" class="gallery-item"><img src="https://math.now.sh?inline=%7CG%7C%3D%7CG_s%7C%5Ccdot%20%7CO_s%7C" style="display:inline-block;margin: 0;"/></a></p>
 <p>$ \ $</p>
-<h4 id="1-2-2-对陪集的作用"><a href="#1-2-2-对陪集的作用" class="headerlink" title="1.2.2 对陪集的作用"></a>1.2.2 对陪集的作用</h4><h4 id="1-2-2-1-诱导表示"><a href="#1-2-2-1-诱导表示" class="headerlink" title="1.2.2.1 诱导表示"></a>1.2.2.1 诱导表示</h4><h4 id="1-2-3-置换表示"><a href="#1-2-3-置换表示" class="headerlink" title="1.2.3 置换表示"></a>1.2.3 置换表示</h4><p>群$G$的置换表示送从该群到一个对称群的同态.</p>
-<p>$\varphi : G\to S_N$</p>
-<p>$[G在S上的作用]\leftrightarrow[置换表示]$</p>
+<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cimplies" class="gallery-item"><img src="https://math.now.sh?inline=%5Cimplies" style="display:inline-block;margin: 0;"/></a>  <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%7CO_s%7C%3D%5BG%3AG_s%5D" class="gallery-item"><img src="https://math.now.sh?inline=%7CO_s%7C%3D%5BG%3AG_s%5D" style="display:inline-block;margin: 0;"/></a></p>
+<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cimplies" class="gallery-item"><img src="https://math.now.sh?inline=%5Cimplies" style="display:inline-block;margin: 0;"/></a> <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%7CS%7C%3D%7CO_1%7C%2B%7CO_2%7C%2B%5Ccdots%20%2B%7CO_k%7C" class="gallery-item"><img src="https://math.now.sh?inline=%7CS%7C%3D%7CO_1%7C%2B%7CO_2%7C%2B%5Ccdots%20%2B%7CO_k%7C" style="display:inline-block;margin: 0;"/></a></p>
 <p>$ \ $</p>
-<h4 id="1-2-3-2-凯莱定理"><a href="#1-2-3-2-凯莱定理" class="headerlink" title="1.2.3.2 凯莱定理"></a>1.2.3.2 凯莱定理</h4><p>每一个有限群都同构于某个置换群的子群.</p>
-<p>如果$|G|&#x3D;n$ , 则 $G\hookrightarrow S_n$</p>
+<h4 id="1-2-2-对陪集的作用">1.2.2 对陪集的作用</h4>
+<h4 id="1-2-2-1-诱导表示">1.2.2.1 诱导表示</h4>
+<h4 id="1-2-3-置换表示">1.2.3 置换表示</h4>
+<p>群<a target="_blank" rel="noopener" href="https://math.now.sh?inline=G" class="gallery-item"><img src="https://math.now.sh?inline=G" style="display:inline-block;margin: 0;"/></a>的置换表示送从该群到一个对称群的同态.</p>
+<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cvarphi%20%3A%20G%5Cto%20S_N" class="gallery-item"><img src="https://math.now.sh?inline=%5Cvarphi%20%3A%20G%5Cto%20S_N" style="display:inline-block;margin: 0;"/></a></p>
+<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5BG%E5%9C%A8S%E4%B8%8A%E7%9A%84%E4%BD%9C%E7%94%A8%5D%5Cleftrightarrow%5B%E7%BD%AE%E6%8D%A2%E8%A1%A8%E7%A4%BA%5D" class="gallery-item"><img src="https://math.now.sh?inline=%5BG%E5%9C%A8S%E4%B8%8A%E7%9A%84%E4%BD%9C%E7%94%A8%5D%5Cleftrightarrow%5B%E7%BD%AE%E6%8D%A2%E8%A1%A8%E7%A4%BA%5D" style="display:inline-block;margin: 0;"/></a></p>
 <p>$ \ $</p>
-<h4 id="1-2-4-共轭作用"><a href="#1-2-4-共轭作用" class="headerlink" title="1.2.4 共轭作用"></a>1.2.4 共轭作用</h4><h4 id="1-2-4-1-中心化子、共轭类"><a href="#1-2-4-1-中心化子、共轭类" class="headerlink" title="1.2.4.1 中心化子、共轭类"></a>1.2.4.1 中心化子、共轭类</h4><p>中心化子：元素$x$关于共轭作用的稳定子。</p>
-<p>$Z(x)&#x3D;{g\in G|gx&#x3D;xg}$</p>
-<p>共轭类：$x$关于共轭作用的轨道。</p>
-<p>$C(x)&#x3D;{x’\in G|x’&#x3D;gxg^{-1},g\in G}$</p>
+<h4 id="1-2-3-2-凯莱定理">1.2.3.2 凯莱定理</h4>
+<p>每一个有限群都同构于某个置换群的子群.</p>
+<p>如果<a target="_blank" rel="noopener" href="https://math.now.sh?inline=%7CG%7C%3Dn" class="gallery-item"><img src="https://math.now.sh?inline=%7CG%7C%3Dn" style="display:inline-block;margin: 0;"/></a> , 则 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=G%5Chookrightarrow%20S_n" class="gallery-item"><img src="https://math.now.sh?inline=G%5Chookrightarrow%20S_n" style="display:inline-block;margin: 0;"/></a></p>
 <p>$ \ $</p>
-<p>$\implies$ $|G|&#x3D;|Z(x)|\cdot |C(x)|$</p>
+<h4 id="1-2-4-共轭作用">1.2.4 共轭作用</h4>
+<h4 id="1-2-4-1-中心化子、共轭类">1.2.4.1 中心化子、共轭类</h4>
+<p>中心化子：元素<a target="_blank" rel="noopener" href="https://math.now.sh?inline=x" class="gallery-item"><img src="https://math.now.sh?inline=x" style="display:inline-block;margin: 0;"/></a>关于共轭作用的稳定子。</p>
+<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=Z%28x%29%3D%5C%7Bg%5Cin%20G%7Cgx%3Dxg%5C%7D" class="gallery-item"><img src="https://math.now.sh?inline=Z%28x%29%3D%5C%7Bg%5Cin%20G%7Cgx%3Dxg%5C%7D" style="display:inline-block;margin: 0;"/></a></p>
+<p>共轭类：<a target="_blank" rel="noopener" href="https://math.now.sh?inline=x" class="gallery-item"><img src="https://math.now.sh?inline=x" style="display:inline-block;margin: 0;"/></a>关于共轭作用的轨道。</p>
+<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=C%28x%29%3D%5C%7Bx'%5Cin%20G%7Cx'%3Dgxg%5E%7B-1%7D%2Cg%5Cin%20G%5C%7D" class="gallery-item"><img src="https://math.now.sh?inline=C%28x%29%3D%5C%7Bx'%5Cin%20G%7Cx'%3Dgxg%5E%7B-1%7D%2Cg%5Cin%20G%5C%7D" style="display:inline-block;margin: 0;"/></a></p>
 <p>$ \ $</p>
-<h4 id="1-2-4-1-类方程"><a href="#1-2-4-1-类方程" class="headerlink" title="1.2.4.1 类方程"></a>1.2.4.1 类方程</h4><p>共轭类划分群$G$。</p>
-<p>$ |G|&#x3D;\sum\limits_{共轭类C} |C|&#x3D;|Z|+\sum\limits_ {x\in g}|C(x)| $</p>
+<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cimplies" class="gallery-item"><img src="https://math.now.sh?inline=%5Cimplies" style="display:inline-block;margin: 0;"/></a> <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%7CG%7C%3D%7CZ%28x%29%7C%5Ccdot%20%7CC(x)%7C" class="gallery-item"><img src="https://math.now.sh?inline=%7CG%7C%3D%7CZ%28x%29%7C%5Ccdot%20%7CC(x)%7C" style="display:inline-block;margin: 0;"/></a></p>
 <p>$ \ $</p>
-<h4 id="1-2-5-Sylow定理"><a href="#1-2-5-Sylow定理" class="headerlink" title="1.2.5 Sylow定理"></a>1.2.5 Sylow定理</h4><p>设 $|G|&#x3D;n&#x3D;p^e m$ .</p>
-<h4 id="1-2-5-1-p-群相关命题"><a href="#1-2-5-1-p-群相关命题" class="headerlink" title="1.2.5.1 p-群相关命题"></a>1.2.5.1 p-群相关命题</h4><p>p-群：阶是素数 $p$ 的正幂的群。</p>
+<h4 id="1-2-4-1-类方程">1.2.4.1 类方程</h4>
+<p>共轭类划分群<a target="_blank" rel="noopener" href="https://math.now.sh?inline=G" class="gallery-item"><img src="https://math.now.sh?inline=G" style="display:inline-block;margin: 0;"/></a>。</p>
+<p>$ |G|=\sum\limits_{共轭类C} |C|=|Z|+\sum\limits_ {x\in g}|C(x)| $</p>
+<p>$ \ $</p>
+<h4 id="1-2-5-Sylow定理">1.2.5 Sylow定理</h4>
+<p>设 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%7CG%7C%3Dn%3Dp%5Ee%20m" class="gallery-item"><img src="https://math.now.sh?inline=%7CG%7C%3Dn%3Dp%5Ee%20m" style="display:inline-block;margin: 0;"/></a> .</p>
+<h4 id="1-2-5-1-p-群相关命题">1.2.5.1 p-群相关命题</h4>
+<p>p-群：阶是素数 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=p" class="gallery-item"><img src="https://math.now.sh?inline=p" style="display:inline-block;margin: 0;"/></a> 的正幂的群。</p>
 <ul>
-<li><p>p-群 $G$ 的中心是非平凡群。</p>
+<li>
+<p>p-群 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=G" class="gallery-item"><img src="https://math.now.sh?inline=G" style="display:inline-block;margin: 0;"/></a> 的中心是非平凡群。</p>
 </li>
-<li><p>（不动点定理）$G$是p-群，$S$ 是一个有限集合，$G$ 在 $S$ 上面作用。若$p\nmid |S|$ , 则$G$的作用有个不动点$s$， 它的稳定子是整个群。</p>
+<li>
+<p>（不动点定理）<a target="_blank" rel="noopener" href="https://math.now.sh?inline=G" class="gallery-item"><img src="https://math.now.sh?inline=G" style="display:inline-block;margin: 0;"/></a>是p-群，<a target="_blank" rel="noopener" href="https://math.now.sh?inline=S" class="gallery-item"><img src="https://math.now.sh?inline=S" style="display:inline-block;margin: 0;"/></a> 是一个有限集合，<a target="_blank" rel="noopener" href="https://math.now.sh?inline=G" class="gallery-item"><img src="https://math.now.sh?inline=G" style="display:inline-block;margin: 0;"/></a> 在 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=S" class="gallery-item"><img src="https://math.now.sh?inline=S" style="display:inline-block;margin: 0;"/></a> 上面作用。若<a target="_blank" rel="noopener" href="https://math.now.sh?inline=p%5Cnmid%20%7CS%7C" class="gallery-item"><img src="https://math.now.sh?inline=p%5Cnmid%20%7CS%7C" style="display:inline-block;margin: 0;"/></a> , 则<a target="_blank" rel="noopener" href="https://math.now.sh?inline=G" class="gallery-item"><img src="https://math.now.sh?inline=G" style="display:inline-block;margin: 0;"/></a>的作用有个不动点<a target="_blank" rel="noopener" href="https://math.now.sh?inline=s" class="gallery-item"><img src="https://math.now.sh?inline=s" style="display:inline-block;margin: 0;"/></a>， 它的稳定子是整个群。</p>
 </li>
-<li><p>$p^2$ 阶群是 $Abel$ 群。</p>
+<li>
+<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=p%5E2" class="gallery-item"><img src="https://math.now.sh?inline=p%5E2" style="display:inline-block;margin: 0;"/></a> 阶群是 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=Abel" class="gallery-item"><img src="https://math.now.sh?inline=Abel" style="display:inline-block;margin: 0;"/></a> 群。</p>
 <p>$ \ $</p>
 </li>
 </ul>
-<h4 id="1-2-5-4-Sylow-I"><a href="#1-2-5-4-Sylow-I" class="headerlink" title="1.2.5.4 Sylow-I"></a>1.2.5.4 Sylow-I</h4><p>阶被素数 $p$ 整除的有限群包含一个 $Sylow-p$ 子群。</p>
+<h4 id="1-2-5-4-Sylow-I">1.2.5.4 Sylow-I</h4>
+<p>阶被素数 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=p" class="gallery-item"><img src="https://math.now.sh?inline=p" style="display:inline-block;margin: 0;"/></a> 整除的有限群包含一个 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=Sylow-p" class="gallery-item"><img src="https://math.now.sh?inline=Sylow-p" style="display:inline-block;margin: 0;"/></a> 子群。</p>
 <p>$ \ $</p>
-<p>$&#x3D;&gt;$ 阶被素数 $p$ 整除的有限群包含一个 $p$ 阶的元素。</p>
+<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=%3D%3E" class="gallery-item"><img src="https://math.now.sh?inline=%3D%3E" style="display:inline-block;margin: 0;"/></a> 阶被素数 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=p" class="gallery-item"><img src="https://math.now.sh?inline=p" style="display:inline-block;margin: 0;"/></a> 整除的有限群包含一个 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=p" class="gallery-item"><img src="https://math.now.sh?inline=p" style="display:inline-block;margin: 0;"/></a> 阶的元素。</p>
 <p>$ \ $</p>
-<h4 id="1-2-5-5-Sylow-II"><a href="#1-2-5-5-Sylow-II" class="headerlink" title="1.2.5.5 Sylow-II"></a>1.2.5.5 Sylow-II</h4><p>(a) $G$ 的 $Sylow-p$ 子群是共轭子群。</p>
-<p>(b) $G$的每一个p-群的子群都包含在一个 $Sylow-p$ 子群里。 </p>
+<h4 id="1-2-5-5-Sylow-II">1.2.5.5 Sylow-II</h4>
+<p>(a) <a target="_blank" rel="noopener" href="https://math.now.sh?inline=G" class="gallery-item"><img src="https://math.now.sh?inline=G" style="display:inline-block;margin: 0;"/></a> 的 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=Sylow-p" class="gallery-item"><img src="https://math.now.sh?inline=Sylow-p" style="display:inline-block;margin: 0;"/></a> 子群是共轭子群。</p>
+<p>(b) <a target="_blank" rel="noopener" href="https://math.now.sh?inline=G" class="gallery-item"><img src="https://math.now.sh?inline=G" style="display:inline-block;margin: 0;"/></a>的每一个p-群的子群都包含在一个 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=Sylow-p" class="gallery-item"><img src="https://math.now.sh?inline=Sylow-p" style="display:inline-block;margin: 0;"/></a> 子群里。</p>
 <p>$ \ $</p>
-<p>$\implies$ 群 $G$ 只有一个 $Sylow-p$ 子群$\iff$这个子群是正规子群</p>
+<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cimplies" class="gallery-item"><img src="https://math.now.sh?inline=%5Cimplies" style="display:inline-block;margin: 0;"/></a> 群 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=G" class="gallery-item"><img src="https://math.now.sh?inline=G" style="display:inline-block;margin: 0;"/></a> 只有一个 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=Sylow-p" class="gallery-item"><img src="https://math.now.sh?inline=Sylow-p" style="display:inline-block;margin: 0;"/></a> 子群<a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Ciff" class="gallery-item"><img src="https://math.now.sh?inline=%5Ciff" style="display:inline-block;margin: 0;"/></a>这个子群是正规子群</p>
 <p>$ \ $</p>
-<h4 id="1-2-5-6-Sylow-III"><a href="#1-2-5-6-Sylow-III" class="headerlink" title="1.2.5.6 Sylow-III"></a>1.2.5.6 Sylow-III</h4><p>$G$ 的 $Sylow-p$ 子群的个数整除 $m$ 且模 $p$ 余 $1$.</p>
+<h4 id="1-2-5-6-Sylow-III">1.2.5.6 Sylow-III</h4>
+<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=G" class="gallery-item"><img src="https://math.now.sh?inline=G" style="display:inline-block;margin: 0;"/></a> 的 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=Sylow-p" class="gallery-item"><img src="https://math.now.sh?inline=Sylow-p" style="display:inline-block;margin: 0;"/></a> 子群的个数整除 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=m" class="gallery-item"><img src="https://math.now.sh?inline=m" style="display:inline-block;margin: 0;"/></a> 且模 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=p" class="gallery-item"><img src="https://math.now.sh?inline=p" style="display:inline-block;margin: 0;"/></a> 余 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=1" class="gallery-item"><img src="https://math.now.sh?inline=1" style="display:inline-block;margin: 0;"/></a>.</p>
 <p>$ \ $</p>
-<h3 id="1-3-自由群"><a href="#1-3-自由群" class="headerlink" title="1.3 自由群"></a>1.3 <a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E8%87%AA%E7%94%B1%E7%BE%A4">自由群</a></h3><p>群的元素的一个集合称为是<em>自由的</em>，如果其元素除了群的公理给出的关系外不满足任何别的关系。</p>
+<h3 id="1-3-自由群">1.3 <a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E8%87%AA%E7%94%B1%E7%BE%A4">自由群</a></h3>
+<p>群的元素的一个集合称为是<em>自由的</em>，如果其元素除了群的公理给出的关系外不满足任何别的关系。</p>
 <p>具有自由的生成元的集合的群称为<em>自由群</em>。</p>
 <p>$ \ $</p>
-<h2 id="2-环论"><a href="#2-环论" class="headerlink" title="2  环论"></a>2  环论</h2><h3 id="2-1-环的定义-Ring"><a href="#2-1-环的定义-Ring" class="headerlink" title="2.1 环的定义 Ring"></a>2.1 环的定义 Ring</h3><p>一个<em>环</em> $R$ 是一个具有两种合成法则$+$和$\times$ 的集合。</p>
+<h2 id="2-环论">2  环论</h2>
+<h3 id="2-1-环的定义-Ring">2.1 环的定义 Ring</h3>
+<p>一个<em>环</em> <a target="_blank" rel="noopener" href="https://math.now.sh?inline=R" class="gallery-item"><img src="https://math.now.sh?inline=R" style="display:inline-block;margin: 0;"/></a> 是一个具有两种合成法则<a target="_blank" rel="noopener" href="https://math.now.sh?inline=%2B" class="gallery-item"><img src="https://math.now.sh?inline=%2B" style="display:inline-block;margin: 0;"/></a>和<a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Ctimes" class="gallery-item"><img src="https://math.now.sh?inline=%5Ctimes" style="display:inline-block;margin: 0;"/></a> 的集合。</p>
 <p>关于加法为阿贝尔群，关于乘法满足结合律。</p>
 <p>关于加法和乘法满足分配律。</p>
 <p>$ \ $</p>
 <p><strong>整环</strong>（Integral Domain）：不含零因子的环。整环满足消去律。</p>
 <p><strong>诺特环</strong>：一个环是诺特环如果它的每个理想都是有限生成的。</p>
 <p>$ \ $</p>
-<h3 id="2-2-环同态"><a href="#2-2-环同态" class="headerlink" title="2.2 环同态"></a>2.2 环同态</h3><p>从一个环到另一个环的映射，与加法和乘法的合成法则相容。</p>
-<p>$\varphi (a+b)&#x3D;\varphi(a)+\varphi(b),\quad \varphi(ab)&#x3D;\varphi(a)\cdot \varphi(b)$</p>
-<p>若环有乘法单位元，则 $\varphi(1)&#x3D;1$</p>
+<h3 id="2-2-环同态">2.2 环同态</h3>
+<p>从一个环到另一个环的映射，与加法和乘法的合成法则相容。</p>
+<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cvarphi%20%28a%2Bb%29%3D%5Cvarphi(a)%2B%5Cvarphi(b)%2C%5Cquad%20%5Cvarphi(ab)%3D%5Cvarphi(a)%5Ccdot%20%5Cvarphi(b)" class="gallery-item"><img src="https://math.now.sh?inline=%5Cvarphi%20%28a%2Bb%29%3D%5Cvarphi(a)%2B%5Cvarphi(b)%2C%5Cquad%20%5Cvarphi(ab)%3D%5Cvarphi(a)%5Ccdot%20%5Cvarphi(b)" style="display:inline-block;margin: 0;"/></a></p>
+<p>若环有乘法单位元，则 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cvarphi%281%29%3D1" class="gallery-item"><img src="https://math.now.sh?inline=%5Cvarphi%281%29%3D1" style="display:inline-block;margin: 0;"/></a></p>
 <p>$ \ $</p>
-<h3 id="2-3-理想-Ideal"><a href="#2-3-理想-Ideal" class="headerlink" title="2.3 理想 Ideal"></a>2.3 理想 Ideal</h3><ul>
-<li>环$R$的左理想$I$是满足下列性质的非空子集：</li>
+<h3 id="2-3-理想-Ideal">2.3 理想 Ideal</h3>
+<ul>
+<li>环<a target="_blank" rel="noopener" href="https://math.now.sh?inline=R" class="gallery-item"><img src="https://math.now.sh?inline=R" style="display:inline-block;margin: 0;"/></a>的左理想<a target="_blank" rel="noopener" href="https://math.now.sh?inline=I" class="gallery-item"><img src="https://math.now.sh?inline=I" style="display:inline-block;margin: 0;"/></a>是满足下列性质的非空子集：</li>
 </ul>
 <p>（1）关于加法封闭</p>
-<p>（2）$\forall r\in R, s\in I, \quad rs\in I$</p>
+<p>（2）<a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cforall%20r%5Cin%20R%2C%20s%5Cin%20I%2C%20%5Cquad%20rs%5Cin%20I" class="gallery-item"><img src="https://math.now.sh?inline=%5Cforall%20r%5Cin%20R%2C%20s%5Cin%20I%2C%20%5Cquad%20rs%5Cin%20I" style="display:inline-block;margin: 0;"/></a></p>
 <p>$ \ $</p>
 <ul>
-<li>极大理想：$M&lt; R(M\neq R),$ 若$I\subseteq M,$ 则 $I&#x3D;M$ 或 $I&#x3D;R$ 。</li>
+<li>极大理想：<a target="_blank" rel="noopener" href="https://math.now.sh?inline=M%3C%20R%28M%5Cneq%20R%29%2C" class="gallery-item"><img src="https://math.now.sh?inline=M%3C%20R%28M%5Cneq%20R%29%2C" style="display:inline-block;margin: 0;"/></a> 若<a target="_blank" rel="noopener" href="https://math.now.sh?inline=I%5Csubseteq%20M%2C" class="gallery-item"><img src="https://math.now.sh?inline=I%5Csubseteq%20M%2C" style="display:inline-block;margin: 0;"/></a> 则 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=I%3DM" class="gallery-item"><img src="https://math.now.sh?inline=I%3DM" style="display:inline-block;margin: 0;"/></a> 或 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=I%3DR" class="gallery-item"><img src="https://math.now.sh?inline=I%3DR" style="display:inline-block;margin: 0;"/></a> 。</li>
 </ul>
 <p>$ \ $</p>
-<p>$\implies$ 整数环 $Z$ 的极大理想是有素数生成的主理想。</p>
-<p>$\implies$ $F$ 是一个域，$F[x]$ 的极大理想是由既约的首一多项式生成的主理想</p>
+<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cimplies" class="gallery-item"><img src="https://math.now.sh?inline=%5Cimplies" style="display:inline-block;margin: 0;"/></a> 整数环 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=Z" class="gallery-item"><img src="https://math.now.sh?inline=Z" style="display:inline-block;margin: 0;"/></a> 的极大理想是有素数生成的主理想。</p>
+<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cimplies" class="gallery-item"><img src="https://math.now.sh?inline=%5Cimplies" style="display:inline-block;margin: 0;"/></a> <a target="_blank" rel="noopener" href="https://math.now.sh?inline=F" class="gallery-item"><img src="https://math.now.sh?inline=F" style="display:inline-block;margin: 0;"/></a> 是一个域，<a target="_blank" rel="noopener" href="https://math.now.sh?inline=F%5Bx%5D" class="gallery-item"><img src="https://math.now.sh?inline=F%5Bx%5D" style="display:inline-block;margin: 0;"/></a> 的极大理想是由既约的首一多项式生成的主理想</p>
 <p>$ \ $</p>
-<h3 id="2-4-商环-第一同构定理"><a href="#2-4-商环-第一同构定理" class="headerlink" title="2.4 商环, 第一同构定理"></a>2.4 商环, 第一同构定理</h3><p>类似群论。</p>
-<h3 id="2-5-对应定理"><a href="#2-5-对应定理" class="headerlink" title="2.5 对应定理"></a>2.5 对应定理</h3><p>$\varphi ：R\to R’$ 是满射环同态，则存在一个双射对应：</p>
-<p>${R的含核 理想}\leftrightarrow {R’的理想}$</p>
+<h3 id="2-4-商环-第一同构定理">2.4 商环, 第一同构定理</h3>
+<p>类似群论。</p>
+<h3 id="2-5-对应定理">2.5 对应定理</h3>
+<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cvarphi%20%EF%BC%9AR%5Cto%20R'" class="gallery-item"><img src="https://math.now.sh?inline=%5Cvarphi%20%EF%BC%9AR%5Cto%20R'" style="display:inline-block;margin: 0;"/></a> 是满射环同态，则存在一个双射对应：</p>
+<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5C%7BR%E7%9A%84%E5%90%AB%E6%A0%B8%20%E7%90%86%E6%83%B3%5C%7D%5Cleftrightarrow%20%5C%7BR'%E7%9A%84%E7%90%86%E6%83%B3%5C%7D" class="gallery-item"><img src="https://math.now.sh?inline=%5C%7BR%E7%9A%84%E5%90%AB%E6%A0%B8%20%E7%90%86%E6%83%B3%5C%7D%5Cleftrightarrow%20%5C%7BR'%E7%9A%84%E7%90%86%E6%83%B3%5C%7D" style="display:inline-block;margin: 0;"/></a></p>
 <p>$ \ $</p>
-<h3 id="2-6-希尔伯特零点定理"><a href="#2-6-希尔伯特零点定理" class="headerlink" title="2.6 希尔伯特零点定理"></a>2.6 希尔伯特零点定理</h3><p>多项式环 $\mathbf C[x_1,x_2,\cdots,x_n]$的极大理想与复$n$维空间的点一一对应。$\mathbf{C}^n $ 的一个点$a&#x3D;(a_1,a_2,\cdots,c_n)$对应于映 $x_i \rightsquigarrow a_i$的代入映射 $s_a:\mathbf{C}[x_1,\cdots, x_n]\to\mathbf{C}$的核$M_a$ . 这个映射的核 $M_a$ 是由 $n$ 个线性多项式 $x_i-a_i$ 生成的理想。</p>
+<h3 id="2-6-希尔伯特零点定理">2.6 希尔伯特零点定理</h3>
+<p>多项式环 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cmathbf%20C%5Bx_1%2Cx_2%2C%5Ccdots%2Cx_n%5D" class="gallery-item"><img src="https://math.now.sh?inline=%5Cmathbf%20C%5Bx_1%2Cx_2%2C%5Ccdots%2Cx_n%5D" style="display:inline-block;margin: 0;"/></a>的极大理想与复<a target="_blank" rel="noopener" href="https://math.now.sh?inline=n" class="gallery-item"><img src="https://math.now.sh?inline=n" style="display:inline-block;margin: 0;"/></a>维空间的点一一对应。$\mathbf{C}^n $ 的一个点<a target="_blank" rel="noopener" href="https://math.now.sh?inline=a%3D%28a_1%2Ca_2%2C%5Ccdots%2Cc_n%29" class="gallery-item"><img src="https://math.now.sh?inline=a%3D%28a_1%2Ca_2%2C%5Ccdots%2Cc_n%29" style="display:inline-block;margin: 0;"/></a>对应于映 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=x_i%20%5Crightsquigarrow%20a_i" class="gallery-item"><img src="https://math.now.sh?inline=x_i%20%5Crightsquigarrow%20a_i" style="display:inline-block;margin: 0;"/></a>的代入映射 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=s_a%3A%5Cmathbf%7BC%7D%5Bx_1%2C%5Ccdots%2C%20x_n%5D%5Cto%5Cmathbf%7BC%7D" class="gallery-item"><img src="https://math.now.sh?inline=s_a%3A%5Cmathbf%7BC%7D%5Bx_1%2C%5Ccdots%2C%20x_n%5D%5Cto%5Cmathbf%7BC%7D" style="display:inline-block;margin: 0;"/></a>的核<a target="_blank" rel="noopener" href="https://math.now.sh?inline=M_a" class="gallery-item"><img src="https://math.now.sh?inline=M_a" style="display:inline-block;margin: 0;"/></a> . 这个映射的核 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=M_a" class="gallery-item"><img src="https://math.now.sh?inline=M_a" style="display:inline-block;margin: 0;"/></a> 是由 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=n" class="gallery-item"><img src="https://math.now.sh?inline=n" style="display:inline-block;margin: 0;"/></a> 个线性多项式 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=x_i-a_i" class="gallery-item"><img src="https://math.now.sh?inline=x_i-a_i" style="display:inline-block;margin: 0;"/></a> 生成的理想。</p>
 <p>$ \ $</p>
-<h3 id="2-7-因子分解"><a href="#2-7-因子分解" class="headerlink" title="2.7 因子分解"></a>2.7 因子分解</h3><h4 id="2-7-1-基本概念"><a href="#2-7-1-基本概念" class="headerlink" title="2.7.1 基本概念"></a>2.7.1 基本概念</h4><ul>
+<h3 id="2-7-因子分解">2.7 因子分解</h3>
+<h4 id="2-7-1-基本概念">2.7.1 基本概念</h4>
+<ul>
 <li>单位 unit ：有乘法逆元</li>
-<li>相伴 associate ：$a$ 和 $b$ 相伴$\iff$$(a)&#x3D;(b)$</li>
+<li>相伴 associate ：<a target="_blank" rel="noopener" href="https://math.now.sh?inline=a" class="gallery-item"><img src="https://math.now.sh?inline=a" style="display:inline-block;margin: 0;"/></a> 和 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=b" class="gallery-item"><img src="https://math.now.sh?inline=b" style="display:inline-block;margin: 0;"/></a> 相伴<a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Ciff" class="gallery-item"><img src="https://math.now.sh?inline=%5Ciff" style="display:inline-block;margin: 0;"/></a><a target="_blank" rel="noopener" href="https://math.now.sh?inline=%28a%29%3D(b)" class="gallery-item"><img src="https://math.now.sh?inline=%28a%29%3D(b)" style="display:inline-block;margin: 0;"/></a></li>
 <li>不可约 irreducible :  不是单位且没有真因子，因子为单位或者相伴元</li>
-<li>素元 prime : $p$ 是素元 $\iff$ $p\mid ab&#x3D;&gt;p\mid a \quad or \quad p\mid b$</li>
+<li>素元 prime : <a target="_blank" rel="noopener" href="https://math.now.sh?inline=p" class="gallery-item"><img src="https://math.now.sh?inline=p" style="display:inline-block;margin: 0;"/></a> 是素元 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Ciff" class="gallery-item"><img src="https://math.now.sh?inline=%5Ciff" style="display:inline-block;margin: 0;"/></a> <a target="_blank" rel="noopener" href="https://math.now.sh?inline=p%5Cmid%20ab%3D%3Ep%5Cmid%20a%20%5Cquad%20or%20%5Cquad%20p%5Cmid%20b" class="gallery-item"><img src="https://math.now.sh?inline=p%5Cmid%20ab%3D%3Ep%5Cmid%20a%20%5Cquad%20or%20%5Cquad%20p%5Cmid%20b" style="display:inline-block;margin: 0;"/></a></li>
 </ul>
 <p>$ \ $</p>
-<h4 id="2-7-2-欧几里得整环-ED"><a href="#2-7-2-欧几里得整环-ED" class="headerlink" title="2.7.2 欧几里得整环 ED"></a>2.7.2 欧几里得整环 ED</h4><ul>
+<h4 id="2-7-2-欧几里得整环-ED">2.7.2 欧几里得整环 ED</h4>
+<ul>
 <li>有尺度函数，可进行带余除法</li>
-<li>常见例子：$\mathbf{Z},F[x],\mathbf{Z}[i]$</li>
-<li>$ED$ is $PID$</li>
+<li>常见例子：<a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cmathbf%7BZ%7D%2CF%5Bx%5D%2C%5Cmathbf%7BZ%7D%5Bi%5D" class="gallery-item"><img src="https://math.now.sh?inline=%5Cmathbf%7BZ%7D%2CF%5Bx%5D%2C%5Cmathbf%7BZ%7D%5Bi%5D" style="display:inline-block;margin: 0;"/></a></li>
+<li><a target="_blank" rel="noopener" href="https://math.now.sh?inline=ED" class="gallery-item"><img src="https://math.now.sh?inline=ED" style="display:inline-block;margin: 0;"/></a> is <a target="_blank" rel="noopener" href="https://math.now.sh?inline=PID" class="gallery-item"><img src="https://math.now.sh?inline=PID" style="display:inline-block;margin: 0;"/></a></li>
 </ul>
 <p>$ \ $</p>
-<h4 id="2-7-3-主理想整环-PID"><a href="#2-7-3-主理想整环-PID" class="headerlink" title="2.7.3 主理想整环 PID"></a>2.7.3 主理想整环 PID</h4><ul>
+<h4 id="2-7-3-主理想整环-PID">2.7.3 主理想整环 PID</h4>
+<ul>
 <li>所有理想均为主理想</li>
-<li>理想$(a,b)&#x3D;Ra+Rb$ 的生成元 $d$ 是 $a,b$ 的最大公因子</li>
-<li>$\exists r,s \in R\quad s.t.\quad d&#x3D;ra+sb$</li>
-<li>$PID$ 中，元素是不可约的当且仅当它是素的</li>
+<li>理想<a target="_blank" rel="noopener" href="https://math.now.sh?inline=%28a%2Cb%29%3DRa%2BRb" class="gallery-item"><img src="https://math.now.sh?inline=%28a%2Cb%29%3DRa%2BRb" style="display:inline-block;margin: 0;"/></a> 的生成元 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=d" class="gallery-item"><img src="https://math.now.sh?inline=d" style="display:inline-block;margin: 0;"/></a> 是 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=a%2Cb" class="gallery-item"><img src="https://math.now.sh?inline=a%2Cb" style="display:inline-block;margin: 0;"/></a> 的最大公因子</li>
+<li><a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cexists%20r%2Cs%20%5Cin%20R%5Cquad%20s.t.%5Cquad%20d%3Dra%2Bsb" class="gallery-item"><img src="https://math.now.sh?inline=%5Cexists%20r%2Cs%20%5Cin%20R%5Cquad%20s.t.%5Cquad%20d%3Dra%2Bsb" style="display:inline-block;margin: 0;"/></a></li>
+<li><a target="_blank" rel="noopener" href="https://math.now.sh?inline=PID" class="gallery-item"><img src="https://math.now.sh?inline=PID" style="display:inline-block;margin: 0;"/></a> 中，元素是不可约的当且仅当它是素的</li>
 </ul>
 <p>$ \ $</p>
-<h4 id="2-7-4-唯一分解整环-UFD"><a href="#2-7-4-唯一分解整环-UFD" class="headerlink" title="2.7.4 唯一分解整环 UFD"></a>2.7.4 唯一分解整环 UFD</h4><ul>
+<h4 id="2-7-4-唯一分解整环-UFD">2.7.4 唯一分解整环 UFD</h4>
+<ul>
 <li>分解终止，且元素的既约分解唯一</li>
-<li>$ED&#x3D;&gt;PID&#x3D;&gt;UFD$</li>
+<li><a target="_blank" rel="noopener" href="https://math.now.sh?inline=ED%3D%3EPID%3D%3EUFD" class="gallery-item"><img src="https://math.now.sh?inline=ED%3D%3EPID%3D%3EUFD" style="display:inline-block;margin: 0;"/></a></li>
 </ul>
 <p>$ \ $</p>
-<h3 id="2-7-高斯引理"><a href="#2-7-高斯引理" class="headerlink" title="2.7 高斯引理"></a>2.7 高斯引理</h3><ul>
-<li>本原多项式：正次数的正系数多项式，且整数系数 $a_1, a_2,\cdots,a_n$的最大公因子是$1$。</li>
-<li>$f$ 是本原的$\iff$$f$ 不能被任何素数  $ p $ 整除 $\iff$ $\forall p: prime,\psi_p(f)\neq 0\quad(\psi_p为系数模素数p的同态)$</li>
-<li>$Gauss’s$ $Lemma$ : 本原多项式的积是本原的</li>
-<li>每个有理系数的正次数多项式 $f(x)$ 可唯一地写成 $f(x)&#x3D;cf_0(x)$ ，其中 $c\in \mathbb{Q}$，$f_0(x)$ 是本原多项式</li>
-<li>多项式环 $ \mathbf{Z}[x]$ 是唯一分解整环。每个不是 $\pm 1$ 的非零多项式 $f(x)\in\mathbf{Z}[x]$ 可以写成积的形式： $f(x)&#x3D;\pm p_1\cdots p_m q_1(x)\cdots q_n(x)$ ，$p_i $ 是整素数，$q_i$ 是本原的既约多项式。</li>
+<h3 id="2-7-高斯引理">2.7 高斯引理</h3>
+<ul>
+<li>本原多项式：正次数的正系数多项式，且整数系数 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=a_1%2C%20a_2%2C%5Ccdots%2Ca_n" class="gallery-item"><img src="https://math.now.sh?inline=a_1%2C%20a_2%2C%5Ccdots%2Ca_n" style="display:inline-block;margin: 0;"/></a>的最大公因子是<a target="_blank" rel="noopener" href="https://math.now.sh?inline=1" class="gallery-item"><img src="https://math.now.sh?inline=1" style="display:inline-block;margin: 0;"/></a>。</li>
+<li><a target="_blank" rel="noopener" href="https://math.now.sh?inline=f" class="gallery-item"><img src="https://math.now.sh?inline=f" style="display:inline-block;margin: 0;"/></a> 是本原的<a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Ciff" class="gallery-item"><img src="https://math.now.sh?inline=%5Ciff" style="display:inline-block;margin: 0;"/></a><a target="_blank" rel="noopener" href="https://math.now.sh?inline=f" class="gallery-item"><img src="https://math.now.sh?inline=f" style="display:inline-block;margin: 0;"/></a> 不能被任何素数  $ p $ 整除 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Ciff" class="gallery-item"><img src="https://math.now.sh?inline=%5Ciff" style="display:inline-block;margin: 0;"/></a> <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cforall%20p%3A%20prime%2C%5Cpsi_p%28f%29%5Cneq%200%5Cquad(%5Cpsi_p%E4%B8%BA%E7%B3%BB%E6%95%B0%E6%A8%A1%E7%B4%A0%E6%95%B0p%E7%9A%84%E5%90%8C%E6%80%81)" class="gallery-item"><img src="https://math.now.sh?inline=%5Cforall%20p%3A%20prime%2C%5Cpsi_p%28f%29%5Cneq%200%5Cquad(%5Cpsi_p%E4%B8%BA%E7%B3%BB%E6%95%B0%E6%A8%A1%E7%B4%A0%E6%95%B0p%E7%9A%84%E5%90%8C%E6%80%81)" style="display:inline-block;margin: 0;"/></a></li>
+<li><a target="_blank" rel="noopener" href="https://math.now.sh?inline=Gauss's" class="gallery-item"><img src="https://math.now.sh?inline=Gauss's" style="display:inline-block;margin: 0;"/></a> <a target="_blank" rel="noopener" href="https://math.now.sh?inline=Lemma" class="gallery-item"><img src="https://math.now.sh?inline=Lemma" style="display:inline-block;margin: 0;"/></a> : 本原多项式的积是本原的</li>
+<li>每个有理系数的正次数多项式 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=f%28x%29" class="gallery-item"><img src="https://math.now.sh?inline=f%28x%29" style="display:inline-block;margin: 0;"/></a> 可唯一地写成 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=f%28x%29%3Dcf_0(x)" class="gallery-item"><img src="https://math.now.sh?inline=f%28x%29%3Dcf_0(x)" style="display:inline-block;margin: 0;"/></a> ，其中 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=c%5Cin%20%5Cmathbb%7BQ%7D" class="gallery-item"><img src="https://math.now.sh?inline=c%5Cin%20%5Cmathbb%7BQ%7D" style="display:inline-block;margin: 0;"/></a>，<a target="_blank" rel="noopener" href="https://math.now.sh?inline=f_0%28x%29" class="gallery-item"><img src="https://math.now.sh?inline=f_0%28x%29" style="display:inline-block;margin: 0;"/></a> 是本原多项式</li>
+<li>多项式环 $ \mathbf{Z}[x]$ 是唯一分解整环。每个不是 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cpm%201" class="gallery-item"><img src="https://math.now.sh?inline=%5Cpm%201" style="display:inline-block;margin: 0;"/></a> 的非零多项式 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=f%28x%29%5Cin%5Cmathbf%7BZ%7D%5Bx%5D" class="gallery-item"><img src="https://math.now.sh?inline=f%28x%29%5Cin%5Cmathbf%7BZ%7D%5Bx%5D" style="display:inline-block;margin: 0;"/></a> 可以写成积的形式： <a target="_blank" rel="noopener" href="https://math.now.sh?inline=f%28x%29%3D%5Cpm%20p_1%5Ccdots%20p_m%20q_1(x)%5Ccdots%20q_n(x)" class="gallery-item"><img src="https://math.now.sh?inline=f%28x%29%3D%5Cpm%20p_1%5Ccdots%20p_m%20q_1(x)%5Ccdots%20q_n(x)" style="display:inline-block;margin: 0;"/></a> ，$p_i $ 是整素数，<a target="_blank" rel="noopener" href="https://math.now.sh?inline=q_i" class="gallery-item"><img src="https://math.now.sh?inline=q_i" style="display:inline-block;margin: 0;"/></a> 是本原的既约多项式。</li>
 </ul>
 <p>$ \ $</p>
-<h3 id="2-8-爱森斯坦判别法"><a href="#2-8-爱森斯坦判别法" class="headerlink" title="2.8 爱森斯坦判别法"></a>2.8 爱森斯坦判别法</h3><p>设 $f(x)&#x3D;a_nx^n+\cdots+a_0$ 是一个整多项式，并设 $p$ 是一个素整数。若 $f$ 的系数满足：</p>
-<p>(1) $p\nmid a_n$</p>
-<p>(2) $p\mid a_{n-1},\dots,p\mid a_0$</p>
-<p>(3) $p^2 \nmid a_0$</p>
-<p>则 $f$ 在 $\mathbf{Q}[x]$ 中是既约的。</p>
+<h3 id="2-8-爱森斯坦判别法">2.8 爱森斯坦判别法</h3>
+<p>设 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=f%28x%29%3Da_nx%5En%2B%5Ccdots%2Ba_0" class="gallery-item"><img src="https://math.now.sh?inline=f%28x%29%3Da_nx%5En%2B%5Ccdots%2Ba_0" style="display:inline-block;margin: 0;"/></a> 是一个整多项式，并设 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=p" class="gallery-item"><img src="https://math.now.sh?inline=p" style="display:inline-block;margin: 0;"/></a> 是一个素整数。若 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=f" class="gallery-item"><img src="https://math.now.sh?inline=f" style="display:inline-block;margin: 0;"/></a> 的系数满足：</p>
+<p>(1) <a target="_blank" rel="noopener" href="https://math.now.sh?inline=p%5Cnmid%20a_n" class="gallery-item"><img src="https://math.now.sh?inline=p%5Cnmid%20a_n" style="display:inline-block;margin: 0;"/></a></p>
+<p>(2) <a target="_blank" rel="noopener" href="https://math.now.sh?inline=p%5Cmid%20a_%7Bn-1%7D%2C%5Cdots%2Cp%5Cmid%20a_0" class="gallery-item"><img src="https://math.now.sh?inline=p%5Cmid%20a_%7Bn-1%7D%2C%5Cdots%2Cp%5Cmid%20a_0" style="display:inline-block;margin: 0;"/></a></p>
+<p>(3) <a target="_blank" rel="noopener" href="https://math.now.sh?inline=p%5E2%20%5Cnmid%20a_0" class="gallery-item"><img src="https://math.now.sh?inline=p%5E2%20%5Cnmid%20a_0" style="display:inline-block;margin: 0;"/></a></p>
+<p>则 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=f" class="gallery-item"><img src="https://math.now.sh?inline=f" style="display:inline-block;margin: 0;"/></a> 在 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cmathbf%7BQ%7D%5Bx%5D" class="gallery-item"><img src="https://math.now.sh?inline=%5Cmathbf%7BQ%7D%5Bx%5D" style="display:inline-block;margin: 0;"/></a> 中是既约的。</p>
 <p>$ \ $</p>
-<h3 id="2-9-模论：环上的线性代数"><a href="#2-9-模论：环上的线性代数" class="headerlink" title="2.9 模论：环上的线性代数"></a>2.9 模论：环上的线性代数</h3><h4 id="2-9-1-模-Module"><a href="#2-9-1-模-Module" class="headerlink" title="2.9.1 模 Module"></a>2.9.1 模 Module</h4><p>$R$ 是一个环，$R$-模 $V$ 包含一个加法阿贝尔群与一个标量乘法 $R\times V\to V ,\quad r,v\rightsquigarrow rv $ , 满足一下条件：</p>
-<p>$1v&#x3D;v,\quad (rs)v&#x3D;r(sv),\quad (r+s)v&#x3D;rv+sv,\quad r(v+v’)&#x3D;rv+rv’.\qquad\forall r,s \in R,\quad v,v’\in V$</p>
+<h3 id="2-9-模论：环上的线性代数">2.9 模论：环上的线性代数</h3>
+<h4 id="2-9-1-模-Module">2.9.1 模 Module</h4>
+<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=R" class="gallery-item"><img src="https://math.now.sh?inline=R" style="display:inline-block;margin: 0;"/></a> 是一个环，<a target="_blank" rel="noopener" href="https://math.now.sh?inline=R" class="gallery-item"><img src="https://math.now.sh?inline=R" style="display:inline-block;margin: 0;"/></a>-模 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=V" class="gallery-item"><img src="https://math.now.sh?inline=V" style="display:inline-block;margin: 0;"/></a> 包含一个加法阿贝尔群与一个标量乘法 $R\times V\to V ,\quad r,v\rightsquigarrow rv $ , 满足一下条件：</p>
+<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=1v%3Dv%2C%5Cquad%20%28rs%29v%3Dr(sv)%2C%5Cquad%20(r%2Bs)v%3Drv%2Bsv%2C%5Cquad%20r(v%2Bv')%3Drv%2Brv'.%5Cqquad%5Cforall%20r%2Cs%20%5Cin%20R%2C%5Cquad%20v%2Cv'%5Cin%20V" class="gallery-item"><img src="https://math.now.sh?inline=1v%3Dv%2C%5Cquad%20%28rs%29v%3Dr(sv)%2C%5Cquad%20(r%2Bs)v%3Drv%2Bsv%2C%5Cquad%20r(v%2Bv')%3Drv%2Brv'.%5Cqquad%5Cforall%20r%2Cs%20%5Cin%20R%2C%5Cquad%20v%2Cv'%5Cin%20V" style="display:inline-block;margin: 0;"/></a></p>
 <p>$ \ $</p>
-<p>$&#x3D;&gt;$ $\mathbf{Z}$-模 与 阿贝尔群 是等价的概念，因为一个合成法则记为加法的阿贝尔群有唯一的 方法构成 $\mathbf{Z}$ 上的一个模。</p>
+<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=%3D%3E" class="gallery-item"><img src="https://math.now.sh?inline=%3D%3E" style="display:inline-block;margin: 0;"/></a> <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cmathbf%7BZ%7D" class="gallery-item"><img src="https://math.now.sh?inline=%5Cmathbf%7BZ%7D" style="display:inline-block;margin: 0;"/></a>-模 与 阿贝尔群 是等价的概念，因为一个合成法则记为加法的阿贝尔群有唯一的 方法构成 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cmathbf%7BZ%7D" class="gallery-item"><img src="https://math.now.sh?inline=%5Cmathbf%7BZ%7D" style="display:inline-block;margin: 0;"/></a> 上的一个模。</p>
 <p>$ \ $</p>
-<h4 id="2-9-2-子模"><a href="#2-9-2-子模" class="headerlink" title="2.9.2 子模"></a>2.9.2 子模</h4><p>在加法和标量乘法下封闭的子集。</p>
-<p>$&#x3D;&gt;$ $R$-模 $R$ 的子模是 $R$ 的理想</p>
+<h4 id="2-9-2-子模">2.9.2 子模</h4>
+<p>在加法和标量乘法下封闭的子集。</p>
+<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=%3D%3E" class="gallery-item"><img src="https://math.now.sh?inline=%3D%3E" style="display:inline-block;margin: 0;"/></a> <a target="_blank" rel="noopener" href="https://math.now.sh?inline=R" class="gallery-item"><img src="https://math.now.sh?inline=R" style="display:inline-block;margin: 0;"/></a>-模 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=R" class="gallery-item"><img src="https://math.now.sh?inline=R" style="display:inline-block;margin: 0;"/></a> 的子模是 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=R" class="gallery-item"><img src="https://math.now.sh?inline=R" style="display:inline-block;margin: 0;"/></a> 的理想</p>
 <p>$ \ $</p>
-<h4 id="2-9-3-商模"><a href="#2-9-3-商模" class="headerlink" title="2.9.3 商模"></a>2.9.3 商模</h4><h4 id="2-9-3-1-模同态"><a href="#2-9-3-1-模同态" class="headerlink" title="2.9.3.1 模同态"></a>2.9.3.1 模同态</h4><p>$\varphi : V\to W\quad \varphi(v+v’)&#x3D;\varphi(v)+\varphi(v’),\quad \varphi(rv)&#x3D;r\varphi(v)$</p>
+<h4 id="2-9-3-商模">2.9.3 商模</h4>
+<h4 id="2-9-3-1-模同态">2.9.3.1 模同态</h4>
+<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cvarphi%20%3A%20V%5Cto%20W%5Cquad%20%5Cvarphi%28v%2Bv'%29%3D%5Cvarphi(v)%2B%5Cvarphi(v')%2C%5Cquad%20%5Cvarphi(rv)%3Dr%5Cvarphi(v)" class="gallery-item"><img src="https://math.now.sh?inline=%5Cvarphi%20%3A%20V%5Cto%20W%5Cquad%20%5Cvarphi%28v%2Bv'%29%3D%5Cvarphi(v)%2B%5Cvarphi(v')%2C%5Cquad%20%5Cvarphi(rv)%3Dr%5Cvarphi(v)" style="display:inline-block;margin: 0;"/></a></p>
 <p>同态的像是子模。</p>
 <p>$ \ $</p>
-<h4 id="2-9-3-2-典范态射"><a href="#2-9-3-2-典范态射" class="headerlink" title="2.9.3.2 典范态射"></a>2.9.3.2 典范态射</h4><p>令 $W $ 是 $R$-模 $V$ 的子模。</p>
-<p>$\pi : V\to \overline V\quad v\rightsquigarrow\overline v&#x3D;[v+W]$ </p>
-<p>$\pi$ 是一个满同态，$\ker\pi &#x3D;W$</p>
+<h4 id="2-9-3-2-典范态射">2.9.3.2 典范态射</h4>
+<p>令 $W $ 是 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=R" class="gallery-item"><img src="https://math.now.sh?inline=R" style="display:inline-block;margin: 0;"/></a>-模 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=V" class="gallery-item"><img src="https://math.now.sh?inline=V" style="display:inline-block;margin: 0;"/></a> 的子模。</p>
+<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cpi%20%3A%20V%5Cto%20%5Coverline%20V%5Cquad%20v%5Crightsquigarrow%5Coverline%20v%3D%5Bv%2BW%5D" class="gallery-item"><img src="https://math.now.sh?inline=%5Cpi%20%3A%20V%5Cto%20%5Coverline%20V%5Cquad%20v%5Crightsquigarrow%5Coverline%20v%3D%5Bv%2BW%5D" style="display:inline-block;margin: 0;"/></a></p>
+<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cpi" class="gallery-item"><img src="https://math.now.sh?inline=%5Cpi" style="display:inline-block;margin: 0;"/></a> 是一个满同态，<a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cker%5Cpi%20%3DW" class="gallery-item"><img src="https://math.now.sh?inline=%5Cker%5Cpi%20%3DW" style="display:inline-block;margin: 0;"/></a></p>
 <p>$ \ $</p>
-<h4 id="2-9-3-3-第一同构定理"><a href="#2-9-3-3-第一同构定理" class="headerlink" title="2.9.3.3 第一同构定理"></a>2.9.3.3 第一同构定理</h4><p> $f:V\to V’$ 是模满同态，同态核  $K&#x3D;W$.  则 $\overline f:\overline V&#x3D;V&#x2F;W\to V’$ 是一个同构。</p>
+<h4 id="2-9-3-3-第一同构定理">2.9.3.3 第一同构定理</h4>
+<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=f%3AV%5Cto%20V'" class="gallery-item"><img src="https://math.now.sh?inline=f%3AV%5Cto%20V'" style="display:inline-block;margin: 0;"/></a> 是模满同态，同态核  <a target="_blank" rel="noopener" href="https://math.now.sh?inline=K%3DW" class="gallery-item"><img src="https://math.now.sh?inline=K%3DW" style="display:inline-block;margin: 0;"/></a>.  则 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Coverline%20f%3A%5Coverline%20V%3DV%2FW%5Cto%20V'" class="gallery-item"><img src="https://math.now.sh?inline=%5Coverline%20f%3A%5Coverline%20V%3DV%2FW%5Cto%20V'" style="display:inline-block;margin: 0;"/></a> 是一个同构。</p>
 <p>$ \ $</p>
-<h4 id="2-9-3-4-对应定理"><a href="#2-9-3-4-对应定理" class="headerlink" title="2.9.3.4 对应定理"></a>2.9.3.4 对应定理</h4><p>$f:V\to V’$ 是模满同态, 核为 $W$ .  存在一个一一对应：</p>
-<p>${V的包含W的子模}\leftrightarrow {V’ 的子模}$</p>
+<h4 id="2-9-3-4-对应定理">2.9.3.4 对应定理</h4>
+<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=f%3AV%5Cto%20V'" class="gallery-item"><img src="https://math.now.sh?inline=f%3AV%5Cto%20V'" style="display:inline-block;margin: 0;"/></a> 是模满同态, 核为 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=W" class="gallery-item"><img src="https://math.now.sh?inline=W" style="display:inline-block;margin: 0;"/></a> .  存在一个一一对应：</p>
+<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5C%7BV%E7%9A%84%E5%8C%85%E5%90%ABW%E7%9A%84%E5%AD%90%E6%A8%A1%5C%7D%5Cleftrightarrow%20%5C%7BV'%20%E7%9A%84%E5%AD%90%E6%A8%A1%5C%7D" class="gallery-item"><img src="https://math.now.sh?inline=%5C%7BV%E7%9A%84%E5%8C%85%E5%90%ABW%E7%9A%84%E5%AD%90%E6%A8%A1%5C%7D%5Cleftrightarrow%20%5C%7BV'%20%E7%9A%84%E5%AD%90%E6%A8%A1%5C%7D" style="display:inline-block;margin: 0;"/></a></p>
 <p>$ \ $</p>
-<h4 id="2-9-4-自由模"><a href="#2-9-4-自由模" class="headerlink" title="2.9.4 自由模"></a>2.9.4 自由模</h4><p>一个模是自由的当且仅当它有基。</p>
-<p>设 $R$ 是一个非零交换环。</p>
+<h4 id="2-9-4-自由模">2.9.4 自由模</h4>
+<p>一个模是自由的当且仅当它有基。</p>
+<p>设 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=R" class="gallery-item"><img src="https://math.now.sh?inline=R" style="display:inline-block;margin: 0;"/></a> 是一个非零交换环。</p>
 <p>（1）一个自由模的基变换矩阵是一个可逆矩阵</p>
-<p>（2）$R$ 上同一个自由模的两个基具有同样的元素个数</p>
+<p>（2）<a target="_blank" rel="noopener" href="https://math.now.sh?inline=R" class="gallery-item"><img src="https://math.now.sh?inline=R" style="display:inline-block;margin: 0;"/></a> 上同一个自由模的两个基具有同样的元素个数</p>
 <p>$ \ $</p>
-<h4 id="2-9-5-阿贝尔群结构定理"><a href="#2-9-5-阿贝尔群结构定理" class="headerlink" title="2.9.5 阿贝尔群结构定理"></a>2.9.5 阿贝尔群结构定理</h4><p>有限生成阿贝尔群 $V$ 是循环子群 $C_{d_1},\cdots,C_{d_n}$ 和一个自由阿贝尔群 $L$ 的直和：</p>
-<p>$$V&#x3D;C_{d_1}\oplus\cdots C_{d_n}\oplus L,\qquad d_i&gt;1,d_i\mid d_{i+1}$$ </p>
-<p>$ \ $</p>
+<h4 id="2-9-5-阿贝尔群结构定理">2.9.5 阿贝尔群结构定理</h4>
+<p>有限生成阿贝尔群 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=V" class="gallery-item"><img src="https://math.now.sh?inline=V" style="display:inline-block;margin: 0;"/></a> 是循环子群 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=C_%7Bd_1%7D%2C%5Ccdots%2CC_%7Bd_n%7D" class="gallery-item"><img src="https://math.now.sh?inline=C_%7Bd_1%7D%2C%5Ccdots%2CC_%7Bd_n%7D" style="display:inline-block;margin: 0;"/></a> 和一个自由阿贝尔群 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=L" class="gallery-item"><img src="https://math.now.sh?inline=L" style="display:inline-block;margin: 0;"/></a> 的直和：</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=V%3DC_%7Bd_1%7D%5Coplus%5Ccdots%20C_%7Bd_n%7D%5Coplus%20L%2C%5Cqquad%20d_i%3E1%2Cd_i%5Cmid%20d_%7Bi%2B1%7D%0A" class="gallery-item"><img src="https://math.now.sh?from=V%3DC_%7Bd_1%7D%5Coplus%5Ccdots%20C_%7Bd_n%7D%5Coplus%20L%2C%5Cqquad%20d_i%3E1%2Cd_i%5Cmid%20d_%7Bi%2B1%7D%0A" /></a></p><p>$ \ $</p>
 <p>进一步分解后：</p>
-<p>$&#x3D;&gt;$ 每一个有限生成阿贝尔群是素数幂阶循环群的直和</p>
+<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=%3D%3E" class="gallery-item"><img src="https://math.now.sh?inline=%3D%3E" style="display:inline-block;margin: 0;"/></a> 每一个有限生成阿贝尔群是素数幂阶循环群的直和</p>
 <p>$ \ $</p>
-<h2 id="3-域论"><a href="#3-域论" class="headerlink" title="3  域论"></a>3  域论</h2><h3 id="3-1-域-Field"><a href="#3-1-域-Field" class="headerlink" title="3.1 域 Field"></a>3.1 域 Field</h3><h3 id="3-1-1-域的定义"><a href="#3-1-1-域的定义" class="headerlink" title="3.1.1 域的定义"></a>3.1.1 域的定义</h3><p>域 $F$ 具有加法和乘法两个合成法则，关于加法称为阿贝尔群 $F^+$ ，非零元关于乘法称为阿贝尔群 $F^{\times}$，关于加法和乘法满足分配律。</p>
+<h2 id="3-域论">3  域论</h2>
+<h3 id="3-1-域-Field">3.1 域 Field</h3>
+<h3 id="3-1-1-域的定义">3.1.1 域的定义</h3>
+<p>域 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=F" class="gallery-item"><img src="https://math.now.sh?inline=F" style="display:inline-block;margin: 0;"/></a> 具有加法和乘法两个合成法则，关于加法称为阿贝尔群 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=F%5E%2B" class="gallery-item"><img src="https://math.now.sh?inline=F%5E%2B" style="display:inline-block;margin: 0;"/></a> ，非零元关于乘法称为阿贝尔群 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=F%5E%7B%5Ctimes%7D" class="gallery-item"><img src="https://math.now.sh?inline=F%5E%7B%5Ctimes%7D" style="display:inline-block;margin: 0;"/></a>，关于加法和乘法满足分配律。</p>
 <ul>
-<li>含幺交换环 $+$ 每个元素都有逆元 $&#x3D;&gt;$ 域</li>
+<li>含幺交换环 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%2B" class="gallery-item"><img src="https://math.now.sh?inline=%2B" style="display:inline-block;margin: 0;"/></a> 每个元素都有逆元 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%3D%3E" class="gallery-item"><img src="https://math.now.sh?inline=%3D%3E" style="display:inline-block;margin: 0;"/></a> 域</li>
 </ul>
 <p>子域：域的子集，且关于加减乘除封闭</p>
 <p>$ \ $</p>
-<h3 id="3-1-2-代数元和超越元"><a href="#3-1-2-代数元和超越元" class="headerlink" title="3.1.2 代数元和超越元"></a>3.1.2 代数元和超越元</h3><h4 id="3-1-2-1-基本概念"><a href="#3-1-2-1-基本概念" class="headerlink" title="3.1.2.1 基本概念"></a>3.1.2.1 基本概念</h4><p>代数元：是一个系数属于 $F$ 的某个首一多项式的根</p>
-<p>超越元：不是任何一个系数属于 $F$ 的某个首一多项式的根</p>
-<p>代数元 $\alpha$ 在 $F$ 上的既约多项式 $f$ : $F[x]$ 上的首一、次数最低、以 $\alpha$ 为根的多项式</p>
-<p>$&#x3D;&gt;$ 由 $f$ 生成的 $F[x]$ 的主理想是一个极大理想</p>
-<p>$\alpha$ 在 $F$ 上的次数 : 既约多项式 $f$ 的次数</p>
-<p>扩域 $K&#x2F;F$ 的次数 $[K:F]$：$K$ 作为 $F$ 向量空间 $_F K$ 的维数</p>
+<h3 id="3-1-2-代数元和超越元">3.1.2 代数元和超越元</h3>
+<h4 id="3-1-2-1-基本概念">3.1.2.1 基本概念</h4>
+<p>代数元：是一个系数属于 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=F" class="gallery-item"><img src="https://math.now.sh?inline=F" style="display:inline-block;margin: 0;"/></a> 的某个首一多项式的根</p>
+<p>超越元：不是任何一个系数属于 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=F" class="gallery-item"><img src="https://math.now.sh?inline=F" style="display:inline-block;margin: 0;"/></a> 的某个首一多项式的根</p>
+<p>代数元 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Calpha" class="gallery-item"><img src="https://math.now.sh?inline=%5Calpha" style="display:inline-block;margin: 0;"/></a> 在 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=F" class="gallery-item"><img src="https://math.now.sh?inline=F" style="display:inline-block;margin: 0;"/></a> 上的既约多项式 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=f" class="gallery-item"><img src="https://math.now.sh?inline=f" style="display:inline-block;margin: 0;"/></a> : <a target="_blank" rel="noopener" href="https://math.now.sh?inline=F%5Bx%5D" class="gallery-item"><img src="https://math.now.sh?inline=F%5Bx%5D" style="display:inline-block;margin: 0;"/></a> 上的首一、次数最低、以 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Calpha" class="gallery-item"><img src="https://math.now.sh?inline=%5Calpha" style="display:inline-block;margin: 0;"/></a> 为根的多项式</p>
+<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=%3D%3E" class="gallery-item"><img src="https://math.now.sh?inline=%3D%3E" style="display:inline-block;margin: 0;"/></a> 由 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=f" class="gallery-item"><img src="https://math.now.sh?inline=f" style="display:inline-block;margin: 0;"/></a> 生成的 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=F%5Bx%5D" class="gallery-item"><img src="https://math.now.sh?inline=F%5Bx%5D" style="display:inline-block;margin: 0;"/></a> 的主理想是一个极大理想</p>
+<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Calpha" class="gallery-item"><img src="https://math.now.sh?inline=%5Calpha" style="display:inline-block;margin: 0;"/></a> 在 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=F" class="gallery-item"><img src="https://math.now.sh?inline=F" style="display:inline-block;margin: 0;"/></a> 上的次数 : 既约多项式 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=f" class="gallery-item"><img src="https://math.now.sh?inline=f" style="display:inline-block;margin: 0;"/></a> 的次数</p>
+<p>扩域 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=K%2FF" class="gallery-item"><img src="https://math.now.sh?inline=K%2FF" style="display:inline-block;margin: 0;"/></a> 的次数 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5BK%3AF%5D" class="gallery-item"><img src="https://math.now.sh?inline=%5BK%3AF%5D" style="display:inline-block;margin: 0;"/></a>：<a target="_blank" rel="noopener" href="https://math.now.sh?inline=K" class="gallery-item"><img src="https://math.now.sh?inline=K" style="display:inline-block;margin: 0;"/></a> 作为 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=F" class="gallery-item"><img src="https://math.now.sh?inline=F" style="display:inline-block;margin: 0;"/></a> 向量空间 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=_F%20K" class="gallery-item"><img src="https://math.now.sh?inline=_F%20K" style="display:inline-block;margin: 0;"/></a> 的维数</p>
 <p>$ \ $</p>
-<p><strong>次数的乘法性质</strong>：$F\subset K\subset L,\quad [L:F]&#x3D;[L:K]\cdot [K:F]$</p>
+<p><strong>次数的乘法性质</strong>：<a target="_blank" rel="noopener" href="https://math.now.sh?inline=F%5Csubset%20K%5Csubset%20L%2C%5Cquad%20%5BL%3AF%5D%3D%5BL%3AK%5D%5Ccdot%20%5BK%3AF%5D" class="gallery-item"><img src="https://math.now.sh?inline=F%5Csubset%20K%5Csubset%20L%2C%5Cquad%20%5BL%3AF%5D%3D%5BL%3AK%5D%5Ccdot%20%5BK%3AF%5D" style="display:inline-block;margin: 0;"/></a></p>
 <p>$ \ $</p>
-<h4 id="3-1-2-2-相关命题"><a href="#3-1-2-2-相关命题" class="headerlink" title="3.1.2.2 相关命题"></a>3.1.2.2 相关命题</h4><ul>
-<li><p>扩域的一个元素 $\alpha$ 是 $F$ 上的代数元 $\iff$ 扩域的次数 $[F(\alpha):F]$ 有限</p>
-</li>
-<li><p>$K&#x2F;F$ 为 $n$ 次有限扩域，$\alpha \in K$ $&#x3D;&gt;$ $\alpha$ 在 $F$ 上是代数的，且其在 $F$ 上的次数为 $n$</p>
-</li>
-<li><p>令 $F\subset F’\subset L$ 是域. 如果 $L$ 中元素 $\alpha$ 是 $F$ 上的代数元，则它也是 $F’$ 上的代数元。如果 $\alpha$ 在 $F$ 上的次数为 $d$ , 则它在 $F’$ 上的次数最多为 $d$。</p>
-</li>
-<li><p>由有限多个代数元生成的扩域是有限扩域，一个有限扩域由有限多个代数元生成</p>
-</li>
-<li><p>如果 $K$ 是 $F$ 的扩域，则 $K$ 中所有 $F$ 上的代数元的集合构成 $K$ 的子域 （代数元加减乘除还是代数元）</p>
-</li>
-<li><p>设 $K$ 是 $F$ 上的素数 $p$ 次扩域， $\alpha \in K,\alpha\notin F$, 则 $\alpha$ 在 $F$ 上的次数为 $p$ 且 $K&#x3D;F(\alpha)$ </p>
-<p>$ \ $</p>
-</li>
-</ul>
-<p>令 $\alpha$ 是扩域 $K&#x2F;F$ 上的元素，$\alpha$ 是 $F$ 上的代数元，令 $f$ 是 $\alpha$ 在 $F$ 上的既约多项式。</p>
+<h4 id="3-1-2-2-相关命题">3.1.2.2 相关命题</h4>
 <ul>
-<li><p>$F[\alpha]\cong F(\alpha)$ , 更一般：$F[\alpha_1,\cdots, \alpha_n]\cong F(\alpha_1,\cdots, \alpha_n)\qquad pf:Bezout $</p>
+<li>
+<p>扩域的一个元素 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Calpha" class="gallery-item"><img src="https://math.now.sh?inline=%5Calpha" style="display:inline-block;margin: 0;"/></a> 是 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=F" class="gallery-item"><img src="https://math.now.sh?inline=F" style="display:inline-block;margin: 0;"/></a> 上的代数元 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Ciff" class="gallery-item"><img src="https://math.now.sh?inline=%5Ciff" style="display:inline-block;margin: 0;"/></a> 扩域的次数 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5BF%28%5Calpha%29%3AF%5D" class="gallery-item"><img src="https://math.now.sh?inline=%5BF%28%5Calpha%29%3AF%5D" style="display:inline-block;margin: 0;"/></a> 有限</p>
 </li>
-<li><p>$[F(\alpha):F]&#x3D;deg$ $f$ </p>
+<li>
+<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=K%2FF" class="gallery-item"><img src="https://math.now.sh?inline=K%2FF" style="display:inline-block;margin: 0;"/></a> 为 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=n" class="gallery-item"><img src="https://math.now.sh?inline=n" style="display:inline-block;margin: 0;"/></a> 次有限扩域，<a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Calpha%20%5Cin%20K" class="gallery-item"><img src="https://math.now.sh?inline=%5Calpha%20%5Cin%20K" style="display:inline-block;margin: 0;"/></a> <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%3D%3E" class="gallery-item"><img src="https://math.now.sh?inline=%3D%3E" style="display:inline-block;margin: 0;"/></a> <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Calpha" class="gallery-item"><img src="https://math.now.sh?inline=%5Calpha" style="display:inline-block;margin: 0;"/></a> 在 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=F" class="gallery-item"><img src="https://math.now.sh?inline=F" style="display:inline-block;margin: 0;"/></a> 上是代数的，且其在 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=F" class="gallery-item"><img src="https://math.now.sh?inline=F" style="display:inline-block;margin: 0;"/></a> 上的次数为 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=n" class="gallery-item"><img src="https://math.now.sh?inline=n" style="display:inline-block;margin: 0;"/></a></p>
+</li>
+<li>
+<p>令 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=F%5Csubset%20F'%5Csubset%20L" class="gallery-item"><img src="https://math.now.sh?inline=F%5Csubset%20F'%5Csubset%20L" style="display:inline-block;margin: 0;"/></a> 是域. 如果 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=L" class="gallery-item"><img src="https://math.now.sh?inline=L" style="display:inline-block;margin: 0;"/></a> 中元素 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Calpha" class="gallery-item"><img src="https://math.now.sh?inline=%5Calpha" style="display:inline-block;margin: 0;"/></a> 是 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=F" class="gallery-item"><img src="https://math.now.sh?inline=F" style="display:inline-block;margin: 0;"/></a> 上的代数元，则它也是 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=F'" class="gallery-item"><img src="https://math.now.sh?inline=F'" style="display:inline-block;margin: 0;"/></a> 上的代数元。如果 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Calpha" class="gallery-item"><img src="https://math.now.sh?inline=%5Calpha" style="display:inline-block;margin: 0;"/></a> 在 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=F" class="gallery-item"><img src="https://math.now.sh?inline=F" style="display:inline-block;margin: 0;"/></a> 上的次数为 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=d" class="gallery-item"><img src="https://math.now.sh?inline=d" style="display:inline-block;margin: 0;"/></a> , 则它在 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=F'" class="gallery-item"><img src="https://math.now.sh?inline=F'" style="display:inline-block;margin: 0;"/></a> 上的次数最多为 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=d" class="gallery-item"><img src="https://math.now.sh?inline=d" style="display:inline-block;margin: 0;"/></a>。</p>
+</li>
+<li>
+<p>由有限多个代数元生成的扩域是有限扩域，一个有限扩域由有限多个代数元生成</p>
+</li>
+<li>
+<p>如果 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=K" class="gallery-item"><img src="https://math.now.sh?inline=K" style="display:inline-block;margin: 0;"/></a> 是 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=F" class="gallery-item"><img src="https://math.now.sh?inline=F" style="display:inline-block;margin: 0;"/></a> 的扩域，则 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=K" class="gallery-item"><img src="https://math.now.sh?inline=K" style="display:inline-block;margin: 0;"/></a> 中所有 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=F" class="gallery-item"><img src="https://math.now.sh?inline=F" style="display:inline-block;margin: 0;"/></a> 上的代数元的集合构成 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=K" class="gallery-item"><img src="https://math.now.sh?inline=K" style="display:inline-block;margin: 0;"/></a> 的子域 （代数元加减乘除还是代数元）</p>
+</li>
+<li>
+<p>设 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=K" class="gallery-item"><img src="https://math.now.sh?inline=K" style="display:inline-block;margin: 0;"/></a> 是 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=F" class="gallery-item"><img src="https://math.now.sh?inline=F" style="display:inline-block;margin: 0;"/></a> 上的素数 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=p" class="gallery-item"><img src="https://math.now.sh?inline=p" style="display:inline-block;margin: 0;"/></a> 次扩域， <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Calpha%20%5Cin%20K%2C%5Calpha%5Cnotin%20F" class="gallery-item"><img src="https://math.now.sh?inline=%5Calpha%20%5Cin%20K%2C%5Calpha%5Cnotin%20F" style="display:inline-block;margin: 0;"/></a>, 则 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Calpha" class="gallery-item"><img src="https://math.now.sh?inline=%5Calpha" style="display:inline-block;margin: 0;"/></a> 在 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=F" class="gallery-item"><img src="https://math.now.sh?inline=F" style="display:inline-block;margin: 0;"/></a> 上的次数为 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=p" class="gallery-item"><img src="https://math.now.sh?inline=p" style="display:inline-block;margin: 0;"/></a> 且 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=K%3DF%28%5Calpha%29" class="gallery-item"><img src="https://math.now.sh?inline=K%3DF%28%5Calpha%29" style="display:inline-block;margin: 0;"/></a></p>
 <p>$ \ $</p>
 </li>
 </ul>
-<h3 id="3-1-3-尺规作图"><a href="#3-1-3-尺规作图" class="headerlink" title="3.1.3 尺规作图"></a>3.1.3 尺规作图</h3><p>令 $a$ 是一个可构造的实数，则 $a$ 是一个代数数，且它在 $\mathbf{Q}$ 上的次数是 $2$ 的幂。 （“平方根塔”）</p>
-<p>$ \ $</p>
-<h3 id="3-1-4-扩域中的带余除法"><a href="#3-1-4-扩域中的带余除法" class="headerlink" title="3.1.4 扩域中的带余除法"></a>3.1.4 扩域中的带余除法</h3><p>设 $f$ 和 $g$ 是系数属于 $F$ 的多项式， $f\neq 0$，设 $K$ 是 $F$ 的扩域。</p>
+<p>令 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Calpha" class="gallery-item"><img src="https://math.now.sh?inline=%5Calpha" style="display:inline-block;margin: 0;"/></a> 是扩域 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=K%2FF" class="gallery-item"><img src="https://math.now.sh?inline=K%2FF" style="display:inline-block;margin: 0;"/></a> 上的元素，<a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Calpha" class="gallery-item"><img src="https://math.now.sh?inline=%5Calpha" style="display:inline-block;margin: 0;"/></a> 是 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=F" class="gallery-item"><img src="https://math.now.sh?inline=F" style="display:inline-block;margin: 0;"/></a> 上的代数元，令 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=f" class="gallery-item"><img src="https://math.now.sh?inline=f" style="display:inline-block;margin: 0;"/></a> 是 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Calpha" class="gallery-item"><img src="https://math.now.sh?inline=%5Calpha" style="display:inline-block;margin: 0;"/></a> 在 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=F" class="gallery-item"><img src="https://math.now.sh?inline=F" style="display:inline-block;margin: 0;"/></a> 上的既约多项式。</p>
 <ul>
-<li>在 $F[x]$ 和 $K[x]$ 中，由 $f$ 对 $g$ 作的带余除法得到相同的答案</li>
-<li>在 $K[x]$ 中 $f$ 整除 $g$ $\iff$ 在 $F[x]$ 中 $f$ 整除 $g$  </li>
-<li>如果 $f$ 和 $g$ 在 $K$ 上有公共根，则它们在 $F[x]$ 中不是互素的。如果 $f$ 和 $g$ 在 $K[x]$ 中不是互素的，则存在一个扩域 $L$ ，它们在其中有公共根</li>
-<li>如果 $f$ 在 $F[x]$ 中是既约的且 $f$ 和 $g$ 在 $K$ 中有公共根，则 $f$ 在$F[x]$ 中整除 $g$</li>
+<li>
+<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=F%5B%5Calpha%5D%5Ccong%20F%28%5Calpha%29" class="gallery-item"><img src="https://math.now.sh?inline=F%5B%5Calpha%5D%5Ccong%20F%28%5Calpha%29" style="display:inline-block;margin: 0;"/></a> , 更一般：$F[\alpha_1,\cdots, \alpha_n]\cong F(\alpha_1,\cdots, \alpha_n)\qquad pf:Bezout $</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5BF%28%5Calpha%29%3AF%5D%3Ddeg" class="gallery-item"><img src="https://math.now.sh?inline=%5BF%28%5Calpha%29%3AF%5D%3Ddeg" style="display:inline-block;margin: 0;"/></a> <a target="_blank" rel="noopener" href="https://math.now.sh?inline=f" class="gallery-item"><img src="https://math.now.sh?inline=f" style="display:inline-block;margin: 0;"/></a></p>
+<p>$ \ $</p>
+</li>
+</ul>
+<h3 id="3-1-3-尺规作图">3.1.3 尺规作图</h3>
+<p>令 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=a" class="gallery-item"><img src="https://math.now.sh?inline=a" style="display:inline-block;margin: 0;"/></a> 是一个可构造的实数，则 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=a" class="gallery-item"><img src="https://math.now.sh?inline=a" style="display:inline-block;margin: 0;"/></a> 是一个代数数，且它在 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cmathbf%7BQ%7D" class="gallery-item"><img src="https://math.now.sh?inline=%5Cmathbf%7BQ%7D" style="display:inline-block;margin: 0;"/></a> 上的次数是 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=2" class="gallery-item"><img src="https://math.now.sh?inline=2" style="display:inline-block;margin: 0;"/></a> 的幂。 （“平方根塔”）</p>
+<p>$ \ $</p>
+<h3 id="3-1-4-扩域中的带余除法">3.1.4 扩域中的带余除法</h3>
+<p>设 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=f" class="gallery-item"><img src="https://math.now.sh?inline=f" style="display:inline-block;margin: 0;"/></a> 和 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=g" class="gallery-item"><img src="https://math.now.sh?inline=g" style="display:inline-block;margin: 0;"/></a> 是系数属于 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=F" class="gallery-item"><img src="https://math.now.sh?inline=F" style="display:inline-block;margin: 0;"/></a> 的多项式， <a target="_blank" rel="noopener" href="https://math.now.sh?inline=f%5Cneq%200" class="gallery-item"><img src="https://math.now.sh?inline=f%5Cneq%200" style="display:inline-block;margin: 0;"/></a>，设 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=K" class="gallery-item"><img src="https://math.now.sh?inline=K" style="display:inline-block;margin: 0;"/></a> 是 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=F" class="gallery-item"><img src="https://math.now.sh?inline=F" style="display:inline-block;margin: 0;"/></a> 的扩域。</p>
+<ul>
+<li>在 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=F%5Bx%5D" class="gallery-item"><img src="https://math.now.sh?inline=F%5Bx%5D" style="display:inline-block;margin: 0;"/></a> 和 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=K%5Bx%5D" class="gallery-item"><img src="https://math.now.sh?inline=K%5Bx%5D" style="display:inline-block;margin: 0;"/></a> 中，由 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=f" class="gallery-item"><img src="https://math.now.sh?inline=f" style="display:inline-block;margin: 0;"/></a> 对 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=g" class="gallery-item"><img src="https://math.now.sh?inline=g" style="display:inline-block;margin: 0;"/></a> 作的带余除法得到相同的答案</li>
+<li>在 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=K%5Bx%5D" class="gallery-item"><img src="https://math.now.sh?inline=K%5Bx%5D" style="display:inline-block;margin: 0;"/></a> 中 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=f" class="gallery-item"><img src="https://math.now.sh?inline=f" style="display:inline-block;margin: 0;"/></a> 整除 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=g" class="gallery-item"><img src="https://math.now.sh?inline=g" style="display:inline-block;margin: 0;"/></a> <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Ciff" class="gallery-item"><img src="https://math.now.sh?inline=%5Ciff" style="display:inline-block;margin: 0;"/></a> 在 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=F%5Bx%5D" class="gallery-item"><img src="https://math.now.sh?inline=F%5Bx%5D" style="display:inline-block;margin: 0;"/></a> 中 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=f" class="gallery-item"><img src="https://math.now.sh?inline=f" style="display:inline-block;margin: 0;"/></a> 整除 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=g" class="gallery-item"><img src="https://math.now.sh?inline=g" style="display:inline-block;margin: 0;"/></a></li>
+<li>如果 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=f" class="gallery-item"><img src="https://math.now.sh?inline=f" style="display:inline-block;margin: 0;"/></a> 和 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=g" class="gallery-item"><img src="https://math.now.sh?inline=g" style="display:inline-block;margin: 0;"/></a> 在 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=K" class="gallery-item"><img src="https://math.now.sh?inline=K" style="display:inline-block;margin: 0;"/></a> 上有公共根，则它们在 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=F%5Bx%5D" class="gallery-item"><img src="https://math.now.sh?inline=F%5Bx%5D" style="display:inline-block;margin: 0;"/></a> 中不是互素的。如果 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=f" class="gallery-item"><img src="https://math.now.sh?inline=f" style="display:inline-block;margin: 0;"/></a> 和 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=g" class="gallery-item"><img src="https://math.now.sh?inline=g" style="display:inline-block;margin: 0;"/></a> 在 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=K%5Bx%5D" class="gallery-item"><img src="https://math.now.sh?inline=K%5Bx%5D" style="display:inline-block;margin: 0;"/></a> 中不是互素的，则存在一个扩域 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=L" class="gallery-item"><img src="https://math.now.sh?inline=L" style="display:inline-block;margin: 0;"/></a> ，它们在其中有公共根</li>
+<li>如果 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=f" class="gallery-item"><img src="https://math.now.sh?inline=f" style="display:inline-block;margin: 0;"/></a> 在 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=F%5Bx%5D" class="gallery-item"><img src="https://math.now.sh?inline=F%5Bx%5D" style="display:inline-block;margin: 0;"/></a> 中是既约的且 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=f" class="gallery-item"><img src="https://math.now.sh?inline=f" style="display:inline-block;margin: 0;"/></a> 和 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=g" class="gallery-item"><img src="https://math.now.sh?inline=g" style="display:inline-block;margin: 0;"/></a> 在 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=K" class="gallery-item"><img src="https://math.now.sh?inline=K" style="display:inline-block;margin: 0;"/></a> 中有公共根，则 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=f" class="gallery-item"><img src="https://math.now.sh?inline=f" style="display:inline-block;margin: 0;"/></a> 在<a target="_blank" rel="noopener" href="https://math.now.sh?inline=F%5Bx%5D" class="gallery-item"><img src="https://math.now.sh?inline=F%5Bx%5D" style="display:inline-block;margin: 0;"/></a> 中整除 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=g" class="gallery-item"><img src="https://math.now.sh?inline=g" style="display:inline-block;margin: 0;"/></a></li>
 </ul>
 <p>$ \ $</p>
-<h3 id="3-1-5-重根"><a href="#3-1-5-重根" class="headerlink" title="3.1.5 重根"></a>3.1.5 重根</h3><p>令 $f(x)$ 是一个系数属于 $F$ 的多项式.</p>
-<p>存在 $K&#x2F;F$ ，在其上 $f(x)$ 有重根$\iff$ $f$ 和 $f’$ 不互素</p>
+<h3 id="3-1-5-重根">3.1.5 重根</h3>
+<p>令 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=f%28x%29" class="gallery-item"><img src="https://math.now.sh?inline=f%28x%29" style="display:inline-block;margin: 0;"/></a> 是一个系数属于 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=F" class="gallery-item"><img src="https://math.now.sh?inline=F" style="display:inline-block;margin: 0;"/></a> 的多项式.</p>
+<p>存在 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=K%2FF" class="gallery-item"><img src="https://math.now.sh?inline=K%2FF" style="display:inline-block;margin: 0;"/></a> ，在其上 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=f%28x%29" class="gallery-item"><img src="https://math.now.sh?inline=f%28x%29" style="display:inline-block;margin: 0;"/></a> 有重根<a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Ciff" class="gallery-item"><img src="https://math.now.sh?inline=%5Ciff" style="display:inline-block;margin: 0;"/></a> <a target="_blank" rel="noopener" href="https://math.now.sh?inline=f" class="gallery-item"><img src="https://math.now.sh?inline=f" style="display:inline-block;margin: 0;"/></a> 和 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=f'" class="gallery-item"><img src="https://math.now.sh?inline=f'" style="display:inline-block;margin: 0;"/></a> 不互素</p>
 <p>$ \ $</p>
-<p>$&#x3D;&gt;$ 若 $f(x)$ 是既约的，且 $char$$F&#x3D;0$，则 $f$ 在 $F$ 的任意扩域中没有重根</p>
+<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=%3D%3E" class="gallery-item"><img src="https://math.now.sh?inline=%3D%3E" style="display:inline-block;margin: 0;"/></a> 若 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=f%28x%29" class="gallery-item"><img src="https://math.now.sh?inline=f%28x%29" style="display:inline-block;margin: 0;"/></a> 是既约的，且 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=char" class="gallery-item"><img src="https://math.now.sh?inline=char" style="display:inline-block;margin: 0;"/></a><a target="_blank" rel="noopener" href="https://math.now.sh?inline=F%3D0" class="gallery-item"><img src="https://math.now.sh?inline=F%3D0" style="display:inline-block;margin: 0;"/></a>，则 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=f" class="gallery-item"><img src="https://math.now.sh?inline=f" style="display:inline-block;margin: 0;"/></a> 在 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=F" class="gallery-item"><img src="https://math.now.sh?inline=F" style="display:inline-block;margin: 0;"/></a> 的任意扩域中没有重根</p>
 <p>$ \ $</p>
-<h3 id="3-1-6-有限域"><a href="#3-1-6-有限域" class="headerlink" title="3.1.6 有限域"></a>3.1.6 有限域</h3><p> $K$ 是有限域 ，则 $char$ $K$ $&#x3D; p$（素数），$|K|&#x3D;p^r\triangleq q$</p>
-<h4 id="相关命题"><a href="#相关命题" class="headerlink" title="相关命题"></a>相关命题</h4><ul>
+<h3 id="3-1-6-有限域">3.1.6 有限域</h3>
+<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=K" class="gallery-item"><img src="https://math.now.sh?inline=K" style="display:inline-block;margin: 0;"/></a> 是有限域 ，则 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=char" class="gallery-item"><img src="https://math.now.sh?inline=char" style="display:inline-block;margin: 0;"/></a> <a target="_blank" rel="noopener" href="https://math.now.sh?inline=K" class="gallery-item"><img src="https://math.now.sh?inline=K" style="display:inline-block;margin: 0;"/></a> <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%3D%20p" class="gallery-item"><img src="https://math.now.sh?inline=%3D%20p" style="display:inline-block;margin: 0;"/></a>（素数），<a target="_blank" rel="noopener" href="https://math.now.sh?inline=%7CK%7C%3Dp%5Er%5Ctriangleq%20q" class="gallery-item"><img src="https://math.now.sh?inline=%7CK%7C%3Dp%5Er%5Ctriangleq%20q" style="display:inline-block;margin: 0;"/></a></p>
+<h4 id="相关命题">相关命题</h4>
+<ul>
 <li>$ K $ 的元素是多项式 $x^q-x $ 的根</li>
-<li>在素域 $F&#x3D;\mathbf{F_p}$ 上的多项式 $x^q-x$ 的既约因子是次数整除 $r$ 的 $F[x]$ 上的既约多项式</li>
-<li>所有的 $q$ 阶域是同构的</li>
-<li>$ K$ 的非零元素的乘法群 $K^{\times}$ 是一个 $q-1$ 阶循环群</li>
-<li>$K$ 内含有 $p^k$ 阶子域当且仅当 $k$ 整除 $r$</li>
-<li>多项式 $x^q-x$ 在 $F$ 的任何扩域上没有重根 （导数等于 $-1$ ，与 $x^q-x$ 无公共根）</li>
-<li>在多项式环 $F[x,y]$ 中，$(x+y)^q&#x3D;x^q+y^q$</li>
+<li>在素域 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=F%3D%5Cmathbf%7BF_p%7D" class="gallery-item"><img src="https://math.now.sh?inline=F%3D%5Cmathbf%7BF_p%7D" style="display:inline-block;margin: 0;"/></a> 上的多项式 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=x%5Eq-x" class="gallery-item"><img src="https://math.now.sh?inline=x%5Eq-x" style="display:inline-block;margin: 0;"/></a> 的既约因子是次数整除 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=r" class="gallery-item"><img src="https://math.now.sh?inline=r" style="display:inline-block;margin: 0;"/></a> 的 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=F%5Bx%5D" class="gallery-item"><img src="https://math.now.sh?inline=F%5Bx%5D" style="display:inline-block;margin: 0;"/></a> 上的既约多项式</li>
+<li>所有的 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=q" class="gallery-item"><img src="https://math.now.sh?inline=q" style="display:inline-block;margin: 0;"/></a> 阶域是同构的</li>
+<li>$ K$ 的非零元素的乘法群 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=K%5E%7B%5Ctimes%7D" class="gallery-item"><img src="https://math.now.sh?inline=K%5E%7B%5Ctimes%7D" style="display:inline-block;margin: 0;"/></a> 是一个 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=q-1" class="gallery-item"><img src="https://math.now.sh?inline=q-1" style="display:inline-block;margin: 0;"/></a> 阶循环群</li>
+<li><a target="_blank" rel="noopener" href="https://math.now.sh?inline=K" class="gallery-item"><img src="https://math.now.sh?inline=K" style="display:inline-block;margin: 0;"/></a> 内含有 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=p%5Ek" class="gallery-item"><img src="https://math.now.sh?inline=p%5Ek" style="display:inline-block;margin: 0;"/></a> 阶子域当且仅当 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=k" class="gallery-item"><img src="https://math.now.sh?inline=k" style="display:inline-block;margin: 0;"/></a> 整除 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=r" class="gallery-item"><img src="https://math.now.sh?inline=r" style="display:inline-block;margin: 0;"/></a></li>
+<li>多项式 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=x%5Eq-x" class="gallery-item"><img src="https://math.now.sh?inline=x%5Eq-x" style="display:inline-block;margin: 0;"/></a> 在 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=F" class="gallery-item"><img src="https://math.now.sh?inline=F" style="display:inline-block;margin: 0;"/></a> 的任何扩域上没有重根 （导数等于 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=-1" class="gallery-item"><img src="https://math.now.sh?inline=-1" style="display:inline-block;margin: 0;"/></a> ，与 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=x%5Eq-x" class="gallery-item"><img src="https://math.now.sh?inline=x%5Eq-x" style="display:inline-block;margin: 0;"/></a> 无公共根）</li>
+<li>在多项式环 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=F%5Bx%2Cy%5D" class="gallery-item"><img src="https://math.now.sh?inline=F%5Bx%2Cy%5D" style="display:inline-block;margin: 0;"/></a> 中，<a target="_blank" rel="noopener" href="https://math.now.sh?inline=%28x%2By%29%5Eq%3Dx%5Eq%2By%5Eq" class="gallery-item"><img src="https://math.now.sh?inline=%28x%2By%29%5Eq%3Dx%5Eq%2By%5Eq" style="display:inline-block;margin: 0;"/></a></li>
 </ul>
 <p>$ \ $</p>
-<h2 id="4-Galois​-理论-（部分）"><a href="#4-Galois​-理论-（部分）" class="headerlink" title="4  Galois​ 理论 （部分）"></a>4  Galois​ 理论 （部分）</h2><h3 id="4-1-基本概念"><a href="#4-1-基本概念" class="headerlink" title="4.1 基本概念"></a>4.1 基本概念</h3><ul>
-<li>分裂域 (splitting field) ： $F$ 上 $f$ 的分裂域是扩域 $K&#x2F;F$ ，使得 $f$ 在 $K$ 里完全分裂 $f&#x3D;(x-\alpha_1)\cdots (x-\alpha_n),\quad \alpha_i\in K$, 且 $K&#x3D;F(\alpha_1,\cdots,\alpha_n)$</li>
-<li>$F$$-$同构：令 $K$ 与 $K’$ 是 $F$ 的域扩张，$\sigma : K\to K’$，为限制在子域 $F$ 上为恒等映射的同构</li>
-<li>$Galois$ 群：有限扩张 $K$ 的 $F-$自同构构成一个群，称为 $K$ 在 $F$ 上的 $Galois$ 群 $Gal(K&#x2F;F)$</li>
-<li>$Galois$扩张：$|Gal(K&#x2F;F)|&#x3D;[K:F]$ 的扩张</li>
-<li>固定域：令 $H$ 是域 $K$ 的自同构群，$H$ 的固定域 $K^H$ 是由 $K$ 的每个群元素固定不动的元素集合：$K^H&#x3D;{\alpha \in K|\sigma(\alpha)&#x3D;\alpha,\sigma\in H }$</li>
+<h2 id="4-Galois​-理论-（部分）">4  Galois​ 理论 （部分）</h2>
+<h3 id="4-1-基本概念">4.1 基本概念</h3>
+<ul>
+<li>分裂域 (splitting field) ： <a target="_blank" rel="noopener" href="https://math.now.sh?inline=F" class="gallery-item"><img src="https://math.now.sh?inline=F" style="display:inline-block;margin: 0;"/></a> 上 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=f" class="gallery-item"><img src="https://math.now.sh?inline=f" style="display:inline-block;margin: 0;"/></a> 的分裂域是扩域 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=K%2FF" class="gallery-item"><img src="https://math.now.sh?inline=K%2FF" style="display:inline-block;margin: 0;"/></a> ，使得 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=f" class="gallery-item"><img src="https://math.now.sh?inline=f" style="display:inline-block;margin: 0;"/></a> 在 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=K" class="gallery-item"><img src="https://math.now.sh?inline=K" style="display:inline-block;margin: 0;"/></a> 里完全分裂 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=f%3D%28x-%5Calpha_1%29%5Ccdots%20(x-%5Calpha_n)%2C%5Cquad%20%5Calpha_i%5Cin%20K" class="gallery-item"><img src="https://math.now.sh?inline=f%3D%28x-%5Calpha_1%29%5Ccdots%20(x-%5Calpha_n)%2C%5Cquad%20%5Calpha_i%5Cin%20K" style="display:inline-block;margin: 0;"/></a>, 且 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=K%3DF%28%5Calpha_1%2C%5Ccdots%2C%5Calpha_n%29" class="gallery-item"><img src="https://math.now.sh?inline=K%3DF%28%5Calpha_1%2C%5Ccdots%2C%5Calpha_n%29" style="display:inline-block;margin: 0;"/></a></li>
+<li><a target="_blank" rel="noopener" href="https://math.now.sh?inline=F" class="gallery-item"><img src="https://math.now.sh?inline=F" style="display:inline-block;margin: 0;"/></a><a target="_blank" rel="noopener" href="https://math.now.sh?inline=-" class="gallery-item"><img src="https://math.now.sh?inline=-" style="display:inline-block;margin: 0;"/></a>同构：令 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=K" class="gallery-item"><img src="https://math.now.sh?inline=K" style="display:inline-block;margin: 0;"/></a> 与 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=K'" class="gallery-item"><img src="https://math.now.sh?inline=K'" style="display:inline-block;margin: 0;"/></a> 是 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=F" class="gallery-item"><img src="https://math.now.sh?inline=F" style="display:inline-block;margin: 0;"/></a> 的域扩张，<a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Csigma%20%3A%20K%5Cto%20K'" class="gallery-item"><img src="https://math.now.sh?inline=%5Csigma%20%3A%20K%5Cto%20K'" style="display:inline-block;margin: 0;"/></a>，为限制在子域 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=F" class="gallery-item"><img src="https://math.now.sh?inline=F" style="display:inline-block;margin: 0;"/></a> 上为恒等映射的同构</li>
+<li><a target="_blank" rel="noopener" href="https://math.now.sh?inline=Galois" class="gallery-item"><img src="https://math.now.sh?inline=Galois" style="display:inline-block;margin: 0;"/></a> 群：有限扩张 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=K" class="gallery-item"><img src="https://math.now.sh?inline=K" style="display:inline-block;margin: 0;"/></a> 的 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=F-" class="gallery-item"><img src="https://math.now.sh?inline=F-" style="display:inline-block;margin: 0;"/></a>自同构构成一个群，称为 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=K" class="gallery-item"><img src="https://math.now.sh?inline=K" style="display:inline-block;margin: 0;"/></a> 在 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=F" class="gallery-item"><img src="https://math.now.sh?inline=F" style="display:inline-block;margin: 0;"/></a> 上的 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=Galois" class="gallery-item"><img src="https://math.now.sh?inline=Galois" style="display:inline-block;margin: 0;"/></a> 群 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=Gal%28K%2FF%29" class="gallery-item"><img src="https://math.now.sh?inline=Gal%28K%2FF%29" style="display:inline-block;margin: 0;"/></a></li>
+<li><a target="_blank" rel="noopener" href="https://math.now.sh?inline=Galois" class="gallery-item"><img src="https://math.now.sh?inline=Galois" style="display:inline-block;margin: 0;"/></a>扩张：<a target="_blank" rel="noopener" href="https://math.now.sh?inline=%7CGal%28K%2FF%29%7C%3D%5BK%3AF%5D" class="gallery-item"><img src="https://math.now.sh?inline=%7CGal%28K%2FF%29%7C%3D%5BK%3AF%5D" style="display:inline-block;margin: 0;"/></a> 的扩张</li>
+<li>固定域：令 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=H" class="gallery-item"><img src="https://math.now.sh?inline=H" style="display:inline-block;margin: 0;"/></a> 是域 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=K" class="gallery-item"><img src="https://math.now.sh?inline=K" style="display:inline-block;margin: 0;"/></a> 的自同构群，<a target="_blank" rel="noopener" href="https://math.now.sh?inline=H" class="gallery-item"><img src="https://math.now.sh?inline=H" style="display:inline-block;margin: 0;"/></a> 的固定域 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=K%5EH" class="gallery-item"><img src="https://math.now.sh?inline=K%5EH" style="display:inline-block;margin: 0;"/></a> 是由 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=K" class="gallery-item"><img src="https://math.now.sh?inline=K" style="display:inline-block;margin: 0;"/></a> 的每个群元素固定不动的元素集合：<a target="_blank" rel="noopener" href="https://math.now.sh?inline=K%5EH%3D%5C%7B%5Calpha%20%5Cin%20K%7C%5Csigma%28%5Calpha%29%3D%5Calpha%2C%5Csigma%5Cin%20H%20%5C%7D" class="gallery-item"><img src="https://math.now.sh?inline=K%5EH%3D%5C%7B%5Calpha%20%5Cin%20K%7C%5Csigma%28%5Calpha%29%3D%5Calpha%2C%5Csigma%5Cin%20H%20%5C%7D" style="display:inline-block;margin: 0;"/></a></li>
 </ul>
-<h3 id="4-2-相关定理"><a href="#4-2-相关定理" class="headerlink" title="4.2 相关定理"></a>4.2 相关定理</h3><h4 id="4-2-1-Galois​-扩张的特征性质"><a href="#4-2-1-Galois​-扩张的特征性质" class="headerlink" title="4.2.1 Galois​ 扩张的特征性质"></a>4.2.1 Galois​ 扩张的特征性质</h4><p>令 $K&#x2F;F$ 是有限扩张，设 $G$ 为它的 $Galois$ 群</p>
-<p>$K&#x2F;F$  is  $Galois$</p>
-<p>$\iff$ $|G|&#x3D;[K:F]$</p>
-<p>$\iff$ 固定域 $K^G$ 等于 $F$</p>
-<p>$\iff$ $K$ 是 $F$ 的分裂域</p>
-<h4 id="4-2-2-主要定理-The-Main-Theorem"><a href="#4-2-2-主要定理-The-Main-Theorem" class="headerlink" title="4.2.2 主要定理 The Main Theorem"></a>4.2.2 主要定理 The Main Theorem</h4><p>令 $K$ 是域 $F$ 的 $Galois$ 扩张，设 $G$ 为它的 $Galois$ 群，则在 $G$ 的子群与中间域之间存在一一对应，这个对应把子群 $H$ 与它的固定域、中间域 $L$ 与 $K$ 在 $L$ 上的 $Galois$ 群结合起来.</p>
-<p>$\Phi:H\rightsquigarrow K^H$  和 $ \Psi:L\rightsquigarrow G(K&#x2F;L)$ 是互逆的。</p>
-<p>即： $\Phi \circ \Psi (L)&#x3D;L$, $\Psi\circ\Phi (H)&#x3D;H$</p>
-<h4 id="4-2-3-应用"><a href="#4-2-3-应用" class="headerlink" title="4.2.3 应用"></a>4.2.3 应用</h4><p> $K&#x2F;F&#x3D;F(\alpha)&#x2F;F$ 上的最小多项式为:</p>
-<p>$f(x)&#x3D;\displaystyle\prod\limits_{\sigma\in Gal(K&#x2F;F)} (x-\sigma(\alpha))$</p>
+<h3 id="4-2-相关定理">4.2 相关定理</h3>
+<h4 id="4-2-1-Galois​-扩张的特征性质">4.2.1 Galois​ 扩张的特征性质</h4>
+<p>令 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=K%2FF" class="gallery-item"><img src="https://math.now.sh?inline=K%2FF" style="display:inline-block;margin: 0;"/></a> 是有限扩张，设 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=G" class="gallery-item"><img src="https://math.now.sh?inline=G" style="display:inline-block;margin: 0;"/></a> 为它的 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=Galois" class="gallery-item"><img src="https://math.now.sh?inline=Galois" style="display:inline-block;margin: 0;"/></a> 群</p>
+<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=K%2FF" class="gallery-item"><img src="https://math.now.sh?inline=K%2FF" style="display:inline-block;margin: 0;"/></a>  is  <a target="_blank" rel="noopener" href="https://math.now.sh?inline=Galois" class="gallery-item"><img src="https://math.now.sh?inline=Galois" style="display:inline-block;margin: 0;"/></a></p>
+<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Ciff" class="gallery-item"><img src="https://math.now.sh?inline=%5Ciff" style="display:inline-block;margin: 0;"/></a> <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%7CG%7C%3D%5BK%3AF%5D" class="gallery-item"><img src="https://math.now.sh?inline=%7CG%7C%3D%5BK%3AF%5D" style="display:inline-block;margin: 0;"/></a></p>
+<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Ciff" class="gallery-item"><img src="https://math.now.sh?inline=%5Ciff" style="display:inline-block;margin: 0;"/></a> 固定域 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=K%5EG" class="gallery-item"><img src="https://math.now.sh?inline=K%5EG" style="display:inline-block;margin: 0;"/></a> 等于 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=F" class="gallery-item"><img src="https://math.now.sh?inline=F" style="display:inline-block;margin: 0;"/></a></p>
+<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Ciff" class="gallery-item"><img src="https://math.now.sh?inline=%5Ciff" style="display:inline-block;margin: 0;"/></a> <a target="_blank" rel="noopener" href="https://math.now.sh?inline=K" class="gallery-item"><img src="https://math.now.sh?inline=K" style="display:inline-block;margin: 0;"/></a> 是 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=F" class="gallery-item"><img src="https://math.now.sh?inline=F" style="display:inline-block;margin: 0;"/></a> 的分裂域</p>
+<h4 id="4-2-2-主要定理-The-Main-Theorem">4.2.2 主要定理 The Main Theorem</h4>
+<p>令 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=K" class="gallery-item"><img src="https://math.now.sh?inline=K" style="display:inline-block;margin: 0;"/></a> 是域 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=F" class="gallery-item"><img src="https://math.now.sh?inline=F" style="display:inline-block;margin: 0;"/></a> 的 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=Galois" class="gallery-item"><img src="https://math.now.sh?inline=Galois" style="display:inline-block;margin: 0;"/></a> 扩张，设 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=G" class="gallery-item"><img src="https://math.now.sh?inline=G" style="display:inline-block;margin: 0;"/></a> 为它的 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=Galois" class="gallery-item"><img src="https://math.now.sh?inline=Galois" style="display:inline-block;margin: 0;"/></a> 群，则在 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=G" class="gallery-item"><img src="https://math.now.sh?inline=G" style="display:inline-block;margin: 0;"/></a> 的子群与中间域之间存在一一对应，这个对应把子群 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=H" class="gallery-item"><img src="https://math.now.sh?inline=H" style="display:inline-block;margin: 0;"/></a> 与它的固定域、中间域 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=L" class="gallery-item"><img src="https://math.now.sh?inline=L" style="display:inline-block;margin: 0;"/></a> 与 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=K" class="gallery-item"><img src="https://math.now.sh?inline=K" style="display:inline-block;margin: 0;"/></a> 在 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=L" class="gallery-item"><img src="https://math.now.sh?inline=L" style="display:inline-block;margin: 0;"/></a> 上的 <a target="_blank" rel="noopener" href="https://math.now.sh?inline=Galois" class="gallery-item"><img src="https://math.now.sh?inline=Galois" style="display:inline-block;margin: 0;"/></a> 群结合起来.</p>
+<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5CPhi%3AH%5Crightsquigarrow%20K%5EH" class="gallery-item"><img src="https://math.now.sh?inline=%5CPhi%3AH%5Crightsquigarrow%20K%5EH" style="display:inline-block;margin: 0;"/></a>  和 $ \Psi:L\rightsquigarrow G(K/L)$ 是互逆的。</p>
+<p>即： <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5CPhi%20%5Ccirc%20%5CPsi%20%28L%29%3DL" class="gallery-item"><img src="https://math.now.sh?inline=%5CPhi%20%5Ccirc%20%5CPsi%20%28L%29%3DL" style="display:inline-block;margin: 0;"/></a>, <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5CPsi%5Ccirc%5CPhi%20%28H%29%3DH" class="gallery-item"><img src="https://math.now.sh?inline=%5CPsi%5Ccirc%5CPhi%20%28H%29%3DH" style="display:inline-block;margin: 0;"/></a></p>
+<h4 id="4-2-3-应用">4.2.3 应用</h4>
+<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=K%2FF%3DF%28%5Calpha%29%2FF" class="gallery-item"><img src="https://math.now.sh?inline=K%2FF%3DF%28%5Calpha%29%2FF" style="display:inline-block;margin: 0;"/></a> 上的最小多项式为:</p>
+<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=f%28x%29%3D%5Cdisplaystyle%5Cprod%5Climits_%7B%5Csigma%5Cin%20Gal(K%2FF)%7D%20(x-%5Csigma(%5Calpha))" class="gallery-item"><img src="https://math.now.sh?inline=f%28x%29%3D%5Cdisplaystyle%5Cprod%5Climits_%7B%5Csigma%5Cin%20Gal(K%2FF)%7D%20(x-%5Csigma(%5Calpha))" style="display:inline-block;margin: 0;"/></a></p>
 <p>$ \ $</p>
 <p><strong>例：</strong></p>
-<p>Let $N\geqslant 3$ ，$\xi_N$ is a primitive $n$ th root of unit.</p>
-<p>Assume $\sigma(\xi_N)&#x3D;\xi_N ^a$ where $(a,N)&#x3D;1$</p>
-<p>we have :  $\phi: Gal(\mathbb{Q}(\xi_N)&#x2F;\mathbb{Q})\to (\mathbb{Z}&#x2F;N\mathbb Z)^{\times}$  is bijective.</p>
-<p>$ \phi $ is injective since $\ker \phi&#x3D;1$ （identity mapping)</p>
-<p>$\phi$ is surjective since $\forall p,(p,N)&#x3D;1 ,\exists \sigma\in Gal(\mathbb{Q}(\xi_N)&#x2F;\mathbb{Q}),\quad s.t.\quad \sigma(\xi_N)&#x3D;\xi_N^p$</p>
-<p>$\because \mathbb{Q}(\xi_N)$ is the splitting field of $x^N-1$ </p>
-<p>$\therefore \mathbb{Q}(\xi_N)&#x2F;\mathbb{Q}$ is $Galois$ </p>
-<p>$\therefore [\mathbb{Q}(\xi_N):\mathbb{Q}]&#x3D;|Gal(\mathbb{Q}(\xi_N)&#x2F;\mathbb{Q})|&#x3D;|(\mathbb{Z}&#x2F;N\mathbb Z)^{\times}|&#x3D;\varphi(N)$</p>
+<p>Let <a target="_blank" rel="noopener" href="https://math.now.sh?inline=N%5Cgeqslant%203" class="gallery-item"><img src="https://math.now.sh?inline=N%5Cgeqslant%203" style="display:inline-block;margin: 0;"/></a> ，<a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cxi_N" class="gallery-item"><img src="https://math.now.sh?inline=%5Cxi_N" style="display:inline-block;margin: 0;"/></a> is a primitive <a target="_blank" rel="noopener" href="https://math.now.sh?inline=n" class="gallery-item"><img src="https://math.now.sh?inline=n" style="display:inline-block;margin: 0;"/></a> th root of unit.</p>
+<p>Assume <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Csigma%28%5Cxi_N%29%3D%5Cxi_N%20%5Ea" class="gallery-item"><img src="https://math.now.sh?inline=%5Csigma%28%5Cxi_N%29%3D%5Cxi_N%20%5Ea" style="display:inline-block;margin: 0;"/></a> where <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%28a%2CN%29%3D1" class="gallery-item"><img src="https://math.now.sh?inline=%28a%2CN%29%3D1" style="display:inline-block;margin: 0;"/></a></p>
+<p>we have :  <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cphi%3A%20Gal%28%5Cmathbb%7BQ%7D(%5Cxi_N%29%2F%5Cmathbb%7BQ%7D)%5Cto%20(%5Cmathbb%7BZ%7D%2FN%5Cmathbb%20Z)%5E%7B%5Ctimes%7D" class="gallery-item"><img src="https://math.now.sh?inline=%5Cphi%3A%20Gal%28%5Cmathbb%7BQ%7D(%5Cxi_N%29%2F%5Cmathbb%7BQ%7D)%5Cto%20(%5Cmathbb%7BZ%7D%2FN%5Cmathbb%20Z)%5E%7B%5Ctimes%7D" style="display:inline-block;margin: 0;"/></a>  is bijective.</p>
+<p>$ \phi $ is injective since <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cker%20%5Cphi%3D1" class="gallery-item"><img src="https://math.now.sh?inline=%5Cker%20%5Cphi%3D1" style="display:inline-block;margin: 0;"/></a> （identity mapping)</p>
+<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cphi" class="gallery-item"><img src="https://math.now.sh?inline=%5Cphi" style="display:inline-block;margin: 0;"/></a> is surjective since <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cforall%20p%2C%28p%2CN%29%3D1%20%2C%5Cexists%20%5Csigma%5Cin%20Gal(%5Cmathbb%7BQ%7D(%5Cxi_N)%2F%5Cmathbb%7BQ%7D)%2C%5Cquad%20s.t.%5Cquad%20%5Csigma(%5Cxi_N)%3D%5Cxi_N%5Ep" class="gallery-item"><img src="https://math.now.sh?inline=%5Cforall%20p%2C%28p%2CN%29%3D1%20%2C%5Cexists%20%5Csigma%5Cin%20Gal(%5Cmathbb%7BQ%7D(%5Cxi_N)%2F%5Cmathbb%7BQ%7D)%2C%5Cquad%20s.t.%5Cquad%20%5Csigma(%5Cxi_N)%3D%5Cxi_N%5Ep" style="display:inline-block;margin: 0;"/></a></p>
+<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cbecause%20%5Cmathbb%7BQ%7D%28%5Cxi_N%29" class="gallery-item"><img src="https://math.now.sh?inline=%5Cbecause%20%5Cmathbb%7BQ%7D%28%5Cxi_N%29" style="display:inline-block;margin: 0;"/></a> is the splitting field of <a target="_blank" rel="noopener" href="https://math.now.sh?inline=x%5EN-1" class="gallery-item"><img src="https://math.now.sh?inline=x%5EN-1" style="display:inline-block;margin: 0;"/></a></p>
+<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Ctherefore%20%5Cmathbb%7BQ%7D%28%5Cxi_N%29%2F%5Cmathbb%7BQ%7D" class="gallery-item"><img src="https://math.now.sh?inline=%5Ctherefore%20%5Cmathbb%7BQ%7D%28%5Cxi_N%29%2F%5Cmathbb%7BQ%7D" style="display:inline-block;margin: 0;"/></a> is <a target="_blank" rel="noopener" href="https://math.now.sh?inline=Galois" class="gallery-item"><img src="https://math.now.sh?inline=Galois" style="display:inline-block;margin: 0;"/></a></p>
+<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Ctherefore%20%5B%5Cmathbb%7BQ%7D%28%5Cxi_N%29%3A%5Cmathbb%7BQ%7D%5D%3D%7CGal(%5Cmathbb%7BQ%7D(%5Cxi_N)%2F%5Cmathbb%7BQ%7D)%7C%3D%7C(%5Cmathbb%7BZ%7D%2FN%5Cmathbb%20Z)%5E%7B%5Ctimes%7D%7C%3D%5Cvarphi(N)" class="gallery-item"><img src="https://math.now.sh?inline=%5Ctherefore%20%5B%5Cmathbb%7BQ%7D%28%5Cxi_N%29%3A%5Cmathbb%7BQ%7D%5D%3D%7CGal(%5Cmathbb%7BQ%7D(%5Cxi_N)%2F%5Cmathbb%7BQ%7D)%7C%3D%7C(%5Cmathbb%7BZ%7D%2FN%5Cmathbb%20Z)%5E%7B%5Ctimes%7D%7C%3D%5Cvarphi(N)" style="display:inline-block;margin: 0;"/></a></p>
 <p>And the unit polynomial is :</p>
-<p> $f(x)&#x3D;\displaystyle\prod\limits_{\sigma\in Gal(\mathbb{Q}(\xi_N)&#x2F;\mathbb{Q})}(x-\sigma(\xi_N))&#x3D;\displaystyle\prod\limits_{(a,n)&#x3D;1}(x-\xi_N^a)$ </p>
+<p><a target="_blank" rel="noopener" href="https://math.now.sh?inline=f%28x%29%3D%5Cdisplaystyle%5Cprod%5Climits_%7B%5Csigma%5Cin%20Gal(%5Cmathbb%7BQ%7D(%5Cxi_N)%2F%5Cmathbb%7BQ%7D)%7D(x-%5Csigma(%5Cxi_N))%3D%5Cdisplaystyle%5Cprod%5Climits_%7B(a%2Cn)%3D1%7D(x-%5Cxi_N%5Ea)" class="gallery-item"><img src="https://math.now.sh?inline=f%28x%29%3D%5Cdisplaystyle%5Cprod%5Climits_%7B%5Csigma%5Cin%20Gal(%5Cmathbb%7BQ%7D(%5Cxi_N)%2F%5Cmathbb%7BQ%7D)%7D(x-%5Csigma(%5Cxi_N))%3D%5Cdisplaystyle%5Cprod%5Climits_%7B(a%2Cn)%3D1%7D(x-%5Cxi_N%5Ea)" style="display:inline-block;margin: 0;"/></a></p>
 </div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
         var options = {
             selector: '.gallery-item'
@@ -480,7 +564,7 @@
     <ul>
       <li>
         Copyrights &copy;
-        2020-2024
+        2020-2025
         <i class="ri-heart-fill heart_icon"></i> Longqian Huang
       </li>
     </ul>

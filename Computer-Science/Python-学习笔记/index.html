@@ -113,124 +113,115 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="Python-学习笔记"><a href="#Python-学习笔记" class="headerlink" title="Python 学习笔记"></a>Python 学习笔记</h1><h2 id="Raw-Python"><a href="#Raw-Python" class="headerlink" title="Raw Python"></a>Raw Python</h2><p>参考：<a target="_blank" rel="noopener" href="https://docs.python.org/zh-cn/3.9/reference/expressions.html#lambda">官方文档</a></p>
-<h3 id="lambda"><a href="#lambda" class="headerlink" title="lambda"></a><code>lambda</code></h3><p>lambda 表达式被用于创建匿名函数。 </p>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><h1>Python 学习笔记</h1>
+<h2 id="Raw-Python">Raw Python</h2>
+<p>参考：<a target="_blank" rel="noopener" href="https://docs.python.org/zh-cn/3.9/reference/expressions.html#lambda">官方文档</a></p>
+<h3 id="lambda"><code>lambda</code></h3>
+<p>lambda 表达式被用于创建匿名函数。</p>
 <p>表达式<code>lambda parameters: expression</code> 会产生一个函数对象。</p>
 <p>等价于：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> &lt;<span class="keyword">lambda</span>&gt;(parameters):</span><br><span class="line">    <span class="keyword">return</span> expression</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="enumerate"><a href="#enumerate" class="headerlink" title="enumerate"></a><code>enumerate</code></h3><p>z用来遍历一个可迭代容器中的元素，同时通过一个计数器变量记录当前元素所对应的索引值。</p>
+<h3 id="enumerate"><code>enumerate</code></h3>
+<p>z用来遍历一个可迭代容器中的元素，同时通过一个计数器变量记录当前元素所对应的索引值。</p>
 <p>注意它能接受一个可选参数，该参数允许为本次循环中的计数器变量 (index) 设置初始值。</p>
 <p>索引是在循环请求才加载输出每个元素，使得内存使用量很低并且结构运行很快。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i, c <span class="keyword">in</span> <span class="built_in">enumerate</span>(s, <span class="number">1</span>): <span class="comment"># index 从1开始了</span></span><br><span class="line">    <span class="built_in">print</span>(i, c)</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="sorted"><a href="#sorted" class="headerlink" title="sorted"></a><code>sorted</code></h3><p>对可迭代的对象进行排序操作。</p>
+<h3 id="sorted"><code>sorted</code></h3>
+<p>对可迭代的对象进行排序操作。</p>
 <p>sort 与 sorted 区别（摘自菜鸟教程）：</p>
 <ul>
-<li><p>sort 是应用在 list 上的方法，sorted 可以对所有可迭代的对象进行排序操作。</p>
+<li>
+<p>sort 是应用在 list 上的方法，sorted 可以对所有可迭代的对象进行排序操作。</p>
 </li>
-<li><p>list 的 sort 方法返回的是对已经存在的列表进行操作，无返回值，而内建函数 sorted 方法返回的是一个新的 list，而不是在原来的基础上进行的操作。</p>
+<li>
+<p>list 的 sort 方法返回的是对已经存在的列表进行操作，无返回值，而内建函数 sorted 方法返回的是一个新的 list，而不是在原来的基础上进行的操作。</p>
 </li>
 </ul>
 <p>高级操作：key和cmp 暂时用不上</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="string">&#x27;  a,,b,s,a,aca198&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">set</span>(s))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">sorted</span>(<span class="built_in">set</span>(s)))</span><br><span class="line"><span class="comment"># &#123;&#x27;1&#x27;, &#x27;8&#x27;, &#x27; &#x27;, &#x27;s&#x27;, &#x27;9&#x27;, &#x27;c&#x27;, &#x27;b&#x27;, &#x27;,&#x27;, &#x27;a&#x27;&#125;</span></span><br><span class="line"><span class="comment"># [&#x27; &#x27;, &#x27;,&#x27;, &#x27;1&#x27;, &#x27;8&#x27;, &#x27;9&#x27;, &#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;, &#x27;s&#x27;]</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="yield"><a href="#yield" class="headerlink" title="yield"></a><code>yield</code></h3><p>每执行到一个 yield 语句就会中断，并返回一个迭代值，下次执行时从 yield 的下一个语句继续执行。</p>
-<h3 id="str-类"><a href="#str-类" class="headerlink" title="str 类"></a><code>str</code> 类</h3><p>文本序列类型。</p>
+<h3 id="yield"><code>yield</code></h3>
+<p>每执行到一个 yield 语句就会中断，并返回一个迭代值，下次执行时从 yield 的下一个语句继续执行。</p>
+<h3 id="str-类"><code>str</code> 类</h3>
+<p>文本序列类型。</p>
 <p><a target="_blank" rel="noopener" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#textseq">参考文档</a></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="string">&#x27;  a,,b,s,a,aca  &#x27;</span></span><br><span class="line"><span class="comment"># lower,upper 将所有字母变成小写/大写</span></span><br><span class="line"><span class="built_in">print</span>(s.upper())</span><br><span class="line"><span class="comment"># &#x27;  A,,B,S,A,ACA  &#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># split 利用分隔符分割字符串，生成一个list</span></span><br><span class="line"><span class="built_in">print</span>(s.split(<span class="string">&#x27;,&#x27;</span>))</span><br><span class="line"><span class="comment"># [&#x27;  a&#x27;, &#x27;&#x27;, &#x27;b&#x27;, &#x27;s&#x27;, &#x27;a&#x27;, &#x27;aca  &#x27;]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># strip 去掉头尾空格</span></span><br><span class="line"><span class="built_in">print</span>(s.strip())</span><br><span class="line"><span class="comment"># a,,b,s,a,aca</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># count 对某一个元素计数</span></span><br><span class="line"><span class="built_in">print</span>(s.count(<span class="string">&#x27;a&#x27;</span>))</span><br><span class="line"><span class="built_in">print</span>(s.count(<span class="string">&#x27;a&#x27;</span>, <span class="number">2</span>, <span class="number">4</span>)) <span class="comment"># 计数元素, 起始位置, 结束位置</span></span><br><span class="line"><span class="comment"># 4</span></span><br><span class="line"><span class="comment"># 1</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># find 查找某个元素的最先出现的索引 </span></span><br><span class="line"><span class="built_in">print</span>(s.find(<span class="string">&#x27;a&#x27;</span>))</span><br><span class="line"><span class="built_in">print</span>(s.find(<span class="string">&#x27;a&#x27;</span>, <span class="number">6</span>, <span class="number">9</span>)) <span class="comment"># 要查元素, 起始位置, 结束位置</span></span><br><span class="line"><span class="comment"># 2</span></span><br><span class="line"><span class="comment"># -1 （没找到）</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 注：若使用 s.index 同样可以查找 但是没找到时会反回错误</span></span><br><span class="line"><span class="built_in">print</span>(s.index(<span class="string">&#x27;a&#x27;</span>, <span class="number">6</span>, <span class="number">9</span>))</span><br><span class="line"><span class="comment"># ValueError: substring not found</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># f-string</span></span><br><span class="line">x=<span class="number">6</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;x+<span class="number">4</span>&#125;</span>&#x27;</span>)</span><br><span class="line"><span class="comment"># 10</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="Format-String"><a href="#Format-String" class="headerlink" title="Format String"></a>Format String</h3><p>Refer to <a target="_blank" rel="noopener" href="https://mkaz.blog/code/python-string-format-cookbook/">this blog</a>.</p>
-<h3 id="File方法"><a href="#File方法" class="headerlink" title="File方法"></a>File方法</h3><p>待仔细研究。</p>
-<h2 id="Numpy"><a href="#Numpy" class="headerlink" title="Numpy"></a>Numpy</h2><p><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000016097466">np.random</a></p>
-<h4 id="高级的切片操作"><a href="#高级的切片操作" class="headerlink" title="高级的切片操作"></a>高级的切片操作</h4><p>可以直接BGR2RGB：<code>img[:,:,::-1]</code>。</p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_21840201/article/details/85084621?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase">参考</a></p>
+<h3 id="Format-String">Format String</h3>
+<p>Refer to <a target="_blank" rel="noopener" href="https://mkaz.blog/code/python-string-format-cookbook/">this blog</a>.</p>
+<h3 id="File方法">File方法</h3>
+<p>待仔细研究。</p>
+<h2 id="Numpy">Numpy</h2>
+<p><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000016097466">np.random</a></p>
+<h4 id="高级的切片操作">高级的切片操作</h4>
+<p>可以直接BGR2RGB：<code>img[:,:,::-1]</code>。</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_21840201/article/details/85084621?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase">参考</a></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">a=np.random.rand(<span class="number">5</span>)</span><br><span class="line"><span class="built_in">print</span>(a)</span><br><span class="line">[ <span class="number">0.64061262</span>  <span class="number">0.8451399</span>   <span class="number">0.965673</span>    <span class="number">0.89256687</span>  <span class="number">0.48518743</span>]</span><br><span class="line"> </span><br><span class="line"><span class="built_in">print</span>(a[-<span class="number">1</span>]) <span class="comment">###取最后一个元素</span></span><br><span class="line">[<span class="number">0.48518743</span>]</span><br><span class="line"> </span><br><span class="line"><span class="built_in">print</span>(a[:-<span class="number">1</span>])  <span class="comment">### 除了最后一个取全部</span></span><br><span class="line">[ <span class="number">0.64061262</span>  <span class="number">0.8451399</span>   <span class="number">0.965673</span>    <span class="number">0.89256687</span>]</span><br><span class="line"> </span><br><span class="line"><span class="built_in">print</span>(a[::-<span class="number">1</span>]) <span class="comment">### 取从后向前（相反）的元素</span></span><br><span class="line">[ <span class="number">0.48518743</span>  <span class="number">0.89256687</span>  <span class="number">0.965673</span>    <span class="number">0.8451399</span>   <span class="number">0.64061262</span>]</span><br><span class="line"> </span><br><span class="line"><span class="built_in">print</span>(a[<span class="number">2</span>::-<span class="number">1</span>]) <span class="comment">### 取从下标为2的元素翻转读取</span></span><br><span class="line">[ <span class="number">0.965673</span>  <span class="number">0.8451399</span>   <span class="number">0.64061262</span>]</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="Sympy"><a href="#Sympy" class="headerlink" title="Sympy"></a>Sympy</h2><p>方便地求解符号方程组。</p>
+<h2 id="Sympy">Sympy</h2>
+<p>方便地求解符号方程组。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sympy <span class="keyword">import</span> *</span><br><span class="line"><span class="comment"># 一次应光作业 算不动了用py试试</span></span><br><span class="line">x, y = symbols(<span class="string">&#x27;x y&#x27;</span>)</span><br><span class="line"></span><br><span class="line">b1 = <span class="number">50</span> / <span class="number">17</span> <span class="comment"># 第一个透镜的垂轴放大率</span></span><br><span class="line">b2 = -<span class="number">3.4</span> <span class="comment"># 第二个透镜的垂轴放大率</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(solve([(<span class="number">1</span> - b1) * x + (<span class="number">1</span> - <span class="number">1</span> / b2) * y - <span class="number">20</span>, <span class="number">195</span> -</span><br><span class="line">             (<span class="number">1</span> - b2) * y - (<span class="number">1</span> - <span class="number">1</span> / b1) * x - <span class="number">20</span>], [x, y]))</span><br><span class="line"></span><br><span class="line">-- ans --</span><br><span class="line">&#123;x: <span class="number">14.7382920110193</span>, y: <span class="number">37.5619834710744</span>&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-
-
-<h2 id="Matplotlib"><a href="#Matplotlib" class="headerlink" title="Matplotlib"></a>Matplotlib</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">plt.yscale(<span class="string">&#x27;log&#x27;</span>,basey=<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="Pandas"><a href="#Pandas" class="headerlink" title="Pandas"></a>Pandas</h2><h2 id="Tricks"><a href="#Tricks" class="headerlink" title="Tricks"></a>Tricks</h2><ul>
-<li><p>enumerate() 函数用于将一个可遍历的数据对象(如列表、元组或字符串)组合为一个索引序列，同时列出数据和数据下标，一般用在 for 循环当中</p>
+<h2 id="Matplotlib">Matplotlib</h2>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">plt.yscale(<span class="string">&#x27;log&#x27;</span>,basey=<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="Pandas">Pandas</h2>
+<h2 id="Tricks">Tricks</h2>
+<ul>
+<li>
+<p>enumerate() 函数用于将一个可遍历的数据对象(如列表、元组或字符串)组合为一个索引序列，同时列出数据和数据下标，一般用在 for 循环当中</p>
 </li>
-<li><p>向量范数</p>
+<li>
+<p>向量范数</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> <span class="built_in">sum</span>(i**<span class="number">2</span> <span class="keyword">for</span> i <span class="keyword">in</span> f(x)) &gt;= TOL**<span class="number">2</span>:</span><br></pre></td></tr></table></figure>
-
-
 </li>
-<li><p>列表一个溢出error的解决</p>
+<li>
+<p>列表一个溢出error的解决</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">i = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">8</span>, <span class="number">13</span>]</span><br><span class="line">j = [<span class="literal">None</span>] * <span class="built_in">len</span>(i)</span><br><span class="line"><span class="comment">#j == [None, None, None, None, None, None]</span></span><br><span class="line">k = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> l <span class="keyword">in</span> i:</span><br><span class="line">   j[k] = l</span><br><span class="line">   k += <span class="number">1</span></span><br></pre></td></tr></table></figure>
-
-
-
-
 </li>
-<li><p>Python中初始化一个5 x 3每项为0的数组，较好的方法</p>
+<li>
+<p>Python中初始化一个5 x 3每项为0的数组，较好的方法</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">multilist = [[<span class="number">0</span> <span class="keyword">for</span> col <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">5</span>)] <span class="keyword">for</span> row <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">3</span>)]</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
 </li>
-<li><pre><code class="python">map(func, seq1[, seq2,…])
+<li>
+<pre><code class="language-python">map(func, seq1[, seq2,…])
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  第一个参数接受一个函数名，后面的参数接受一个或多个可迭代的序列，返回的是一个集合。</span><br><span class="line">  Python函数编程中的map()函数是将func作用于seq中的每一个元素，并将所有的调用的结果作为一个list返回。如果func为None，作用同zip()。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">- Matrix</span><br><span class="line"></span><br><span class="line">  ```python</span><br><span class="line">  D = np.diag(np.diag(A)) # A的对角元构成的矩阵</span><br><span class="line">  L = np.tri(*np.shape(A),-1) * (-A)  # A的下三角元的相反数构成的矩阵L</span><br><span class="line">  U = D - L -A #A的上三角元的相反数构成的元素</span><br><span class="line">  M = np.linalg.inv(D-L)  #求（D-L）的逆</span><br><span class="line">   </span><br></pre></td></tr></table></figure>
+
 </code></pre>
 </li>
-<li><p>三元运算</p>
+<li>
+<p>三元运算</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[on_true] <span class="keyword">if</span> [expression] <span class="keyword">else</span> [on_false]</span><br><span class="line">x, y = <span class="number">50</span>, <span class="number">25</span></span><br><span class="line">small = x <span class="keyword">if</span> x &lt; y <span class="keyword">else</span> y</span><br></pre></td></tr></table></figure>
-
-
 </li>
-<li><pre><code class="python">xk = x.copy()
+<li>
+<pre><code class="language-python">xk = x.copy()
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">- 获取极值以及对应的坐标</span><br><span class="line"></span><br><span class="line">- ```python</span><br><span class="line">  res = minimize_scalar(f, bounds = (-5, 0), method = &#x27;bounded&#x27;)</span><br><span class="line">  print &quot;(-5, 0)&quot;, res.x</span><br></pre></td></tr></table></figure>
 
+
+
 </code></pre>
 </li>
-<li><p>Np.cos 自变量是弧度, 卡西欧计算器cos自变量是角度</p>
+<li>
+<p>Np.cos 自变量是弧度, 卡西欧计算器cos自变量是角度</p>
 </li>
-<li><p>当函数要接受元组或者字典参数时，它分别使用 <code>*</code> 和 <code>**</code> 前缀。如果使用 <code>**</code> 前缀，多余的参数会被认为是字典。</p>
+<li>
+<p>当函数要接受元组或者字典参数时，它分别使用 <code>*</code> 和 <code>**</code> 前缀。如果使用 <code>**</code> 前缀，多余的参数会被认为是字典。</p>
 </li>
 </ul>
-<h2 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h2><p><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=ZDa-Z5JzLYM&list=PL-osiE80TeTsqhIuOqKhwlXsIBIdSeYtc&index=1">Best tutorial for object oriented programming with python</a></p>
+<h2 id="面向对象">面向对象</h2>
+<p><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=ZDa-Z5JzLYM&amp;list=PL-osiE80TeTsqhIuOqKhwlXsIBIdSeYtc&amp;index=1">Best tutorial for object oriented programming with python</a></p>
 <p><code>__iter__</code> 方法</p>
 <p>​	表明对象是一个生成器。</p>
-<h2 id="Threading"><a href="#Threading" class="headerlink" title="Threading"></a>Threading</h2><p><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=IEEhzQoKtQU">Python Threading Tutorial</a></p>
-<h2 id="Applications"><a href="#Applications" class="headerlink" title="Applications"></a>Applications</h2><p>首先使用变量聚类法找出相关度较低的“主变量”（主要指标），删除主变量之外的次变量，然后根据主变量使用样本聚类分析法进行样本分类。</p>
-<h3 id="聚类分析"><a href="#聚类分析" class="headerlink" title="聚类分析"></a>聚类分析</h3><h4 id="1-K-均值聚类"><a href="#1-K-均值聚类" class="headerlink" title="1. K-均值聚类"></a>1. K-均值聚类</h4><p>划分式聚类方法。</p>
+<h2 id="Threading">Threading</h2>
+<p><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=IEEhzQoKtQU">Python Threading Tutorial</a></p>
+<h2 id="Applications">Applications</h2>
+<p>首先使用变量聚类法找出相关度较低的“主变量”（主要指标），删除主变量之外的次变量，然后根据主变量使用样本聚类分析法进行样本分类。</p>
+<h3 id="聚类分析">聚类分析</h3>
+<h4 id="1-K-均值聚类">1. K-均值聚类</h4>
+<p>划分式聚类方法。</p>
 <p>已知要分点聚类数，随机生成类数个质心，从质心出发逐渐分类</p>
 <ul>
 <li>生成 KMeans 类</li>
 <li>使用 KMeans 中的 fit_predict 函数直接得聚类后各点对应的类标签</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.datasets <span class="keyword">import</span> make_blobs</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">from</span> sklearn.cluster <span class="keyword">import</span> KMeans</span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成n_samples个点对,data[1]是每个成员的整数标签(类别)</span></span><br><span class="line">data = make_blobs(n_samples=<span class="number">500</span>, n_features=<span class="number">2</span>, centers=<span class="number">8</span>,</span><br><span class="line">                  cluster_std=<span class="number">1.6</span>, random_state=<span class="number">50</span>)</span><br><span class="line">points = data[<span class="number">0</span>]</span><br><span class="line">fig1 = plt.figure()  <span class="comment"># 生成画布</span></span><br><span class="line">fig1 = plt.scatter(points[:, <span class="number">0</span>], points[:, <span class="number">1</span>], c=data[<span class="number">1</span>],</span><br><span class="line">                   cmap=<span class="string">&#x27;viridis&#x27;</span>)</span><br><span class="line">plt.title(<span class="string">&#x27;before&#x27;</span>)</span><br><span class="line">plt.xlim(-<span class="number">15</span>, <span class="number">15</span>)</span><br><span class="line">plt.ylim(-<span class="number">15</span>, <span class="number">15</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># create kmeans object</span></span><br><span class="line">kmeans = KMeans(n_clusters=<span class="number">8</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># print location of clusters learned by kmeans object</span></span><br><span class="line"><span class="comment"># print(kmeans.cluster_centers_)</span></span><br><span class="line"></span><br><span class="line">km_res = kmeans.fit_predict(points)</span><br><span class="line"></span><br><span class="line">fig2 = plt.figure()</span><br><span class="line">fig2 = plt.scatter(points[:, <span class="number">0</span>], points[:, <span class="number">1</span>], c=km_res,</span><br><span class="line">                   cmap=<span class="string">&#x27;viridis&#x27;</span>)  <span class="comment"># c:color 按data[1]给每个点对应的颜色</span></span><br><span class="line">plt.title(<span class="string">&#x27;after&#x27;</span>)</span><br><span class="line">plt.xlim(-<span class="number">15</span>, <span class="number">15</span>)</span><br><span class="line">plt.ylim(-<span class="number">15</span>, <span class="number">15</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="2-层次分析聚类"><a href="#2-层次分析聚类" class="headerlink" title="2. 层次分析聚类"></a>2. 层次分析聚类</h4><p>层次化聚类方法。</p>
+<h4 id="2-层次分析聚类">2. 层次分析聚类</h4>
+<p>层次化聚类方法。</p>
 <p>从每个点各为一类开始，“归并”。</p>
 <p>步骤：</p>
 <ul>
@@ -239,12 +230,8 @@
 <li>绘制树状图 dendrogram 函数</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> scipy</span><br><span class="line"><span class="keyword">import</span> scipy.cluster.hierarchy <span class="keyword">as</span> sch</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成待聚类的数据点,这里生成了20个点,每个点4维:</span></span><br><span class="line">points = scipy.randn(<span class="number">20</span>, <span class="number">4</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成点与点之间的距离矩阵,这里用的欧氏距离:</span></span><br><span class="line">disMat = sch.distance.pdist(points, <span class="string">&#x27;euclidean&#x27;</span>)</span><br><span class="line"><span class="comment"># 进行层次聚类:</span></span><br><span class="line">Z = sch.linkage(disMat, method=<span class="string">&#x27;ward&#x27;</span>)</span><br><span class="line"><span class="comment"># 将层级聚类结果以树状图表示出来并保存为plot_dendrogram.png</span></span><br><span class="line">P = sch.dendrogram(Z)</span><br><span class="line">plt.savefig(<span class="string">&#x27;plot_dendrogram.png&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 根据linkage matrix Z得到聚类结果:</span></span><br><span class="line">cluster = sch.fcluster(Z, t=<span class="number">4</span>, criterion=<span class="string">&#x27;maxclust&#x27;</span>)<span class="comment">#t表示最大聚类簇数</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Original cluster by hierarchy clustering:\n&quot;</span>, cluster)</span><br><span class="line"></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h3 id="主成分分析-PCA"><a href="#主成分分析-PCA" class="headerlink" title="主成分分析 PCA"></a>主成分分析 PCA</h3><p>Principle Component Analysis. 将相关度很高的向量转化为相关度较低的向量。</p>
+<h3 id="主成分分析-PCA">主成分分析 PCA</h3>
+<p>Principle Component Analysis. 将相关度很高的向量转化为相关度较低的向量。</p>
 <p>Python 实现：</p>
 <p>直接调库：<strong>sklearn.decomposition.PCA</strong> （类）</p>
 <p>参数：</p>
@@ -253,19 +240,13 @@
 <li>whiten: 是否白化，即归一化</li>
 <li>explained_variance_ : 代表降维后的各主成分的方差值。方差值越大，则说明越是重要的主成分。</li>
 <li>explained_variance_ratio_ : 代表降维后的各主成分的方差值占总方差值的比例(累计贡献率)</li>
-<li>Y &#x3D; fit_transform(X) 利用主成分分析方法对数据降维，返回对X降维后的矩阵: X.shape&#x3D;(n_samples,n_features); Y.shape&#x3D;(n_samples,n_components)</li>
+<li>Y = fit_transform(X) 利用主成分分析方法对数据降维，返回对X降维后的矩阵: X.shape=(n_samples,n_features); Y.shape=(n_samples,n_components)</li>
 <li>fit(X) 利用主成分分析法对X降维和变换，X已经改变</li>
-<li>transform(X) 返回 n_samples$\times$ n_components 的切掉后面的矩阵</li>
+<li>transform(X) 返回 n_samples<a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Ctimes" class="gallery-item"><img src="https://math.now.sh?inline=%5Ctimes" style="display:inline-block;margin: 0;"/></a> n_components 的切掉后面的矩阵</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">from</span> sklearn.decomposition <span class="keyword">import</span> PCA</span><br><span class="line"></span><br><span class="line">x = np.array([[<span class="number">1</span>, <span class="number">2</span>], [<span class="number">1</span>, <span class="number">4</span>], [<span class="number">5</span>, <span class="number">8</span>]])</span><br><span class="line">pca = PCA(n_components=<span class="number">0.9</span>)</span><br><span class="line">y = pca.fit_transform(x)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;累计贡献率：&quot;</span>, pca.explained_variance_ratio_)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;变换后的x&quot;</span>, y)</span><br><span class="line"><span class="comment">#or:</span></span><br><span class="line"><span class="comment">#pca.fit(x)</span></span><br><span class="line"><span class="comment">#y=pca.transform(x)</span></span><br></pre></td></tr></table></figure>
-
-
-
 <p>（numpy练习）</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"><span class="comment"># 归一化</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">stdData</span>(<span class="params">dataMat</span>):</span><br><span class="line">    meanVal = np.mean(dataMat, axis=<span class="number">0</span>)  <span class="comment"># 按列求均值，即求各个特征的均值</span></span><br><span class="line">    _, n = dataMat.shape</span><br><span class="line">    stdval = np.std(dataMat, axis=<span class="number">0</span>)</span><br><span class="line">    newData = (dataMat - meanVal)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">        newData[:, i] /= stdval[i]</span><br><span class="line">    <span class="keyword">return</span> newData</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">percentage2n</span>(<span class="params">eigVals, percentage</span>):</span><br><span class="line">    sortEig = np.sort(eigVals)  <span class="comment"># 升序</span></span><br><span class="line">    sortEig = sortEig[-<span class="number">1</span>::-<span class="number">1</span>]  <span class="comment"># 逆转，即降序</span></span><br><span class="line">    arraySum = <span class="built_in">sum</span>(sortEig)</span><br><span class="line">    tmpSum = <span class="number">0</span></span><br><span class="line">    num = <span class="number">0</span></span><br><span class="line">    contribute = []  <span class="comment"># 信息贡献率</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> sortEig:</span><br><span class="line">        contribute.append(i / arraySum)</span><br><span class="line">    contribute = np.array(contribute)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> sortEig:</span><br><span class="line">        tmpSum += i</span><br><span class="line">        num += <span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> tmpSum &gt;= arraySum * percentage:</span><br><span class="line">            <span class="keyword">return</span> num, contribute</span><br><span class="line"></span><br><span class="line"><span class="comment">#主成分分析</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">PCA</span>(<span class="params">dataMat, percentage=<span class="number">0.9</span></span>):</span><br><span class="line">    newData = stdData(dataMat)</span><br><span class="line">    corMat = np.corrcoef(newData, rowvar=<span class="number">0</span>)</span><br><span class="line">    <span class="comment"># 求特征值和特征向量,特征向量是按列放的，即一列代表一个特征向量</span></span><br><span class="line">    eigVals, eigVects = np.linalg.eig(np.mat(corMat))</span><br><span class="line">    eigValIndice = np.argsort(eigVals)  <span class="comment"># 对特征值从小到大排序</span></span><br><span class="line">    n, contribute = percentage2n(eigVals, percentage)  <span class="comment"># 达到累积贡献率百分比的n,默认90%</span></span><br><span class="line">    n_eigValIndice = eigValIndice[-<span class="number">1</span>:-(n + <span class="number">1</span>):-<span class="number">1</span>]  <span class="comment"># 最大的n个特征值的下标</span></span><br><span class="line">    n_eigVect = eigVects[:, n_eigValIndice]  <span class="comment"># 最大的n个特征值对应的特征向量</span></span><br><span class="line">    lowDDataMat = newData[:,:n] * n_eigVect  <span class="comment"># 低维特征空间的数据</span></span><br><span class="line">    contribute = contribute[:n]</span><br><span class="line">    score = np.<span class="built_in">float</span>(contribute * lowDDataMat)  <span class="comment"># 基于主成分分析的综合评价得分</span></span><br><span class="line">    <span class="keyword">return</span> lowDDataMat, score</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">x = np.array([[<span class="number">1</span>, <span class="number">2</span>], [<span class="number">1</span>, <span class="number">4</span>], [<span class="number">5</span>, <span class="number">8</span>]])</span><br><span class="line"><span class="built_in">print</span>(PCA(x))</span><br></pre></td></tr></table></figure>
-
-
-
 </div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
         var options = {
             selector: '.gallery-item'
@@ -329,7 +310,7 @@
     <ul>
       <li>
         Copyrights &copy;
-        2020-2024
+        2020-2025
         <i class="ri-heart-fill heart_icon"></i> Longqian Huang
       </li>
     </ul>

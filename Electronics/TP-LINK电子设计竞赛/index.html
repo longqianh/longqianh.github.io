@@ -85,7 +85,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">724</span>
+            <span class="post-count">722</span>
         </span>
     </span>
 
@@ -109,27 +109,34 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><h2 id="TP-LINK电子设计竞赛校赛总结"><a href="#TP-LINK电子设计竞赛校赛总结" class="headerlink" title="TP-LINK电子设计竞赛校赛总结"></a>TP-LINK电子设计竞赛校赛总结</h2><h3 id="日记"><a href="#日记" class="headerlink" title="日记"></a>日记</h3><p>2020.8.24–25 和国学长还有王晓雯一起参加电赛校赛，刚刚结束了电子设计小学期，趁热打铁一波。光电还有一组，是谢昊、雷学姐和沈学姐，大家一起，真的很开心。</p>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><h2 id="TP-LINK电子设计竞赛校赛总结">TP-LINK电子设计竞赛校赛总结</h2>
+<h3 id="日记">日记</h3>
+<p>2020.8.24–25 和国学长还有王晓雯一起参加电赛校赛，刚刚结束了电子设计小学期，趁热打铁一波。光电还有一组，是谢昊、雷学姐和沈学姐，大家一起，真的很开心。</p>
 <span id="more"></span>
-
 <p>第一天复习模电，由于不会multisim仿真，只看了一下滤波电路，剩下的硬件部分全靠两位队友了。</p>
 <p>第一天下午到第二天，一直在搞单片机。结果最后队友们搞好了，都卡在了我这里，真的很抱歉。C51定时器的使用需要努力学一下。不过用两个外中断搞出来个按键模块，感觉很不错。</p>
 <p>第一天早上在教四吃到了大大的生煎包，晚上两点半回宾馆睡到六点半，第二天早上在汉庭黄龙店旁边吃到了好吃的薄皮灌汤包和馄饨，并想起来小时候在单身宿舍里喝到的美味鸡蛋汤。</p>
 <p>最惊险的是下午七点多临近结束，灵机一动写出来占空比，也没有测试很多就封箱了，结果居然没有问题。</p>
 <p>25号晚上回到玉泉寝室收拾，真的感谢室友这两天帮忙搬宿舍。</p>
 <p>26号下午测评，测评完大家合了个影，就回寝室啦。</p>
-<h3 id="学到许多"><a href="#学到许多" class="headerlink" title="学到许多"></a>学到许多</h3><p>真的感谢赵文义老师，给了我非常大的帮助，在我困顿的时候教会了我怎么用Keil C进行调试。</p>
+<h3 id="学到许多">学到许多</h3>
+<p>真的感谢赵文义老师，给了我非常大的帮助，在我困顿的时候教会了我怎么用Keil C进行调试。</p>
 <p>26号中午和寿逸凡聊了许久，恍然大悟了许多东西：</p>
 <ul>
-<li><p>频率就用ADC采样，得到两个最大值之间的时间就行了，可以用判断去掉太高的短脉冲</p>
+<li>
+<p>频率就用ADC采样，得到两个最大值之间的时间就行了，可以用判断去掉太高的短脉冲</p>
 </li>
-<li><p>占空比就采固定的点数，用高电平数一比就好了</p>
+<li>
+<p>占空比就采固定的点数，用高电平数一比就好了</p>
 </li>
-<li><p>相位差自习想想，其实也不难，就是内心对定时的恐惧一直阻挡着我。syf说要用两个ADC，一个有干扰，这个有些没懂。不过自己思考了一下，发现 $ \Delta\varphi&#x2F;2\pi&#x3D;cnt_{\Delta}&#x2F;cnt $, 似乎可以。</p>
+<li>
+<p>相位差自习想想，其实也不难，就是内心对定时的恐惧一直阻挡着我。syf说要用两个ADC，一个有干扰，这个有些没懂。不过自己思考了一下，发现 $ \Delta\varphi/2\pi=cnt_{\Delta}/cnt $, 似乎可以。</p>
 </li>
-<li><p>关于失真度，一直不知道怎么办。测评的时候学到了使用示波器，用math指令的FFT显示波形，然后用curser的y移动到基波的频率，再到一次谐波的频率，然后好像做了什么运算（好像是除，忘记了）。这样看的话，必须要用单片机实现FFT，以后有机会可以仔细研究。突然想到，可以用示波器的FFT看滤出来的正弦波是否干净。</p>
+<li>
+<p>关于失真度，一直不知道怎么办。测评的时候学到了使用示波器，用math指令的FFT显示波形，然后用curser的y移动到基波的频率，再到一次谐波的频率，然后好像做了什么运算（好像是除，忘记了）。这样看的话，必须要用单片机实现FFT，以后有机会可以仔细研究。突然想到，可以用示波器的FFT看滤出来的正弦波是否干净。</p>
 </li>
-<li><p>焊接电路板的时候可以用AD先布个局，然后再从正面布线，测评时看到信电的一些作品真的超级美观</p>
+<li>
+<p>焊接电路板的时候可以用AD先布个局，然后再从正面布线，测评时看到信电的一些作品真的超级美观</p>
 </li>
 </ul>
 </div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
@@ -195,7 +202,7 @@
     <ul>
       <li>
         Copyrights &copy;
-        2020-2024
+        2020-2025
         <i class="ri-heart-fill heart_icon"></i> Longqian Huang
       </li>
     </ul>

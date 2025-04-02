@@ -89,7 +89,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">238</span>
+            <span class="post-count">115</span>
         </span>
     </span>
 
@@ -114,15 +114,21 @@
     <div class="article-entry" itemprop="articleBody">
        
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" /><div class=".article-gallery"><p>学习压缩感知理论的笔记，参考书为 <em>A Mathematical Introduction to Compressive Sensing</em>, Simon Foucart, Holger Rauhut 及相关论文。</p>
-<h3 id="Lasso-Regression-with-Soft-Thresholding"><a href="#Lasso-Regression-with-Soft-Thresholding" class="headerlink" title="Lasso Regression with Soft Thresholding"></a>Lasso Regression with Soft Thresholding</h3><p>Problem: regression with regularization<br>$$<br>\min_\mathbf{x} |\mathbf{y}-\mathbf{Wx}|_2^2+\lambda|\mathbf{W}|_1,<br>$$<br>where $\mathbf{W}$ is weight vector.</p>
-<p>Solution: Do derivative to the cost function, and use <em>soft thresholding function</em> $\text{soft}(\lambda,\mathbf{W})$ as the <strong>subderivative</strong> to replace the derivate of non-differentiable absolute function.</p>
+<h3 id="Lasso-Regression-with-Soft-Thresholding">Lasso Regression with Soft Thresholding</h3>
+<p>Problem: regression with regularization</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=%5Cmin_%5Cmathbf%7Bx%7D%20%5C%7C%5Cmathbf%7By%7D-%5Cmathbf%7BWx%7D%5C%7C_2%5E2%2B%5Clambda%5C%7C%5Cmathbf%7BW%7D%5C%7C_1%2C%0A" class="gallery-item"><img src="https://math.now.sh?from=%5Cmin_%5Cmathbf%7Bx%7D%20%5C%7C%5Cmathbf%7By%7D-%5Cmathbf%7BWx%7D%5C%7C_2%5E2%2B%5Clambda%5C%7C%5Cmathbf%7BW%7D%5C%7C_1%2C%0A" /></a></p><p>where <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Cmathbf%7BW%7D" class="gallery-item"><img src="https://math.now.sh?inline=%5Cmathbf%7BW%7D" style="display:inline-block;margin: 0;"/></a> is weight vector.</p>
+<p>Solution: Do derivative to the cost function, and use <em>soft thresholding function</em> <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5Ctext%7Bsoft%7D%28%5Clambda%2C%5Cmathbf%7BW%7D%29" class="gallery-item"><img src="https://math.now.sh?inline=%5Ctext%7Bsoft%7D%28%5Clambda%2C%5Cmathbf%7BW%7D%29" style="display:inline-block;margin: 0;"/></a> as the <strong>subderivative</strong> to replace the derivate of non-differentiable absolute function.</p>
 <p>Reference: <a target="_blank" rel="noopener" href="https://www.kaggle.com/residentmario/soft-thresholding-with-lasso-regression">soft thresholding with lasso regression</a></p>
 <span id="more"></span>
-
-<h3 id="Iterative-Shrinkage-x2F-Thresholding-IST"><a href="#Iterative-Shrinkage-x2F-Thresholding-IST" class="headerlink" title="Iterative Shrinkage&#x2F;Thresholding (IST)"></a>Iterative Shrinkage&#x2F;Thresholding (IST)</h3><p>Problem:<br>$$<br>\min_{\mathbf x} \frac{1}{2}|\mathbf{y-Kx}|^2+\lambda\Phi(\mathbf{x})<br>$$<br>Consider $\Phi&#x3D;|\cdot|_1$ .</p>
-<p>Solution:<br>$$<br>\mathbf{x}_{t+1}&#x3D;(1-\beta)\mathbf{x}_t+\beta\Psi_\lambda\left(\mathbf{x}_t+\mathbf{K}^T(\mathbf{y-Kx}_t)\right),<br>$$<br> where $\Psi_\lambda(x)$ is soft thresholding function:<br>$$<br>\Psi_\lambda(x)&#x3D;\begin{cases}x+T,&amp; x\le-\lambda,\ 0,&amp;|x|&lt;\lambda,\x-T,&amp;x\ge\lambda.\end{cases}<br>$$</p>
-<h2 id=""><a href="#" class="headerlink" title=""></a></h2><p>For the optimization problem<br>$$<br>\min _\mathbf{x} |\mathbf{y}-A\mathbf{x}|^2+\eta |\mathbf{h}-\mathbf{x}|^2,<br>$$<br>a direct solution is given in the closed form as<br>$$<br>\mathbf{x}&#x3D;(A^TA+\eta I)^{-1}(A^T\mathbf{y}+\eta \mathbf{h}).<br>$$</p>
-</div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+<h3 id="Iterative-Shrinkage-Thresholding-IST">Iterative Shrinkage/Thresholding (IST)</h3>
+<p>Problem:</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=%5Cmin_%7B%5Cmathbf%20x%7D%20%5Cfrac%7B1%7D%7B2%7D%5C%7C%5Cmathbf%7By-Kx%7D%5C%7C%5E2%2B%5Clambda%5CPhi%28%5Cmathbf%7Bx%7D%29%0A" class="gallery-item"><img src="https://math.now.sh?from=%5Cmin_%7B%5Cmathbf%20x%7D%20%5Cfrac%7B1%7D%7B2%7D%5C%7C%5Cmathbf%7By-Kx%7D%5C%7C%5E2%2B%5Clambda%5CPhi%28%5Cmathbf%7Bx%7D%29%0A" /></a></p><p>Consider <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5CPhi%3D%5C%7C%5Ccdot%5C%7C_1" class="gallery-item"><img src="https://math.now.sh?inline=%5CPhi%3D%5C%7C%5Ccdot%5C%7C_1" style="display:inline-block;margin: 0;"/></a> .</p>
+<p>Solution:</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=%5Cmathbf%7Bx%7D_%7Bt%2B1%7D%3D%281-%5Cbeta%29%5Cmathbf%7Bx%7D_t%2B%5Cbeta%5CPsi_%5Clambda%5Cleft(%5Cmathbf%7Bx%7D_t%2B%5Cmathbf%7BK%7D%5ET(%5Cmathbf%7By-Kx%7D_t)%5Cright)%2C%0A" class="gallery-item"><img src="https://math.now.sh?from=%5Cmathbf%7Bx%7D_%7Bt%2B1%7D%3D%281-%5Cbeta%29%5Cmathbf%7Bx%7D_t%2B%5Cbeta%5CPsi_%5Clambda%5Cleft(%5Cmathbf%7Bx%7D_t%2B%5Cmathbf%7BK%7D%5ET(%5Cmathbf%7By-Kx%7D_t)%5Cright)%2C%0A" /></a></p><p>where <a target="_blank" rel="noopener" href="https://math.now.sh?inline=%5CPsi_%5Clambda%28x%29" class="gallery-item"><img src="https://math.now.sh?inline=%5CPsi_%5Clambda%28x%29" style="display:inline-block;margin: 0;"/></a> is soft thresholding function:</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=%5CPsi_%5Clambda%28x%29%3D%5Cbegin%7Bcases%7Dx%2BT%2C%26%20x%5Cle-%5Clambda%2C%5C%5C%200%2C%26%7Cx%7C%3C%5Clambda%2C%5C%5Cx-T%2C%26x%5Cge%5Clambda.%5Cend%7Bcases%7D%0A" class="gallery-item"><img src="https://math.now.sh?from=%5CPsi_%5Clambda%28x%29%3D%5Cbegin%7Bcases%7Dx%2BT%2C%26%20x%5Cle-%5Clambda%2C%5C%5C%200%2C%26%7Cx%7C%3C%5Clambda%2C%5C%5Cx-T%2C%26x%5Cge%5Clambda.%5Cend%7Bcases%7D%0A" /></a></p><h2 id=""></h2>
+<p>For the optimization problem</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=%5Cmin%20_%5Cmathbf%7Bx%7D%20%5C%7C%5Cmathbf%7By%7D-A%5Cmathbf%7Bx%7D%5C%7C%5E2%2B%5Ceta%20%5C%7C%5Cmathbf%7Bh%7D-%5Cmathbf%7Bx%7D%5C%7C%5E2%2C%0A" class="gallery-item"><img src="https://math.now.sh?from=%5Cmin%20_%5Cmathbf%7Bx%7D%20%5C%7C%5Cmathbf%7By%7D-A%5Cmathbf%7Bx%7D%5C%7C%5E2%2B%5Ceta%20%5C%7C%5Cmathbf%7Bh%7D-%5Cmathbf%7Bx%7D%5C%7C%5E2%2C%0A" /></a></p><p>a direct solution is given in the closed form as</p>
+<p style=""><a target="_blank" rel="noopener" href="https://math.now.sh?from=%5Cmathbf%7Bx%7D%3D%28A%5ETA%2B%5Ceta%20I%29%5E%7B-1%7D(A%5ET%5Cmathbf%7By%7D%2B%5Ceta%20%5Cmathbf%7Bh%7D).%0A" class="gallery-item"><img src="https://math.now.sh?from=%5Cmathbf%7Bx%7D%3D%28A%5ETA%2B%5Ceta%20I%29%5E%7B-1%7D(A%5ET%5Cmathbf%7By%7D%2B%5Ceta%20%5Cmathbf%7Bh%7D).%0A" /></a></p></div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
         var options = {
             selector: '.gallery-item'
         };
@@ -185,7 +191,7 @@
     <ul>
       <li>
         Copyrights &copy;
-        2020-2024
+        2020-2025
         <i class="ri-heart-fill heart_icon"></i> Longqian Huang
       </li>
     </ul>
